@@ -58,6 +58,7 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
+<fusionteam huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" folderUrn="urn:adsk.wipprod:fs.folder:co.RxKyY8RMSu-esEzEsS3Adw" urn="urn:adsk.wipprod:dm.lineage:u1t83sbkQv2DnDsKVROaCA"  versionUrn="urn:adsk.wipprod:fs.file:vf.u1t83sbkQv2DnDsKVROaCA?version=1" camFileUrn="" camFileVersionUrn="" lastpublishedchangeguid="389edd94-3b18-0744-bd0a-8f412638b8ad"/>
 <libraries>
 <library name="SamacSys_Parts">
 <description>&lt;b&gt;https://componentsearchengine.com&lt;/b&gt;&lt;p&gt;
