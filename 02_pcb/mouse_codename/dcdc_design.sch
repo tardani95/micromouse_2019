@@ -172,6 +172,35 @@
 <text x="0" y="1.9609" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.9609" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
+<package name="SON50P200X300X80-13N">
+<description>&lt;b&gt;DSS (R-PWSON-N12)&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.05" y="1.25" dx="0.7" dy="0.3" layer="1"/>
+<smd name="2" x="-1.05" y="0.75" dx="0.7" dy="0.3" layer="1"/>
+<smd name="3" x="-1.05" y="0.25" dx="0.7" dy="0.3" layer="1"/>
+<smd name="4" x="-1.05" y="-0.25" dx="0.7" dy="0.3" layer="1"/>
+<smd name="5" x="-1.05" y="-0.75" dx="0.7" dy="0.3" layer="1"/>
+<smd name="6" x="-1.05" y="-1.25" dx="0.7" dy="0.3" layer="1"/>
+<smd name="7" x="1.05" y="-1.25" dx="0.7" dy="0.3" layer="1"/>
+<smd name="8" x="1.05" y="-0.75" dx="0.7" dy="0.3" layer="1"/>
+<smd name="9" x="1.05" y="-0.25" dx="0.7" dy="0.3" layer="1"/>
+<smd name="10" x="1.05" y="0.25" dx="0.7" dy="0.3" layer="1"/>
+<smd name="11" x="1.05" y="0.75" dx="0.7" dy="0.3" layer="1"/>
+<smd name="12" x="1.05" y="1.25" dx="0.7" dy="0.3" layer="1"/>
+<smd name="13" x="0" y="0" dx="2.1" dy="1" layer="1" rot="R90"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-1.625" y1="1.8" x2="1.625" y2="1.8" width="0.05" layer="51"/>
+<wire x1="1.625" y1="1.8" x2="1.625" y2="-1.8" width="0.05" layer="51"/>
+<wire x1="1.625" y1="-1.8" x2="-1.625" y2="-1.8" width="0.05" layer="51"/>
+<wire x1="-1.625" y1="-1.8" x2="-1.625" y2="1.8" width="0.05" layer="51"/>
+<wire x1="-1" y1="1.5" x2="1" y2="1.5" width="0.1" layer="51"/>
+<wire x1="1" y1="1.5" x2="1" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="1" y1="-1.5" x2="-1" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="-1" y1="-1.5" x2="-1" y2="1.5" width="0.1" layer="51"/>
+<wire x1="-1" y1="1" x2="-0.5" y2="1.5" width="0.1" layer="51"/>
+<circle x="-1.4" y="1.9" radius="0.125" width="0.25" layer="25"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="SON65P280X300X133-9T110X190" urn="urn:adsk.eagle:package:8852109/1" type="model">
@@ -278,6 +307,27 @@
 <pin name="PC10" x="40.64" y="17.78" length="middle" rot="R270"/>
 <pin name="PA15" x="43.18" y="17.78" length="middle" rot="R270"/>
 <pin name="PA14" x="45.72" y="17.78" length="middle" rot="R270"/>
+</symbol>
+<symbol name="DRV8836DSSR">
+<wire x1="5.08" y1="2.54" x2="35.56" y2="2.54" width="0.254" layer="94"/>
+<wire x1="35.56" y1="-20.32" x2="35.56" y2="2.54" width="0.254" layer="94"/>
+<wire x1="35.56" y1="-20.32" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<text x="36.83" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="36.83" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="VCC" x="0" y="0" length="middle"/>
+<pin name="AOUT1" x="0" y="-2.54" length="middle"/>
+<pin name="AOUT2" x="0" y="-5.08" length="middle"/>
+<pin name="BOUT1" x="0" y="-7.62" length="middle"/>
+<pin name="BOUT2" x="0" y="-10.16" length="middle"/>
+<pin name="GND" x="0" y="-12.7" length="middle"/>
+<pin name="EP" x="20.32" y="-25.4" length="middle" rot="R90"/>
+<pin name="NSLEEP" x="40.64" y="0" length="middle" rot="R180"/>
+<pin name="MODE" x="40.64" y="-2.54" length="middle" rot="R180"/>
+<pin name="AIN1_/_APHASE" x="40.64" y="-5.08" length="middle" rot="R180"/>
+<pin name="AIN2_/_AENBL" x="40.64" y="-7.62" length="middle" rot="R180"/>
+<pin name="BIN1_/_BPHASE" x="40.64" y="-10.16" length="middle" rot="R180"/>
+<pin name="BIN2_/_BENBL" x="40.64" y="-12.7" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -392,6 +442,41 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
+<deviceset name="DRV8836DSSR" prefix="IC">
+<description>&lt;b&gt;1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="DRV8836DSSR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SON50P200X300X80-13N">
+<connects>
+<connect gate="G$1" pin="AIN1_/_APHASE" pad="10"/>
+<connect gate="G$1" pin="AIN2_/_AENBL" pad="9"/>
+<connect gate="G$1" pin="AOUT1" pad="2"/>
+<connect gate="G$1" pin="AOUT2" pad="3"/>
+<connect gate="G$1" pin="BIN1_/_BPHASE" pad="8"/>
+<connect gate="G$1" pin="BIN2_/_BENBL" pad="7"/>
+<connect gate="G$1" pin="BOUT1" pad="4"/>
+<connect gate="G$1" pin="BOUT2" pad="5"/>
+<connect gate="G$1" pin="EP" pad="13"/>
+<connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="MODE" pad="11"/>
+<connect gate="G$1" pin="NSLEEP" pad="12"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)" constant="no"/>
+<attribute name="HEIGHT" value="0.8mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="DRV8836DSSR" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-DRV8836DSSR" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -404,8 +489,9 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </class>
 </classes>
 <parts>
-<part name="PS1" library="SamacSys_Parts" deviceset="TPS82085SILR" device="SON65P280X300X133-9T" package3d_urn="urn:adsk.eagle:package:8852109/1"/>
-<part name="IC1" library="SamacSys_Parts" deviceset="STM32F405RGT6" device="LQFP64" package3d_urn="urn:adsk.eagle:package:8852219/1"/>
+<part name="PS1" library="SamacSys_Parts" deviceset="TPS82085SILR" device="SON65P280X300X133-9T" package3d_urn="urn:adsk.eagle:package:8852109/1" value="TPS82085"/>
+<part name="IC1" library="SamacSys_Parts" deviceset="STM32F405RGT6" device="LQFP64" package3d_urn="urn:adsk.eagle:package:8852219/1" value="STM32F405RG"/>
+<part name="IC2" library="SamacSys_Parts" deviceset="DRV8836DSSR" device="" value="DRV8836"/>
 </parts>
 <sheets>
 <sheet>
@@ -454,6 +540,10 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <plain>
 </plain>
 <instances>
+<instance part="IC2" gate="G$1" x="20.32" y="66.04" smashed="yes">
+<attribute name="NAME" x="57.15" y="73.66" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="57.15" y="71.12" size="1.778" layer="96" align="center-left"/>
+</instance>
 </instances>
 <busses>
 </busses>
