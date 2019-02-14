@@ -1,68 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
-<layer number="32" name="bCream" color="7" fill="5" visible="no" active="no"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="no"/>
-<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
-<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="no"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
-<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 </layers>
-<schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
-<fusionteam huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" folderUrn="urn:adsk.wipprod:fs.folder:co.RxKyY8RMSu-esEzEsS3Adw" urn="urn:adsk.wipprod:dm.lineage:u1t83sbkQv2DnDsKVROaCA"  versionUrn="urn:adsk.wipprod:fs.file:vf.u1t83sbkQv2DnDsKVROaCA?version=1" camFileUrn="" camFileVersionUrn="" lastpublishedchangeguid="389edd94-3b18-0744-bd0a-8f412638b8ad"/>
-<libraries>
-<library name="parts" urn="urn:adsk.eagle:library:8879268">
+<library>
 <packages>
-<package name="B3U-1000P" urn="urn:adsk.eagle:footprint:8879274/2" library_version="3" library_locally_modified="yes">
+<package name="B3U-1000P" urn="urn:adsk.eagle:footprint:8879274/2">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
@@ -77,7 +72,49 @@
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
 <circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 </package>
-<package name="B3U-3000P" urn="urn:adsk.eagle:footprint:8879467/2" library_version="3" library_locally_modified="yes">
+<package name="ESP12E-R_SIDE" urn="urn:adsk.eagle:footprint:8893871/1">
+<description>
+&lt;b&gt;ESP8266-12E Library for Eagle CAD&lt;/b&gt;&lt;p&gt;
+The author not responsible for any damages or errors!.&lt;p&gt;
+&lt;author&gt;Created by Suhail jr.lt;/author&gt;
+</description>
+<wire x1="4.389" y1="-25.4" x2="4.389" y2="-0.03" width="0.127" layer="21"/>
+<wire x1="4.389" y1="-0.03" x2="0" y2="-0.03" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.03" x2="0" y2="-25.4" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="6.35" x2="-5.08" y2="7.62" width="0.127" layer="51"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-5.08" y1="12.7" x2="-3.81" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-3.81" y1="12.7" x2="-3.81" y2="8.89" width="0.127" layer="51"/>
+<wire x1="-3.81" y1="8.89" x2="-2.54" y2="8.89" width="0.127" layer="51"/>
+<wire x1="-2.54" y1="8.89" x2="-2.54" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-2.54" y1="12.7" x2="-1.27" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-1.27" y1="12.7" x2="-1.27" y2="8.89" width="0.127" layer="51"/>
+<wire x1="-1.27" y1="8.89" x2="0" y2="8.89" width="0.127" layer="51"/>
+<wire x1="0" y1="8.89" x2="0" y2="12.7" width="0.127" layer="51"/>
+<wire x1="0" y1="12.7" x2="1.27" y2="12.7" width="0.127" layer="51"/>
+<wire x1="1.27" y1="12.7" x2="1.27" y2="8.89" width="0.127" layer="51"/>
+<wire x1="1.27" y1="8.89" x2="2.54" y2="8.89" width="0.127" layer="51"/>
+<wire x1="2.54" y1="8.89" x2="2.54" y2="12.7" width="0.127" layer="51"/>
+<wire x1="2.54" y1="12.7" x2="6.35" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-5.08" y1="7.62" x2="2.54" y2="7.62" width="0.127" layer="51"/>
+<wire x1="0" y1="-25.4" x2="4.389" y2="-25.4" width="0.127" layer="21"/>
+<smd name="8" x="-1.27" y="-23.4" dx="2" dy="1.2" layer="1"/>
+<smd name="3" x="-1.27" y="-13.4" dx="2" dy="1.2" layer="1"/>
+<smd name="1" x="-1.27" y="-9.4" dx="2" dy="1.2" layer="1"/>
+<smd name="9" x="2.23" y="-23.4" dx="2" dy="1.2" layer="1"/>
+<smd name="10" x="2.23" y="-21.4" dx="2" dy="1.2" layer="1"/>
+<smd name="11" x="2.23" y="-19.4" dx="2" dy="1.2" layer="1"/>
+<smd name="12" x="2.23" y="-17.4" dx="2" dy="1.2" layer="1"/>
+<smd name="13" x="2.23" y="-15.4" dx="2" dy="1.2" layer="1"/>
+<smd name="14" x="2.23" y="-13.4" dx="2" dy="1.2" layer="1"/>
+<smd name="15" x="2.23" y="-11.4" dx="2" dy="1.2" layer="1"/>
+<smd name="16" x="2.23" y="-9.4" dx="2" dy="1.2" layer="1"/>
+<text x="6.27" y="-22.13" size="1.27" layer="21" rot="R90">&gt;NAME</text>
+<text x="-0.95" y="-21.67" size="1.27" layer="21" rot="R90">ESP-12E</text>
+<rectangle x1="-12.7" y1="-8.255" x2="3.81" y2="-1.27" layer="42"/>
+<rectangle x1="-12.7" y1="-8.255" x2="3.81" y2="-1.27" layer="41"/>
+</package>
+<package name="B3U-3000P" urn="urn:adsk.eagle:footprint:8879467/2">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
@@ -92,7 +129,60 @@
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
 <circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 </package>
-<package name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:footprint:8879271/2" library_version="4">
+<package name="ESP8266-ESP12E" urn="urn:adsk.eagle:footprint:8879269/1">
+<description>
+&lt;b&gt;ESP8266-12E Library for Eagle CAD&lt;/b&gt;&lt;p&gt;
+The author not responsible for any damages or errors!.&lt;p&gt;
+&lt;author&gt;Created by Suhail jr.lt;/author&gt;
+</description>
+<wire x1="8.58" y1="-10.16" x2="8.58" y2="13.94" width="0.127" layer="21"/>
+<wire x1="8.58" y1="13.94" x2="-7.62" y2="13.94" width="0.127" layer="21"/>
+<wire x1="-7.62" y1="13.94" x2="-7.62" y2="-10.16" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="6.35" x2="-5.08" y2="7.62" width="0.127" layer="51"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-5.08" y1="12.7" x2="-3.81" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-3.81" y1="12.7" x2="-3.81" y2="8.89" width="0.127" layer="51"/>
+<wire x1="-3.81" y1="8.89" x2="-2.54" y2="8.89" width="0.127" layer="51"/>
+<wire x1="-2.54" y1="8.89" x2="-2.54" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-2.54" y1="12.7" x2="-1.27" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-1.27" y1="12.7" x2="-1.27" y2="8.89" width="0.127" layer="51"/>
+<wire x1="-1.27" y1="8.89" x2="0" y2="8.89" width="0.127" layer="51"/>
+<wire x1="0" y1="8.89" x2="0" y2="12.7" width="0.127" layer="51"/>
+<wire x1="0" y1="12.7" x2="1.27" y2="12.7" width="0.127" layer="51"/>
+<wire x1="1.27" y1="12.7" x2="1.27" y2="8.89" width="0.127" layer="51"/>
+<wire x1="1.27" y1="8.89" x2="2.54" y2="8.89" width="0.127" layer="51"/>
+<wire x1="2.54" y1="8.89" x2="2.54" y2="12.7" width="0.127" layer="51"/>
+<wire x1="2.54" y1="12.7" x2="6.35" y2="12.7" width="0.127" layer="51"/>
+<wire x1="-5.08" y1="7.62" x2="2.54" y2="7.62" width="0.127" layer="51"/>
+<wire x1="-7.62" y1="-10.16" x2="8.58" y2="-10.16" width="0.127" layer="21"/>
+<smd name="8" x="-7.62" y="-8.16" dx="2" dy="1.2" layer="1"/>
+<smd name="7" x="-7.62" y="-6.16" dx="2" dy="1.2" layer="1"/>
+<smd name="6" x="-7.62" y="-4.16" dx="2" dy="1.2" layer="1"/>
+<smd name="5" x="-7.62" y="-2.16" dx="2" dy="1.2" layer="1"/>
+<smd name="4" x="-7.62" y="-0.16" dx="2" dy="1.2" layer="1"/>
+<smd name="3" x="-7.62" y="1.84" dx="2" dy="1.2" layer="1"/>
+<smd name="2" x="-7.62" y="3.84" dx="2" dy="1.2" layer="1"/>
+<smd name="1" x="-7.62" y="5.84" dx="2" dy="1.2" layer="1"/>
+<smd name="9" x="8.58" y="-8.16" dx="2" dy="1.2" layer="1"/>
+<smd name="10" x="8.58" y="-6.16" dx="2" dy="1.2" layer="1"/>
+<smd name="11" x="8.58" y="-4.16" dx="2" dy="1.2" layer="1"/>
+<smd name="12" x="8.58" y="-2.16" dx="2" dy="1.2" layer="1"/>
+<smd name="13" x="8.58" y="-0.16" dx="2" dy="1.2" layer="1"/>
+<smd name="14" x="8.58" y="1.84" dx="2" dy="1.2" layer="1"/>
+<smd name="15" x="8.58" y="3.84" dx="2" dy="1.2" layer="1"/>
+<smd name="16" x="8.58" y="5.84" dx="2" dy="1.2" layer="1"/>
+<smd name="21" x="3.38" y="-10.16" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="17" x="-4.62" y="-10.16" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="18" x="-2.62" y="-10.16" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="22" x="5.38" y="-10.16" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="19" x="-0.62" y="-10.16" dx="2" dy="1.2" layer="1" rot="R90"/>
+<smd name="20" x="1.38" y="-10.16" dx="2" dy="1.2" layer="1" rot="R90"/>
+<text x="-2.62" y="-8.16" size="1.27" layer="21" rot="R90">&gt;NAME</text>
+<text x="-2.62" y="0.95" size="1.27" layer="21">ESP-12E</text>
+<rectangle x1="-7.62" y1="6.985" x2="8.89" y2="13.97" layer="42"/>
+<rectangle x1="-7.62" y1="6.985" x2="8.89" y2="13.97" layer="41"/>
+</package>
+<package name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:footprint:8879271/2">
 <description>&lt;b&gt;LQFP64&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-5.75" y="3.75" dx="1.45" dy="0.3" layer="1"/>
@@ -176,7 +266,7 @@
 <wire x1="-4.675" y1="-4.675" x2="-4.675" y2="4.675" width="0.2" layer="21"/>
 <circle x="-3.685" y="3.738" radius="0.125" width="0.25" layer="25"/>
 </package>
-<package name="TPS82085" urn="urn:adsk.eagle:footprint:8879270/2" library_version="4">
+<package name="TPS82085" urn="urn:adsk.eagle:footprint:8879270/2">
 <description>&lt;b&gt;SIL0008C_1&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-1.1" y="0.975" dx="0.6" dy="0.4" layer="1"/>
@@ -206,7 +296,7 @@
 <dimension x1="-1.4" y1="1.5" x2="-0.796" y2="1.174" x3="-1.098" y3="6.569" textsize="1.27" layer="20" dtype="horizontal"/>
 <dimension x1="-1.401" y1="0.774" x2="-1.399" y2="1.17" x3="-7.458" y3="0.972" textsize="1.27" layer="20" dtype="vertical"/>
 </package>
-<package name="DRV8836" urn="urn:adsk.eagle:footprint:8872087/3" library_version="4">
+<package name="DRV8836" urn="urn:adsk.eagle:footprint:8872087/3">
 <description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
 &lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
 <circle x="-1.524" y="1.927" radius="0.25" width="0" layer="21"/>
@@ -238,7 +328,7 @@
 <text x="0" y="2.5076" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.1266" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="MPU6050" urn="urn:adsk.eagle:footprint:8879272/2" library_version="4">
+<package name="MPU6050" urn="urn:adsk.eagle:footprint:8879272/2">
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-1.975" y="1.25" dx="0.85" dy="0.35" layer="1"/>
@@ -290,66 +380,105 @@
 </package>
 </packages>
 <packages3d>
-<package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/3" type="model" library_version="3" library_locally_modified="yes">
+<package3d name="ESP12E-R_SIDE" urn="urn:adsk.eagle:package:8893872/1" type="box">
+<description>&lt;b&gt;ESP8266-12E Library for Eagle CAD&lt;/b&gt;&lt;p&gt;
+The author not responsible for any damages or errors!.&lt;p&gt;
+&lt;author&gt;Created by Suhail jr.lt;/author&gt;
+</description>
+<packageinstances>
+<packageinstance name="ESP12E-R_SIDE"/>
+</packageinstances>
+</package3d>
+<package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/3" type="model">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="B3U-1000P"/>
 </packageinstances>
 </package3d>
-<package3d name="B3U-3000P" urn="urn:adsk.eagle:package:8879469/3" type="model" library_version="3" library_locally_modified="yes">
-<description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;</description>
-<packageinstances>
-<packageinstance name="B3U-3000P"/>
-</packageinstances>
-</package3d>
-<package3d name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:package:8879286/3" type="model" library_version="4">
+<package3d name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:package:8879286/3" type="model">
 <description>&lt;b&gt;LQFP64&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="QFP50P1200X1200X160-64N"/>
 </packageinstances>
 </package3d>
-<package3d name="TPS82085SILR" urn="urn:adsk.eagle:package:8879285/3" type="model" library_version="4">
+<package3d name="ESP8266-ESP12E" urn="urn:adsk.eagle:package:8879284/2" type="model">
+<description>&lt;b&gt;ESP8266-12E Library for Eagle CAD&lt;/b&gt;&lt;p&gt;
+The author not responsible for any damages or errors!.&lt;p&gt;
+&lt;author&gt;Created by Suhail jr.lt;/author&gt;
+</description>
+<packageinstances>
+<packageinstance name="ESP8266-ESP12E"/>
+</packageinstances>
+</package3d>
+<package3d name="TPS82085SILR" urn="urn:adsk.eagle:package:8879285/3" type="model">
 <description>&lt;b&gt;SIL0008C_1&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="TPS82085"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/3" type="model" library_version="4">
+<package3d name="B3U-3000P" urn="urn:adsk.eagle:package:8879469/3" type="model">
+<description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="B3U-3000P"/>
+</packageinstances>
+</package3d>
+<package3d name="MPU6050" urn="urn:adsk.eagle:package:8879287/3" type="model">
+<description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="MPU6050"/>
+</packageinstances>
+</package3d>
+<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/4" type="model">
 <description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
 &lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="DRV8836"/>
 </packageinstances>
 </package3d>
-<package3d name="MPU6050" urn="urn:adsk.eagle:package:8879287/3" type="model" library_version="4">
-<description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
-<packageinstances>
-<packageinstance name="MPU6050"/>
-</packageinstances>
-</package3d>
 </packages3d>
 <symbols>
-<symbol name="B3U-1000P" urn="urn:adsk.eagle:symbol:8879282/1" library_version="3" library_locally_modified="yes">
-<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="K" x="0" y="0" length="middle"/>
-<pin name="A" x="20.32" y="0" length="middle" rot="R180"/>
+<symbol name="ESP12" urn="urn:adsk.eagle:symbol:8879283/1">
+<pin name="GND" x="7.62" y="-10.16" length="middle" rot="R180"/>
+<pin name="GPIO15" x="7.62" y="-7.62" length="middle" rot="R180"/>
+<pin name="GPIO2" x="7.62" y="-5.08" length="middle" rot="R180"/>
+<pin name="GPIO0" x="7.62" y="-2.54" length="middle" rot="R180"/>
+<pin name="GPIO5" x="7.62" y="0" length="middle" rot="R180"/>
+<pin name="GPIO4" x="7.62" y="2.54" length="middle" rot="R180"/>
+<pin name="RXD" x="7.62" y="5.08" length="middle" rot="R180"/>
+<pin name="TXD" x="7.62" y="7.62" length="middle" rot="R180"/>
+<pin name="REST" x="-22.86" y="7.62" length="middle"/>
+<pin name="ADC" x="-22.86" y="5.08" length="middle"/>
+<pin name="CH_PD" x="-22.86" y="2.54" length="middle"/>
+<pin name="GPIO16" x="-22.86" y="0" length="middle"/>
+<pin name="GPIO14" x="-22.86" y="-2.54" length="middle"/>
+<pin name="GPIO12" x="-22.86" y="-5.08" length="middle"/>
+<pin name="GPIO13" x="-22.86" y="-7.62" length="middle"/>
+<pin name="VCC" x="-22.86" y="-10.16" length="middle"/>
+<wire x1="-17.78" y1="-12.7" x2="2.54" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-12.7" x2="2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="10.16" x2="-17.78" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="10.16" x2="-17.78" y2="-12.7" width="0.254" layer="94"/>
+<text x="-17.78" y="-17.78" size="1.27" layer="94">ESP8266_ESP-12</text>
+<text x="-17.78" y="-15.24" size="1.27" layer="94">&gt;NAME</text>
 </symbol>
-<symbol name="B3U-3000P" urn="urn:adsk.eagle:symbol:8879281/1" library_version="3" library_locally_modified="yes">
-<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="1" x="0" y="0" length="middle"/>
-<pin name="2" x="20.32" y="0" length="middle" rot="R180"/>
+<symbol name="TPS82085" urn="urn:adsk.eagle:symbol:8879277/2">
+<wire x1="5.08" y1="2.54" x2="25.4" y2="2.54" width="0.254" layer="94"/>
+<wire x1="25.4" y1="-12.7" x2="25.4" y2="2.54" width="0.254" layer="94"/>
+<wire x1="25.4" y1="-12.7" x2="5.08" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-12.7" width="0.254" layer="94"/>
+<text x="26.67" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="26.67" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="EN" x="0" y="0" length="middle"/>
+<pin name="PG" x="0" y="-2.54" length="middle"/>
+<pin name="VIN_1" x="0" y="-5.08" length="middle"/>
+<pin name="VIN_2" x="0" y="-7.62" length="middle"/>
+<pin name="GND_1" x="0" y="-10.16" length="middle"/>
+<pin name="GND_2" x="30.48" y="0" length="middle" rot="R180"/>
+<pin name="FB" x="30.48" y="-2.54" length="middle" rot="R180"/>
+<pin name="VOUT" x="30.48" y="-5.08" length="middle" rot="R180"/>
+<pin name="EP" x="30.48" y="-7.62" length="middle" rot="R180"/>
 </symbol>
-<symbol name="STM32F405RG" urn="urn:adsk.eagle:symbol:8879278/2" library_version="4">
+<symbol name="STM32F405RG" urn="urn:adsk.eagle:symbol:8879278/2">
 <wire x1="5.08" y1="12.7" x2="48.26" y2="12.7" width="0.254" layer="94"/>
 <wire x1="48.26" y1="-50.8" x2="48.26" y2="12.7" width="0.254" layer="94"/>
 <wire x1="48.26" y1="-50.8" x2="5.08" y2="-50.8" width="0.254" layer="94"/>
@@ -421,45 +550,62 @@
 <pin name="PA15" x="43.18" y="17.78" length="middle" rot="R270"/>
 <pin name="PA14" x="45.72" y="17.78" length="middle" rot="R270"/>
 </symbol>
-<symbol name="TPS82085" urn="urn:adsk.eagle:symbol:8879277/2" library_version="4">
-<wire x1="5.08" y1="2.54" x2="25.4" y2="2.54" width="0.254" layer="94"/>
-<wire x1="25.4" y1="-12.7" x2="25.4" y2="2.54" width="0.254" layer="94"/>
-<wire x1="25.4" y1="-12.7" x2="5.08" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-12.7" width="0.254" layer="94"/>
-<text x="26.67" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="26.67" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="EN" x="0" y="0" length="middle"/>
-<pin name="PG" x="0" y="-2.54" length="middle"/>
-<pin name="VIN_1" x="0" y="-5.08" length="middle"/>
-<pin name="VIN_2" x="0" y="-7.62" length="middle"/>
-<pin name="GND_1" x="0" y="-10.16" length="middle"/>
-<pin name="GND_2" x="30.48" y="0" length="middle" rot="R180"/>
-<pin name="FB" x="30.48" y="-2.54" length="middle" rot="R180"/>
-<pin name="VOUT" x="30.48" y="-5.08" length="middle" rot="R180"/>
-<pin name="EP" x="30.48" y="-7.62" length="middle" rot="R180"/>
+<symbol name="B3U-1000P" urn="urn:adsk.eagle:symbol:8879282/1">
+<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="K" x="0" y="0" length="middle"/>
+<pin name="A" x="20.32" y="0" length="middle" rot="R180"/>
 </symbol>
-<symbol name="DRV8836DSSR" urn="urn:adsk.eagle:symbol:8879280/1" library_version="3" library_locally_modified="yes">
-<wire x1="5.08" y1="2.54" x2="35.56" y2="2.54" width="0.254" layer="94"/>
-<wire x1="35.56" y1="-20.32" x2="35.56" y2="2.54" width="0.254" layer="94"/>
-<wire x1="35.56" y1="-20.32" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
-<text x="36.83" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="36.83" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="VCC" x="0" y="0" length="middle"/>
-<pin name="AOUT1" x="0" y="-2.54" length="middle"/>
-<pin name="AOUT2" x="0" y="-5.08" length="middle"/>
-<pin name="BOUT1" x="0" y="-7.62" length="middle"/>
-<pin name="BOUT2" x="0" y="-10.16" length="middle"/>
-<pin name="GND" x="0" y="-12.7" length="middle"/>
-<pin name="EP" x="20.32" y="-25.4" length="middle" rot="R90"/>
-<pin name="NSLEEP" x="40.64" y="0" length="middle" rot="R180"/>
-<pin name="MODE" x="40.64" y="-2.54" length="middle" rot="R180"/>
-<pin name="AIN1_/_APHASE" x="40.64" y="-5.08" length="middle" rot="R180"/>
-<pin name="AIN2_/_AENBL" x="40.64" y="-7.62" length="middle" rot="R180"/>
-<pin name="BIN1_/_BPHASE" x="40.64" y="-10.16" length="middle" rot="R180"/>
-<pin name="BIN2_/_BENBL" x="40.64" y="-12.7" length="middle" rot="R180"/>
+<symbol name="ESP12E" urn="urn:adsk.eagle:symbol:8879276/1">
+<description>
+&lt;b&gt;ESP8266-12E Library for Eagle CAD&lt;/b&gt;&lt;p&gt;
+The author not responsible for any damages or errors!.&lt;p&gt;
+&lt;author&gt;Created by Suhail jr.lt;/author&gt;
+</description>
+<pin name="GND" x="10.16" y="-10.16" length="middle" rot="R180"/>
+<pin name="GPIO15" x="10.16" y="-7.62" length="middle" rot="R180"/>
+<pin name="GPIO2" x="10.16" y="-5.08" length="middle" rot="R180"/>
+<pin name="GPIO0" x="10.16" y="-2.54" length="middle" rot="R180"/>
+<pin name="GPIO4" x="10.16" y="0" length="middle" rot="R180"/>
+<pin name="GPIO5" x="10.16" y="2.54" length="middle" rot="R180"/>
+<pin name="RXD" x="10.16" y="5.08" length="middle" rot="R180"/>
+<pin name="TXD" x="10.16" y="7.62" length="middle" rot="R180"/>
+<pin name="REST" x="-22.86" y="7.62" length="middle"/>
+<pin name="ADC" x="-22.86" y="5.08" length="middle"/>
+<pin name="CH_PD" x="-22.86" y="2.54" length="middle"/>
+<pin name="GPIO16" x="-22.86" y="0" length="middle"/>
+<pin name="GPIO14" x="-22.86" y="-2.54" length="middle"/>
+<pin name="GPIO12" x="-22.86" y="-5.08" length="middle"/>
+<pin name="GPIO13" x="-22.86" y="-7.62" length="middle"/>
+<pin name="VCC" x="-22.86" y="-10.16" length="middle"/>
+<pin name="CS0" x="-12.7" y="-25.4" length="middle" rot="R90"/>
+<pin name="MISO" x="-10.16" y="-25.4" length="middle" rot="R90"/>
+<pin name="GPIO9" x="-7.62" y="-25.4" length="middle" rot="R90"/>
+<pin name="GPIO10" x="-5.08" y="-25.4" length="middle" rot="R90"/>
+<pin name="MOSI" x="-2.54" y="-25.4" length="middle" rot="R90"/>
+<pin name="SCLK" x="0" y="-25.4" length="middle" rot="R90"/>
+<wire x1="-17.78" y1="-20.32" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-20.32" x2="5.08" y2="15.24" width="0.254" layer="94"/>
+<wire x1="5.08" y1="15.24" x2="-17.78" y2="15.24" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="15.24" x2="-17.78" y2="-20.32" width="0.254" layer="94"/>
+<text x="-15.24" y="10.16" size="1.27" layer="94">_ESP12E</text>
+<text x="-10.16" y="12.7" size="1.27" layer="94">&gt;NAME</text>
 </symbol>
-<symbol name="MPU-6050" urn="urn:adsk.eagle:symbol:8879279/1" library_version="3" library_locally_modified="yes">
+<symbol name="B3U-3000P" urn="urn:adsk.eagle:symbol:8879281/1">
+<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="0" y="0" length="middle"/>
+<pin name="2" x="20.32" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="MPU-6050" urn="urn:adsk.eagle:symbol:8879279/1">
 <wire x1="5.08" y1="2.54" x2="27.94" y2="2.54" width="0.254" layer="94"/>
 <wire x1="27.94" y1="-33.02" x2="27.94" y2="2.54" width="0.254" layer="94"/>
 <wire x1="27.94" y1="-33.02" x2="5.08" y2="-33.02" width="0.254" layer="94"/>
@@ -492,9 +638,30 @@
 <pin name="SDA" x="33.02" y="-25.4" length="middle" rot="R180"/>
 <pin name="EP" x="33.02" y="-27.94" length="middle" rot="R180"/>
 </symbol>
+<symbol name="DRV8836DSSR" urn="urn:adsk.eagle:symbol:8879280/1">
+<wire x1="5.08" y1="2.54" x2="35.56" y2="2.54" width="0.254" layer="94"/>
+<wire x1="35.56" y1="-20.32" x2="35.56" y2="2.54" width="0.254" layer="94"/>
+<wire x1="35.56" y1="-20.32" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<text x="36.83" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="36.83" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="VCC" x="0" y="0" length="middle"/>
+<pin name="AOUT1" x="0" y="-2.54" length="middle"/>
+<pin name="AOUT2" x="0" y="-5.08" length="middle"/>
+<pin name="BOUT1" x="0" y="-7.62" length="middle"/>
+<pin name="BOUT2" x="0" y="-10.16" length="middle"/>
+<pin name="GND" x="0" y="-12.7" length="middle"/>
+<pin name="EP" x="20.32" y="-25.4" length="middle" rot="R90"/>
+<pin name="NSLEEP" x="40.64" y="0" length="middle" rot="R180"/>
+<pin name="MODE" x="40.64" y="-2.54" length="middle" rot="R180"/>
+<pin name="AIN1_/_APHASE" x="40.64" y="-5.08" length="middle" rot="R180"/>
+<pin name="AIN2_/_AENBL" x="40.64" y="-7.62" length="middle" rot="R180"/>
+<pin name="BIN1_/_BPHASE" x="40.64" y="-10.16" length="middle" rot="R180"/>
+<pin name="BIN2_/_BENBL" x="40.64" y="-12.7" length="middle" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="B3U-1000P" urn="urn:adsk.eagle:component:8879297/2" prefix="S" library_version="3" library_locally_modified="yes">
+<deviceset name="B3U-1000P" prefix="S" urn="urn:adsk.eagle:component:8879297/2">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -521,7 +688,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="B3U-3000P" urn="urn:adsk.eagle:component:8879296/3" prefix="S" library_version="3" library_locally_modified="yes">
+<deviceset name="B3U-3000P" prefix="S" urn="urn:adsk.eagle:component:8879296/3">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-3000P - TACTILE SWITCH, SIDE ACTUATED, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -542,7 +709,173 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="STM32F405RGT6" urn="urn:adsk.eagle:component:8879293/2" prefix="IC" library_version="4">
+<deviceset name="ESP8266-12E" prefix="SJR" uservalue="yes" urn="urn:adsk.eagle:component:8879291/2">
+<description>
+&lt;b&gt;ESP8266-12E Library for Eagle CAD&lt;/b&gt;&lt;p&gt;
+The author not responsible for any damages or errors!.&lt;p&gt;
+&lt;author&gt;Created by Suhail jr.lt;/author&gt;
+</description>
+<gates>
+<gate name="G$1" symbol="ESP12E" x="5.08" y="0"/>
+</gates>
+<devices>
+<device name="ESP12E" package="ESP8266-ESP12E">
+<connects>
+<connect gate="G$1" pin="ADC" pad="2"/>
+<connect gate="G$1" pin="CH_PD" pad="3"/>
+<connect gate="G$1" pin="CS0" pad="17"/>
+<connect gate="G$1" pin="GND" pad="9"/>
+<connect gate="G$1" pin="GPIO0" pad="12"/>
+<connect gate="G$1" pin="GPIO10" pad="20"/>
+<connect gate="G$1" pin="GPIO12" pad="6"/>
+<connect gate="G$1" pin="GPIO13" pad="7"/>
+<connect gate="G$1" pin="GPIO14" pad="5"/>
+<connect gate="G$1" pin="GPIO15" pad="10"/>
+<connect gate="G$1" pin="GPIO16" pad="4"/>
+<connect gate="G$1" pin="GPIO2" pad="11"/>
+<connect gate="G$1" pin="GPIO4" pad="13"/>
+<connect gate="G$1" pin="GPIO5" pad="14"/>
+<connect gate="G$1" pin="GPIO9" pad="19"/>
+<connect gate="G$1" pin="MISO" pad="18"/>
+<connect gate="G$1" pin="MOSI" pad="21"/>
+<connect gate="G$1" pin="REST" pad="1"/>
+<connect gate="G$1" pin="RXD" pad="15"/>
+<connect gate="G$1" pin="SCLK" pad="22"/>
+<connect gate="G$1" pin="TXD" pad="16"/>
+<connect gate="G$1" pin="VCC" pad="8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8879284/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MPU-6050" prefix="IC" urn="urn:adsk.eagle:component:8879294/2">
+<description>&lt;b&gt;IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-1112286.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="MPU-6050" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MPU6050">
+<connects>
+<connect gate="G$1" pin="AD0" pad="9"/>
+<connect gate="G$1" pin="AUX_CL" pad="7"/>
+<connect gate="G$1" pin="AUX_DA" pad="6"/>
+<connect gate="G$1" pin="CLKIN" pad="1"/>
+<connect gate="G$1" pin="CPOUT" pad="20"/>
+<connect gate="G$1" pin="EP" pad="25"/>
+<connect gate="G$1" pin="FSYNC" pad="11"/>
+<connect gate="G$1" pin="GND" pad="18"/>
+<connect gate="G$1" pin="INT" pad="12"/>
+<connect gate="G$1" pin="NC_1" pad="2"/>
+<connect gate="G$1" pin="NC_2" pad="3"/>
+<connect gate="G$1" pin="NC_3" pad="4"/>
+<connect gate="G$1" pin="NC_4" pad="5"/>
+<connect gate="G$1" pin="NC_5" pad="14"/>
+<connect gate="G$1" pin="NC_6" pad="15"/>
+<connect gate="G$1" pin="NC_7" pad="16"/>
+<connect gate="G$1" pin="NC_8" pad="17"/>
+<connect gate="G$1" pin="REGOUT" pad="10"/>
+<connect gate="G$1" pin="RESV_1" pad="19"/>
+<connect gate="G$1" pin="RESV_2" pad="21"/>
+<connect gate="G$1" pin="RESV_3" pad="22"/>
+<connect gate="G$1" pin="SCL" pad="23"/>
+<connect gate="G$1" pin="SDA" pad="24"/>
+<connect gate="G$1" pin="VDD" pad="13"/>
+<connect gate="G$1" pin="VLOGIC" pad="8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8879287/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP" constant="no"/>
+<attribute name="HEIGHT" value="3mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="TDK" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DRV8836" prefix="IC" urn="urn:adsk.eagle:component:8879295/3">
+<description>&lt;b&gt;1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="DRV8836DSSR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1" package="DRV8836">
+<connects>
+<connect gate="G$1" pin="AIN1_/_APHASE" pad="10"/>
+<connect gate="G$1" pin="AIN2_/_AENBL" pad="9"/>
+<connect gate="G$1" pin="AOUT1" pad="2"/>
+<connect gate="G$1" pin="AOUT2" pad="3"/>
+<connect gate="G$1" pin="BIN1_/_BPHASE" pad="8"/>
+<connect gate="G$1" pin="BIN2_/_BENBL" pad="7"/>
+<connect gate="G$1" pin="BOUT1" pad="4"/>
+<connect gate="G$1" pin="BOUT2" pad="5"/>
+<connect gate="G$1" pin="EP" pad="13 14 15 16 17"/>
+<connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="MODE" pad="11"/>
+<connect gate="G$1" pin="NSLEEP" pad="12"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8872076/4"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)" constant="no"/>
+<attribute name="HEIGHT" value="0.8mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="DRV8836DSSR" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-DRV8836DSSR" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPS82085" prefix="PS" urn="urn:adsk.eagle:component:8879292/2">
+<description>&lt;b&gt;TEXAS INSTRUMENTS - TPS82085SILR - DC/DC CONV, SYNC BUCK, 2.4MHZ, USIP-8&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.ti.com/lit/ds/symlink/tps82084.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="TPS82085" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TPS82085">
+<connects>
+<connect gate="G$1" pin="EN" pad="1"/>
+<connect gate="G$1" pin="EP" pad="9"/>
+<connect gate="G$1" pin="FB" pad="7"/>
+<connect gate="G$1" pin="GND_1" pad="5"/>
+<connect gate="G$1" pin="GND_2" pad="6"/>
+<connect gate="G$1" pin="PG" pad="2"/>
+<connect gate="G$1" pin="VIN_1" pad="3"/>
+<connect gate="G$1" pin="VIN_2" pad="4"/>
+<connect gate="G$1" pin="VOUT" pad="8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8879285/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="TEXAS INSTRUMENTS - TPS82085SILR - DC/DC CONV, SYNC BUCK, 2.4MHZ, USIP-8" constant="no"/>
+<attribute name="HEIGHT" value="1.33mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="TPS82085SILR" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-TPS82085SILR" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STM32F405RGT6" prefix="IC" urn="urn:adsk.eagle:component:8879293/2">
 <description>&lt;b&gt;MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -631,258 +964,10 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="TPS82085" urn="urn:adsk.eagle:component:8879292/2" prefix="PS" library_version="4">
-<description>&lt;b&gt;TEXAS INSTRUMENTS - TPS82085SILR - DC/DC CONV, SYNC BUCK, 2.4MHZ, USIP-8&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="http://www.ti.com/lit/ds/symlink/tps82084.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="TPS82085" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TPS82085">
-<connects>
-<connect gate="G$1" pin="EN" pad="1"/>
-<connect gate="G$1" pin="EP" pad="9"/>
-<connect gate="G$1" pin="FB" pad="7"/>
-<connect gate="G$1" pin="GND_1" pad="5"/>
-<connect gate="G$1" pin="GND_2" pad="6"/>
-<connect gate="G$1" pin="PG" pad="2"/>
-<connect gate="G$1" pin="VIN_1" pad="3"/>
-<connect gate="G$1" pin="VIN_2" pad="4"/>
-<connect gate="G$1" pin="VOUT" pad="8"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8879285/3"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="TEXAS INSTRUMENTS - TPS82085SILR - DC/DC CONV, SYNC BUCK, 2.4MHZ, USIP-8" constant="no"/>
-<attribute name="HEIGHT" value="1.33mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="TPS82085SILR" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="595-TPS82085SILR" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="DRV8836" urn="urn:adsk.eagle:component:8879295/2" prefix="IC" library_version="4">
-<description>&lt;b&gt;1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="DRV8836DSSR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1" package="DRV8836">
-<connects>
-<connect gate="G$1" pin="AIN1_/_APHASE" pad="10"/>
-<connect gate="G$1" pin="AIN2_/_AENBL" pad="9"/>
-<connect gate="G$1" pin="AOUT1" pad="2"/>
-<connect gate="G$1" pin="AOUT2" pad="3"/>
-<connect gate="G$1" pin="BIN1_/_BPHASE" pad="8"/>
-<connect gate="G$1" pin="BIN2_/_BENBL" pad="7"/>
-<connect gate="G$1" pin="BOUT1" pad="4"/>
-<connect gate="G$1" pin="BOUT2" pad="5"/>
-<connect gate="G$1" pin="EP" pad="13 14 15 16 17"/>
-<connect gate="G$1" pin="GND" pad="6"/>
-<connect gate="G$1" pin="MODE" pad="11"/>
-<connect gate="G$1" pin="NSLEEP" pad="12"/>
-<connect gate="G$1" pin="VCC" pad="1"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8872076/3"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)" constant="no"/>
-<attribute name="HEIGHT" value="0.8mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="DRV8836DSSR" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="595-DRV8836DSSR" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="MPU-6050" urn="urn:adsk.eagle:component:8879294/2" prefix="IC" library_version="4">
-<description>&lt;b&gt;IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-1112286.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="MPU-6050" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="MPU6050">
-<connects>
-<connect gate="G$1" pin="AD0" pad="9"/>
-<connect gate="G$1" pin="AUX_CL" pad="7"/>
-<connect gate="G$1" pin="AUX_DA" pad="6"/>
-<connect gate="G$1" pin="CLKIN" pad="1"/>
-<connect gate="G$1" pin="CPOUT" pad="20"/>
-<connect gate="G$1" pin="EP" pad="25"/>
-<connect gate="G$1" pin="FSYNC" pad="11"/>
-<connect gate="G$1" pin="GND" pad="18"/>
-<connect gate="G$1" pin="INT" pad="12"/>
-<connect gate="G$1" pin="NC_1" pad="2"/>
-<connect gate="G$1" pin="NC_2" pad="3"/>
-<connect gate="G$1" pin="NC_3" pad="4"/>
-<connect gate="G$1" pin="NC_4" pad="5"/>
-<connect gate="G$1" pin="NC_5" pad="14"/>
-<connect gate="G$1" pin="NC_6" pad="15"/>
-<connect gate="G$1" pin="NC_7" pad="16"/>
-<connect gate="G$1" pin="NC_8" pad="17"/>
-<connect gate="G$1" pin="REGOUT" pad="10"/>
-<connect gate="G$1" pin="RESV_1" pad="19"/>
-<connect gate="G$1" pin="RESV_2" pad="21"/>
-<connect gate="G$1" pin="RESV_3" pad="22"/>
-<connect gate="G$1" pin="SCL" pad="23"/>
-<connect gate="G$1" pin="SDA" pad="24"/>
-<connect gate="G$1" pin="VDD" pad="13"/>
-<connect gate="G$1" pin="VLOGIC" pad="8"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8879287/3"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP" constant="no"/>
-<attribute name="HEIGHT" value="3mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="TDK" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
-</libraries>
-<attributes>
-</attributes>
-<variantdefs>
-</variantdefs>
-<classes>
-<class number="0" name="default" width="0" drill="0">
-</class>
-</classes>
-<parts>
-<part name="S1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/3"/>
-<part name="S2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B3U-3000P" device="B3U-3000P" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
-<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="STM32F405RGT6" device="" package3d_urn="urn:adsk.eagle:package:8879286/3"/>
-<part name="PS1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="TPS82085" device="" package3d_urn="urn:adsk.eagle:package:8879285/3"/>
-<part name="IC3" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="DRV8836" device="1" package3d_urn="urn:adsk.eagle:package:8872076/3"/>
-<part name="IC2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MPU-6050" device="" package3d_urn="urn:adsk.eagle:package:8879287/3"/>
-</parts>
-<sheets>
-<sheet>
-<description>power supply</description>
-<plain>
-</plain>
-<instances>
-<instance part="PS1" gate="G$1" x="20.32" y="55.88" smashed="yes">
-<attribute name="NAME" x="46.99" y="63.5" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="46.99" y="60.96" size="1.778" layer="96" align="center-left"/>
-</instance>
-</instances>
-<busses>
-</busses>
-<nets>
-</nets>
-</sheet>
-<sheet>
-<description>mcu</description>
-<plain>
-</plain>
-<instances>
-<instance part="S1" gate="G$1" x="104.14" y="68.58" smashed="yes">
-<attribute name="NAME" x="120.65" y="76.2" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="120.65" y="73.66" size="1.778" layer="96" align="center-left"/>
-</instance>
-<instance part="S2" gate="G$1" x="104.14" y="53.34" smashed="yes">
-<attribute name="NAME" x="120.65" y="60.96" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="120.65" y="58.42" size="1.778" layer="96" align="center-left"/>
-</instance>
-<instance part="IC1" gate="G$1" x="20.32" y="58.42" smashed="yes">
-<attribute name="NAME" x="69.85" y="76.2" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="69.85" y="73.66" size="1.778" layer="96" align="center-left"/>
-</instance>
-</instances>
-<busses>
-</busses>
-<nets>
-</nets>
-</sheet>
-<sheet>
-<description>gyro+accel</description>
-<plain>
-</plain>
-<instances>
-<instance part="IC2" gate="G$1" x="17.78" y="45.72" smashed="yes">
-<attribute name="NAME" x="46.99" y="53.34" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="46.99" y="50.8" size="1.778" layer="96" align="center-left"/>
-</instance>
-</instances>
-<busses>
-</busses>
-<nets>
-</nets>
-</sheet>
-<sheet>
-<description>motor controll</description>
-<plain>
-</plain>
-<instances>
-<instance part="IC3" gate="G$1" x="22.86" y="38.1" smashed="yes">
-<attribute name="NAME" x="59.69" y="45.72" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="59.69" y="43.18" size="1.778" layer="96" align="center-left"/>
-</instance>
-</instances>
-<busses>
-</busses>
-<nets>
-</nets>
-</sheet>
-<sheet>
-<description>encoder</description>
-<plain>
-</plain>
-<instances>
-</instances>
-<busses>
-</busses>
-<nets>
-</nets>
-</sheet>
-<sheet>
-<description>IRs and PTs</description>
-<plain>
-</plain>
-<instances>
-</instances>
-<busses>
-</busses>
-<nets>
-</nets>
-</sheet>
-<sheet>
-<description>wifi modul</description>
-<plain>
-</plain>
-<instances>
-</instances>
-<busses>
-</busses>
-<nets>
-</nets>
-</sheet>
-</sheets>
-</schematic>
 </drawing>
 <compatibility>
-<note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
 <note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
