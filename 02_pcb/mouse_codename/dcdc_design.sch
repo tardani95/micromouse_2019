@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -288,6 +288,24 @@
 <wire x1="-2.419" y1="2.316" x2="-2.419" y2="2.216" width="0.1" layer="21" curve="180"/>
 <wire x1="-2.419" y1="2.216" x2="-2.419" y2="2.316" width="0.1" layer="21" curve="180"/>
 </package>
+<package name="JDY-10_STANDING" urn="urn:adsk.eagle:footprint:8988316/1" library_version="8">
+<wire x1="13" y1="-1.362" x2="13" y2="0.7" width="0.05" layer="21"/>
+<wire x1="13" y1="0.7" x2="0" y2="0.7" width="0.05" layer="21"/>
+<wire x1="0" y1="0.7" x2="0" y2="-1.362" width="0.05" layer="21"/>
+<wire x1="0" y1="-1.362" x2="13" y2="-1.362" width="0.05" layer="21"/>
+<smd name="P$8" x="1.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="2.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$10" x="4.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$11" x="5.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$12" x="7.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$13" x="8.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$14" x="10.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$15" x="11.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<dimension x1="0" y1="0" x2="13" y2="0" x3="6.5" y3="-5.9" textsize="1.27" layer="20"/>
+<text x="0" y="-2.908" size="1.27" layer="25">JDY-10</text>
+<text x="7.8" y="-2.908" size="1.27" layer="21">TOP</text>
+<text x="5.6" y="1.2" size="1.27" layer="21">BOTTOM</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/3" type="model" library_version="3" library_locally_modified="yes">
@@ -314,7 +332,7 @@
 <packageinstance name="TPS82085"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/3" type="model" library_version="4">
+<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/4" type="model" library_version="8">
 <description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
 &lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -325,6 +343,11 @@
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="MPU6050"/>
+</packageinstances>
+</package3d>
+<package3d name="JDY-10_STANDING" urn="urn:adsk.eagle:package:8988323/2" type="model" library_version="8">
+<packageinstances>
+<packageinstance name="JDY-10_STANDING"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -491,6 +514,21 @@
 <pin name="SCL" x="33.02" y="-22.86" length="middle" rot="R180"/>
 <pin name="SDA" x="33.02" y="-25.4" length="middle" rot="R180"/>
 <pin name="EP" x="33.02" y="-27.94" length="middle" rot="R180"/>
+</symbol>
+<symbol name="JDY-10_STANDING" urn="urn:adsk.eagle:symbol:8988321/1" library_version="8">
+<pin name="VCC" x="-17.78" y="12.7" length="middle"/>
+<pin name="GND" x="-17.78" y="7.62" length="middle"/>
+<pin name="RX/C7" x="17.78" y="12.7" length="middle" rot="R180"/>
+<pin name="TX/C6" x="17.78" y="7.62" length="middle" rot="R180"/>
+<pin name="D5" x="17.78" y="-2.54" length="middle" rot="R180"/>
+<pin name="D4/PWRC" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<pin name="PWM3/A1" x="-17.78" y="-7.62" length="middle"/>
+<pin name="A5" x="-17.78" y="-12.7" length="middle"/>
+<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-15.24" x2="12.7" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-15.24" x2="12.7" y2="15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.254" layer="94"/>
+<text x="-5.08" y="0" size="2.54" layer="95">JDY-10</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -665,7 +703,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/tps82084.pdf"&gt; Datasheet
 </device>
 </devices>
 </deviceset>
-<deviceset name="DRV8836" urn="urn:adsk.eagle:component:8879295/2" prefix="IC" library_version="4">
+<deviceset name="DRV8836" urn="urn:adsk.eagle:component:8879295/3" prefix="IC" library_version="8">
 <description>&lt;b&gt;1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -689,7 +727,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;<
 <connect gate="G$1" pin="VCC" pad="1"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8872076/3"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8872076/4"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -753,6 +791,31 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 </device>
 </devices>
 </deviceset>
+<deviceset name="JDY-10_STANDING" urn="urn:adsk.eagle:component:8988326/2" library_version="8">
+<gates>
+<gate name="G$1" symbol="JDY-10_STANDING" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JDY-10_STANDING">
+<connects>
+<connect gate="G$1" pin="A5" pad="P$11"/>
+<connect gate="G$1" pin="D4/PWRC" pad="P$13"/>
+<connect gate="G$1" pin="D5" pad="P$12"/>
+<connect gate="G$1" pin="GND" pad="P$9"/>
+<connect gate="G$1" pin="PWM3/A1" pad="P$10"/>
+<connect gate="G$1" pin="RX/C7" pad="P$14"/>
+<connect gate="G$1" pin="TX/C6" pad="P$15"/>
+<connect gate="G$1" pin="VCC" pad="P$8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8988323/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -769,8 +832,10 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 <part name="S2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B3U-3000P" device="B3U-3000P" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
 <part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="STM32F405RGT6" device="" package3d_urn="urn:adsk.eagle:package:8879286/3"/>
 <part name="PS1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="TPS82085" device="" package3d_urn="urn:adsk.eagle:package:8879285/3"/>
-<part name="IC3" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="DRV8836" device="1" package3d_urn="urn:adsk.eagle:package:8872076/3"/>
+<part name="IC3" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="DRV8836" device="1" package3d_urn="urn:adsk.eagle:package:8872076/4"/>
 <part name="IC2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MPU-6050" device="" package3d_urn="urn:adsk.eagle:package:8879287/3"/>
+<part name="U$1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="JDY-10_STANDING" device="" package3d_urn="urn:adsk.eagle:package:8988323/2"/>
+<part name="S3" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B3U-3000P" device="B3U-3000P" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
 </parts>
 <sheets>
 <sheet>
@@ -804,6 +869,10 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 <instance part="IC1" gate="G$1" x="20.32" y="58.42" smashed="yes">
 <attribute name="NAME" x="69.85" y="76.2" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="69.85" y="73.66" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="S3" gate="G$1" x="104.14" y="40.64" smashed="yes">
+<attribute name="NAME" x="120.65" y="48.26" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="120.65" y="45.72" size="1.778" layer="96" align="center-left"/>
 </instance>
 </instances>
 <busses>
@@ -864,10 +933,11 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 </nets>
 </sheet>
 <sheet>
-<description>wifi modul</description>
+<description>wireless modul</description>
 <plain>
 </plain>
 <instances>
+<instance part="U$1" gate="G$1" x="45.72" y="53.34" smashed="yes"/>
 </instances>
 <busses>
 </busses>

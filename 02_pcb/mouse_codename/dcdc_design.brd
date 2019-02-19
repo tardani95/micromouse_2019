@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.0">
+<eagle version="9.3.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
@@ -72,7 +72,7 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-14T13:46:35Z" lastsyncedchangeguid="91bb73fe-f470-6698-3c66-1e03401e33c1"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-18T14:42:59Z" lastsyncedchangeguid="0544df33-de13-fd85-fece-75a309ed31b2"/>
 <fusionteam huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" folderUrn="urn:adsk.wipprod:fs.folder:co.RxKyY8RMSu-esEzEsS3Adw" urn="urn:adsk.wipprod:dm.lineage:1s2wRtowRW-Z3f7mGxVljQ"  versionUrn="urn:adsk.wipprod:fs.file:vf.1s2wRtowRW-Z3f7mGxVljQ?version=1" camFileUrn="" camFileVersionUrn="" lastpublishedchangeguid="77a21d4d-c299-4095-9b09-cffeb97aa64f"/>
 <plain>
 <wire x1="38" y1="27.75" x2="38" y2="32" width="0.254" layer="20"/>
@@ -343,6 +343,24 @@
 <wire x1="-2.419" y1="2.316" x2="-2.419" y2="2.216" width="0.1" layer="21" curve="180"/>
 <wire x1="-2.419" y1="2.216" x2="-2.419" y2="2.316" width="0.1" layer="21" curve="180"/>
 </package>
+<package name="JDY-10_STANDING" urn="urn:adsk.eagle:footprint:8988316/1" library_version="8">
+<wire x1="13" y1="-1.362" x2="13" y2="0.7" width="0.05" layer="21"/>
+<wire x1="13" y1="0.7" x2="0" y2="0.7" width="0.05" layer="21"/>
+<wire x1="0" y1="0.7" x2="0" y2="-1.362" width="0.05" layer="21"/>
+<wire x1="0" y1="-1.362" x2="13" y2="-1.362" width="0.05" layer="21"/>
+<smd name="P$8" x="1.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="2.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$10" x="4.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$11" x="5.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$12" x="7.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$13" x="8.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$14" x="10.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$15" x="11.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<dimension x1="0" y1="0" x2="13" y2="0" x3="6.5" y3="-5.9" textsize="1.27" layer="20"/>
+<text x="0" y="-2.908" size="1.27" layer="25">JDY-10</text>
+<text x="7.8" y="-2.908" size="1.27" layer="21">TOP</text>
+<text x="5.6" y="1.2" size="1.27" layer="21">BOTTOM</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/3" type="model" library_version="3" library_locally_modified="yes">
@@ -369,7 +387,7 @@
 <packageinstance name="TPS82085"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/3" type="model" library_version="4">
+<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/4" type="model" library_version="8">
 <description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
 &lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -380,6 +398,11 @@
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="MPU6050"/>
+</packageinstances>
+</package3d>
+<package3d name="JDY-10_STANDING" urn="urn:adsk.eagle:package:8988323/2" type="model" library_version="8">
+<packageinstances>
+<packageinstance name="JDY-10_STANDING"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -590,41 +613,46 @@ design rules under a new name.</description>
 <attribute name="NAME" x="8.175" y="4.239" size="1.27" layer="25" align="center"/>
 <attribute name="VALUE" x="8.048" y="-0.079" size="1.27" layer="27" align="center"/>
 </element>
-<element name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="QFP50P1200X1200X160-64N" package3d_urn="urn:adsk.eagle:package:8879286/3" value="STM32F405RGT6" x="22.86" y="40.64" smashed="yes">
-<attribute name="DESCRIPTION" value="MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP" x="22.86" y="40.64" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="1.6mm" x="22.86" y="40.64" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="STMicroelectronics" x="22.86" y="40.64" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="STM32F405RGT6" x="22.86" y="40.64" size="1.778" layer="27" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="511-STM32F405RGT6" x="22.86" y="40.64" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="22.86" y="41.91" size="1.27" layer="25" align="center"/>
-<attribute name="VALUE" x="22.86" y="39.37" size="1.27" layer="27" align="center"/>
+<element name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="QFP50P1200X1200X160-64N" package3d_urn="urn:adsk.eagle:package:8879286/3" value="STM32F405RGT6" x="22.86" y="33.02" smashed="yes">
+<attribute name="DESCRIPTION" value="MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP" x="22.86" y="33.02" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="1.6mm" x="22.86" y="33.02" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="STMicroelectronics" x="22.86" y="33.02" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="STM32F405RGT6" x="22.86" y="33.02" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="511-STM32F405RGT6" x="22.86" y="33.02" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="22.86" y="34.29" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="22.86" y="31.75" size="1.27" layer="27" align="center"/>
 </element>
-<element name="PS1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="TPS82085" package3d_urn="urn:adsk.eagle:package:8879285/3" value="TPS82085" x="12.7" y="7.62" smashed="yes">
-<attribute name="DESCRIPTION" value="TEXAS INSTRUMENTS - TPS82085SILR - DC/DC CONV, SYNC BUCK, 2.4MHZ, USIP-8" x="12.7" y="7.62" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="1.33mm" x="12.7" y="7.62" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="Texas Instruments" x="12.7" y="7.62" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="TPS82085SILR" x="12.7" y="7.62" size="1.778" layer="27" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="595-TPS82085SILR" x="12.7" y="7.62" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="12.7" y="10.16" size="1.27" layer="25" align="center"/>
-<attribute name="VALUE" x="12.7" y="5.08" size="1.27" layer="27" align="center"/>
+<element name="PS1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="TPS82085" package3d_urn="urn:adsk.eagle:package:8879285/3" value="TPS82085" x="19.05" y="8.89" smashed="yes">
+<attribute name="DESCRIPTION" value="TEXAS INSTRUMENTS - TPS82085SILR - DC/DC CONV, SYNC BUCK, 2.4MHZ, USIP-8" x="19.05" y="8.89" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="1.33mm" x="19.05" y="8.89" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" x="19.05" y="8.89" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="TPS82085SILR" x="19.05" y="8.89" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-TPS82085SILR" x="19.05" y="8.89" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="19.05" y="11.43" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="19.05" y="6.35" size="1.27" layer="27" align="center"/>
 </element>
-<element name="IC3" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="DRV8836" package3d_urn="urn:adsk.eagle:package:8872076/3" value="DRV88361" x="16.51" y="25.4" smashed="yes">
-<attribute name="DESCRIPTION" value="1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)" x="16.51" y="25.4" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="0.8mm" x="16.51" y="25.4" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="Texas Instruments" x="16.51" y="25.4" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="DRV8836DSSR" x="16.51" y="25.4" size="1.778" layer="27" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="595-DRV8836DSSR" x="16.51" y="25.4" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="16.51" y="27.9076" size="1.27" layer="25" align="bottom-center"/>
-<attribute name="VALUE" x="16.51" y="23.2734" size="1.27" layer="27" align="top-center"/>
+<element name="IC3" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="DRV8836" package3d_urn="urn:adsk.eagle:package:8872076/4" value="DRV88361" x="17.78" y="24.13" smashed="yes">
+<attribute name="DESCRIPTION" value="1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)" x="17.78" y="24.13" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="0.8mm" x="17.78" y="24.13" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" x="17.78" y="24.13" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="DRV8836DSSR" x="17.78" y="24.13" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-DRV8836DSSR" x="17.78" y="24.13" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="17.78" y="26.6376" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="VALUE" x="17.78" y="22.0034" size="1.27" layer="27" align="top-center"/>
 </element>
-<element name="IC2" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="MPU6050" package3d_urn="urn:adsk.eagle:package:8879287/3" value="MPU-6050" x="22.86" y="30.48" smashed="yes">
-<attribute name="DESCRIPTION" value="IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP" x="22.86" y="30.48" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="3mm" x="22.86" y="30.48" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="TDK" x="22.86" y="30.48" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" x="22.86" y="30.48" size="1.778" layer="27" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" x="22.86" y="30.48" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="22.86" y="33.782" size="1.27" layer="25" align="center"/>
-<attribute name="VALUE" x="22.86" y="27.305" size="1.27" layer="27" align="center"/>
+<element name="IC2" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="MPU6050" package3d_urn="urn:adsk.eagle:package:8879287/3" value="MPU-6050" x="22.86" y="42.672" smashed="yes">
+<attribute name="DESCRIPTION" value="IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP" x="22.86" y="42.672" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="3mm" x="22.86" y="42.672" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="TDK" x="22.86" y="42.672" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" x="22.86" y="42.672" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" x="22.86" y="42.672" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="22.86" y="45.974" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="22.86" y="39.497" size="1.27" layer="27" align="center"/>
+</element>
+<element name="U$1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="JDY-10_STANDING" package3d_urn="urn:adsk.eagle:package:8988323/2" value="JDY-10_STANDING" x="26.035" y="2.159" smashed="yes"/>
+<element name="S3" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="B3U-3000P" package3d_urn="urn:adsk.eagle:package:8879469/3" value="B3U-3000PB3U-3000P" x="41.402" y="3.556" smashed="yes" rot="R45">
+<attribute name="NAME" x="39.51541875" y="4.790584375" size="1.27" layer="25" rot="R45" align="center"/>
+<attribute name="VALUE" x="42.478903125" y="1.647490625" size="1.27" layer="27" rot="R45" align="center"/>
 </element>
 </elements>
 <signals>
