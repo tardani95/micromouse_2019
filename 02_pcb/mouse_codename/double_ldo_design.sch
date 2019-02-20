@@ -8758,6 +8758,18 @@ external ceramic decoupling capacitor.</text>
 </instance>
 </instances>
 <busses>
+<bus name="IRS_AND_PTS:IRD1,IRD2,PTR1,PTR2">
+<segment>
+<wire x1="226.06" y1="142.24" x2="226.06" y2="165.1" width="0.762" layer="92"/>
+<label x="231.14" y="142.24" size="1.778" layer="95" rot="R90"/>
+</segment>
+</bus>
+<bus name="ENCODERS:ENC1_CHA,ENC1_CHB">
+<segment>
+<wire x1="226.06" y1="134.62" x2="226.06" y2="119.38" width="0.762" layer="92"/>
+<label x="231.14" y="119.38" size="1.778" layer="95" rot="R90"/>
+</segment>
+</bus>
 </busses>
 <nets>
 <net name="N$10" class="0">
@@ -8987,12 +8999,20 @@ external ceramic decoupling capacitor.</text>
 <wire x1="93.98" y1="73.66" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
 <label x="78.74" y="73.66" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="226.06" y1="162.56" x2="215.9" y2="162.56" width="0.1524" layer="91"/>
+<label x="215.9" y="162.56" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="PTR2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA1"/>
 <wire x1="93.98" y1="71.12" x2="78.74" y2="71.12" width="0.1524" layer="91"/>
 <label x="78.74" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="215.9" y1="157.48" x2="226.06" y2="157.48" width="0.1524" layer="91"/>
+<label x="215.9" y="157.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IRD1" class="0">
@@ -9001,12 +9021,20 @@ external ceramic decoupling capacitor.</text>
 <wire x1="93.98" y1="68.58" x2="78.74" y2="68.58" width="0.1524" layer="91"/>
 <label x="78.74" y="68.58" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="226.06" y1="160.02" x2="215.9" y2="160.02" width="0.1524" layer="91"/>
+<label x="215.9" y="160.02" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="IRD2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA3"/>
 <wire x1="93.98" y1="66.04" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
 <label x="78.74" y="66.04" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="215.9" y1="154.94" x2="226.06" y2="154.94" width="0.1524" layer="91"/>
+<label x="215.9" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ENC1_CHA" class="0">
@@ -9015,12 +9043,20 @@ external ceramic decoupling capacitor.</text>
 <wire x1="93.98" y1="53.34" x2="78.74" y2="53.34" width="0.1524" layer="91"/>
 <label x="78.74" y="53.34" size="1.778" layer="95"/>
 </segment>
+<segment>
+<label x="210.82" y="134.62" size="1.778" layer="95"/>
+<wire x1="226.06" y1="134.62" x2="210.82" y2="134.62" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="ENC1_CHB" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA9"/>
 <wire x1="93.98" y1="50.8" x2="78.74" y2="50.8" width="0.1524" layer="91"/>
 <label x="78.74" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="226.06" y1="132.08" x2="210.82" y2="132.08" width="0.1524" layer="91"/>
+<label x="210.82" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BTN2" class="0">
