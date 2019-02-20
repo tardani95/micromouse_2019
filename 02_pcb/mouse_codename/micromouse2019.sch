@@ -8669,6 +8669,11 @@ external battery is used, it is recommended to connect this pin to V DD with a 1
 external ceramic decoupling capacitor.</text>
 <rectangle x1="72.39" y1="118.618" x2="87.884" y2="125.476" layer="98"/>
 <rectangle x1="2.54" y1="1.524" x2="98.806" y2="10.16" layer="98"/>
+<text x="2.54" y="12.7" size="1.778" layer="98">To increase EMC performance, unused clocks, counters or I/Os, should not be left free, e.g.
+I/Os should be set to “0” or “1”(pull-up or pull-down to the unused I/O pins.) and unused
+features should be “frozen” or disabled.
+Note: To reduce leakage it is advisable to configure the I/O as an analog input or to push-pull and
+to set it to “0”.</text>
 </plain>
 <instances>
 <instance part="C1" gate="G$1" x="53.34" y="93.98" smashed="yes">
