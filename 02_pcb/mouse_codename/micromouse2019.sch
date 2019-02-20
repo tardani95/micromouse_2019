@@ -8356,6 +8356,11 @@ DIN A4, landscape with extra doc field</description>
 <sheets>
 <sheet>
 <plain>
+<text x="2.54" y="2.54" size="1.778" layer="97">The V BAT pin can be connected to the external battery (1.65 V &lt; V BAT &lt; 3.6 V). If no
+external battery is used, it is recommended to connect this pin to V DD with a 100 nF
+external ceramic decoupling capacitor.</text>
+<rectangle x1="72.39" y1="118.618" x2="87.884" y2="125.476" layer="98"/>
+<rectangle x1="2.54" y1="1.524" x2="98.806" y2="10.16" layer="98"/>
 </plain>
 <instances>
 <instance part="C1" gate="G$1" x="53.34" y="93.98" smashed="yes">
@@ -9150,6 +9155,10 @@ DIN A4, landscape with extra doc field</description>
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)
