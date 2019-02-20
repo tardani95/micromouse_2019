@@ -8313,6 +8313,77 @@ DIN A4, landscape with extra doc field</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SamacSys_Parts">
+<description>&lt;b&gt;https://componentsearchengine.com&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="BM04B-SRSS-TB(LFSN)">
+<description>&lt;b&gt;BM04B-SRSS-TB(LFSN)&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="1.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="2.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="3" x="3.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="4" x="4.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="5" x="0.2" y="2.075" dx="1.8" dy="1.2" layer="1" rot="R90"/>
+<smd name="6" x="5.8" y="2.075" dx="1.8" dy="1.2" layer="1" rot="R90"/>
+<text x="2.689" y="0.686" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="2.689" y="0.686" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="0" y1="2.8" x2="6" y2="2.8" width="0.254" layer="51"/>
+<wire x1="6" y1="2.8" x2="6" y2="-0.1" width="0.254" layer="51"/>
+<wire x1="6" y1="-0.1" x2="0" y2="-0.1" width="0.254" layer="51"/>
+<wire x1="0" y1="-0.1" x2="0" y2="2.8" width="0.254" layer="51"/>
+<wire x1="1.113" y1="2.8" x2="4.901" y2="2.8" width="0.254" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="0.928" width="0.254" layer="21"/>
+<wire x1="0" y1="-0.1" x2="0.987" y2="-0.1" width="0.254" layer="21"/>
+<wire x1="6" y1="-0.1" x2="6" y2="1.009" width="0.254" layer="21"/>
+<wire x1="6" y1="-0.1" x2="4.955" y2="-0.1" width="0.254" layer="21"/>
+<circle x="0.689" y="-1.219" radius="0.063" width="0.254" layer="25"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BM04B-SRSS-TB(LFSN)">
+<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-5.08" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="0" y="0" length="middle"/>
+<pin name="3" x="0" y="-2.54" length="middle"/>
+<pin name="2" x="20.32" y="0" length="middle" rot="R180"/>
+<pin name="4" x="20.32" y="-2.54" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BM04B-SRSS-TB(LFSN)" prefix="J">
+<description>&lt;b&gt;4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="BM04B-SRSS-TB(LFSN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BM04B-SRSS-TB(LFSN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="5151541P" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9416,6 +9487,8 @@ to set it to “0”.</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="J1" library="SamacSys_Parts" deviceset="BM04B-SRSS-TB(LFSN)" device=""/>
+<part name="J2" library="SamacSys_Parts" deviceset="BM04B-SRSS-TB(LFSN)" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9427,6 +9500,14 @@ to set it to “0”.</text>
 <attribute name="LAST_DATE_TIME" x="175.26" y="1.27" size="2.54" layer="94"/>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
+</instance>
+<instance part="J1" gate="G$1" x="91.44" y="86.36" smashed="yes">
+<attribute name="NAME" x="107.95" y="93.98" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="107.95" y="91.44" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="J2" gate="G$1" x="91.44" y="66.04" smashed="yes">
+<attribute name="NAME" x="107.95" y="73.66" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="107.95" y="71.12" size="1.778" layer="96" align="center-left"/>
 </instance>
 </instances>
 <busses>
