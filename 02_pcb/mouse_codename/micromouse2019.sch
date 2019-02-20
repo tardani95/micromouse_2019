@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8356,24 +8356,68 @@ with a typical dropout voltage of 300 mV.</description>
 <plain>
 </plain>
 <instances>
-<instance part="LDO1" gate="A" x="22.86" y="68.58"/>
-<instance part="LDO2" gate="G$1" x="17.78" y="22.86"/>
-<instance part="+3V1" gate="G$1" x="50.8" y="83.82"/>
-<instance part="P+1" gate="VCC" x="50.8" y="33.02"/>
-<instance part="GND1" gate="1" x="0" y="5.08"/>
-<instance part="GND2" gate="1" x="0" y="48.26"/>
-<instance part="C1" gate="G$1" x="-20.32" y="60.96"/>
-<instance part="C2" gate="G$1" x="-10.16" y="60.96"/>
-<instance part="C3" gate="G$1" x="50.8" y="60.96"/>
-<instance part="C4" gate="G$1" x="-20.32" y="17.78"/>
-<instance part="C5" gate="G$1" x="50.8" y="17.78"/>
-<instance part="GND3" gate="1" x="-20.32" y="48.26"/>
-<instance part="GND4" gate="1" x="-10.16" y="48.26"/>
-<instance part="GND5" gate="1" x="50.8" y="48.26"/>
-<instance part="GND6" gate="1" x="-20.32" y="5.08"/>
-<instance part="GND7" gate="1" x="50.8" y="5.08"/>
-<instance part="J1" gate="G$1" x="-53.34" y="76.2" rot="R180"/>
-<instance part="GND8" gate="1" x="-40.64" y="48.26"/>
+<instance part="LDO1" gate="A" x="22.86" y="68.58" smashed="yes">
+<attribute name="NAME" x="9.776640625" y="85.3512" size="2.0837" layer="95" ratio="10" rot="SR0"/>
+<attribute name="VALUE" x="9.5455" y="45.6081" size="2.086040625" layer="96" ratio="10" rot="SR0"/>
+</instance>
+<instance part="LDO2" gate="G$1" x="17.78" y="22.86" smashed="yes">
+<attribute name="NAME" x="10.16" y="29.21" size="1.778" layer="95"/>
+<attribute name="VALUE" x="10.16" y="12.7" size="1.778" layer="95"/>
+</instance>
+<instance part="+3V1" gate="G$1" x="50.8" y="83.82" smashed="yes">
+<attribute name="VALUE" x="48.26" y="78.74" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P+1" gate="VCC" x="50.8" y="33.02" smashed="yes">
+<attribute name="VALUE" x="48.26" y="30.48" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND1" gate="1" x="0" y="5.08" smashed="yes">
+<attribute name="VALUE" x="-2.54" y="2.54" size="1.778" layer="96"/>
+</instance>
+<instance part="GND2" gate="1" x="0" y="48.26" smashed="yes">
+<attribute name="VALUE" x="-2.54" y="45.72" size="1.778" layer="96"/>
+</instance>
+<instance part="C1" gate="G$1" x="-20.32" y="60.96" smashed="yes">
+<attribute name="NAME" x="-19.304" y="61.595" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-19.304" y="56.769" size="1.778" layer="96"/>
+</instance>
+<instance part="C2" gate="G$1" x="-10.16" y="60.96" smashed="yes">
+<attribute name="NAME" x="-9.144" y="61.595" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-9.144" y="56.769" size="1.778" layer="96"/>
+</instance>
+<instance part="C3" gate="G$1" x="50.8" y="60.96" smashed="yes">
+<attribute name="NAME" x="51.816" y="61.595" size="1.778" layer="95"/>
+<attribute name="VALUE" x="51.816" y="56.769" size="1.778" layer="96"/>
+</instance>
+<instance part="C4" gate="G$1" x="-20.32" y="17.78" smashed="yes">
+<attribute name="NAME" x="-19.304" y="18.415" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-19.304" y="13.589" size="1.778" layer="96"/>
+</instance>
+<instance part="C5" gate="G$1" x="50.8" y="17.78" smashed="yes">
+<attribute name="NAME" x="51.816" y="18.415" size="1.778" layer="95"/>
+<attribute name="VALUE" x="51.816" y="13.589" size="1.778" layer="96"/>
+</instance>
+<instance part="GND3" gate="1" x="-20.32" y="48.26" smashed="yes">
+<attribute name="VALUE" x="-22.86" y="45.72" size="1.778" layer="96"/>
+</instance>
+<instance part="GND4" gate="1" x="-10.16" y="48.26" smashed="yes">
+<attribute name="VALUE" x="-12.7" y="45.72" size="1.778" layer="96"/>
+</instance>
+<instance part="GND5" gate="1" x="50.8" y="48.26" smashed="yes">
+<attribute name="VALUE" x="48.26" y="45.72" size="1.778" layer="96"/>
+</instance>
+<instance part="GND6" gate="1" x="-20.32" y="5.08" smashed="yes">
+<attribute name="VALUE" x="-22.86" y="2.54" size="1.778" layer="96"/>
+</instance>
+<instance part="GND7" gate="1" x="50.8" y="5.08" smashed="yes">
+<attribute name="VALUE" x="48.26" y="2.54" size="1.778" layer="96"/>
+</instance>
+<instance part="J1" gate="G$1" x="-53.34" y="76.2" smashed="yes" rot="R180">
+<attribute name="NAME" x="-50.795640625" y="72.89233125" size="1.78105" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-50.795409375" y="83.833759375" size="1.781209375" layer="96" rot="R180"/>
+</instance>
+<instance part="GND8" gate="1" x="-40.64" y="48.26" smashed="yes">
+<attribute name="VALUE" x="-43.18" y="45.72" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9055,15 +9099,33 @@ with a typical dropout voltage of 300 mV.</description>
 <plain>
 </plain>
 <moduleinsts>
-<moduleinst name="PWR" module="POWER_REGULATOR" x="66.04" y="101.6"/>
-<moduleinst name="IMU" module="INERTIAL_MEASUREMENT_UNIT" x="-12.7" y="-5.08"/>
-<moduleinst name="MOT" module="MOTOR_DRIVER" x="132.08" y="50.8"/>
-<moduleinst name="ENC_PORT_LEFT" module="ENCODER_PORT" x="-12.7" y="43.18"/>
-<moduleinst name="BT_PORT" module="WIRELESS_MODUL_PORT" x="66.04" y="-7.62"/>
-<moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="-12.7" y="22.86"/>
-<moduleinst name="MCU" module="MICROCONTROLLER" x="66.04" y="50.8"/>
-<moduleinst name="IR_LED_DUAL_LEFT" module="IR_LED_DRIVER_DUAL" x="-12.7" y="91.44"/>
-<moduleinst name="IR_LED_DUAL_RIGHT" module="IR_LED_DRIVER_DUAL" x="-12.7" y="71.12"/>
+<moduleinst name="PWR" module="POWER_REGULATOR" x="66.04" y="101.6">
+<attribute name="NAME" x="66.04" y="101.6" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="IMU" module="INERTIAL_MEASUREMENT_UNIT" x="-12.7" y="-5.08">
+<attribute name="NAME" x="-12.7" y="-5.08" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="MOT" module="MOTOR_DRIVER" x="132.08" y="50.8">
+<attribute name="NAME" x="132.08" y="50.8" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="ENC_PORT_LEFT" module="ENCODER_PORT" x="-12.7" y="43.18">
+<attribute name="NAME" x="-12.7" y="43.18" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="BT_PORT" module="WIRELESS_MODUL_PORT" x="66.04" y="-7.62">
+<attribute name="NAME" x="66.04" y="-7.62" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="-12.7" y="22.86">
+<attribute name="NAME" x="-12.7" y="22.86" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="MCU" module="MICROCONTROLLER" x="66.04" y="50.8">
+<attribute name="NAME" x="66.04" y="50.8" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="IR_LED_DUAL_LEFT" module="IR_LED_DRIVER_DUAL" x="-12.7" y="91.44">
+<attribute name="NAME" x="-12.7" y="91.44" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
+<moduleinst name="IR_LED_DUAL_RIGHT" module="IR_LED_DRIVER_DUAL" x="-12.7" y="71.12">
+<attribute name="NAME" x="-12.7" y="71.12" size="2.032" layer="95" align="bottom-center"/>
+</moduleinst>
 </moduleinsts>
 <instances>
 </instances>
