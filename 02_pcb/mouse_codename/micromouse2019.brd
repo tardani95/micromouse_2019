@@ -1440,23 +1440,25 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 </library>
 <library name="parts_not_managed">
 <packages>
-<package name="SON65P210X210X80-7N">
-<wire x1="-1.0414" y1="-1.0414" x2="1.0414" y2="-1.0414" width="0" layer="51"/>
-<wire x1="1.0414" y1="-1.0414" x2="1.0414" y2="1.0414" width="0" layer="51"/>
-<wire x1="1.0414" y1="1.0414" x2="0.3048" y2="1.0414" width="0" layer="51"/>
-<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51"/>
-<wire x1="-0.3048" y1="1.0414" x2="-1.0414" y2="1.0414" width="0" layer="51"/>
-<wire x1="-1.0414" y1="1.0414" x2="-1.0414" y2="-1.0414" width="0" layer="51"/>
-<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51" curve="-180"/>
-<text x="-3.45468125" y="1.905159375" size="2.08296875" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-3.457159375" y="-3.81305" size="2.084459375" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
-<smd name="1" x="-1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="2" x="-1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="3" x="-1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="4" x="1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="5" x="1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="6" x="1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="7" x="0" y="0" dx="0.9906" dy="1.6002" layer="1"/>
+<package name="JST_B2B-PH-K-S(LF)(SN)">
+<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
+<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
+<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="21"/>
+<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="21"/>
+<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="21"/>
+<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="21"/>
+<wire x1="-3.2" y1="-2.5" x2="-3.2" y2="2.5" width="0.05" layer="39"/>
+<wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
+<wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
+<wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
+<text x="-3.20481875" y="2.60391875" size="1.01753125" layer="25">&gt;NAME</text>
+<text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
+<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
+<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
+<pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
+<pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
 </package>
 <package name="DFN-6">
 <description>2x2 mm DFN-6 package footprint</description>
@@ -1481,25 +1483,29 @@ for trimmer refence see : &lt;u&gt;www.electrospec-inc.com/cross_references/trim
 <text x="-0.9525" y="-0.4445" size="0.254" layer="25" rot="R90">&gt;NAME</text>
 <text x="1.143" y="-0.508" size="0.254" layer="25" rot="R90">&gt;VALUE</text>
 </package>
-<package name="JST_B2B-PH-K-S(LF)(SN)">
-<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
-<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
-<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
-<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="51"/>
-<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="21"/>
-<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="21"/>
-<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="21"/>
-<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="21"/>
-<wire x1="-3.2" y1="-2.5" x2="-3.2" y2="2.5" width="0.05" layer="39"/>
-<wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
-<wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
-<wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
-<text x="-3.20481875" y="2.60391875" size="1.01753125" layer="25">&gt;NAME</text>
-<text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
-<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
-<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
-<pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
-<pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
+<package name="SON65P210X210X80-7N">
+<description>SON-6 package from TI.</description>
+<wire x1="-1.0414" y1="-1.0414" x2="1.0414" y2="-1.0414" width="0" layer="51"/>
+<wire x1="1.0414" y1="-1.0414" x2="1.0414" y2="1.0414" width="0" layer="51"/>
+<wire x1="1.0414" y1="1.0414" x2="0.3048" y2="1.0414" width="0" layer="51"/>
+<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51"/>
+<wire x1="-0.3048" y1="1.0414" x2="-1.0414" y2="1.0414" width="0" layer="51"/>
+<wire x1="-1.0414" y1="1.0414" x2="-1.0414" y2="-1.0414" width="0" layer="51"/>
+<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51" curve="-180"/>
+<text x="-0.73688125" y="1.143159375" size="0.254" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
+<text x="-1.171159375" y="-1.37465" size="0.254" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
+<smd name="1" x="-1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="2" x="-1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="3" x="-1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="4" x="1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="5" x="1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="6" x="1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="7" x="0" y="0" dx="0.9906" dy="1.6002" layer="1"/>
+<wire x1="-1.016" y1="1.016" x2="1.016" y2="1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="-1.016" x2="-1.016" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-1.016" y1="-1.016" x2="-1.016" y2="1.016" width="0.127" layer="21"/>
+<circle x="-0.9906" y="1.27" radius="0.1016" width="0.127" layer="21"/>
 </package>
 </packages>
 </library>
@@ -1885,12 +1891,6 @@ design rules under a new name.</description>
 <attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="19.304" y="15.367" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="25.803" y="19.863" size="1.27" layer="27" align="center"/>
 </element>
-<element name="PWR:LDO1" library="parts_not_managed" package="SON65P210X210X80-7N" value="TPS73533DRVT" x="-10.16" y="-73.66" smashed="yes">
-<attribute name="MF" value="Texas Instruments" x="-10.16" y="-73.66" size="1.778" layer="27" display="off"/>
-<attribute name="MP" value="TPS73533DRVT" x="-10.16" y="-73.66" size="1.778" layer="27" display="off"/>
-<attribute name="PACKAGE" value="SON-6 Texas Instruments" x="-10.16" y="-73.66" size="1.778" layer="27" display="off"/>
-</element>
-<element name="PWR:LDO2" library="parts_not_managed" package="DFN-6" value="LDL112PU33R" x="-12.7" y="-80.01" smashed="yes"/>
 <element name="PWR:C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="-12.7" y="-85.09" smashed="yes">
 <attribute name="SPICEPREFIX" value="C" x="-12.7" y="-85.09" size="1.778" layer="27" display="off"/>
 </element>
@@ -1913,6 +1913,17 @@ design rules under a new name.</description>
 <attribute name="MP" value="B2B-PH-K-S_LF__SN_" x="-19.05" y="-97.79" size="1.778" layer="27" display="off"/>
 <attribute name="PACKAGE" value="None" x="-19.05" y="-97.79" size="1.778" layer="27" display="off"/>
 <attribute name="PRICE" value="None" x="-19.05" y="-97.79" size="1.778" layer="27" display="off"/>
+</element>
+<element name="PWR:LDO2" library="parts_not_managed" package="DFN-6" value="LDL112PU" x="-22.86" y="-116.84" smashed="yes">
+<attribute name="NAME" x="-23.8125" y="-117.2845" size="0.254" layer="25" rot="R90"/>
+<attribute name="VALUE" x="-21.717" y="-117.348" size="0.254" layer="25" rot="R90"/>
+</element>
+<element name="PWR:LDO1" library="parts_not_managed" package="SON65P210X210X80-7N" value="TPS73533DRVT" x="-26.67" y="-115.57" smashed="yes">
+<attribute name="MF" value="Texas Instruments" x="-26.67" y="-115.57" size="1.778" layer="27" display="off"/>
+<attribute name="MP" value="TPS73533DRVT" x="-26.67" y="-115.57" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="-27.40688125" y="-114.426840625" size="0.254" layer="25" ratio="10" rot="SR0"/>
+<attribute name="PACKAGE" value="SON-6 Texas Instruments" x="-26.67" y="-115.57" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-27.841159375" y="-116.94465" size="0.254" layer="27" ratio="10" rot="SR0"/>
 </element>
 </elements>
 <signals>
@@ -2160,56 +2171,56 @@ design rules under a new name.</description>
 <wire x1="24.581" y1="45.208" x2="-13.35" y2="-95.25" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWR:+3V3">
-<contactref element="PWR:LDO1" pad="1"/>
 <contactref element="PWR:C3" pad="1"/>
-<wire x1="-11.2014" y1="-72.9996" x2="-13.35" y2="-92.71" width="0" layer="19" extent="1-1"/>
+<contactref element="PWR:LDO1" pad="1"/>
+<wire x1="-13.35" y1="-92.71" x2="-27.7114" y2="-114.9096" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWR:VCC">
-<contactref element="PWR:LDO2" pad="4"/>
 <contactref element="PWR:C5" pad="1"/>
-<wire x1="-12.2" y1="-79.0225" x2="-13.35" y2="-100.33" width="0" layer="19" extent="1-1"/>
+<contactref element="PWR:LDO2" pad="4"/>
+<wire x1="-13.35" y1="-100.33" x2="-22.36" y2="-115.8525" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWR:GND">
-<contactref element="PWR:LDO1" pad="3"/>
-<contactref element="PWR:LDO2" pad="2"/>
 <contactref element="PWR:C1" pad="2"/>
 <contactref element="PWR:C2" pad="2"/>
 <contactref element="PWR:C3" pad="2"/>
 <contactref element="PWR:C4" pad="2"/>
 <contactref element="PWR:C5" pad="2"/>
-<contactref element="PWR:LDO2" pad="7"/>
-<contactref element="PWR:LDO1" pad="7"/>
 <contactref element="PWR:J1" pad="1"/>
+<contactref element="PWR:LDO2" pad="2"/>
+<contactref element="PWR:LDO2" pad="7"/>
+<contactref element="PWR:LDO1" pad="3"/>
+<contactref element="PWR:LDO1" pad="7"/>
+<wire x1="-22.86" y1="-116.84" x2="-22.86" y2="-117.8275" width="0" layer="19" extent="1-1"/>
+<wire x1="-26.67" y1="-115.57" x2="-22.86" y2="-116.84" width="0" layer="19" extent="1-1"/>
+<wire x1="-27.7114" y1="-116.2304" x2="-26.67" y2="-115.57" width="0" layer="19" extent="1-1"/>
+<wire x1="-18.05" y1="-98.34" x2="-22.86" y2="-116.84" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.05" y1="-96.52" x2="-18.05" y2="-98.34" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.05" y1="-100.33" x2="-12.05" y2="-96.52" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.05" y1="-92.71" x2="-12.05" y2="-96.52" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.05" y1="-88.9" x2="-12.05" y2="-92.71" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.05" y1="-85.09" x2="-12.05" y2="-88.9" width="0" layer="19" extent="1-1"/>
-<wire x1="-12.7" y1="-80.9975" x2="-12.05" y2="-85.09" width="0" layer="19" extent="1-1"/>
-<wire x1="-12.7" y1="-80.01" x2="-12.7" y2="-80.9975" width="0" layer="19" extent="1-1"/>
-<wire x1="-11.2014" y1="-74.3204" x2="-12.7" y2="-80.01" width="0" layer="19" extent="1-1"/>
-<wire x1="-10.16" y1="-73.66" x2="-11.2014" y2="-74.3204" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWR:N$1">
-<contactref element="PWR:LDO1" pad="2"/>
 <contactref element="PWR:C2" pad="1"/>
-<wire x1="-11.2014" y1="-73.66" x2="-13.35" y2="-88.9" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="PWR:LDL_EN">
-<contactref element="PWR:LDO2" pad="1"/>
+<contactref element="PWR:LDO1" pad="2"/>
+<wire x1="-13.35" y1="-88.9" x2="-27.7114" y2="-115.57" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWR:N$3">
 <contactref element="PWR:C4" pad="1"/>
-<contactref element="PWR:LDO2" pad="6"/>
 <contactref element="PWR:J1" pad="2"/>
+<contactref element="PWR:C1" pad="1"/>
+<contactref element="PWR:LDO2" pad="6"/>
 <contactref element="PWR:LDO1" pad="6"/>
 <contactref element="PWR:LDO1" pad="4"/>
-<contactref element="PWR:C1" pad="1"/>
+<wire x1="-25.6286" y1="-116.2304" x2="-25.6286" y2="-114.9096" width="0" layer="19" extent="1-1"/>
+<wire x1="-23.36" y1="-115.8525" x2="-25.6286" y2="-116.2304" width="0" layer="19" extent="1-1"/>
+<wire x1="-20.05" y1="-98.34" x2="-25.6286" y2="-114.9096" width="0" layer="19" extent="1-1"/>
 <wire x1="-13.35" y1="-96.52" x2="-20.05" y2="-98.34" width="0" layer="19" extent="1-1"/>
 <wire x1="-13.35" y1="-85.09" x2="-13.35" y2="-96.52" width="0" layer="19" extent="1-1"/>
-<wire x1="-13.2" y1="-79.0225" x2="-13.35" y2="-85.09" width="0" layer="19" extent="1-1"/>
-<wire x1="-9.1186" y1="-74.3204" x2="-13.2" y2="-79.0225" width="0" layer="19" extent="1-1"/>
-<wire x1="-9.1186" y1="-72.9996" x2="-9.1186" y2="-74.3204" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="PWR:LDL_EN">
+<contactref element="PWR:LDO2" pad="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
