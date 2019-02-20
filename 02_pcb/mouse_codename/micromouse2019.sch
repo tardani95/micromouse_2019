@@ -271,7 +271,7 @@
 </package3d>
 </packages3d>
 <symbols>
-<symbol name="B3U-1000P" urn="urn:adsk.eagle:symbol:8879282/2" locally_modified="yes" library_version="10" library_locally_modified="yes">
+<symbol name="B3U-1000P" urn="urn:adsk.eagle:symbol:8879282/3" library_version="11">
 <wire x1="2.54" y1="1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
@@ -353,7 +353,7 @@
 <wire x1="38.1" y1="0" x2="38.1" y2="106.68" width="0.254" layer="94"/>
 <wire x1="38.1" y1="106.68" x2="0" y2="106.68" width="0.254" layer="94"/>
 </symbol>
-<symbol name="B3U-3000P" urn="urn:adsk.eagle:symbol:8879281/2" locally_modified="yes" library_version="10" library_locally_modified="yes">
+<symbol name="B3U-3000P" urn="urn:adsk.eagle:symbol:8879281/3" library_version="11">
 <wire x1="2.54" y1="1.524" x2="10.16" y2="1.524" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-1.524" x2="10.16" y2="1.524" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-1.524" x2="2.54" y2="-1.524" width="0.254" layer="94"/>
@@ -398,7 +398,7 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="B3U-1000P" urn="urn:adsk.eagle:component:8879297/4" locally_modified="yes" prefix="S" library_version="10" library_locally_modified="yes">
+<deviceset name="B3U-1000P" urn="urn:adsk.eagle:component:8879297/5" prefix="S" library_version="11">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -514,7 +514,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="B3U-3000P" urn="urn:adsk.eagle:component:8879296/4" locally_modified="yes" prefix="S" library_version="10" library_locally_modified="yes">
+<deviceset name="B3U-3000P" urn="urn:adsk.eagle:component:8879296/5" prefix="S" library_version="11">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-3000P - TACTILE SWITCH, SIDE ACTUATED, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
