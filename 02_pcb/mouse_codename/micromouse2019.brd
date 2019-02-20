@@ -3,7 +3,7 @@
 <eagle version="9.3.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
@@ -72,7 +72,7 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-18T14:42:59Z" lastsyncedchangeguid="0544df33-de13-fd85-fece-75a309ed31b2"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-18T14:42:59Z" lastsyncedchangeguid="89f253e1-e8c8-4280-90a2-6256933e61b4"/>
 <plain>
 <wire x1="38" y1="27.75" x2="38" y2="32" width="0.254" layer="20"/>
 <wire x1="38" y1="32" x2="44.998" y2="32" width="0.254" layer="20"/>
@@ -1666,14 +1666,14 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="-12.7" y="-52.07" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="4.445" y="-55.245" size="1.27" layer="27"/>
 </element>
-<element name="MCU:IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="QFP50P1200X1200X160-64N" package3d_urn="urn:adsk.eagle:package:8879286/4" value="STM32F405RGT6_L" x="-5.08" y="-26.67" smashed="yes">
-<attribute name="DESCRIPTION" value="MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP" x="-7.62" y="-62.23" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="1.6mm" x="-7.62" y="-62.23" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="STMicroelectronics" x="-7.62" y="-62.23" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="STM32F405RGT6" x="-7.62" y="-62.23" size="1.778" layer="27" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="511-STM32F405RGT6" x="-7.62" y="-62.23" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="-5.08" y="-26.67" size="1.27" layer="25" align="center"/>
-<attribute name="VALUE" x="-5.08" y="-26.67" size="1.27" layer="27" align="center"/>
+<element name="MCU:IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="QFP50P1200X1200X160-64N" package3d_urn="urn:adsk.eagle:package:8879286/4" value="STM32F405RGT6_L" x="22.86" y="35.56" smashed="yes">
+<attribute name="DESCRIPTION" value="MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP" x="20.32" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="1.6mm" x="20.32" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="STMicroelectronics" x="20.32" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="STM32F405RGT6" x="20.32" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="511-STM32F405RGT6" x="20.32" y="0" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="22.86" y="35.56" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="22.86" y="35.56" size="1.27" layer="27" align="center"/>
 </element>
 <element name="MCU:C3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="-3.81" y="-48.26" smashed="yes">
 <attribute name="NAME" x="-4.445" y="-47.625" size="1.27" layer="25"/>
@@ -1746,14 +1746,14 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="-15.24" y="-134.62" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="-13.335" y="-45.085" size="1.27" layer="27"/>
 </element>
-<element name="IMU:IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="MPU6050" package3d_urn="urn:adsk.eagle:package:8879287/4" value="MPU-6050" x="22.86" y="44.45" smashed="yes">
-<attribute name="DESCRIPTION" value="IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="3mm" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="TDK" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
-<attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="22.86" y="44.45" size="1.27" layer="25" align="center"/>
-<attribute name="VALUE" x="22.86" y="44.45" size="1.27" layer="27" align="center"/>
+<element name="IMU:IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="MPU6050" package3d_urn="urn:adsk.eagle:package:8879287/4" value="MPU-6050" x="22.606" y="44.958" smashed="yes">
+<attribute name="DESCRIPTION" value="IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP" x="22.606" y="44.958" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="3mm" x="22.606" y="44.958" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="TDK" x="22.606" y="44.958" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" x="22.606" y="44.958" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" x="22.606" y="44.958" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="22.606" y="44.958" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="22.606" y="44.958" size="1.27" layer="27" align="center"/>
 </element>
 <element name="IMU:C3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="2.2n" x="-12.7" y="-82.55" smashed="yes">
 <attribute name="NAME" x="-13.335" y="-81.915" size="1.27" layer="25"/>
@@ -1780,52 +1780,52 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="-12.7" y="-100.33" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="-13.335" y="-102.235" size="1.27" layer="27"/>
 </element>
-<element name="IR_LED_DUAL_LEFT:J1" library="SamacSys_Parts" package="BM04B-SRSS-TB(LFSN)" value="BM04B-SRSS-TB(LFSN)" x="20.32" y="29.21" smashed="yes">
-<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" x="20.32" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="mm" x="20.32" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" x="20.32" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" x="20.32" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="23.009" y="29.896" size="1.27" layer="25" align="center"/>
-<attribute name="RS_PART_NUMBER" value="5151541P" x="20.32" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="20.32" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="23.009" y="29.896" size="1.27" layer="27" align="center"/>
+<element name="IR_LED_DUAL_LEFT:J1" library="SamacSys_Parts" package="BM04B-SRSS-TB(LFSN)" value="BM04B-SRSS-TB(LFSN)" x="19.177" y="25.654" smashed="yes">
+<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" x="19.177" y="25.654" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="19.177" y="25.654" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" x="19.177" y="25.654" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" x="19.177" y="25.654" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="21.866" y="26.34" size="1.27" layer="25" align="center"/>
+<attribute name="RS_PART_NUMBER" value="5151541P" x="19.177" y="25.654" size="1.778" layer="27" display="off"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="19.177" y="25.654" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="21.866" y="26.34" size="1.27" layer="27" align="center"/>
 </element>
-<element name="IR_LED_DUAL_RIGHT:J1" library="SamacSys_Parts" package="BM04B-SRSS-TB(LFSN)" value="BM04B-SRSS-TB(LFSN)" x="20.32" y="24.13" smashed="yes">
-<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" x="20.32" y="24.13" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="mm" x="20.32" y="24.13" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" x="20.32" y="24.13" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" x="20.32" y="24.13" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="23.009" y="24.816" size="1.27" layer="25" align="center"/>
-<attribute name="RS_PART_NUMBER" value="5151541P" x="20.32" y="24.13" size="1.778" layer="27" display="off"/>
-<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="20.32" y="24.13" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="23.009" y="24.816" size="1.27" layer="27" align="center"/>
+<element name="IR_LED_DUAL_RIGHT:J1" library="SamacSys_Parts" package="BM04B-SRSS-TB(LFSN)" value="BM04B-SRSS-TB(LFSN)" x="19.177" y="22.225" smashed="yes">
+<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" x="19.177" y="22.225" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="19.177" y="22.225" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" x="19.177" y="22.225" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" x="19.177" y="22.225" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="21.866" y="22.911" size="1.27" layer="25" align="center"/>
+<attribute name="RS_PART_NUMBER" value="5151541P" x="19.177" y="22.225" size="1.778" layer="27" display="off"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="19.177" y="22.225" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="21.866" y="22.911" size="1.27" layer="27" align="center"/>
 </element>
-<element name="IR_LED_DUAL_LEFT:J2" library="SamacSys_Parts" package="BM04B-SRSS-TB(LFSN)" value="BM04B-SRSS-TB(LFSN)" x="20.32" y="19.05" smashed="yes">
-<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" x="20.32" y="19.05" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="mm" x="20.32" y="19.05" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" x="20.32" y="19.05" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" x="20.32" y="19.05" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="23.009" y="19.736" size="1.27" layer="25" align="center"/>
-<attribute name="RS_PART_NUMBER" value="5151541P" x="20.32" y="19.05" size="1.778" layer="27" display="off"/>
-<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="20.32" y="19.05" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="23.009" y="19.736" size="1.27" layer="27" align="center"/>
+<element name="IR_LED_DUAL_LEFT:J2" library="SamacSys_Parts" package="BM04B-SRSS-TB(LFSN)" value="BM04B-SRSS-TB(LFSN)" x="19.304" y="18.796" smashed="yes">
+<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" x="19.304" y="18.796" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="19.304" y="18.796" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" x="19.304" y="18.796" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" x="19.304" y="18.796" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="21.993" y="19.482" size="1.27" layer="25" align="center"/>
+<attribute name="RS_PART_NUMBER" value="5151541P" x="19.304" y="18.796" size="1.778" layer="27" display="off"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="19.304" y="18.796" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="21.993" y="19.482" size="1.27" layer="27" align="center"/>
 </element>
-<element name="IR_LED_DUAL_RIGHT:J2" library="SamacSys_Parts" package="BM04B-SRSS-TB(LFSN)" value="BM04B-SRSS-TB(LFSN)" x="20.32" y="13.97" smashed="yes">
-<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" x="20.32" y="13.97" size="1.778" layer="27" display="off"/>
-<attribute name="HEIGHT" value="mm" x="20.32" y="13.97" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" x="20.32" y="13.97" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" x="20.32" y="13.97" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="23.009" y="14.656" size="1.27" layer="25" align="center"/>
-<attribute name="RS_PART_NUMBER" value="5151541P" x="20.32" y="13.97" size="1.778" layer="27" display="off"/>
-<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="20.32" y="13.97" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="23.009" y="14.656" size="1.27" layer="27" align="center"/>
+<element name="IR_LED_DUAL_RIGHT:J2" library="SamacSys_Parts" package="BM04B-SRSS-TB(LFSN)" value="BM04B-SRSS-TB(LFSN)" x="19.304" y="15.367" smashed="yes">
+<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" x="19.304" y="15.367" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="mm" x="19.304" y="15.367" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" x="19.304" y="15.367" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" x="19.304" y="15.367" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="23.263" y="13.513" size="1.27" layer="25" align="center"/>
+<attribute name="RS_PART_NUMBER" value="5151541P" x="19.304" y="15.367" size="1.778" layer="27" display="off"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" x="19.304" y="15.367" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="25.803" y="19.863" size="1.27" layer="27" align="center"/>
 </element>
 </elements>
 <signals>
 <signal name="MCU:N$10">
 <contactref element="MCU:IC1" pad="1"/>
 <contactref element="MCU:C10" pad="2"/>
-<wire x1="-10.83" y1="-22.92" x2="-1.89" y2="-36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="17.11" y1="39.31" x2="-1.89" y2="-36.83" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:+3V3">
 <contactref element="MCU:IC1" pad="47"/>
@@ -1856,13 +1856,13 @@ design rules under a new name.</description>
 <wire x1="5.58" y1="-58.42" x2="4.43" y2="-53.34" width="0" layer="19" extent="1-1"/>
 <wire x1="6.97" y1="-43.18" x2="4.43" y2="-48.26" width="0" layer="19" extent="1-1"/>
 <wire x1="-3.19" y1="-36.83" x2="-4.46" y2="-48.26" width="0" layer="19" extent="1-1"/>
-<wire x1="-1.83" y1="-32.42" x2="-3.19" y2="-36.83" width="0" layer="19" extent="1-1"/>
-<wire x1="-1.33" y1="-32.42" x2="-1.83" y2="-32.42" width="0" layer="19" extent="1-1"/>
-<wire x1="-7.83" y1="-32.42" x2="-1.83" y2="-32.42" width="0" layer="19" extent="1-1"/>
-<wire x1="-10.83" y1="-28.92" x2="-7.83" y2="-32.42" width="0" layer="19" extent="1-1"/>
-<wire x1="-8.83" y1="-20.92" x2="-10.83" y2="-28.92" width="0" layer="19" extent="1-1"/>
-<wire x1="0.67" y1="-23.42" x2="-1.33" y2="-32.42" width="0" layer="19" extent="1-1"/>
-<wire x1="0.67" y1="-22.92" x2="0.67" y2="-23.42" width="0" layer="19" extent="1-1"/>
+<wire x1="26.11" y1="29.81" x2="-3.19" y2="-36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="26.61" y1="29.81" x2="26.11" y2="29.81" width="0" layer="19" extent="1-1"/>
+<wire x1="20.11" y1="29.81" x2="26.11" y2="29.81" width="0" layer="19" extent="1-1"/>
+<wire x1="17.11" y1="33.31" x2="20.11" y2="29.81" width="0" layer="19" extent="1-1"/>
+<wire x1="19.11" y1="41.31" x2="17.11" y2="33.31" width="0" layer="19" extent="1-1"/>
+<wire x1="28.61" y1="38.81" x2="26.61" y2="29.81" width="0" layer="19" extent="1-1"/>
+<wire x1="28.61" y1="39.31" x2="28.61" y2="38.81" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:GND">
 <contactref element="MCU:C6" pad="2"/>
@@ -1900,9 +1900,9 @@ design rules under a new name.</description>
 <wire x1="8.27" y1="-43.18" x2="5.73" y2="-48.26" width="0" layer="19" extent="1-1"/>
 <wire x1="8.27" y1="-36.83" x2="8.27" y2="-43.18" width="0" layer="19" extent="1-1"/>
 <wire x1="9.32" y1="-62.23" x2="5.73" y2="-53.34" width="0" layer="19" extent="1-1"/>
-<wire x1="-8.33" y1="-32.42" x2="-12.05" y2="-43.18" width="0" layer="19" extent="1-1"/>
-<wire x1="-10.83" y1="-28.42" x2="-8.33" y2="-32.42" width="0" layer="19" extent="1-1"/>
-<wire x1="-8.33" y1="-20.92" x2="-10.83" y2="-28.42" width="0" layer="19" extent="1-1"/>
+<wire x1="19.61" y1="29.81" x2="-12.05" y2="-43.18" width="0" layer="19" extent="1-1"/>
+<wire x1="17.11" y1="33.81" x2="19.61" y2="29.81" width="0" layer="19" extent="1-1"/>
+<wire x1="19.61" y1="41.31" x2="17.11" y2="33.81" width="0" layer="19" extent="1-1"/>
 <wire x1="11.86" y1="-22.86" x2="8.27" y2="-36.83" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:N$2">
@@ -1915,19 +1915,19 @@ design rules under a new name.</description>
 <contactref element="MCU:R3" pad="2"/>
 <contactref element="MCU:IC1" pad="60"/>
 <wire x1="-7.19" y1="-36.83" x2="-4.58" y2="-63.5" width="0" layer="19" extent="1-1"/>
-<wire x1="-6.83" y1="-20.92" x2="-7.19" y2="-36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="21.11" y1="41.31" x2="-7.19" y2="-36.83" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:NRST">
 <contactref element="MCU:S1" pad="2"/>
 <contactref element="MCU:C11" pad="1"/>
 <contactref element="MCU:IC1" pad="7"/>
 <wire x1="-3.19" y1="-43.18" x2="5.92" y2="-62.23" width="0" layer="19" extent="1-1"/>
-<wire x1="-10.83" y1="-25.92" x2="-3.19" y2="-43.18" width="0" layer="19" extent="1-1"/>
+<wire x1="17.11" y1="36.31" x2="-3.19" y2="-43.18" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:BOOT1">
 <contactref element="MCU:R2" pad="2"/>
 <contactref element="MCU:IC1" pad="28"/>
-<wire x1="-3.33" y1="-32.42" x2="-13.47" y2="-63.5" width="0" layer="19" extent="1-1"/>
+<wire x1="24.61" y1="29.81" x2="-13.47" y2="-63.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:PTR1">
 <contactref element="MCU:IC1" pad="14"/>
@@ -1952,14 +1952,14 @@ design rules under a new name.</description>
 <contactref element="MCU:C13" pad="1"/>
 <contactref element="MCU:IC1" pad="56"/>
 <wire x1="-13.35" y1="-43.18" x2="-10.59" y2="-67.31" width="0" layer="19" extent="1-1"/>
-<wire x1="-4.83" y1="-20.92" x2="-13.35" y2="-43.18" width="0" layer="19" extent="1-1"/>
+<wire x1="23.11" y1="41.31" x2="-13.35" y2="-43.18" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:BTN1">
 <contactref element="MCU:S2" pad="2"/>
 <contactref element="MCU:C12" pad="1"/>
 <contactref element="MCU:IC1" pad="55"/>
 <wire x1="8.46" y1="-22.86" x2="6.97" y2="-36.83" width="0" layer="19" extent="1-1"/>
-<wire x1="-4.33" y1="-20.92" x2="8.46" y2="-22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="23.61" y1="41.31" x2="8.46" y2="-22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:IRD3">
 <contactref element="MCU:IC1" pad="8"/>
@@ -2031,9 +2031,9 @@ design rules under a new name.</description>
 <wire x1="-12.05" y1="-90.17" x2="-12.05" y2="-95.25" width="0" layer="19" extent="1-1"/>
 <wire x1="-14.47" y1="-86.36" x2="-12.05" y2="-90.17" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.05" y1="-82.55" x2="-14.47" y2="-86.36" width="0" layer="19" extent="1-1"/>
-<wire x1="24.11" y1="42.475" x2="-12.05" y2="-82.55" width="0" layer="19" extent="1-1"/>
-<wire x1="24.835" y1="45.2" x2="24.11" y2="42.475" width="0" layer="19" extent="1-1"/>
-<wire x1="20.885" y1="45.7" x2="24.835" y2="45.2" width="0" layer="19" extent="1-1"/>
+<wire x1="23.856" y1="42.983" x2="-12.05" y2="-82.55" width="0" layer="19" extent="1-1"/>
+<wire x1="24.581" y1="45.708" x2="23.856" y2="42.983" width="0" layer="19" extent="1-1"/>
+<wire x1="20.631" y1="46.208" x2="24.581" y2="45.708" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IMU:+3V3">
 <contactref element="IMU:IC1" pad="8"/>
@@ -2041,18 +2041,18 @@ design rules under a new name.</description>
 <contactref element="IMU:C2" pad="1"/>
 <contactref element="IMU:IC1" pad="13"/>
 <wire x1="-13.35" y1="-90.17" x2="-13.35" y2="-100.33" width="0" layer="19" extent="1-1"/>
-<wire x1="22.61" y1="42.475" x2="-13.35" y2="-90.17" width="0" layer="19" extent="1-1"/>
-<wire x1="24.835" y1="43.7" x2="22.61" y2="42.475" width="0" layer="19" extent="1-1"/>
+<wire x1="22.356" y1="42.983" x2="-13.35" y2="-90.17" width="0" layer="19" extent="1-1"/>
+<wire x1="24.581" y1="44.208" x2="22.356" y2="42.983" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IMU:N$1">
 <contactref element="IMU:IC1" pad="9"/>
 <contactref element="IMU:R1" pad="2"/>
-<wire x1="24.835" y1="44.2" x2="-13.47" y2="-86.36" width="0" layer="19" extent="1-1"/>
+<wire x1="24.581" y1="44.708" x2="-13.47" y2="-86.36" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IMU:N$2">
 <contactref element="IMU:IC1" pad="20"/>
 <contactref element="IMU:C3" pad="1"/>
-<wire x1="23.61" y1="46.425" x2="-13.35" y2="-82.55" width="0" layer="19" extent="1-1"/>
+<wire x1="23.356" y1="46.933" x2="-13.35" y2="-82.55" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="IMU:SCL">
 <contactref element="IMU:IC1" pad="23"/>
@@ -2063,7 +2063,7 @@ design rules under a new name.</description>
 <signal name="IMU:N$3">
 <contactref element="IMU:C1" pad="1"/>
 <contactref element="IMU:IC1" pad="10"/>
-<wire x1="24.835" y1="44.7" x2="-13.35" y2="-95.25" width="0" layer="19" extent="1-1"/>
+<wire x1="24.581" y1="45.208" x2="-13.35" y2="-95.25" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
