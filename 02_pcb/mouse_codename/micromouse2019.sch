@@ -8834,11 +8834,6 @@ external ceramic decoupling capacitor.</text>
 </net>
 <net name="BTN2" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="PA14"/>
-<wire x1="93.98" y1="35.56" x2="76.2" y2="35.56" width="0.1524" layer="91"/>
-<label x="76.2" y="35.56" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="S4" gate="G$1" pin="2"/>
 <wire x1="27.94" y1="58.42" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="1"/>
@@ -8848,13 +8843,13 @@ external ceramic decoupling capacitor.</text>
 <junction x="33.02" y="58.42"/>
 <label x="35.56" y="58.42" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="PB4"/>
+<wire x1="142.24" y1="121.92" x2="157.48" y2="121.92" width="0.1524" layer="91"/>
+<label x="144.78" y="121.92" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="BTN1" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="PA15"/>
-<wire x1="93.98" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
-<label x="76.2" y="33.02" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="S2" gate="G$1" pin="2"/>
 <wire x1="7.62" y1="55.88" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
@@ -8864,6 +8859,11 @@ external ceramic decoupling capacitor.</text>
 <wire x1="12.7" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
 <junction x="12.7" y="58.42"/>
 <label x="15.24" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="PB3"/>
+<wire x1="142.24" y1="124.46" x2="157.48" y2="124.46" width="0.1524" layer="91"/>
+<label x="144.78" y="124.46" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IRD3" class="0">
@@ -9068,6 +9068,28 @@ external ceramic decoupling capacitor.</text>
 <wire x1="254" y1="160.02" x2="251.46" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="162.56" x2="251.46" y2="162.56" width="0.1524" layer="91"/>
 <label x="231.14" y="162.56" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SWDIO" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PA13"/>
+<wire x1="93.98" y1="38.1" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
+<label x="76.2" y="38.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="68.58" y1="167.64" x2="88.9" y2="167.64" width="0.1524" layer="91"/>
+<label x="68.58" y="167.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SWCLK" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PA14"/>
+<wire x1="93.98" y1="35.56" x2="76.2" y2="35.56" width="0.1524" layer="91"/>
+<label x="76.2" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="68.58" y1="165.1" x2="88.9" y2="165.1" width="0.1524" layer="91"/>
+<label x="68.58" y="165.1" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

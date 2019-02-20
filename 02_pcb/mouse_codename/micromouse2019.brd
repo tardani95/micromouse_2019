@@ -1786,18 +1786,18 @@ design rules under a new name.</description>
 <contactref element="MCU:IC1" pad="42"/>
 </signal>
 <signal name="MCU:BTN2">
-<contactref element="MCU:IC1" pad="49"/>
 <contactref element="MCU:S4" pad="2"/>
 <contactref element="MCU:C13" pad="1"/>
+<contactref element="MCU:IC1" pad="56"/>
 <wire x1="-13.35" y1="-43.18" x2="-10.59" y2="-67.31" width="0" layer="19" extent="1-1"/>
-<wire x1="-1.33" y1="-20.92" x2="-13.35" y2="-43.18" width="0" layer="19" extent="1-1"/>
+<wire x1="-4.83" y1="-20.92" x2="-13.35" y2="-43.18" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:BTN1">
-<contactref element="MCU:IC1" pad="50"/>
 <contactref element="MCU:S2" pad="2"/>
 <contactref element="MCU:C12" pad="1"/>
+<contactref element="MCU:IC1" pad="55"/>
 <wire x1="8.46" y1="-22.86" x2="6.97" y2="-36.83" width="0" layer="19" extent="1-1"/>
-<wire x1="-1.83" y1="-20.92" x2="8.46" y2="-22.86" width="0" layer="19" extent="1-1"/>
+<wire x1="-4.33" y1="-20.92" x2="8.46" y2="-22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MCU:IRD3">
 <contactref element="MCU:IC1" pad="8"/>
@@ -1849,6 +1849,12 @@ design rules under a new name.</description>
 </signal>
 <signal name="MCU:V_BAT_LEVEL">
 <contactref element="MCU:IC1" pad="20"/>
+</signal>
+<signal name="MCU:SWDIO">
+<contactref element="MCU:IC1" pad="46"/>
+</signal>
+<signal name="MCU:SWCLK">
+<contactref element="MCU:IC1" pad="49"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
