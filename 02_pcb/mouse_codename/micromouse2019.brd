@@ -230,6 +230,60 @@
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
 <circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 </package>
+<package name="MPU6050" urn="urn:adsk.eagle:footprint:8988319/1" library_version="11">
+<description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.975" y="1.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="2" x="-1.975" y="0.75" dx="0.85" dy="0.35" layer="1"/>
+<smd name="3" x="-1.975" y="0.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="4" x="-1.975" y="-0.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="5" x="-1.975" y="-0.75" dx="0.85" dy="0.35" layer="1"/>
+<smd name="6" x="-1.975" y="-1.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="7" x="1.975" y="-1.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="8" x="1.975" y="-0.75" dx="0.85" dy="0.35" layer="1"/>
+<smd name="9" x="1.975" y="-0.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="10" x="1.975" y="0.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="11" x="1.975" y="0.75" dx="0.85" dy="0.35" layer="1"/>
+<smd name="12" x="1.975" y="1.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="13" x="-0.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="14" x="-0.75" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="15" x="-1.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="16" x="0.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="17" x="0.75" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="18" x="1.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="19" x="1.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="20" x="0.75" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="21" x="0.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="22" x="-0.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="23" x="-0.75" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="24" x="-1.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="25" x="0" y="0" dx="2.7" dy="2.6" layer="1"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2" y1="2" x2="2" y2="2" width="0.2" layer="51"/>
+<wire x1="2" y1="2" x2="2" y2="-2" width="0.2" layer="51"/>
+<wire x1="2" y1="-2" x2="-2" y2="-2" width="0.2" layer="51"/>
+<wire x1="-2" y1="-2" x2="-2" y2="2" width="0.2" layer="51"/>
+<wire x1="-3.4" y1="3.4" x2="3.4" y2="3.4" width="0.1" layer="51"/>
+<wire x1="3.4" y1="3.4" x2="3.4" y2="-3.4" width="0.1" layer="51"/>
+<wire x1="3.4" y1="-3.4" x2="-3.4" y2="-3.4" width="0.1" layer="51"/>
+<wire x1="-3.4" y1="-3.4" x2="-3.4" y2="3.4" width="0.1" layer="51"/>
+<wire x1="-2" y1="-1.6" x2="-2" y2="-1.975" width="0.1" layer="21"/>
+<wire x1="-2" y1="-1.975" x2="-1.6" y2="-1.975" width="0.1" layer="21"/>
+<wire x1="1.6" y1="-2" x2="1.975" y2="-2" width="0.1" layer="21"/>
+<wire x1="1.975" y1="-2" x2="1.975" y2="-2" width="0.1" layer="21"/>
+<wire x1="1.975" y1="-2" x2="2" y2="-1.975" width="0.1" layer="21"/>
+<wire x1="2" y1="-1.975" x2="2" y2="-1.6" width="0.1" layer="21"/>
+<wire x1="1.6" y1="2" x2="1.975" y2="2" width="0.1" layer="21"/>
+<wire x1="1.975" y1="2" x2="2" y2="2" width="0.1" layer="21"/>
+<wire x1="2" y1="2" x2="2" y2="1.6" width="0.1" layer="21"/>
+<wire x1="-1.6" y1="2" x2="-2" y2="2" width="0.1" layer="21"/>
+<wire x1="-2" y1="2" x2="-2" y2="1.6" width="0.1" layer="21"/>
+<wire x1="-2.8" y1="1.3" x2="-2.8" y2="1.3" width="0.1" layer="21"/>
+<wire x1="-2.8" y1="1.3" x2="-2.8" y2="1.2" width="0.1" layer="21" curve="180"/>
+<wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.2" width="0.1" layer="21"/>
+<wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.3" width="0.1" layer="21" curve="180"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/4" type="model" library_version="9" library_locally_modified="yes">
@@ -248,6 +302,12 @@
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="B3U-3000P"/>
+</packageinstances>
+</package3d>
+<package3d name="MPU6050" urn="urn:adsk.eagle:package:8879287/4" type="model" library_version="11">
+<description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="MPU6050"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -1658,6 +1718,40 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="-15.24" y="-134.62" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="-13.335" y="-45.085" size="1.27" layer="27"/>
 </element>
+<element name="IMU:IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="MPU6050" package3d_urn="urn:adsk.eagle:package:8879287/4" value="MPU-6050" x="22.86" y="44.45" smashed="yes">
+<attribute name="DESCRIPTION" value="IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
+<attribute name="HEIGHT" value="3mm" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="TDK" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" x="22.86" y="44.45" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="22.86" y="44.45" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="22.86" y="44.45" size="1.27" layer="27" align="center"/>
+</element>
+<element name="IMU:C3" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="2.2n" x="-12.7" y="-82.55" smashed="yes">
+<attribute name="NAME" x="-13.335" y="-81.915" size="1.27" layer="25"/>
+<attribute name="SPICEPREFIX" value="C" x="-12.7" y="-82.55" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-13.335" y="-84.455" size="1.27" layer="27"/>
+</element>
+<element name="IMU:R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k" x="-13.97" y="-86.36" smashed="yes">
+<attribute name="NAME" x="-14.605" y="-85.725" size="1.27" layer="25"/>
+<attribute name="SPICEPREFIX" value="R" x="-13.97" y="-86.36" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-14.605" y="-88.265" size="1.27" layer="27"/>
+</element>
+<element name="IMU:C4" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10n" x="-12.7" y="-90.17" smashed="yes">
+<attribute name="NAME" x="-13.335" y="-89.535" size="1.27" layer="25"/>
+<attribute name="SPICEPREFIX" value="C" x="-12.7" y="-90.17" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-13.335" y="-92.075" size="1.27" layer="27"/>
+</element>
+<element name="IMU:C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="0.1u" x="-12.7" y="-95.25" smashed="yes">
+<attribute name="NAME" x="-13.335" y="-94.615" size="1.27" layer="25"/>
+<attribute name="SPICEPREFIX" value="C" x="-12.7" y="-95.25" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-13.335" y="-97.155" size="1.27" layer="27"/>
+</element>
+<element name="IMU:C2" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10n" x="-12.7" y="-100.33" smashed="yes">
+<attribute name="NAME" x="-13.335" y="-99.695" size="1.27" layer="25"/>
+<attribute name="SPICEPREFIX" value="C" x="-12.7" y="-100.33" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="-13.335" y="-102.235" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="MCU:N$10">
@@ -1849,6 +1943,53 @@ design rules under a new name.</description>
 </signal>
 <signal name="MCU:V_BAT_LEVEL">
 <contactref element="MCU:IC1" pad="20"/>
+</signal>
+<signal name="IMU:GND">
+<contactref element="IMU:IC1" pad="18"/>
+<contactref element="IMU:IC1" pad="1"/>
+<contactref element="IMU:C3" pad="2"/>
+<contactref element="IMU:R1" pad="1"/>
+<contactref element="IMU:C4" pad="2"/>
+<contactref element="IMU:C1" pad="2"/>
+<contactref element="IMU:IC1" pad="11"/>
+<contactref element="IMU:C2" pad="2"/>
+<wire x1="-12.05" y1="-95.25" x2="-12.05" y2="-100.33" width="0" layer="19" extent="1-1"/>
+<wire x1="-12.05" y1="-90.17" x2="-12.05" y2="-95.25" width="0" layer="19" extent="1-1"/>
+<wire x1="-14.47" y1="-86.36" x2="-12.05" y2="-90.17" width="0" layer="19" extent="1-1"/>
+<wire x1="-12.05" y1="-82.55" x2="-14.47" y2="-86.36" width="0" layer="19" extent="1-1"/>
+<wire x1="24.11" y1="42.475" x2="-12.05" y2="-82.55" width="0" layer="19" extent="1-1"/>
+<wire x1="24.835" y1="45.2" x2="24.11" y2="42.475" width="0" layer="19" extent="1-1"/>
+<wire x1="20.885" y1="45.7" x2="24.835" y2="45.2" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="IMU:+3V3">
+<contactref element="IMU:IC1" pad="8"/>
+<contactref element="IMU:C4" pad="1"/>
+<contactref element="IMU:C2" pad="1"/>
+<contactref element="IMU:IC1" pad="13"/>
+<wire x1="-13.35" y1="-90.17" x2="-13.35" y2="-100.33" width="0" layer="19" extent="1-1"/>
+<wire x1="22.61" y1="42.475" x2="-13.35" y2="-90.17" width="0" layer="19" extent="1-1"/>
+<wire x1="24.835" y1="43.7" x2="22.61" y2="42.475" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="IMU:N$1">
+<contactref element="IMU:IC1" pad="9"/>
+<contactref element="IMU:R1" pad="2"/>
+<wire x1="24.835" y1="44.2" x2="-13.47" y2="-86.36" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="IMU:N$2">
+<contactref element="IMU:IC1" pad="20"/>
+<contactref element="IMU:C3" pad="1"/>
+<wire x1="23.61" y1="46.425" x2="-13.35" y2="-82.55" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="IMU:SCL">
+<contactref element="IMU:IC1" pad="23"/>
+</signal>
+<signal name="IMU:SDA">
+<contactref element="IMU:IC1" pad="24"/>
+</signal>
+<signal name="IMU:N$3">
+<contactref element="IMU:C1" pad="1"/>
+<contactref element="IMU:IC1" pad="10"/>
+<wire x1="24.835" y1="44.7" x2="-13.35" y2="-95.25" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
