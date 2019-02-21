@@ -72,7 +72,7 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="no" active="no"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-21T16:09:52Z" lastsyncedchangeguid="40c8ebbe-5acf-dab2-5829-c9eac6f03191"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-21T16:09:52Z" lastsyncedchangeguid="0af3cb23-451f-cdb0-0227-a82346ae2ccc"/>
 <plain>
 <rectangle x1="6.858" y1="11.303" x2="13.589" y2="27.813" layer="39"/>
 <rectangle x1="6.858" y1="6.858" x2="13.589" y2="11.176" layer="35"/>
