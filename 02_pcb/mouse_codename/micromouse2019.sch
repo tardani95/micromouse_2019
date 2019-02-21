@@ -243,6 +243,110 @@
 <wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.2" width="0.1" layer="21"/>
 <wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.3" width="0.1" layer="21" curve="180"/>
 </package>
+<package name="BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9120812/1" library_version="12">
+<description>&lt;b&gt;BM04B-SRSS-TB(LFSN)&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="1.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="2.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="3" x="3.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="4" x="4.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="5" x="0.2" y="2.075" dx="1.8" dy="1.2" layer="1" rot="R90"/>
+<smd name="6" x="5.8" y="2.075" dx="1.8" dy="1.2" layer="1" rot="R90"/>
+<text x="2.689" y="0.686" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="2.689" y="0.686" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="0" y1="2.8" x2="6" y2="2.8" width="0.254" layer="51"/>
+<wire x1="6" y1="2.8" x2="6" y2="-0.1" width="0.254" layer="51"/>
+<wire x1="6" y1="-0.1" x2="0" y2="-0.1" width="0.254" layer="51"/>
+<wire x1="0" y1="-0.1" x2="0" y2="2.8" width="0.254" layer="51"/>
+<wire x1="1.113" y1="2.8" x2="4.901" y2="2.8" width="0.254" layer="21"/>
+<wire x1="0" y1="0" x2="0" y2="0.928" width="0.254" layer="21"/>
+<wire x1="0" y1="-0.1" x2="0.987" y2="-0.1" width="0.254" layer="21"/>
+<wire x1="6" y1="-0.1" x2="6" y2="1.009" width="0.254" layer="21"/>
+<wire x1="6" y1="-0.1" x2="4.955" y2="-0.1" width="0.254" layer="21"/>
+<circle x="0.689" y="-1.219" radius="0.063" width="0.254" layer="25"/>
+</package>
+<package name="DMN2990UDJ-7" urn="urn:adsk.eagle:footprint:9120804/1" library_version="14" library_locally_modified="yes">
+<description>SOT-963</description>
+<smd name="P1" x="-0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P2" x="-0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P3" x="-0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P4" x="0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P5" x="0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P6" x="0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<wire x1="-0.65" y1="0.55" x2="0.65" y2="0.55" width="0.127" layer="21"/>
+<wire x1="0.65" y1="0.55" x2="0.65" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="0.65" y1="-0.55" x2="-0.65" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-0.65" y1="-0.55" x2="-0.65" y2="0.55" width="0.127" layer="21"/>
+<text x="-0.65" y="0.661665625" size="0.254" layer="25">&gt;NAME</text>
+<text x="-0.65" y="-0.881665625" size="0.254" layer="27">&gt;VALUE</text>
+</package>
+<package name="SON65P210X210X80-7N" urn="urn:adsk.eagle:footprint:9120803/1" library_version="14" library_locally_modified="yes">
+<description>SON-6 package from TI.</description>
+<wire x1="-1.0414" y1="-1.0414" x2="1.0414" y2="-1.0414" width="0" layer="51"/>
+<wire x1="1.0414" y1="-1.0414" x2="1.0414" y2="1.0414" width="0" layer="51"/>
+<wire x1="1.0414" y1="1.0414" x2="0.3048" y2="1.0414" width="0" layer="51"/>
+<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51"/>
+<wire x1="-0.3048" y1="1.0414" x2="-1.0414" y2="1.0414" width="0" layer="51"/>
+<wire x1="-1.0414" y1="1.0414" x2="-1.0414" y2="-1.0414" width="0" layer="51"/>
+<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51" curve="-180"/>
+<wire x1="-1.016" y1="1.016" x2="1.016" y2="1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="-1.016" x2="-1.016" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-1.016" y1="-1.016" x2="-1.016" y2="1.016" width="0.127" layer="21"/>
+<text x="-0.73688125" y="1.143159375" size="0.254" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
+<text x="-1.171159375" y="-1.37465" size="0.254" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
+<smd name="1" x="-1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="2" x="-1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="3" x="-1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="4" x="1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="5" x="1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="6" x="1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="7" x="0" y="0" dx="0.9906" dy="1.6002" layer="1"/>
+<circle x="-0.9906" y="1.27" radius="0.1016" width="0.127" layer="21"/>
+</package>
+<package name="DFN-6" urn="urn:adsk.eagle:footprint:9120810/1" library_version="14" library_locally_modified="yes">
+<description>2x2 mm DFN-6 package footprint</description>
+<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.127" layer="21"/>
+<wire x1="0.8" y1="1" x2="0.8" y2="-1" width="0.127" layer="21"/>
+<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.127" layer="21"/>
+<wire x1="-0.8" y1="-1" x2="-0.8" y2="1" width="0.127" layer="21"/>
+<circle x="-1.1" y="-0.8" radius="0.1" width="0.127" layer="21"/>
+<rectangle x1="-0.55" y1="0.1" x2="-0.3" y2="0.35" layer="31"/>
+<rectangle x1="0.3" y1="0.1" x2="0.55" y2="0.35" layer="31" rot="R270"/>
+<rectangle x1="0.3" y1="-0.35" x2="0.55" y2="-0.1" layer="31" rot="R180"/>
+<rectangle x1="-0.55" y1="-0.35" x2="-0.3" y2="-0.1" layer="31" rot="R90"/>
+<rectangle x1="-0.15" y1="-0.35" x2="0.15" y2="-0.1" layer="31" rot="R180"/>
+<rectangle x1="-0.15" y1="0.1" x2="0.15" y2="0.35" layer="31"/>
+<smd name="1" x="-0.5" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="2" x="0" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="3" x="0.5" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="4" x="0.5" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="5" x="0" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="6" x="-0.5" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="7" x="0" y="0" dx="1.1" dy="0.7" layer="1" cream="no"/>
+<text x="-0.9525" y="-0.4445" size="0.254" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.143" y="-0.508" size="0.254" layer="25" rot="R90">&gt;VALUE</text>
+</package>
+<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9120811/1" library_version="14" library_locally_modified="yes">
+<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
+<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
+<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="21"/>
+<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="21"/>
+<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="21"/>
+<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="21"/>
+<wire x1="-3.2" y1="-2.5" x2="-3.2" y2="2.5" width="0.05" layer="39"/>
+<wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
+<wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
+<wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
+<text x="-3.20481875" y="2.60391875" size="1.01753125" layer="25">&gt;NAME</text>
+<text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
+<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
+<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
+<pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
+<pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/4" type="model" library_version="9" library_locally_modified="yes">
@@ -267,6 +371,35 @@
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="MPU6050"/>
+</packageinstances>
+</package3d>
+<package3d name="BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9120813/2" type="model" library_version="14" library_locally_modified="yes">
+<description>&lt;b&gt;BM04B-SRSS-TB(LFSN)&lt;/b&gt;&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="BM04B-SRSS-TB(LFSN)"/>
+</packageinstances>
+</package3d>
+<package3d name="DMN2990UDJ-7" urn="urn:adsk.eagle:package:9120817/1" type="box" library_version="14" library_locally_modified="yes">
+<description>SOT-963</description>
+<packageinstances>
+<packageinstance name="DMN2990UDJ-7"/>
+</packageinstances>
+</package3d>
+<package3d name="SON65P210X210X80-7N" urn="urn:adsk.eagle:package:9120816/1" type="box" library_version="14" library_locally_modified="yes">
+<description>SON-6 package from TI.</description>
+<packageinstances>
+<packageinstance name="SON65P210X210X80-7N"/>
+</packageinstances>
+</package3d>
+<package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/2" type="model" library_version="14" library_locally_modified="yes">
+<description>2x2 mm DFN-6 package footprint</description>
+<packageinstances>
+<packageinstance name="DFN-6"/>
+</packageinstances>
+</package3d>
+<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/2" type="model" library_version="14" library_locally_modified="yes">
+<packageinstances>
+<packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -395,6 +528,73 @@
 <pin name="SCL" x="33.02" y="-22.86" length="middle" rot="R180"/>
 <pin name="SDA" x="33.02" y="-25.4" length="middle" rot="R180"/>
 <pin name="EP" x="33.02" y="-27.94" length="middle" rot="R180"/>
+</symbol>
+<symbol name="BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:symbol:9120805/1" library_version="12">
+<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-5.08" x2="15.24" y2="2.54" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="0" y="0" length="middle"/>
+<pin name="3" x="0" y="-2.54" length="middle"/>
+<pin name="2" x="20.32" y="0" length="middle" rot="R180"/>
+<pin name="4" x="20.32" y="-2.54" length="middle" rot="R180"/>
+</symbol>
+<symbol name="DMN2990UDJ-7" urn="urn:adsk.eagle:symbol:9120809/1" library_version="14" library_locally_modified="yes">
+<description>MOSFET: DMN2990UDJ-7</description>
+<pin name="DRAIN_1" x="-20.32" y="5.08" length="middle" direction="pas"/>
+<pin name="GATE_1" x="-20.32" y="0" length="middle" direction="in"/>
+<pin name="SOURCE_1" x="-20.32" y="-5.08" length="middle" direction="pas"/>
+<pin name="DRAIN_2" x="20.32" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="GATE_2" x="20.32" y="0" length="middle" direction="in" rot="R180"/>
+<pin name="SOURCE_2" x="20.32" y="-5.08" length="middle" direction="pas" rot="R180"/>
+<wire x1="-15.24" y1="7.62" x2="-15.24" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-7.62" x2="15.24" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-7.62" x2="15.24" y2="7.62" width="0.254" layer="94"/>
+<wire x1="15.24" y1="7.62" x2="-15.24" y2="7.62" width="0.254" layer="94"/>
+<text x="-15.24" y="8.382" size="1.27" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-9.652" size="1.27" layer="95">&gt;VALUE</text>
+</symbol>
+<symbol name="TPS735XXDRV" urn="urn:adsk.eagle:symbol:9120808/1" library_version="14" library_locally_modified="yes">
+<description>Symbol for TPS735 SON-6 package version LDO</description>
+<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-20.32" width="0.4064" layer="94"/>
+<wire x1="-12.7" y1="-20.32" x2="12.7" y2="-20.32" width="0.4064" layer="94"/>
+<wire x1="12.7" y1="-20.32" x2="12.7" y2="15.24" width="0.4064" layer="94"/>
+<wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.4064" layer="94"/>
+<text x="-13.083359375" y="16.7712" size="2.0837" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
+<text x="-13.3145" y="-22.9719" size="2.086040625" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
+<pin name="IN" x="-17.78" y="10.16" length="middle" direction="pwr"/>
+<pin name="EN" x="-17.78" y="5.08" length="middle" direction="in"/>
+<pin name="NR/FB" x="-17.78" y="0" length="middle" direction="in"/>
+<pin name="N/C" x="-17.78" y="-5.08" length="middle" direction="nc"/>
+<pin name="GND" x="-17.78" y="-10.16" length="middle" direction="pas"/>
+<pin name="THERMALPAD" x="-17.78" y="-15.24" length="middle" direction="pas"/>
+<pin name="OUT" x="17.78" y="10.16" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+<symbol name="LDL112XXXXR" urn="urn:adsk.eagle:symbol:9120807/1" library_version="14" library_locally_modified="yes">
+<description>LDL112 fixed version.</description>
+<wire x1="-7.62" y1="5.08" x2="10.16" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="-7.62" y2="-7.62" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="5.08" width="0.4064" layer="94"/>
+<pin name="IN" x="-12.7" y="2.54" length="middle" direction="pwr"/>
+<pin name="EN" x="-12.7" y="0" length="middle" direction="in"/>
+<pin name="GND" x="-12.7" y="-2.54" length="middle" direction="pas"/>
+<pin name="OUT" x="15.24" y="2.54" length="middle" direction="pwr" rot="R180"/>
+<pin name="THERMALPAD" x="-12.7" y="-5.08" length="middle" direction="pas"/>
+<text x="-7.62" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-10.16" size="1.778" layer="95">&gt;VALUE</text>
+</symbol>
+<symbol name="B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:symbol:9120806/1" library_version="14" library_locally_modified="yes">
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<text x="-2.544359375" y="3.30766875" size="1.78105" layer="95">&gt;NAME</text>
+<text x="-2.544590625" y="-7.633759375" size="1.781209375" layer="96">&gt;VALUE</text>
+<pin name="1" x="-7.62" y="0" length="middle" direction="pas"/>
+<pin name="2" x="-7.62" y="-2.54" length="middle" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -580,6 +780,142 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 <attribute name="MANUFACTURER_NAME" value="TDK" constant="no"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9120818/2" prefix="J" library_version="14" library_locally_modified="yes">
+<description>&lt;b&gt;4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="BM04B-SRSS-TB(LFSN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BM04B-SRSS-TB(LFSN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120813/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="5151541P" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DMN2990UDJ-7" urn="urn:adsk.eagle:component:9120822/1" prefix="MOSFET" library_version="14" library_locally_modified="yes">
+<gates>
+<gate name="G$1" symbol="DMN2990UDJ-7" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DMN2990UDJ-7">
+<connects>
+<connect gate="G$1" pin="DRAIN_1" pad="P6"/>
+<connect gate="G$1" pin="DRAIN_2" pad="P3"/>
+<connect gate="G$1" pin="GATE_1" pad="P2"/>
+<connect gate="G$1" pin="GATE_2" pad="P5"/>
+<connect gate="G$1" pin="SOURCE_1" pad="P1"/>
+<connect gate="G$1" pin="SOURCE_2" pad="P4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120817/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPS735" urn="urn:adsk.eagle:component:9120821/1" prefix="LDO" library_version="14" library_locally_modified="yes">
+<description>500mA, Low Quiescent Current, Ultra-Low Noise, High PSRR  Low Dropout Linear Regulator</description>
+<gates>
+<gate name="A" symbol="TPS735XXDRV" x="0" y="0"/>
+</gates>
+<devices>
+<device name="DRVT" package="SON65P210X210X80-7N">
+<connects>
+<connect gate="A" pin="EN" pad="4"/>
+<connect gate="A" pin="GND" pad="3"/>
+<connect gate="A" pin="IN" pad="6"/>
+<connect gate="A" pin="N/C" pad="5"/>
+<connect gate="A" pin="NR/FB" pad="2"/>
+<connect gate="A" pin="OUT" pad="1"/>
+<connect gate="A" pin="THERMALPAD" pad="7"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120816/1"/>
+</package3dinstances>
+<technologies>
+<technology name="33">
+<attribute name="MF" value="Texas Instruments"/>
+<attribute name="MP" value="TPS73533DRVT" constant="no"/>
+<attribute name="PACKAGE" value="SON-6 Texas Instruments"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LDL112" urn="urn:adsk.eagle:component:9120820/2" prefix="LDO" library_version="14" library_locally_modified="yes">
+<description>Low-dropout linear regulator from ST.
+
+The LDL112 is a low-dropout linear regulator,
+which can provide a maximum current of 1.2 A,
+with a typical dropout voltage of 300 mV.</description>
+<gates>
+<gate name="G$1" symbol="LDL112XXXXR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="PU" package="DFN-6">
+<connects>
+<connect gate="G$1" pin="EN" pad="1"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="IN" pad="6"/>
+<connect gate="G$1" pin="OUT" pad="4"/>
+<connect gate="G$1" pin="THERMALPAD" pad="7"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120815/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:component:9120819/2" prefix="J" library_version="14" library_locally_modified="yes">
+<description>PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header</description>
+<gates>
+<gate name="G$1" symbol="B2B-PH-K-S(LF)(SN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JST_B2B-PH-K-S(LF)(SN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120814/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Unavailable"/>
+<attribute name="DESCRIPTION" value=" PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header "/>
+<attribute name="MF" value="JST Sales"/>
+<attribute name="MP" value="B2B-PH-K-S_LF__SN_"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
 </technology>
 </technologies>
 </device>
@@ -8332,316 +8668,6 @@ DIN A4, landscape with extra doc field</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SamacSys_Parts">
-<description>&lt;b&gt;https://componentsearchengine.com&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="BM04B-SRSS-TB(LFSN)">
-<description>&lt;b&gt;BM04B-SRSS-TB(LFSN)&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="1.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="2" x="2.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="3" x="3.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="4" x="4.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="5" x="0.2" y="2.075" dx="1.8" dy="1.2" layer="1" rot="R90"/>
-<smd name="6" x="5.8" y="2.075" dx="1.8" dy="1.2" layer="1" rot="R90"/>
-<text x="2.689" y="0.686" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="2.689" y="0.686" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="0" y1="2.8" x2="6" y2="2.8" width="0.254" layer="51"/>
-<wire x1="6" y1="2.8" x2="6" y2="-0.1" width="0.254" layer="51"/>
-<wire x1="6" y1="-0.1" x2="0" y2="-0.1" width="0.254" layer="51"/>
-<wire x1="0" y1="-0.1" x2="0" y2="2.8" width="0.254" layer="51"/>
-<wire x1="1.113" y1="2.8" x2="4.901" y2="2.8" width="0.254" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="0.928" width="0.254" layer="21"/>
-<wire x1="0" y1="-0.1" x2="0.987" y2="-0.1" width="0.254" layer="21"/>
-<wire x1="6" y1="-0.1" x2="6" y2="1.009" width="0.254" layer="21"/>
-<wire x1="6" y1="-0.1" x2="4.955" y2="-0.1" width="0.254" layer="21"/>
-<circle x="0.689" y="-1.219" radius="0.063" width="0.254" layer="25"/>
-</package>
-</packages>
-<symbols>
-<symbol name="BM04B-SRSS-TB(LFSN)">
-<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-5.08" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="1" x="0" y="0" length="middle"/>
-<pin name="3" x="0" y="-2.54" length="middle"/>
-<pin name="2" x="20.32" y="0" length="middle" rot="R180"/>
-<pin name="4" x="20.32" y="-2.54" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BM04B-SRSS-TB(LFSN)" prefix="J">
-<description>&lt;b&gt;4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="BM04B-SRSS-TB(LFSN)" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="BM04B-SRSS-TB(LFSN)">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" constant="no"/>
-<attribute name="HEIGHT" value="mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" constant="no"/>
-<attribute name="RS_PART_NUMBER" value="5151541P" constant="no"/>
-<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
-<library name="parts_not_managed">
-<packages>
-<package name="JST_B2B-PH-K-S(LF)(SN)">
-<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
-<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
-<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
-<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="51"/>
-<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="21"/>
-<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="21"/>
-<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="21"/>
-<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="21"/>
-<wire x1="-3.2" y1="-2.5" x2="-3.2" y2="2.5" width="0.05" layer="39"/>
-<wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
-<wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
-<wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
-<text x="-3.20481875" y="2.60391875" size="1.01753125" layer="25">&gt;NAME</text>
-<text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
-<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
-<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
-<pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
-<pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
-</package>
-<package name="DFN-6">
-<description>2x2 mm DFN-6 package footprint</description>
-<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.127" layer="21"/>
-<wire x1="0.8" y1="1" x2="0.8" y2="-1" width="0.127" layer="21"/>
-<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.127" layer="21"/>
-<wire x1="-0.8" y1="-1" x2="-0.8" y2="1" width="0.127" layer="21"/>
-<circle x="-1.1" y="-0.8" radius="0.1" width="0.127" layer="21"/>
-<rectangle x1="-0.55" y1="0.1" x2="-0.3" y2="0.35" layer="31"/>
-<rectangle x1="0.3" y1="0.1" x2="0.55" y2="0.35" layer="31" rot="R270"/>
-<rectangle x1="0.3" y1="-0.35" x2="0.55" y2="-0.1" layer="31" rot="R180"/>
-<rectangle x1="-0.55" y1="-0.35" x2="-0.3" y2="-0.1" layer="31" rot="R90"/>
-<rectangle x1="-0.15" y1="-0.35" x2="0.15" y2="-0.1" layer="31" rot="R180"/>
-<rectangle x1="-0.15" y1="0.1" x2="0.15" y2="0.35" layer="31"/>
-<smd name="1" x="-0.5" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="2" x="0" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="3" x="0.5" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="4" x="0.5" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="5" x="0" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="6" x="-0.5" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="7" x="0" y="0" dx="1.1" dy="0.7" layer="1" cream="no"/>
-<text x="-0.9525" y="-0.4445" size="0.254" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.143" y="-0.508" size="0.254" layer="25" rot="R90">&gt;VALUE</text>
-</package>
-<package name="SON65P210X210X80-7N">
-<description>SON-6 package from TI.</description>
-<wire x1="-1.0414" y1="-1.0414" x2="1.0414" y2="-1.0414" width="0" layer="51"/>
-<wire x1="1.0414" y1="-1.0414" x2="1.0414" y2="1.0414" width="0" layer="51"/>
-<wire x1="1.0414" y1="1.0414" x2="0.3048" y2="1.0414" width="0" layer="51"/>
-<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51"/>
-<wire x1="-0.3048" y1="1.0414" x2="-1.0414" y2="1.0414" width="0" layer="51"/>
-<wire x1="-1.0414" y1="1.0414" x2="-1.0414" y2="-1.0414" width="0" layer="51"/>
-<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51" curve="-180"/>
-<text x="-0.73688125" y="1.143159375" size="0.254" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-1.171159375" y="-1.37465" size="0.254" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
-<smd name="1" x="-1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="2" x="-1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="3" x="-1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="4" x="1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="5" x="1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="6" x="1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="7" x="0" y="0" dx="0.9906" dy="1.6002" layer="1"/>
-<wire x1="-1.016" y1="1.016" x2="1.016" y2="1.016" width="0.127" layer="21"/>
-<wire x1="1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="1.016" y1="-1.016" x2="-1.016" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="-1.016" y1="-1.016" x2="-1.016" y2="1.016" width="0.127" layer="21"/>
-<circle x="-0.9906" y="1.27" radius="0.1016" width="0.127" layer="21"/>
-</package>
-<package name="DMN2990UDJ-7">
-<description>SOT-963</description>
-<smd name="P1" x="-0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P2" x="-0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P3" x="-0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P4" x="0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P5" x="0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P6" x="0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<wire x1="-0.65" y1="0.55" x2="0.65" y2="0.55" width="0.127" layer="21"/>
-<wire x1="0.65" y1="0.55" x2="0.65" y2="-0.55" width="0.127" layer="21"/>
-<wire x1="0.65" y1="-0.55" x2="-0.65" y2="-0.55" width="0.127" layer="21"/>
-<wire x1="-0.65" y1="-0.55" x2="-0.65" y2="0.55" width="0.127" layer="21"/>
-<text x="-0.65" y="0.661665625" size="0.254" layer="25">&gt;NAME</text>
-<text x="-0.65" y="-0.881665625" size="0.254" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="B2B-PH-K-S(LF)(SN)">
-<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
-<text x="-2.544359375" y="3.30766875" size="1.78105" layer="95">&gt;NAME</text>
-<text x="-2.544590625" y="-7.633759375" size="1.781209375" layer="96">&gt;VALUE</text>
-<pin name="1" x="-7.62" y="0" length="middle" direction="pas"/>
-<pin name="2" x="-7.62" y="-2.54" length="middle" direction="pas"/>
-</symbol>
-<symbol name="LDL112XXXXR">
-<description>LDL112 fixed version.</description>
-<wire x1="-7.62" y1="5.08" x2="10.16" y2="5.08" width="0.4064" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="10.16" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="10.16" y1="-7.62" x2="-7.62" y2="-7.62" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="5.08" width="0.4064" layer="94"/>
-<pin name="IN" x="-12.7" y="2.54" length="middle" direction="pwr"/>
-<pin name="EN" x="-12.7" y="0" length="middle" direction="in"/>
-<pin name="GND" x="-12.7" y="-2.54" length="middle" direction="pas"/>
-<pin name="OUT" x="15.24" y="2.54" length="middle" direction="pwr" rot="R180"/>
-<pin name="THERMALPAD" x="-12.7" y="-5.08" length="middle" direction="pas"/>
-<text x="-7.62" y="6.35" size="1.778" layer="95">&gt;NAME</text>
-<text x="-7.62" y="-10.16" size="1.778" layer="95">&gt;VALUE</text>
-</symbol>
-<symbol name="TPS735XXDRV">
-<description>Symbol for TPS735 SON-6 package version LDO</description>
-<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-20.32" width="0.4064" layer="94"/>
-<wire x1="-12.7" y1="-20.32" x2="12.7" y2="-20.32" width="0.4064" layer="94"/>
-<wire x1="12.7" y1="-20.32" x2="12.7" y2="15.24" width="0.4064" layer="94"/>
-<wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.4064" layer="94"/>
-<text x="-13.083359375" y="16.7712" size="2.0837" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-13.3145" y="-22.9719" size="2.086040625" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
-<pin name="IN" x="-17.78" y="10.16" length="middle" direction="pwr"/>
-<pin name="EN" x="-17.78" y="5.08" length="middle" direction="in"/>
-<pin name="NR/FB" x="-17.78" y="0" length="middle" direction="in"/>
-<pin name="N/C" x="-17.78" y="-5.08" length="middle" direction="nc"/>
-<pin name="GND" x="-17.78" y="-10.16" length="middle" direction="pas"/>
-<pin name="THERMALPAD" x="-17.78" y="-15.24" length="middle" direction="pas"/>
-<pin name="OUT" x="17.78" y="10.16" length="middle" direction="pwr" rot="R180"/>
-</symbol>
-<symbol name="DMN2990UDJ-7">
-<description>MOSFET: DMN2990UDJ-7</description>
-<pin name="DRAIN_1" x="-20.32" y="5.08" length="middle" direction="pas"/>
-<wire x1="-15.24" y1="7.62" x2="-15.24" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-15.24" y1="-7.62" x2="15.24" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-7.62" x2="15.24" y2="7.62" width="0.254" layer="94"/>
-<wire x1="15.24" y1="7.62" x2="-15.24" y2="7.62" width="0.254" layer="94"/>
-<pin name="GATE_1" x="-20.32" y="0" length="middle" direction="in"/>
-<pin name="SOURCE_1" x="-20.32" y="-5.08" length="middle" direction="pas"/>
-<pin name="DRAIN_2" x="20.32" y="5.08" length="middle" direction="pas" rot="R180"/>
-<pin name="GATE_2" x="20.32" y="0" length="middle" direction="in" rot="R180"/>
-<pin name="SOURCE_2" x="20.32" y="-5.08" length="middle" direction="pas" rot="R180"/>
-<text x="-15.24" y="8.382" size="1.27" layer="95">&gt;NAME</text>
-<text x="-15.24" y="-9.652" size="1.27" layer="95">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="B2B-PH-K-S(LF)(SN)" prefix="J">
-<description>PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header</description>
-<gates>
-<gate name="G$1" symbol="B2B-PH-K-S(LF)(SN)" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JST_B2B-PH-K-S(LF)(SN)">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="Unavailable"/>
-<attribute name="DESCRIPTION" value=" PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header "/>
-<attribute name="MF" value="JST Sales"/>
-<attribute name="MP" value="B2B-PH-K-S_LF__SN_"/>
-<attribute name="PACKAGE" value="None"/>
-<attribute name="PRICE" value="None"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="LDL112" prefix="LDO">
-<description>Low-dropout linear regulator from ST.
-
-The LDL112 is a low-dropout linear regulator,
-which can provide a maximum current of 1.2 A,
-with a typical dropout voltage of 300 mV.</description>
-<gates>
-<gate name="G$1" symbol="LDL112XXXXR" x="0" y="0"/>
-</gates>
-<devices>
-<device name="PU" package="DFN-6">
-<connects>
-<connect gate="G$1" pin="EN" pad="1"/>
-<connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="IN" pad="6"/>
-<connect gate="G$1" pin="OUT" pad="4"/>
-<connect gate="G$1" pin="THERMALPAD" pad="7"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="TPS735" prefix="LDO">
-<description>500mA, Low Quiescent Current, Ultra-Low Noise, High PSRR  Low Dropout Linear Regulator</description>
-<gates>
-<gate name="A" symbol="TPS735XXDRV" x="0" y="0"/>
-</gates>
-<devices>
-<device name="DRVT" package="SON65P210X210X80-7N">
-<connects>
-<connect gate="A" pin="EN" pad="4"/>
-<connect gate="A" pin="GND" pad="3"/>
-<connect gate="A" pin="IN" pad="6"/>
-<connect gate="A" pin="N/C" pad="5"/>
-<connect gate="A" pin="NR/FB" pad="2"/>
-<connect gate="A" pin="OUT" pad="1"/>
-<connect gate="A" pin="THERMALPAD" pad="7"/>
-</connects>
-<technologies>
-<technology name="33">
-<attribute name="MF" value="Texas Instruments"/>
-<attribute name="MP" value="TPS73533DRVT" constant="no"/>
-<attribute name="PACKAGE" value="SON-6 Texas Instruments"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="DMN2990UDJ-7" prefix="MOSFET">
-<gates>
-<gate name="G$1" symbol="DMN2990UDJ-7" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="DMN2990UDJ-7">
-<connects>
-<connect gate="G$1" pin="DRAIN_1" pad="P6"/>
-<connect gate="G$1" pin="DRAIN_2" pad="P3"/>
-<connect gate="G$1" pin="GATE_1" pad="P2"/>
-<connect gate="G$1" pin="GATE_2" pad="P5"/>
-<connect gate="G$1" pin="SOURCE_1" pad="P1"/>
-<connect gate="G$1" pin="SOURCE_2" pad="P4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="wirepad" urn="urn:adsk.eagle:library:412">
 <description>&lt;b&gt;Single Pads&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -8732,10 +8758,10 @@ with a typical dropout voltage of 300 mV.</description>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="parts_not_managed" deviceset="B2B-PH-K-S(LF)(SN)" device=""/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B2B-PH-K-S(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:9120814/2"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="LDO2" library="parts_not_managed" deviceset="LDL112" device="PU"/>
-<part name="LDO1" library="parts_not_managed" deviceset="TPS735" device="DRVT" technology="33"/>
+<part name="LDO2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/2"/>
+<part name="LDO1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="TPS735" device="DRVT" package3d_urn="urn:adsk.eagle:package:9120816/1" technology="33"/>
 </parts>
 <sheets>
 <sheet>
@@ -10028,10 +10054,10 @@ to set it to “0”.</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
-<part name="J1" library="SamacSys_Parts" deviceset="BM04B-SRSS-TB(LFSN)" device=""/>
-<part name="J2" library="SamacSys_Parts" deviceset="BM04B-SRSS-TB(LFSN)" device=""/>
-<part name="MOSFET1" library="parts_not_managed" deviceset="DMN2990UDJ-7" device=""/>
-<part name="MOSFET2" library="parts_not_managed" deviceset="DMN2990UDJ-7" device=""/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BM04B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9120813/2"/>
+<part name="J2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BM04B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9120813/2"/>
+<part name="MOSFET1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
+<part name="MOSFET2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
 <part name="IR_LED1" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -10471,11 +10497,8 @@ to set it to “0”.</text>
 <moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="93.98">
 <attribute name="NAME" x="129.54" y="93.98" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="IR_LED_DUAL_LEFT" module="IR_LED_DRIVER_DUAL" x="50.8" y="134.62">
-<attribute name="NAME" x="50.8" y="134.62" size="2.032" layer="95" align="bottom-center"/>
-</moduleinst>
-<moduleinst name="IR_LED_DUAL_RIGHT" module="IR_LED_DRIVER_DUAL" x="50.8" y="114.3">
-<attribute name="NAME" x="50.8" y="114.3" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="IR_PTR" module="IR_LED_DRIVER_DUAL" x="50.8" y="134.62">
+<attribute name="NAME" value="IR_PTR" x="50.8" y="134.62" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 </moduleinsts>
 <instances>
