@@ -376,6 +376,45 @@
 <text x="0" y="2.5076" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.1266" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
+<package name="JDY-10_STANDING" urn="urn:adsk.eagle:footprint:8988316/1" library_version="19" library_locally_modified="yes">
+<wire x1="13" y1="-1.362" x2="13" y2="0.7" width="0.05" layer="21"/>
+<wire x1="13" y1="0.7" x2="0" y2="0.7" width="0.05" layer="21"/>
+<wire x1="0" y1="0.7" x2="0" y2="-1.362" width="0.05" layer="21"/>
+<wire x1="0" y1="-1.362" x2="13" y2="-1.362" width="0.05" layer="21"/>
+<smd name="P$8" x="1.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="2.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$10" x="4.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$11" x="5.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$12" x="7.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$13" x="8.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$14" x="10.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<smd name="P$15" x="11.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
+<dimension x1="0" y1="0" x2="13" y2="0" x3="6.5" y3="-5.9" textsize="1.27" layer="20"/>
+<text x="0" y="-2.908" size="1.27" layer="25">JDY-10</text>
+<text x="7.8" y="-2.908" size="1.27" layer="21">TOP</text>
+<text x="5.6" y="1.2" size="1.27" layer="21">BOTTOM</text>
+</package>
+<package name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9126099/1" library_version="19" library_locally_modified="yes">
+<description>&lt;b&gt;SM03B-SRSS-TB-ren1&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="0" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="3" x="1" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="4" x="-2.3" y="-3.875" dx="1.8" dy="1.2" layer="1" rot="R90"/>
+<smd name="5" x="2.3" y="-3.875" dx="1.8" dy="1.2" layer="1" rot="R90"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2.5" y1="-0.325" x2="2.5" y2="-0.325" width="0.2" layer="51"/>
+<wire x1="2.5" y1="-0.325" x2="2.5" y2="-4.575" width="0.2" layer="51"/>
+<wire x1="2.5" y1="-4.575" x2="-2.5" y2="-4.575" width="0.2" layer="51"/>
+<wire x1="-2.5" y1="-4.575" x2="-2.5" y2="-0.325" width="0.2" layer="51"/>
+<wire x1="0" y1="-4.575" x2="-1.4" y2="-4.575" width="0.2" layer="21"/>
+<wire x1="0" y1="-4.575" x2="1.39233125" y2="-4.575" width="0.2" layer="21"/>
+<wire x1="2.5" y1="-0.325" x2="2.5" y2="-2.67933125" width="0.2" layer="21"/>
+<wire x1="2.5" y1="-0.325" x2="1.58333125" y2="-0.325" width="0.2" layer="21"/>
+<wire x1="-2.5" y1="-0.325" x2="-2.5" y2="-2.673" width="0.2" layer="21"/>
+<wire x1="-2.5" y1="-0.325" x2="-1.61566875" y2="-0.325" width="0.2" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/4" type="model" library_version="9" library_locally_modified="yes">
@@ -436,6 +475,17 @@
 &lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="DRV8836"/>
+</packageinstances>
+</package3d>
+<package3d name="JDY-10_STANDING" urn="urn:adsk.eagle:package:8988323/2" type="model" library_version="19" library_locally_modified="yes">
+<packageinstances>
+<packageinstance name="JDY-10_STANDING"/>
+</packageinstances>
+</package3d>
+<package3d name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9126100/2" type="model" library_version="19" library_locally_modified="yes">
+<description>&lt;b&gt;SM03B-SRSS-TB-ren1&lt;/b&gt;&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="SM03B-SRSS-TB(LFSN)"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -620,15 +670,15 @@
 <pin name="1" x="-5.08" y="0" length="short" direction="pas"/>
 <pin name="2" x="-5.08" y="-2.54" length="short" direction="pas"/>
 </symbol>
-<symbol name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:symbol:9123901/2" library_version="19">
-<wire x1="5.08" y1="1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-3.81" x2="10.16" y2="1.27" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-3.81" x2="5.08" y2="-3.81" width="0.254" layer="94"/>
-<wire x1="5.08" y1="1.27" x2="5.08" y2="-3.81" width="0.254" layer="94"/>
-<text x="3.81" y="2.54" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="3.81" y="-5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="1" x="2.54" y="0" length="short"/>
-<pin name="2" x="2.54" y="-2.54" length="short"/>
+<symbol name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:symbol:9123901/2" locally_modified="yes" library_version="19" library_locally_modified="yes">
+<wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.81" x2="2.54" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.81" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="0" length="short"/>
+<pin name="2" x="-5.08" y="-2.54" length="short"/>
 </symbol>
 <symbol name="DRV8836DSSR" urn="urn:adsk.eagle:symbol:8879280/1" library_version="19">
 <wire x1="5.08" y1="2.54" x2="35.56" y2="2.54" width="0.254" layer="94"/>
@@ -650,6 +700,32 @@
 <pin name="AIN2_/_AENBL" x="40.64" y="-7.62" length="middle" rot="R180"/>
 <pin name="BIN1_/_BPHASE" x="40.64" y="-10.16" length="middle" rot="R180"/>
 <pin name="BIN2_/_BENBL" x="40.64" y="-12.7" length="middle" rot="R180"/>
+</symbol>
+<symbol name="JDY-10_STANDING" urn="urn:adsk.eagle:symbol:8988321/2" library_version="19" library_locally_modified="yes">
+<pin name="VCC" x="-17.78" y="12.7" length="middle"/>
+<pin name="GND" x="-17.78" y="7.62" length="middle"/>
+<pin name="RX/C7" x="17.78" y="12.7" length="middle" rot="R180"/>
+<pin name="TX/C6" x="17.78" y="7.62" length="middle" rot="R180"/>
+<pin name="ALED/D5" x="17.78" y="-2.54" length="middle" rot="R180"/>
+<pin name="D4/PWRC" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<pin name="PWM3/A1" x="-17.78" y="-7.62" length="middle"/>
+<pin name="STATUS/A5" x="-17.78" y="-12.7" length="middle"/>
+<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-15.24" x2="12.7" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-15.24" x2="12.7" y2="15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.254" layer="94"/>
+<text x="-5.08" y="0" size="2.54" layer="95">JDY-10</text>
+</symbol>
+<symbol name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:symbol:9126098/2" library_version="19" library_locally_modified="yes">
+<wire x1="5.08" y1="1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-6.35" x2="10.16" y2="1.27" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-6.35" x2="5.08" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-6.35" width="0.254" layer="94"/>
+<text x="3.81" y="2.54" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="3.81" y="-7.62" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="2.54" y="0" length="short"/>
+<pin name="3" x="2.54" y="-5.08" length="short"/>
+<pin name="2" x="2.54" y="-2.54" length="short"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -946,7 +1022,7 @@ with a typical dropout voltage of 300 mV.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9123920/3" prefix="J" library_version="19">
+<deviceset name="CONN_BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9123920/3" locally_modified="yes" prefix="J" library_version="19" library_locally_modified="yes">
 <description>&lt;b&gt;2 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 2 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1008,6 +1084,63 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;<
 <attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="DRV8836DSSR" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="595-DRV8836DSSR" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="WM_JDY-10_STANDING" urn="urn:adsk.eagle:component:8988326/4" library_version="19" library_locally_modified="yes">
+<gates>
+<gate name="G$1" symbol="JDY-10_STANDING" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JDY-10_STANDING">
+<connects>
+<connect gate="G$1" pin="ALED/D5" pad="P$12"/>
+<connect gate="G$1" pin="D4/PWRC" pad="P$13"/>
+<connect gate="G$1" pin="GND" pad="P$9"/>
+<connect gate="G$1" pin="PWM3/A1" pad="P$10"/>
+<connect gate="G$1" pin="RX/C7" pad="P$14"/>
+<connect gate="G$1" pin="STATUS/A5" pad="P$11"/>
+<connect gate="G$1" pin="TX/C6" pad="P$15"/>
+<connect gate="G$1" pin="VCC" pad="P$8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8988323/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="ALED" value="MESH working instruction pin flashes once per second and outputs 100MS high level."/>
+<attribute name="STAT" value="Unconnected low level, post connection high level"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CONN_SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9126101/3" prefix="J" library_version="19" library_locally_modified="yes">
+<description>&lt;b&gt;JST (JAPAN SOLDERLESS TERMINALS) - SM03B-SRSS-TB(LF)(SN) - HEADER, R/A, 3WAY&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="SM03B-SRSS-TB(LFSN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SM03B-SRSS-TB(LFSN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9126100/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="JST (JAPAN SOLDERLESS TERMINALS) - SM03B-SRSS-TB(LF)(SN) - HEADER, R/A, 3WAY" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="SM03B-SRSS-TB(LFSN)" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="5151507P" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151507P" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -9279,13 +9412,20 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
-<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2"/>
-<part name="J2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2"/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2" value="MOTOR1"/>
+<part name="J2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2" value="MOTOR2"/>
 <part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MOT_DRV8836" device="1" package3d_urn="urn:adsk.eagle:package:8872076/5"/>
+<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10u"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="165.1" y="38.1" size="1.778" layer="97">MODE 11 I Input mode select Logic high selects PH/EN mode.</text>
+<text x="165.1" y="40.64" size="1.778" layer="97">There is a weak pulldown resistor (approximately 100 kΩ) to ground on the input pins.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -9294,22 +9434,155 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="J1" gate="G$1" x="93.98" y="111.76" smashed="yes">
-<attribute name="NAME" x="97.79" y="114.3" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="97.79" y="106.68" size="1.778" layer="96" align="center-left"/>
+<instance part="J1" gate="G$1" x="165.1" y="91.44" smashed="yes">
+<attribute name="NAME" x="168.91" y="91.44" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="168.91" y="88.9" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="J2" gate="G$1" x="134.62" y="111.76" smashed="yes">
-<attribute name="NAME" x="138.43" y="114.3" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="138.43" y="106.68" size="1.778" layer="96" align="center-left"/>
+<instance part="J2" gate="G$1" x="165.1" y="86.36" smashed="yes">
+<attribute name="NAME" x="168.91" y="86.36" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="168.91" y="83.82" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="IC1" gate="G$1" x="104.14" y="93.98" smashed="yes">
-<attribute name="NAME" x="140.97" y="101.6" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="140.97" y="99.06" size="1.778" layer="96" align="center-left"/>
+<instance part="IC1" gate="G$1" x="147.32" y="93.98" smashed="yes" rot="MR0">
+<attribute name="NAME" x="128.778" y="98.298" size="1.778" layer="95" rot="MR180" align="center-left"/>
+<attribute name="VALUE" x="128.524" y="71.628" size="1.778" layer="96" rot="MR180" align="center-left"/>
+</instance>
+<instance part="GND1" gate="1" x="149.86" y="76.2" smashed="yes">
+<attribute name="VALUE" x="147.32" y="73.66" size="1.778" layer="96"/>
+</instance>
+<instance part="P+1" gate="VCC" x="152.4" y="101.6" smashed="yes">
+<attribute name="VALUE" x="149.86" y="99.06" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="+3V1" gate="G$1" x="96.52" y="101.6" smashed="yes">
+<attribute name="VALUE" x="93.98" y="96.52" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND2" gate="1" x="127" y="60.96" smashed="yes">
+<attribute name="VALUE" x="124.46" y="58.42" size="1.778" layer="96"/>
+</instance>
+<instance part="C1" gate="G$1" x="182.88" y="88.9" smashed="yes">
+<attribute name="NAME" x="183.896" y="89.535" size="1.778" layer="95"/>
+<attribute name="VALUE" x="183.896" y="84.709" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
+<bus name="MOTOR_DRIVER:DRV_A_ENBL,DRV_A_PHASE,DRV_B_ENBL,DRV_B_PHASE">
+<segment>
+<wire x1="68.58" y1="96.52" x2="68.58" y2="76.2" width="0.762" layer="92"/>
+<label x="66.04" y="76.2" size="1.778" layer="95" rot="R90"/>
+</segment>
+</bus>
 </busses>
 <nets>
+<net name="AOUT1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="AOUT1"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="147.32" y1="91.44" x2="160.02" y2="91.44" width="0.1524" layer="91"/>
+<label x="149.86" y="91.44" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="AOUT2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="AOUT2"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<wire x1="147.32" y1="88.9" x2="160.02" y2="88.9" width="0.1524" layer="91"/>
+<label x="149.86" y="88.9" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BOUT1" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="BOUT1"/>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="147.32" y1="86.36" x2="160.02" y2="86.36" width="0.1524" layer="91"/>
+<label x="149.86" y="86.36" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BOUT2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="BOUT2"/>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="147.32" y1="83.82" x2="160.02" y2="83.82" width="0.1524" layer="91"/>
+<label x="149.86" y="83.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<wire x1="147.32" y1="81.28" x2="149.86" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="81.28" x2="149.86" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="149.86" y1="81.28" x2="182.88" y2="81.28" width="0.1524" layer="91"/>
+<junction x="149.86" y="81.28"/>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="182.88" y1="83.82" x2="182.88" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="EP"/>
+<wire x1="127" y1="68.58" x2="127" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+</net>
+<net name="DRV_A_PHASE" class="0">
+<segment>
+<wire x1="68.58" y1="86.36" x2="71.12" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="88.9" x2="106.68" y2="88.9" width="0.1524" layer="91"/>
+<label x="73.66" y="88.9" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="AIN1_/_APHASE"/>
+</segment>
+</net>
+<net name="DRV_A_ENBL" class="0">
+<segment>
+<wire x1="68.58" y1="83.82" x2="71.12" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="86.36" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
+<label x="73.66" y="86.36" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="AIN2_/_AENBL"/>
+<wire x1="91.44" y1="86.36" x2="106.68" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DRV_B_PHASE" class="0">
+<segment>
+<wire x1="68.58" y1="81.28" x2="71.12" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="83.82" x2="93.98" y2="83.82" width="0.1524" layer="91"/>
+<label x="73.66" y="83.82" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="BIN1_/_BPHASE"/>
+<wire x1="93.98" y1="83.82" x2="106.68" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DRV_B_ENBL" class="0">
+<segment>
+<wire x1="68.58" y1="78.74" x2="71.12" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="81.28" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
+<label x="73.66" y="81.28" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="BIN2_/_BENBL"/>
+<wire x1="106.68" y1="81.28" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="VCC"/>
+<wire x1="147.32" y1="93.98" x2="152.4" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="93.98" x2="152.4" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="96.52" x2="152.4" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<wire x1="152.4" y1="93.98" x2="182.88" y2="93.98" width="0.1524" layer="91"/>
+<junction x="152.4" y="93.98"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="93.98" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<wire x1="96.52" y1="96.52" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="NSLEEP"/>
+<wire x1="106.68" y1="93.98" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="MODE"/>
+<wire x1="104.14" y1="93.98" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="91.44" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
+<junction x="104.14" y="93.98"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<wire x1="96.52" y1="96.52" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -9348,6 +9621,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="U$1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="WM_JDY-10_STANDING" device="" package3d_urn="urn:adsk.eagle:package:8988323/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -9360,6 +9634,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
+<instance part="U$1" gate="G$1" x="132.08" y="106.68" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -9405,6 +9680,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
 <part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_SM03B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9126100/2" value="CONN_SWD"/>
+<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9537,6 +9814,13 @@ to set it to “0”.</text>
 </instance>
 <instance part="GND5" gate="1" x="223.52" y="157.48" smashed="yes">
 <attribute name="VALUE" x="220.98" y="154.94" size="1.778" layer="96"/>
+</instance>
+<instance part="J1" gate="G$1" x="81.28" y="167.64" smashed="yes">
+<attribute name="NAME" x="85.09" y="170.18" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="85.09" y="160.02" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="GND6" gate="1" x="78.74" y="157.48" smashed="yes">
+<attribute name="VALUE" x="76.2" y="154.94" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -9763,6 +10047,12 @@ to set it to “0”.</text>
 <wire x1="228.6" y1="165.1" x2="223.52" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="165.1" x2="223.52" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="3"/>
+<wire x1="83.82" y1="162.56" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="162.56" x2="78.74" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -10135,8 +10425,9 @@ to set it to “0”.</text>
 <label x="76.2" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="68.58" y1="167.64" x2="88.9" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="167.64" x2="83.82" y2="167.64" width="0.1524" layer="91"/>
 <label x="68.58" y="167.64" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SWCLK" class="0">
@@ -10146,8 +10437,9 @@ to set it to “0”.</text>
 <label x="76.2" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="68.58" y1="165.1" x2="88.9" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="165.1" x2="83.82" y2="165.1" width="0.1524" layer="91"/>
 <label x="68.58" y="165.1" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
