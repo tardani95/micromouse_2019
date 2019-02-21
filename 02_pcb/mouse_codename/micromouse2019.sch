@@ -243,28 +243,6 @@
 <wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.2" width="0.1" layer="21"/>
 <wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.3" width="0.1" layer="21" curve="180"/>
 </package>
-<package name="BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9120812/1" library_version="12">
-<description>&lt;b&gt;BM04B-SRSS-TB(LFSN)&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="1.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="2" x="2.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="3" x="3.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="4" x="4.5" y="-0.45" dx="1.55" dy="0.6" layer="1" rot="R90"/>
-<smd name="5" x="0.2" y="2.075" dx="1.8" dy="1.2" layer="1" rot="R90"/>
-<smd name="6" x="5.8" y="2.075" dx="1.8" dy="1.2" layer="1" rot="R90"/>
-<text x="2.689" y="0.686" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="2.689" y="0.686" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="0" y1="2.8" x2="6" y2="2.8" width="0.254" layer="51"/>
-<wire x1="6" y1="2.8" x2="6" y2="-0.1" width="0.254" layer="51"/>
-<wire x1="6" y1="-0.1" x2="0" y2="-0.1" width="0.254" layer="51"/>
-<wire x1="0" y1="-0.1" x2="0" y2="2.8" width="0.254" layer="51"/>
-<wire x1="1.113" y1="2.8" x2="4.901" y2="2.8" width="0.254" layer="21"/>
-<wire x1="0" y1="0" x2="0" y2="0.928" width="0.254" layer="21"/>
-<wire x1="0" y1="-0.1" x2="0.987" y2="-0.1" width="0.254" layer="21"/>
-<wire x1="6" y1="-0.1" x2="6" y2="1.009" width="0.254" layer="21"/>
-<wire x1="6" y1="-0.1" x2="4.955" y2="-0.1" width="0.254" layer="21"/>
-<circle x="0.689" y="-1.219" radius="0.063" width="0.254" layer="25"/>
-</package>
 <package name="DMN2990UDJ-7" urn="urn:adsk.eagle:footprint:9120804/1" library_version="14" library_locally_modified="yes">
 <description>SOT-963</description>
 <smd name="P1" x="-0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
@@ -347,6 +325,57 @@
 <pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
 <pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
 </package>
+<package name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9123905/1" library_version="19">
+<description>&lt;b&gt;BM02B-SRSS-TB(&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-0.5" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="2" x="0.5" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
+<smd name="3" x="-1.8" y="2.525" dx="1.8" dy="1.2" layer="1" rot="R90"/>
+<smd name="4" x="1.8" y="2.525" dx="1.8" dy="1.2" layer="1" rot="R90"/>
+<text x="-0.309" y="1.9" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-0.309" y="1.9" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-2" y1="3.3" x2="2" y2="3.3" width="0.2" layer="51"/>
+<wire x1="2" y1="3.3" x2="2" y2="0.4" width="0.2" layer="51"/>
+<wire x1="2" y1="0.4" x2="-2" y2="0.4" width="0.2" layer="51"/>
+<wire x1="-2" y1="0.4" x2="-2" y2="3.3" width="0.2" layer="51"/>
+<wire x1="-0.85" y1="3.3" x2="0.95" y2="3.3" width="0.2" layer="21"/>
+<wire x1="-2" y1="0.4" x2="-2" y2="1.359" width="0.2" layer="21"/>
+<wire x1="2" y1="0.4" x2="2" y2="1.359" width="0.2" layer="21"/>
+<wire x1="-2" y1="0.4" x2="-1.062" y2="0.4" width="0.2" layer="21"/>
+<wire x1="2" y1="0.4" x2="1.062" y2="0.4" width="0.2" layer="21"/>
+</package>
+<package name="DRV8836" urn="urn:adsk.eagle:footprint:8872087/3" library_version="19">
+<description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
+&lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
+<circle x="-1.524" y="1.927" radius="0.25" width="0" layer="21"/>
+<wire x1="1.05" y1="1.639" x2="0.639" y2="1.639" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-1.639" x2="0.639" y2="-1.639" width="0.12" layer="21"/>
+<wire x1="-1.05" y1="-1.639" x2="-0.639" y2="-1.639" width="0.12" layer="21"/>
+<wire x1="-1.05" y1="1.639" x2="-0.639" y2="1.639" width="0.12" layer="21"/>
+<wire x1="-1.05" y1="-1.55" x2="-1.05" y2="1.55" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="1.55" x2="1.05" y2="1.55" width="0.12" layer="51"/>
+<wire x1="1.05" y1="1.55" x2="1.05" y2="-1.55" width="0.12" layer="51"/>
+<wire x1="1.05" y1="-1.55" x2="-1.05" y2="-1.55" width="0.12" layer="51"/>
+<smd name="14" x="0.25" y="1.4956" dx="0.738" dy="0.27" layer="1" rot="R270"/>
+<smd name="15" x="-0.25" y="1.4956" dx="0.738" dy="0.27" layer="1" rot="R270"/>
+<smd name="1" x="-0.9956" y="1.25" dx="0.738" dy="0.27" layer="1"/>
+<smd name="2" x="-0.9956" y="0.75" dx="0.738" dy="0.27" layer="1"/>
+<smd name="3" x="-0.9956" y="0.25" dx="0.738" dy="0.27" layer="1"/>
+<smd name="4" x="-0.9956" y="-0.25" dx="0.738" dy="0.27" layer="1"/>
+<smd name="5" x="-0.9956" y="-0.75" dx="0.738" dy="0.27" layer="1"/>
+<smd name="6" x="-0.9956" y="-1.25" dx="0.738" dy="0.27" layer="1"/>
+<smd name="16" x="-0.25" y="-1.4956" dx="0.738" dy="0.27" layer="1" rot="R270"/>
+<smd name="17" x="0.25" y="-1.4956" dx="0.738" dy="0.27" layer="1" rot="R270"/>
+<smd name="7" x="0.9956" y="-1.25" dx="0.738" dy="0.27" layer="1"/>
+<smd name="8" x="0.9956" y="-0.75" dx="0.738" dy="0.27" layer="1"/>
+<smd name="9" x="0.9956" y="-0.25" dx="0.738" dy="0.27" layer="1"/>
+<smd name="10" x="0.9956" y="0.25" dx="0.738" dy="0.27" layer="1"/>
+<smd name="11" x="0.9956" y="0.75" dx="0.738" dy="0.27" layer="1"/>
+<smd name="12" x="0.9956" y="1.25" dx="0.738" dy="0.27" layer="1"/>
+<smd name="13" x="0" y="0" dx="1.6" dy="0.7" layer="1" rot="R270" thermals="no"/>
+<text x="0" y="2.5076" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.1266" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/4" type="model" library_version="9" library_locally_modified="yes">
@@ -373,12 +402,6 @@
 <packageinstance name="MPU6050"/>
 </packageinstances>
 </package3d>
-<package3d name="BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9120813/2" type="model" library_version="14" library_locally_modified="yes">
-<description>&lt;b&gt;BM04B-SRSS-TB(LFSN)&lt;/b&gt;&lt;br&gt;</description>
-<packageinstances>
-<packageinstance name="BM04B-SRSS-TB(LFSN)"/>
-</packageinstances>
-</package3d>
 <package3d name="DMN2990UDJ-7" urn="urn:adsk.eagle:package:9120817/1" type="box" library_version="14" library_locally_modified="yes">
 <description>SOT-963</description>
 <packageinstances>
@@ -402,21 +425,34 @@
 <packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
 </packageinstances>
 </package3d>
+<package3d name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9123914/2" type="model" library_version="19">
+<description>&lt;b&gt;BM02B-SRSS-TB(&lt;/b&gt;&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="BM02B-SRSS-TB(LFSN)"/>
+</packageinstances>
+</package3d>
+<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/5" type="model" library_version="19">
+<description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
+&lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="DRV8836"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
-<symbol name="B3U-1000P" urn="urn:adsk.eagle:symbol:8879282/3" library_version="11">
+<symbol name="B3U-1000P" urn="urn:adsk.eagle:symbol:8879282/4" library_version="19">
 <wire x1="2.54" y1="1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
 <wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
-<text x="2.286" y="4.572" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="2.286" y="2.54" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<text x="2.286" y="2.54" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="2.286" y="-2.54" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
 <pin name="1" x="0" y="0" visible="pin" length="short"/>
 <pin name="2" x="12.7" y="0" visible="pin" length="short" rot="R180"/>
 </symbol>
-<symbol name="STM32F405RG_L" urn="urn:adsk.eagle:symbol:9050929/2" library_version="10">
-<text x="1.27" y="111.76" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="1.27" y="109.22" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<symbol name="STM32F405RG_L" urn="urn:adsk.eagle:symbol:9050929/3" library_version="19">
+<text x="-1.27" y="109.22" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
 <pin name="VBAT" x="-5.08" y="91.44" length="middle"/>
 <pin name="PC13" x="43.18" y="22.86" length="middle" rot="R180"/>
 <pin name="PC14" x="43.18" y="20.32" length="middle" rot="R180"/>
@@ -486,23 +522,23 @@
 <wire x1="38.1" y1="0" x2="38.1" y2="106.68" width="0.254" layer="94"/>
 <wire x1="38.1" y1="106.68" x2="0" y2="106.68" width="0.254" layer="94"/>
 </symbol>
-<symbol name="B3U-3000P" urn="urn:adsk.eagle:symbol:8879281/3" library_version="11">
-<wire x1="2.54" y1="1.524" x2="10.16" y2="1.524" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-1.524" x2="10.16" y2="1.524" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-1.524" x2="2.54" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="2.54" y1="1.524" x2="2.54" y2="-1.524" width="0.254" layer="94"/>
-<text x="1.27" y="5.08" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="1.27" y="2.794" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<symbol name="B3U-3000P" urn="urn:adsk.eagle:symbol:8879281/4" library_version="19">
+<wire x1="2.54" y1="1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
+<text x="1.27" y="2.54" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="1.27" y="-2.54" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
 <pin name="1" x="0" y="0" visible="pin" length="short"/>
 <pin name="2" x="12.7" y="0" visible="pin" length="short" rot="R180"/>
 </symbol>
-<symbol name="MPU-6050" urn="urn:adsk.eagle:symbol:8879279/1" library_version="11">
+<symbol name="MPU-6050" urn="urn:adsk.eagle:symbol:8879279/2" library_version="19">
 <wire x1="5.08" y1="2.54" x2="27.94" y2="2.54" width="0.254" layer="94"/>
 <wire x1="27.94" y1="-33.02" x2="27.94" y2="2.54" width="0.254" layer="94"/>
 <wire x1="27.94" y1="-33.02" x2="5.08" y2="-33.02" width="0.254" layer="94"/>
 <wire x1="5.08" y1="2.54" x2="5.08" y2="-33.02" width="0.254" layer="94"/>
-<text x="29.21" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="29.21" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<text x="3.81" y="5.08" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="3.81" y="-35.56" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
 <pin name="CLKIN" x="0" y="0" length="middle"/>
 <pin name="NC_1" x="0" y="-2.54" length="middle"/>
 <pin name="NC_2" x="0" y="-5.08" length="middle"/>
@@ -528,18 +564,6 @@
 <pin name="SCL" x="33.02" y="-22.86" length="middle" rot="R180"/>
 <pin name="SDA" x="33.02" y="-25.4" length="middle" rot="R180"/>
 <pin name="EP" x="33.02" y="-27.94" length="middle" rot="R180"/>
-</symbol>
-<symbol name="BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:symbol:9120805/1" library_version="12">
-<wire x1="5.08" y1="2.54" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-5.08" x2="15.24" y2="2.54" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
-<text x="16.51" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="16.51" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="1" x="0" y="0" length="middle"/>
-<pin name="3" x="0" y="-2.54" length="middle"/>
-<pin name="2" x="20.32" y="0" length="middle" rot="R180"/>
-<pin name="4" x="20.32" y="-2.54" length="middle" rot="R180"/>
 </symbol>
 <symbol name="DMN2990UDJ-7" urn="urn:adsk.eagle:symbol:9120809/1" library_version="14" library_locally_modified="yes">
 <description>MOSFET: DMN2990UDJ-7</description>
@@ -586,19 +610,50 @@
 <text x="-7.62" y="6.35" size="1.778" layer="95">&gt;NAME</text>
 <text x="-7.62" y="-10.16" size="1.778" layer="95">&gt;VALUE</text>
 </symbol>
-<symbol name="B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:symbol:9120806/1" library_version="14" library_locally_modified="yes">
+<symbol name="B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:symbol:9120806/2" library_version="19">
 <wire x1="-2.54" y1="-5.08" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
 <wire x1="2.54" y1="2.54" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <text x="-2.544359375" y="3.30766875" size="1.78105" layer="95">&gt;NAME</text>
 <text x="-2.544590625" y="-7.633759375" size="1.781209375" layer="96">&gt;VALUE</text>
-<pin name="1" x="-7.62" y="0" length="middle" direction="pas"/>
-<pin name="2" x="-7.62" y="-2.54" length="middle" direction="pas"/>
+<pin name="1" x="-5.08" y="0" length="short" direction="pas"/>
+<pin name="2" x="-5.08" y="-2.54" length="short" direction="pas"/>
+</symbol>
+<symbol name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:symbol:9123901/2" library_version="19">
+<wire x1="5.08" y1="1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-3.81" x2="10.16" y2="1.27" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-3.81" x2="5.08" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-3.81" width="0.254" layer="94"/>
+<text x="3.81" y="2.54" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="3.81" y="-5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="2.54" y="0" length="short"/>
+<pin name="2" x="2.54" y="-2.54" length="short"/>
+</symbol>
+<symbol name="DRV8836DSSR" urn="urn:adsk.eagle:symbol:8879280/1" library_version="19">
+<wire x1="5.08" y1="2.54" x2="35.56" y2="2.54" width="0.254" layer="94"/>
+<wire x1="35.56" y1="-20.32" x2="35.56" y2="2.54" width="0.254" layer="94"/>
+<wire x1="35.56" y1="-20.32" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-20.32" width="0.254" layer="94"/>
+<text x="36.83" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="36.83" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="VCC" x="0" y="0" length="middle"/>
+<pin name="AOUT1" x="0" y="-2.54" length="middle"/>
+<pin name="AOUT2" x="0" y="-5.08" length="middle"/>
+<pin name="BOUT1" x="0" y="-7.62" length="middle"/>
+<pin name="BOUT2" x="0" y="-10.16" length="middle"/>
+<pin name="GND" x="0" y="-12.7" length="middle"/>
+<pin name="EP" x="20.32" y="-25.4" length="middle" rot="R90"/>
+<pin name="NSLEEP" x="40.64" y="0" length="middle" rot="R180"/>
+<pin name="MODE" x="40.64" y="-2.54" length="middle" rot="R180"/>
+<pin name="AIN1_/_APHASE" x="40.64" y="-5.08" length="middle" rot="R180"/>
+<pin name="AIN2_/_AENBL" x="40.64" y="-7.62" length="middle" rot="R180"/>
+<pin name="BIN1_/_BPHASE" x="40.64" y="-10.16" length="middle" rot="R180"/>
+<pin name="BIN2_/_BENBL" x="40.64" y="-12.7" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="B3U-1000P" urn="urn:adsk.eagle:component:8879297/5" prefix="S" library_version="11">
+<deviceset name="BTN_B3U-1000P" urn="urn:adsk.eagle:component:8879297/7" prefix="S" library_version="19">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -625,7 +680,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="STM32F405RGT6_L" urn="urn:adsk.eagle:component:9050930/2" prefix="IC" library_version="10">
+<deviceset name="MCU_STM32F405RGT6_L" urn="urn:adsk.eagle:component:9050930/4" prefix="IC" library_version="19">
 <description>&lt;b&gt;MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -714,7 +769,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="B3U-3000P" urn="urn:adsk.eagle:component:8879296/5" prefix="S" library_version="11">
+<deviceset name="BTN_B3U-3000P" urn="urn:adsk.eagle:component:8879296/7" prefix="S" library_version="19">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-3000P - TACTILE SWITCH, SIDE ACTUATED, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -735,7 +790,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="MPU-6050" urn="urn:adsk.eagle:component:8879294/3" prefix="IC" library_version="11">
+<deviceset name="IMU_MPU-6050" urn="urn:adsk.eagle:component:8879294/5" prefix="IC" library_version="19">
 <description>&lt;b&gt;IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-1112286.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -785,37 +840,7 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 </device>
 </devices>
 </deviceset>
-<deviceset name="BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9120818/2" prefix="J" library_version="14" library_locally_modified="yes">
-<description>&lt;b&gt;4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="BM04B-SRSS-TB(LFSN)" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="BM04B-SRSS-TB(LFSN)">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9120813/2"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A" constant="no"/>
-<attribute name="HEIGHT" value="mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="BM04B-SRSS-TB(LFSN)" constant="no"/>
-<attribute name="RS_PART_NUMBER" value="5151541P" constant="no"/>
-<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151541P" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="DMN2990UDJ-7" urn="urn:adsk.eagle:component:9120822/1" prefix="MOSFET" library_version="14" library_locally_modified="yes">
+<deviceset name="FET_DMN2990UDJ-7" urn="urn:adsk.eagle:component:9120822/2" prefix="MOSFET" library_version="19">
 <gates>
 <gate name="G$1" symbol="DMN2990UDJ-7" x="0" y="0"/>
 </gates>
@@ -838,7 +863,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="TPS735" urn="urn:adsk.eagle:component:9120821/1" prefix="LDO" library_version="14" library_locally_modified="yes">
+<deviceset name="PS_TPS735" urn="urn:adsk.eagle:component:9120821/2" prefix="LDO" library_version="19">
 <description>500mA, Low Quiescent Current, Ultra-Low Noise, High PSRR  Low Dropout Linear Regulator</description>
 <gates>
 <gate name="A" symbol="TPS735XXDRV" x="0" y="0"/>
@@ -867,7 +892,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="LDL112" urn="urn:adsk.eagle:component:9120820/2" prefix="LDO" library_version="14" library_locally_modified="yes">
+<deviceset name="PS_LDL112" urn="urn:adsk.eagle:component:9120820/3" prefix="LDO" library_version="19">
 <description>Low-dropout linear regulator from ST.
 
 The LDL112 is a low-dropout linear regulator,
@@ -894,7 +919,7 @@ with a typical dropout voltage of 300 mV.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:component:9120819/2" prefix="J" library_version="14" library_locally_modified="yes">
+<deviceset name="CONN_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:component:9120819/4" prefix="J" library_version="19">
 <description>PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header</description>
 <gates>
 <gate name="G$1" symbol="B2B-PH-K-S(LF)(SN)" x="0" y="0"/>
@@ -916,6 +941,73 @@ with a typical dropout voltage of 300 mV.</description>
 <attribute name="MP" value="B2B-PH-K-S_LF__SN_"/>
 <attribute name="PACKAGE" value="None"/>
 <attribute name="PRICE" value="None"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CONN_BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9123920/3" prefix="J" library_version="19">
+<description>&lt;b&gt;2 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 2 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="BM02B-SRSS-TB(LFSN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BM02B-SRSS-TB(LFSN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9123914/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="ALLIED_NUMBER" value="R1044255" constant="no"/>
+<attribute name="DESCRIPTION" value="2 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 2 Way 1 Row Straight PCB Header, Solder Termination, 1A" constant="no"/>
+<attribute name="HEIGHT" value="mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="JST (JAPAN SOLDERLESS TERMINALS)" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="BM02B-SRSS-TB(LFSN)" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="5151529P" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="https://www.alliedelec.com/jst-manufacturing-bm02b-srss-tb-lfsn-/R1044255/" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MOT_DRV8836" urn="urn:adsk.eagle:component:8879295/5" prefix="IC" library_version="19">
+<description>&lt;b&gt;1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="DRV8836DSSR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1" package="DRV8836">
+<connects>
+<connect gate="G$1" pin="AIN1_/_APHASE" pad="10"/>
+<connect gate="G$1" pin="AIN2_/_AENBL" pad="9"/>
+<connect gate="G$1" pin="AOUT1" pad="2"/>
+<connect gate="G$1" pin="AOUT2" pad="3"/>
+<connect gate="G$1" pin="BIN1_/_BPHASE" pad="8"/>
+<connect gate="G$1" pin="BIN2_/_BENBL" pad="7"/>
+<connect gate="G$1" pin="BOUT1" pad="4"/>
+<connect gate="G$1" pin="BOUT2" pad="5"/>
+<connect gate="G$1" pin="EP" pad="13 14 15 16 17"/>
+<connect gate="G$1" pin="GND" pad="6"/>
+<connect gate="G$1" pin="MODE" pad="11"/>
+<connect gate="G$1" pin="NSLEEP" pad="12"/>
+<connect gate="G$1" pin="VCC" pad="1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8872076/5"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)" constant="no"/>
+<attribute name="HEIGHT" value="0.8mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="DRV8836DSSR" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="595-DRV8836DSSR" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8758,10 +8850,10 @@ DIN A4, landscape with extra doc field</description>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B2B-PH-K-S(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:9120814/2"/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_B2B-PH-K-S(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:9120814/2"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="LDO2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/2"/>
-<part name="LDO1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="TPS735" device="DRVT" package3d_urn="urn:adsk.eagle:package:9120816/1" technology="33"/>
+<part name="LDO2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="PS_LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/2"/>
+<part name="LDO1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="PS_TPS735" device="DRVT" package3d_urn="urn:adsk.eagle:package:9120816/1" technology="33"/>
 </parts>
 <sheets>
 <sheet>
@@ -8939,7 +9031,7 @@ page 16</text>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="35.56" y1="147.32" x2="40.64" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="147.32" x2="40.64" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="147.32" x2="40.64" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
 </segment>
@@ -8972,7 +9064,7 @@ page 16</text>
 <wire x1="81.28" y1="144.78" x2="81.28" y2="149.86" width="0.1524" layer="91"/>
 <junction x="81.28" y="149.86"/>
 <pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="149.86" x2="50.8" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="149.86" x2="50.8" y2="149.86" width="0.1524" layer="91"/>
 <junction x="60.96" y="149.86"/>
 <wire x1="50.8" y1="149.86" x2="60.96" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="96.52" x2="50.8" y2="96.52" width="0.1524" layer="91"/>
@@ -8995,7 +9087,7 @@ page 16</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
-<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MPU-6050" device="" package3d_urn="urn:adsk.eagle:package:8879287/4"/>
+<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="IMU_MPU-6050" device="" package3d_urn="urn:adsk.eagle:package:8879287/4"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="2.2n"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9187,6 +9279,9 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2"/>
+<part name="J2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2"/>
+<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MOT_DRV8836" device="1" package3d_urn="urn:adsk.eagle:package:8872076/5"/>
 </parts>
 <sheets>
 <sheet>
@@ -9198,6 +9293,18 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="LAST_DATE_TIME" x="175.26" y="1.27" size="2.54" layer="94"/>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
+</instance>
+<instance part="J1" gate="G$1" x="93.98" y="111.76" smashed="yes">
+<attribute name="NAME" x="97.79" y="114.3" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="97.79" y="106.68" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="J2" gate="G$1" x="134.62" y="111.76" smashed="yes">
+<attribute name="NAME" x="138.43" y="114.3" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="138.43" y="106.68" size="1.778" layer="96" align="center-left"/>
+</instance>
+<instance part="IC1" gate="G$1" x="104.14" y="93.98" smashed="yes">
+<attribute name="NAME" x="140.97" y="101.6" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="140.97" y="99.06" size="1.778" layer="96" align="center-left"/>
 </instance>
 </instances>
 <busses>
@@ -9274,17 +9381,17 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="4.7u"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="1u"/>
-<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="STM32F405RGT6_L" device="" package3d_urn="urn:adsk.eagle:package:8879286/4"/>
+<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MCU_STM32F405RGT6_L" device="" package3d_urn="urn:adsk.eagle:package:8879286/4"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="S4" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/4"/>
-<part name="S1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/4"/>
-<part name="S2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
-<part name="S3" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
+<part name="S4" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/4"/>
+<part name="S1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/4"/>
+<part name="S2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
+<part name="S3" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -10054,10 +10161,8 @@ to set it to “0”.</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
-<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BM04B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9120813/2"/>
-<part name="J2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BM04B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9120813/2"/>
-<part name="MOSFET1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
-<part name="MOSFET2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
+<part name="MOSFET1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
+<part name="MOSFET2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
 <part name="IR_LED1" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -10097,14 +10202,6 @@ to set it to “0”.</text>
 <attribute name="LAST_DATE_TIME" x="175.26" y="1.27" size="2.54" layer="94"/>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
-</instance>
-<instance part="J1" gate="G$1" x="20.32" y="17.78" smashed="yes">
-<attribute name="NAME" x="36.83" y="25.4" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="36.83" y="22.86" size="1.778" layer="96" align="center-left"/>
-</instance>
-<instance part="J2" gate="G$1" x="20.32" y="30.48" smashed="yes">
-<attribute name="NAME" x="36.83" y="38.1" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="36.83" y="35.56" size="1.778" layer="96" align="center-left"/>
 </instance>
 <instance part="MOSFET1" gate="G$1" x="76.2" y="127" smashed="yes">
 <attribute name="NAME" x="60.96" y="135.382" size="1.27" layer="95"/>
