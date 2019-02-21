@@ -23,7 +23,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -446,6 +446,21 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
 <pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
 </package>
+<package name="DMN2990UDJ-7">
+<description>SOT-963</description>
+<smd name="P1" x="-0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P2" x="-0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P3" x="-0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P4" x="0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P5" x="0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P6" x="0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<wire x1="-0.65" y1="0.55" x2="0.65" y2="0.55" width="0.127" layer="21"/>
+<wire x1="0.65" y1="0.55" x2="0.65" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="0.65" y1="-0.55" x2="-0.65" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-0.65" y1="-0.55" x2="-0.65" y2="0.55" width="0.127" layer="21"/>
+<text x="-0.65" y="0.661665625" size="0.254" layer="25">&gt;NAME</text>
+<text x="-0.65" y="-0.881665625" size="0.254" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="ESP12E-R_SIDE" urn="urn:adsk.eagle:package:8893872/1" type="box">
@@ -766,6 +781,21 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <text x="-2.544590625" y="-7.633759375" size="1.781209375" layer="96">&gt;VALUE</text>
 <pin name="1" x="-7.62" y="0" length="middle" direction="pas"/>
 <pin name="2" x="-7.62" y="-2.54" length="middle" direction="pas"/>
+</symbol>
+<symbol name="DMN2990UDJ-7">
+<description>MOSFET: DMN2990UDJ-7</description>
+<pin name="DRAIN_1" x="-20.32" y="5.08" length="middle" direction="pas"/>
+<wire x1="-15.24" y1="7.62" x2="-15.24" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-7.62" x2="15.24" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-7.62" x2="15.24" y2="7.62" width="0.254" layer="94"/>
+<wire x1="15.24" y1="7.62" x2="-15.24" y2="7.62" width="0.254" layer="94"/>
+<pin name="GATE_1" x="-20.32" y="0" length="middle" direction="in"/>
+<pin name="SOURCE_1" x="-20.32" y="-5.08" length="middle" direction="pas"/>
+<pin name="DRAIN_2" x="20.32" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="GATE_2" x="20.32" y="0" length="middle" direction="in" rot="R180"/>
+<pin name="SOURCE_2" x="20.32" y="-5.08" length="middle" direction="pas" rot="R180"/>
+<text x="-15.24" y="8.382" size="1.27" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-9.652" size="1.27" layer="95">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1142,6 +1172,26 @@ with a typical dropout voltage of 300 mV.</description>
 <attribute name="PACKAGE" value="None"/>
 <attribute name="PRICE" value="None"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DMN2990UDJ-7" prefix="MOSFET">
+<gates>
+<gate name="G$1" symbol="DMN2990UDJ-7" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DMN2990UDJ-7">
+<connects>
+<connect gate="G$1" pin="DRAIN_1" pad="P6"/>
+<connect gate="G$1" pin="DRAIN_2" pad="P3"/>
+<connect gate="G$1" pin="GATE_1" pad="P2"/>
+<connect gate="G$1" pin="GATE_2" pad="P5"/>
+<connect gate="G$1" pin="SOURCE_1" pad="P1"/>
+<connect gate="G$1" pin="SOURCE_2" pad="P4"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
