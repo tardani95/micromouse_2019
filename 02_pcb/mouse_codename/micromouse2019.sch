@@ -8727,6 +8727,73 @@ DIN A4, landscape with extra doc field</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="parts_not_managed">
+<packages>
+<package name="ENC_PORT_MODULE">
+<description>Encoder side of the connection of mouse and encoder</description>
+<smd name="P1" x="-1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
+</package>
+<package name="ENC_PORT_BASE">
+<description>Mouse side of the connection of mouse and encoder</description>
+<smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
+<text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="ENC_PORT">
+<description>Symbol for connection pins between ENC_PCB and MOUSE_PCB</description>
+<pin name="+3V3" x="-7.62" y="3.81" visible="pin" length="short" direction="pwr"/>
+<pin name="A" x="-7.62" y="1.27" visible="pin" length="short" direction="out"/>
+<pin name="B" x="-7.62" y="-1.27" visible="pin" length="short" direction="out"/>
+<pin name="GND" x="-7.62" y="-3.81" visible="pin" length="short" direction="pas"/>
+<wire x1="-5.08" y1="6.35" x2="-5.08" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-6.35" x2="5.08" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-6.35" x2="5.08" y2="6.35" width="0.254" layer="94"/>
+<wire x1="5.08" y1="6.35" x2="-5.08" y2="6.35" width="0.254" layer="94"/>
+<text x="-5.08" y="6.858" size="1.27" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-8.128" size="1.27" layer="95">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ENC_PORT" prefix="PORT">
+<description>Connection pins between ENC_PCB and MOUSE_PCB</description>
+<gates>
+<gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_MODULE" package="ENC_PORT_MODULE">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="P3"/>
+<connect gate="G$1" pin="A" pad="P2"/>
+<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="GND" pad="P4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_BASE" package="ENC_PORT_BASE">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="P3"/>
+<connect gate="G$1" pin="A" pad="P2"/>
+<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="GND" pad="P4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9209,11 +9276,13 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </module>
 <module name="ENCODER_PORT" prefix="ENC_PORT" dx="38.1" dy="20.32">
 <ports>
+<port name="ENCODER_DATA" side="right" coord="-5.08" direction="out"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="PORT1" library="parts_not_managed" deviceset="ENC_PORT" device="_BASE"/>
 </parts>
 <sheets>
 <sheet>
@@ -9225,6 +9294,10 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="LAST_DATE_TIME" x="175.26" y="1.27" size="2.54" layer="94"/>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
+</instance>
+<instance part="PORT1" gate="G$1" x="127" y="104.14" smashed="yes">
+<attribute name="NAME" x="121.92" y="110.998" size="1.27" layer="95"/>
+<attribute name="VALUE" x="121.92" y="96.012" size="1.27" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -9440,22 +9513,21 @@ to set it to “0”.</text>
 <wire x1="254" y1="134.62" x2="254" y2="129.54" width="0.762" layer="92"/>
 </segment>
 </bus>
-<bus name="ENCODERS:ENC1_CHA,ENC1_CHB,ENC2_CHA,ENC2_CHB">
+<bus name="ENCODER_LEFT:ENC_LEFT_CHA,ENC_LEFT_CHB">
 <segment>
-<wire x1="254" y1="124.46" x2="254" y2="114.3" width="0.762" layer="92"/>
-<label x="256.54" y="109.22" size="1.778" layer="95" rot="R90"/>
-<wire x1="254" y1="114.3" x2="254" y2="109.22" width="0.762" layer="92"/>
+<wire x1="254" y1="124.46" x2="254" y2="111.76" width="0.762" layer="92"/>
+<label x="256.54" y="106.68" size="1.778" layer="95" rot="R90"/>
 </segment>
 </bus>
 <bus name="MOTOR_DRIVER:DRV_A_ENBL,DRV_A_PHASE,DRV_B_ENBL,DRV_B_PHASE">
 <segment>
-<wire x1="254" y1="101.6" x2="254" y2="86.36" width="0.762" layer="92"/>
-<label x="256.54" y="86.36" size="1.778" layer="95" rot="R90"/>
+<wire x1="254" y1="99.06" x2="254" y2="83.82" width="0.762" layer="92"/>
+<label x="256.54" y="83.82" size="1.778" layer="95" rot="R90"/>
 </segment>
 </bus>
 <bus name="MPU6050:IMU1_SCL,IMU1_SDA,IMU2_SCL,IMU2_SDA">
 <segment>
-<wire x1="254" y1="81.28" x2="254" y2="63.5" width="0.762" layer="92"/>
+<wire x1="254" y1="78.74" x2="254" y2="63.5" width="0.762" layer="92"/>
 <label x="256.54" y="63.5" size="1.778" layer="95" rot="R90"/>
 </segment>
 </bus>
@@ -9469,6 +9541,12 @@ to set it to “0”.</text>
 <segment>
 <wire x1="254" y1="170.18" x2="254" y2="157.48" width="0.762" layer="92"/>
 <label x="256.54" y="157.48" size="1.778" layer="95" rot="R90"/>
+</segment>
+</bus>
+<bus name="ENCODER_RIGHT:ENC_RIGHT_CHA,ENC_RIGHT_CHB">
+<segment>
+<wire x1="223.52" y1="124.46" x2="223.52" y2="111.76" width="0.762" layer="92"/>
+<label x="226.06" y="106.68" size="1.778" layer="95" rot="R90"/>
 </segment>
 </bus>
 </busses>
@@ -9714,8 +9792,8 @@ to set it to “0”.</text>
 <net name="PTR1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA0_WKUP"/>
-<wire x1="93.98" y1="71.12" x2="76.2" y2="71.12" width="0.1524" layer="91"/>
-<label x="76.2" y="71.12" size="1.778" layer="95"/>
+<wire x1="93.98" y1="71.12" x2="73.66" y2="71.12" width="0.1524" layer="91"/>
+<label x="73.66" y="71.12" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="254" y1="139.7" x2="251.46" y2="142.24" width="0.1524" layer="91"/>
@@ -9726,8 +9804,8 @@ to set it to “0”.</text>
 <net name="PTR2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA1"/>
-<wire x1="93.98" y1="68.58" x2="76.2" y2="68.58" width="0.1524" layer="91"/>
-<label x="76.2" y="68.58" size="1.778" layer="95"/>
+<wire x1="93.98" y1="68.58" x2="73.66" y2="68.58" width="0.1524" layer="91"/>
+<label x="73.66" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="254" y1="137.16" x2="251.46" y2="139.7" width="0.1524" layer="91"/>
@@ -9738,8 +9816,8 @@ to set it to “0”.</text>
 <net name="IRD1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA2"/>
-<wire x1="93.98" y1="66.04" x2="76.2" y2="66.04" width="0.1524" layer="91"/>
-<label x="76.2" y="66.04" size="1.778" layer="95"/>
+<wire x1="93.98" y1="66.04" x2="73.66" y2="66.04" width="0.1524" layer="91"/>
+<label x="73.66" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="254" y1="149.86" x2="251.46" y2="152.4" width="0.1524" layer="91"/>
@@ -9750,8 +9828,8 @@ to set it to “0”.</text>
 <net name="IRD2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA3"/>
-<wire x1="93.98" y1="63.5" x2="76.2" y2="63.5" width="0.1524" layer="91"/>
-<label x="76.2" y="63.5" size="1.778" layer="95"/>
+<wire x1="93.98" y1="63.5" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
+<label x="73.66" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="254" y1="147.32" x2="251.46" y2="149.86" width="0.1524" layer="91"/>
@@ -9759,11 +9837,11 @@ to set it to “0”.</text>
 <label x="231.14" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ENC1_CHA" class="0">
+<net name="ENC_LEFT_CHA" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA8"/>
-<wire x1="93.98" y1="50.8" x2="76.2" y2="50.8" width="0.1524" layer="91"/>
-<label x="76.2" y="50.8" size="1.778" layer="95"/>
+<wire x1="93.98" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
+<label x="73.66" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="254" y1="119.38" x2="251.46" y2="121.92" width="0.1524" layer="91"/>
@@ -9771,11 +9849,11 @@ to set it to “0”.</text>
 <label x="231.14" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ENC1_CHB" class="0">
+<net name="ENC_LEFT_CHB" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA9"/>
-<wire x1="93.98" y1="48.26" x2="76.2" y2="48.26" width="0.1524" layer="91"/>
-<label x="76.2" y="48.26" size="1.778" layer="95"/>
+<wire x1="93.98" y1="48.26" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
+<label x="73.66" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="254" y1="116.84" x2="251.46" y2="119.38" width="0.1524" layer="91"/>
@@ -9872,9 +9950,9 @@ to set it to “0”.</text>
 <label x="144.78" y="71.12" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="254" y1="96.52" x2="251.46" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="99.06" x2="251.46" y2="99.06" width="0.1524" layer="91"/>
-<label x="231.14" y="99.06" size="1.778" layer="95"/>
+<wire x1="254" y1="93.98" x2="251.46" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="96.52" x2="251.46" y2="96.52" width="0.1524" layer="91"/>
+<label x="231.14" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DRV_B_PHASE" class="0">
@@ -9884,9 +9962,9 @@ to set it to “0”.</text>
 <label x="144.78" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="254" y1="88.9" x2="251.46" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="91.44" x2="251.46" y2="91.44" width="0.1524" layer="91"/>
-<label x="231.14" y="91.44" size="1.778" layer="95"/>
+<wire x1="254" y1="86.36" x2="251.46" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="88.9" x2="251.46" y2="88.9" width="0.1524" layer="91"/>
+<label x="231.14" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DRV_B_ENBL" class="0">
@@ -9896,9 +9974,9 @@ to set it to “0”.</text>
 <label x="144.78" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="254" y1="91.44" x2="251.46" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="93.98" x2="251.46" y2="93.98" width="0.1524" layer="91"/>
-<label x="231.14" y="93.98" size="1.778" layer="95"/>
+<wire x1="254" y1="88.9" x2="251.46" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="91.44" x2="251.46" y2="91.44" width="0.1524" layer="91"/>
+<label x="231.14" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="UART3_TX" class="0">
@@ -9949,28 +10027,28 @@ to set it to “0”.</text>
 <label x="231.14" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ENC2_CHA" class="0">
+<net name="ENC_RIGHT_CHA" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PB6"/>
 <wire x1="142.24" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
 <label x="144.78" y="116.84" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="254" y1="114.3" x2="251.46" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="116.84" x2="251.46" y2="116.84" width="0.1524" layer="91"/>
-<label x="231.14" y="116.84" size="1.778" layer="95"/>
+<wire x1="195.58" y1="121.92" x2="220.98" y2="121.92" width="0.1524" layer="91"/>
+<label x="198.12" y="121.92" size="1.778" layer="95"/>
+<wire x1="220.98" y1="121.92" x2="223.52" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="ENC2_CHB" class="0">
+<net name="ENC_RIGHT_CHB" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PB7"/>
 <wire x1="142.24" y1="114.3" x2="157.48" y2="114.3" width="0.1524" layer="91"/>
 <label x="144.78" y="114.3" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="254" y1="111.76" x2="251.46" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="114.3" x2="251.46" y2="114.3" width="0.1524" layer="91"/>
-<label x="231.14" y="114.3" size="1.778" layer="95"/>
+<wire x1="195.58" y1="119.38" x2="220.98" y2="119.38" width="0.1524" layer="91"/>
+<label x="198.12" y="119.38" size="1.778" layer="95"/>
+<wire x1="220.98" y1="119.38" x2="223.52" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IMU1_SCL" class="0">
@@ -10004,16 +10082,16 @@ to set it to “0”.</text>
 <label x="144.78" y="93.98" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="254" y1="93.98" x2="251.46" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="96.52" x2="251.46" y2="96.52" width="0.1524" layer="91"/>
-<label x="231.14" y="96.52" size="1.778" layer="95"/>
+<wire x1="254" y1="91.44" x2="251.46" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="93.98" x2="251.46" y2="93.98" width="0.1524" layer="91"/>
+<label x="231.14" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="V_BAT_LEVEL" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA4"/>
-<wire x1="93.98" y1="60.96" x2="76.2" y2="60.96" width="0.1524" layer="91"/>
-<label x="76.2" y="60.96" size="1.778" layer="95"/>
+<wire x1="93.98" y1="60.96" x2="73.66" y2="60.96" width="0.1524" layer="91"/>
+<label x="73.66" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="254" y1="160.02" x2="251.46" y2="162.56" width="0.1524" layer="91"/>
@@ -10024,8 +10102,8 @@ to set it to “0”.</text>
 <net name="SWDIO" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA13"/>
-<wire x1="93.98" y1="38.1" x2="76.2" y2="38.1" width="0.1524" layer="91"/>
-<label x="76.2" y="38.1" size="1.778" layer="95"/>
+<wire x1="93.98" y1="38.1" x2="73.66" y2="38.1" width="0.1524" layer="91"/>
+<label x="73.66" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="68.58" y1="167.64" x2="88.9" y2="167.64" width="0.1524" layer="91"/>
@@ -10035,8 +10113,8 @@ to set it to “0”.</text>
 <net name="SWCLK" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PA14"/>
-<wire x1="93.98" y1="35.56" x2="76.2" y2="35.56" width="0.1524" layer="91"/>
-<label x="76.2" y="35.56" size="1.778" layer="95"/>
+<wire x1="93.98" y1="35.56" x2="73.66" y2="35.56" width="0.1524" layer="91"/>
+<label x="73.66" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="68.58" y1="165.1" x2="88.9" y2="165.1" width="0.1524" layer="91"/>
@@ -10494,8 +10572,8 @@ to set it to “0”.</text>
 <moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="50.8" y="66.04">
 <attribute name="NAME" x="50.8" y="66.04" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="93.98">
-<attribute name="NAME" x="129.54" y="93.98" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="86.36">
+<attribute name="NAME" x="129.54" y="86.36" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="IR_PTR" module="IR_LED_DRIVER_DUAL" x="50.8" y="134.62">
 <attribute name="NAME" value="IR_PTR" x="50.8" y="134.62" size="2.032" layer="95" align="bottom-center"/>
