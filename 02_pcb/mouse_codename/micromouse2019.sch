@@ -498,13 +498,14 @@
 <wire x1="-2.5" y1="-0.325" x2="-2.5" y2="-2.673" width="0.2" layer="21"/>
 <wire x1="-2.5" y1="-0.325" x2="-1.61566875" y2="-0.325" width="0.2" layer="21"/>
 </package>
-<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/1" library_version="25">
+<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/2" library_version="26">
 <description>Mouse side of the connection of mouse and encoder</description>
 <smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
 <text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+<wire x1="1.016" y1="-2.54" x2="1.016" y2="2.54" width="0.127" layer="51"/>
 </package>
 <package name="ENC_PORT_MODULE" urn="urn:adsk.eagle:footprint:9139941/1" library_version="25">
 <description>Encoder side of the connection of mouse and encoder</description>
@@ -587,7 +588,7 @@
 <packageinstance name="SM03B-SRSS-TB(LFSN)"/>
 </packageinstances>
 </package3d>
-<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/4" type="model" library_version="25">
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/5" type="model" library_version="26">
 <description>Mouse side of the connection of mouse and encoder</description>
 <packageinstances>
 <packageinstance name="ENC_PORT_BASE"/>
@@ -1270,7 +1271,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="ENC_PORT" urn="urn:adsk.eagle:component:9139946/4" prefix="PORT" library_version="25">
+<deviceset name="ENC_PORT" urn="urn:adsk.eagle:component:9139946/5" prefix="PORT" library_version="26">
 <description>Connection pins between ENC_PCB and MOUSE_PCB</description>
 <gates>
 <gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
@@ -1298,7 +1299,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datashe
 <connect gate="G$1" pin="GND" pad="P4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/4"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/5"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -9800,7 +9801,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="ENCODER_PORT"/>
-<part name="PORT1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="ENC_PORT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9139943/4"/>
+<part name="PORT1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="ENC_PORT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9139943/5"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>

@@ -3,7 +3,7 @@
 <eagle version="9.3.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
@@ -155,7 +155,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-21T16:09:52Z" lastsyncedchangeguid="0af3cb23-451f-cdb0-0227-a82346ae2ccc"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-22T16:16:36Z" lastsyncedchangeguid="5651a4a5-53d1-7702-88cf-9100bc4998ad"/>
 <plain>
 <rectangle x1="6.858" y1="11.303" x2="13.589" y2="27.813" layer="39"/>
 <rectangle x1="6.858" y1="6.858" x2="13.589" y2="11.176" layer="35"/>
@@ -183,19 +183,26 @@ Trace to V-cut line ≥0.4mm</text>
 <wire x1="111.76" y1="-8.89" x2="111.76" y2="-68.58" width="0.1524" layer="51"/>
 <wire x1="111.76" y1="-68.58" x2="5.08" y2="-68.58" width="0.1524" layer="51"/>
 <wire x1="5.08" y1="-68.58" x2="5.08" y2="-8.89" width="0.1524" layer="51"/>
-<hole x="4" y="39.5" drill="2.5"/>
+<circle x="41.021" y="39.497" radius="4.2" width="0.1" layer="43"/>
+<circle x="33.02" y="45.974" radius="4.2" width="0.1" layer="43"/>
+<circle x="12.065" y="45.974" radius="4.2" width="0.1" layer="43"/>
+<circle x="4.064" y="39.497" radius="4.2" width="0.1" layer="43"/>
 <hole x="12" y="46" drill="2.5"/>
-<hole x="33" y="46" drill="2.5"/>
 <hole x="41" y="39.5" drill="2.5"/>
-<wire x1="45" y1="30" x2="45" y2="36.8579" width="0.254" layer="20"/>
-<wire x1="45" y1="36.8579" x2="42.0711" y2="43.9289" width="0.254" layer="20" curve="45"/>
-<wire x1="42.0711" y1="43.9289" x2="38.3431" y2="47.6569" width="0.254" layer="20"/>
-<wire x1="38.3431" y1="47.6569" x2="32.6863" y2="50" width="0.254" layer="20" curve="45"/>
-<wire x1="32.6863" y1="50" x2="12.3137" y2="50" width="0.254" layer="20"/>
-<wire x1="12.3137" y1="50" x2="6.6569" y2="47.6569" width="0.254" layer="20" curve="45"/>
-<wire x1="6.6569" y1="47.6569" x2="2.9289" y2="43.9289" width="0.254" layer="20"/>
-<wire x1="2.9289" y1="43.9289" x2="0" y2="36.8579" width="0.254" layer="20" curve="45"/>
-<wire x1="0" y1="36.8579" x2="0" y2="30" width="0.254" layer="20"/>
+<hole x="33" y="46" drill="2.5"/>
+<hole x="4" y="39.5" drill="2.5"/>
+<wire x1="32" y1="27.75" x2="38" y2="27.75" width="0.254" layer="20"/>
+<wire x1="38" y1="27.75" x2="38" y2="30" width="0.254" layer="20"/>
+<wire x1="38" y1="30" x2="45" y2="30" width="0.254" layer="20"/>
+<wire x1="45" y1="30" x2="45" y2="36.858" width="0.254" layer="20"/>
+<wire x1="45" y1="36.858" x2="42.071" y2="43.929" width="0.254" layer="20" curve="45"/>
+<wire x1="42.071" y1="43.929" x2="38.343" y2="47.657" width="0.254" layer="20"/>
+<wire x1="38.343" y1="47.657" x2="32.686" y2="50" width="0.254" layer="20" curve="45"/>
+<wire x1="32.686" y1="50" x2="12.314" y2="50" width="0.254" layer="20"/>
+<wire x1="12.314" y1="50" x2="6.657" y2="47.657" width="0.254" layer="20" curve="45"/>
+<wire x1="6.657" y1="47.657" x2="2.929" y2="43.929" width="0.254" layer="20"/>
+<wire x1="2.929" y1="43.929" x2="0" y2="36.858" width="0.254" layer="20" curve="45"/>
+<wire x1="0" y1="36.858" x2="0" y2="30" width="0.254" layer="20"/>
 <wire x1="0" y1="30" x2="7" y2="30" width="0.254" layer="20"/>
 <wire x1="7" y1="30" x2="7" y2="27.75" width="0.254" layer="20"/>
 <wire x1="7" y1="27.75" x2="13" y2="27.75" width="0.254" layer="20"/>
@@ -207,15 +214,15 @@ Trace to V-cut line ≥0.4mm</text>
 <wire x1="13" y1="11.25" x2="7" y2="11.25" width="0.254" layer="20"/>
 <wire x1="7" y1="11.25" x2="7" y2="7" width="0.254" layer="20"/>
 <wire x1="7" y1="7" x2="0" y2="7" width="0.254" layer="20"/>
-<wire x1="0" y1="7" x2="0" y2="3.8284" width="0.254" layer="20"/>
-<wire x1="0" y1="3.8284" x2="0.5858" y2="2.4142" width="0.254" layer="20" curve="45"/>
-<wire x1="0.5858" y1="2.4142" x2="2.4142" y2="0.5858" width="0.254" layer="20"/>
-<wire x1="2.4142" y1="0.5858" x2="3.8284" y2="0" width="0.254" layer="20" curve="45"/>
-<wire x1="3.8284" y1="0" x2="41.1716" y2="0" width="0.254" layer="20"/>
-<wire x1="41.1716" y1="0" x2="42.5858" y2="0.5858" width="0.254" layer="20" curve="45"/>
-<wire x1="42.5858" y1="0.5858" x2="44.4142" y2="2.4142" width="0.254" layer="20"/>
-<wire x1="44.4142" y1="2.4142" x2="45" y2="3.8284" width="0.254" layer="20" curve="45"/>
-<wire x1="45" y1="3.8284" x2="45" y2="7" width="0.254" layer="20"/>
+<wire x1="0" y1="7" x2="0" y2="3.828" width="0.254" layer="20"/>
+<wire x1="0" y1="3.828" x2="0.586" y2="2.414" width="0.254" layer="20" curve="45"/>
+<wire x1="0.586" y1="2.414" x2="2.414" y2="0.586" width="0.254" layer="20"/>
+<wire x1="2.414" y1="0.586" x2="3.828" y2="0" width="0.254" layer="20" curve="45"/>
+<wire x1="3.828" y1="0" x2="41.172" y2="0" width="0.254" layer="20"/>
+<wire x1="41.172" y1="0" x2="42.586" y2="0.586" width="0.254" layer="20" curve="45"/>
+<wire x1="42.586" y1="0.586" x2="44.414" y2="2.414" width="0.254" layer="20"/>
+<wire x1="44.414" y1="2.414" x2="45" y2="3.828" width="0.254" layer="20" curve="45"/>
+<wire x1="45" y1="3.828" x2="45" y2="7" width="0.254" layer="20"/>
 <wire x1="45" y1="7" x2="38" y2="7" width="0.254" layer="20"/>
 <wire x1="38" y1="7" x2="38" y2="11.25" width="0.254" layer="20"/>
 <wire x1="38" y1="11.25" x2="32" y2="11.25" width="0.254" layer="20"/>
@@ -224,13 +231,6 @@ Trace to V-cut line ≥0.4mm</text>
 <wire x1="38" y1="13.25" x2="38" y2="25.75" width="0.254" layer="20"/>
 <wire x1="38" y1="25.75" x2="32" y2="25.75" width="0.254" layer="20"/>
 <wire x1="32" y1="25.75" x2="32" y2="27.75" width="0.254" layer="20" curve="-180"/>
-<wire x1="32" y1="27.75" x2="38" y2="27.75" width="0.254" layer="20"/>
-<wire x1="38" y1="27.75" x2="38" y2="30" width="0.254" layer="20"/>
-<wire x1="38" y1="30" x2="45" y2="30" width="0.254" layer="20"/>
-<circle x="41.021" y="39.497" radius="4.2" width="0.1" layer="43"/>
-<circle x="33.02" y="45.974" radius="4.2" width="0.1" layer="43"/>
-<circle x="12.065" y="45.974" radius="4.2" width="0.1" layer="43"/>
-<circle x="4.064" y="39.497" radius="4.2" width="0.1" layer="43"/>
 </plain>
 <libraries>
 <library name="parts" urn="urn:adsk.eagle:library:8879268">
@@ -575,13 +575,14 @@ Trace to V-cut line ≥0.4mm</text>
 <wire x1="-2.5" y1="-0.325" x2="-2.5" y2="-2.673" width="0.2" layer="21"/>
 <wire x1="-2.5" y1="-0.325" x2="-1.61566875" y2="-0.325" width="0.2" layer="21"/>
 </package>
-<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/1" library_version="25">
+<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/2" library_version="26">
 <description>Mouse side of the connection of mouse and encoder</description>
 <smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
 <text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+<wire x1="1.016" y1="-2.54" x2="1.016" y2="2.54" width="0.127" layer="51"/>
 </package>
 </packages>
 <packages3d>
@@ -656,7 +657,7 @@ Trace to V-cut line ≥0.4mm</text>
 <packageinstance name="SM03B-SRSS-TB(LFSN)"/>
 </packageinstances>
 </package3d>
-<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/4" type="model" library_version="25">
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/5" type="model" library_version="26">
 <description>Mouse side of the connection of mouse and encoder</description>
 <packageinstances>
 <packageinstance name="ENC_PORT_BASE"/>
@@ -2302,11 +2303,11 @@ design rules under a new name.</description>
 <attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151507P" x="39.751" y="33.274" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="39.751" y="33.274" size="1.27" layer="27" rot="R90" align="center"/>
 </element>
-<element name="ENC_PORT_LEFT:PORT1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="ENC_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9139943/4" value="ENC_PORT_BASE" x="24.13" y="8.89" smashed="yes" rot="R180">
-<attribute name="VALUE" x="25.33" y="11.371665625" size="0.7" layer="27" rot="R270"/>
+<element name="ENC_PORT_LEFT:PORT1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="ENC_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9139943/5" value="ENC_PORT_BASE" x="26.06" y="9.89" smashed="yes" rot="R180">
+<attribute name="VALUE" x="27.26" y="12.371665625" size="0.7" layer="27" rot="R270"/>
 </element>
-<element name="ENC_PORT_RIGHT:PORT1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="ENC_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9139943/4" value="ENC_PORT_BASE" x="19.05" y="8.89" smashed="yes">
-<attribute name="VALUE" x="17.85" y="6.408334375" size="0.7" layer="27" rot="R90"/>
+<element name="ENC_PORT_RIGHT:PORT1" library="parts" library_urn="urn:adsk.eagle:library:8879268" package="ENC_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9139943/5" value="ENC_PORT_BASE" x="18.94" y="9.89" smashed="yes">
+<attribute name="VALUE" x="17.74" y="7.408334375" size="0.7" layer="27" rot="R90"/>
 </element>
 </elements>
 <signals>
@@ -2550,10 +2551,10 @@ design rules under a new name.</description>
 <wire x1="28.56" y1="7.62" x2="28.56" y2="11.43" width="0" layer="19" extent="16-16"/>
 <wire x1="28.56" y1="3.81" x2="28.56" y2="7.62" width="0" layer="19" extent="16-16"/>
 <wire x1="29.293" y1="1.778" x2="28.56" y2="3.81" width="0" layer="19" extent="1-16"/>
-<wire x1="24.18" y1="10.84" x2="28.56" y2="11.43" width="0" layer="19" extent="1-16"/>
+<wire x1="26.11" y1="11.84" x2="28.56" y2="11.43" width="0" layer="19" extent="1-16"/>
 <wire x1="22.59" y1="1.99" x2="28.56" y2="3.81" width="0" layer="19" extent="16-16"/>
-<wire x1="19" y1="6.94" x2="24.18" y2="10.84" width="0" layer="19" extent="1-1"/>
-<wire x1="15.621" y1="5.0515" x2="19" y2="6.94" width="0" layer="19" extent="1-1"/>
+<wire x1="18.89" y1="7.94" x2="26.11" y2="11.84" width="0" layer="19" extent="1-1"/>
+<wire x1="15.621" y1="5.0515" x2="18.89" y2="7.94" width="0" layer="19" extent="1-1"/>
 <wire x1="15.621" y1="4.064" x2="15.621" y2="5.0515" width="0" layer="19" extent="1-1"/>
 <wire x1="11.557" y1="4.064" x2="15.621" y2="4.064" width="0" layer="19" extent="1-1"/>
 <wire x1="10.8966" y1="5.1054" x2="11.557" y2="4.064" width="0" layer="19" extent="1-1"/>
@@ -2608,10 +2609,10 @@ design rules under a new name.</description>
 <wire x1="26.11" y1="29.81" x2="20.11" y2="29.81" width="0" layer="19" extent="1-1"/>
 <wire x1="26.61" y1="29.81" x2="26.11" y2="29.81" width="0" layer="19" extent="1-1"/>
 <wire x1="29.86" y1="11.43" x2="26.61" y2="29.81" width="0" layer="19" extent="1-16"/>
-<wire x1="24.18" y1="9.54" x2="29.86" y2="11.43" width="0" layer="19" extent="1-16"/>
-<wire x1="19" y1="8.24" x2="24.18" y2="9.54" width="0" layer="19" extent="1-1"/>
-<wire x1="12.2174" y1="5.1054" x2="19" y2="8.24" width="0" layer="19" extent="1-1"/>
-<wire x1="27.793" y1="1.778" x2="24.18" y2="9.54" width="0" layer="19" extent="1-1"/>
+<wire x1="26.11" y1="10.54" x2="29.86" y2="11.43" width="0" layer="19" extent="1-16"/>
+<wire x1="18.89" y1="9.24" x2="26.11" y2="10.54" width="0" layer="19" extent="1-1"/>
+<wire x1="12.2174" y1="5.1054" x2="18.89" y2="9.24" width="0" layer="19" extent="1-1"/>
+<wire x1="27.793" y1="1.778" x2="26.11" y2="10.54" width="0" layer="19" extent="1-1"/>
 <wire x1="73.04" y1="13.97" x2="73.04" y2="45.72" width="0" layer="19" extent="16-16"/>
 <wire x1="73.04" y1="3.81" x2="73.04" y2="13.97" width="0" layer="19" extent="16-16"/>
 </signal>
@@ -2656,22 +2657,22 @@ design rules under a new name.</description>
 <signal name="N$5">
 <contactref element="MCU:IC1" pad="58"/>
 <contactref element="ENC_PORT_RIGHT:PORT1" pad="P2"/>
-<wire x1="19" y1="9.54" x2="22.11" y2="41.31" width="0" layer="19" extent="1-1"/>
+<wire x1="18.89" y1="10.54" x2="22.11" y2="41.31" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
 <contactref element="MCU:IC1" pad="59"/>
 <contactref element="ENC_PORT_RIGHT:PORT1" pad="P1"/>
-<wire x1="19" y1="10.84" x2="21.61" y2="41.31" width="0" layer="19" extent="1-1"/>
+<wire x1="18.89" y1="11.84" x2="21.61" y2="41.31" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="MCU:IC1" pad="42"/>
 <contactref element="ENC_PORT_LEFT:PORT1" pad="P1"/>
-<wire x1="24.18" y1="6.94" x2="28.61" y2="36.31" width="0" layer="19" extent="1-1"/>
+<wire x1="26.11" y1="7.94" x2="28.61" y2="36.31" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
 <contactref element="MCU:IC1" pad="41"/>
 <contactref element="ENC_PORT_LEFT:PORT1" pad="P2"/>
-<wire x1="24.18" y1="8.24" x2="28.61" y2="35.81" width="0" layer="19" extent="1-1"/>
+<wire x1="26.11" y1="9.24" x2="28.61" y2="35.81" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="MCU:IC1" pad="36"/>
