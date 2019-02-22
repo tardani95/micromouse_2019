@@ -2230,86 +2230,6 @@ design rules under a new name.</description>
 <contactref element="MCU:C10" pad="2"/>
 <wire x1="17.11" y1="39.31" x2="61.58" y2="67.31" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MCU:+3V3">
-<contactref element="MCU:IC1" pad="47"/>
-<contactref element="MCU:C9" pad="1"/>
-<contactref element="MCU:C10" pad="1"/>
-<contactref element="MCU:IC1" pad="31"/>
-<contactref element="MCU:C8" pad="1"/>
-<contactref element="MCU:IC1" pad="64"/>
-<contactref element="MCU:C4" pad="1"/>
-<contactref element="MCU:IC1" pad="48"/>
-<contactref element="MCU:C3" pad="1"/>
-<contactref element="MCU:IC1" pad="32"/>
-<contactref element="MCU:C2" pad="1"/>
-<contactref element="MCU:IC1" pad="19"/>
-<contactref element="MCU:C1" pad="1"/>
-<contactref element="MCU:C5" pad="1"/>
-<contactref element="MCU:IC1" pad="13"/>
-<contactref element="MCU:C6" pad="1"/>
-<contactref element="MCU:C7" pad="1"/>
-<contactref element="MCU:R1" pad="2"/>
-<wire x1="73.04" y1="50.8" x2="73.04" y2="45.72" width="0" layer="19" extent="1-1"/>
-<wire x1="73.04" y1="55.88" x2="73.04" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="64.15" y1="45.72" x2="73.04" y2="45.72" width="0" layer="19" extent="1-1"/>
-<wire x1="64.15" y1="50.8" x2="64.15" y2="45.72" width="0" layer="19" extent="1-1"/>
-<wire x1="64.15" y1="55.88" x2="64.15" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="55.26" y1="50.8" x2="64.15" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="55.26" y1="55.88" x2="55.26" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="54.11" y1="45.72" x2="55.26" y2="50.8" width="0" layer="19" extent="1-1"/>
-<wire x1="52.72" y1="60.96" x2="55.26" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="62.88" y1="67.31" x2="64.15" y2="55.88" width="0" layer="19" extent="1-1"/>
-<wire x1="26.11" y1="29.81" x2="62.88" y2="67.31" width="0" layer="19" extent="1-1"/>
-<wire x1="26.61" y1="29.81" x2="26.11" y2="29.81" width="0" layer="19" extent="1-1"/>
-<wire x1="20.11" y1="29.81" x2="26.11" y2="29.81" width="0" layer="19" extent="1-1"/>
-<wire x1="17.11" y1="33.31" x2="20.11" y2="29.81" width="0" layer="19" extent="1-1"/>
-<wire x1="19.11" y1="41.31" x2="17.11" y2="33.31" width="0" layer="19" extent="1-1"/>
-<wire x1="28.61" y1="38.81" x2="26.61" y2="29.81" width="0" layer="19" extent="1-1"/>
-<wire x1="28.61" y1="39.31" x2="28.61" y2="38.81" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="MCU:GND">
-<contactref element="MCU:C6" pad="2"/>
-<contactref element="MCU:IC1" pad="12"/>
-<contactref element="MCU:C7" pad="2"/>
-<contactref element="MCU:IC1" pad="18"/>
-<contactref element="MCU:C9" pad="2"/>
-<contactref element="MCU:C8" pad="2"/>
-<contactref element="MCU:C4" pad="2"/>
-<contactref element="MCU:C3" pad="2"/>
-<contactref element="MCU:C2" pad="2"/>
-<contactref element="MCU:C1" pad="2"/>
-<contactref element="MCU:C5" pad="2"/>
-<contactref element="MCU:IC1" pad="63"/>
-<contactref element="MCU:S1" pad="1"/>
-<contactref element="MCU:C11" pad="2"/>
-<contactref element="MCU:R3" pad="1"/>
-<contactref element="MCU:R2" pad="1"/>
-<contactref element="MCU:S4" pad="1"/>
-<contactref element="MCU:C13" pad="2"/>
-<contactref element="MCU:C12" pad="2"/>
-<contactref element="MCU:S2" pad="1"/>
-<contactref element="MCU:J1" pad="3"/>
-<wire x1="71.74" y1="55.88" x2="71.74" y2="60.96" width="0" layer="19" extent="16-16"/>
-<wire x1="71.74" y1="50.8" x2="71.74" y2="55.88" width="0" layer="19" extent="16-16"/>
-<wire x1="71.74" y1="45.72" x2="71.74" y2="50.8" width="0" layer="19" extent="16-16"/>
-<wire x1="74.16" y1="40.64" x2="71.74" y2="45.72" width="0" layer="19" extent="16-16"/>
-<wire x1="65.27" y1="40.64" x2="71.74" y2="45.72" width="0" layer="19" extent="16-16"/>
-<wire x1="62.85" y1="45.72" x2="65.27" y2="40.64" width="0" layer="19" extent="16-16"/>
-<wire x1="62.85" y1="50.8" x2="62.85" y2="45.72" width="0" layer="19" extent="16-16"/>
-<wire x1="62.85" y1="55.88" x2="62.85" y2="50.8" width="0" layer="19" extent="16-16"/>
-<wire x1="61.58" y1="60.96" x2="62.85" y2="55.88" width="0" layer="19" extent="16-16"/>
-<wire x1="53.96" y1="55.88" x2="62.85" y2="55.88" width="0" layer="19" extent="16-16"/>
-<wire x1="53.96" y1="50.8" x2="53.96" y2="55.88" width="0" layer="19" extent="16-16"/>
-<wire x1="51.42" y1="60.96" x2="53.96" y2="55.88" width="0" layer="19" extent="16-16"/>
-<wire x1="51.42" y1="67.31" x2="51.42" y2="60.96" width="0" layer="19" extent="16-16"/>
-<wire x1="19.61" y1="41.31" x2="53.96" y2="50.8" width="0" layer="19" extent="1-16"/>
-<wire x1="21.385" y1="47.879" x2="19.61" y2="41.31" width="0" layer="19" extent="1-1"/>
-<wire x1="17.11" y1="33.81" x2="21.385" y2="47.879" width="0" layer="19" extent="1-1"/>
-<wire x1="19.61" y1="29.81" x2="17.11" y2="33.81" width="0" layer="19" extent="1-1"/>
-<wire x1="1.905" y1="2.872" x2="19.61" y2="29.81" width="0" layer="19" extent="1-1"/>
-<wire x1="6.653" y1="1.524" x2="1.905" y2="2.872" width="0" layer="19" extent="1-1"/>
-<wire x1="39.751" y1="34.274" x2="6.653" y2="1.524" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="MCU:N$2">
 <contactref element="MCU:R1" pad="1"/>
 <contactref element="MCU:S3" pad="2"/>
@@ -2334,24 +2254,6 @@ design rules under a new name.</description>
 <contactref element="MCU:IC1" pad="28"/>
 <wire x1="24.61" y1="29.81" x2="73.16" y2="40.64" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MCU:PTR1">
-<contactref element="MCU:IC1" pad="14"/>
-</signal>
-<signal name="MCU:PTR2">
-<contactref element="MCU:IC1" pad="15"/>
-</signal>
-<signal name="MCU:IRD1">
-<contactref element="MCU:IC1" pad="16"/>
-</signal>
-<signal name="MCU:IRD2">
-<contactref element="MCU:IC1" pad="17"/>
-</signal>
-<signal name="MCU:ENC_LEFT_CHA">
-<contactref element="MCU:IC1" pad="41"/>
-</signal>
-<signal name="MCU:ENC_LEFT_CHB">
-<contactref element="MCU:IC1" pad="42"/>
-</signal>
 <signal name="MCU:BTN2">
 <contactref element="MCU:S4" pad="2"/>
 <contactref element="MCU:C13" pad="1"/>
@@ -2366,56 +2268,11 @@ design rules under a new name.</description>
 <wire x1="3.253" y1="1.524" x2="52.72" y2="67.31" width="0" layer="19" extent="1-1"/>
 <wire x1="23.61" y1="41.31" x2="3.253" y2="1.524" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MCU:IRD3">
-<contactref element="MCU:IC1" pad="8"/>
-</signal>
-<signal name="MCU:IRD4">
-<contactref element="MCU:IC1" pad="9"/>
-</signal>
-<signal name="MCU:PTR3">
-<contactref element="MCU:IC1" pad="10"/>
-</signal>
-<signal name="MCU:PTR4">
-<contactref element="MCU:IC1" pad="11"/>
-</signal>
-<signal name="MCU:DRV_A_ENBL">
-<contactref element="MCU:IC1" pad="37"/>
-</signal>
-<signal name="MCU:DRV_B_PHASE">
-<contactref element="MCU:IC1" pad="38"/>
-</signal>
-<signal name="MCU:DRV_B_ENBL">
-<contactref element="MCU:IC1" pad="39"/>
-</signal>
-<signal name="MCU:UART3_TX">
-<contactref element="MCU:IC1" pad="51"/>
-</signal>
-<signal name="MCU:UART3_RX">
-<contactref element="MCU:IC1" pad="52"/>
-</signal>
 <signal name="MCU:IMU2_SCL">
 <contactref element="MCU:IC1" pad="29"/>
 </signal>
 <signal name="MCU:IMU2_SDA">
 <contactref element="MCU:IC1" pad="30"/>
-</signal>
-<signal name="MCU:ENC_RIGHT_CHA">
-<contactref element="MCU:IC1" pad="58"/>
-</signal>
-<signal name="MCU:ENC_RIGHT_CHB">
-<contactref element="MCU:IC1" pad="59"/>
-</signal>
-<signal name="MCU:IMU1_SCL">
-<contactref element="MCU:IC1" pad="61"/>
-</signal>
-<signal name="MCU:IMU1_SDA">
-<contactref element="MCU:IC1" pad="62"/>
-</signal>
-<signal name="MCU:DRV_A_PHASE">
-<contactref element="MCU:IC1" pad="36"/>
-</signal>
-<signal name="MCU:V_BAT_LEVEL">
-<contactref element="MCU:IC1" pad="20"/>
 </signal>
 <signal name="MCU:SWDIO">
 <contactref element="MCU:IC1" pad="46"/>
@@ -2427,32 +2284,6 @@ design rules under a new name.</description>
 <contactref element="MCU:J1" pad="2"/>
 <wire x1="39.751" y1="33.274" x2="26.61" y2="41.31" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="IMU:GND">
-<contactref element="IMU:IC1" pad="18"/>
-<contactref element="IMU:IC1" pad="1"/>
-<contactref element="IMU:C3" pad="2"/>
-<contactref element="IMU:R1" pad="1"/>
-<contactref element="IMU:C4" pad="2"/>
-<contactref element="IMU:C1" pad="2"/>
-<contactref element="IMU:IC1" pad="11"/>
-<contactref element="IMU:C2" pad="2"/>
-<wire x1="71.74" y1="8.89" x2="71.74" y2="3.81" width="0" layer="19" extent="1-1"/>
-<wire x1="71.74" y1="13.97" x2="71.74" y2="8.89" width="0" layer="19" extent="1-1"/>
-<wire x1="74.16" y1="17.78" x2="71.74" y2="13.97" width="0" layer="19" extent="1-1"/>
-<wire x1="71.74" y1="21.59" x2="74.16" y2="17.78" width="0" layer="19" extent="1-1"/>
-<wire x1="27.158" y1="43.745" x2="71.74" y2="21.59" width="0" layer="19" extent="1-1"/>
-<wire x1="27.883" y1="46.47" x2="27.158" y2="43.745" width="0" layer="19" extent="1-1"/>
-<wire x1="23.933" y1="46.97" x2="27.883" y2="46.47" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IMU:+3V3">
-<contactref element="IMU:IC1" pad="8"/>
-<contactref element="IMU:C4" pad="1"/>
-<contactref element="IMU:C2" pad="1"/>
-<contactref element="IMU:IC1" pad="13"/>
-<wire x1="73.04" y1="13.97" x2="73.04" y2="3.81" width="0" layer="19" extent="1-1"/>
-<wire x1="25.658" y1="43.745" x2="73.04" y2="13.97" width="0" layer="19" extent="1-1"/>
-<wire x1="27.883" y1="44.97" x2="25.658" y2="43.745" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="IMU:N$1">
 <contactref element="IMU:IC1" pad="9"/>
 <contactref element="IMU:R1" pad="2"/>
@@ -2462,12 +2293,6 @@ design rules under a new name.</description>
 <contactref element="IMU:IC1" pad="20"/>
 <contactref element="IMU:C3" pad="1"/>
 <wire x1="26.658" y1="47.695" x2="73.04" y2="21.59" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IMU:SCL">
-<contactref element="IMU:IC1" pad="23"/>
-</signal>
-<signal name="IMU:SDA">
-<contactref element="IMU:IC1" pad="24"/>
 </signal>
 <signal name="IMU:N$3">
 <contactref element="IMU:C1" pad="1"/>
@@ -2497,75 +2322,10 @@ design rules under a new name.</description>
 <contactref element="IR_PTR:IR_LED3" pad="1"/>
 <wire x1="10.16" y1="35.56" x2="15.182" y2="39.847" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="IR_PTR:IRD1">
-<contactref element="IR_PTR:MOSFET1" pad="P2"/>
-<contactref element="IR_PTR:R1" pad="2"/>
-<wire x1="14.282" y1="41.402" x2="12.2" y2="41.91" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IR_PTR:GND">
-<contactref element="IR_PTR:R1" pad="1"/>
-<contactref element="IR_PTR:MOSFET1" pad="P1"/>
-<contactref element="IR_PTR:R2" pad="1"/>
-<contactref element="IR_PTR:MOSFET1" pad="P4"/>
-<contactref element="IR_PTR:R3" pad="1"/>
-<contactref element="IR_PTR:MOSFET2" pad="P1"/>
-<contactref element="IR_PTR:R4" pad="1"/>
-<contactref element="IR_PTR:MOSFET2" pad="P4"/>
-<contactref element="IR_PTR:R5" pad="1"/>
-<contactref element="IR_PTR:R6" pad="1"/>
-<contactref element="IR_PTR:R7" pad="1"/>
-<contactref element="IR_PTR:R8" pad="1"/>
-<wire x1="13.2" y1="39.37" x2="13.2" y2="38.1" width="0" layer="19" extent="1-1"/>
-<wire x1="13.2" y1="40.64" x2="13.2" y2="39.37" width="0" layer="19" extent="1-1"/>
-<wire x1="13.2" y1="41.91" x2="13.2" y2="40.64" width="0" layer="19" extent="1-1"/>
-<wire x1="15.182" y1="39.147" x2="13.2" y2="41.91" width="0" layer="19" extent="1-1"/>
-<wire x1="14.282" y1="39.847" x2="15.182" y2="39.147" width="0" layer="19" extent="1-1"/>
-<wire x1="14.282" y1="41.752" x2="15.182" y2="39.147" width="0" layer="19" extent="1-1"/>
-<wire x1="15.182" y1="41.052" x2="14.282" y2="41.752" width="0" layer="19" extent="1-1"/>
-<wire x1="33.79" y1="39.37" x2="13.2" y2="38.1" width="0" layer="19" extent="1-1"/>
-<wire x1="33.79" y1="36.83" x2="33.79" y2="39.37" width="0" layer="19" extent="1-1"/>
-<wire x1="33.79" y1="34.29" x2="33.79" y2="36.83" width="0" layer="19" extent="1-1"/>
-<wire x1="33.79" y1="31.75" x2="33.79" y2="34.29" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IR_PTR:IRD2">
-<contactref element="IR_PTR:MOSFET1" pad="P5"/>
-<contactref element="IR_PTR:R2" pad="2"/>
-<wire x1="15.182" y1="41.402" x2="12.2" y2="40.64" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IR_PTR:IRD4">
-<contactref element="IR_PTR:MOSFET2" pad="P5"/>
-<contactref element="IR_PTR:R4" pad="2"/>
-<wire x1="15.182" y1="39.497" x2="12.2" y2="38.1" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IR_PTR:PTR1">
-<contactref element="IR_PTR:PT_TR1" pad="1"/>
-<contactref element="IR_PTR:R5" pad="2"/>
-<wire x1="34.79" y1="39.37" x2="31.75" y2="40.64" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="IR_PTR:N$10">
 <contactref element="IR_PTR:IR_LED4" pad="1"/>
 <contactref element="IR_PTR:MOSFET2" pad="P3"/>
 <wire x1="10.16" y1="40.64" x2="14.282" y2="39.147" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IR_PTR:PTR2">
-<contactref element="IR_PTR:PT_TR2" pad="1"/>
-<contactref element="IR_PTR:R6" pad="2"/>
-<wire x1="34.79" y1="36.83" x2="7.62" y2="40.64" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IR_PTR:PTR3">
-<contactref element="IR_PTR:PT_TR3" pad="1"/>
-<contactref element="IR_PTR:R7" pad="2"/>
-<wire x1="34.79" y1="34.29" x2="10.16" y2="33.02" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IR_PTR:PTR4">
-<contactref element="IR_PTR:PT_TR4" pad="1"/>
-<contactref element="IR_PTR:R8" pad="2"/>
-<wire x1="34.79" y1="31.75" x2="7.62" y2="33.02" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="IR_PTR:IRD3">
-<contactref element="IR_PTR:R3" pad="2"/>
-<contactref element="IR_PTR:MOSFET2" pad="P2"/>
-<wire x1="12.2" y1="39.37" x2="14.282" y2="39.497" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOT:AOUT1">
 <contactref element="MOT:IC1" pad="2"/>
@@ -2587,48 +2347,10 @@ design rules under a new name.</description>
 <contactref element="MOT:J2" pad="2"/>
 <wire x1="23.63" y1="17.272" x2="16.2356" y2="22.086" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="MOT:GND">
-<contactref element="MOT:IC1" pad="6"/>
-<contactref element="MOT:IC1" pad="14"/>
-<contactref element="MOT:IC1" pad="15"/>
-<contactref element="MOT:IC1" pad="13"/>
-<contactref element="MOT:IC1" pad="16"/>
-<contactref element="MOT:IC1" pad="17"/>
-<contactref element="MOT:C1" pad="2"/>
-<wire x1="16.2356" y1="22.586" x2="19.177" y2="22.24" width="0" layer="19" extent="1-1"/>
-<wire x1="15.49" y1="22.8316" x2="16.2356" y2="22.586" width="0" layer="19" extent="1-1"/>
-<wire x1="14.99" y1="22.8316" x2="15.49" y2="22.8316" width="0" layer="19" extent="1-1"/>
-<wire x1="15.24" y1="21.336" x2="15.49" y2="22.8316" width="0" layer="19" extent="1-1"/>
-<wire x1="15.49" y1="19.8404" x2="15.24" y2="21.336" width="0" layer="19" extent="1-1"/>
-<wire x1="14.99" y1="19.8404" x2="15.49" y2="19.8404" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="MOT:DRV_A_PHASE">
-<contactref element="MOT:IC1" pad="10"/>
-</signal>
-<signal name="MOT:DRV_A_ENBL">
-<contactref element="MOT:IC1" pad="9"/>
-</signal>
-<signal name="MOT:DRV_B_PHASE">
-<contactref element="MOT:IC1" pad="8"/>
-</signal>
-<signal name="MOT:DRV_B_ENBL">
-<contactref element="MOT:IC1" pad="7"/>
-</signal>
-<signal name="MOT:VCC">
-<contactref element="MOT:IC1" pad="1"/>
-<contactref element="MOT:C1" pad="1"/>
-<wire x1="16.2356" y1="20.086" x2="19.177" y2="20.94" width="0" layer="19" extent="1-1"/>
-</signal>
 <signal name="MOT:N$5">
 <contactref element="MOT:IC1" pad="12"/>
 <contactref element="MOT:IC1" pad="11"/>
 <wire x1="14.2444" y1="20.586" x2="14.2444" y2="20.086" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="ENC_PORT_LEFT:+3V3">
-<contactref element="ENC_PORT_LEFT:PORT1" pad="P3"/>
-</signal>
-<signal name="ENC_PORT_RIGHT:+3V3">
-<contactref element="ENC_PORT_RIGHT:PORT1" pad="P3"/>
 </signal>
 <signal name="GND">
 <contactref element="PWR:LDO1" pad="3"/>
@@ -2641,25 +2363,185 @@ design rules under a new name.</description>
 <contactref element="PWR:C4" pad="2"/>
 <contactref element="PWR:C5" pad="2"/>
 <contactref element="PWR:J1" pad="1"/>
+<contactref element="IMU:IC1" pad="18"/>
+<contactref element="IMU:C3" pad="2"/>
+<contactref element="IMU:IC1" pad="1"/>
+<contactref element="IMU:C4" pad="2"/>
+<contactref element="IMU:R1" pad="1"/>
+<contactref element="IMU:C1" pad="2"/>
+<contactref element="IMU:IC1" pad="11"/>
+<contactref element="IMU:C2" pad="2"/>
+<contactref element="MCU:C6" pad="2"/>
+<contactref element="MCU:IC1" pad="12"/>
+<contactref element="MCU:C7" pad="2"/>
+<contactref element="MCU:IC1" pad="18"/>
+<contactref element="MCU:C9" pad="2"/>
+<contactref element="MCU:C8" pad="2"/>
+<contactref element="MCU:C4" pad="2"/>
+<contactref element="MCU:C3" pad="2"/>
+<contactref element="MCU:C2" pad="2"/>
+<contactref element="MCU:C1" pad="2"/>
+<contactref element="MCU:C5" pad="2"/>
+<contactref element="MCU:IC1" pad="63"/>
+<contactref element="MCU:S1" pad="1"/>
+<contactref element="MCU:C11" pad="2"/>
+<contactref element="MCU:R3" pad="1"/>
+<contactref element="MCU:R2" pad="1"/>
+<contactref element="MCU:S4" pad="1"/>
+<contactref element="MCU:C13" pad="2"/>
+<contactref element="MCU:C12" pad="2"/>
+<contactref element="MCU:S2" pad="1"/>
+<contactref element="MCU:J1" pad="3"/>
+<contactref element="MOT:IC1" pad="6"/>
+<contactref element="MOT:C1" pad="2"/>
+<contactref element="MOT:IC1" pad="13"/>
+<contactref element="MOT:IC1" pad="14"/>
+<contactref element="MOT:IC1" pad="16"/>
+<contactref element="MOT:IC1" pad="15"/>
+<contactref element="MOT:IC1" pad="17"/>
+<contactref element="IR_PTR:R1" pad="1"/>
+<contactref element="IR_PTR:MOSFET1" pad="P1"/>
+<contactref element="IR_PTR:R2" pad="1"/>
+<contactref element="IR_PTR:MOSFET1" pad="P4"/>
+<contactref element="IR_PTR:R3" pad="1"/>
+<contactref element="IR_PTR:MOSFET2" pad="P1"/>
+<contactref element="IR_PTR:R4" pad="1"/>
+<contactref element="IR_PTR:MOSFET2" pad="P4"/>
+<contactref element="IR_PTR:R5" pad="1"/>
+<contactref element="IR_PTR:R6" pad="1"/>
+<contactref element="IR_PTR:R7" pad="1"/>
+<contactref element="IR_PTR:R8" pad="1"/>
+<contactref element="BT_PORT:U$1" pad="P$9"/>
+<contactref element="ENC_PORT_LEFT:PORT1" pad="P4"/>
+<contactref element="ENC_PORT_RIGHT:PORT1" pad="P4"/>
+<wire x1="71.74" y1="55.88" x2="71.74" y2="60.96" width="0" layer="19" extent="16-16"/>
+<wire x1="71.74" y1="50.8" x2="71.74" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="71.74" y1="45.72" x2="71.74" y2="50.8" width="0" layer="19" extent="16-16"/>
+<wire x1="74.16" y1="40.64" x2="71.74" y2="45.72" width="0" layer="19" extent="16-16"/>
+<wire x1="65.27" y1="40.64" x2="71.74" y2="45.72" width="0" layer="19" extent="16-16"/>
+<wire x1="62.85" y1="45.72" x2="65.27" y2="40.64" width="0" layer="19" extent="16-16"/>
+<wire x1="62.85" y1="50.8" x2="62.85" y2="45.72" width="0" layer="19" extent="16-16"/>
+<wire x1="62.85" y1="55.88" x2="62.85" y2="50.8" width="0" layer="19" extent="16-16"/>
+<wire x1="61.58" y1="60.96" x2="62.85" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="53.96" y1="55.88" x2="62.85" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="53.96" y1="50.8" x2="53.96" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="51.42" y1="60.96" x2="53.96" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="51.42" y1="67.31" x2="51.42" y2="60.96" width="0" layer="19" extent="16-16"/>
+<wire x1="71.74" y1="21.59" x2="74.16" y2="40.64" width="0" layer="19" extent="16-16"/>
+<wire x1="74.16" y1="17.78" x2="71.74" y2="21.59" width="0" layer="19" extent="16-16"/>
+<wire x1="71.74" y1="13.97" x2="74.16" y2="17.78" width="0" layer="19" extent="16-16"/>
+<wire x1="71.74" y1="8.89" x2="71.74" y2="13.97" width="0" layer="19" extent="16-16"/>
+<wire x1="71.74" y1="3.81" x2="71.74" y2="8.89" width="0" layer="19" extent="16-16"/>
+<wire x1="39.751" y1="34.274" x2="53.96" y2="50.8" width="0" layer="19" extent="1-16"/>
+<wire x1="33.79" y1="34.29" x2="39.751" y2="34.274" width="0" layer="19" extent="1-1"/>
+<wire x1="33.79" y1="36.83" x2="33.79" y2="34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="33.79" y1="39.37" x2="33.79" y2="36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="33.79" y1="31.75" x2="33.79" y2="34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="27.158" y1="43.745" x2="33.79" y2="39.37" width="0" layer="19" extent="1-1"/>
+<wire x1="27.883" y1="46.47" x2="27.158" y2="43.745" width="0" layer="19" extent="1-1"/>
+<wire x1="23.933" y1="46.97" x2="27.883" y2="46.47" width="0" layer="19" extent="1-1"/>
+<wire x1="21.385" y1="47.879" x2="23.933" y2="46.97" width="0" layer="19" extent="1-1"/>
+<wire x1="19.61" y1="41.31" x2="21.385" y2="47.879" width="0" layer="19" extent="1-1"/>
+<wire x1="15.182" y1="41.052" x2="19.61" y2="41.31" width="0" layer="19" extent="1-1"/>
+<wire x1="14.282" y1="41.752" x2="15.182" y2="41.052" width="0" layer="19" extent="1-1"/>
+<wire x1="13.2" y1="41.91" x2="14.282" y2="41.752" width="0" layer="19" extent="1-16"/>
+<wire x1="13.2" y1="40.64" x2="13.2" y2="41.91" width="0" layer="19" extent="16-16"/>
+<wire x1="13.2" y1="39.37" x2="13.2" y2="40.64" width="0" layer="19" extent="16-16"/>
+<wire x1="14.282" y1="39.847" x2="13.2" y2="39.37" width="0" layer="19" extent="1-16"/>
+<wire x1="15.182" y1="39.147" x2="14.282" y2="39.847" width="0" layer="19" extent="1-1"/>
+<wire x1="13.2" y1="38.1" x2="13.2" y2="39.37" width="0" layer="19" extent="16-16"/>
+<wire x1="17.11" y1="33.81" x2="15.182" y2="39.147" width="0" layer="19" extent="1-1"/>
+<wire x1="19.61" y1="29.81" x2="17.11" y2="33.81" width="0" layer="19" extent="1-1"/>
+<wire x1="19.177" y1="22.24" x2="19.61" y2="29.81" width="0" layer="19" extent="1-16"/>
+<wire x1="16.2356" y1="22.586" x2="19.177" y2="22.24" width="0" layer="19" extent="1-16"/>
+<wire x1="15.49" y1="22.8316" x2="16.2356" y2="22.586" width="0" layer="19" extent="1-1"/>
+<wire x1="14.99" y1="22.8316" x2="15.49" y2="22.8316" width="0" layer="19" extent="1-1"/>
+<wire x1="15.24" y1="21.336" x2="15.49" y2="22.8316" width="0" layer="19" extent="1-1"/>
+<wire x1="15.49" y1="19.8404" x2="15.24" y2="21.336" width="0" layer="19" extent="1-1"/>
+<wire x1="14.99" y1="19.8404" x2="15.49" y2="19.8404" width="0" layer="19" extent="1-1"/>
+<wire x1="28.56" y1="19.05" x2="19.177" y2="22.24" width="0" layer="19" extent="16-16"/>
 <wire x1="28.56" y1="15.24" x2="28.56" y2="19.05" width="0" layer="19" extent="16-16"/>
 <wire x1="28.56" y1="11.43" x2="28.56" y2="15.24" width="0" layer="19" extent="16-16"/>
 <wire x1="28.56" y1="7.62" x2="28.56" y2="11.43" width="0" layer="19" extent="16-16"/>
 <wire x1="28.56" y1="3.81" x2="28.56" y2="7.62" width="0" layer="19" extent="16-16"/>
+<wire x1="29.293" y1="1.778" x2="28.56" y2="3.81" width="0" layer="19" extent="1-16"/>
+<wire x1="24.18" y1="10.84" x2="28.56" y2="11.43" width="0" layer="19" extent="1-16"/>
 <wire x1="23.86" y1="1.99" x2="28.56" y2="3.81" width="0" layer="19" extent="16-16"/>
-<wire x1="15.621" y1="4.064" x2="23.86" y2="1.99" width="0" layer="19" extent="1-1"/>
-<wire x1="15.621" y1="5.0515" x2="15.621" y2="4.064" width="0" layer="19" extent="1-1"/>
+<wire x1="19" y1="6.94" x2="24.18" y2="10.84" width="0" layer="19" extent="1-1"/>
+<wire x1="15.621" y1="5.0515" x2="19" y2="6.94" width="0" layer="19" extent="1-1"/>
+<wire x1="15.621" y1="4.064" x2="15.621" y2="5.0515" width="0" layer="19" extent="1-1"/>
 <wire x1="11.557" y1="4.064" x2="15.621" y2="4.064" width="0" layer="19" extent="1-1"/>
 <wire x1="10.8966" y1="5.1054" x2="11.557" y2="4.064" width="0" layer="19" extent="1-1"/>
+<wire x1="6.653" y1="1.524" x2="11.557" y2="4.064" width="0" layer="19" extent="1-1"/>
+<wire x1="1.905" y1="2.872" x2="6.653" y2="1.524" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="PWR:C3" pad="1"/>
 <contactref element="PWR:LDO1" pad="1"/>
-<wire x1="12.2174" y1="5.1054" x2="29.86" y2="11.43" width="0" layer="19" extent="1-16"/>
+<contactref element="MCU:IC1" pad="47"/>
+<contactref element="MCU:C9" pad="1"/>
+<contactref element="MCU:C10" pad="1"/>
+<contactref element="MCU:IC1" pad="31"/>
+<contactref element="MCU:C8" pad="1"/>
+<contactref element="MCU:IC1" pad="64"/>
+<contactref element="MCU:C4" pad="1"/>
+<contactref element="MCU:IC1" pad="48"/>
+<contactref element="MCU:C3" pad="1"/>
+<contactref element="MCU:IC1" pad="32"/>
+<contactref element="MCU:C2" pad="1"/>
+<contactref element="MCU:IC1" pad="19"/>
+<contactref element="MCU:C1" pad="1"/>
+<contactref element="MCU:C5" pad="1"/>
+<contactref element="MCU:IC1" pad="13"/>
+<contactref element="MCU:C6" pad="1"/>
+<contactref element="MCU:C7" pad="1"/>
+<contactref element="MCU:R1" pad="2"/>
+<contactref element="IMU:IC1" pad="8"/>
+<contactref element="IMU:C4" pad="1"/>
+<contactref element="IMU:C2" pad="1"/>
+<contactref element="IMU:IC1" pad="13"/>
+<contactref element="BT_PORT:U$1" pad="P$8"/>
+<contactref element="ENC_PORT_LEFT:PORT1" pad="P3"/>
+<contactref element="ENC_PORT_RIGHT:PORT1" pad="P3"/>
+<wire x1="64.15" y1="55.88" x2="62.88" y2="67.31" width="0" layer="19" extent="16-16"/>
+<wire x1="64.15" y1="50.8" x2="64.15" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="64.15" y1="45.72" x2="64.15" y2="50.8" width="0" layer="19" extent="16-16"/>
+<wire x1="73.04" y1="55.88" x2="64.15" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="73.04" y1="50.8" x2="73.04" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="73.04" y1="45.72" x2="73.04" y2="50.8" width="0" layer="19" extent="16-16"/>
+<wire x1="55.26" y1="55.88" x2="64.15" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="55.26" y1="50.8" x2="55.26" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="54.11" y1="45.72" x2="55.26" y2="50.8" width="0" layer="19" extent="16-16"/>
+<wire x1="52.72" y1="60.96" x2="55.26" y2="55.88" width="0" layer="19" extent="16-16"/>
+<wire x1="27.883" y1="44.97" x2="54.11" y2="45.72" width="0" layer="19" extent="1-16"/>
+<wire x1="25.658" y1="43.745" x2="27.883" y2="44.97" width="0" layer="19" extent="1-1"/>
+<wire x1="28.61" y1="39.31" x2="25.658" y2="43.745" width="0" layer="19" extent="1-1"/>
+<wire x1="28.61" y1="38.81" x2="28.61" y2="39.31" width="0" layer="19" extent="1-1"/>
+<wire x1="19.11" y1="41.31" x2="25.658" y2="43.745" width="0" layer="19" extent="1-1"/>
+<wire x1="17.11" y1="33.31" x2="19.11" y2="41.31" width="0" layer="19" extent="1-1"/>
+<wire x1="20.11" y1="29.81" x2="17.11" y2="33.31" width="0" layer="19" extent="1-1"/>
+<wire x1="26.11" y1="29.81" x2="20.11" y2="29.81" width="0" layer="19" extent="1-1"/>
+<wire x1="26.61" y1="29.81" x2="26.11" y2="29.81" width="0" layer="19" extent="1-1"/>
+<wire x1="29.86" y1="11.43" x2="26.61" y2="29.81" width="0" layer="19" extent="1-16"/>
+<wire x1="24.18" y1="9.54" x2="29.86" y2="11.43" width="0" layer="19" extent="1-16"/>
+<wire x1="19" y1="8.24" x2="24.18" y2="9.54" width="0" layer="19" extent="1-1"/>
+<wire x1="12.2174" y1="5.1054" x2="19" y2="8.24" width="0" layer="19" extent="1-1"/>
+<wire x1="27.793" y1="1.778" x2="24.18" y2="9.54" width="0" layer="19" extent="1-1"/>
+<wire x1="73.04" y1="13.97" x2="73.04" y2="45.72" width="0" layer="19" extent="16-16"/>
+<wire x1="73.04" y1="3.81" x2="73.04" y2="13.97" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="VCC">
 <contactref element="PWR:C5" pad="1"/>
 <contactref element="PWR:LDO2" pad="4"/>
-<wire x1="15.121" y1="3.0765" x2="29.86" y2="3.81" width="0" layer="19" extent="1-16"/>
+<contactref element="MOT:IC1" pad="1"/>
+<contactref element="MOT:C1" pad="1"/>
+<contactref element="IR_PTR:3V3_1" pad="1"/>
+<contactref element="IR_PTR:3V3_2" pad="1"/>
+<wire x1="7.62" y1="35.56" x2="7.62" y2="38.1" width="0" layer="19" extent="1-1"/>
+<wire x1="16.2356" y1="20.086" x2="7.62" y2="35.56" width="0" layer="19" extent="1-1"/>
+<wire x1="19.177" y1="20.94" x2="16.2356" y2="20.086" width="0" layer="19" extent="1-16"/>
+<wire x1="15.121" y1="3.0765" x2="16.2356" y2="20.086" width="0" layer="19" extent="1-1"/>
+<wire x1="29.86" y1="3.81" x2="15.121" y2="3.0765" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="VCCIO">
 <contactref element="PWR:C4" pad="1"/>
@@ -2668,16 +2550,129 @@ design rules under a new name.</description>
 <contactref element="PWR:LDO2" pad="6"/>
 <contactref element="PWR:LDO1" pad="6"/>
 <contactref element="PWR:LDO1" pad="4"/>
+<contactref element="MCU:IC1" pad="20"/>
+<wire x1="29.86" y1="19.05" x2="20.61" y2="29.81" width="0" layer="19" extent="1-16"/>
 <wire x1="29.86" y1="7.62" x2="29.86" y2="19.05" width="0" layer="19" extent="16-16"/>
 <wire x1="21.86" y1="1.99" x2="29.86" y2="7.62" width="0" layer="19" extent="16-16"/>
 <wire x1="16.121" y1="3.0765" x2="21.86" y2="1.99" width="0" layer="19" extent="1-1"/>
 <wire x1="12.2174" y1="3.0226" x2="16.121" y2="3.0765" width="0" layer="19" extent="1-1"/>
 <wire x1="10.8966" y1="3.0226" x2="12.2174" y2="3.0226" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="IR_PTR:VCC">
-<contactref element="IR_PTR:3V3_1" pad="1"/>
-<contactref element="IR_PTR:3V3_2" pad="1"/>
-<wire x1="7.62" y1="35.56" x2="7.62" y2="38.1" width="0" layer="19" extent="1-1"/>
+<signal name="N$3">
+<contactref element="IMU:IC1" pad="23"/>
+<contactref element="MCU:IC1" pad="61"/>
+<wire x1="20.61" y1="41.31" x2="25.158" y2="47.695" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$4">
+<contactref element="IMU:IC1" pad="24"/>
+<contactref element="MCU:IC1" pad="62"/>
+<wire x1="20.11" y1="41.31" x2="24.658" y2="47.695" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$5">
+<contactref element="MCU:IC1" pad="58"/>
+<contactref element="ENC_PORT_RIGHT:PORT1" pad="P2"/>
+<wire x1="19" y1="9.54" x2="22.11" y2="41.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$6">
+<contactref element="MCU:IC1" pad="59"/>
+<contactref element="ENC_PORT_RIGHT:PORT1" pad="P1"/>
+<wire x1="19" y1="10.84" x2="21.61" y2="41.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$7">
+<contactref element="MCU:IC1" pad="42"/>
+<contactref element="ENC_PORT_LEFT:PORT1" pad="P1"/>
+<wire x1="24.18" y1="6.94" x2="28.61" y2="36.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$8">
+<contactref element="MCU:IC1" pad="41"/>
+<contactref element="ENC_PORT_LEFT:PORT1" pad="P2"/>
+<wire x1="24.18" y1="8.24" x2="28.61" y2="35.81" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$9">
+<contactref element="MCU:IC1" pad="36"/>
+<contactref element="MOT:IC1" pad="10"/>
+<wire x1="14.2444" y1="21.086" x2="28.61" y2="33.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$10">
+<contactref element="MCU:IC1" pad="37"/>
+<contactref element="MOT:IC1" pad="9"/>
+<wire x1="14.2444" y1="21.586" x2="28.61" y2="33.81" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$11">
+<contactref element="MCU:IC1" pad="38"/>
+<contactref element="MOT:IC1" pad="8"/>
+<wire x1="14.2444" y1="22.086" x2="28.61" y2="34.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$12">
+<contactref element="MCU:IC1" pad="39"/>
+<contactref element="MOT:IC1" pad="7"/>
+<wire x1="14.2444" y1="22.586" x2="28.61" y2="34.81" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$13">
+<contactref element="MCU:IC1" pad="16"/>
+<contactref element="IR_PTR:MOSFET1" pad="P2"/>
+<contactref element="IR_PTR:R1" pad="2"/>
+<wire x1="12.2" y1="41.91" x2="14.282" y2="41.402" width="0" layer="19" extent="1-16"/>
+<wire x1="17.11" y1="31.81" x2="14.282" y2="41.402" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$14">
+<contactref element="MCU:IC1" pad="17"/>
+<contactref element="IR_PTR:MOSFET1" pad="P5"/>
+<contactref element="IR_PTR:R2" pad="2"/>
+<wire x1="12.2" y1="40.64" x2="15.182" y2="41.402" width="0" layer="19" extent="1-16"/>
+<wire x1="19.11" y1="29.81" x2="15.182" y2="41.402" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$15">
+<contactref element="MCU:IC1" pad="8"/>
+<contactref element="IR_PTR:R3" pad="2"/>
+<contactref element="IR_PTR:MOSFET2" pad="P2"/>
+<wire x1="14.282" y1="39.497" x2="17.11" y2="35.81" width="0" layer="19" extent="1-1"/>
+<wire x1="12.2" y1="39.37" x2="14.282" y2="39.497" width="0" layer="19" extent="1-16"/>
+</signal>
+<signal name="N$16">
+<contactref element="MCU:IC1" pad="9"/>
+<contactref element="IR_PTR:MOSFET2" pad="P5"/>
+<contactref element="IR_PTR:R4" pad="2"/>
+<wire x1="12.2" y1="38.1" x2="15.182" y2="39.497" width="0" layer="19" extent="1-16"/>
+<wire x1="17.11" y1="35.31" x2="15.182" y2="39.497" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$17">
+<contactref element="MCU:IC1" pad="14"/>
+<contactref element="IR_PTR:PT_TR1" pad="1"/>
+<contactref element="IR_PTR:R5" pad="2"/>
+<wire x1="34.79" y1="39.37" x2="31.75" y2="40.64" width="0" layer="19" extent="1-1"/>
+<wire x1="17.11" y1="32.81" x2="31.75" y2="40.64" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$18">
+<contactref element="MCU:IC1" pad="15"/>
+<contactref element="IR_PTR:PT_TR2" pad="1"/>
+<contactref element="IR_PTR:R6" pad="2"/>
+<wire x1="17.11" y1="32.31" x2="34.79" y2="36.83" width="0" layer="19" extent="1-1"/>
+<wire x1="7.62" y1="40.64" x2="17.11" y2="32.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$19">
+<contactref element="MCU:IC1" pad="10"/>
+<contactref element="IR_PTR:PT_TR3" pad="1"/>
+<contactref element="IR_PTR:R7" pad="2"/>
+<wire x1="17.11" y1="34.81" x2="34.79" y2="34.29" width="0" layer="19" extent="1-1"/>
+<wire x1="10.16" y1="33.02" x2="17.11" y2="34.81" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$20">
+<contactref element="MCU:IC1" pad="11"/>
+<contactref element="IR_PTR:PT_TR4" pad="1"/>
+<contactref element="IR_PTR:R8" pad="2"/>
+<wire x1="17.11" y1="34.31" x2="34.79" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="7.62" y1="33.02" x2="17.11" y2="34.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$21">
+<contactref element="BT_PORT:U$1" pad="P$14"/>
+<contactref element="MCU:IC1" pad="51"/>
+<wire x1="36.793" y1="1.778" x2="25.61" y2="41.31" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$22">
+<contactref element="MCU:IC1" pad="52"/>
+<contactref element="BT_PORT:U$1" pad="P$15"/>
+<wire x1="38.293" y1="1.778" x2="25.11" y2="41.31" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
