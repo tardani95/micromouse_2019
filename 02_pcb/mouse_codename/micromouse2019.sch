@@ -8794,6 +8794,13 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
 </symbol>
+<symbol name="VCCIO" urn="urn:adsk.eagle:symbol:26946/1" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<text x="-0.508" y="0.254" size="0.8128" layer="94">IO</text>
+<pin name="VCCIO" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="+3V3" urn="urn:adsk.eagle:component:26981/1" prefix="+3V3" library_version="1">
@@ -8826,6 +8833,19 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="VCC" symbol="VCC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VCCIO" urn="urn:adsk.eagle:component:26974/1" prefix="VCC" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VCCIO" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -9031,6 +9051,11 @@ DIN A4, landscape with extra doc field</description>
 <modules>
 <module name="POWER_REGULATOR" prefix="PWR" dx="30.48" dy="20.32">
 <ports>
+<port name="+3V3" side="top" coord="-10.16" direction="pwr"/>
+<port name="VCC" side="top" coord="10.16" direction="pwr"/>
+<port name="V_BAT" side="top" coord="0" direction="pwr"/>
+<port name="LDL_EN" side="right" coord="0" direction="in"/>
+<port name="GND" side="bottom" coord="0" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -9050,10 +9075,11 @@ DIN A4, landscape with extra doc field</description>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_B2B-PH-K-S(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:9120814/2"/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_B2B-PH-K-S(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:9120814/2" value="CONN_BAT"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="LDO2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="PS_LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/2"/>
 <part name="LDO1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="PS_TPS735" device="DRVT" package3d_urn="urn:adsk.eagle:package:9120816/1" technology="33"/>
+<part name="V_BAT" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCCIO" device="" value="V_BAT"/>
 </parts>
 <sheets>
 <sheet>
@@ -9157,6 +9183,9 @@ page 16</text>
 <attribute name="NAME" x="91.056640625" y="156.4712" size="2.0837" layer="95" ratio="10" rot="SR0"/>
 <attribute name="VALUE" x="90.8255" y="116.7281" size="2.086040625" layer="96" ratio="10" rot="SR0"/>
 </instance>
+<instance part="V_BAT" gate="G$1" x="50.8" y="160.02" smashed="yes">
+<attribute name="VALUE" x="48.26" y="157.48" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9251,7 +9280,7 @@ page 16</text>
 <pinref part="LDO2" gate="G$1" pin="EN"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="V_BAT" class="0">
 <segment>
 <wire x1="86.36" y1="96.52" x2="60.96" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
@@ -9274,14 +9303,21 @@ page 16</text>
 <pinref part="LDO2" gate="G$1" pin="IN"/>
 <pinref part="LDO1" gate="A" pin="IN"/>
 <pinref part="LDO1" gate="A" pin="EN"/>
+<pinref part="V_BAT" gate="G$1" pin="VCCIO"/>
+<wire x1="50.8" y1="157.48" x2="50.8" y2="149.86" width="0.1524" layer="91"/>
+<label x="38.1" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 </module>
-<module name="INERTIAL_MEASUREMENT_UNIT" prefix="IMU" dx="38.1" dy="20.32">
+<module name="INERTIAL_MEASUREMENT_UNIT" prefix="IMU" dx="35.56" dy="15.24">
 <ports>
+<port name="SDA" side="right" coord="-2.54" direction="io"/>
+<port name="SCL" side="right" coord="2.54" direction="io"/>
+<port name="+3V3" side="left" coord="5.08" direction="pwr"/>
+<port name="GND" side="left" coord="-5.08" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -9472,8 +9508,14 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </sheet>
 </sheets>
 </module>
-<module name="MOTOR_DRIVER" prefix="MOT" dx="38.1" dy="20.32">
+<module name="MOTOR_DRIVER" prefix="MOT" dx="25.4" dy="20.32">
 <ports>
+<port name="VCC" side="right" coord="7.62" direction="pwr"/>
+<port name="GND" side="right" coord="-7.62" direction="pwr"/>
+<port name="DRV_A_PHASE" side="left" coord="7.62" direction="in"/>
+<port name="DRV_A_ENBL" side="left" coord="5.08" direction="in"/>
+<port name="DRV_B_PHASE" side="left" coord="-5.08" direction="in"/>
+<port name="DRV_B_ENBL" side="left" coord="-7.62" direction="in"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -9654,15 +9696,20 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </sheet>
 </sheets>
 </module>
-<module name="ENCODER_PORT" prefix="ENC_PORT" dx="38.1" dy="20.32">
+<module name="ENCODER_PORT" prefix="ENC_PORT" dx="35.56" dy="15.24">
 <ports>
-<port name="ENCODER_DATA" side="right" coord="-5.08" direction="out"/>
+<port name="ENC_CHA" side="right" coord="2.54" direction="out"/>
+<port name="ENC_CHB" side="right" coord="0" direction="out"/>
+<port name="+3V3" side="left" coord="5.08" direction="pwr"/>
+<port name="GND" side="left" coord="-5.08" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
 <part name="PORT1" library="parts_not_managed" deviceset="ENC_PORT" device="_BASE"/>
+<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9679,22 +9726,68 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="NAME" x="121.92" y="110.998" size="1.27" layer="95"/>
 <attribute name="VALUE" x="121.92" y="96.012" size="1.27" layer="95"/>
 </instance>
+<instance part="GND1" gate="1" x="114.3" y="91.44" smashed="yes">
+<attribute name="VALUE" x="111.76" y="88.9" size="1.778" layer="96"/>
+</instance>
+<instance part="+3V1" gate="G$1" x="114.3" y="116.84" smashed="yes">
+<attribute name="VALUE" x="111.76" y="111.76" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="ENC_CHA" class="0">
+<segment>
+<pinref part="PORT1" gate="G$1" pin="A"/>
+<wire x1="119.38" y1="105.41" x2="110.49" y2="105.41" width="0.1524" layer="91"/>
+<wire x1="110.49" y1="105.41" x2="109.22" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
+<label x="96.52" y="106.68" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC_CHB" class="0">
+<segment>
+<pinref part="PORT1" gate="G$1" pin="B"/>
+<wire x1="119.38" y1="102.87" x2="110.49" y2="102.87" width="0.1524" layer="91"/>
+<wire x1="110.49" y1="102.87" x2="109.22" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="101.6" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
+<label x="96.52" y="101.6" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="PORT1" gate="G$1" pin="GND"/>
+<wire x1="119.38" y1="100.33" x2="114.3" y2="100.33" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="100.33" x2="114.3" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+</net>
+<net name="+3V3" class="0">
+<segment>
+<pinref part="PORT1" gate="G$1" pin="+3V3"/>
+<wire x1="119.38" y1="107.95" x2="114.3" y2="107.95" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="107.95" x2="114.3" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </module>
-<module name="WIRELESS_MODUL_PORT" prefix="BT_PORT" dx="30.48" dy="20.32">
+<module name="WIRELESS_MODUL_PORT" prefix="BT_PORT" dx="25.4" dy="20.32">
 <ports>
+<port name="JDY-10_TX" side="top" coord="0" direction="out"/>
+<port name="JDY-10_RX" side="top" coord="-2.54" direction="in"/>
+<port name="+3V3" side="left" coord="7.62" direction="pwr"/>
+<port name="GND" side="left" coord="-7.62" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
 <part name="U$1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="WM_JDY-10_STANDING" device="" package3d_urn="urn:adsk.eagle:package:8988323/2"/>
+<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9708,16 +9801,75 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
 <instance part="U$1" gate="G$1" x="132.08" y="106.68" smashed="yes"/>
+<instance part="+3V1" gate="G$1" x="106.68" y="127" smashed="yes">
+<attribute name="VALUE" x="104.14" y="121.92" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND1" gate="1" x="106.68" y="106.68" smashed="yes">
+<attribute name="VALUE" x="104.14" y="104.14" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="JDY-10_RX" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="RX/C7"/>
+<wire x1="149.86" y1="119.38" x2="167.64" y2="119.38" width="0.1524" layer="91"/>
+<label x="154.94" y="119.38" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="JDY-10_TX" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="TX/C6"/>
+<wire x1="149.86" y1="114.3" x2="167.64" y2="114.3" width="0.1524" layer="91"/>
+<label x="154.94" y="114.3" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="114.3" y1="114.3" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="114.3" x2="106.68" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+</net>
+<net name="+3V3" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<wire x1="114.3" y1="119.38" x2="106.68" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="119.38" x2="106.68" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
 </module>
-<module name="MICROCONTROLLER" prefix="MCU" dx="30.48" dy="50.8">
+<module name="MICROCONTROLLER" prefix="MCU" dx="55.88" dy="60.96">
 <ports>
+<port name="+3V3" side="top" coord="-7.62" direction="pwr"/>
+<port name="V_BAT_LEVEL" side="top" coord="7.62" direction="in"/>
+<port name="UART3_TX" side="bottom" coord="-7.62" direction="out"/>
+<port name="UART3_RX" side="bottom" coord="-5.08" direction="in"/>
+<port name="DRV_A_PHASE" side="right" coord="25.4" direction="out"/>
+<port name="DRV_A_ENBL" side="right" coord="22.86" direction="out"/>
+<port name="DRV_B_PHASE" side="right" coord="12.7" direction="out"/>
+<port name="DRV_B_ENBL" side="right" coord="10.16" direction="out"/>
+<port name="ENC_LEFT_CHA" side="left" coord="20.32" direction="in"/>
+<port name="ENC_LEFT_CHB" side="left" coord="17.78" direction="in"/>
+<port name="ENC_RIGHT_CHA" side="left" coord="5.08" direction="in"/>
+<port name="ENC_RIGHT_CHB" side="left" coord="2.54" direction="in"/>
+<port name="IMU1_SCL" side="left" coord="-12.7" direction="io"/>
+<port name="IMU1_SDA" side="left" coord="-17.78" direction="io"/>
+<port name="GND" side="bottom" coord="12.7" direction="pwr"/>
+<port name="IRD1" side="right" coord="0" direction="out"/>
+<port name="IRD2" side="right" coord="-2.54" direction="out"/>
+<port name="IRD3" side="right" coord="-5.08" direction="out"/>
+<port name="IRD4" side="right" coord="-7.62" direction="out"/>
+<port name="PTR1" side="right" coord="-12.7" direction="in"/>
+<port name="PTR2" side="right" coord="-15.24" direction="in"/>
+<port name="PTR3" side="right" coord="-17.78" direction="in"/>
+<port name="PTR4" side="right" coord="-20.32" direction="in"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -9899,21 +10051,24 @@ to set it to “0”.</text>
 <busses>
 <bus name="IRS_AND_PTS:IRD1,IRD2,IRD3,IRD4,PTR1,PTR2,PTR3,PTR4">
 <segment>
-<wire x1="254" y1="134.62" x2="254" y2="152.4" width="0.762" layer="92"/>
+<wire x1="254" y1="134.62" x2="254" y2="149.86" width="0.762" layer="92"/>
 <label x="256.54" y="129.54" size="1.778" layer="95" rot="R90"/>
 <wire x1="254" y1="134.62" x2="254" y2="129.54" width="0.762" layer="92"/>
+<wire x1="254" y1="149.86" x2="254" y2="152.4" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="ENCODER_LEFT:ENC_LEFT_CHA,ENC_LEFT_CHB">
 <segment>
-<wire x1="254" y1="124.46" x2="254" y2="111.76" width="0.762" layer="92"/>
+<wire x1="254" y1="124.46" x2="254" y2="114.3" width="0.762" layer="92"/>
 <label x="256.54" y="106.68" size="1.778" layer="95" rot="R90"/>
+<wire x1="254" y1="114.3" x2="254" y2="111.76" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="MOTOR_DRIVER:DRV_A_ENBL,DRV_A_PHASE,DRV_B_ENBL,DRV_B_PHASE">
 <segment>
 <wire x1="254" y1="99.06" x2="254" y2="83.82" width="0.762" layer="92"/>
 <label x="256.54" y="83.82" size="1.778" layer="95" rot="R90"/>
+<wire x1="254" y1="83.82" x2="251.46" y2="83.82" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="MPU6050:IMU1_SCL,IMU1_SDA,IMU2_SCL,IMU2_SDA">
@@ -10524,8 +10679,18 @@ to set it to “0”.</text>
 </sheet>
 </sheets>
 </module>
-<module name="IR_LED_DRIVER_DUAL" prefix="IR_LED_DUAL" dx="38.1" dy="20.32">
+<module name="IR_LED_DRIVER_DUAL" prefix="IR_LED_DUAL" dx="25.4" dy="25.4">
 <ports>
+<port name="PTR1" side="right" coord="2.54" direction="out"/>
+<port name="PTR2" side="right" coord="5.08" direction="out"/>
+<port name="PTR3" side="right" coord="7.62" direction="out"/>
+<port name="PTR4" side="right" coord="10.16" direction="out"/>
+<port name="IRD1" side="right" coord="-10.16" direction="in"/>
+<port name="IRD2" side="right" coord="-7.62" direction="in"/>
+<port name="IRD3" side="right" coord="-5.08" direction="in"/>
+<port name="IRD4" side="right" coord="-2.54" direction="in"/>
+<port name="GND" side="left" coord="10.16" direction="pwr"/>
+<port name="VCC" side="left" coord="-10.16" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -10558,9 +10723,9 @@ to set it to “0”.</text>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="2R"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="3V3_1" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
-<part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="3V3_2" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
-<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10673,15 +10838,15 @@ to set it to “0”.</text>
 <attribute name="NAME" x="206.4258" y="59.817" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="211.582" y="59.817" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="+3V4" gate="G$1" x="208.28" y="76.2" smashed="yes">
-<attribute name="VALUE" x="205.74" y="71.12" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="3V3_2" gate="P" x="228.6" y="60.96" smashed="yes" rot="R90">
 <attribute name="NAME" x="226.7458" y="59.817" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="231.902" y="59.817" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="+3V1" gate="G$1" x="228.6" y="76.2" smashed="yes">
-<attribute name="VALUE" x="226.06" y="71.12" size="1.778" layer="96" rot="R90"/>
+<instance part="P+1" gate="VCC" x="208.28" y="76.2" smashed="yes">
+<attribute name="VALUE" x="205.74" y="73.66" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P+2" gate="VCC" x="228.6" y="76.2" smashed="yes">
+<attribute name="VALUE" x="226.06" y="73.66" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -10918,16 +11083,16 @@ to set it to “0”.</text>
 <wire x1="210.82" y1="134.62" x2="210.82" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="+3V3" class="0">
+<net name="VCC" class="0">
 <segment>
-<pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <pinref part="3V3_1" gate="P" pin="P"/>
 <wire x1="208.28" y1="73.66" x2="208.28" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
 <pinref part="3V3_2" gate="P" pin="P"/>
 <wire x1="228.6" y1="73.66" x2="228.6" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
 </segment>
 </net>
 </nets>
@@ -10937,35 +11102,48 @@ to set it to “0”.</text>
 </modules>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="VCC1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCCIO" device="" value="V_BAT"/>
+<part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="VCC2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCCIO" device="" value="V_BAT"/>
+<part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
+<part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <moduleinsts>
-<moduleinst name="PWR" module="POWER_REGULATOR" x="129.54" y="144.78">
-<attribute name="NAME" x="129.54" y="144.78" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="PWR" module="POWER_REGULATOR" x="50.8" y="147.32">
+<attribute name="NAME" x="50.8" y="147.32" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="IMU" module="INERTIAL_MEASUREMENT_UNIT" x="50.8" y="38.1">
-<attribute name="NAME" x="50.8" y="38.1" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="IMU" module="INERTIAL_MEASUREMENT_UNIT" x="66.04" y="71.12">
+<attribute name="NAME" x="66.04" y="71.12" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="MOT" module="MOTOR_DRIVER" x="195.58" y="93.98">
-<attribute name="NAME" x="195.58" y="93.98" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="MOT" module="MOTOR_DRIVER" x="187.96" y="104.14">
+<attribute name="NAME" x="187.96" y="104.14" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="ENC_PORT_LEFT" module="ENCODER_PORT" x="50.8" y="86.36">
-<attribute name="NAME" x="50.8" y="86.36" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="ENC_PORT_LEFT" module="ENCODER_PORT" x="66.04" y="104.14">
+<attribute name="NAME" x="68.58" y="99.06" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="BT_PORT" module="WIRELESS_MODUL_PORT" x="129.54" y="35.56">
-<attribute name="NAME" x="129.54" y="35.56" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="BT_PORT" module="WIRELESS_MODUL_PORT" x="124.46" y="30.48">
+<attribute name="NAME" x="124.46" y="25.4" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="50.8" y="66.04">
-<attribute name="NAME" x="50.8" y="66.04" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="66.04" y="88.9">
+<attribute name="NAME" x="68.58" y="83.82" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="86.36">
 <attribute name="NAME" x="129.54" y="86.36" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="IR_PTR" module="IR_LED_DRIVER_DUAL" x="50.8" y="134.62">
-<attribute name="NAME" value="IR_PTR" x="50.8" y="134.62" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="IR_PTR" module="IR_LED_DRIVER_DUAL" x="187.96" y="76.2" rot="R180">
+<attribute name="NAME" x="190.5" y="76.2" size="2.032" layer="95" rot="R270" align="bottom-center"/>
 </moduleinst>
 </moduleinsts>
 <instances>
@@ -10975,10 +11153,292 @@ to set it to “0”.</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
+<instance part="GND1" gate="1" x="50.8" y="127" smashed="yes">
+<attribute name="VALUE" x="48.26" y="124.46" size="1.778" layer="96"/>
+</instance>
+<instance part="+3V1" gate="G$1" x="40.64" y="167.64" smashed="yes">
+<attribute name="VALUE" x="38.1" y="162.56" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P+1" gate="VCC" x="60.96" y="167.64" smashed="yes">
+<attribute name="VALUE" x="58.42" y="165.1" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="VCC1" gate="G$1" x="50.8" y="167.64" smashed="yes">
+<attribute name="VALUE" x="48.26" y="165.1" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="+3V2" gate="G$1" x="121.92" y="129.54" smashed="yes">
+<attribute name="VALUE" x="119.38" y="124.46" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="+3V3" gate="G$1" x="35.56" y="116.84" smashed="yes">
+<attribute name="VALUE" x="33.02" y="111.76" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND2" gate="1" x="40.64" y="55.88" smashed="yes">
+<attribute name="VALUE" x="38.1" y="53.34" size="1.778" layer="96"/>
+</instance>
+<instance part="GND3" gate="1" x="142.24" y="45.72" smashed="yes">
+<attribute name="VALUE" x="139.7" y="43.18" size="1.778" layer="96"/>
+</instance>
+<instance part="GND4" gate="1" x="213.36" y="55.88" smashed="yes">
+<attribute name="VALUE" x="210.82" y="53.34" size="1.778" layer="96"/>
+</instance>
+<instance part="P+2" gate="VCC" x="208.28" y="124.46" smashed="yes">
+<attribute name="VALUE" x="205.74" y="121.92" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="VCC2" gate="G$1" x="137.16" y="129.54" smashed="yes">
+<attribute name="VALUE" x="134.62" y="127" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="+3V4" gate="G$1" x="101.6" y="45.72" smashed="yes">
+<attribute name="VALUE" x="99.06" y="40.64" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND5" gate="1" x="101.6" y="15.24" smashed="yes">
+<attribute name="VALUE" x="99.06" y="12.7" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="GND" class="0">
+<segment>
+<portref moduleinst="PWR" port="GND"/>
+<wire x1="50.8" y1="132.08" x2="50.8" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+<segment>
+<portref moduleinst="ENC_PORT_LEFT" port="GND"/>
+<wire x1="43.18" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
+<portref moduleinst="ENC_PORT_RIGHT" port="GND"/>
+<wire x1="40.64" y1="99.06" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="83.82" x2="43.18" y2="83.82" width="0.1524" layer="91"/>
+<portref moduleinst="IMU" port="GND"/>
+<wire x1="40.64" y1="83.82" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="66.04" x2="43.18" y2="66.04" width="0.1524" layer="91"/>
+<junction x="40.64" y="83.82"/>
+<wire x1="40.64" y1="66.04" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
+<junction x="40.64" y="66.04"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<portref moduleinst="MCU" port="GND"/>
+<wire x1="142.24" y1="50.8" x2="142.24" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
+<segment>
+<portref moduleinst="MOT" port="GND"/>
+<wire x1="205.74" y1="96.52" x2="213.36" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="96.52" x2="213.36" y2="66.04" width="0.1524" layer="91"/>
+<portref moduleinst="IR_PTR" port="GND"/>
+<wire x1="213.36" y1="66.04" x2="213.36" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="66.04" x2="213.36" y2="66.04" width="0.1524" layer="91"/>
+<junction x="213.36" y="66.04"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+</segment>
+<segment>
+<portref moduleinst="BT_PORT" port="GND"/>
+<wire x1="106.68" y1="22.86" x2="101.6" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="101.6" y1="22.86" x2="101.6" y2="17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="+3V3" class="0">
+<segment>
+<portref moduleinst="PWR" port="+3V3"/>
+<wire x1="40.64" y1="162.56" x2="40.64" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<portref moduleinst="MCU" port="+3V3"/>
+<wire x1="121.92" y1="121.92" x2="121.92" y2="127" width="0.1524" layer="91"/>
+<pinref part="+3V2" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<portref moduleinst="ENC_PORT_LEFT" port="+3V3"/>
+<wire x1="43.18" y1="109.22" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
+<portref moduleinst="ENC_PORT_RIGHT" port="+3V3"/>
+<wire x1="43.18" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="93.98" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
+<portref moduleinst="IMU" port="+3V3"/>
+<wire x1="43.18" y1="76.2" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="76.2" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
+<junction x="35.56" y="93.98"/>
+<wire x1="35.56" y1="109.22" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
+<junction x="35.56" y="109.22"/>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<portref moduleinst="BT_PORT" port="+3V3"/>
+<wire x1="106.68" y1="38.1" x2="101.6" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="+3V4" gate="G$1" pin="+3V3"/>
+<wire x1="101.6" y1="38.1" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VCC" class="0">
+<segment>
+<portref moduleinst="PWR" port="VCC"/>
+<wire x1="60.96" y1="162.56" x2="60.96" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<portref moduleinst="MOT" port="VCC"/>
+<wire x1="205.74" y1="111.76" x2="208.28" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="111.76" x2="208.28" y2="121.92" width="0.1524" layer="91"/>
+<portref moduleinst="IR_PTR" port="VCC"/>
+<wire x1="205.74" y1="86.36" x2="208.28" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="86.36" x2="208.28" y2="111.76" width="0.1524" layer="91"/>
+<junction x="208.28" y="111.76"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
+</segment>
+</net>
+<net name="VCCIO" class="0">
+<segment>
+<portref moduleinst="PWR" port="V_BAT"/>
+<wire x1="50.8" y1="162.56" x2="50.8" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="VCC1" gate="G$1" pin="VCCIO"/>
+</segment>
+<segment>
+<pinref part="VCC2" gate="G$1" pin="VCCIO"/>
+<portref moduleinst="MCU" port="V_BAT_LEVEL"/>
+<wire x1="137.16" y1="127" x2="137.16" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<portref moduleinst="IMU" port="SCL"/>
+<portref moduleinst="MCU" port="IMU1_SCL"/>
+<wire x1="88.9" y1="73.66" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<portref moduleinst="IMU" port="SDA"/>
+<portref moduleinst="MCU" port="IMU1_SDA"/>
+<wire x1="88.9" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHA"/>
+<portref moduleinst="MCU" port="ENC_RIGHT_CHA"/>
+<wire x1="88.9" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHB"/>
+<portref moduleinst="MCU" port="ENC_RIGHT_CHB"/>
+<wire x1="88.9" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHB"/>
+<portref moduleinst="MCU" port="ENC_LEFT_CHB"/>
+<wire x1="88.9" y1="104.14" x2="96.52" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHA"/>
+<portref moduleinst="MCU" port="ENC_LEFT_CHA"/>
+<wire x1="88.9" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<portref moduleinst="MCU" port="DRV_A_PHASE"/>
+<portref moduleinst="MOT" port="DRV_A_PHASE"/>
+<wire x1="162.56" y1="111.76" x2="170.18" y2="111.76" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<portref moduleinst="MCU" port="DRV_A_ENBL"/>
+<portref moduleinst="MOT" port="DRV_A_ENBL"/>
+<wire x1="162.56" y1="109.22" x2="170.18" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$11" class="0">
+<segment>
+<portref moduleinst="MCU" port="DRV_B_PHASE"/>
+<portref moduleinst="MOT" port="DRV_B_PHASE"/>
+<wire x1="162.56" y1="99.06" x2="170.18" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<portref moduleinst="MCU" port="DRV_B_ENBL"/>
+<portref moduleinst="MOT" port="DRV_B_ENBL"/>
+<wire x1="162.56" y1="96.52" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<portref moduleinst="MCU" port="IRD1"/>
+<portref moduleinst="IR_PTR" port="IRD1"/>
+<wire x1="162.56" y1="86.36" x2="170.18" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<portref moduleinst="MCU" port="IRD2"/>
+<portref moduleinst="IR_PTR" port="IRD2"/>
+<wire x1="162.56" y1="83.82" x2="170.18" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<portref moduleinst="MCU" port="IRD3"/>
+<portref moduleinst="IR_PTR" port="IRD3"/>
+<wire x1="162.56" y1="81.28" x2="170.18" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<portref moduleinst="MCU" port="IRD4"/>
+<portref moduleinst="IR_PTR" port="IRD4"/>
+<wire x1="162.56" y1="78.74" x2="170.18" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<portref moduleinst="MCU" port="PTR1"/>
+<portref moduleinst="IR_PTR" port="PTR1"/>
+<wire x1="162.56" y1="73.66" x2="170.18" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<portref moduleinst="MCU" port="PTR2"/>
+<portref moduleinst="IR_PTR" port="PTR2"/>
+<wire x1="162.56" y1="71.12" x2="170.18" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<portref moduleinst="MCU" port="PTR3"/>
+<portref moduleinst="IR_PTR" port="PTR3"/>
+<wire x1="162.56" y1="68.58" x2="170.18" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<portref moduleinst="MCU" port="PTR4"/>
+<portref moduleinst="IR_PTR" port="PTR4"/>
+<wire x1="162.56" y1="66.04" x2="170.18" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<portref moduleinst="BT_PORT" port="JDY-10_RX"/>
+<portref moduleinst="MCU" port="UART3_TX"/>
+<wire x1="121.92" y1="45.72" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<portref moduleinst="MCU" port="UART3_RX"/>
+<portref moduleinst="BT_PORT" port="JDY-10_TX"/>
+<wire x1="124.46" y1="50.8" x2="124.46" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
