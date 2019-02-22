@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
 <eagle version="9.3.1">
 <drawing>
 <settings>
@@ -6,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -831,13 +832,14 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
 </package>
-<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/1">
+<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/1" locally_modified="yes">
 <description>Mouse side of the connection of mouse and encoder</description>
 <smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
 <text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+<wire x1="1.016" y1="-2.54" x2="1.016" y2="2.54" width="0.127" layer="51"/>
 </package>
 <package name="DMN2990UDJ-7" urn="urn:adsk.eagle:footprint:9141314/1">
 <description>SOT-963</description>
@@ -991,7 +993,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <packageinstance name="ENC_PORT_MODULE"/>
 </packageinstances>
 </package3d>
-<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/4" type="model">
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/4" locally_modified="yes" type="model">
 <description>Mouse side of the connection of mouse and encoder</description>
 <packageinstances>
 <packageinstance name="ENC_PORT_BASE"/>
@@ -1529,7 +1531,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="CONN_B2B-PH-K-S(LF)(SN)" prefix="J" urn="urn:adsk.eagle:component:9120819/5">
+<deviceset name="CONN_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:component:9120819/5" prefix="J">
 <description>PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header</description>
 <gates>
 <gate name="G$1" symbol="B2B-PH-K-S(LF)(SN)" x="0" y="0"/>
@@ -1556,7 +1558,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="BTN_B3U-1000P" prefix="S" urn="urn:adsk.eagle:component:8879297/8">
+<deviceset name="BTN_B3U-1000P" urn="urn:adsk.eagle:component:8879297/8" prefix="S">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1583,7 +1585,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="MOT_DRV8836" prefix="IC" urn="urn:adsk.eagle:component:8879295/5">
+<deviceset name="MOT_DRV8836" urn="urn:adsk.eagle:component:8879295/5" prefix="IC">
 <description>&lt;b&gt;1.5A Low Voltage Stepper or Single/Dual Brushed DC Motor Driver (PWM or PH/EN Ctrl)&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1621,7 +1623,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;<
 </device>
 </devices>
 </deviceset>
-<deviceset name="PS_TPS735" prefix="LDO" urn="urn:adsk.eagle:component:9120821/3">
+<deviceset name="PS_TPS735" urn="urn:adsk.eagle:component:9120821/3" prefix="LDO">
 <description>500mA, Low Quiescent Current, Ultra-Low Noise, High PSRR  Low Dropout Linear Regulator</description>
 <gates>
 <gate name="A" symbol="TPS735XXDRV" x="0" y="0"/>
@@ -1650,7 +1652,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;<
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_BM02B-SRSS-TB(LFSN)" prefix="J" urn="urn:adsk.eagle:component:9123920/4">
+<deviceset name="CONN_BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9123920/4" prefix="J">
 <description>&lt;b&gt;2 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 2 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1679,7 +1681,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="IMU_MPU-6050" prefix="IC" urn="urn:adsk.eagle:component:8879294/6">
+<deviceset name="IMU_MPU-6050" urn="urn:adsk.eagle:component:8879294/6" prefix="IC">
 <description>&lt;b&gt;IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-1112286.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1729,7 +1731,7 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 </device>
 </devices>
 </deviceset>
-<deviceset name="WM_ESP8266-12E" prefix="SJR" uservalue="yes" urn="urn:adsk.eagle:component:8879291/3">
+<deviceset name="WM_ESP8266-12E" urn="urn:adsk.eagle:component:8879291/3" prefix="SJR" uservalue="yes">
 <description>
 &lt;b&gt;ESP8266-12E Library for Eagle CAD&lt;/b&gt;&lt;p&gt;
 The author not responsible for any damages or errors!.&lt;p&gt;
@@ -1773,7 +1775,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="WM_BC832" prefix="U" urn="urn:adsk.eagle:component:8979147/3">
+<deviceset name="WM_BC832" urn="urn:adsk.eagle:component:8979147/3" prefix="U">
 <description>Micro BLE 5 Module: Nordic nRF52832 SoC with chip antenna and castellated pins</description>
 <gates>
 <gate name="G$1" symbol="BC832" x="0" y="0"/>
@@ -1834,7 +1836,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 </device>
 </devices>
 </deviceset>
-<deviceset name="MCU_STM32F405RGT6" prefix="IC" urn="urn:adsk.eagle:component:8879293/5">
+<deviceset name="MCU_STM32F405RGT6" urn="urn:adsk.eagle:component:8879293/5" prefix="IC">
 <description>&lt;b&gt;MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1923,7 +1925,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="PS_TPS82085" prefix="PS" urn="urn:adsk.eagle:component:8879292/4">
+<deviceset name="PS_TPS82085" urn="urn:adsk.eagle:component:8879292/4" prefix="PS">
 <description>&lt;b&gt;TEXAS INSTRUMENTS - TPS82085SILR - DC/DC CONV, SYNC BUCK, 2.4MHZ, USIP-8&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.ti.com/lit/ds/symlink/tps82084.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1957,7 +1959,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/tps82084.pdf"&gt; Datasheet
 </device>
 </devices>
 </deviceset>
-<deviceset name="MCU_STM32F405RGT6_L" prefix="IC" urn="urn:adsk.eagle:component:9050930/5">
+<deviceset name="MCU_STM32F405RGT6_L" urn="urn:adsk.eagle:component:9050930/5" prefix="IC">
 <description>&lt;b&gt;MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -2046,7 +2048,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_SM03B-SRSS-TB(LFSN)" prefix="J" urn="urn:adsk.eagle:component:9126101/4">
+<deviceset name="CONN_SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9126101/4" prefix="J">
 <description>&lt;b&gt;JST (JAPAN SOLDERLESS TERMINALS) - SM03B-SRSS-TB(LF)(SN) - HEADER, R/A, 3WAY&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -2114,7 +2116,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="CON_WIRE" prefix="WIRE_CON" urn="urn:adsk.eagle:component:9141218/3">
+<deviceset name="CON_WIRE" urn="urn:adsk.eagle:component:9141218/3" prefix="WIRE_CON">
 <description>Connection points for wires</description>
 <gates>
 <gate name="G$1" symbol="PINHD4" x="2.54" y="-1.27"/>
@@ -2136,7 +2138,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="BTN_B3U-3000P" prefix="S" urn="urn:adsk.eagle:component:8879296/7">
+<deviceset name="BTN_B3U-3000P" urn="urn:adsk.eagle:component:8879296/7" prefix="S">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-3000P - TACTILE SWITCH, SIDE ACTUATED, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -2157,7 +2159,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="PS_LDL112" prefix="LDO" urn="urn:adsk.eagle:component:9120820/4">
+<deviceset name="PS_LDL112" urn="urn:adsk.eagle:component:9120820/4" prefix="LDO">
 <description>Low-dropout linear regulator from ST.
 
 The LDL112 is a low-dropout linear regulator,
@@ -2184,7 +2186,7 @@ with a typical dropout voltage of 300 mV.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_BM04B-SRSS-TB(LFSN)" prefix="J" urn="urn:adsk.eagle:component:9120818/5">
+<deviceset name="CONN_BM04B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9120818/5" prefix="J">
 <description>&lt;b&gt;4 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 4 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -2214,7 +2216,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="ENC_PORT" prefix="PORT" urn="urn:adsk.eagle:component:9139946/4">
+<deviceset name="ENC_PORT" urn="urn:adsk.eagle:component:9139946/4" locally_modified="yes" prefix="PORT">
 <description>Connection pins between ENC_PCB and MOUSE_PCB</description>
 <gates>
 <gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
@@ -2250,7 +2252,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS5047D-ATSM" prefix="IC" urn="urn:adsk.eagle:component:9139947/3">
+<deviceset name="AS5047D-ATSM" urn="urn:adsk.eagle:component:9139947/3" prefix="IC">
 <description>&lt;b&gt;ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -2320,7 +2322,7 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 </device>
 </devices>
 </deviceset>
-<deviceset name="FET_DMN2990UDJ-7" prefix="MOSFET" urn="urn:adsk.eagle:component:9120822/3">
+<deviceset name="FET_DMN2990UDJ-7" urn="urn:adsk.eagle:component:9120822/3" prefix="MOSFET">
 <gates>
 <gate name="G$1" symbol="DMN2990UDJ-7" x="0" y="0"/>
 </gates>
