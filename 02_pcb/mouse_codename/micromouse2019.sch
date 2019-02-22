@@ -57,8 +57,15 @@
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -70,12 +77,88 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="7" fill="1" visible="no" active="no"/>
+<layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
+<layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
+<layer number="102" name="Vscore" color="7" fill="1" visible="no" active="yes"/>
+<layer number="103" name="fp3" color="7" fill="1" visible="no" active="yes"/>
+<layer number="104" name="Name" color="7" fill="1" visible="no" active="yes"/>
+<layer number="105" name="Beschreib" color="9" fill="1" visible="no" active="yes"/>
+<layer number="106" name="BGA-Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="107" name="BD-Top" color="5" fill="1" visible="no" active="yes"/>
+<layer number="108" name="fp8" color="7" fill="1" visible="no" active="yes"/>
+<layer number="109" name="fp9" color="7" fill="1" visible="no" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
+<layer number="111" name="LPC17xx" color="7" fill="1" visible="no" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="113" name="ReferenceLS" color="7" fill="1" visible="no" active="no"/>
+<layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
+<layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
+<layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="124" name="bTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="125" name="_tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
+<layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
+<layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="no" active="yes"/>
+<layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
+<layer number="201" name="201bmp" color="2" fill="1" visible="no" active="no"/>
+<layer number="202" name="202bmp" color="3" fill="1" visible="no" active="no"/>
+<layer number="203" name="203bmp" color="4" fill="10" visible="no" active="yes"/>
+<layer number="204" name="204bmp" color="5" fill="10" visible="no" active="yes"/>
+<layer number="205" name="205bmp" color="6" fill="10" visible="no" active="yes"/>
+<layer number="206" name="206bmp" color="7" fill="10" visible="no" active="yes"/>
+<layer number="207" name="207bmp" color="8" fill="10" visible="no" active="yes"/>
+<layer number="208" name="208bmp" color="9" fill="10" visible="no" active="yes"/>
+<layer number="209" name="209bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="210" name="210bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="211" name="211bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="212" name="212bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="213" name="213bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="214" name="214bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="215" name="215bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="216" name="216bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="217" name="217bmp" color="18" fill="1" visible="no" active="no"/>
+<layer number="218" name="218bmp" color="19" fill="1" visible="no" active="no"/>
+<layer number="219" name="219bmp" color="20" fill="1" visible="no" active="no"/>
+<layer number="220" name="220bmp" color="21" fill="1" visible="no" active="no"/>
+<layer number="221" name="221bmp" color="22" fill="1" visible="no" active="no"/>
+<layer number="222" name="222bmp" color="23" fill="1" visible="no" active="no"/>
+<layer number="223" name="223bmp" color="24" fill="1" visible="no" active="no"/>
+<layer number="224" name="224bmp" color="25" fill="1" visible="no" active="no"/>
+<layer number="225" name="225bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="226" name="226bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="227" name="227bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="228" name="228bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="231" name="Eagle3D_PG1" color="7" fill="1" visible="no" active="no"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="no" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="no" active="yes"/>
+<layer number="250" name="Descript" color="7" fill="1" visible="no" active="no"/>
+<layer number="251" name="SMDround" color="7" fill="1" visible="no" active="no"/>
+<layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
+<layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
 <library name="parts" urn="urn:adsk.eagle:library:8879268">
 <packages>
-<package name="B3U-1000P" urn="urn:adsk.eagle:footprint:8988320/1" library_version="9" library_locally_modified="yes">
+<package name="B3U-1000P" urn="urn:adsk.eagle:footprint:9141313/1" library_version="25">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
@@ -90,7 +173,7 @@
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
 <circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 </package>
-<package name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:footprint:8988318/1" library_version="9">
+<package name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:footprint:9141306/1" library_version="25">
 <description>&lt;b&gt;LQFP64&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-5.75" y="3.75" dx="1.45" dy="0.3" layer="1"/>
@@ -189,7 +272,7 @@
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
 <circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 </package>
-<package name="MPU6050" urn="urn:adsk.eagle:footprint:8988319/1" library_version="11">
+<package name="MPU6050" urn="urn:adsk.eagle:footprint:9141315/1" library_version="25">
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-1.975" y="1.25" dx="0.85" dy="0.35" layer="1"/>
@@ -243,7 +326,7 @@
 <wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.2" width="0.1" layer="21"/>
 <wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.3" width="0.1" layer="21" curve="180"/>
 </package>
-<package name="DMN2990UDJ-7" urn="urn:adsk.eagle:footprint:9120804/1" library_version="14" library_locally_modified="yes">
+<package name="DMN2990UDJ-7" urn="urn:adsk.eagle:footprint:9141314/1" library_version="25">
 <description>SOT-963</description>
 <smd name="P1" x="-0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
 <smd name="P2" x="-0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
@@ -258,7 +341,7 @@
 <text x="-0.65" y="0.661665625" size="0.254" layer="25">&gt;NAME</text>
 <text x="-0.65" y="-0.881665625" size="0.254" layer="27">&gt;VALUE</text>
 </package>
-<package name="SON65P210X210X80-7N" urn="urn:adsk.eagle:footprint:9120803/1" library_version="14" library_locally_modified="yes">
+<package name="SON65P210X210X80-7N" urn="urn:adsk.eagle:footprint:9141311/1" library_version="25">
 <description>SON-6 package from TI.</description>
 <wire x1="-1.0414" y1="-1.0414" x2="1.0414" y2="-1.0414" width="0" layer="51"/>
 <wire x1="1.0414" y1="-1.0414" x2="1.0414" y2="1.0414" width="0" layer="51"/>
@@ -282,7 +365,7 @@
 <smd name="7" x="0" y="0" dx="0.9906" dy="1.6002" layer="1"/>
 <circle x="-0.9906" y="1.27" radius="0.1016" width="0.127" layer="21"/>
 </package>
-<package name="DFN-6" urn="urn:adsk.eagle:footprint:9120810/1" library_version="14" library_locally_modified="yes">
+<package name="DFN-6" urn="urn:adsk.eagle:footprint:9141307/1" library_version="25">
 <description>2x2 mm DFN-6 package footprint</description>
 <wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.127" layer="21"/>
 <wire x1="0.8" y1="1" x2="0.8" y2="-1" width="0.127" layer="21"/>
@@ -305,7 +388,7 @@
 <text x="-0.9525" y="-0.4445" size="0.254" layer="25" rot="R90">&gt;NAME</text>
 <text x="1.143" y="-0.508" size="0.254" layer="25" rot="R90">&gt;VALUE</text>
 </package>
-<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9120811/1" library_version="14" library_locally_modified="yes">
+<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1" library_version="25">
 <wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
 <wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
 <wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
@@ -394,7 +477,7 @@
 <text x="7.8" y="-2.908" size="1.27" layer="21">TOP</text>
 <text x="5.6" y="1.2" size="1.27" layer="21">BOTTOM</text>
 </package>
-<package name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9126099/1" library_version="19" library_locally_modified="yes">
+<package name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9141310/1" library_version="25">
 <description>&lt;b&gt;SM03B-SRSS-TB-ren1&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-1" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
@@ -415,15 +498,31 @@
 <wire x1="-2.5" y1="-0.325" x2="-2.5" y2="-2.673" width="0.2" layer="21"/>
 <wire x1="-2.5" y1="-0.325" x2="-1.61566875" y2="-0.325" width="0.2" layer="21"/>
 </package>
+<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/1" library_version="25">
+<description>Mouse side of the connection of mouse and encoder</description>
+<smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
+<text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+<package name="ENC_PORT_MODULE" urn="urn:adsk.eagle:footprint:9139941/1" library_version="25">
+<description>Encoder side of the connection of mouse and encoder</description>
+<smd name="P1" x="-1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
-<package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/4" type="model" library_version="9" library_locally_modified="yes">
+<package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/5" type="model" library_version="25">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="B3U-1000P"/>
 </packageinstances>
 </package3d>
-<package3d name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:package:8879286/4" type="model" library_version="9">
+<package3d name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:package:8879286/5" type="model" library_version="25">
 <description>&lt;b&gt;LQFP64&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="QFP50P1200X1200X160-64N"/>
@@ -435,31 +534,31 @@
 <packageinstance name="B3U-3000P"/>
 </packageinstances>
 </package3d>
-<package3d name="MPU6050" urn="urn:adsk.eagle:package:8879287/4" type="model" library_version="11">
+<package3d name="MPU6050" urn="urn:adsk.eagle:package:8879287/5" type="model" library_version="25">
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="MPU6050"/>
 </packageinstances>
 </package3d>
-<package3d name="DMN2990UDJ-7" urn="urn:adsk.eagle:package:9120817/1" type="box" library_version="14" library_locally_modified="yes">
+<package3d name="DMN2990UDJ-7" urn="urn:adsk.eagle:package:9120817/2" type="box" library_version="25">
 <description>SOT-963</description>
 <packageinstances>
 <packageinstance name="DMN2990UDJ-7"/>
 </packageinstances>
 </package3d>
-<package3d name="SON65P210X210X80-7N" urn="urn:adsk.eagle:package:9120816/1" type="box" library_version="14" library_locally_modified="yes">
+<package3d name="SON65P210X210X80-7N" urn="urn:adsk.eagle:package:9120816/2" type="box" library_version="25">
 <description>SON-6 package from TI.</description>
 <packageinstances>
 <packageinstance name="SON65P210X210X80-7N"/>
 </packageinstances>
 </package3d>
-<package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/2" type="model" library_version="14" library_locally_modified="yes">
+<package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/3" type="model" library_version="25">
 <description>2x2 mm DFN-6 package footprint</description>
 <packageinstances>
 <packageinstance name="DFN-6"/>
 </packageinstances>
 </package3d>
-<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/2" type="model" library_version="14" library_locally_modified="yes">
+<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/3" type="model" library_version="25">
 <packageinstances>
 <packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
 </packageinstances>
@@ -482,10 +581,22 @@
 <packageinstance name="JDY-10_STANDING"/>
 </packageinstances>
 </package3d>
-<package3d name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9126100/2" type="model" library_version="19" library_locally_modified="yes">
+<package3d name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9126100/3" type="model" library_version="25">
 <description>&lt;b&gt;SM03B-SRSS-TB-ren1&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="SM03B-SRSS-TB(LFSN)"/>
+</packageinstances>
+</package3d>
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/4" type="model" library_version="25">
+<description>Mouse side of the connection of mouse and encoder</description>
+<packageinstances>
+<packageinstance name="ENC_PORT_BASE"/>
+</packageinstances>
+</package3d>
+<package3d name="ENC_PORT_MODULE" urn="urn:adsk.eagle:package:9139944/2" type="box" library_version="25">
+<description>Encoder side of the connection of mouse and encoder</description>
+<packageinstances>
+<packageinstance name="ENC_PORT_MODULE"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -670,7 +781,7 @@
 <pin name="1" x="-5.08" y="0" length="short" direction="pas"/>
 <pin name="2" x="-5.08" y="-2.54" length="short" direction="pas"/>
 </symbol>
-<symbol name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:symbol:9123901/2" locally_modified="yes" library_version="19" library_locally_modified="yes">
+<symbol name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:symbol:9123901/3" library_version="25">
 <wire x1="-2.54" y1="1.27" x2="2.54" y2="1.27" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-3.81" x2="2.54" y2="1.27" width="0.254" layer="94"/>
 <wire x1="2.54" y1="-3.81" x2="-2.54" y2="-3.81" width="0.254" layer="94"/>
@@ -727,9 +838,22 @@
 <pin name="3" x="2.54" y="-5.08" length="short"/>
 <pin name="2" x="2.54" y="-2.54" length="short"/>
 </symbol>
+<symbol name="ENC_PORT" urn="urn:adsk.eagle:symbol:9139938/1" library_version="25">
+<description>Symbol for connection pins between ENC_PCB and MOUSE_PCB</description>
+<pin name="+3V3" x="-2.54" y="10.16" visible="pin" length="short" direction="pwr"/>
+<pin name="A" x="-2.54" y="7.62" visible="pin" length="short" direction="out"/>
+<pin name="B" x="-2.54" y="5.08" visible="pin" length="short" direction="out"/>
+<pin name="GND" x="-2.54" y="2.54" visible="pin" length="short" direction="pas"/>
+<wire x1="0" y1="12.7" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="12.7" x2="0" y2="12.7" width="0.254" layer="94"/>
+<text x="0" y="13.208" size="1.27" layer="95">&gt;NAME</text>
+<text x="0" y="-1.778" size="1.27" layer="95">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="BTN_B3U-1000P" urn="urn:adsk.eagle:component:8879297/7" prefix="S" library_version="19">
+<deviceset name="BTN_B3U-1000P" urn="urn:adsk.eagle:component:8879297/8" prefix="S" library_version="25">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -742,7 +866,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8879289/4"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8879289/5"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -756,7 +880,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="MCU_STM32F405RGT6_L" urn="urn:adsk.eagle:component:9050930/4" prefix="IC" library_version="19">
+<deviceset name="MCU_STM32F405RGT6_L" urn="urn:adsk.eagle:component:9050930/5" prefix="IC" library_version="25">
 <description>&lt;b&gt;MCU 32-Bit, ARM Cortex M4, 1MB Flash STMicroelectronics STM32F405RGT6, 32bit ARM Cortex M4F Microcontroller, 168MHz, 1024 kB Flash, 64-Pin LQFP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -831,7 +955,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <connect gate="G$1" pin="VSS_2" pad="63"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8879286/4"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8879286/5"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -866,7 +990,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="IMU_MPU-6050" urn="urn:adsk.eagle:component:8879294/5" prefix="IC" library_version="19">
+<deviceset name="IMU_MPU-6050" urn="urn:adsk.eagle:component:8879294/6" prefix="IC" library_version="25">
 <description>&lt;b&gt;IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-1112286.pdf"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -902,7 +1026,7 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 <connect gate="G$1" pin="VLOGIC" pad="8"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8879287/4"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8879287/5"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -916,7 +1040,7 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 </device>
 </devices>
 </deviceset>
-<deviceset name="FET_DMN2990UDJ-7" urn="urn:adsk.eagle:component:9120822/2" prefix="MOSFET" library_version="19">
+<deviceset name="FET_DMN2990UDJ-7" urn="urn:adsk.eagle:component:9120822/3" prefix="MOSFET" library_version="25">
 <gates>
 <gate name="G$1" symbol="DMN2990UDJ-7" x="0" y="0"/>
 </gates>
@@ -931,7 +1055,7 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 <connect gate="G$1" pin="SOURCE_2" pad="P4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9120817/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120817/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -939,7 +1063,7 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 </device>
 </devices>
 </deviceset>
-<deviceset name="PS_TPS735" urn="urn:adsk.eagle:component:9120821/2" prefix="LDO" library_version="19">
+<deviceset name="PS_TPS735" urn="urn:adsk.eagle:component:9120821/3" prefix="LDO" library_version="25">
 <description>500mA, Low Quiescent Current, Ultra-Low Noise, High PSRR  Low Dropout Linear Regulator</description>
 <gates>
 <gate name="A" symbol="TPS735XXDRV" x="0" y="0"/>
@@ -956,7 +1080,7 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 <connect gate="A" pin="THERMALPAD" pad="7"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9120816/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120816/2"/>
 </package3dinstances>
 <technologies>
 <technology name="33">
@@ -968,7 +1092,7 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 </device>
 </devices>
 </deviceset>
-<deviceset name="PS_LDL112" urn="urn:adsk.eagle:component:9120820/3" prefix="LDO" library_version="19">
+<deviceset name="PS_LDL112" urn="urn:adsk.eagle:component:9120820/4" prefix="LDO" library_version="25">
 <description>Low-dropout linear regulator from ST.
 
 The LDL112 is a low-dropout linear regulator,
@@ -987,7 +1111,7 @@ with a typical dropout voltage of 300 mV.</description>
 <connect gate="G$1" pin="THERMALPAD" pad="7"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9120815/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120815/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -995,7 +1119,7 @@ with a typical dropout voltage of 300 mV.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:component:9120819/4" prefix="J" library_version="19">
+<deviceset name="CONN_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:component:9120819/5" prefix="J" library_version="25">
 <description>PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header</description>
 <gates>
 <gate name="G$1" symbol="B2B-PH-K-S(LF)(SN)" x="0" y="0"/>
@@ -1007,7 +1131,7 @@ with a typical dropout voltage of 300 mV.</description>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9120814/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120814/3"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -1022,7 +1146,7 @@ with a typical dropout voltage of 300 mV.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9123920/3" locally_modified="yes" prefix="J" library_version="19" library_locally_modified="yes">
+<deviceset name="CONN_BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9123920/4" prefix="J" library_version="25">
 <description>&lt;b&gt;2 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 2 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1117,7 +1241,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;<
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9126101/3" prefix="J" library_version="19" library_locally_modified="yes">
+<deviceset name="CONN_SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:component:9126101/4" prefix="J" library_version="25">
 <description>&lt;b&gt;JST (JAPAN SOLDERLESS TERMINALS) - SM03B-SRSS-TB(LF)(SN) - HEADER, R/A, 3WAY&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -1131,7 +1255,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datashe
 <connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9126100/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9126100/3"/>
 </package3dinstances>
 <technologies>
 <technology name="">
@@ -1142,6 +1266,42 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datashe
 <attribute name="RS_PART_NUMBER" value="5151507P" constant="no"/>
 <attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151507P" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ENC_PORT" urn="urn:adsk.eagle:component:9139946/4" prefix="PORT" library_version="25">
+<description>Connection pins between ENC_PCB and MOUSE_PCB</description>
+<gates>
+<gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_MODULE" package="ENC_PORT_MODULE">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="P3"/>
+<connect gate="G$1" pin="A" pad="P2"/>
+<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="GND" pad="P4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139944/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_BASE" package="ENC_PORT_BASE">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="P3"/>
+<connect gate="G$1" pin="A" pad="P2"/>
+<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="GND" pad="P4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/4"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -8972,73 +9132,6 @@ DIN A4, landscape with extra doc field</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="parts_not_managed">
-<packages>
-<package name="ENC_PORT_MODULE">
-<description>Encoder side of the connection of mouse and encoder</description>
-<smd name="P1" x="-1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
-</package>
-<package name="ENC_PORT_BASE">
-<description>Mouse side of the connection of mouse and encoder</description>
-<smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
-<text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
-</package>
-</packages>
-<symbols>
-<symbol name="ENC_PORT">
-<description>Symbol for connection pins between ENC_PCB and MOUSE_PCB</description>
-<pin name="+3V3" x="-7.62" y="3.81" visible="pin" length="short" direction="pwr"/>
-<pin name="A" x="-7.62" y="1.27" visible="pin" length="short" direction="out"/>
-<pin name="B" x="-7.62" y="-1.27" visible="pin" length="short" direction="out"/>
-<pin name="GND" x="-7.62" y="-3.81" visible="pin" length="short" direction="pas"/>
-<wire x1="-5.08" y1="6.35" x2="-5.08" y2="-6.35" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-6.35" x2="5.08" y2="-6.35" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-6.35" x2="5.08" y2="6.35" width="0.254" layer="94"/>
-<wire x1="5.08" y1="6.35" x2="-5.08" y2="6.35" width="0.254" layer="94"/>
-<text x="-5.08" y="6.858" size="1.27" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-8.128" size="1.27" layer="95">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="ENC_PORT" prefix="PORT">
-<description>Connection pins between ENC_PCB and MOUSE_PCB</description>
-<gates>
-<gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="_MODULE" package="ENC_PORT_MODULE">
-<connects>
-<connect gate="G$1" pin="+3V3" pad="P3"/>
-<connect gate="G$1" pin="A" pad="P2"/>
-<connect gate="G$1" pin="B" pad="P1"/>
-<connect gate="G$1" pin="GND" pad="P4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="_BASE" package="ENC_PORT_BASE">
-<connects>
-<connect gate="G$1" pin="+3V3" pad="P3"/>
-<connect gate="G$1" pin="A" pad="P2"/>
-<connect gate="G$1" pin="B" pad="P1"/>
-<connect gate="G$1" pin="GND" pad="P4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -9075,10 +9168,10 @@ DIN A4, landscape with extra doc field</description>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_B2B-PH-K-S(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:9120814/2" value="CONN_BAT"/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_B2B-PH-K-S(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:9120814/3" value="CONN_BAT"/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="LDO2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="PS_LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/2"/>
-<part name="LDO1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="PS_TPS735" device="DRVT" package3d_urn="urn:adsk.eagle:package:9120816/1" technology="33"/>
+<part name="LDO2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="PS_LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/3"/>
+<part name="LDO1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="PS_TPS735" device="DRVT" package3d_urn="urn:adsk.eagle:package:9120816/2" technology="33"/>
 <part name="V_BAT" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCCIO" device="" value="V_BAT"/>
 </parts>
 <sheets>
@@ -9323,7 +9416,7 @@ page 16</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="INERTIAL_MEASUREMENT_UNIT"/>
-<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="IMU_MPU-6050" device="" package3d_urn="urn:adsk.eagle:package:8879287/4"/>
+<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="IMU_MPU-6050" device="" package3d_urn="urn:adsk.eagle:package:8879287/5"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="2.2n"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9707,7 +9800,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="ENCODER_PORT"/>
-<part name="PORT1" library="parts_not_managed" deviceset="ENC_PORT" device="_BASE"/>
+<part name="PORT1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="ENC_PORT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9139943/4"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
@@ -9722,9 +9815,9 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="PORT1" gate="G$1" x="127" y="104.14" smashed="yes">
-<attribute name="NAME" x="121.92" y="110.998" size="1.27" layer="95"/>
-<attribute name="VALUE" x="121.92" y="96.012" size="1.27" layer="95"/>
+<instance part="PORT1" gate="G$1" x="123.952" y="97.79" smashed="yes">
+<attribute name="NAME" x="123.952" y="112.268" size="1.27" layer="95"/>
+<attribute name="VALUE" x="123.952" y="94.742" size="1.27" layer="95"/>
 </instance>
 <instance part="GND1" gate="1" x="114.3" y="91.44" smashed="yes">
 <attribute name="VALUE" x="111.76" y="88.9" size="1.778" layer="96"/>
@@ -9739,7 +9832,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="ENC_CHA" class="0">
 <segment>
 <pinref part="PORT1" gate="G$1" pin="A"/>
-<wire x1="119.38" y1="105.41" x2="110.49" y2="105.41" width="0.1524" layer="91"/>
+<wire x1="121.412" y1="105.41" x2="110.49" y2="105.41" width="0.1524" layer="91"/>
 <wire x1="110.49" y1="105.41" x2="109.22" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
 <label x="96.52" y="106.68" size="1.778" layer="95"/>
@@ -9748,7 +9841,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="ENC_CHB" class="0">
 <segment>
 <pinref part="PORT1" gate="G$1" pin="B"/>
-<wire x1="119.38" y1="102.87" x2="110.49" y2="102.87" width="0.1524" layer="91"/>
+<wire x1="121.412" y1="102.87" x2="110.49" y2="102.87" width="0.1524" layer="91"/>
 <wire x1="110.49" y1="102.87" x2="109.22" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="101.6" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
 <label x="96.52" y="101.6" size="1.778" layer="95"/>
@@ -9757,7 +9850,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="GND" class="0">
 <segment>
 <pinref part="PORT1" gate="G$1" pin="GND"/>
-<wire x1="119.38" y1="100.33" x2="114.3" y2="100.33" width="0.1524" layer="91"/>
+<wire x1="121.412" y1="100.33" x2="114.3" y2="100.33" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="100.33" x2="114.3" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
@@ -9765,7 +9858,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="+3V3" class="0">
 <segment>
 <pinref part="PORT1" gate="G$1" pin="+3V3"/>
-<wire x1="119.38" y1="107.95" x2="114.3" y2="107.95" width="0.1524" layer="91"/>
+<wire x1="121.412" y1="107.95" x2="114.3" y2="107.95" width="0.1524" layer="91"/>
 <wire x1="114.3" y1="107.95" x2="114.3" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
 </segment>
@@ -9881,15 +9974,15 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="4.7u"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="1u"/>
-<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MCU_STM32F405RGT6_L" device="" package3d_urn="urn:adsk.eagle:package:8879286/4"/>
+<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MCU_STM32F405RGT6_L" device="" package3d_urn="urn:adsk.eagle:package:8879286/5"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="C10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="S4" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/4"/>
-<part name="S1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/4"/>
+<part name="S4" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/5"/>
+<part name="S1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/5"/>
 <part name="S2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
 <part name="S3" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k"/>
@@ -9905,7 +9998,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="MICROCONTROLLERUNIT"/>
 <part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_SM03B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9126100/2" value="CONN_SWD"/>
+<part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_SM03B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9126100/3" value="CONN_SWD"/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -10694,8 +10787,8 @@ to set it to “0”.</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="IR_LED_DRIVER_DUAL"/>
-<part name="MOSFET1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
-<part name="MOSFET2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
+<part name="MOSFET1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/2"/>
+<part name="MOSFET2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/2"/>
 <part name="IR_LED1" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
