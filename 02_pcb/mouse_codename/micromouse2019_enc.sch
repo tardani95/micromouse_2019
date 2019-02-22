@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -57,8 +57,15 @@
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -70,6 +77,82 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="7" fill="1" visible="no" active="no"/>
+<layer number="100" name="Muster" color="7" fill="1" visible="no" active="no"/>
+<layer number="101" name="Patch_Top" color="12" fill="4" visible="no" active="yes"/>
+<layer number="102" name="Vscore" color="7" fill="1" visible="no" active="yes"/>
+<layer number="103" name="fp3" color="7" fill="1" visible="no" active="yes"/>
+<layer number="104" name="Name" color="7" fill="1" visible="no" active="yes"/>
+<layer number="105" name="Beschreib" color="9" fill="1" visible="no" active="yes"/>
+<layer number="106" name="BGA-Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="107" name="BD-Top" color="5" fill="1" visible="no" active="yes"/>
+<layer number="108" name="fp8" color="7" fill="1" visible="no" active="yes"/>
+<layer number="109" name="fp9" color="7" fill="1" visible="no" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
+<layer number="111" name="LPC17xx" color="7" fill="1" visible="no" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="113" name="ReferenceLS" color="7" fill="1" visible="no" active="no"/>
+<layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
+<layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
+<layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="124" name="bTestmark" color="7" fill="1" visible="no" active="yes"/>
+<layer number="125" name="_tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
+<layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
+<layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="no" active="yes"/>
+<layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
+<layer number="201" name="201bmp" color="2" fill="1" visible="no" active="no"/>
+<layer number="202" name="202bmp" color="3" fill="1" visible="no" active="no"/>
+<layer number="203" name="203bmp" color="4" fill="10" visible="no" active="yes"/>
+<layer number="204" name="204bmp" color="5" fill="10" visible="no" active="yes"/>
+<layer number="205" name="205bmp" color="6" fill="10" visible="no" active="yes"/>
+<layer number="206" name="206bmp" color="7" fill="10" visible="no" active="yes"/>
+<layer number="207" name="207bmp" color="8" fill="10" visible="no" active="yes"/>
+<layer number="208" name="208bmp" color="9" fill="10" visible="no" active="yes"/>
+<layer number="209" name="209bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="210" name="210bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="211" name="211bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="212" name="212bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="213" name="213bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="214" name="214bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="215" name="215bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="216" name="216bmp" color="7" fill="1" visible="no" active="yes"/>
+<layer number="217" name="217bmp" color="18" fill="1" visible="no" active="no"/>
+<layer number="218" name="218bmp" color="19" fill="1" visible="no" active="no"/>
+<layer number="219" name="219bmp" color="20" fill="1" visible="no" active="no"/>
+<layer number="220" name="220bmp" color="21" fill="1" visible="no" active="no"/>
+<layer number="221" name="221bmp" color="22" fill="1" visible="no" active="no"/>
+<layer number="222" name="222bmp" color="23" fill="1" visible="no" active="no"/>
+<layer number="223" name="223bmp" color="24" fill="1" visible="no" active="no"/>
+<layer number="224" name="224bmp" color="25" fill="1" visible="no" active="no"/>
+<layer number="225" name="225bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="226" name="226bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="227" name="227bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="228" name="228bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="231" name="Eagle3D_PG1" color="7" fill="1" visible="no" active="no"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="no" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="no" active="yes"/>
+<layer number="250" name="Descript" color="7" fill="1" visible="no" active="no"/>
+<layer number="251" name="SMDround" color="7" fill="1" visible="no" active="no"/>
+<layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
+<layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
@@ -243,6 +326,63 @@
 <wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.2" width="0.1" layer="21"/>
 <wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.3" width="0.1" layer="21" curve="180"/>
 </package>
+<package name="SOP65P640X120-14N" urn="urn:adsk.eagle:footprint:9141304/1" library_version="24">
+<description>&lt;b&gt;AS5047D&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-2.938" y="1.95" dx="1.475" dy="0.45" layer="1"/>
+<smd name="2" x="-2.938" y="1.3" dx="1.475" dy="0.45" layer="1"/>
+<smd name="3" x="-2.938" y="0.65" dx="1.475" dy="0.45" layer="1"/>
+<smd name="4" x="-2.938" y="0" dx="1.475" dy="0.45" layer="1"/>
+<smd name="5" x="-2.938" y="-0.65" dx="1.475" dy="0.45" layer="1"/>
+<smd name="6" x="-2.938" y="-1.3" dx="1.475" dy="0.45" layer="1"/>
+<smd name="7" x="-2.938" y="-1.95" dx="1.475" dy="0.45" layer="1"/>
+<smd name="8" x="2.938" y="-1.95" dx="1.475" dy="0.45" layer="1"/>
+<smd name="9" x="2.938" y="-1.3" dx="1.475" dy="0.45" layer="1"/>
+<smd name="10" x="2.938" y="-0.65" dx="1.475" dy="0.45" layer="1"/>
+<smd name="11" x="2.938" y="0" dx="1.475" dy="0.45" layer="1"/>
+<smd name="12" x="2.938" y="0.65" dx="1.475" dy="0.45" layer="1"/>
+<smd name="13" x="2.938" y="1.3" dx="1.475" dy="0.45" layer="1"/>
+<smd name="14" x="2.938" y="1.95" dx="1.475" dy="0.45" layer="1"/>
+<text x="-1.27" y="3.81" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="-1.27" y="-3.81" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-3.925" y1="2.8" x2="3.925" y2="2.8" width="0.05" layer="51"/>
+<wire x1="3.925" y1="2.8" x2="3.925" y2="-2.8" width="0.05" layer="51"/>
+<wire x1="3.925" y1="-2.8" x2="-3.925" y2="-2.8" width="0.05" layer="51"/>
+<wire x1="-3.925" y1="-2.8" x2="-3.925" y2="2.8" width="0.05" layer="51"/>
+<wire x1="-2.2" y1="2.5" x2="2.2" y2="2.5" width="0.1" layer="51"/>
+<wire x1="2.2" y1="2.5" x2="2.2" y2="-2.5" width="0.1" layer="51"/>
+<wire x1="2.2" y1="-2.5" x2="-2.2" y2="-2.5" width="0.1" layer="51"/>
+<wire x1="-2.2" y1="-2.5" x2="-2.2" y2="2.5" width="0.1" layer="51"/>
+<wire x1="-2.2" y1="1.85" x2="-1.55" y2="2.5" width="0.1" layer="51"/>
+<wire x1="-1.85" y1="2.5" x2="1.85" y2="2.5" width="0.2" layer="21"/>
+<wire x1="1.85" y1="2.5" x2="1.85" y2="-2.5" width="0.2" layer="21"/>
+<wire x1="1.85" y1="-2.5" x2="-1.85" y2="-2.5" width="0.2" layer="21"/>
+<wire x1="-1.85" y1="-2.5" x2="-1.85" y2="2.5" width="0.2" layer="21"/>
+<wire x1="-3.675" y1="2.525" x2="-2.2" y2="2.525" width="0.2" layer="21"/>
+</package>
+<package name="ENC_PORT_MODULE" urn="urn:adsk.eagle:footprint:9139941/1" library_version="20">
+<description>Encoder side of the connection of mouse and encoder</description>
+<smd name="P1" x="-1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
+</package>
+<package name="PINHD4-1.27" urn="urn:adsk.eagle:footprint:9141309/1" library_version="24">
+<pad name="P1" x="-1.905" y="0" drill="0.6" rot="R90"/>
+<pad name="P2" x="-0.635" y="0" drill="0.6" rot="R90"/>
+<pad name="P3" x="0.635" y="0" drill="0.6" rot="R90"/>
+<pad name="P4" x="1.905" y="0" drill="0.6" rot="R90"/>
+<text x="-2.251" y="0.811665625" size="0.508" layer="25">&gt;NAME</text>
+</package>
+<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/1" library_version="24">
+<description>Mouse side of the connection of mouse and encoder</description>
+<smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
+<text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/4" type="model" library_version="9" library_locally_modified="yes">
@@ -267,6 +407,29 @@
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="MPU6050"/>
+</packageinstances>
+</package3d>
+<package3d name="SOP65P640X120-14" urn="urn:adsk.eagle:package:9139945/3" type="model" library_version="24">
+<description>&lt;b&gt;AS5047D&lt;/b&gt;&lt;br&gt;</description>
+<packageinstances>
+<packageinstance name="SOP65P640X120-14N"/>
+</packageinstances>
+</package3d>
+<package3d name="ENC_PORT_MODULE" urn="urn:adsk.eagle:package:9139944/2" type="box" library_version="24">
+<description>Encoder side of the connection of mouse and encoder</description>
+<packageinstances>
+<packageinstance name="ENC_PORT_MODULE"/>
+</packageinstances>
+</package3d>
+<package3d name="PINHD4-1.27" urn="urn:adsk.eagle:package:9141217/3" type="box" library_version="24">
+<packageinstances>
+<packageinstance name="PINHD4-1.27"/>
+</packageinstances>
+</package3d>
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/3" type="box" library_version="24">
+<description>Mouse side of the connection of mouse and encoder</description>
+<packageinstances>
+<packageinstance name="ENC_PORT_BASE"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -395,6 +558,52 @@
 <pin name="SCL" x="33.02" y="-22.86" length="middle" rot="R180"/>
 <pin name="SDA" x="33.02" y="-25.4" length="middle" rot="R180"/>
 <pin name="EP" x="33.02" y="-27.94" length="middle" rot="R180"/>
+</symbol>
+<symbol name="AS5047D-ATSM" urn="urn:adsk.eagle:symbol:9139939/1" library_version="20">
+<wire x1="5.08" y1="2.54" x2="25.4" y2="2.54" width="0.254" layer="94"/>
+<wire x1="25.4" y1="-17.78" x2="25.4" y2="2.54" width="0.254" layer="94"/>
+<wire x1="25.4" y1="-17.78" x2="5.08" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-17.78" width="0.254" layer="94"/>
+<text x="26.67" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="26.67" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="CSN" x="0" y="0" length="middle"/>
+<pin name="CLK" x="0" y="-2.54" length="middle"/>
+<pin name="MISO" x="0" y="-5.08" length="middle"/>
+<pin name="MOSI" x="0" y="-7.62" length="middle"/>
+<pin name="TEST" x="0" y="-10.16" length="middle"/>
+<pin name="B" x="0" y="-12.7" length="middle"/>
+<pin name="A" x="0" y="-15.24" length="middle"/>
+<pin name="I/PWM" x="30.48" y="0" length="middle" rot="R180"/>
+<pin name="GND" x="30.48" y="-2.54" length="middle" rot="R180"/>
+<pin name="VDD3V" x="30.48" y="-5.08" length="middle" rot="R180"/>
+<pin name="VDD" x="30.48" y="-7.62" length="middle" rot="R180"/>
+<pin name="U" x="30.48" y="-10.16" length="middle" rot="R180"/>
+<pin name="V" x="30.48" y="-12.7" length="middle" rot="R180"/>
+<pin name="W/PWM" x="30.48" y="-15.24" length="middle" rot="R180"/>
+</symbol>
+<symbol name="ENC_PORT" urn="urn:adsk.eagle:symbol:9139938/1" library_version="20">
+<description>Symbol for connection pins between ENC_PCB and MOUSE_PCB</description>
+<pin name="+3V3" x="-2.54" y="10.16" visible="pin" length="short" direction="pwr"/>
+<pin name="A" x="-2.54" y="7.62" visible="pin" length="short" direction="out"/>
+<pin name="B" x="-2.54" y="5.08" visible="pin" length="short" direction="out"/>
+<pin name="GND" x="-2.54" y="2.54" visible="pin" length="short" direction="pas"/>
+<wire x1="0" y1="12.7" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="10.16" y2="12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="12.7" x2="0" y2="12.7" width="0.254" layer="94"/>
+<text x="0" y="13.208" size="1.27" layer="95">&gt;NAME</text>
+<text x="0" y="-1.778" size="1.27" layer="95">&gt;VALUE</text>
+</symbol>
+<symbol name="PINHD4" urn="urn:adsk.eagle:symbol:9141215/1" library_version="22" library_locally_modified="yes">
+<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-5.08" x2="1.27" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
+<text x="-6.35" y="8.255" size="1.778" layer="95">&gt;NAME</text>
+<pin name="1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -581,6 +790,106 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 <attribute name="MANUFACTURER_PART_NUMBER" value="MPU-6050" constant="no"/>
 <attribute name="MOUSER_PART_NUMBER" value="410-MPU-6050" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="AS5047D-ATSM" urn="urn:adsk.eagle:component:9139947/3" prefix="IC" library_version="24">
+<description>&lt;b&gt;ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="AS5047D-ATSM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOP65P640X120-14N">
+<connects>
+<connect gate="G$1" pin="A" pad="7"/>
+<connect gate="G$1" pin="B" pad="6"/>
+<connect gate="G$1" pin="CLK" pad="2"/>
+<connect gate="G$1" pin="CSN" pad="1"/>
+<connect gate="G$1" pin="GND" pad="13"/>
+<connect gate="G$1" pin="I/PWM" pad="14"/>
+<connect gate="G$1" pin="MISO" pad="3"/>
+<connect gate="G$1" pin="MOSI" pad="4"/>
+<connect gate="G$1" pin="TEST" pad="5"/>
+<connect gate="G$1" pin="U" pad="10"/>
+<connect gate="G$1" pin="V" pad="9"/>
+<connect gate="G$1" pin="VDD" pad="11"/>
+<connect gate="G$1" pin="VDD3V" pad="12"/>
+<connect gate="G$1" pin="W/PWM" pad="8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139945/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V" constant="no"/>
+<attribute name="HEIGHT" value="1.2mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="ams" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="AS5047D-ATSM" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="985-AS5047D-ATSM" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=985-AS5047D-ATSM" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="1700756" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/1700756" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ENC_PORT" urn="urn:adsk.eagle:component:9139946/3" prefix="PORT" library_version="24">
+<description>Connection pins between ENC_PCB and MOUSE_PCB</description>
+<gates>
+<gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_MODULE" package="ENC_PORT_MODULE">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="P3"/>
+<connect gate="G$1" pin="A" pad="P2"/>
+<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="GND" pad="P4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139944/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_BASE" package="ENC_PORT_BASE">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="P3"/>
+<connect gate="G$1" pin="A" pad="P2"/>
+<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="GND" pad="P4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/3"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CON_WIRE" urn="urn:adsk.eagle:component:9141218/3" prefix="WIRE_CON" library_version="24">
+<description>Connection points for wires</description>
+<gates>
+<gate name="G$1" symbol="PINHD4" x="2.54" y="-1.27"/>
+</gates>
+<devices>
+<device name="" package="PINHD4-1.27">
+<connects>
+<connect gate="G$1" pin="1" pad="P1"/>
+<connect gate="G$1" pin="2" pad="P2"/>
+<connect gate="G$1" pin="3" pad="P3"/>
+<connect gate="G$1" pin="4" pad="P4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9141217/3"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -8472,63 +8781,6 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 <wire x1="-1.016" y1="-1.016" x2="-1.016" y2="1.016" width="0.127" layer="21"/>
 <circle x="-0.9906" y="1.27" radius="0.1016" width="0.127" layer="21"/>
 </package>
-<package name="SOP65P640X120-14N">
-<description>&lt;b&gt;AS5047D&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-2.938" y="1.95" dx="1.475" dy="0.45" layer="1"/>
-<smd name="2" x="-2.938" y="1.3" dx="1.475" dy="0.45" layer="1"/>
-<smd name="3" x="-2.938" y="0.65" dx="1.475" dy="0.45" layer="1"/>
-<smd name="4" x="-2.938" y="0" dx="1.475" dy="0.45" layer="1"/>
-<smd name="5" x="-2.938" y="-0.65" dx="1.475" dy="0.45" layer="1"/>
-<smd name="6" x="-2.938" y="-1.3" dx="1.475" dy="0.45" layer="1"/>
-<smd name="7" x="-2.938" y="-1.95" dx="1.475" dy="0.45" layer="1"/>
-<smd name="8" x="2.938" y="-1.95" dx="1.475" dy="0.45" layer="1"/>
-<smd name="9" x="2.938" y="-1.3" dx="1.475" dy="0.45" layer="1"/>
-<smd name="10" x="2.938" y="-0.65" dx="1.475" dy="0.45" layer="1"/>
-<smd name="11" x="2.938" y="0" dx="1.475" dy="0.45" layer="1"/>
-<smd name="12" x="2.938" y="0.65" dx="1.475" dy="0.45" layer="1"/>
-<smd name="13" x="2.938" y="1.3" dx="1.475" dy="0.45" layer="1"/>
-<smd name="14" x="2.938" y="1.95" dx="1.475" dy="0.45" layer="1"/>
-<text x="-1.27" y="3.81" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="-1.27" y="-3.81" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-3.925" y1="2.8" x2="3.925" y2="2.8" width="0.05" layer="51"/>
-<wire x1="3.925" y1="2.8" x2="3.925" y2="-2.8" width="0.05" layer="51"/>
-<wire x1="3.925" y1="-2.8" x2="-3.925" y2="-2.8" width="0.05" layer="51"/>
-<wire x1="-3.925" y1="-2.8" x2="-3.925" y2="2.8" width="0.05" layer="51"/>
-<wire x1="-2.2" y1="2.5" x2="2.2" y2="2.5" width="0.1" layer="51"/>
-<wire x1="2.2" y1="2.5" x2="2.2" y2="-2.5" width="0.1" layer="51"/>
-<wire x1="2.2" y1="-2.5" x2="-2.2" y2="-2.5" width="0.1" layer="51"/>
-<wire x1="-2.2" y1="-2.5" x2="-2.2" y2="2.5" width="0.1" layer="51"/>
-<wire x1="-2.2" y1="1.85" x2="-1.55" y2="2.5" width="0.1" layer="51"/>
-<wire x1="-1.85" y1="2.5" x2="1.85" y2="2.5" width="0.2" layer="21"/>
-<wire x1="1.85" y1="2.5" x2="1.85" y2="-2.5" width="0.2" layer="21"/>
-<wire x1="1.85" y1="-2.5" x2="-1.85" y2="-2.5" width="0.2" layer="21"/>
-<wire x1="-1.85" y1="-2.5" x2="-1.85" y2="2.5" width="0.2" layer="21"/>
-<wire x1="-3.675" y1="2.525" x2="-2.2" y2="2.525" width="0.2" layer="21"/>
-</package>
-<package name="PINHD4-1.27">
-<pad name="P1" x="-1.905" y="0" drill="0.6" rot="R90"/>
-<pad name="P2" x="-0.635" y="0" drill="0.6" rot="R90"/>
-<pad name="P3" x="0.635" y="0" drill="0.6" rot="R90"/>
-<pad name="P4" x="1.905" y="0" drill="0.6" rot="R90"/>
-<text x="-2.251" y="0.811665625" size="0.508" layer="25">&gt;NAME</text>
-</package>
-<package name="ENC_PORT_MODULE">
-<description>Encoder side of the connection of mouse and encoder</description>
-<smd name="P1" x="-1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
-</package>
-<package name="ENC_PORT_BASE">
-<description>Mouse side of the connection of mouse and encoder</description>
-<smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
-<text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
-</package>
 </packages>
 <symbols>
 <symbol name="B2B-PH-K-S(LF)(SN)">
@@ -8555,67 +8807,20 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 <text x="-7.62" y="6.35" size="1.778" layer="95">&gt;NAME</text>
 <text x="-7.62" y="-10.16" size="1.778" layer="95">&gt;VALUE</text>
 </symbol>
-<symbol name="TPS735XXDRV">
-<description>Symbol for TPS735 SON-6 package version LDO</description>
-<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-20.32" width="0.4064" layer="94"/>
-<wire x1="-12.7" y1="-20.32" x2="12.7" y2="-20.32" width="0.4064" layer="94"/>
-<wire x1="12.7" y1="-20.32" x2="12.7" y2="15.24" width="0.4064" layer="94"/>
+<symbol name="TPS735">
+<description>Symbol for TPS735 LDO</description>
+<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-15.24" width="0.4064" layer="94"/>
+<wire x1="-12.7" y1="-15.24" x2="12.7" y2="-15.24" width="0.4064" layer="94"/>
+<wire x1="12.7" y1="-15.24" x2="12.7" y2="15.24" width="0.4064" layer="94"/>
 <wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.4064" layer="94"/>
 <text x="-13.083359375" y="16.7712" size="2.0837" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-13.3145" y="-22.9719" size="2.086040625" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
+<text x="-13.3145" y="-17.8919" size="2.086040625" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
 <pin name="IN" x="-17.78" y="10.16" length="middle" direction="pwr"/>
 <pin name="EN" x="-17.78" y="5.08" length="middle" direction="in"/>
 <pin name="NR/FB" x="-17.78" y="0" length="middle" direction="in"/>
-<pin name="N/C" x="-17.78" y="-5.08" length="middle" direction="nc"/>
-<pin name="GND" x="-17.78" y="-10.16" length="middle" direction="pas"/>
-<pin name="THERMALPAD" x="-17.78" y="-15.24" length="middle" direction="pas"/>
+<pin name="GND" x="-17.78" y="-5.08" length="middle" direction="pas"/>
+<pin name="THERMALPAD" x="-17.78" y="-10.16" length="middle" direction="pas"/>
 <pin name="OUT" x="17.78" y="10.16" length="middle" direction="pwr" rot="R180"/>
-</symbol>
-<symbol name="AS5047D-ATSM">
-<wire x1="5.08" y1="2.54" x2="25.4" y2="2.54" width="0.254" layer="94"/>
-<wire x1="25.4" y1="-17.78" x2="25.4" y2="2.54" width="0.254" layer="94"/>
-<wire x1="25.4" y1="-17.78" x2="5.08" y2="-17.78" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-17.78" width="0.254" layer="94"/>
-<text x="26.67" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="26.67" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="CSN" x="0" y="0" length="middle"/>
-<pin name="CLK" x="0" y="-2.54" length="middle"/>
-<pin name="MISO" x="0" y="-5.08" length="middle"/>
-<pin name="MOSI" x="0" y="-7.62" length="middle"/>
-<pin name="TEST" x="0" y="-10.16" length="middle"/>
-<pin name="B" x="0" y="-12.7" length="middle"/>
-<pin name="A" x="0" y="-15.24" length="middle"/>
-<pin name="I/PWM" x="30.48" y="0" length="middle" rot="R180"/>
-<pin name="GND" x="30.48" y="-2.54" length="middle" rot="R180"/>
-<pin name="VDD3V" x="30.48" y="-5.08" length="middle" rot="R180"/>
-<pin name="VDD" x="30.48" y="-7.62" length="middle" rot="R180"/>
-<pin name="U" x="30.48" y="-10.16" length="middle" rot="R180"/>
-<pin name="V" x="30.48" y="-12.7" length="middle" rot="R180"/>
-<pin name="W/PWM" x="30.48" y="-15.24" length="middle" rot="R180"/>
-</symbol>
-<symbol name="PINHD4">
-<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-5.08" x2="1.27" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
-<text x="-6.35" y="8.255" size="1.778" layer="95">&gt;NAME</text>
-<pin name="1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="2" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-<symbol name="ENC_PORT">
-<description>Symbol for connection pins between ENC_PCB and MOUSE_PCB</description>
-<pin name="+3V3" x="-10.16" y="3.81" length="middle" direction="pwr"/>
-<pin name="A" x="-10.16" y="1.27" length="middle" direction="out"/>
-<pin name="B" x="-10.16" y="-1.27" length="middle" direction="out"/>
-<pin name="GND" x="-10.16" y="-3.81" length="middle" direction="pas"/>
-<wire x1="-5.08" y1="6.35" x2="-5.08" y2="-6.35" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-6.35" x2="5.08" y2="-6.35" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-6.35" x2="5.08" y2="6.35" width="0.254" layer="94"/>
-<wire x1="5.08" y1="6.35" x2="-5.08" y2="6.35" width="0.254" layer="94"/>
-<text x="-5.08" y="6.858" size="1.27" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-8.128" size="1.27" layer="95">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -8670,7 +8875,7 @@ with a typical dropout voltage of 300 mV.</description>
 <deviceset name="TPS735" prefix="LDO">
 <description>500mA, Low Quiescent Current, Ultra-Low Noise, High PSRR  Low Dropout Linear Regulator</description>
 <gates>
-<gate name="A" symbol="TPS735XXDRV" x="0" y="0"/>
+<gate name="A" symbol="TPS735" x="0" y="0"/>
 </gates>
 <devices>
 <device name="DRVT" package="SON65P210X210X80-7N">
@@ -8678,105 +8883,12 @@ with a typical dropout voltage of 300 mV.</description>
 <connect gate="A" pin="EN" pad="4"/>
 <connect gate="A" pin="GND" pad="3"/>
 <connect gate="A" pin="IN" pad="6"/>
-<connect gate="A" pin="N/C" pad="5"/>
 <connect gate="A" pin="NR/FB" pad="2"/>
 <connect gate="A" pin="OUT" pad="1"/>
 <connect gate="A" pin="THERMALPAD" pad="7"/>
 </connects>
 <technologies>
-<technology name="33">
-<attribute name="MF" value="Texas Instruments"/>
-<attribute name="MP" value="TPS73533DRVT" constant="no"/>
-<attribute name="PACKAGE" value="SON-6 Texas Instruments"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="AS5047D-ATSM" prefix="IC">
-<description>&lt;b&gt;ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="AS5047D-ATSM" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOP65P640X120-14N">
-<connects>
-<connect gate="G$1" pin="A" pad="7"/>
-<connect gate="G$1" pin="B" pad="6"/>
-<connect gate="G$1" pin="CLK" pad="2"/>
-<connect gate="G$1" pin="CSN" pad="1"/>
-<connect gate="G$1" pin="GND" pad="13"/>
-<connect gate="G$1" pin="I/PWM" pad="14"/>
-<connect gate="G$1" pin="MISO" pad="3"/>
-<connect gate="G$1" pin="MOSI" pad="4"/>
-<connect gate="G$1" pin="TEST" pad="5"/>
-<connect gate="G$1" pin="U" pad="10"/>
-<connect gate="G$1" pin="V" pad="9"/>
-<connect gate="G$1" pin="VDD" pad="11"/>
-<connect gate="G$1" pin="VDD3V" pad="12"/>
-<connect gate="G$1" pin="W/PWM" pad="8"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="DESCRIPTION" value="ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V" constant="no"/>
-<attribute name="HEIGHT" value="1.2mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="ams" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="AS5047D-ATSM" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="985-AS5047D-ATSM" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=985-AS5047D-ATSM" constant="no"/>
-<attribute name="RS_PART_NUMBER" value="1700756" constant="no"/>
-<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/1700756" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="CON_WIRE" prefix="WIRE_CON">
-<description>Connection points for wires</description>
-<gates>
-<gate name="G$1" symbol="PINHD4" x="2.54" y="-1.27"/>
-</gates>
-<devices>
-<device name="" package="PINHD4-1.27">
-<connects>
-<connect gate="G$1" pin="1" pad="P1"/>
-<connect gate="G$1" pin="2" pad="P2"/>
-<connect gate="G$1" pin="3" pad="P3"/>
-<connect gate="G$1" pin="4" pad="P4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ENC_PORT" prefix="PORT">
-<description>Connection pins between ENC_PCB and MOUSE_PCB</description>
-<gates>
-<gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="_MODULE" package="ENC_PORT_MODULE">
-<connects>
-<connect gate="G$1" pin="+3V3" pad="P3"/>
-<connect gate="G$1" pin="A" pad="P2"/>
-<connect gate="G$1" pin="B" pad="P1"/>
-<connect gate="G$1" pin="GND" pad="P4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="_BASE" package="ENC_PORT_BASE">
-<connects>
-<connect gate="G$1" pin="+3V3" pad="P3"/>
-<connect gate="G$1" pin="A" pad="P2"/>
-<connect gate="G$1" pin="B" pad="P1"/>
-<connect gate="G$1" pin="GND" pad="P4"/>
-</connects>
-<technologies>
-<technology name=""/>
+<technology name="33"/>
 </technologies>
 </device>
 </devices>
@@ -8793,7 +8905,7 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 </class>
 </classes>
 <parts>
-<part name="IC1" library="parts_not_managed" deviceset="AS5047D-ATSM" device="" value="AS5047D"/>
+<part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="AS5047D-ATSM" device="" package3d_urn="urn:adsk.eagle:package:9139945/3" value="AS5047D"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
@@ -8807,8 +8919,8 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="SPI" library="parts_not_managed" deviceset="CON_WIRE" device=""/>
-<part name="PORT1" library="parts_not_managed" deviceset="ENC_PORT" device="_MODULE"/>
+<part name="SPI" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CON_WIRE" device="" package3d_urn="urn:adsk.eagle:package:9141217/3"/>
+<part name="PORT1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="ENC_PORT" device="_MODULE" package3d_urn="urn:adsk.eagle:package:9139944/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -8868,9 +8980,9 @@ the chip</text>
 <instance part="SPI" gate="G$1" x="-15.24" y="60.96" smashed="yes" rot="MR0">
 <attribute name="NAME" x="-8.89" y="69.215" size="1.778" layer="95" rot="MR0"/>
 </instance>
-<instance part="PORT1" gate="G$1" x="147.32" y="55.88" smashed="yes">
-<attribute name="NAME" x="142.24" y="62.738" size="1.27" layer="95"/>
-<attribute name="VALUE" x="142.24" y="47.752" size="1.27" layer="95"/>
+<instance part="PORT1" gate="G$1" x="141.986" y="49.53" smashed="yes">
+<attribute name="NAME" x="142.494" y="63.246" size="1.27" layer="95"/>
+<attribute name="VALUE" x="142.24" y="47.498" size="1.27" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -8900,7 +9012,7 @@ the chip</text>
 </segment>
 <segment>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<wire x1="137.16" y1="59.69" x2="132.08" y2="59.69" width="0.1524" layer="91"/>
+<wire x1="139.446" y1="59.69" x2="132.08" y2="59.69" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="59.69" x2="132.08" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="PORT1" gate="G$1" pin="+3V3"/>
 </segment>
@@ -8948,7 +9060,7 @@ the chip</text>
 <wire x1="88.9" y1="45.72" x2="88.9" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="137.16" y1="52.07" x2="132.08" y2="52.07" width="0.1524" layer="91"/>
+<wire x1="139.446" y1="52.07" x2="132.08" y2="52.07" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="132.08" y1="52.07" x2="132.08" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="PORT1" gate="G$1" pin="GND"/>
@@ -8961,7 +9073,7 @@ the chip</text>
 <label x="38.1" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="137.16" y1="57.15" x2="129.54" y2="57.15" width="0.1524" layer="91"/>
+<wire x1="139.446" y1="57.15" x2="129.54" y2="57.15" width="0.1524" layer="91"/>
 <label x="129.54" y="57.15" size="1.778" layer="95"/>
 <pinref part="PORT1" gate="G$1" pin="A"/>
 </segment>
@@ -8973,7 +9085,7 @@ the chip</text>
 <label x="38.1" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="137.16" y1="54.61" x2="129.54" y2="54.61" width="0.1524" layer="91"/>
+<wire x1="139.446" y1="54.61" x2="129.54" y2="54.61" width="0.1524" layer="91"/>
 <label x="129.54" y="54.61" size="1.778" layer="95"/>
 <pinref part="PORT1" gate="G$1" pin="B"/>
 </segment>
