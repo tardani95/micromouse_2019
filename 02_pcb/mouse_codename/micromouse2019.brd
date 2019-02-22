@@ -3,7 +3,7 @@
 <eagle version="9.3.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mm"/>
@@ -2217,11 +2217,11 @@ design rules under a new name.</description>
 <attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151507P" x="39.751" y="33.274" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="39.751" y="33.274" size="1.27" layer="27" rot="R90" align="center"/>
 </element>
-<element name="ENC_PORT_LEFT:PORT1" library="parts_not_managed" package="ENC_PORT_BASE" value="ENC_PORT_BASE" x="-31.75" y="3.81" smashed="yes">
-<attribute name="VALUE" x="-32.95" y="1.328334375" size="0.7" layer="27" rot="R90"/>
+<element name="ENC_PORT_LEFT:PORT1" library="parts_not_managed" package="ENC_PORT_BASE" value="ENC_PORT_BASE" x="24.13" y="8.89" smashed="yes" rot="R180">
+<attribute name="VALUE" x="25.33" y="11.371665625" size="0.7" layer="27" rot="R270"/>
 </element>
-<element name="ENC_PORT_RIGHT:PORT1" library="parts_not_managed" package="ENC_PORT_BASE" value="ENC_PORT_BASE" x="-35.56" y="3.81" smashed="yes">
-<attribute name="VALUE" x="-36.76" y="1.328334375" size="0.7" layer="27" rot="R90"/>
+<element name="ENC_PORT_RIGHT:PORT1" library="parts_not_managed" package="ENC_PORT_BASE" value="ENC_PORT_BASE" x="19.05" y="8.89" smashed="yes">
+<attribute name="VALUE" x="17.85" y="6.408334375" size="0.7" layer="27" rot="R90"/>
 </element>
 </elements>
 <signals>
