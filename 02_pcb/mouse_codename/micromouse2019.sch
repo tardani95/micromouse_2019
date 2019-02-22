@@ -9128,7 +9128,7 @@ DIN A4, landscape with extra doc field</description>
 <port name="+3V3" side="top" coord="-10.16" direction="pwr"/>
 <port name="VCC" side="top" coord="10.16" direction="pwr"/>
 <port name="GND" side="bottom" coord="0" direction="pwr"/>
-<port name="BAT_VOLT" side="right" coord="-5.08" direction="out"/>
+<port name="V_BAT_LEVEL" side="right" coord="-2.54" direction="out"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -11214,11 +11214,11 @@ to set it to “0”.</text>
 <instance part="GND3" gate="1" x="142.24" y="45.72" smashed="yes">
 <attribute name="VALUE" x="139.7" y="43.18" size="1.778" layer="96"/>
 </instance>
-<instance part="GND4" gate="1" x="213.36" y="55.88" smashed="yes">
-<attribute name="VALUE" x="210.82" y="53.34" size="1.778" layer="96"/>
+<instance part="GND4" gate="1" x="208.28" y="55.88" smashed="yes">
+<attribute name="VALUE" x="205.74" y="53.34" size="1.778" layer="96"/>
 </instance>
-<instance part="P+2" gate="VCC" x="208.28" y="124.46" smashed="yes">
-<attribute name="VALUE" x="205.74" y="121.92" size="1.778" layer="96" rot="R90"/>
+<instance part="P+2" gate="VCC" x="213.36" y="124.46" smashed="yes">
+<attribute name="VALUE" x="210.82" y="121.92" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="+3V4" gate="G$1" x="101.6" y="45.72" smashed="yes">
 <attribute name="VALUE" x="99.06" y="40.64" size="1.778" layer="96" rot="R90"/>
@@ -11257,12 +11257,12 @@ to set it to “0”.</text>
 </segment>
 <segment>
 <portref moduleinst="MOT" port="GND"/>
-<wire x1="205.74" y1="96.52" x2="213.36" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="96.52" x2="213.36" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="96.52" x2="208.28" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="96.52" x2="208.28" y2="66.04" width="0.1524" layer="91"/>
 <portref moduleinst="IR_PTR" port="GND"/>
-<wire x1="213.36" y1="66.04" x2="213.36" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="205.74" y1="66.04" x2="213.36" y2="66.04" width="0.1524" layer="91"/>
-<junction x="213.36" y="66.04"/>
+<wire x1="208.28" y1="66.04" x2="208.28" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="66.04" x2="208.28" y2="66.04" width="0.1524" layer="91"/>
+<junction x="208.28" y="66.04"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -11312,12 +11312,12 @@ to set it to “0”.</text>
 </segment>
 <segment>
 <portref moduleinst="MOT" port="VCC"/>
-<wire x1="205.74" y1="111.76" x2="208.28" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="111.76" x2="208.28" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="111.76" x2="213.36" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="111.76" x2="213.36" y2="121.92" width="0.1524" layer="91"/>
 <portref moduleinst="IR_PTR" port="VCC"/>
-<wire x1="205.74" y1="86.36" x2="208.28" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="86.36" x2="208.28" y2="111.76" width="0.1524" layer="91"/>
-<junction x="208.28" y="111.76"/>
+<wire x1="205.74" y1="86.36" x2="213.36" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="86.36" x2="213.36" y2="111.76" width="0.1524" layer="91"/>
+<junction x="213.36" y="111.76"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 </segment>
 </net>
@@ -11463,10 +11463,10 @@ to set it to “0”.</text>
 </net>
 <net name="N$1" class="0">
 <segment>
-<portref moduleinst="PWR" port="BAT_VOLT"/>
+<portref moduleinst="PWR" port="V_BAT_LEVEL"/>
 <portref moduleinst="MCU" port="V_BAT_LEVEL"/>
-<wire x1="86.36" y1="142.24" x2="134.62" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="142.24" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="144.78" x2="134.62" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="144.78" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
