@@ -8506,30 +8506,28 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 <wire x1="-1.85" y1="-2.5" x2="-1.85" y2="2.5" width="0.2" layer="21"/>
 <wire x1="-3.675" y1="2.525" x2="-2.2" y2="2.525" width="0.2" layer="21"/>
 </package>
-<package name="ENC_PORT_MODULE">
-<description>Encoder side of the connection of mouse and encoder</description>
-<smd name="P1" x="-1.524" y="0" dx="0.762" dy="0.635" layer="1" rot="R90"/>
-<smd name="P2" x="-0.508" y="0" dx="0.762" dy="0.635" layer="1" rot="R90"/>
-<smd name="P3" x="0.508" y="0" dx="0.762" dy="0.635" layer="1" rot="R90"/>
-<smd name="P4" x="1.524" y="0" dx="0.762" dy="0.635" layer="1" rot="R90"/>
-<text x="-1.778" y="-0.931334375" size="0.254" layer="25">&gt;NAME</text>
-<text x="-1.778" y="-1.354665625" size="0.254" layer="27">&gt;VALUE</text>
-</package>
-<package name="ENC_PORT_BASE">
-<description>Mouse side of the connection of mouse and encoder</description>
-<smd name="P1" x="0" y="1.524" dx="2.54" dy="0.635" layer="1"/>
-<smd name="P2" x="0" y="0.508" dx="2.54" dy="0.635" layer="1"/>
-<smd name="P3" x="0" y="-0.508" dx="2.54" dy="0.635" layer="1"/>
-<smd name="P4" x="0" y="-1.524" dx="2.54" dy="0.635" layer="1"/>
-<text x="-1.27" y="2.624665625" size="0.254" layer="25">&gt;NAME</text>
-<text x="-1.27" y="2.201334375" size="0.254" layer="27">&gt;VALUE</text>
-</package>
 <package name="PINHD4-1.27">
 <pad name="P1" x="-1.905" y="0" drill="0.6" rot="R90"/>
 <pad name="P2" x="-0.635" y="0" drill="0.6" rot="R90"/>
 <pad name="P3" x="0.635" y="0" drill="0.6" rot="R90"/>
 <pad name="P4" x="1.905" y="0" drill="0.6" rot="R90"/>
 <text x="-2.251" y="0.811665625" size="0.508" layer="25">&gt;NAME</text>
+</package>
+<package name="ENC_PORT_MODULE">
+<description>Encoder side of the connection of mouse and encoder</description>
+<smd name="P1" x="-1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
+</package>
+<package name="ENC_PORT_BASE">
+<description>Mouse side of the connection of mouse and encoder</description>
+<smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
+<text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -8595,6 +8593,17 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 <pin name="V" x="30.48" y="-12.7" length="middle" rot="R180"/>
 <pin name="W/PWM" x="30.48" y="-15.24" length="middle" rot="R180"/>
 </symbol>
+<symbol name="PINHD4">
+<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-5.08" x2="1.27" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
+<text x="-6.35" y="8.255" size="1.778" layer="95">&gt;NAME</text>
+<pin name="1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
 <symbol name="ENC_PORT">
 <description>Symbol for connection pins between ENC_PCB and MOUSE_PCB</description>
 <pin name="+3V3" x="-10.16" y="3.81" length="middle" direction="pwr"/>
@@ -8607,17 +8616,6 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151541P"&gt; Datashe
 <wire x1="5.08" y1="6.35" x2="-5.08" y2="6.35" width="0.254" layer="94"/>
 <text x="-5.08" y="6.858" size="1.27" layer="95">&gt;NAME</text>
 <text x="-5.08" y="-8.128" size="1.27" layer="95">&gt;VALUE</text>
-</symbol>
-<symbol name="PINHD4">
-<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-5.08" x2="1.27" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
-<text x="-6.35" y="8.255" size="1.778" layer="95">&gt;NAME</text>
-<pin name="1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="2" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
-<pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -8734,6 +8732,25 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 </device>
 </devices>
 </deviceset>
+<deviceset name="CON_WIRE" prefix="WIRE_CON">
+<description>Connection points for wires</description>
+<gates>
+<gate name="G$1" symbol="PINHD4" x="2.54" y="-1.27"/>
+</gates>
+<devices>
+<device name="" package="PINHD4-1.27">
+<connects>
+<connect gate="G$1" pin="1" pad="P1"/>
+<connect gate="G$1" pin="2" pad="P2"/>
+<connect gate="G$1" pin="3" pad="P3"/>
+<connect gate="G$1" pin="4" pad="P4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="ENC_PORT" prefix="PORT">
 <description>Connection pins between ENC_PCB and MOUSE_PCB</description>
 <gates>
@@ -8757,25 +8774,6 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 <connect gate="G$1" pin="A" pad="P2"/>
 <connect gate="G$1" pin="B" pad="P1"/>
 <connect gate="G$1" pin="GND" pad="P4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="CON_WIRE" prefix="WIRE_CON">
-<description>Connection points for wires</description>
-<gates>
-<gate name="G$1" symbol="PINHD4" x="2.54" y="-1.27"/>
-</gates>
-<devices>
-<device name="" package="PINHD4-1.27">
-<connects>
-<connect gate="G$1" pin="1" pad="P1"/>
-<connect gate="G$1" pin="2" pad="P2"/>
-<connect gate="G$1" pin="3" pad="P3"/>
-<connect gate="G$1" pin="4" pad="P4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -8809,8 +8807,8 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="PORT1" library="parts_not_managed" deviceset="ENC_PORT" device="_MODULE"/>
 <part name="SPI" library="parts_not_managed" deviceset="CON_WIRE" device=""/>
+<part name="PORT1" library="parts_not_managed" deviceset="ENC_PORT" device="_MODULE"/>
 </parts>
 <sheets>
 <sheet>
@@ -8867,12 +8865,12 @@ the chip</text>
 <instance part="+3V3" gate="G$1" x="132.08" y="71.12" smashed="yes">
 <attribute name="VALUE" x="130.556" y="66.04" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="SPI" gate="G$1" x="-15.24" y="60.96" smashed="yes" rot="MR0">
+<attribute name="NAME" x="-8.89" y="69.215" size="1.778" layer="95" rot="MR0"/>
+</instance>
 <instance part="PORT1" gate="G$1" x="147.32" y="55.88" smashed="yes">
 <attribute name="NAME" x="142.24" y="62.738" size="1.27" layer="95"/>
 <attribute name="VALUE" x="142.24" y="47.752" size="1.27" layer="95"/>
-</instance>
-<instance part="SPI" gate="G$1" x="-15.24" y="60.96" smashed="yes" rot="MR0">
-<attribute name="NAME" x="-8.89" y="69.215" size="1.778" layer="95" rot="MR0"/>
 </instance>
 </instances>
 <busses>
