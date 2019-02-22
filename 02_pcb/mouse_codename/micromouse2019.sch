@@ -9060,7 +9060,7 @@ DIN A4, landscape with extra doc field</description>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="POWER_REGULATOR"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9322,7 +9322,7 @@ page 16</text>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="INERTIAL_MEASUREMENT_UNIT"/>
 <part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="IMU_MPU-6050" device="" package3d_urn="urn:adsk.eagle:package:8879287/4"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="2.2n"/>
@@ -9331,8 +9331,8 @@ page 16</text>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10n"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="0.1u"/>
-<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10n"/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
+<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
@@ -9520,7 +9520,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="MOTOR_DRIVER"/>
 <part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2" value="MOTOR1"/>
 <part name="J2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2" value="MOTOR2"/>
 <part name="IC1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="MOT_DRV8836" device="1" package3d_urn="urn:adsk.eagle:package:8872076/5"/>
@@ -9561,8 +9561,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <instance part="P+1" gate="VCC" x="152.4" y="101.6" smashed="yes">
 <attribute name="VALUE" x="149.86" y="99.06" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="+3V1" gate="G$1" x="96.52" y="101.6" smashed="yes">
-<attribute name="VALUE" x="93.98" y="96.52" size="1.778" layer="96" rot="R90"/>
+<instance part="+3V1" gate="G$1" x="96.52" y="104.14" smashed="yes">
+<attribute name="VALUE" x="93.98" y="99.06" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND2" gate="1" x="127" y="60.96" smashed="yes">
 <attribute name="VALUE" x="124.46" y="58.42" size="1.778" layer="96"/>
@@ -9678,18 +9678,18 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <wire x1="182.88" y1="93.98" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
+<net name="+3V3" class="0">
 <segment>
-<wire x1="96.52" y1="96.52" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="NSLEEP"/>
-<wire x1="106.68" y1="93.98" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="93.98" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="MODE"/>
-<wire x1="104.14" y1="93.98" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="91.44" x2="104.14" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="91.44" x2="104.14" y2="93.98" width="0.1524" layer="91"/>
-<junction x="104.14" y="93.98"/>
+<wire x1="99.06" y1="93.98" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="91.44" x2="99.06" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="91.44" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
+<junction x="99.06" y="93.98"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="96.52" y1="96.52" x2="96.52" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="93.98" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
+<label x="99.06" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -9706,7 +9706,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="ENCODER_PORT"/>
 <part name="PORT1" library="parts_not_managed" deviceset="ENC_PORT" device="_BASE"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
@@ -9784,7 +9784,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="WIRELESS_MODUL"/>
 <part name="U$1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="WM_JDY-10_STANDING" device="" package3d_urn="urn:adsk.eagle:package:8988323/2"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -9848,7 +9848,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <module name="MICROCONTROLLER" prefix="MCU" dx="55.88" dy="60.96">
 <ports>
 <port name="+3V3" side="top" coord="-7.62" direction="pwr"/>
-<port name="V_BAT_LEVEL" side="top" coord="7.62" direction="in"/>
+<port name="V_BAT_LEVEL" side="top" coord="7.62" direction="pwr"/>
 <port name="UART3_TX" side="bottom" coord="-7.62" direction="out"/>
 <port name="UART3_RX" side="bottom" coord="-5.08" direction="in"/>
 <port name="DRV_A_PHASE" side="right" coord="25.4" direction="out"/>
@@ -9902,7 +9902,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="MICROCONTROLLERUNIT"/>
 <part name="+3V4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="CONN_SM03B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9126100/2" value="CONN_SWD"/>
@@ -9914,9 +9914,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <text x="2.54" y="2.54" size="1.778" layer="97">The V BAT pin can be connected to the external battery (1.65 V &lt; V BAT &lt; 3.6 V). If no
 external battery is used, it is recommended to connect this pin to V DD with a 100 nF
 external ceramic decoupling capacitor.</text>
-<rectangle x1="72.39" y1="118.618" x2="87.884" y2="125.476" layer="98"/>
-<rectangle x1="2.54" y1="1.524" x2="98.806" y2="10.16" layer="98"/>
-<text x="2.54" y="12.7" size="1.778" layer="98">To increase EMC performance, unused clocks, counters or I/Os, should not be left free, e.g.
+<text x="2.54" y="12.7" size="1.778" layer="97">To increase EMC performance, unused clocks, counters or I/Os, should not be left free, e.g.
 I/Os should be set to “0” or “1”(pull-up or pull-down to the unused I/O pins.) and unused
 features should be “frozen” or disabled.
 Note: To reduce leakage it is advisable to configure the I/O as an analog input or to push-pull and
@@ -9989,8 +9987,8 @@ to set it to “0”.</text>
 <attribute name="VALUE" x="4.826" y="44.45" size="1.778" layer="96" rot="R90" align="center-left"/>
 </instance>
 <instance part="S3" gate="G$1" x="35.56" y="144.78" smashed="yes" rot="R90">
-<attribute name="NAME" x="30.48" y="146.05" size="1.778" layer="95" rot="R90" align="center-left"/>
-<attribute name="VALUE" x="32.766" y="146.05" size="1.778" layer="96" rot="R90" align="center-left"/>
+<attribute name="NAME" x="33.02" y="146.05" size="1.778" layer="95" rot="R90" align="center-left"/>
+<attribute name="VALUE" x="39.37" y="150.114" size="1.778" layer="96" align="center-left"/>
 </instance>
 <instance part="R1" gate="G$1" x="35.56" y="165.1" smashed="yes" rot="R90">
 <attribute name="NAME" x="34.0614" y="161.29" size="1.778" layer="95" rot="R90"/>
@@ -10695,7 +10693,7 @@ to set it to “0”.</text>
 <variantdefs>
 </variantdefs>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="IR_LED_DRIVER_DUAL"/>
 <part name="MOSFET1" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
 <part name="MOSFET2" library="parts" library_urn="urn:adsk.eagle:library:8879268" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9120817/1"/>
 <part name="IR_LED1" library="wirepad" library_urn="urn:adsk.eagle:library:412" deviceset="1,6/0,8" device="" package3d_urn="urn:adsk.eagle:package:30830/1"/>
@@ -11101,7 +11099,7 @@ to set it to “0”.</text>
 </module>
 </modules>
 <parts>
-<part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
+<part name="TOP_SHEET" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="TOP_SHEET"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
@@ -11147,8 +11145,8 @@ to set it to “0”.</text>
 </moduleinst>
 </moduleinsts>
 <instances>
-<instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
-<instance part="FRAME1" gate="G$2" x="162.56" y="0" smashed="yes">
+<instance part="TOP_SHEET" gate="G$1" x="0" y="0" smashed="yes"/>
+<instance part="TOP_SHEET" gate="G$2" x="162.56" y="0" smashed="yes">
 <attribute name="LAST_DATE_TIME" x="175.26" y="1.27" size="2.54" layer="94"/>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
@@ -11442,6 +11440,22 @@ to set it to “0”.</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="213,1,170.18,109.22,DRV_A_ENBL,in,,,,"/>
+<approved hash="213,1,170.18,111.76,DRV_A_PHASE,in,,,,"/>
+<approved hash="213,1,170.18,96.52,DRV_B_ENBL,in,,,,"/>
+<approved hash="213,1,170.18,99.06,DRV_B_PHASE,in,,,,"/>
+<approved hash="213,1,121.92,45.72,JDY-10_RX,in,,,,"/>
+<approved hash="213,1,96.52,106.68,ENC_LEFT_CHA,in,,,,"/>
+<approved hash="213,1,96.52,104.14,ENC_LEFT_CHB,in,,,,"/>
+<approved hash="213,1,96.52,91.44,ENC_RIGHT_CHA,in,,,,"/>
+<approved hash="213,1,96.52,88.9,ENC_RIGHT_CHB,in,,,,"/>
+<approved hash="213,1,162.56,73.66,PTR1,in,,,,"/>
+<approved hash="213,1,162.56,71.12,PTR2,in,,,,"/>
+<approved hash="213,1,162.56,68.58,PTR3,in,,,,"/>
+<approved hash="213,1,162.56,66.04,PTR4,in,,,,"/>
+<approved hash="213,1,124.46,50.8,UART3_RX,in,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
