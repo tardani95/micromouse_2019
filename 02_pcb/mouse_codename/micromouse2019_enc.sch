@@ -8795,22 +8795,22 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 </class>
 </classes>
 <parts>
-<part name="IC1" library="parts_not_managed" deviceset="AS5047D-ATSM" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3"/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3"/>
+<part name="IC1" library="parts_not_managed" deviceset="AS5047D-ATSM" device="" value="AS5047D"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="+3V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2"/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+3V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="PORT1" library="parts_not_managed" deviceset="ENC_PORT" device="_MODULE"/>
-<part name="WIRE_CON1" library="parts_not_managed" deviceset="CON_WIRE" device=""/>
+<part name="SPI" library="parts_not_managed" deviceset="CON_WIRE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8871,7 +8871,7 @@ the chip</text>
 <attribute name="NAME" x="142.24" y="62.738" size="1.27" layer="95"/>
 <attribute name="VALUE" x="142.24" y="47.752" size="1.27" layer="95"/>
 </instance>
-<instance part="WIRE_CON1" gate="G$1" x="-15.24" y="60.96" smashed="yes" rot="MR0">
+<instance part="SPI" gate="G$1" x="-15.24" y="60.96" smashed="yes" rot="MR0">
 <attribute name="NAME" x="-8.89" y="69.215" size="1.778" layer="95" rot="MR0"/>
 </instance>
 </instances>
@@ -8918,7 +8918,7 @@ the chip</text>
 <segment>
 <wire x1="-12.7" y1="63.5" x2="0" y2="63.5" width="0.1524" layer="91"/>
 <label x="-5.08" y="63.5" size="1.778" layer="95"/>
-<pinref part="WIRE_CON1" gate="G$1" pin="2"/>
+<pinref part="SPI" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -8984,7 +8984,7 @@ the chip</text>
 <segment>
 <wire x1="-12.7" y1="66.04" x2="0" y2="66.04" width="0.1524" layer="91"/>
 <label x="-5.08" y="66.04" size="1.778" layer="95"/>
-<pinref part="WIRE_CON1" gate="G$1" pin="1"/>
+<pinref part="SPI" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="CSN"/>
@@ -8998,7 +8998,7 @@ the chip</text>
 <segment>
 <wire x1="-12.7" y1="60.96" x2="0" y2="60.96" width="0.1524" layer="91"/>
 <label x="-5.08" y="60.96" size="1.778" layer="95"/>
-<pinref part="WIRE_CON1" gate="G$1" pin="3"/>
+<pinref part="SPI" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="MISO"/>
@@ -9010,7 +9010,7 @@ the chip</text>
 <segment>
 <wire x1="-12.7" y1="58.42" x2="0" y2="58.42" width="0.1524" layer="91"/>
 <label x="-5.08" y="58.42" size="1.778" layer="95"/>
-<pinref part="WIRE_CON1" gate="G$1" pin="4"/>
+<pinref part="SPI" gate="G$1" pin="4"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="MOSI"/>
