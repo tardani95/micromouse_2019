@@ -3952,6 +3952,64 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <dimension x1="-1.4" y1="1.5" x2="-0.796" y2="1.174" x3="-1.098" y3="6.569" textsize="1.27" layer="20" dtype="horizontal"/>
 <dimension x1="-1.401" y1="0.774" x2="-1.399" y2="1.17" x3="-7.458" y3="0.972" textsize="1.27" layer="20" dtype="vertical"/>
 </package>
+<package name="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:footprint:9158261/2">
+<description>Single-row, 4-pin Pin Header (Male) Straight, 1.27 mm (0.05 in) col pitch, 1.00 mm mating length, 5.00 X 2.00 X 6.00 mm body
+&lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Straight package with 1.27 mm (0.05 in) col pitch, 0.25 mm lead width, 2.00 mm tail length and 1.00 mm mating length with overall size 5.00 X 2.00 X 6.00 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<circle x="0" y="1.504" radius="0.25" width="0" layer="21"/>
+<wire x1="4.6416" y1="-1" x2="-0.8316" y2="-1" width="0.12" layer="21"/>
+<wire x1="-0.8316" y1="-1" x2="-0.8316" y2="1" width="0.12" layer="21"/>
+<wire x1="-0.8316" y1="1" x2="4.6416" y2="1" width="0.12" layer="21"/>
+<wire x1="4.6416" y1="1" x2="4.6416" y2="-1" width="0.12" layer="21"/>
+<wire x1="4.405" y1="-1" x2="-0.595" y2="-1" width="0.12" layer="51"/>
+<wire x1="-0.595" y1="-1" x2="-0.595" y2="1" width="0.12" layer="51"/>
+<wire x1="-0.595" y1="1" x2="4.405" y2="1" width="0.12" layer="51"/>
+<wire x1="4.405" y1="1" x2="4.405" y2="-1" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.5536" diameter="1.1536"/>
+<pad name="2" x="1.27" y="0" drill="0.5536" diameter="1.1536"/>
+<pad name="3" x="2.54" y="0" drill="0.5536" diameter="1.1536"/>
+<pad name="4" x="3.81" y="0" drill="0.5536" diameter="1.1536"/>
+<text x="0" y="2.389" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.635" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
+<package name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B" urn="urn:adsk.eagle:footprint:9165700/2">
+<description>Single-row, 1-pin Pin Header (Male) Straight, 5.84 mm mating length, 2.54 X 2.54 X 8.38 mm body
+&lt;p&gt;Single-row (1X1), 1-pin Pin Header (Male) Straight package with 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 2.54 X 2.54 X 8.38 mm&lt;/p&gt;</description>
+<circle x="0" y="1.774" radius="0.25" width="0" layer="21"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.12" layer="21"/>
+<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.12" layer="21"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.12" layer="21"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.12" layer="21"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.12" layer="51"/>
+<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.12" layer="51"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.12" layer="51"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="1.1051" diameter="1.7051"/>
+<text x="0" y="2.659" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.905" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
+<package name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:footprint:9165681/2">
+<description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
+&lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<circle x="-1.1868" y="0" radius="0.25" width="0" layer="21"/>
+<wire x1="4.65" y1="-3.4" x2="-0.84" y2="-3.4" width="0.12" layer="21"/>
+<wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="21"/>
+<wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="21"/>
+<wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="21"/>
+<wire x1="0" y1="-3.46" x2="0" y2="-6.46" width="0.12" layer="21"/>
+<wire x1="1.27" y1="-3.46" x2="1.27" y2="-6.46" width="0.12" layer="21"/>
+<wire x1="2.54" y1="-3.46" x2="2.54" y2="-6.46" width="0.12" layer="21"/>
+<wire x1="3.81" y1="-3.46" x2="3.81" y2="-6.46" width="0.12" layer="21"/>
+<wire x1="4.65" y1="-3.4" x2="-0.84" y2="-3.4" width="0.12" layer="51"/>
+<wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="51"/>
+<wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="51"/>
+<wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.7657" diameter="1.143"/>
+<pad name="2" x="1.27" y="0" drill="0.7657" diameter="1.143"/>
+<pad name="3" x="2.54" y="0" drill="0.7657" diameter="1.143"/>
+<pad name="4" x="3.81" y="0" drill="0.7657" diameter="1.143"/>
+<text x="0" y="1.3178" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-7.095" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/5" type="model">
@@ -4067,6 +4125,27 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.60 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="C0402"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:package:9158256/2" type="model">
+<description>Single-row, 4-pin Pin Header (Male) Straight, 1.27 mm (0.05 in) col pitch, 1.00 mm mating length, 5.00 X 2.00 X 6.00 mm body
+&lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Straight package with 1.27 mm (0.05 in) col pitch, 0.25 mm lead width, 2.00 mm tail length and 1.00 mm mating length with overall size 5.00 X 2.00 X 6.00 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRV1W64P0_1X1_254X254X838B" urn="urn:adsk.eagle:package:9165697/2" type="model">
+<description>Single-row, 1-pin Pin Header (Male) Straight, 5.84 mm mating length, 2.54 X 2.54 X 8.38 mm body
+&lt;p&gt;Single-row (1X1), 1-pin Pin Header (Male) Straight package with 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 2.54 X 2.54 X 8.38 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:package:9165666/2" type="model">
+<description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
+&lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -4423,6 +4502,39 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <pin name="U" x="30.48" y="-10.16" length="middle" rot="R180"/>
 <pin name="V" x="30.48" y="-12.7" length="middle" rot="R180"/>
 <pin name="W/PWM" x="30.48" y="-15.24" length="middle" rot="R180"/>
+</symbol>
+<symbol name="CONN_IRDX4">
+<pin name="P1" x="0" y="10.16" length="middle" rot="R270"/>
+<pin name="P2" x="2.54" y="10.16" length="middle" rot="R270"/>
+<pin name="P3" x="5.08" y="10.16" length="middle" rot="R270"/>
+<pin name="P4" x="7.62" y="10.16" length="middle" rot="R270"/>
+<wire x1="-2.54" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<text x="-2.54" y="5.334" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="CONN_IRD_VCC">
+<pin name="P1" x="0" y="0" length="middle" rot="R270"/>
+<wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-10.16" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<text x="-2.54" y="-4.826" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-12.7" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="CONN_SPI">
+<pin name="P1" x="0" y="-7.62" length="middle" rot="R90"/>
+<pin name="P2" x="2.54" y="-7.62" length="middle" rot="R90"/>
+<pin name="P3" x="5.08" y="-7.62" length="middle" rot="R90"/>
+<pin name="P4" x="7.62" y="-7.62" length="middle" rot="R90"/>
+<wire x1="-2.54" y1="2.54" x2="10.16" y2="2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="2.54" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<text x="-2.54" y="2.794" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-5.08" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -6798,6 +6910,66 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 <attribute name="RS_PART_NUMBER" value="1700756" constant="no"/>
 <attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/1700756" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CONN_IRDX4">
+<gates>
+<gate name="G$1" symbol="CONN_IRDX4" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B">
+<connects>
+<connect gate="G$1" pin="P1" pad="1"/>
+<connect gate="G$1" pin="P2" pad="2"/>
+<connect gate="G$1" pin="P3" pad="3"/>
+<connect gate="G$1" pin="P4" pad="4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9158256/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CONN_IRD_VCC">
+<gates>
+<gate name="G$1" symbol="CONN_IRD_VCC" x="0" y="7.62"/>
+</gates>
+<devices>
+<device name="" package="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B">
+<connects>
+<connect gate="G$1" pin="P1" pad="1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CONN_SPI">
+<gates>
+<gate name="G$1" symbol="CONN_SPI" x="-2.54" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B">
+<connects>
+<connect gate="G$1" pin="P1" pad="1"/>
+<connect gate="G$1" pin="P2" pad="2"/>
+<connect gate="G$1" pin="P3" pad="3"/>
+<connect gate="G$1" pin="P4" pad="4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9165666/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
