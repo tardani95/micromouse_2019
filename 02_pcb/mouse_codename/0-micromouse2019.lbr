@@ -4402,6 +4402,28 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <text x="-1.143" y="1.8542" size="1.778" layer="95">&gt;NAME</text>
 <text x="-1.143" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="AS5047D-ATSM">
+<wire x1="5.08" y1="2.54" x2="25.4" y2="2.54" width="0.254" layer="94"/>
+<wire x1="25.4" y1="-17.78" x2="25.4" y2="2.54" width="0.254" layer="94"/>
+<wire x1="25.4" y1="-17.78" x2="5.08" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-17.78" width="0.254" layer="94"/>
+<text x="26.67" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="26.67" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="CSN" x="0" y="0" length="middle"/>
+<pin name="CLK" x="0" y="-2.54" length="middle"/>
+<pin name="MISO" x="0" y="-5.08" length="middle"/>
+<pin name="MOSI" x="0" y="-7.62" length="middle"/>
+<pin name="TEST" x="0" y="-10.16" length="middle"/>
+<pin name="B" x="0" y="-12.7" length="middle"/>
+<pin name="A" x="0" y="-15.24" length="middle"/>
+<pin name="I/PWM" x="30.48" y="0" length="middle" rot="R180"/>
+<pin name="GND" x="30.48" y="-2.54" length="middle" rot="R180"/>
+<pin name="VDD3V" x="30.48" y="-5.08" length="middle" rot="R180"/>
+<pin name="VDD" x="30.48" y="-7.62" length="middle" rot="R180"/>
+<pin name="U" x="30.48" y="-10.16" length="middle" rot="R180"/>
+<pin name="V" x="30.48" y="-12.7" length="middle" rot="R180"/>
+<pin name="W/PWM" x="30.48" y="-15.24" length="middle" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DINA4_L" prefix="FRAME" uservalue="yes">
@@ -6734,6 +6756,48 @@ with a typical dropout voltage of 300 mV.</description>
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="AS5047D-ATSM" prefix="IC">
+<description>&lt;b&gt;ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="AS5047D-ATSM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOP65P640X120-14N">
+<connects>
+<connect gate="G$1" pin="A" pad="7"/>
+<connect gate="G$1" pin="B" pad="6"/>
+<connect gate="G$1" pin="CLK" pad="2"/>
+<connect gate="G$1" pin="CSN" pad="1"/>
+<connect gate="G$1" pin="GND" pad="13"/>
+<connect gate="G$1" pin="I/PWM" pad="14"/>
+<connect gate="G$1" pin="MISO" pad="3"/>
+<connect gate="G$1" pin="MOSI" pad="4"/>
+<connect gate="G$1" pin="TEST" pad="5"/>
+<connect gate="G$1" pin="U" pad="10"/>
+<connect gate="G$1" pin="V" pad="9"/>
+<connect gate="G$1" pin="VDD" pad="11"/>
+<connect gate="G$1" pin="VDD3V" pad="12"/>
+<connect gate="G$1" pin="W/PWM" pad="8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139945/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DESCRIPTION" value="ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V" constant="no"/>
+<attribute name="HEIGHT" value="1.2mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="ams" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="AS5047D-ATSM" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="985-AS5047D-ATSM" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=985-AS5047D-ATSM" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="1700756" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/1700756" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
