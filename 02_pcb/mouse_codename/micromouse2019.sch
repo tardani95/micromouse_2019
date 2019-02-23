@@ -8109,6 +8109,41 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
 </package>
+<package name="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:footprint:9158261/2">
+<description>Single-row, 4-pin Pin Header (Male) Straight, 1.27 mm (0.05 in) col pitch, 1.00 mm mating length, 5.00 X 2.00 X 6.00 mm body
+&lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Straight package with 1.27 mm (0.05 in) col pitch, 0.25 mm lead width, 2.00 mm tail length and 1.00 mm mating length with overall size 5.00 X 2.00 X 6.00 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<circle x="0" y="1.504" radius="0.25" width="0" layer="21"/>
+<wire x1="4.6416" y1="-1" x2="-0.8316" y2="-1" width="0.12" layer="21"/>
+<wire x1="-0.8316" y1="-1" x2="-0.8316" y2="1" width="0.12" layer="21"/>
+<wire x1="-0.8316" y1="1" x2="4.6416" y2="1" width="0.12" layer="21"/>
+<wire x1="4.6416" y1="1" x2="4.6416" y2="-1" width="0.12" layer="21"/>
+<wire x1="4.405" y1="-1" x2="-0.595" y2="-1" width="0.12" layer="51"/>
+<wire x1="-0.595" y1="-1" x2="-0.595" y2="1" width="0.12" layer="51"/>
+<wire x1="-0.595" y1="1" x2="4.405" y2="1" width="0.12" layer="51"/>
+<wire x1="4.405" y1="1" x2="4.405" y2="-1" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.5536" diameter="1.1536"/>
+<pad name="2" x="1.27" y="0" drill="0.5536" diameter="1.1536"/>
+<pad name="3" x="2.54" y="0" drill="0.5536" diameter="1.1536"/>
+<pad name="4" x="3.81" y="0" drill="0.5536" diameter="1.1536"/>
+<text x="0" y="2.389" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.635" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
+<package name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B" urn="urn:adsk.eagle:footprint:9165700/2">
+<description>Single-row, 1-pin Pin Header (Male) Straight, 5.84 mm mating length, 2.54 X 2.54 X 8.38 mm body
+&lt;p&gt;Single-row (1X1), 1-pin Pin Header (Male) Straight package with 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 2.54 X 2.54 X 8.38 mm&lt;/p&gt;</description>
+<circle x="0" y="1.774" radius="0.25" width="0" layer="21"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.12" layer="21"/>
+<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.12" layer="21"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.12" layer="21"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.12" layer="21"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.12" layer="51"/>
+<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.12" layer="51"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.12" layer="51"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="1.1051" diameter="1.7051"/>
+<text x="0" y="2.659" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.905" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/3" type="model">
@@ -8187,6 +8222,20 @@ Source: AVX .. aphvc.pdf</description>
 <description>&lt;b&gt;LQFP64&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="QFP50P1200X1200X160-64N"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:package:9158256/2" type="model">
+<description>Single-row, 4-pin Pin Header (Male) Straight, 1.27 mm (0.05 in) col pitch, 1.00 mm mating length, 5.00 X 2.00 X 6.00 mm body
+&lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Straight package with 1.27 mm (0.05 in) col pitch, 0.25 mm lead width, 2.00 mm tail length and 1.00 mm mating length with overall size 5.00 X 2.00 X 6.00 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRV1W64P0_1X1_254X254X838B" urn="urn:adsk.eagle:package:9165697/2" type="model">
+<description>Single-row, 1-pin Pin Header (Male) Straight, 5.84 mm mating length, 2.54 X 2.54 X 8.38 mm body
+&lt;p&gt;Single-row (1X1), 1-pin Pin Header (Male) Straight package with 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 2.54 X 2.54 X 8.38 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -8489,6 +8538,27 @@ Source: AVX .. aphvc.pdf</description>
 <pin name="P" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 <text x="-1.143" y="1.8542" size="1.778" layer="95">&gt;NAME</text>
 <text x="-1.143" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="CONN_IRDX4">
+<pin name="P1" x="0" y="10.16" length="middle" rot="R270"/>
+<pin name="P2" x="2.54" y="10.16" length="middle" rot="R270"/>
+<pin name="P3" x="5.08" y="10.16" length="middle" rot="R270"/>
+<pin name="P4" x="7.62" y="10.16" length="middle" rot="R270"/>
+<wire x1="-2.54" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<text x="-2.54" y="5.334" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="CONN_IRD_VCC">
+<pin name="P1" x="0" y="0" length="middle" rot="R270"/>
+<wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-10.16" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<text x="-2.54" y="-4.826" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-12.7" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10811,6 +10881,45 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
+<deviceset name="CONN_IRDX4">
+<gates>
+<gate name="G$1" symbol="CONN_IRDX4" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B">
+<connects>
+<connect gate="G$1" pin="P1" pad="1"/>
+<connect gate="G$1" pin="P2" pad="2"/>
+<connect gate="G$1" pin="P3" pad="3"/>
+<connect gate="G$1" pin="P4" pad="4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9158256/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CONN_IRD_VCC">
+<gates>
+<gate name="G$1" symbol="CONN_IRD_VCC" x="0" y="7.62"/>
+</gates>
+<devices>
+<device name="" package="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B">
+<connects>
+<connect gate="G$1" pin="P1" pad="1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -12491,7 +12600,6 @@ to set it to “0”.</text>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="IR_LED_DRIVER_DUAL"/>
 <part name="MOSFET1" library="0-micromouse2019" deviceset="FET_DMN2990UDJ-7" device=""/>
 <part name="MOSFET2" library="0-micromouse2019" deviceset="FET_DMN2990UDJ-7" device=""/>
-<part name="IR_LED1" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
 <part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
@@ -12501,9 +12609,6 @@ to set it to “0”.</text>
 <part name="R4" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="GND4" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="PT_TR1" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
-<part name="IR_LED2" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
-<part name="IR_LED3" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
-<part name="IR_LED4" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
 <part name="R5" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="2R"/>
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="PT_TR2" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
@@ -12515,10 +12620,11 @@ to set it to “0”.</text>
 <part name="PT_TR4" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
 <part name="R8" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="2R"/>
 <part name="GND8" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="3V3_1" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
-<part name="3V3_2" library="0-micromouse2019" deviceset="1,6/0,8" device=""/>
 <part name="P+1" library="0-micromouse2019" deviceset="VCC" device=""/>
 <part name="P+2" library="0-micromouse2019" deviceset="VCC" device=""/>
+<part name="U$1" library="0-micromouse2019" deviceset="CONN_IRDX4" device="" package3d_urn="urn:adsk.eagle:package:9158256/2"/>
+<part name="U$2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+<part name="U$3" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -12538,10 +12644,6 @@ to set it to “0”.</text>
 <instance part="MOSFET2" gate="G$1" x="185.42" y="127" smashed="yes">
 <attribute name="NAME" x="170.18" y="135.382" size="1.27" layer="95"/>
 <attribute name="VALUE" x="170.18" y="117.348" size="1.27" layer="95"/>
-</instance>
-<instance part="IR_LED1" gate="P" x="50.8" y="144.78" smashed="yes" rot="R270">
-<attribute name="NAME" x="47.5742" y="145.923" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="47.498" y="145.923" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R1" gate="G$1" x="35.56" y="121.92" smashed="yes" rot="R90">
 <attribute name="NAME" x="34.0614" y="118.11" size="1.778" layer="95" rot="R90"/>
@@ -12574,18 +12676,6 @@ to set it to “0”.</text>
 <instance part="PT_TR1" gate="P" x="50.8" y="81.28" smashed="yes" rot="R270">
 <attribute name="NAME" x="47.5742" y="82.423" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="47.498" y="82.423" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="IR_LED2" gate="P" x="104.14" y="144.78" smashed="yes" rot="MR270">
-<attribute name="NAME" x="107.3658" y="145.923" size="1.778" layer="95" rot="MR270"/>
-<attribute name="VALUE" x="107.442" y="145.923" size="1.778" layer="96" rot="MR270"/>
-</instance>
-<instance part="IR_LED3" gate="P" x="160.02" y="144.78" smashed="yes" rot="R270">
-<attribute name="NAME" x="156.7942" y="145.923" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="156.718" y="145.923" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="IR_LED4" gate="P" x="210.82" y="144.78" smashed="yes" rot="MR270">
-<attribute name="NAME" x="214.0458" y="145.923" size="1.778" layer="95" rot="MR270"/>
-<attribute name="VALUE" x="214.122" y="145.923" size="1.778" layer="96" rot="MR270"/>
 </instance>
 <instance part="R5" gate="G$1" x="50.8" y="63.5" smashed="yes" rot="R90">
 <attribute name="NAME" x="49.3014" y="59.69" size="1.778" layer="95" rot="R90"/>
@@ -12627,47 +12717,67 @@ to set it to “0”.</text>
 <instance part="GND8" gate="1" x="149.86" y="53.34" smashed="yes">
 <attribute name="VALUE" x="147.32" y="50.8" size="1.778" layer="96"/>
 </instance>
-<instance part="3V3_1" gate="P" x="208.28" y="60.96" smashed="yes" rot="R90">
-<attribute name="NAME" x="206.4258" y="59.817" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="211.582" y="59.817" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="3V3_2" gate="P" x="228.6" y="60.96" smashed="yes" rot="R90">
-<attribute name="NAME" x="226.7458" y="59.817" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="231.902" y="59.817" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="P+1" gate="VCC" x="208.28" y="76.2" smashed="yes">
 <attribute name="VALUE" x="205.74" y="73.66" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="P+2" gate="VCC" x="228.6" y="76.2" smashed="yes">
 <attribute name="VALUE" x="226.06" y="73.66" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="U$1" gate="G$1" x="129.54" y="170.18" smashed="yes" rot="MR180">
+<attribute name="NAME" x="127" y="164.846" size="1.27" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="127" y="172.72" size="1.27" layer="96" rot="MR180"/>
+</instance>
+<instance part="U$2" gate="G$1" x="208.28" y="63.5" smashed="yes">
+<attribute name="NAME" x="205.74" y="58.674" size="1.27" layer="95"/>
+<attribute name="VALUE" x="205.74" y="50.8" size="1.27" layer="96"/>
+</instance>
+<instance part="U$3" gate="G$1" x="228.6" y="63.5" smashed="yes">
+<attribute name="NAME" x="226.06" y="58.674" size="1.27" layer="95"/>
+<attribute name="VALUE" x="226.06" y="50.8" size="1.27" layer="96"/>
+</instance>
 </instances>
 <busses>
+<bus name="IRS_AND_PTS:IRD1,IRD2,IRD3,IRD4,PTR1,PTR2,PTR3,PTR4">
+<segment>
+<wire x1="256.54" y1="149.86" x2="256.54" y2="165.1" width="0.762" layer="92"/>
+<label x="259.08" y="144.78" size="1.778" layer="95" rot="R90"/>
+<wire x1="256.54" y1="149.86" x2="256.54" y2="144.78" width="0.762" layer="92"/>
+<wire x1="256.54" y1="165.1" x2="256.54" y2="167.64" width="0.762" layer="92"/>
+</segment>
+</bus>
 </busses>
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="IR_LED1" gate="P" pin="P"/>
-<wire x1="50.8" y1="142.24" x2="50.8" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="MOSFET1" gate="G$1" pin="DRAIN_1"/>
 <wire x1="50.8" y1="132.08" x2="55.88" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="132.08" x2="50.8" y2="149.86" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P1"/>
+<wire x1="50.8" y1="149.86" x2="50.8" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="160.02" x2="129.54" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="MOSFET1" gate="G$1" pin="DRAIN_2"/>
 <wire x1="96.52" y1="132.08" x2="99.06" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="IR_LED2" gate="P" pin="P"/>
 <wire x1="104.14" y1="142.24" x2="104.14" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="132.08" x2="99.06" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="142.24" x2="104.14" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P2"/>
+<wire x1="104.14" y1="154.94" x2="132.08" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="154.94" x2="132.08" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="MOSFET2" gate="G$1" pin="DRAIN_1"/>
 <wire x1="165.1" y1="132.08" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="IR_LED3" gate="P" pin="P"/>
 <wire x1="160.02" y1="142.24" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P3"/>
+<wire x1="134.62" y1="160.02" x2="134.62" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="154.94" x2="160.02" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="154.94" x2="160.02" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -12745,6 +12855,11 @@ to set it to “0”.</text>
 <junction x="35.56" y="127"/>
 <label x="25.4" y="127" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="256.54" y1="165.1" x2="254" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="167.64" x2="254" y2="167.64" width="0.1524" layer="91"/>
+<label x="233.68" y="167.64" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="IRD2" class="0">
 <segment>
@@ -12754,6 +12869,11 @@ to set it to “0”.</text>
 <junction x="116.84" y="127"/>
 <label x="127" y="127" size="1.778" layer="95" rot="MR0"/>
 <pinref part="MOSFET1" gate="G$1" pin="GATE_2"/>
+</segment>
+<segment>
+<wire x1="256.54" y1="162.56" x2="254" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="165.1" x2="254" y2="165.1" width="0.1524" layer="91"/>
+<label x="233.68" y="165.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IRD3" class="0">
@@ -12766,6 +12886,11 @@ to set it to “0”.</text>
 <junction x="144.78" y="127"/>
 <label x="134.62" y="127" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="256.54" y1="160.02" x2="254" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="162.56" x2="254" y2="162.56" width="0.1524" layer="91"/>
+<label x="233.68" y="162.56" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="IRD4" class="0">
 <segment>
@@ -12775,6 +12900,11 @@ to set it to “0”.</text>
 <junction x="226.06" y="127"/>
 <label x="236.22" y="127" size="1.778" layer="95" rot="MR0"/>
 <pinref part="MOSFET2" gate="G$1" pin="GATE_2"/>
+</segment>
+<segment>
+<wire x1="256.54" y1="157.48" x2="254" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="160.02" x2="254" y2="160.02" width="0.1524" layer="91"/>
+<label x="233.68" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PTR1" class="0">
@@ -12787,6 +12917,11 @@ to set it to “0”.</text>
 <junction x="50.8" y="71.12"/>
 <label x="35.56" y="71.12" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="256.54" y1="154.94" x2="254" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="157.48" x2="254" y2="157.48" width="0.1524" layer="91"/>
+<label x="233.68" y="157.48" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="PTR2" class="0">
 <segment>
@@ -12797,6 +12932,11 @@ to set it to “0”.</text>
 <wire x1="86.36" y1="71.12" x2="71.12" y2="71.12" width="0.1524" layer="91"/>
 <junction x="86.36" y="71.12"/>
 <label x="71.12" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="256.54" y1="152.4" x2="254" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="154.94" x2="254" y2="154.94" width="0.1524" layer="91"/>
+<label x="233.68" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PTR3" class="0">
@@ -12809,6 +12949,11 @@ to set it to “0”.</text>
 <junction x="119.38" y="71.12"/>
 <label x="104.14" y="71.12" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="256.54" y1="149.86" x2="254" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="152.4" x2="254" y2="152.4" width="0.1524" layer="91"/>
+<label x="233.68" y="152.4" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="PTR4" class="0">
 <segment>
@@ -12820,26 +12965,33 @@ to set it to “0”.</text>
 <junction x="149.86" y="71.12"/>
 <label x="134.62" y="71.12" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="256.54" y1="147.32" x2="254" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="149.86" x2="254" y2="149.86" width="0.1524" layer="91"/>
+<label x="233.68" y="149.86" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="IR_LED4" gate="P" pin="P"/>
 <wire x1="210.82" y1="142.24" x2="210.82" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="MOSFET2" gate="G$1" pin="DRAIN_2"/>
 <wire x1="205.74" y1="132.08" x2="210.82" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="134.62" x2="210.82" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="142.24" x2="210.82" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P4"/>
+<wire x1="210.82" y1="160.02" x2="137.16" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
-<pinref part="3V3_1" gate="P" pin="P"/>
 <wire x1="208.28" y1="73.66" x2="208.28" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
+<pinref part="U$2" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<pinref part="3V3_2" gate="P" pin="P"/>
 <wire x1="228.6" y1="73.66" x2="228.6" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
+<pinref part="U$3" gate="G$1" pin="P1"/>
 </segment>
 </net>
 </nets>

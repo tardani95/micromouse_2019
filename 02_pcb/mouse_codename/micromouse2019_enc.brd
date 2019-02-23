@@ -250,12 +250,28 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
 </package>
-<package name="PINHD4-1.27">
-<pad name="P1" x="-1.905" y="0" drill="0.6" rot="R90"/>
-<pad name="P2" x="-0.635" y="0" drill="0.6" rot="R90"/>
-<pad name="P3" x="0.635" y="0" drill="0.6" rot="R90"/>
-<pad name="P4" x="1.905" y="0" drill="0.6" rot="R90"/>
-<text x="-2.251" y="0.811665625" size="0.508" layer="25">&gt;NAME</text>
+<package name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:footprint:9165681/2">
+<description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
+&lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<circle x="-1.1868" y="0" radius="0.25" width="0" layer="21"/>
+<wire x1="4.65" y1="-3.4" x2="-0.84" y2="-3.4" width="0.12" layer="21"/>
+<wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="21"/>
+<wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="21"/>
+<wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="21"/>
+<wire x1="0" y1="-3.46" x2="0" y2="-6.46" width="0.12" layer="21"/>
+<wire x1="1.27" y1="-3.46" x2="1.27" y2="-6.46" width="0.12" layer="21"/>
+<wire x1="2.54" y1="-3.46" x2="2.54" y2="-6.46" width="0.12" layer="21"/>
+<wire x1="3.81" y1="-3.46" x2="3.81" y2="-6.46" width="0.12" layer="21"/>
+<wire x1="4.65" y1="-3.4" x2="-0.84" y2="-3.4" width="0.12" layer="51"/>
+<wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="51"/>
+<wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="51"/>
+<wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="51"/>
+<pad name="1" x="0" y="0" drill="0.7657" diameter="1.143"/>
+<pad name="2" x="1.27" y="0" drill="0.7657" diameter="1.143"/>
+<pad name="3" x="2.54" y="0" drill="0.7657" diameter="1.143"/>
+<pad name="4" x="3.81" y="0" drill="0.7657" diameter="1.143"/>
+<text x="0" y="1.3178" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-7.095" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
@@ -276,6 +292,13 @@ by exp-lbrs-replace2.ulp</description>
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.60 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="C0402"/>
+</packageinstances>
+</package3d>
+<package3d name="HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:package:9165666/2" type="model">
+<description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
+&lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -504,9 +527,12 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="3.2050375" y="2.93958125" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="0.3856375" y="2.22838125" size="0.7" layer="28" rot="MR180"/>
 </element>
-<element name="SPI" library="0-micromouse2019" package="PINHD4-1.27" value="CON_WIRE" x="2.9510375" y="10.43258125" smashed="yes" rot="R180"/>
 <element name="PORT1" library="0-micromouse2019" package="ENC_PORT_MODULE" value="ENC_PORT_MODULE" x="2.95" y="0.5" smashed="yes">
 <attribute name="VALUE" x="0.45" y="-0.931665625" size="0.7" layer="27"/>
+</element>
+<element name="U$1" library="0-micromouse2019" package="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" package3d_urn="urn:adsk.eagle:package:9165666/2" value="CONN_SPI" x="-11.049" y="6.858" smashed="yes">
+<attribute name="NAME" x="-11.049" y="8.1758" size="1.27" layer="25" align="bottom-center"/>
+<attribute name="VALUE" x="-11.049" y="-0.237" size="1.27" layer="27" align="top-center"/>
 </element>
 </elements>
 <signals>
@@ -535,7 +561,6 @@ design rules under a new name.</description>
 <signal name="CLK">
 <contactref element="IC1" pad="2"/>
 <contactref element="R2" pad="2"/>
-<contactref element="SPI" pad="P2"/>
 <wire x1="4.25" y1="8.448" x2="4.2510375" y2="7.16058125" width="0.1524" layer="1"/>
 <wire x1="4.2510375" y1="7.16058125" x2="4.0940375" y2="7.00358125" width="0.1524" layer="1"/>
 <wire x1="4.0940375" y1="7.00358125" x2="3.9670375" y2="7.00358125" width="0.1524" layer="1"/>
@@ -543,7 +568,8 @@ design rules under a new name.</description>
 <wire x1="3.5780375" y1="5.60658125" x2="3.5780375" y2="6.61458125" width="0.1524" layer="16"/>
 <wire x1="3.5780375" y1="6.61458125" x2="3.9670375" y2="7.00358125" width="0.1524" layer="16"/>
 <wire x1="4.25" y1="8.448" x2="4.2510375" y2="9.76758125" width="0.1524" layer="1"/>
-<wire x1="4.2510375" y1="9.76758125" x2="3.5860375" y2="10.43258125" width="0.1524" layer="1"/>
+<contactref element="U$1" pad="3"/>
+<wire x1="-8.509" y1="6.858" x2="3.5780375" y2="6.61458125" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="GND">
 <contactref element="R2" pad="1"/>
@@ -602,7 +628,6 @@ design rules under a new name.</description>
 <wire x1="0.2586375" y1="3.94431875" x2="0.2586375" y2="1.2413625" width="0.1524" layer="1"/>
 </signal>
 <signal name="CSN">
-<contactref element="SPI" pad="P1"/>
 <contactref element="IC1" pad="1"/>
 <contactref element="R1" pad="1"/>
 <wire x1="4.9" y1="8.448" x2="4.9010375" y2="7.08558125" width="0.1524" layer="1"/>
@@ -611,16 +636,16 @@ design rules under a new name.</description>
 <wire x1="4.9830375" y1="7.00358125" x2="4.8560375" y2="6.87658125" width="0.1524" layer="16"/>
 <wire x1="4.8560375" y1="6.87658125" x2="4.8560375" y2="6.10658125" width="0.1524" layer="16"/>
 <wire x1="4.9" y1="8.448" x2="4.9010375" y2="10.38758125" width="0.1524" layer="1"/>
-<wire x1="4.9010375" y1="10.38758125" x2="4.8560375" y2="10.43258125" width="0.1524" layer="1"/>
+<contactref element="U$1" pad="4"/>
+<wire x1="-7.239" y1="6.858" x2="4.8560375" y2="6.87658125" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="MISO">
-<contactref element="SPI" pad="P3"/>
 <contactref element="IC1" pad="3"/>
 <wire x1="3.6" y1="8.448" x2="3.6010375" y2="9.14758125" width="0.1524" layer="1"/>
-<wire x1="3.6010375" y1="9.14758125" x2="2.3160375" y2="10.43258125" width="0.1524" layer="1"/>
+<contactref element="U$1" pad="2"/>
+<wire x1="-9.779" y1="6.858" x2="3.6" y2="8.448" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MOSI">
-<contactref element="SPI" pad="P4"/>
 <contactref element="IC1" pad="4"/>
 <contactref element="R3" pad="2"/>
 <wire x1="2.95" y1="8.448" x2="2.9510375" y2="7.00358125" width="0.1524" layer="1"/>
@@ -631,7 +656,8 @@ design rules under a new name.</description>
 <wire x1="2.9510375" y1="9.16258125" x2="2.5700375" y2="9.54358125" width="0.1524" layer="1"/>
 <wire x1="2.5700375" y1="9.54358125" x2="1.6810375" y2="9.54358125" width="0.1524" layer="1"/>
 <wire x1="1.6810375" y1="9.54358125" x2="1.0460375" y2="10.17858125" width="0.1524" layer="1"/>
-<wire x1="1.0460375" y1="10.17858125" x2="1.0460375" y2="10.43258125" width="0.1524" layer="1"/>
+<contactref element="U$1" pad="1"/>
+<wire x1="-11.049" y1="6.858" x2="1.0460375" y2="6.61458125" width="0" layer="19" extent="16-16"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
