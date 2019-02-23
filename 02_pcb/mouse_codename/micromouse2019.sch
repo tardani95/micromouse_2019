@@ -11384,9 +11384,9 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <instance part="+3V1" gate="G$1" x="68.58" y="109.22" smashed="yes">
 <attribute name="VALUE" x="66.04" y="104.14" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C3" gate="G$1" x="154.94" y="104.14" smashed="yes" rot="R90">
-<attribute name="NAME" x="154.305" y="105.156" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="162.306" y="102.997" size="1.778" layer="96" rot="R180"/>
+<instance part="C3" gate="G$1" x="160.02" y="104.14" smashed="yes" rot="R90">
+<attribute name="NAME" x="159.385" y="105.156" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="167.386" y="102.997" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND2" gate="1" x="99.06" y="114.3" smashed="yes">
 <attribute name="VALUE" x="96.52" y="111.76" size="1.778" layer="96"/>
@@ -11428,7 +11428,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <wire x1="144.78" y1="109.22" x2="172.72" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="160.02" y1="104.14" x2="172.72" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="104.14" x2="172.72" y2="104.14" width="0.1524" layer="91"/>
 <junction x="172.72" y="104.14"/>
 </segment>
 <segment>
@@ -11480,19 +11480,21 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="AD0" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="AD0"/>
 <wire x1="111.76" y1="99.06" x2="81.28" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="99.06" x2="81.28" y2="93.98" width="0.1524" layer="91"/>
+<label x="99.06" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="CPOUT" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="CPOUT"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="104.14" x2="152.4" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="104.14" x2="157.48" y2="104.14" width="0.1524" layer="91"/>
+<label x="147.32" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -11509,13 +11511,14 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <label x="147.32" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="REGOUT" class="0">
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="93.98" x2="93.98" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="REGOUT"/>
 <wire x1="111.76" y1="96.52" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="96.52" x2="93.98" y2="93.98" width="0.1524" layer="91"/>
+<label x="99.06" y="96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -12117,11 +12120,12 @@ to set it to “0”.</text>
 </bus>
 </busses>
 <nets>
-<net name="N$10" class="0">
+<net name="V_BAT" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="VBAT"/>
 <wire x1="93.98" y1="121.92" x2="83.82" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="2"/>
+<label x="83.82" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -12308,11 +12312,12 @@ to set it to “0”.</text>
 <pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="BTN_BOOT0" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="S3" gate="G$1" pin="2"/>
 <wire x1="35.56" y1="160.02" x2="35.56" y2="157.48" width="0.1524" layer="91"/>
+<label x="35.56" y="157.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BOOT0" class="0">
