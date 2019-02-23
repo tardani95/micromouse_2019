@@ -8144,6 +8144,27 @@ Source: AVX .. aphvc.pdf</description>
 <text x="0" y="2.659" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.905" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
+<package name="D_RGB_0603" urn="urn:adsk.eagle:footprint:9166170/1">
+<smd name="P$1" x="0" y="0" dx="0.8" dy="0.65" layer="1"/>
+<smd name="P$2" x="1.5" y="0" dx="0.8" dy="0.65" layer="1"/>
+<smd name="P$3" x="0" y="-0.85" dx="0.8" dy="0.65" layer="1"/>
+<smd name="P$4" x="1.5" y="-0.85" dx="0.8" dy="0.65" layer="1"/>
+<wire x1="0.9" y1="0.2" x2="0.9" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-0.3" x2="0.9" y2="-0.4" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-0.4" x2="0.9" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-0.5" x2="0.9" y2="-0.6" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-0.6" x2="0.9" y2="-1.1" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-0.4" x2="0.6" y2="-0.4" width="0.127" layer="21"/>
+<wire x1="0.9" y1="-0.3" x2="0.6" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="0.6" y1="-0.3" x2="0.6" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="0.6" y1="-0.5" x2="0.9" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="0.6" y1="-0.5" x2="0.6" y2="-0.6" width="0.127" layer="21"/>
+<wire x1="0.6" y1="-0.6" x2="0.9" y2="-0.6" width="0.127" layer="21"/>
+<wire x1="-0.55" y1="0.45" x2="-0.55" y2="-1.3" width="0.127" layer="21"/>
+<wire x1="-0.55" y1="-1.3" x2="2.05" y2="-1.3" width="0.127" layer="21"/>
+<wire x1="2.05" y1="-1.3" x2="2.05" y2="0.45" width="0.127" layer="21"/>
+<wire x1="2.05" y1="0.45" x2="-0.55" y2="0.45" width="0.127" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/3" type="model">
@@ -8236,6 +8257,11 @@ Source: AVX .. aphvc.pdf</description>
 &lt;p&gt;Single-row (1X1), 1-pin Pin Header (Male) Straight package with 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 2.54 X 2.54 X 8.38 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B"/>
+</packageinstances>
+</package3d>
+<package3d name="D_RGB_0603" urn="urn:adsk.eagle:package:9166171/2" type="model">
+<packageinstances>
+<packageinstance name="D_RGB_0603"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -8559,6 +8585,36 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-2.54" y1="-10.16" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <text x="-2.54" y="-4.826" size="1.27" layer="95">&gt;NAME</text>
 <text x="-2.54" y="-12.7" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="D_RGB_0603">
+<pin name="VIN" x="-12.7" y="0" length="short" direction="pwr"/>
+<pin name="R" x="12.7" y="2.54" length="short" direction="out" rot="R180"/>
+<pin name="B" x="12.7" y="-2.54" length="short" direction="out" rot="R180"/>
+<pin name="G" x="12.7" y="0" length="short" direction="out" rot="R180"/>
+<wire x1="-10.16" y1="4.318" x2="-10.16" y2="-4.064" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-4.064" x2="10.16" y2="-4.064" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-4.064" x2="10.16" y2="4.318" width="0.254" layer="94"/>
+<wire x1="10.16" y1="4.318" x2="-10.16" y2="4.318" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="1.778" y1="3.81" x2="1.524" y2="3.556" width="0.254" layer="94"/>
+<wire x1="2.286" y1="3.556" x2="2.54" y2="3.81" width="0.254" layer="94"/>
+<wire x1="1.778" y1="3.81" x2="1.778" y2="3.556" width="0.254" layer="94"/>
+<wire x1="1.778" y1="3.556" x2="1.778" y2="3.81" width="0.254" layer="94"/>
+<wire x1="1.778" y1="3.81" x2="1.524" y2="3.81" width="0.254" layer="94"/>
+<wire x1="2.54" y1="3.81" x2="2.286" y2="3.81" width="0.254" layer="94"/>
+<wire x1="2.286" y1="3.81" x2="2.54" y2="3.81" width="0.254" layer="94"/>
+<wire x1="2.54" y1="3.81" x2="2.54" y2="3.556" width="0.254" layer="94"/>
+<wire x1="2.286" y1="3.556" x2="1.778" y2="3.048" width="0.254" layer="94"/>
+<wire x1="1.524" y1="3.556" x2="1.016" y2="3.048" width="0.254" layer="94"/>
+<text x="-10.16" y="5.08" size="1.27" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-6.096" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10920,6 +10976,27 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
+<deviceset name="D_RGB_0603">
+<gates>
+<gate name="RGB$" symbol="D_RGB_0603" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="D_RGB_0603">
+<connects>
+<connect gate="RGB$" pin="B" pad="P$3"/>
+<connect gate="RGB$" pin="G" pad="P$4"/>
+<connect gate="RGB$" pin="R" pad="P$2"/>
+<connect gate="RGB$" pin="VIN" pad="P$1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9166171/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -11811,6 +11888,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="J1" library="0-micromouse2019" deviceset="CONN_SM03B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9126100/3" value="CONN_SWD"/>
 <part name="GND6" library="0-micromouse2019" deviceset="GND" device=""/>
+<part name="RGB1" library="0-micromouse2019" deviceset="D_RGB_0603" device="" package3d_urn="urn:adsk.eagle:package:9166171/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -11948,6 +12026,10 @@ to set it to “0”.</text>
 </instance>
 <instance part="GND6" gate="1" x="78.74" y="157.48" smashed="yes">
 <attribute name="VALUE" x="76.2" y="154.94" size="1.778" layer="96"/>
+</instance>
+<instance part="RGB1" gate="RGB$" x="132.08" y="165.1" smashed="yes">
+<attribute name="NAME" x="121.92" y="170.18" size="1.27" layer="95"/>
+<attribute name="VALUE" x="121.92" y="159.004" size="1.27" layer="96"/>
 </instance>
 </instances>
 <busses>
