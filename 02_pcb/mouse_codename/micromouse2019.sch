@@ -9138,7 +9138,7 @@ DIN A4, landscape with extra doc field</description>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n"/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="1u"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10n"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="2u2"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="1u"/>
@@ -9159,22 +9159,22 @@ DIN A4, landscape with extra doc field</description>
 <sheets>
 <sheet>
 <plain>
-<text x="167.64" y="101.6" size="1.778" layer="97">All components on the same side of the board as the LDO</text>
-<text x="167.64" y="88.9" size="1.778" layer="97">Place ground return connections to the input and output
+<text x="167.64" y="137.16" size="1.778" layer="97">All components on the same side of the board as the LDO</text>
+<text x="167.64" y="124.46" size="1.778" layer="97">Place ground return connections to the input and output
 capacitor, and to the LDO ground pin as close to each other as possible,
 connected by a wide, component-side
 copper surface</text>
 <text x="167.64" y="76.2" size="1.778" layer="97">01_datasheet/LDO/TPS73533DRVR_lowCurrent
 page 16</text>
-<wire x1="160.02" y1="119.38" x2="160.02" y2="111.76" width="0.1524" layer="97"/>
-<wire x1="160.02" y1="111.76" x2="160.02" y2="73.66" width="0.1524" layer="97"/>
+<wire x1="160.02" y1="154.94" x2="160.02" y2="147.32" width="0.1524" layer="97"/>
+<wire x1="160.02" y1="147.32" x2="160.02" y2="73.66" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="73.66" x2="261.62" y2="73.66" width="0.1524" layer="97"/>
-<wire x1="160.02" y1="119.38" x2="203.2" y2="119.38" width="0.1524" layer="97"/>
-<wire x1="203.2" y1="119.38" x2="261.62" y2="119.38" width="0.1524" layer="97"/>
-<wire x1="261.62" y1="119.38" x2="261.62" y2="73.66" width="0.1524" layer="97"/>
-<text x="162.56" y="114.3" size="2.54" layer="97">LDO1 - TPS73533DRVT</text>
-<wire x1="160.02" y1="111.76" x2="203.2" y2="111.76" width="0.1524" layer="97"/>
-<wire x1="203.2" y1="111.76" x2="203.2" y2="119.38" width="0.1524" layer="97"/>
+<wire x1="160.02" y1="154.94" x2="203.2" y2="154.94" width="0.1524" layer="97"/>
+<wire x1="203.2" y1="154.94" x2="261.62" y2="154.94" width="0.1524" layer="97"/>
+<wire x1="261.62" y1="154.94" x2="261.62" y2="73.66" width="0.1524" layer="97"/>
+<text x="162.56" y="149.86" size="2.54" layer="97">LDO1 - TPS73533DRVT</text>
+<wire x1="160.02" y1="147.32" x2="203.2" y2="147.32" width="0.1524" layer="97"/>
+<wire x1="203.2" y1="147.32" x2="203.2" y2="154.94" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="71.12" x2="160.02" y2="63.5" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="63.5" x2="160.02" y2="38.1" width="0.1524" layer="97"/>
 <wire x1="160.02" y1="38.1" x2="261.62" y2="38.1" width="0.1524" layer="97"/>
@@ -9184,10 +9184,15 @@ page 16</text>
 <text x="162.56" y="66.04" size="2.54" layer="97">LDO2 - LDL112PU</text>
 <wire x1="160.02" y1="63.5" x2="193.04" y2="63.5" width="0.1524" layer="97"/>
 <wire x1="193.04" y1="63.5" x2="193.04" y2="71.12" width="0.1524" layer="97"/>
-<text x="162.56" y="106.68" size="1.778" layer="97">From datasheet:</text>
+<text x="162.56" y="142.24" size="1.778" layer="97">From datasheet:</text>
 <text x="162.56" y="58.42" size="1.778" layer="97">Zoli:</text>
 <text x="167.64" y="53.34" size="1.778" layer="97">Generally same principles as for the TPS735</text>
 <text x="162.56" y="83.82" size="1.778" layer="97">For layout example see:</text>
+<text x="167.64" y="119.38" size="1.778" layer="97">Stable With a Ceramic, 2.2-μF, Low-ESR Output Capacitor</text>
+<text x="167.64" y="111.76" size="1.778" layer="97">A 0.1-µF to 1-µF, low ESR capacitor must be placed from the IN pin
+to ground near the device.</text>
+<text x="167.64" y="104.14" size="1.778" layer="97">The NR pin is high impedance so a low-leakage C NR capacitor must be used.
+Most ceramic capacitors are appropriate in this configuration</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
