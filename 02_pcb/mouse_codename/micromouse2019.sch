@@ -7926,24 +7926,6 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
 </package>
-<package name="JDY-10_STANDING" urn="urn:adsk.eagle:footprint:8988316/1">
-<wire x1="13" y1="-1.362" x2="13" y2="0.7" width="0.05" layer="21"/>
-<wire x1="13" y1="0.7" x2="0" y2="0.7" width="0.05" layer="21"/>
-<wire x1="0" y1="0.7" x2="0" y2="-1.362" width="0.05" layer="21"/>
-<wire x1="0" y1="-1.362" x2="13" y2="-1.362" width="0.05" layer="21"/>
-<smd name="P$8" x="1.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
-<smd name="P$9" x="2.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
-<smd name="P$10" x="4.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
-<smd name="P$11" x="5.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
-<smd name="P$12" x="7.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
-<smd name="P$13" x="8.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
-<smd name="P$14" x="10.25" y="0" dx="2" dy="1" layer="1" rot="R90"/>
-<smd name="P$15" x="11.75" y="0" dx="2" dy="1" layer="1" rot="R90"/>
-<dimension x1="0" y1="0" x2="13" y2="0" x3="6.5" y3="-5.9" textsize="1.27" layer="20"/>
-<text x="0" y="-2.908" size="1.27" layer="25">JDY-10</text>
-<text x="7.8" y="-2.908" size="1.27" layer="21">TOP</text>
-<text x="5.6" y="1.2" size="1.27" layer="21">BOTTOM</text>
-</package>
 <package name="B3U-1000P" urn="urn:adsk.eagle:footprint:9141313/1">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;
 </description>
@@ -8165,6 +8147,34 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="2.05" y1="-1.3" x2="2.05" y2="0.45" width="0.127" layer="21"/>
 <wire x1="2.05" y1="0.45" x2="-0.55" y2="0.45" width="0.127" layer="21"/>
 </package>
+<package name="BT_PORT_BASE" urn="urn:adsk.eagle:footprint:9190653/1">
+<description>Mouse side of the bluetooth module port</description>
+<smd name="P$8" x="1.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="2.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$10" x="4.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$11" x="5.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$12" x="7.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$13" x="8.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$14" x="10.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$15" x="11.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<wire x1="0" y1="0.5" x2="0" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.5" x2="13" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="13" y1="-0.5" x2="13" y2="0.5" width="0.127" layer="21"/>
+<wire x1="13" y1="0.5" x2="0" y2="0.5" width="0.127" layer="21"/>
+<text x="0" y="-2.865" size="0.7" layer="21">&gt;VALUE</text>
+</package>
+<package name="BT_PORT_MODULE" urn="urn:adsk.eagle:footprint:9190655/1">
+<description>Module side of the BT_PORT</description>
+<smd name="P8" x="-5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P9" x="-3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P10" x="-2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P11" x="-0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P12" x="0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P13" x="2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P14" x="3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P15" x="5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<text x="-5.75" y="-1.531665625" size="0.7" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/3" type="model">
@@ -8216,11 +8226,6 @@ Source: AVX .. aphvc.pdf</description>
 <packageinstance name="ENC_PORT_BASE"/>
 </packageinstances>
 </package3d>
-<package3d name="JDY-10_STANDING" urn="urn:adsk.eagle:package:8988323/2" type="model">
-<packageinstances>
-<packageinstance name="JDY-10_STANDING"/>
-</packageinstances>
-</package3d>
 <package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/5" type="model">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
@@ -8262,6 +8267,18 @@ Source: AVX .. aphvc.pdf</description>
 <package3d name="D_RGB_0603" urn="urn:adsk.eagle:package:9166171/2" type="model">
 <packageinstances>
 <packageinstance name="D_RGB_0603"/>
+</packageinstances>
+</package3d>
+<package3d name="BT_PORT_BASE" urn="urn:adsk.eagle:package:9190657/2" type="model">
+<description>Mouse side of the bluetooth module port</description>
+<packageinstances>
+<packageinstance name="BT_PORT_BASE"/>
+</packageinstances>
+</package3d>
+<package3d name="BT_PORT_MODULE" urn="urn:adsk.eagle:package:9190656/1" type="box">
+<description>Module side of the BT_PORT</description>
+<packageinstances>
+<packageinstance name="BT_PORT_MODULE"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -8424,21 +8441,6 @@ Source: AVX .. aphvc.pdf</description>
 <pin name="GND" x="-2.54" y="2.54" visible="pin" length="short" direction="pas"/>
 <text x="0" y="13.208" size="1.27" layer="95">&gt;NAME</text>
 <text x="0" y="-1.778" size="1.27" layer="95">&gt;VALUE</text>
-</symbol>
-<symbol name="JDY-10_STANDING">
-<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-15.24" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="-15.24" x2="12.7" y2="-15.24" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-15.24" x2="12.7" y2="15.24" width="0.254" layer="94"/>
-<wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.254" layer="94"/>
-<pin name="ALED/D5" x="17.78" y="-2.54" length="middle" rot="R180"/>
-<pin name="D4/PWRC" x="17.78" y="-7.62" length="middle" rot="R180"/>
-<pin name="GND" x="-17.78" y="7.62" length="middle"/>
-<pin name="PWM3/A1" x="-17.78" y="-7.62" length="middle"/>
-<pin name="RX/C7" x="17.78" y="12.7" length="middle" rot="R180"/>
-<pin name="STATUS/A5" x="-17.78" y="-12.7" length="middle"/>
-<pin name="TX/C6" x="17.78" y="7.62" length="middle" rot="R180"/>
-<pin name="VCC" x="-17.78" y="12.7" length="middle"/>
-<text x="-5.08" y="0" size="2.54" layer="95">JDY-10</text>
 </symbol>
 <symbol name="B3U-1000P">
 <wire x1="2.54" y1="1.27" x2="10.16" y2="1.27" width="0.254" layer="94"/>
@@ -8615,6 +8617,20 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="1.524" y1="3.556" x2="1.016" y2="3.048" width="0.254" layer="94"/>
 <text x="-10.16" y="5.08" size="1.27" layer="95">&gt;NAME</text>
 <text x="-10.16" y="-6.096" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="BT_PORT">
+<description>Symbol for connection pins between ENC_PCB and MOUSE_PCB</description>
+<pin name="+3V3" x="-2.54" y="12.7" visible="pin" length="short" direction="pwr"/>
+<pin name="RX" x="-2.54" y="10.16" visible="pin" length="short" direction="in"/>
+<pin name="TX" x="-2.54" y="7.62" visible="pin" length="short" direction="out"/>
+<pin name="GND" x="-2.54" y="2.54" visible="pin" length="short" direction="pas"/>
+<pin name="STATUS" x="-2.54" y="5.08" visible="pin" length="short" direction="out"/>
+<wire x1="0" y1="15.24" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="12.7" y1="0" x2="12.7" y2="15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="15.24" x2="0" y2="15.24" width="0.254" layer="94"/>
+<text x="0" y="15.748" size="1.27" layer="95">&gt;NAME</text>
+<text x="0" y="-1.778" size="1.27" layer="95">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10707,34 +10723,6 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="WM_JDY-10_STANDING">
-<gates>
-<gate name="G$1" symbol="JDY-10_STANDING" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JDY-10_STANDING">
-<connects>
-<connect gate="G$1" pin="ALED/D5" pad="P$12"/>
-<connect gate="G$1" pin="D4/PWRC" pad="P$13"/>
-<connect gate="G$1" pin="GND" pad="P$9"/>
-<connect gate="G$1" pin="PWM3/A1" pad="P$10"/>
-<connect gate="G$1" pin="RX/C7" pad="P$14"/>
-<connect gate="G$1" pin="STATUS/A5" pad="P$11"/>
-<connect gate="G$1" pin="TX/C6" pad="P$15"/>
-<connect gate="G$1" pin="VCC" pad="P$8"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8988323/2"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="ALED" value="MESH working instruction pin flashes once per second and outputs 100MS high level."/>
-<attribute name="STAT" value="Unconnected low level, post connection high level"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="BTN_B3U-1000P" prefix="S">
 <description>&lt;b&gt;OMRON ELECTRONIC COMPONENTS - B3U-1000P - SWITCH, SPST-NO, 0.05A, 12V, SMD&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; Datasheet &lt;/a&gt;</description>
@@ -10990,6 +10978,44 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:9166171/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BT_PORT" prefix="PORT">
+<description>Port between mouse pcb and bluetooth module</description>
+<gates>
+<gate name="G$1" symbol="BT_PORT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_BASE" package="BT_PORT_BASE">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="P$15"/>
+<connect gate="G$1" pin="GND" pad="P$14"/>
+<connect gate="G$1" pin="RX" pad="P$9"/>
+<connect gate="G$1" pin="STATUS" pad="P$11"/>
+<connect gate="G$1" pin="TX" pad="P$8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9190657/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_MODULE" package="BT_PORT_MODULE">
+<connects>
+<connect gate="G$1" pin="+3V3" pad="P15"/>
+<connect gate="G$1" pin="GND" pad="P14"/>
+<connect gate="G$1" pin="RX" pad="P9"/>
+<connect gate="G$1" pin="STATUS" pad="P11"/>
+<connect gate="G$1" pin="TX" pad="P8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9190656/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -11757,8 +11783,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </module>
 <module name="WIRELESS_MODUL_PORT" prefix="BT_PORT" dx="25.4" dy="20.32">
 <ports>
-<port name="JDY-10_TX" side="top" coord="0" direction="out"/>
-<port name="JDY-10_RX" side="top" coord="-2.54" direction="in"/>
+<port name="BT_TX" side="top" coord="0" direction="out"/>
+<port name="BT_RX" side="top" coord="-2.54" direction="in"/>
 <port name="+3V3" side="left" coord="7.62" direction="pwr"/>
 <port name="GND" side="left" coord="-7.62" direction="pwr"/>
 </ports>
@@ -11766,9 +11792,9 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="WIRELESS_MODUL"/>
-<part name="U$1" library="0-micromouse2019" deviceset="WM_JDY-10_STANDING" device="" package3d_urn="urn:adsk.eagle:package:8988323/2"/>
 <part name="+3V1" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
+<part name="PORT1" library="0-micromouse2019" deviceset="BT_PORT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9190657/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -11781,45 +11807,55 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="U$1" gate="G$1" x="132.08" y="106.68" smashed="yes"/>
-<instance part="+3V1" gate="G$1" x="106.68" y="127" smashed="yes">
-<attribute name="VALUE" x="104.14" y="121.92" size="1.778" layer="96" rot="R90"/>
+<instance part="+3V1" gate="G$1" x="106.68" y="137.16" smashed="yes">
+<attribute name="VALUE" x="104.14" y="132.08" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND1" gate="1" x="106.68" y="106.68" smashed="yes">
 <attribute name="VALUE" x="104.14" y="104.14" size="1.778" layer="96"/>
+</instance>
+<instance part="PORT1" gate="G$1" x="116.84" y="111.76" smashed="yes">
+<attribute name="NAME" x="116.84" y="127.508" size="1.27" layer="95"/>
+<attribute name="VALUE" x="116.84" y="109.982" size="1.27" layer="95"/>
 </instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="JDY-10_RX" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="RX/C7"/>
-<wire x1="149.86" y1="119.38" x2="167.64" y2="119.38" width="0.1524" layer="91"/>
-<label x="154.94" y="119.38" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="JDY-10_TX" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="TX/C6"/>
-<wire x1="149.86" y1="114.3" x2="167.64" y2="114.3" width="0.1524" layer="91"/>
-<label x="154.94" y="114.3" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
 <wire x1="114.3" y1="114.3" x2="106.68" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="114.3" x2="106.68" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+<pinref part="PORT1" gate="G$1" pin="GND"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="114.3" y1="119.38" x2="106.68" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="119.38" x2="106.68" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="124.46" x2="106.68" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="124.46" x2="106.68" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<pinref part="PORT1" gate="G$1" pin="+3V3"/>
+</segment>
+</net>
+<net name="BT_RX" class="0">
+<segment>
+<pinref part="PORT1" gate="G$1" pin="RX"/>
+<wire x1="114.3" y1="121.92" x2="101.6" y2="121.92" width="0.1524" layer="91"/>
+<label x="101.6" y="121.92" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BT_TX" class="0">
+<segment>
+<pinref part="PORT1" gate="G$1" pin="TX"/>
+<wire x1="114.3" y1="119.38" x2="101.6" y2="119.38" width="0.1524" layer="91"/>
+<label x="101.6" y="119.38" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="BT_STATUS" class="0">
+<segment>
+<pinref part="PORT1" gate="G$1" pin="STATUS"/>
+<wire x1="114.3" y1="116.84" x2="101.6" y2="116.84" width="0.1524" layer="91"/>
+<label x="101.6" y="116.84" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -13388,7 +13424,7 @@ to set it to “0”.</text>
 </net>
 <net name="N$21" class="0">
 <segment>
-<portref moduleinst="BT_PORT" port="JDY-10_RX"/>
+<portref moduleinst="BT_PORT" port="BT_RX"/>
 <portref moduleinst="MCU" port="UART3_TX"/>
 <wire x1="121.92" y1="45.72" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
 </segment>
@@ -13396,7 +13432,7 @@ to set it to “0”.</text>
 <net name="N$22" class="0">
 <segment>
 <portref moduleinst="MCU" port="UART3_RX"/>
-<portref moduleinst="BT_PORT" port="JDY-10_TX"/>
+<portref moduleinst="BT_PORT" port="BT_TX"/>
 <wire x1="124.46" y1="50.8" x2="124.46" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
