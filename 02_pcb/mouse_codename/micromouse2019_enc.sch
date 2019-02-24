@@ -4178,7 +4178,7 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
 <wire x1="1.016" y1="-2.54" x2="1.016" y2="2.54" width="0.127" layer="51"/>
 </package>
-<package name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:footprint:9165681/2">
+<package name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:footprint:9165681/2" locally_modified="yes">
 <description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <circle x="-1.1868" y="0" radius="0.25" width="0" layer="21"/>
@@ -4194,10 +4194,10 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="51"/>
 <wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="51"/>
 <wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="51"/>
-<pad name="1" x="0" y="0" drill="0.7657" diameter="1.143"/>
-<pad name="2" x="1.27" y="0" drill="0.7657" diameter="1.143"/>
-<pad name="3" x="2.54" y="0" drill="0.7657" diameter="1.143"/>
-<pad name="4" x="3.81" y="0" drill="0.7657" diameter="1.143"/>
+<pad name="1" x="0" y="0" drill="0.7" diameter="1.1176"/>
+<pad name="2" x="1.27" y="0" drill="0.7" diameter="1.1176"/>
+<pad name="3" x="2.54" y="0" drill="0.7" diameter="1.1176"/>
+<pad name="4" x="3.81" y="0" drill="0.7" diameter="1.1176"/>
 <text x="0" y="1.3178" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-7.095" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
@@ -4228,7 +4228,7 @@ Source: AVX .. aphvc.pdf</description>
 <packageinstance name="ENC_PORT_BASE"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:package:9165666/2" type="model">
+<package3d name="HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:package:9165666/2" locally_modified="yes" type="model">
 <description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <packageinstances>
@@ -4308,17 +4308,18 @@ Source: AVX .. aphvc.pdf</description>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
-<symbol name="CONN_SPI">
-<pin name="P1" x="0" y="-7.62" length="middle" rot="R90"/>
-<pin name="P2" x="2.54" y="-7.62" length="middle" rot="R90"/>
-<pin name="P3" x="5.08" y="-7.62" length="middle" rot="R90"/>
-<pin name="P4" x="7.62" y="-7.62" length="middle" rot="R90"/>
-<wire x1="-2.54" y1="2.54" x2="10.16" y2="2.54" width="0.254" layer="94"/>
-<wire x1="10.16" y1="2.54" x2="10.16" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
-<text x="-2.54" y="2.794" size="1.27" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-5.08" size="1.27" layer="96">&gt;VALUE</text>
+<symbol name="CONN_X4">
+<description>4 connection pins</description>
+<pin name="P1" x="-2.54" y="2.54" visible="pin" length="short"/>
+<pin name="P2" x="-2.54" y="0" visible="pin" length="short"/>
+<pin name="P3" x="-2.54" y="-2.54" visible="pin" length="short"/>
+<pin name="P4" x="-2.54" y="-5.08" visible="pin" length="short"/>
+<wire x1="6.35" y1="5.08" x2="6.35" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="6.35" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="6.35" y2="5.08" width="0.254" layer="94"/>
+<text x="-1.016" y="5.842" size="1.27" layer="95">&gt;NAME</text>
+<text x="-1.016" y="-9.652" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -6179,7 +6180,7 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 </device>
 </devices>
 </deviceset>
-<deviceset name="ENC_PORT" prefix="PORT">
+<deviceset name="PORT_ENC" prefix="PORT">
 <description>Connection pins between ENC_PCB and MOUSE_PCB</description>
 <gates>
 <gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
@@ -6238,12 +6239,13 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_SPI">
+<deviceset name="CONN_SPI" prefix="CONN">
+<description>SPI connection pin header for encoder PCB</description>
 <gates>
-<gate name="G$1" symbol="CONN_SPI" x="-2.54" y="2.54"/>
+<gate name="G$1" symbol="CONN_X4" x="-2.54" y="2.54"/>
 </gates>
 <devices>
-<device name="" package="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B">
+<device name="-P127" package="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B">
 <connects>
 <connect gate="G$1" pin="P1" pad="1"/>
 <connect gate="G$1" pin="P2" pad="2"/>
@@ -6254,7 +6256,9 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 <package3dinstance package3d_urn="urn:adsk.eagle:package:9165666/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PITCH" value="1.27 mm"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -6285,14 +6289,14 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 <part name="+3V2" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND6" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="+3V3" library="0-micromouse2019" deviceset="+3V3" device=""/>
-<part name="PORT1" library="0-micromouse2019" deviceset="ENC_PORT" device="_MODULE"/>
+<part name="PORT1" library="0-micromouse2019" deviceset="PORT_ENC" device="_MODULE"/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device=""/>
-<part name="U$1" library="0-micromouse2019" deviceset="CONN_SPI" device="" package3d_urn="urn:adsk.eagle:package:9165666/2"/>
+<part name="CONN1" library="0-micromouse2019" deviceset="CONN_SPI" device="-P127" package3d_urn="urn:adsk.eagle:package:9165666/2"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="182.88" y="58.42" size="1.778" layer="97"> The LDO regulator is not intended to power any other
+<text x="167.64" y="55.88" size="1.778" layer="97">In 5 V operation mode the LDO regulator is not intended to power any other
 loads, and it needs a 1 μF capacitor to ground located close to
 the chip</text>
 </plain>
@@ -6354,9 +6358,9 @@ the chip</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="U$1" gate="G$1" x="22.86" y="101.6" smashed="yes" rot="R90">
-<attribute name="NAME" x="20.066" y="111.76" size="1.27" layer="95"/>
-<attribute name="VALUE" x="20.32" y="96.52" size="1.27" layer="96"/>
+<instance part="CONN1" gate="G$1" x="30.48" y="104.14" smashed="yes" rot="R180">
+<attribute name="NAME" x="31.496" y="98.298" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="31.496" y="113.792" size="1.27" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -6400,9 +6404,9 @@ the chip</text>
 <label x="81.28" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="30.48" y1="106.68" x2="43.18" y2="106.68" width="0.1524" layer="91"/>
-<label x="38.1" y="106.68" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="P3"/>
+<pinref part="CONN1" gate="G$1" pin="P2"/>
+<wire x1="33.02" y1="104.14" x2="45.72" y2="104.14" width="0.1524" layer="91"/>
+<label x="38.1" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -6466,42 +6470,42 @@ the chip</text>
 </net>
 <net name="CSN" class="0">
 <segment>
-<wire x1="30.48" y1="109.22" x2="43.18" y2="109.22" width="0.1524" layer="91"/>
-<label x="38.1" y="109.22" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="P4"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="CSN"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="88.9" y1="109.22" x2="76.2" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="109.22" x2="76.2" y2="111.76" width="0.1524" layer="91"/>
 <label x="81.28" y="109.22" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="CONN1" gate="G$1" pin="P1"/>
+<wire x1="33.02" y1="101.6" x2="45.72" y2="101.6" width="0.1524" layer="91"/>
+<label x="38.1" y="101.6" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="MISO" class="0">
-<segment>
-<wire x1="30.48" y1="104.14" x2="43.18" y2="104.14" width="0.1524" layer="91"/>
-<label x="38.1" y="104.14" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="P2"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="MISO"/>
 <wire x1="88.9" y1="104.14" x2="81.28" y2="104.14" width="0.1524" layer="91"/>
 <label x="81.28" y="104.14" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="CONN1" gate="G$1" pin="P3"/>
+<wire x1="33.02" y1="106.68" x2="45.72" y2="106.68" width="0.1524" layer="91"/>
+<label x="38.1" y="106.68" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="MOSI" class="0">
-<segment>
-<wire x1="30.48" y1="101.6" x2="43.18" y2="101.6" width="0.1524" layer="91"/>
-<label x="38.1" y="101.6" size="1.778" layer="95"/>
-<pinref part="U$1" gate="G$1" pin="P1"/>
-</segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="MOSI"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="101.6" x2="68.58" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="101.6" x2="68.58" y2="99.06" width="0.1524" layer="91"/>
 <label x="81.28" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="CONN1" gate="G$1" pin="P4"/>
+<wire x1="33.02" y1="109.22" x2="45.72" y2="109.22" width="0.1524" layer="91"/>
+<label x="38.1" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
