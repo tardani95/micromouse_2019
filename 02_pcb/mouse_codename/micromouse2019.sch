@@ -11899,7 +11899,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="PORT1" library="0-micromouse2019" deviceset="PORT_BT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9190657/2"/>
 <part name="LED3" library="0-micromouse2019" deviceset="LED" device="" technology="_BLUE"/>
 <part name="GND2" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
+<part name="R3" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 </parts>
 <sheets>
 <sheet>
@@ -12034,10 +12034,10 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="+3V1" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="+3V2" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="S4" library="0-micromouse2019" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
+<part name="S4" library="0-micromouse2019" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3" value="BTN2"/>
 <part name="S1" library="0-micromouse2019" deviceset="BTN_B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/5"/>
-<part name="S2" library="0-micromouse2019" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
-<part name="S3" library="0-micromouse2019" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3"/>
+<part name="S2" library="0-micromouse2019" deviceset="BTN_B3U-3000P" device="" package3d_urn="urn:adsk.eagle:package:8879469/3" value="BTN1"/>
+<part name="S3" library="0-micromouse2019" deviceset="BTN_B3U-1000P" device="" package3d_urn="urn:adsk.eagle:package:8879289/5"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k"/>
 <part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="+3V3" library="0-micromouse2019" deviceset="+3V3" device=""/>
@@ -12616,9 +12616,13 @@ to set it to “0”.</text>
 <label x="35.56" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PB4"/>
-<wire x1="142.24" y1="121.92" x2="157.48" y2="121.92" width="0.1524" layer="91"/>
-<label x="144.78" y="121.92" size="1.778" layer="95"/>
+<wire x1="-12.7" y1="0" x2="2.54" y2="0" width="0.1524" layer="91"/>
+<label x="-10.16" y="0" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="142.24" y1="101.6" x2="157.48" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB12"/>
+<label x="144.78" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BTN1" class="0">
@@ -12633,9 +12637,13 @@ to set it to “0”.</text>
 <label x="15.24" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PB3"/>
-<wire x1="142.24" y1="124.46" x2="157.48" y2="124.46" width="0.1524" layer="91"/>
-<label x="144.78" y="124.46" size="1.778" layer="95"/>
+<wire x1="-12.7" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
+<label x="-10.16" y="2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="142.24" y1="99.06" x2="157.48" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB13"/>
+<label x="144.78" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IRD3" class="0">
@@ -12868,9 +12876,9 @@ to set it to “0”.</text>
 <label x="157.48" y="172.72" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PB0"/>
-<wire x1="142.24" y1="132.08" x2="157.48" y2="132.08" width="0.1524" layer="91"/>
-<label x="144.78" y="132.08" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PA7"/>
+<wire x1="93.98" y1="53.34" x2="73.66" y2="53.34" width="0.1524" layer="91"/>
+<label x="73.66" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RGB_B" class="0">
@@ -12880,9 +12888,9 @@ to set it to “0”.</text>
 <label x="157.48" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PA7"/>
-<wire x1="93.98" y1="53.34" x2="73.66" y2="53.34" width="0.1524" layer="91"/>
-<label x="73.66" y="53.34" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PB1"/>
+<wire x1="142.24" y1="129.54" x2="157.48" y2="129.54" width="0.1524" layer="91"/>
+<label x="144.78" y="129.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -12917,22 +12925,22 @@ to set it to “0”.</text>
 <label x="157.48" y="165.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="G$1" pin="PB1"/>
-<wire x1="142.24" y1="129.54" x2="157.48" y2="129.54" width="0.1524" layer="91"/>
-<label x="144.78" y="129.54" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PB0"/>
+<wire x1="142.24" y1="132.08" x2="157.48" y2="132.08" width="0.1524" layer="91"/>
+<label x="144.78" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HEARTBEAT" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="PB12"/>
-<wire x1="142.24" y1="101.6" x2="157.48" y2="101.6" width="0.1524" layer="91"/>
-<label x="144.78" y="101.6" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="190.5" y1="99.06" x2="190.5" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="101.6" x2="175.26" y2="101.6" width="0.1524" layer="91"/>
 <label x="175.26" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="142.24" y1="124.46" x2="157.48" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB3"/>
+<label x="144.78" y="124.46" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -12940,6 +12948,18 @@ to set it to “0”.</text>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="190.5" y1="91.44" x2="190.5" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PB4"/>
+<wire x1="142.24" y1="121.92" x2="157.48" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PB5"/>
+<wire x1="142.24" y1="119.38" x2="157.48" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
