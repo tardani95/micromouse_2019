@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="mm" altunit="mm"/>
+<grid distance="1.96850394" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -1705,21 +1705,22 @@ by exp-lbrs-replace2.ulp</description>
 <text x="0" y="2.659" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.905" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="BT_PORT_BASE" urn="urn:adsk.eagle:footprint:9190653/1">
+<package name="BT_PORT_BASE" urn="urn:adsk.eagle:footprint:9190653/1" locally_modified="yes">
 <description>Mouse side of the bluetooth module port</description>
-<smd name="P$8" x="1.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$9" x="2.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$8" x="1.25" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="2.75" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
 <smd name="P$10" x="4.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$11" x="5.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$12" x="7.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$11" x="5.75" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$12" x="7.25" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
 <smd name="P$13" x="8.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$14" x="10.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$15" x="11.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$14" x="10.25" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$15" x="11.75" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
 <wire x1="0" y1="0.5" x2="0" y2="-0.5" width="0.127" layer="21"/>
 <wire x1="0" y1="-0.5" x2="13" y2="-0.5" width="0.127" layer="21"/>
 <wire x1="13" y1="-0.5" x2="13" y2="0.5" width="0.127" layer="21"/>
 <wire x1="13" y1="0.5" x2="0" y2="0.5" width="0.127" layer="21"/>
-<text x="0" y="-2.865" size="0.7" layer="21">&gt;VALUE</text>
+<text x="0" y="-2.865" size="0.762" layer="21">&gt;VALUE</text>
+<text x="-0.889" y="-1.524" size="0.762" layer="21">TX</text>
 </package>
 <package name="D_RGB_0603" urn="urn:adsk.eagle:footprint:9166170/1">
 <smd name="P$1" x="0" y="0" dx="0.8" dy="0.65" layer="1"/>
@@ -1757,7 +1758,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <rectangle x1="0.3" y1="0" x2="0.45" y2="0.3" layer="21"/>
 <rectangle x1="-0.15" y1="0" x2="0.15" y2="0.3" layer="21"/>
 </package>
-<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1">
+<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1" locally_modified="yes">
 <wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
 <wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
 <wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
@@ -1770,12 +1771,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
 <wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
 <wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
-<text x="-3.20481875" y="2.60391875" size="1.01753125" layer="25">&gt;NAME</text>
 <text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
 <circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
 <circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
 <pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
 <pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
+<text x="-3.81" y="2.54" size="1.27" layer="21">&gt;NAME</text>
 </package>
 </packages>
 <packages3d>
@@ -1861,7 +1862,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B"/>
 </packageinstances>
 </package3d>
-<package3d name="BT_PORT_BASE" urn="urn:adsk.eagle:package:9190657/2" type="model">
+<package3d name="BT_PORT_BASE" urn="urn:adsk.eagle:package:9190657/2" locally_modified="yes" type="model">
 <description>Mouse side of the bluetooth module port</description>
 <packageinstances>
 <packageinstance name="BT_PORT_BASE"/>
@@ -1872,7 +1873,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="D_RGB_0603"/>
 </packageinstances>
 </package3d>
-<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/3" type="model">
+<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/3" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
 </packageinstances>
@@ -2388,7 +2389,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="7.45" y="32.615" size="1.27" layer="27" align="top-center"/>
 </element>
 <element name="BT_PORT:PORT1" library="0-micromouse2019" package="BT_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9190657/2" value="PORT_BT_BASE" x="26.47" y="2.17" smashed="yes">
-<attribute name="VALUE" x="26.47" y="-0.695" size="0.7" layer="21"/>
+<attribute name="VALUE" x="27.37" y="-1.145" size="0.8128" layer="21"/>
 </element>
 <element name="MCU:RGB1" library="0-micromouse2019" package="D_RGB_0603" package3d_urn="urn:adsk.eagle:package:9166171/2" value="LED_RGB-0603" x="4.45" y="5.05" smashed="yes"/>
 <element name="MCU:R4" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R" x="20.4" y="2.5" smashed="yes" rot="R180">
@@ -2845,7 +2846,7 @@ design rules under a new name.</description>
 <wire x1="2.69" y1="34.83" x2="2.55" y2="37.09" width="0" layer="19" extent="16-16"/>
 <wire x1="2.69" y1="32.75" x2="2.69" y2="34.83" width="0" layer="19" extent="16-16"/>
 <wire x1="2.69" y1="30.94" x2="2.69" y2="32.75" width="0" layer="19" extent="16-16"/>
-<wire x1="36.72" y1="2.17" x2="41.35" y2="14" width="0" layer="19" extent="1-1"/>
+<wire x1="36.72" y1="1.67" x2="41.35" y2="14" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="PWR:C3" pad="1"/>
@@ -2948,7 +2949,7 @@ design rules under a new name.</description>
 <wire x1="31.99" y1="7.23" x2="28.15" y2="11.25" width="0" layer="19" extent="1-16"/>
 <wire x1="15.4" y1="24.65" x2="16.61" y2="30.31" width="0" layer="19" extent="1-1"/>
 <wire x1="15.086" y1="23.7556" x2="15.586" y2="23.7556" width="0" layer="19" extent="1-1"/>
-<wire x1="38.22" y1="2.17" x2="31.99" y2="7.23" width="0" layer="19" extent="1-16"/>
+<wire x1="38.22" y1="1.67" x2="31.99" y2="7.23" width="0" layer="19" extent="1-16"/>
 <wire x1="4.45" y1="5.05" x2="18.89" y2="9.24" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VCC">
@@ -3070,7 +3071,7 @@ design rules under a new name.</description>
 <wire x1="30.8" y1="31" x2="33.02" y2="31" width="0.1524" layer="1"/>
 <contactref element="BT_PORT:LED2" pad="A"/>
 <wire x1="33.2" y1="29.2174" x2="44.35" y2="25.25" width="0" layer="19" extent="1-1"/>
-<wire x1="29.22" y1="2.17" x2="29.24" y2="4.48" width="0" layer="19" extent="1-1"/>
+<wire x1="29.22" y1="1.67" x2="29.24" y2="4.48" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="UART3_RX">
 <contactref element="MCU:IC1" pad="52"/>
@@ -3093,7 +3094,7 @@ design rules under a new name.</description>
 <wire x1="32.35" y1="29.4874" x2="32.33" y2="29.4674" width="0.1524" layer="16"/>
 <contactref element="BT_PORT:LED1" pad="A"/>
 <wire x1="32.35" y1="29.4874" x2="47.35" y2="25.25" width="0" layer="19" extent="1-16"/>
-<wire x1="27.72" y1="2.17" x2="27.75" y2="4.36" width="0" layer="19" extent="1-1"/>
+<wire x1="27.72" y1="1.67" x2="27.75" y2="4.36" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="V_BAT_LEVEL">
 <contactref element="MCU:IC1" pad="20"/>
@@ -3206,7 +3207,7 @@ design rules under a new name.</description>
 <signal name="BT_PORT:BT_STATUS">
 <contactref element="BT_PORT:PORT1" pad="P$11"/>
 <contactref element="BT_PORT:LED3" pad="A"/>
-<wire x1="32.22" y1="2.17" x2="41.35" y2="25.25" width="0" layer="19" extent="1-1"/>
+<wire x1="32.22" y1="1.67" x2="41.35" y2="25.25" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ENC_LEFT_CHA">
 <contactref element="ENC_PORT_LEFT:PORT1" pad="P2"/>
