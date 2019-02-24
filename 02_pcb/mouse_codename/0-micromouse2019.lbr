@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -2222,7 +2222,7 @@ grid 37.5 mm, outline 20.3 x 41.8 mm</description>
 <text x="-20.32" y="10.541" size="1.778" layer="25" ratio="10">&gt;NAME</text>
 <text x="-5.08" y="-2.54" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
 </package>
-<package name="C0402" urn="urn:adsk.eagle:footprint:23121/1">
+<package name="C0402" urn="urn:adsk.eagle:footprint:23121/1" locally_modified="yes">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
 <wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
 <wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
@@ -2237,6 +2237,7 @@ grid 37.5 mm, outline 20.3 x 41.8 mm</description>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<wire x1="0" y1="0.381" x2="0" y2="-0.381" width="0.127" layer="21"/>
 </package>
 <package name="C0402K">
 <description>&lt;b&gt;Ceramic Chip Capacitor KEMET 0204 reflow solder&lt;/b&gt;&lt;p&gt;
@@ -2929,7 +2930,7 @@ Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
 <text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
 <text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="R0402" urn="urn:adsk.eagle:footprint:23043/3">
+<package name="R0402" urn="urn:adsk.eagle:footprint:23043/3" locally_modified="yes">
 <description>&lt;b&gt;Chip RESISTOR 0402 EIA (1005 Metric)&lt;/b&gt;</description>
 <wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
 <wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
@@ -2944,6 +2945,7 @@ Source: http://www.vishay.com/docs/20008/dcrcw.pdf</description>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.35" x2="0.1999" y2="0.35" layer="35"/>
+<wire x1="0" y1="0.254" x2="0" y2="-0.254" width="0.127" layer="21"/>
 </package>
 <package name="R0603">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
@@ -4018,7 +4020,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <pad name="P4" x="1.905" y="0" drill="0.6" rot="R90"/>
 <text x="-2.251" y="0.811665625" size="0.508" layer="25">&gt;NAME</text>
 </package>
-<package name="D_RGB_0603" urn="urn:adsk.eagle:footprint:9166170/1">
+<package name="D_RGB_0603" urn="urn:adsk.eagle:footprint:9166170/1" locally_modified="yes">
 <smd name="P$1" x="0" y="0" dx="0.8" dy="0.65" layer="1"/>
 <smd name="P$2" x="1.5" y="0" dx="0.8" dy="0.65" layer="1"/>
 <smd name="P$3" x="0" y="-0.85" dx="0.8" dy="0.65" layer="1"/>
@@ -4076,12 +4078,14 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="0.4" y1="0.45" x2="0.4" y2="-0.45" width="0.1016" layer="51"/>
 <smd name="C" x="0" y="0.75" dx="0.8" dy="0.8" layer="1"/>
 <smd name="A" x="0" y="-0.75" dx="0.8" dy="0.8" layer="1"/>
-<text x="1.27" y="-1.905" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+<text x="1.27" y="-1.905" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 <rectangle x1="-0.45" y1="0.45" x2="0.45" y2="0.85" layer="51"/>
 <rectangle x1="-0.45" y1="-0.85" x2="0.45" y2="-0.45" layer="51"/>
-<rectangle x1="-0.45" y1="0" x2="-0.3" y2="0.3" layer="21"/>
-<rectangle x1="0.3" y1="0" x2="0.45" y2="0.3" layer="21"/>
-<rectangle x1="-0.15" y1="0" x2="0.15" y2="0.3" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="0" y="0.254"/>
+<vertex x="-0.254" y="-0.254"/>
+<vertex x="0.254" y="-0.254"/>
+</polygon>
 </package>
 <package name="XCVR_SPBT2632C2A.AT2">
 <wire x1="6.75" y1="-5.8" x2="-6.75" y2="-5.8" width="0.2" layer="21"/>
@@ -4225,13 +4229,13 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <packageinstance name="TPS82085"/>
 </packageinstances>
 </package3d>
-<package3d name="R0402" urn="urn:adsk.eagle:package:23547/3" type="model">
+<package3d name="R0402" urn="urn:adsk.eagle:package:23547/3" locally_modified="yes" type="model">
 <description>Chip RESISTOR 0402 EIA (1005 Metric)</description>
 <packageinstances>
 <packageinstance name="R0402"/>
 </packageinstances>
 </package3d>
-<package3d name="CAPC1005X60" urn="urn:adsk.eagle:package:23626/2" type="model">
+<package3d name="CAPC1005X60" urn="urn:adsk.eagle:package:23626/2" locally_modified="yes" type="model">
 <description>Chip, 1.00 X 0.50 X 0.60 mm body
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.60 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -4259,7 +4263,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <packageinstance name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B"/>
 </packageinstances>
 </package3d>
-<package3d name="D_RGB_0603" urn="urn:adsk.eagle:package:9166171/2" type="model">
+<package3d name="D_RGB_0603" urn="urn:adsk.eagle:package:9166171/2" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="D_RGB_0603"/>
 </packageinstances>
