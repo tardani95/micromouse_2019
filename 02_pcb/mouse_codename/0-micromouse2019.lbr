@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.127" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -246,7 +246,7 @@ by exp-lbrs-replace2.ulp</description>
 <text x="-0.65" y="0.661665625" size="0.254" layer="25">&gt;NAME</text>
 <text x="-0.65" y="-0.881665625" size="0.254" layer="27">&gt;VALUE</text>
 </package>
-<package name="DRV8836" urn="urn:adsk.eagle:footprint:8872087/3">
+<package name="DRV8836" urn="urn:adsk.eagle:footprint:8872087/3" locally_modified="yes">
 <description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
 &lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
 <circle x="-1.524" y="1.927" radius="0.25" width="0" layer="21"/>
@@ -258,23 +258,23 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-1.05" y1="1.55" x2="1.05" y2="1.55" width="0.12" layer="51"/>
 <wire x1="1.05" y1="1.55" x2="1.05" y2="-1.55" width="0.12" layer="51"/>
 <wire x1="1.05" y1="-1.55" x2="-1.05" y2="-1.55" width="0.12" layer="51"/>
-<smd name="14" x="0.25" y="1.4956" dx="0.738" dy="0.27" layer="1" rot="R270"/>
-<smd name="15" x="-0.25" y="1.4956" dx="0.738" dy="0.27" layer="1" rot="R270"/>
+<smd name="14" x="0.25" y="1.3686" dx="1" dy="0.27" layer="1" rot="R270"/>
+<smd name="15" x="-0.25" y="1.3686" dx="1" dy="0.27" layer="1" rot="R270"/>
 <smd name="1" x="-0.9956" y="1.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="2" x="-0.9956" y="0.75" dx="0.738" dy="0.27" layer="1"/>
 <smd name="3" x="-0.9956" y="0.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="4" x="-0.9956" y="-0.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="5" x="-0.9956" y="-0.75" dx="0.738" dy="0.27" layer="1"/>
 <smd name="6" x="-0.9956" y="-1.25" dx="0.738" dy="0.27" layer="1"/>
-<smd name="16" x="-0.25" y="-1.4956" dx="0.738" dy="0.27" layer="1" rot="R270"/>
-<smd name="17" x="0.25" y="-1.4956" dx="0.738" dy="0.27" layer="1" rot="R270"/>
+<smd name="16" x="-0.25" y="-1.3686" dx="1" dy="0.27" layer="1" rot="R270"/>
+<smd name="17" x="0.25" y="-1.3686" dx="1" dy="0.27" layer="1" rot="R270"/>
 <smd name="7" x="0.9956" y="-1.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="8" x="0.9956" y="-0.75" dx="0.738" dy="0.27" layer="1"/>
 <smd name="9" x="0.9956" y="-0.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="10" x="0.9956" y="0.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="11" x="0.9956" y="0.75" dx="0.738" dy="0.27" layer="1"/>
 <smd name="12" x="0.9956" y="1.25" dx="0.738" dy="0.27" layer="1"/>
-<smd name="13" x="0" y="0" dx="1.6" dy="0.7" layer="1" rot="R270" thermals="no"/>
+<smd name="13" x="0" y="0" dx="2" dy="0.9" layer="1" rot="R270" thermals="no"/>
 <text x="0" y="2.5076" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.1266" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
@@ -4199,7 +4199,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <packageinstance name="JDY-10_STANDING"/>
 </packageinstances>
 </package3d>
-<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/5" type="model">
+<package3d name="QFN50P300X200X80-17T160X70" urn="urn:adsk.eagle:package:8872076/5" locally_modified="yes" type="model">
 <description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
 &lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
 <packageinstances>
