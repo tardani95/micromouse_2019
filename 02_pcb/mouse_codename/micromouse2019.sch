@@ -11143,8 +11143,8 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <part name="GND9" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="LED1" library="0-micromouse2019" deviceset="LED" device="" technology="_ORANGE"/>
 <part name="LED2" library="0-micromouse2019" deviceset="LED" device="" technology="_RED"/>
-<part name="R3" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270"/>
-<part name="R4" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270"/>
+<part name="R3" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
+<part name="R4" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
 <part name="GND10" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND11" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="CONN1" library="0-micromouse2019" deviceset="CONN_BATTERY" device="" package3d_urn="urn:adsk.eagle:package:9120814/3"/>
@@ -11939,9 +11939,9 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="GND2" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND3" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND4" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100"/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 </parts>
 <sheets>
 <sheet>
@@ -13034,7 +13034,7 @@ to set it to “0”.</text>
 </sheet>
 </sheets>
 </module>
-<module name="IR_LED_DRIVER_DUAL" prefix="IR_LED_DUAL" dx="25.4" dy="25.4">
+<module name="IR_LEDS_AND_PTS" prefix="IRD" dx="25.4" dy="25.4">
 <ports>
 <port name="PTR1" side="right" coord="2.54" direction="out"/>
 <port name="PTR2" side="right" coord="5.08" direction="out"/>
@@ -13489,8 +13489,8 @@ to set it to “0”.</text>
 <moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="86.36">
 <attribute name="NAME" x="129.54" y="86.36" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="IR_PTR" module="IR_LED_DRIVER_DUAL" x="187.96" y="76.2" rot="R180">
-<attribute name="NAME" x="190.5" y="76.2" size="2.032" layer="95" rot="R270" align="bottom-center"/>
+<moduleinst name="IRD" module="IR_LEDS_AND_PTS" x="187.96" y="76.2" rot="R180">
+<attribute name="NAME" value="IRD" x="190.5" y="76.2" size="2.032" layer="95" rot="R270" align="bottom-center"/>
 </moduleinst>
 </moduleinsts>
 <instances>
@@ -13569,7 +13569,7 @@ to set it to “0”.</text>
 <portref moduleinst="MOT" port="GND"/>
 <wire x1="205.74" y1="96.52" x2="208.28" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="96.52" x2="208.28" y2="66.04" width="0.1524" layer="91"/>
-<portref moduleinst="IR_PTR" port="GND"/>
+<portref moduleinst="IRD" port="GND"/>
 <wire x1="208.28" y1="66.04" x2="208.28" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="66.04" x2="208.28" y2="66.04" width="0.1524" layer="91"/>
 <junction x="208.28" y="66.04"/>
@@ -13630,7 +13630,7 @@ to set it to “0”.</text>
 <portref moduleinst="MOT" port="VCC"/>
 <wire x1="205.74" y1="111.76" x2="213.36" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="111.76" x2="213.36" y2="121.92" width="0.1524" layer="91"/>
-<portref moduleinst="IR_PTR" port="VCC"/>
+<portref moduleinst="IRD" port="VCC"/>
 <wire x1="205.74" y1="86.36" x2="213.36" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="213.36" y1="86.36" x2="213.36" y2="111.76" width="0.1524" layer="91"/>
 <junction x="213.36" y="111.76"/>
@@ -13682,56 +13682,56 @@ to set it to “0”.</text>
 <net name="N$13" class="0">
 <segment>
 <portref moduleinst="MCU" port="IRD1"/>
-<portref moduleinst="IR_PTR" port="IRD1"/>
+<portref moduleinst="IRD" port="IRD1"/>
 <wire x1="162.56" y1="86.36" x2="170.18" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
 <segment>
 <portref moduleinst="MCU" port="IRD2"/>
-<portref moduleinst="IR_PTR" port="IRD2"/>
+<portref moduleinst="IRD" port="IRD2"/>
 <wire x1="162.56" y1="83.82" x2="170.18" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
 <portref moduleinst="MCU" port="IRD3"/>
-<portref moduleinst="IR_PTR" port="IRD3"/>
+<portref moduleinst="IRD" port="IRD3"/>
 <wire x1="162.56" y1="81.28" x2="170.18" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
 <portref moduleinst="MCU" port="IRD4"/>
-<portref moduleinst="IR_PTR" port="IRD4"/>
+<portref moduleinst="IRD" port="IRD4"/>
 <wire x1="162.56" y1="78.74" x2="170.18" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
 <portref moduleinst="MCU" port="PTR1"/>
-<portref moduleinst="IR_PTR" port="PTR1"/>
+<portref moduleinst="IRD" port="PTR1"/>
 <wire x1="162.56" y1="73.66" x2="170.18" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$18" class="0">
 <segment>
 <portref moduleinst="MCU" port="PTR2"/>
-<portref moduleinst="IR_PTR" port="PTR2"/>
+<portref moduleinst="IRD" port="PTR2"/>
 <wire x1="162.56" y1="71.12" x2="170.18" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$19" class="0">
 <segment>
 <portref moduleinst="MCU" port="PTR3"/>
-<portref moduleinst="IR_PTR" port="PTR3"/>
+<portref moduleinst="IRD" port="PTR3"/>
 <wire x1="162.56" y1="68.58" x2="170.18" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$20" class="0">
 <segment>
 <portref moduleinst="MCU" port="PTR4"/>
-<portref moduleinst="IR_PTR" port="PTR4"/>
+<portref moduleinst="IRD" port="PTR4"/>
 <wire x1="162.56" y1="66.04" x2="170.18" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
