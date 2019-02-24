@@ -11934,14 +11934,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="+3V1" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="PORT1" library="0-micromouse2019" deviceset="PORT_BT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9190657/2"/>
-<part name="LED1" library="0-micromouse2019" deviceset="LED" device="" technology="_WHITE"/>
-<part name="LED2" library="0-micromouse2019" deviceset="LED" device="" technology="_YELLOW"/>
 <part name="LED3" library="0-micromouse2019" deviceset="LED" device="" technology="_BLUE"/>
 <part name="GND2" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="GND3" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="GND4" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 </parts>
 <sheets>
@@ -11965,31 +11959,11 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="NAME" x="116.84" y="127.508" size="1.27" layer="95"/>
 <attribute name="VALUE" x="116.84" y="109.982" size="1.27" layer="95"/>
 </instance>
-<instance part="LED1" gate="G$1" x="86.36" y="104.14" smashed="yes">
-<attribute name="VALUE" x="89.535" y="99.568" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="LED2" gate="G$1" x="76.2" y="104.14" smashed="yes">
-<attribute name="VALUE" x="79.375" y="99.568" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="LED3" gate="G$1" x="96.52" y="104.14" smashed="yes">
 <attribute name="VALUE" x="99.695" y="99.568" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND2" gate="1" x="96.52" y="81.28" smashed="yes">
 <attribute name="VALUE" x="93.98" y="78.74" size="1.778" layer="96"/>
-</instance>
-<instance part="GND3" gate="1" x="86.36" y="81.28" smashed="yes">
-<attribute name="VALUE" x="83.82" y="78.74" size="1.778" layer="96"/>
-</instance>
-<instance part="GND4" gate="1" x="76.2" y="81.28" smashed="yes">
-<attribute name="VALUE" x="73.66" y="78.74" size="1.778" layer="96"/>
-</instance>
-<instance part="R1" gate="G$1" x="76.2" y="91.44" smashed="yes" rot="R90">
-<attribute name="NAME" x="74.7014" y="87.63" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="79.502" y="87.63" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="R2" gate="G$1" x="86.36" y="91.44" smashed="yes" rot="R90">
-<attribute name="NAME" x="84.8614" y="87.63" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="89.662" y="87.63" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R3" gate="G$1" x="96.52" y="91.44" smashed="yes" rot="R90">
 <attribute name="NAME" x="95.0214" y="87.63" size="1.778" layer="95" rot="R90"/>
@@ -12005,16 +11979,6 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <wire x1="106.68" y1="114.3" x2="106.68" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="PORT1" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="76.2" y1="86.36" x2="76.2" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="83.82" x2="86.36" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -12033,23 +11997,15 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="BT_RX" class="0">
 <segment>
 <pinref part="PORT1" gate="G$1" pin="RX"/>
-<label x="60.96" y="121.92" size="1.778" layer="95"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
-<wire x1="114.3" y1="121.92" x2="76.2" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="121.92" x2="76.2" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="121.92" x2="60.96" y2="121.92" width="0.1524" layer="91"/>
-<junction x="76.2" y="121.92"/>
+<label x="99.06" y="121.92" size="1.778" layer="95"/>
+<wire x1="114.3" y1="121.92" x2="96.52" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BT_TX" class="0">
 <segment>
 <pinref part="PORT1" gate="G$1" pin="TX"/>
-<label x="60.96" y="119.38" size="1.778" layer="95"/>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="114.3" y1="119.38" x2="86.36" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="119.38" x2="86.36" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="119.38" x2="60.96" y2="119.38" width="0.1524" layer="91"/>
-<junction x="86.36" y="119.38"/>
+<label x="99.06" y="119.38" size="1.778" layer="95"/>
+<wire x1="114.3" y1="119.38" x2="96.52" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BT_STATUS" class="0">
@@ -12059,20 +12015,6 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <wire x1="114.3" y1="116.84" x2="96.52" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="LED3" gate="G$1" pin="A"/>
 <wire x1="96.52" y1="116.84" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="LED2" gate="G$1" pin="C"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="99.06" x2="76.2" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="LED1" gate="G$1" pin="C"/>
-<wire x1="86.36" y1="96.52" x2="86.36" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
