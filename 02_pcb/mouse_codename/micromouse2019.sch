@@ -7921,7 +7921,7 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
 <circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 </package>
-<package name="B3U-3000P" urn="urn:adsk.eagle:footprint:8879467/2">
+<package name="B3U-3000P" urn="urn:adsk.eagle:footprint:8879467/2" locally_modified="yes">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
@@ -7935,6 +7935,7 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.2" layer="21"/>
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
 <circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
+<hole x="0" y="0" drill="0.75"/>
 </package>
 <package name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9141310/1">
 <description>&lt;b&gt;SM03B-SRSS-TB-ren1&lt;/b&gt;&lt;br&gt;
@@ -8228,7 +8229,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="B3U-1000P"/>
 </packageinstances>
 </package3d>
-<package3d name="B3U-3000P" urn="urn:adsk.eagle:package:8879469/3" type="model">
+<package3d name="B3U-3000P" urn="urn:adsk.eagle:package:8879469/3" locally_modified="yes" type="model">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="B3U-3000P"/>
