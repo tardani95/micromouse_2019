@@ -1,0 +1,15 @@
+# 1.5.1
+# EAGLE Version 9.3.1 Copyright (c) 1988-2019 Autodesk, Inc.
+
+# exported from D:/_dev/micromouse_2019/02_pcb/mouse_codename/micromouse2019.brd
+# at 24.02.2019 22:03
+
+# This Script changed Wire Width between 0.000 MIL and 516.000 MIL to 6.000 MIL
+GRID MIL FINEST;
+DISPLAY NONE 1 ;
+CHANGE WIDTH 6.000 (811.417 1000.976);
+CHANGE WIDTH 6.000 (811.339 887.307);
+;
+DISPLAY NONE  1 16 17 18 19 20 21 22 23 24 25 26 27 35 39 40 41 42 43 45 48 49 129 150 225 226 227 228 229 230 255;
+SET DISPLAY_MODE REAL;
+GRID LAST;
