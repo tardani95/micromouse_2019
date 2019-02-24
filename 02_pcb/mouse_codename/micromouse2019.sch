@@ -7784,26 +7784,6 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-0.73688125" y="1.143159375" size="0.254" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-1.171159375" y="-1.37465" size="0.254" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
 </package>
-<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1">
-<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
-<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
-<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
-<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="51"/>
-<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="21"/>
-<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="21"/>
-<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="21"/>
-<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="21"/>
-<wire x1="-3.2" y1="-2.5" x2="-3.2" y2="2.5" width="0.05" layer="39"/>
-<wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
-<wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
-<wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
-<text x="-3.20481875" y="2.60391875" size="1.01753125" layer="25">&gt;NAME</text>
-<text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
-<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
-<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
-<pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
-<pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
-</package>
 <package name="MPU6050" urn="urn:adsk.eagle:footprint:9141315/1">
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;
 </description>
@@ -8190,17 +8170,32 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <rectangle x1="0.3" y1="0" x2="0.45" y2="0.3" layer="21"/>
 <rectangle x1="-0.15" y1="0" x2="0.15" y2="0.3" layer="21"/>
 </package>
+<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1">
+<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
+<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
+<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="21"/>
+<wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="21"/>
+<wire x1="2.95" y1="-2.25" x2="-2.95" y2="-2.25" width="0.127" layer="21"/>
+<wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="21"/>
+<wire x1="-3.2" y1="-2.5" x2="-3.2" y2="2.5" width="0.05" layer="39"/>
+<wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
+<wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
+<wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
+<text x="-3.20481875" y="2.60391875" size="1.01753125" layer="25">&gt;NAME</text>
+<text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
+<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
+<circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
+<pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
+<pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/3" type="model">
 <description>2x2 mm DFN-6 package footprint</description>
 <packageinstances>
 <packageinstance name="DFN-6"/>
-</packageinstances>
-</package3d>
-<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/3" type="model">
-<packageinstances>
-<packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
 </packageinstances>
 </package3d>
 <package3d name="CAPC1005X60" urn="urn:adsk.eagle:package:23626/2" type="model">
@@ -8296,6 +8291,11 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="D_RGB_0603"/>
 </packageinstances>
 </package3d>
+<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/3" type="model">
+<packageinstances>
+<packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
 <symbol name="+3V3">
@@ -8369,16 +8369,6 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <pin name="THERMALPAD" x="-17.78" y="-15.24" length="middle" direction="pas"/>
 <text x="-13.083359375" y="16.7712" size="2.0837" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-13.3145" y="-22.9719" size="2.086040625" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
-</symbol>
-<symbol name="B2B-PH-K-S(LF)(SN)">
-<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
-<pin name="1" x="-5.08" y="0" length="short" direction="pas"/>
-<pin name="2" x="-5.08" y="-2.54" length="short" direction="pas"/>
-<text x="-2.544359375" y="3.30766875" size="1.78105" layer="95">&gt;NAME</text>
-<text x="-2.544590625" y="-7.633759375" size="1.781209375" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="MPU-6050">
 <wire x1="5.08" y1="2.54" x2="27.94" y2="2.54" width="0.254" layer="94"/>
@@ -8669,6 +8659,16 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <vertex x="-2.921" y="-2.413"/>
 <vertex x="-2.413" y="-2.921"/>
 </polygon>
+</symbol>
+<symbol name="B2B-PH-K-S(LF)(SN)">
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<pin name="1" x="-5.08" y="0" length="short" direction="pas"/>
+<pin name="2" x="-5.08" y="-2.54" length="short" direction="pas"/>
+<text x="-2.544359375" y="3.30766875" size="1.78105" layer="95">&gt;NAME</text>
+<text x="-2.544590625" y="-7.633759375" size="1.781209375" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -10584,33 +10584,6 @@ with a typical dropout voltage of 300 mV.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_BATTERY" prefix="CONN">
-<description>PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header</description>
-<gates>
-<gate name="G$1" symbol="B2B-PH-K-S(LF)(SN)" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="JST_B2B-PH-K-S(LF)(SN)">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9120814/3"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="AVAILABILITY" value="Unavailable"/>
-<attribute name="DESCRIPTION" value=" PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header "/>
-<attribute name="MF" value="JST Sales"/>
-<attribute name="MP" value="B2B-PH-K-S(LF)(SN)"/>
-<attribute name="PACKAGE" value="None"/>
-<attribute name="PRICE" value="None"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="IMU_MPU-6050" prefix="IC">
 <description>&lt;b&gt;IMUs - Inertial Measurement Units 6-Axis MEMS MotionTracking  Device with DMP&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-1112286.pdf"&gt; Datasheet &lt;/a&gt;</description>
@@ -10699,7 +10672,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;<
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_BM02B-SRSS-TB(LFSN)" prefix="J">
+<deviceset name="CONN_MOTOR" prefix="CONN">
 <description>&lt;b&gt;2 way top entry SMT header,1mm pitch JST SH Series, 1mm Pitch 2 Way 1 Row Straight PCB Header, Solder Termination, 1A&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -10728,7 +10701,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datashe
 </device>
 </devices>
 </deviceset>
-<deviceset name="ENC_PORT" prefix="PORT">
+<deviceset name="PORT_ENC" prefix="PORT">
 <description>Connection pins between ENC_PCB and MOUSE_PCB</description>
 <gates>
 <gate name="G$1" symbol="ENC_PORT" x="0" y="0"/>
@@ -10809,7 +10782,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/307/en-b3u-3615.pdf"&gt; D
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_SM03B-SRSS-TB(LFSN)" prefix="J">
+<deviceset name="CONN_PROG" prefix="CONN">
 <description>&lt;b&gt;JST (JAPAN SOLDERLESS TERMINALS) - SM03B-SRSS-TB(LF)(SN) - HEADER, R/A, 3WAY&lt;/b&gt;&lt;p&gt;
 Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
@@ -11004,7 +10977,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="BT_PORT" prefix="PORT">
+<deviceset name="PORT_BT" prefix="PORT">
 <description>Port between mouse pcb and bluetooth module</description>
 <gates>
 <gate name="G$1" symbol="BT_PORT" x="0" y="0"/>
@@ -11042,12 +11015,13 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="D_RGB_0603" prefix="RGB">
+<deviceset name="LED_RGB" prefix="RGB">
+<description>RGB LED</description>
 <gates>
 <gate name="RGB$" symbol="D_RGB_0603" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="D_RGB_0603">
+<device name="-0603" package="D_RGB_0603">
 <connects>
 <connect gate="RGB$" pin="B" pad="P$3"/>
 <connect gate="RGB$" pin="G" pad="P$4"/>
@@ -11097,6 +11071,33 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
+<deviceset name="CONN_BATTERY" prefix="CONN">
+<description>PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header</description>
+<gates>
+<gate name="G$1" symbol="B2B-PH-K-S(LF)(SN)" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="JST_B2B-PH-K-S(LF)(SN)">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9120814/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Unavailable"/>
+<attribute name="DESCRIPTION" value=" PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header "/>
+<attribute name="MF" value="JST Sales"/>
+<attribute name="MP" value="B2B-PH-K-S(LF)(SN)"/>
+<attribute name="PACKAGE" value="None"/>
+<attribute name="PRICE" value="None"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -11134,7 +11135,6 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND6" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND7" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="J1" library="0-micromouse2019" deviceset="CONN_BATTERY" device="" package3d_urn="urn:adsk.eagle:package:9120814/3" value="CONN_BAT"/>
 <part name="GND8" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="LDO2" library="0-micromouse2019" deviceset="PS_LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/3"/>
 <part name="LDO1" library="0-micromouse2019" deviceset="PS_TPS735" device="DRVT" technology="33"/>
@@ -11147,6 +11147,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <part name="R4" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270"/>
 <part name="GND10" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND11" library="0-micromouse2019" deviceset="GND" device=""/>
+<part name="CONN1" library="0-micromouse2019" deviceset="CONN_BATTERY" device="" package3d_urn="urn:adsk.eagle:package:9120814/3"/>
 </parts>
 <sheets>
 <sheet>
@@ -11240,10 +11241,6 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <instance part="GND7" gate="1" x="147.32" y="58.42" smashed="yes">
 <attribute name="VALUE" x="144.78" y="55.88" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="G$1" x="15.24" y="147.32" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.784359375" y="144.01233125" size="1.78105" layer="95" rot="R180"/>
-<attribute name="VALUE" x="17.784590625" y="154.953759375" size="1.781209375" layer="96" rot="R180"/>
-</instance>
 <instance part="GND8" gate="1" x="30.48" y="119.38" smashed="yes">
 <attribute name="VALUE" x="27.94" y="116.84" size="1.778" layer="96"/>
 </instance>
@@ -11285,6 +11282,10 @@ Most ceramic capacitors are appropriate in this configuration</text>
 </instance>
 <instance part="GND11" gate="1" x="139.7" y="119.38" smashed="yes">
 <attribute name="VALUE" x="137.16" y="116.84" size="1.778" layer="96"/>
+</instance>
+<instance part="CONN1" gate="G$1" x="15.24" y="147.32" smashed="yes" rot="R180">
+<attribute name="NAME" x="17.784359375" y="144.01233125" size="1.78105" layer="95" rot="R180"/>
+<attribute name="VALUE" x="17.784590625" y="154.953759375" size="1.781209375" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -11367,10 +11368,10 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <wire x1="147.32" y1="81.28" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="1"/>
 <wire x1="20.32" y1="147.32" x2="30.48" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="147.32" x2="30.48" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
+<pinref part="CONN1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -11421,7 +11422,6 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <wire x1="101.6" y1="144.78" x2="96.52" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="144.78" x2="96.52" y2="149.86" width="0.1524" layer="91"/>
 <junction x="96.52" y="149.86"/>
-<pinref part="J1" gate="G$1" pin="2"/>
 <junction x="76.2" y="149.86"/>
 <wire x1="20.32" y1="149.86" x2="40.64" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="149.86" x2="66.04" y2="149.86" width="0.1524" layer="91"/>
@@ -11439,6 +11439,7 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <wire x1="96.52" y1="93.98" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
 <junction x="96.52" y="96.52"/>
 <label x="48.26" y="149.86" size="1.778" layer="95"/>
+<pinref part="CONN1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -11672,8 +11673,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="MOTOR_DRIVER"/>
-<part name="J1" library="0-micromouse2019" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2" value="MOTOR1"/>
-<part name="J2" library="0-micromouse2019" deviceset="CONN_BM02B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9123914/2" value="MOTOR2"/>
+<part name="CONN1" library="0-micromouse2019" deviceset="CONN_MOTOR" device="" package3d_urn="urn:adsk.eagle:package:9123914/2" value="MOTOR1"/>
+<part name="CONN2" library="0-micromouse2019" deviceset="CONN_MOTOR" device="" package3d_urn="urn:adsk.eagle:package:9123914/2" value="MOTOR2"/>
 <part name="IC1" library="0-micromouse2019" deviceset="MOT_DRV8836" device="1" package3d_urn="urn:adsk.eagle:package:8872076/5"/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="P+1" library="0-micromouse2019" deviceset="VCC" device=""/>
@@ -11694,11 +11695,11 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="J1" gate="G$1" x="165.1" y="91.44" smashed="yes">
+<instance part="CONN1" gate="G$1" x="165.1" y="91.44" smashed="yes">
 <attribute name="NAME" x="168.91" y="91.44" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="168.91" y="88.9" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="J2" gate="G$1" x="165.1" y="86.36" smashed="yes">
+<instance part="CONN2" gate="G$1" x="165.1" y="86.36" smashed="yes">
 <attribute name="NAME" x="168.91" y="86.36" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="168.91" y="83.82" size="1.778" layer="96" align="center-left"/>
 </instance>
@@ -11735,7 +11736,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="AOUT1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="AOUT1"/>
-<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="CONN1" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="91.44" x2="160.02" y2="91.44" width="0.1524" layer="91"/>
 <label x="149.86" y="91.44" size="1.778" layer="95"/>
 </segment>
@@ -11743,7 +11744,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="AOUT2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="AOUT2"/>
-<pinref part="J1" gate="G$1" pin="2"/>
+<pinref part="CONN1" gate="G$1" pin="2"/>
 <wire x1="147.32" y1="88.9" x2="160.02" y2="88.9" width="0.1524" layer="91"/>
 <label x="149.86" y="88.9" size="1.778" layer="95"/>
 </segment>
@@ -11751,7 +11752,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="BOUT1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="BOUT1"/>
-<pinref part="J2" gate="G$1" pin="1"/>
+<pinref part="CONN2" gate="G$1" pin="1"/>
 <wire x1="147.32" y1="86.36" x2="160.02" y2="86.36" width="0.1524" layer="91"/>
 <label x="149.86" y="86.36" size="1.778" layer="95"/>
 </segment>
@@ -11759,7 +11760,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <net name="BOUT2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="BOUT2"/>
-<pinref part="J2" gate="G$1" pin="2"/>
+<pinref part="CONN2" gate="G$1" pin="2"/>
 <wire x1="147.32" y1="83.82" x2="160.02" y2="83.82" width="0.1524" layer="91"/>
 <label x="149.86" y="83.82" size="1.778" layer="95"/>
 </segment>
@@ -11851,7 +11852,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="ENCODER_PORT"/>
-<part name="PORT1" library="0-micromouse2019" deviceset="ENC_PORT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9139943/5"/>
+<part name="PORT1" library="0-micromouse2019" deviceset="PORT_ENC" device="_BASE" package3d_urn="urn:adsk.eagle:package:9139943/5"/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="+3V1" library="0-micromouse2019" deviceset="+3V3" device=""/>
 </parts>
@@ -11931,7 +11932,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="WIRELESS_MODUL"/>
 <part name="+3V1" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="PORT1" library="0-micromouse2019" deviceset="BT_PORT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9190657/2"/>
+<part name="PORT1" library="0-micromouse2019" deviceset="PORT_BT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9190657/2"/>
 <part name="LED1" library="0-micromouse2019" deviceset="LED" device="" technology="_WHITE"/>
 <part name="LED2" library="0-micromouse2019" deviceset="LED" device="" technology="_YELLOW"/>
 <part name="LED3" library="0-micromouse2019" deviceset="LED" device="" technology="_BLUE"/>
@@ -12144,9 +12145,9 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="MICROCONTROLLERUNIT"/>
 <part name="+3V4" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="J1" library="0-micromouse2019" deviceset="CONN_SM03B-SRSS-TB(LFSN)" device="" package3d_urn="urn:adsk.eagle:package:9126100/3" value="CONN_SWD"/>
+<part name="J1" library="0-micromouse2019" deviceset="CONN_PROG" device="" package3d_urn="urn:adsk.eagle:package:9126100/3" value="CONN_SWD"/>
 <part name="GND6" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="RGB1" library="0-micromouse2019" deviceset="D_RGB_0603" device="" package3d_urn="urn:adsk.eagle:package:9166171/2"/>
+<part name="RGB1" library="0-micromouse2019" deviceset="LED_RGB" device="-0603" package3d_urn="urn:adsk.eagle:package:9166171/2"/>
 <part name="R4" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
 <part name="R5" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 <part name="R6" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
@@ -13074,9 +13075,9 @@ to set it to “0”.</text>
 <part name="GND8" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="P+1" library="0-micromouse2019" deviceset="VCC" device=""/>
 <part name="P+2" library="0-micromouse2019" deviceset="VCC" device=""/>
-<part name="U$1" library="0-micromouse2019" deviceset="CONN_IRDX4" device="-P127" package3d_urn="urn:adsk.eagle:package:9158256/2"/>
-<part name="U$2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
-<part name="U$3" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+<part name="CONN1" library="0-micromouse2019" deviceset="CONN_IRDX4" device="-P127" package3d_urn="urn:adsk.eagle:package:9158256/2"/>
+<part name="CONN2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+<part name="CONN3" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -13175,17 +13176,17 @@ to set it to “0”.</text>
 <instance part="P+2" gate="VCC" x="228.6" y="76.2" smashed="yes">
 <attribute name="VALUE" x="226.06" y="73.66" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="U$1" gate="G$1" x="129.54" y="170.18" smashed="yes" rot="MR180">
-<attribute name="NAME" x="127" y="164.846" size="1.27" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="127" y="172.72" size="1.27" layer="96" rot="MR180"/>
+<instance part="CONN1" gate="G$1" x="132.08" y="162.56" smashed="yes" rot="R90">
+<attribute name="NAME" x="127" y="170.942" size="1.27" layer="95"/>
+<attribute name="VALUE" x="127" y="169.418" size="1.27" layer="96"/>
 </instance>
-<instance part="U$2" gate="G$1" x="208.28" y="63.5" smashed="yes">
-<attribute name="NAME" x="205.74" y="58.674" size="1.27" layer="95"/>
-<attribute name="VALUE" x="205.74" y="50.8" size="1.27" layer="96"/>
+<instance part="CONN2" gate="G$1" x="208.28" y="63.5" smashed="yes">
+<attribute name="NAME" x="205.74" y="48.514" size="1.27" layer="95"/>
+<attribute name="VALUE" x="205.74" y="45.72" size="1.27" layer="96"/>
 </instance>
-<instance part="U$3" gate="G$1" x="228.6" y="63.5" smashed="yes">
-<attribute name="NAME" x="226.06" y="58.674" size="1.27" layer="95"/>
-<attribute name="VALUE" x="226.06" y="50.8" size="1.27" layer="96"/>
+<instance part="CONN3" gate="G$1" x="228.6" y="63.5" smashed="yes">
+<attribute name="NAME" x="226.06" y="48.514" size="1.27" layer="95"/>
+<attribute name="VALUE" x="226.06" y="45.72" size="1.27" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -13204,8 +13205,8 @@ to set it to “0”.</text>
 <pinref part="MOSFET1" gate="G$1" pin="DRAIN_1"/>
 <wire x1="50.8" y1="132.08" x2="55.88" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="132.08" x2="50.8" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="P1"/>
-<wire x1="50.8" y1="160.02" x2="127" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="CONN1" gate="G$1" pin="P1"/>
+<wire x1="50.8" y1="160.02" x2="129.54" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -13213,17 +13214,17 @@ to set it to “0”.</text>
 <pinref part="MOSFET1" gate="G$1" pin="DRAIN_2"/>
 <wire x1="104.14" y1="132.08" x2="96.52" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="104.14" y1="132.08" x2="104.14" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="P2"/>
+<pinref part="CONN1" gate="G$1" pin="P2"/>
 <wire x1="104.14" y1="154.94" x2="132.08" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="154.94" x2="127" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="154.94" x2="132.08" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="MOSFET2" gate="G$1" pin="DRAIN_1"/>
 <wire x1="165.1" y1="132.08" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="P3"/>
-<wire x1="127" y1="172.72" x2="134.62" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="CONN1" gate="G$1" pin="P3"/>
+<wire x1="134.62" y1="160.02" x2="134.62" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="154.94" x2="160.02" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="154.94" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
 </segment>
@@ -13424,20 +13425,22 @@ to set it to “0”.</text>
 <pinref part="MOSFET2" gate="G$1" pin="DRAIN_2"/>
 <wire x1="205.74" y1="132.08" x2="210.82" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="132.08" x2="210.82" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="P4"/>
-<wire x1="210.82" y1="160.02" x2="127" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="CONN1" gate="G$1" pin="P4"/>
+<wire x1="210.82" y1="160.02" x2="137.16" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
 <wire x1="208.28" y1="73.66" x2="208.28" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
-<pinref part="U$2" gate="G$1" pin="P1"/>
+<pinref part="CONN2" gate="G$1" pin="P1"/>
 </segment>
+</net>
+<net name="CONN2" class="0">
 <segment>
 <wire x1="228.6" y1="73.66" x2="228.6" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<pinref part="U$3" gate="G$1" pin="P1"/>
+<pinref part="CONN3" gate="G$1" pin="P1"/>
 </segment>
 </net>
 </nets>
