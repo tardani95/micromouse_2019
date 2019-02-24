@@ -42,3 +42,5 @@
 05_doc/SZAKDOLGOZAT/
 
 02_pcb/mouse_codename/\.DS_Store
+
+*.epf

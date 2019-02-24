@@ -11402,7 +11402,7 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <label x="43.18" y="134.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="V_BAT_IN" class="0">
 <segment>
 <wire x1="101.6" y1="93.98" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="LDO2" gate="G$1" pin="EN"/>
@@ -11434,6 +11434,7 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <junction x="40.64" y="149.86"/>
 <wire x1="96.52" y1="93.98" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
 <junction x="96.52" y="96.52"/>
+<label x="48.26" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -11661,6 +11662,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <port name="DRV_A_IN2" side="left" coord="5.08" direction="in"/>
 <port name="DRV_B_IN1" side="left" coord="-5.08" direction="in"/>
 <port name="DRV_B_IN2" side="left" coord="-7.62" direction="in"/>
+<port name="+3V3" side="right" coord="2.54" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -12326,9 +12328,9 @@ to set it to “0”.</text>
 </bus>
 <bus name="ENCODER_LEFT:ENC_LEFT_CHA,ENC_LEFT_CHB">
 <segment>
-<wire x1="254" y1="124.46" x2="254" y2="114.3" width="0.762" layer="92"/>
-<label x="256.54" y="106.68" size="1.778" layer="95" rot="R90"/>
-<wire x1="254" y1="114.3" x2="254" y2="111.76" width="0.762" layer="92"/>
+<wire x1="66.04" y1="53.34" x2="66.04" y2="43.18" width="0.762" layer="92"/>
+<label x="63.5" y="35.56" size="1.778" layer="95" rot="MR90"/>
+<wire x1="66.04" y1="43.18" x2="66.04" y2="40.64" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="MOTOR_DRIVER:DRV_A_IN1,DRV_A_IN2,DRV_B_IN1,DRV_B_IN2">
@@ -12358,8 +12360,8 @@ to set it to “0”.</text>
 </bus>
 <bus name="ENCODER_RIGHT:ENC_RIGHT_CHA,ENC_RIGHT_CHB">
 <segment>
-<wire x1="223.52" y1="124.46" x2="223.52" y2="111.76" width="0.762" layer="92"/>
-<label x="226.06" y="106.68" size="1.778" layer="95" rot="R90"/>
+<wire x1="170.18" y1="119.38" x2="170.18" y2="106.68" width="0.762" layer="92"/>
+<label x="172.72" y="101.6" size="1.778" layer="95" rot="R90"/>
 </segment>
 </bus>
 </busses>
@@ -12671,26 +12673,18 @@ to set it to “0”.</text>
 </net>
 <net name="ENC_LEFT_CHA" class="0">
 <segment>
+<wire x1="66.04" y1="48.26" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PA8"/>
-<wire x1="93.98" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="50.8" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
 <label x="73.66" y="50.8" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="254" y1="119.38" x2="251.46" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="121.92" x2="251.46" y2="121.92" width="0.1524" layer="91"/>
-<label x="231.14" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ENC_LEFT_CHB" class="0">
 <segment>
+<wire x1="66.04" y1="45.72" x2="68.58" y2="48.26" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PA9"/>
-<wire x1="93.98" y1="48.26" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="48.26" x2="68.58" y2="48.26" width="0.1524" layer="91"/>
 <label x="73.66" y="48.26" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="254" y1="116.84" x2="251.46" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="119.38" x2="251.46" y2="119.38" width="0.1524" layer="91"/>
-<label x="231.14" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BTN2" class="0">
@@ -12861,26 +12855,21 @@ to set it to “0”.</text>
 </net>
 <net name="ENC_RIGHT_CHA" class="0">
 <segment>
+<wire x1="167.64" y1="116.84" x2="170.18" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="116.84" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
+<label x="144.78" y="116.84" size="1.778" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="PB6"/>
 <wire x1="142.24" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
-<label x="144.78" y="116.84" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="195.58" y1="121.92" x2="220.98" y2="121.92" width="0.1524" layer="91"/>
-<label x="198.12" y="121.92" size="1.778" layer="95"/>
-<wire x1="220.98" y1="121.92" x2="223.52" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_RIGHT_CHB" class="0">
 <segment>
+<wire x1="167.64" y1="114.3" x2="170.18" y2="111.76" width="0.1524" layer="91"/>
+<label x="144.78" y="114.3" size="1.778" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="PB7"/>
 <wire x1="142.24" y1="114.3" x2="157.48" y2="114.3" width="0.1524" layer="91"/>
-<label x="144.78" y="114.3" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="195.58" y1="119.38" x2="220.98" y2="119.38" width="0.1524" layer="91"/>
-<label x="198.12" y="119.38" size="1.778" layer="95"/>
-<wire x1="220.98" y1="119.38" x2="223.52" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="114.3" x2="157.48" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IMU1_SCL" class="0">
@@ -13471,6 +13460,7 @@ to set it to “0”.</text>
 <part name="P+2" library="0-micromouse2019" deviceset="VCC" device=""/>
 <part name="+3V4" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
+<part name="+3V5" library="0-micromouse2019" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13486,14 +13476,14 @@ to set it to “0”.</text>
 <moduleinst name="MOT" module="MOTOR_DRIVER" x="187.96" y="104.14">
 <attribute name="NAME" x="187.96" y="104.14" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="ENC_PORT_LEFT" module="ENCODER_PORT" x="66.04" y="104.14">
-<attribute name="NAME" x="68.58" y="99.06" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="66.04" y="88.9">
+<attribute name="NAME" value="ENC_PORT_RIGHT" x="68.58" y="83.82" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="BT_PORT" module="WIRELESS_MODUL_PORT" x="124.46" y="30.48">
 <attribute name="NAME" x="124.46" y="25.4" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="66.04" y="88.9">
-<attribute name="NAME" x="68.58" y="83.82" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="ENC_PORT_LEFT" module="ENCODER_PORT" x="66.04" y="104.14">
+<attribute name="NAME" value="ENC_PORT_LEFT" x="68.58" y="99.06" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="86.36">
 <attribute name="NAME" x="129.54" y="86.36" size="2.032" layer="95" align="bottom-center"/>
@@ -13542,6 +13532,9 @@ to set it to “0”.</text>
 <instance part="GND5" gate="1" x="101.6" y="15.24" smashed="yes">
 <attribute name="VALUE" x="99.06" y="12.7" size="1.778" layer="96"/>
 </instance>
+<instance part="+3V5" gate="G$1" x="220.98" y="124.46" smashed="yes">
+<attribute name="VALUE" x="218.44" y="119.38" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13553,18 +13546,18 @@ to set it to “0”.</text>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<portref moduleinst="ENC_PORT_LEFT" port="GND"/>
-<wire x1="43.18" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
-<portref moduleinst="ENC_PORT_RIGHT" port="GND"/>
 <wire x1="40.64" y1="99.06" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="83.82" x2="43.18" y2="83.82" width="0.1524" layer="91"/>
 <portref moduleinst="IMU" port="GND"/>
 <wire x1="40.64" y1="83.82" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="66.04" x2="43.18" y2="66.04" width="0.1524" layer="91"/>
-<junction x="40.64" y="83.82"/>
 <wire x1="40.64" y1="66.04" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
 <junction x="40.64" y="66.04"/>
 <pinref part="GND2" gate="1" pin="GND"/>
+<portref moduleinst="ENC_PORT_LEFT" port="GND"/>
+<wire x1="43.18" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
+<portref moduleinst="ENC_PORT_RIGHT" port="GND"/>
+<wire x1="43.18" y1="83.82" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
+<junction x="40.64" y="83.82"/>
 </segment>
 <segment>
 <portref moduleinst="MCU" port="GND"/>
@@ -13600,24 +13593,30 @@ to set it to “0”.</text>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<portref moduleinst="ENC_PORT_LEFT" port="+3V3"/>
-<wire x1="43.18" y1="109.22" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
-<portref moduleinst="ENC_PORT_RIGHT" port="+3V3"/>
-<wire x1="43.18" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="93.98" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
 <portref moduleinst="IMU" port="+3V3"/>
 <wire x1="43.18" y1="76.2" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="76.2" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
-<junction x="35.56" y="93.98"/>
 <wire x1="35.56" y1="109.22" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
-<junction x="35.56" y="109.22"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<portref moduleinst="ENC_PORT_LEFT" port="+3V3"/>
+<wire x1="43.18" y1="109.22" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
+<junction x="35.56" y="109.22"/>
+<portref moduleinst="ENC_PORT_RIGHT" port="+3V3"/>
+<wire x1="43.18" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
+<junction x="35.56" y="93.98"/>
 </segment>
 <segment>
 <portref moduleinst="BT_PORT" port="+3V3"/>
 <wire x1="106.68" y1="38.1" x2="101.6" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <wire x1="101.6" y1="38.1" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<portref moduleinst="MOT" port="+3V3"/>
+<wire x1="205.74" y1="106.68" x2="220.98" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="106.68" x2="220.98" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="+3V5" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -13637,70 +13636,42 @@ to set it to “0”.</text>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="SCL" class="0">
 <segment>
 <portref moduleinst="IMU" port="SCL"/>
 <portref moduleinst="MCU" port="IMU1_SCL"/>
 <wire x1="88.9" y1="73.66" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="SDA" class="0">
 <segment>
 <portref moduleinst="IMU" port="SDA"/>
 <portref moduleinst="MCU" port="IMU1_SDA"/>
 <wire x1="88.9" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$5" class="0">
-<segment>
-<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHA"/>
-<portref moduleinst="MCU" port="ENC_RIGHT_CHA"/>
-<wire x1="88.9" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHB"/>
-<portref moduleinst="MCU" port="ENC_RIGHT_CHB"/>
-<wire x1="88.9" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHB"/>
-<portref moduleinst="MCU" port="ENC_LEFT_CHB"/>
-<wire x1="88.9" y1="104.14" x2="96.52" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHA"/>
-<portref moduleinst="MCU" port="ENC_LEFT_CHA"/>
-<wire x1="88.9" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
+<net name="DRV_A_IN1" class="0">
 <segment>
 <wire x1="162.56" y1="111.76" x2="170.18" y2="111.76" width="0.1524" layer="91"/>
 <portref moduleinst="MOT" port="DRV_A_IN1"/>
 <portref moduleinst="MCU" port="DRV_A_IN1"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="DRV_A_IN2" class="0">
 <segment>
 <wire x1="162.56" y1="109.22" x2="170.18" y2="109.22" width="0.1524" layer="91"/>
 <portref moduleinst="MOT" port="DRV_A_IN2"/>
 <portref moduleinst="MCU" port="DRV_A_IN2"/>
 </segment>
 </net>
-<net name="N$11" class="0">
+<net name="DRV_B_IN1" class="0">
 <segment>
 <wire x1="162.56" y1="99.06" x2="170.18" y2="99.06" width="0.1524" layer="91"/>
 <portref moduleinst="MOT" port="DRV_B_IN1"/>
 <portref moduleinst="MCU" port="DRV_B_IN1"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="DRV_B_IN2" class="0">
 <segment>
 <wire x1="162.56" y1="96.52" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
 <portref moduleinst="MOT" port="DRV_B_IN2"/>
@@ -13763,26 +13734,55 @@ to set it to “0”.</text>
 <wire x1="162.56" y1="66.04" x2="170.18" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="UART3_TX" class="0">
 <segment>
 <portref moduleinst="BT_PORT" port="BT_RX"/>
 <portref moduleinst="MCU" port="UART3_TX"/>
 <wire x1="121.92" y1="45.72" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="UART3_RX" class="0">
 <segment>
 <portref moduleinst="MCU" port="UART3_RX"/>
 <portref moduleinst="BT_PORT" port="BT_TX"/>
 <wire x1="124.46" y1="50.8" x2="124.46" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="V_BAT_LEVEL" class="0">
 <segment>
 <portref moduleinst="PWR" port="V_BAT_LEVEL"/>
 <portref moduleinst="MCU" port="V_BAT_LEVEL"/>
 <wire x1="86.36" y1="144.78" x2="134.62" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="144.78" x2="134.62" y2="121.92" width="0.1524" layer="91"/>
+<label x="106.68" y="144.78" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="ENC_LEFT_CHA" class="0">
+<segment>
+<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHA"/>
+<portref moduleinst="MCU" port="ENC_LEFT_CHA"/>
+<wire x1="88.9" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ENC_LEFT_CHB" class="0">
+<segment>
+<portref moduleinst="MCU" port="ENC_LEFT_CHB"/>
+<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHB"/>
+<wire x1="96.52" y1="104.14" x2="88.9" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ENC_RIGHT_CHA" class="0">
+<segment>
+<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHA"/>
+<portref moduleinst="MCU" port="ENC_RIGHT_CHA"/>
+<wire x1="88.9" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ENC_RIGHT_CHB" class="0">
+<segment>
+<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHB"/>
+<portref moduleinst="MCU" port="ENC_RIGHT_CHB"/>
+<wire x1="88.9" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
