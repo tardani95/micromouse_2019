@@ -44,3 +44,5 @@
 02_pcb/mouse_codename/\.DS_Store
 
 *.epf
+
+02_pcb/\.DS_Store
