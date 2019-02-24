@@ -8106,21 +8106,22 @@ Source: AVX .. aphvc.pdf</description>
 <text x="0" y="2.659" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.905" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="BT_PORT_BASE" urn="urn:adsk.eagle:footprint:9190653/1">
+<package name="BT_PORT_BASE" urn="urn:adsk.eagle:footprint:9190653/1" locally_modified="yes">
 <description>Mouse side of the bluetooth module port</description>
-<smd name="P$8" x="1.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$9" x="2.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$8" x="1.25" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$9" x="2.75" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
 <smd name="P$10" x="4.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$11" x="5.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$12" x="7.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$11" x="5.75" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$12" x="7.25" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
 <smd name="P$13" x="8.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$14" x="10.25" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
-<smd name="P$15" x="11.75" y="0" dx="3.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$14" x="10.25" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
+<smd name="P$15" x="11.75" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
 <wire x1="0" y1="0.5" x2="0" y2="-0.5" width="0.127" layer="21"/>
 <wire x1="0" y1="-0.5" x2="13" y2="-0.5" width="0.127" layer="21"/>
 <wire x1="13" y1="-0.5" x2="13" y2="0.5" width="0.127" layer="21"/>
 <wire x1="13" y1="0.5" x2="0" y2="0.5" width="0.127" layer="21"/>
-<text x="0" y="-2.865" size="0.7" layer="21">&gt;VALUE</text>
+<text x="0" y="-2.865" size="0.762" layer="21">&gt;VALUE</text>
+<text x="-0.889" y="-1.524" size="0.762" layer="21">TX</text>
 </package>
 <package name="BT_PORT_MODULE" urn="urn:adsk.eagle:footprint:9190655/1">
 <description>Module side of the BT_PORT</description>
@@ -8170,7 +8171,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <rectangle x1="0.3" y1="0" x2="0.45" y2="0.3" layer="21"/>
 <rectangle x1="-0.15" y1="0" x2="0.15" y2="0.3" layer="21"/>
 </package>
-<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1">
+<package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1" locally_modified="yes">
 <wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
 <wire x1="-2.95" y1="2.25" x2="2.95" y2="2.25" width="0.127" layer="51"/>
 <wire x1="2.95" y1="2.25" x2="2.95" y2="-2.25" width="0.127" layer="51"/>
@@ -8183,12 +8184,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
 <wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
 <wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
-<text x="-3.20481875" y="2.60391875" size="1.01753125" layer="25">&gt;NAME</text>
 <text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
 <circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
 <circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
 <pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
 <pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
+<text x="-3.81" y="2.54" size="1.27" layer="21">&gt;NAME</text>
 </package>
 </packages>
 <packages3d>
@@ -8274,7 +8275,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B"/>
 </packageinstances>
 </package3d>
-<package3d name="BT_PORT_BASE" urn="urn:adsk.eagle:package:9190657/2" type="model">
+<package3d name="BT_PORT_BASE" urn="urn:adsk.eagle:package:9190657/2" locally_modified="yes" type="model">
 <description>Mouse side of the bluetooth module port</description>
 <packageinstances>
 <packageinstance name="BT_PORT_BASE"/>
@@ -8291,7 +8292,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="D_RGB_0603"/>
 </packageinstances>
 </package3d>
-<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/3" type="model">
+<package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/3" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
 </packageinstances>

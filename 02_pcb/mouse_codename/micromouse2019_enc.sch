@@ -6296,7 +6296,7 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 <sheets>
 <sheet>
 <plain>
-<text x="182.88" y="58.42" size="1.778" layer="97"> The LDO regulator is not intended to power any other
+<text x="167.64" y="55.88" size="1.778" layer="97">In 5 V operation mode the LDO regulator is not intended to power any other
 loads, and it needs a 1 μF capacitor to ground located close to
 the chip</text>
 </plain>
