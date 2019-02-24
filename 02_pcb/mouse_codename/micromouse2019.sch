@@ -10988,9 +10988,9 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <connects>
 <connect gate="G$1" pin="+3V3" pad="P$15"/>
 <connect gate="G$1" pin="GND" pad="P$14"/>
-<connect gate="G$1" pin="RX" pad="P$9"/>
+<connect gate="G$1" pin="RX" pad="P$8"/>
 <connect gate="G$1" pin="STATUS" pad="P$11"/>
-<connect gate="G$1" pin="TX" pad="P$8"/>
+<connect gate="G$1" pin="TX" pad="P$9"/>
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:9190657/2"/>
@@ -12755,26 +12755,26 @@ to set it to “0”.</text>
 </net>
 <net name="UART3_TX" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="PC10"/>
-<wire x1="142.24" y1="60.96" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
-<label x="144.78" y="60.96" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="254" y1="45.72" x2="251.46" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="48.26" x2="251.46" y2="48.26" width="0.1524" layer="91"/>
 <label x="231.14" y="48.26" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="PC10"/>
+<wire x1="142.24" y1="60.96" x2="157.48" y2="60.96" width="0.1524" layer="91"/>
+<label x="144.78" y="60.96" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="UART3_RX" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="PC11"/>
-<wire x1="142.24" y1="58.42" x2="157.48" y2="58.42" width="0.1524" layer="91"/>
-<label x="144.78" y="58.42" size="1.778" layer="95"/>
-</segment>
 <segment>
 <wire x1="254" y1="48.26" x2="251.46" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="228.6" y1="50.8" x2="251.46" y2="50.8" width="0.1524" layer="91"/>
 <label x="231.14" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="PC11"/>
+<wire x1="142.24" y1="58.42" x2="157.48" y2="58.42" width="0.1524" layer="91"/>
+<label x="144.78" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="IMU2_SCL" class="0">
