@@ -8091,7 +8091,7 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-0.762" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="0" y="0.6" size="0.0254" layer="27">&gt;VALUE</text>
 </package>
-<package name="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:footprint:9158261/2">
+<package name="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:footprint:9158261/2" locally_modified="yes">
 <description>Single-row, 4-pin Pin Header (Male) Straight, 1.27 mm (0.05 in) col pitch, 1.00 mm mating length, 5.00 X 2.00 X 6.00 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Straight package with 1.27 mm (0.05 in) col pitch, 0.25 mm lead width, 2.00 mm tail length and 1.00 mm mating length with overall size 5.00 X 2.00 X 6.00 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <circle x="0" y="1.504" radius="0.25" width="0" layer="21"/>
@@ -8103,10 +8103,10 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-0.595" y1="-1" x2="-0.595" y2="1" width="0.12" layer="51"/>
 <wire x1="-0.595" y1="1" x2="4.405" y2="1" width="0.12" layer="51"/>
 <wire x1="4.405" y1="1" x2="4.405" y2="-1" width="0.12" layer="51"/>
-<pad name="1" x="0" y="0" drill="0.5536" diameter="1.1536"/>
-<pad name="2" x="1.27" y="0" drill="0.5536" diameter="1.1536"/>
-<pad name="3" x="2.54" y="0" drill="0.5536" diameter="1.1536"/>
-<pad name="4" x="3.81" y="0" drill="0.5536" diameter="1.1536"/>
+<pad name="1" x="0" y="0" drill="0.5536" diameter="1.1"/>
+<pad name="2" x="1.27" y="0" drill="0.5536" diameter="1.1"/>
+<pad name="3" x="2.54" y="0" drill="0.5536" diameter="1.1"/>
+<pad name="4" x="3.81" y="0" drill="0.5536" diameter="1.1"/>
 <text x="0" y="2.389" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.635" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
@@ -8265,7 +8265,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="QFP50P1200X1200X160-64N"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:package:9158256/2" type="model">
+<package3d name="HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:package:9158256/2" locally_modified="yes" type="model">
 <description>Single-row, 4-pin Pin Header (Male) Straight, 1.27 mm (0.05 in) col pitch, 1.00 mm mating length, 5.00 X 2.00 X 6.00 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Straight package with 1.27 mm (0.05 in) col pitch, 0.25 mm lead width, 2.00 mm tail length and 1.00 mm mating length with overall size 5.00 X 2.00 X 6.00 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <packageinstances>
@@ -8582,26 +8582,28 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <text x="-1.143" y="1.8542" size="1.778" layer="95">&gt;NAME</text>
 <text x="-1.143" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
-<symbol name="CONN_IRDX4">
-<pin name="P1" x="0" y="10.16" length="middle" rot="R270"/>
-<pin name="P2" x="2.54" y="10.16" length="middle" rot="R270"/>
-<pin name="P3" x="5.08" y="10.16" length="middle" rot="R270"/>
-<pin name="P4" x="7.62" y="10.16" length="middle" rot="R270"/>
-<wire x1="-2.54" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
-<wire x1="10.16" y1="5.08" x2="10.16" y2="0" width="0.254" layer="94"/>
-<wire x1="10.16" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
-<text x="-2.54" y="5.334" size="1.27" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-2.54" size="1.27" layer="96">&gt;VALUE</text>
+<symbol name="CONN_X4">
+<description>4 connection pins</description>
+<pin name="P1" x="-2.54" y="2.54" visible="pin" length="short"/>
+<pin name="P2" x="-2.54" y="0" visible="pin" length="short"/>
+<pin name="P3" x="-2.54" y="-2.54" visible="pin" length="short"/>
+<pin name="P4" x="-2.54" y="-5.08" visible="pin" length="short"/>
+<wire x1="6.35" y1="5.08" x2="6.35" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="6.35" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="6.35" y2="5.08" width="0.254" layer="94"/>
+<text x="-1.016" y="5.842" size="1.27" layer="95">&gt;NAME</text>
+<text x="-1.016" y="-9.652" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
-<symbol name="CONN_IRD_VCC">
-<pin name="P1" x="0" y="0" length="middle" rot="R270"/>
+<symbol name="CONN_X1">
+<description>Single connection pin</description>
+<pin name="P1" x="0" y="-2.54" visible="pin" length="short" rot="R270"/>
 <wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-10.16" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-10.16" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
-<text x="-2.54" y="-4.826" size="1.27" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-12.7" size="1.27" layer="96">&gt;VALUE</text>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-12.7" x2="-2.54" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-12.7" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<text x="2.54" y="-2.286" size="1.27" layer="95">&gt;NAME</text>
+<text x="2.54" y="-4.318" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 <symbol name="BT_PORT">
 <description>Symbol for connection pins between ENC_PCB and MOUSE_PCB</description>
@@ -10582,7 +10584,7 @@ with a typical dropout voltage of 300 mV.</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_B2B-PH-K-S(LF)(SN)" prefix="J">
+<deviceset name="CONN_BATTERY" prefix="CONN">
 <description>PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header</description>
 <gates>
 <gate name="G$1" symbol="B2B-PH-K-S(LF)(SN)" x="0" y="0"/>
@@ -10601,7 +10603,7 @@ with a typical dropout voltage of 300 mV.</description>
 <attribute name="AVAILABILITY" value="Unavailable"/>
 <attribute name="DESCRIPTION" value=" PH Series 2 Position 2 mm Pitch Through Hole Top Entry Shrouded Header "/>
 <attribute name="MF" value="JST Sales"/>
-<attribute name="MP" value="B2B-PH-K-S_LF__SN_"/>
+<attribute name="MP" value="B2B-PH-K-S(LF)(SN)"/>
 <attribute name="PACKAGE" value="None"/>
 <attribute name="PRICE" value="None"/>
 </technology>
@@ -10961,12 +10963,13 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_IRDX4">
+<deviceset name="CONN_IRDX4" prefix="CONN">
+<description>Connection pins for IR LEDs</description>
 <gates>
-<gate name="G$1" symbol="CONN_IRDX4" x="0" y="-2.54"/>
+<gate name="G$1" symbol="CONN_X4" x="0" y="7.62"/>
 </gates>
 <devices>
-<device name="" package="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B">
+<device name="-P127" package="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B">
 <connects>
 <connect gate="G$1" pin="P1" pad="1"/>
 <connect gate="G$1" pin="P2" pad="2"/>
@@ -10982,9 +10985,10 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONN_IRD_VCC">
+<deviceset name="CONN_IRD_VCC" prefix="CONN">
+<description>Pin for connection to +3v3 of IR LEDs and phototransistors</description>
 <gates>
-<gate name="G$1" symbol="CONN_IRD_VCC" x="0" y="7.62"/>
+<gate name="G$1" symbol="CONN_X1" x="0" y="7.62"/>
 </gates>
 <devices>
 <device name="" package="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B">
@@ -11130,7 +11134,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND6" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND7" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="J1" library="0-micromouse2019" deviceset="CONN_B2B-PH-K-S(LF)(SN)" device="" package3d_urn="urn:adsk.eagle:package:9120814/3" value="CONN_BAT"/>
+<part name="J1" library="0-micromouse2019" deviceset="CONN_BATTERY" device="" package3d_urn="urn:adsk.eagle:package:9120814/3" value="CONN_BAT"/>
 <part name="GND8" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="LDO2" library="0-micromouse2019" deviceset="PS_LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/3"/>
 <part name="LDO1" library="0-micromouse2019" deviceset="PS_TPS735" device="DRVT" technology="33"/>
@@ -13070,7 +13074,7 @@ to set it to “0”.</text>
 <part name="GND8" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="P+1" library="0-micromouse2019" deviceset="VCC" device=""/>
 <part name="P+2" library="0-micromouse2019" deviceset="VCC" device=""/>
-<part name="U$1" library="0-micromouse2019" deviceset="CONN_IRDX4" device="" package3d_urn="urn:adsk.eagle:package:9158256/2"/>
+<part name="U$1" library="0-micromouse2019" deviceset="CONN_IRDX4" device="-P127" package3d_urn="urn:adsk.eagle:package:9158256/2"/>
 <part name="U$2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 <part name="U$3" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 </parts>
@@ -13199,33 +13203,29 @@ to set it to “0”.</text>
 <segment>
 <pinref part="MOSFET1" gate="G$1" pin="DRAIN_1"/>
 <wire x1="50.8" y1="132.08" x2="55.88" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="132.08" x2="50.8" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="132.08" x2="50.8" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="P1"/>
-<wire x1="50.8" y1="149.86" x2="50.8" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="160.02" x2="129.54" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="160.02" x2="127" y2="167.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="MOSFET1" gate="G$1" pin="DRAIN_2"/>
-<wire x1="96.52" y1="132.08" x2="99.06" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="142.24" x2="104.14" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="132.08" x2="99.06" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="142.24" x2="104.14" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="132.08" x2="96.52" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="132.08" x2="104.14" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="P2"/>
 <wire x1="104.14" y1="154.94" x2="132.08" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="154.94" x2="132.08" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="154.94" x2="127" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="MOSFET2" gate="G$1" pin="DRAIN_1"/>
 <wire x1="165.1" y1="132.08" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="142.24" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="P3"/>
-<wire x1="134.62" y1="160.02" x2="134.62" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="127" y1="172.72" x2="134.62" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="154.94" x2="160.02" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="154.94" x2="160.02" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="154.94" x2="160.02" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -13421,23 +13421,21 @@ to set it to “0”.</text>
 </net>
 <net name="N$10" class="0">
 <segment>
-<wire x1="210.82" y1="142.24" x2="210.82" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="MOSFET2" gate="G$1" pin="DRAIN_2"/>
 <wire x1="205.74" y1="132.08" x2="210.82" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="134.62" x2="210.82" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="142.24" x2="210.82" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="132.08" x2="210.82" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="P4"/>
-<wire x1="210.82" y1="160.02" x2="137.16" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="160.02" x2="127" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
-<wire x1="208.28" y1="73.66" x2="208.28" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="73.66" x2="208.28" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <pinref part="U$2" gate="G$1" pin="P1"/>
 </segment>
 <segment>
-<wire x1="228.6" y1="73.66" x2="228.6" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="73.66" x2="228.6" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <pinref part="U$3" gate="G$1" pin="P1"/>
 </segment>

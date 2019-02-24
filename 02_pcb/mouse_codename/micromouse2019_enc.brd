@@ -250,7 +250,7 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
 </package>
-<package name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:footprint:9165681/2">
+<package name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:footprint:9165681/2" locally_modified="yes">
 <description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <circle x="-1.1868" y="0" radius="0.25" width="0" layer="21"/>
@@ -266,10 +266,10 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="51"/>
 <wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="51"/>
 <wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="51"/>
-<pad name="1" x="0" y="0" drill="0.7657" diameter="1.143"/>
-<pad name="2" x="1.27" y="0" drill="0.7657" diameter="1.143"/>
-<pad name="3" x="2.54" y="0" drill="0.7657" diameter="1.143"/>
-<pad name="4" x="3.81" y="0" drill="0.7657" diameter="1.143"/>
+<pad name="1" x="0" y="0" drill="0.7" diameter="1.1176"/>
+<pad name="2" x="1.27" y="0" drill="0.7" diameter="1.1176"/>
+<pad name="3" x="2.54" y="0" drill="0.7" diameter="1.1176"/>
+<pad name="4" x="3.81" y="0" drill="0.7" diameter="1.1176"/>
 <text x="0" y="1.3178" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-7.095" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
@@ -294,7 +294,7 @@ by exp-lbrs-replace2.ulp</description>
 <packageinstance name="C0402"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:package:9165666/2" type="model">
+<package3d name="HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:package:9165666/2" locally_modified="yes" type="model">
 <description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <packageinstances>
@@ -312,7 +312,7 @@ by exp-lbrs-replace2.ulp</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default *">
+<designrules name="JLC_PCB_design_rules *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -320,12 +320,9 @@ die meisten Anwendungen passen. Sollte ihre Platine
 besondere Anforderungen haben, treffen Sie die erforderlichen
 Einstellungen hier und speichern die Design Rules unter 
 einem neuen Namen ab.</description>
-<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+<description language="en">&lt;b&gt;JLCPCB Design Rules&lt;/b&gt;
 &lt;p&gt;
-The default Design Rules have been set to cover
-a wide range of applications. Your particular design
-may have different requirements, so please make the
-necessary adjustments and save your customized
+Your particular design may have different requirements, so please make the necessary adjustments and save your customized
 design rules under a new name.</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
@@ -333,20 +330,20 @@ design rules under a new name.</description>
 <param name="mdWireWire" value="5mil"/>
 <param name="mdWirePad" value="5mil"/>
 <param name="mdWireVia" value="5mil"/>
-<param name="mdPadPad" value="6mil"/>
-<param name="mdPadVia" value="6mil"/>
-<param name="mdViaVia" value="6mil"/>
-<param name="mdSmdPad" value="6mil"/>
-<param name="mdSmdVia" value="6mil"/>
+<param name="mdPadPad" value="5mil"/>
+<param name="mdPadVia" value="5mil"/>
+<param name="mdViaVia" value="5mil"/>
+<param name="mdSmdPad" value="5mil"/>
+<param name="mdSmdVia" value="5mil"/>
 <param name="mdSmdSmd" value="5mil"/>
 <param name="mdViaViaSameLayer" value="6mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="0mil"/>
+<param name="mdCopperDimension" value="0.2mm"/>
 <param name="mdDrill" value="5mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="6mil"/>
-<param name="msDrill" value="0.35mm"/>
-<param name="msMicroVia" value="0.1mm"/>
+<param name="msWidth" value="5mil"/>
+<param name="msDrill" value="0.2mm"/>
+<param name="msMicroVia" value="0.3mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
 <param name="rvPadInner" value="0.25"/>
@@ -355,15 +352,15 @@ design rules under a new name.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="10mil"/>
+<param name="rlMinPadTop" value="3mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="10mil"/>
+<param name="rlMinPadInner" value="3mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="10mil"/>
+<param name="rlMinPadBottom" value="3mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="8mil"/>
+<param name="rlMinViaOuter" value="3mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="8mil"/>
+<param name="rlMinViaInner" value="3mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -527,12 +524,13 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="C" x="3.2050375" y="2.93958125" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="0.3856375" y="2.22838125" size="0.7" layer="28" rot="MR180"/>
 </element>
-<element name="PORT1" library="0-micromouse2019" package="ENC_PORT_MODULE" value="ENC_PORT_MODULE" x="2.95" y="0.5" smashed="yes">
-<attribute name="VALUE" x="0.45" y="-0.931665625" size="0.7" layer="27"/>
+<element name="PORT1" library="0-micromouse2019" package="ENC_PORT_MODULE" value="PORT_ENC_MODULE" x="2.95508125" y="0.7232" smashed="yes">
+<attribute name="VALUE" x="0.45508125" y="-0.708465625" size="0.7" layer="27"/>
 </element>
-<element name="U$1" library="0-micromouse2019" package="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" package3d_urn="urn:adsk.eagle:package:9165666/2" value="CONN_SPI" x="-11.049" y="6.858" smashed="yes">
-<attribute name="NAME" x="-11.049" y="8.1758" size="1.27" layer="25" align="bottom-center"/>
-<attribute name="VALUE" x="-11.049" y="-0.237" size="1.27" layer="27" align="top-center"/>
+<element name="CONN1" library="0-micromouse2019" package="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" package3d_urn="urn:adsk.eagle:package:9165666/2" value="CONN_SPI-P127" x="4.826" y="10.287" smashed="yes" rot="R180">
+<attribute name="NAME" x="4.826" y="8.9692" size="1.27" layer="25" rot="R180" align="bottom-center"/>
+<attribute name="PITCH" value="1.27 mm" x="4.826" y="10.287" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="4.826" y="17.382" size="1.27" layer="27" rot="R180" align="top-center"/>
 </element>
 </elements>
 <signals>
@@ -555,8 +553,8 @@ design rules under a new name.</description>
 <wire x1="4.8560375" y1="2.43158125" x2="4.8560375" y2="5.10658125" width="0.1524" layer="16"/>
 <wire x1="3.2050375" y1="2.05058125" x2="4.4750375" y2="2.05058125" width="0.1524" layer="16"/>
 <contactref element="PORT1" pad="P3"/>
-<wire x1="3.6" y1="0.5" x2="3.6" y2="2.52761875" width="0.1524" layer="1"/>
-<wire x1="3.6" y1="2.52761875" x2="3.5860375" y2="2.54158125" width="0.1524" layer="1"/>
+<wire x1="3.60508125" y1="0.7232" x2="3.60508125" y2="2.5225375" width="0.1524" layer="1"/>
+<wire x1="3.60508125" y1="2.5225375" x2="3.5860375" y2="2.54158125" width="0.1524" layer="1"/>
 </signal>
 <signal name="CLK">
 <contactref element="IC1" pad="2"/>
@@ -567,9 +565,10 @@ design rules under a new name.</description>
 <via x="3.9670375" y="7.00358125" extent="1-16" drill="0.35"/>
 <wire x1="3.5780375" y1="5.60658125" x2="3.5780375" y2="6.61458125" width="0.1524" layer="16"/>
 <wire x1="3.5780375" y1="6.61458125" x2="3.9670375" y2="7.00358125" width="0.1524" layer="16"/>
-<wire x1="4.25" y1="8.448" x2="4.2510375" y2="9.76758125" width="0.1524" layer="1"/>
-<contactref element="U$1" pad="3"/>
-<wire x1="-8.509" y1="6.858" x2="3.5780375" y2="6.61458125" width="0" layer="19" extent="16-16"/>
+<contactref element="CONN1" pad="2"/>
+<wire x1="4.25" y1="8.448" x2="4.25" y2="9.212" width="0.1524" layer="1"/>
+<wire x1="3.556" y1="9.906" x2="3.556" y2="10.287" width="0.1524" layer="1"/>
+<wire x1="4.25" y1="9.212" x2="3.556" y2="9.906" width="0.1524" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="R2" pad="1"/>
@@ -598,34 +597,33 @@ design rules under a new name.</description>
 <vertex x="5.715" y="10.922"/>
 </polygon>
 <contactref element="PORT1" pad="P4"/>
-<wire x1="4.9" y1="0.5" x2="4.826" y2="0.574" width="0.1524" layer="1"/>
-<wire x1="4.826" y1="0.574" x2="4.826" y2="1.143" width="0.1524" layer="1"/>
-<wire x1="4.25" y1="1.719" x2="4.25" y2="2.572" width="0.1524" layer="1"/>
-<wire x1="4.826" y1="1.143" x2="4.25" y2="1.719" width="0.1524" layer="1"/>
+<wire x1="4.25" y1="2.572" x2="4.25" y2="1.719" width="0.1524" layer="1"/>
 <polygon width="0.1524" layer="1">
 <vertex x="0.127" y="10.922"/>
-<vertex x="0.127" y="1.016"/>
-<vertex x="5.715" y="1.016"/>
+<vertex x="0.127" y="1.905"/>
+<vertex x="5.715" y="1.905"/>
 <vertex x="5.715" y="10.922"/>
 </polygon>
+<wire x1="4.25" y1="1.719" x2="4.90508125" y2="1.06391875" width="0.1524" layer="1"/>
+<wire x1="4.90508125" y1="1.06391875" x2="4.90508125" y2="0.7232" width="0.1524" layer="1"/>
 </signal>
 <signal name="A">
 <contactref element="IC1" pad="6"/>
 <wire x1="1.65" y1="8.448" x2="1.6510375" y2="4.94158125" width="0.1524" layer="1"/>
-<wire x1="0.5380375" y1="3.82858125" x2="0.5380375" y2="1.54258125" width="0.1524" layer="1"/>
-<wire x1="1.6510375" y1="4.94158125" x2="0.5380375" y2="3.82858125" width="0.1524" layer="1"/>
+<wire x1="0.565978125" y1="3.856521875" x2="0.565978125" y2="1.54258125" width="0.1524" layer="1"/>
+<wire x1="1.6510375" y1="4.94158125" x2="0.565978125" y2="3.856521875" width="0.1524" layer="1"/>
 <contactref element="PORT1" pad="P2"/>
-<wire x1="0.5380375" y1="1.54258125" x2="1.75941875" y2="1.54258125" width="0.1524" layer="1"/>
-<wire x1="2.3" y1="1.002" x2="2.3" y2="0.5" width="0.1524" layer="1"/>
-<wire x1="1.75941875" y1="1.54258125" x2="2.3" y2="1.002" width="0.1524" layer="1"/>
+<wire x1="0.565978125" y1="1.54258125" x2="1.75941875" y2="1.54258125" width="0.1524" layer="1"/>
+<wire x1="2.30508125" y1="0.99691875" x2="2.30508125" y2="0.7232" width="0.1524" layer="1"/>
+<wire x1="1.75941875" y1="1.54258125" x2="2.30508125" y2="0.99691875" width="0.1524" layer="1"/>
 </signal>
 <signal name="B">
 <contactref element="IC1" pad="7"/>
 <wire x1="1" y1="8.448" x2="1.0010375" y2="4.68671875" width="0.1524" layer="1"/>
-<wire x1="1.0010375" y1="4.68671875" x2="0.2586375" y2="3.94431875" width="0.1524" layer="1"/>
+<wire x1="1.0010375" y1="4.68671875" x2="0.286578125" y2="3.972259375" width="0.1524" layer="1"/>
 <contactref element="PORT1" pad="P1"/>
-<wire x1="0.2586375" y1="1.2413625" x2="1" y2="0.5" width="0.1524" layer="1"/>
-<wire x1="0.2586375" y1="3.94431875" x2="0.2586375" y2="1.2413625" width="0.1524" layer="1"/>
+<wire x1="0.286578125" y1="1.42231875" x2="1.00508125" y2="0.7232" width="0.1524" layer="1"/>
+<wire x1="0.286578125" y1="3.972259375" x2="0.286578125" y2="1.42231875" width="0.1524" layer="1"/>
 </signal>
 <signal name="CSN">
 <contactref element="IC1" pad="1"/>
@@ -635,15 +633,17 @@ design rules under a new name.</description>
 <via x="4.9830375" y="7.00358125" extent="1-16" drill="0.35"/>
 <wire x1="4.9830375" y1="7.00358125" x2="4.8560375" y2="6.87658125" width="0.1524" layer="16"/>
 <wire x1="4.8560375" y1="6.87658125" x2="4.8560375" y2="6.10658125" width="0.1524" layer="16"/>
-<wire x1="4.9" y1="8.448" x2="4.9010375" y2="10.38758125" width="0.1524" layer="1"/>
-<contactref element="U$1" pad="4"/>
-<wire x1="-7.239" y1="6.858" x2="4.8560375" y2="6.87658125" width="0" layer="19" extent="16-16"/>
+<contactref element="CONN1" pad="1"/>
+<wire x1="4.9" y1="8.448" x2="4.826" y2="8.522" width="0.1524" layer="1"/>
+<wire x1="4.826" y1="8.522" x2="4.826" y2="10.287" width="0.1524" layer="1"/>
 </signal>
 <signal name="MISO">
 <contactref element="IC1" pad="3"/>
 <wire x1="3.6" y1="8.448" x2="3.6010375" y2="9.14758125" width="0.1524" layer="1"/>
-<contactref element="U$1" pad="2"/>
-<wire x1="-9.779" y1="6.858" x2="3.6" y2="8.448" width="0" layer="19" extent="1-1"/>
+<contactref element="CONN1" pad="3"/>
+<wire x1="3.6010375" y1="9.14758125" x2="3.22361875" y2="9.525" width="0.1524" layer="1"/>
+<wire x1="3.22361875" y1="9.525" x2="3.048" y2="9.525" width="0.1524" layer="1"/>
+<wire x1="3.048" y1="9.525" x2="2.286" y2="10.287" width="0.1524" layer="1"/>
 </signal>
 <signal name="MOSI">
 <contactref element="IC1" pad="4"/>
@@ -652,12 +652,13 @@ design rules under a new name.</description>
 <via x="2.9510375" y="7.00358125" extent="1-16" drill="0.35"/>
 <wire x1="2.9510375" y1="7.00358125" x2="2.5620375" y2="6.61458125" width="0.1524" layer="16"/>
 <wire x1="2.5620375" y1="6.61458125" x2="1.0460375" y2="6.61458125" width="0.1524" layer="16"/>
-<wire x1="2.95" y1="8.448" x2="2.9510375" y2="9.16258125" width="0.1524" layer="1"/>
-<wire x1="2.9510375" y1="9.16258125" x2="2.5700375" y2="9.54358125" width="0.1524" layer="1"/>
-<wire x1="2.5700375" y1="9.54358125" x2="1.6810375" y2="9.54358125" width="0.1524" layer="1"/>
-<wire x1="1.6810375" y1="9.54358125" x2="1.0460375" y2="10.17858125" width="0.1524" layer="1"/>
-<contactref element="U$1" pad="1"/>
-<wire x1="-11.049" y1="6.858" x2="1.0460375" y2="6.61458125" width="0" layer="19" extent="16-16"/>
+<contactref element="CONN1" pad="4"/>
+<wire x1="2.95" y1="8.448" x2="2.921" y2="8.477" width="0.1524" layer="1"/>
+<wire x1="2.921" y1="8.477" x2="2.921" y2="9.144" width="0.1524" layer="1"/>
+<wire x1="2.921" y1="9.144" x2="2.667" y2="9.398" width="0.1524" layer="1"/>
+<wire x1="2.667" y1="9.398" x2="1.778" y2="9.398" width="0.1524" layer="1"/>
+<wire x1="1.778" y1="9.398" x2="1.016" y2="10.16" width="0.1524" layer="1"/>
+<wire x1="1.016" y1="10.16" x2="1.016" y2="10.287" width="0.1524" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
