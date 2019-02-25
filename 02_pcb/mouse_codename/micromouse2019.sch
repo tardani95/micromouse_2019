@@ -8231,6 +8231,73 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
 <text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
 </package>
+<package name="SOTFL35P100X50-6" urn="urn:adsk.eagle:footprint:9227357/1">
+<description>6-SOTFL, 0.35 mm pitch, 1.00 mm span, 1.00 X 0.70 X 0.50 mm body
+&lt;p&gt;6-pin SOTFL package with 0.35 mm pitch, 1.00 mm span with body size 1.00 X 0.70 X 0.50 mm&lt;/p&gt;</description>
+<circle x="-0.854" y="0.979" radius="0.25" width="0" layer="21"/>
+<wire x1="-0.35" y1="0.789" x2="0.35" y2="0.789" width="0.12" layer="21"/>
+<wire x1="-0.35" y1="-0.789" x2="0.35" y2="-0.789" width="0.12" layer="21"/>
+<wire x1="0.35" y1="-0.525" x2="-0.35" y2="-0.525" width="0.12" layer="51"/>
+<wire x1="-0.35" y1="-0.525" x2="-0.35" y2="0.525" width="0.12" layer="51"/>
+<wire x1="-0.35" y1="0.525" x2="0.35" y2="0.525" width="0.12" layer="51"/>
+<wire x1="0.35" y1="0.525" x2="0.35" y2="-0.525" width="0.12" layer="51"/>
+<smd name="1" x="-0.5451" y="0.35" dx="0.4098" dy="0.25" layer="1"/>
+<smd name="2" x="-0.5451" y="0" dx="0.4098" dy="0.25" layer="1"/>
+<smd name="3" x="-0.5451" y="-0.35" dx="0.4098" dy="0.25" layer="1"/>
+<smd name="4" x="0.5451" y="-0.35" dx="0.4098" dy="0.25" layer="1"/>
+<smd name="5" x="0.5451" y="0" dx="0.4098" dy="0.25" layer="1"/>
+<smd name="6" x="0.5451" y="0.35" dx="0.4098" dy="0.25" layer="1"/>
+<text x="0" y="1.864" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.424" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
+<package name="SON50P200X200X80-7T92X145" urn="urn:adsk.eagle:footprint:9228394/1">
+<description>6-SON, 0.50 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.45 X 0.92 mm thermal pad
+&lt;p&gt;6-pin SON package with 0.50 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.45 X 0.92 mm&lt;/p&gt;</description>
+<circle x="-1.504" y="1.164" radius="0.25" width="0" layer="21"/>
+<wire x1="-1" y1="0.914" x2="-1" y2="1.039" width="0.12" layer="21"/>
+<wire x1="-1" y1="1.039" x2="1" y2="1.039" width="0.12" layer="21"/>
+<wire x1="1" y1="1.039" x2="1" y2="0.914" width="0.12" layer="21"/>
+<wire x1="-1" y1="-0.914" x2="-1" y2="-1.039" width="0.12" layer="21"/>
+<wire x1="-1" y1="-1.039" x2="1" y2="-1.039" width="0.12" layer="21"/>
+<wire x1="1" y1="-1.039" x2="1" y2="-0.914" width="0.12" layer="21"/>
+<wire x1="1" y1="-1" x2="-1" y2="-1" width="0.12" layer="51"/>
+<wire x1="-1" y1="-1" x2="-1" y2="1" width="0.12" layer="51"/>
+<wire x1="-1" y1="1" x2="1" y2="1" width="0.12" layer="51"/>
+<wire x1="1" y1="1" x2="1" y2="-1" width="0.12" layer="51"/>
+<smd name="1" x="-0.9873" y="0.5" dx="0.7373" dy="0.32" layer="1"/>
+<smd name="2" x="-0.9873" y="0" dx="0.7373" dy="0.32" layer="1"/>
+<smd name="3" x="-0.9873" y="-0.5" dx="0.7373" dy="0.32" layer="1"/>
+<smd name="4" x="0.9873" y="-0.5" dx="0.7373" dy="0.32" layer="1"/>
+<smd name="5" x="0.9873" y="0" dx="0.7373" dy="0.32" layer="1"/>
+<smd name="6" x="0.9873" y="0.5" dx="0.7373" dy="0.32" layer="1"/>
+<smd name="7" x="0" y="0" dx="0.92" dy="1.45" layer="1" thermals="no"/>
+<text x="0" y="2.049" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.674" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
+<package name="SON65P200X200X80-7T100X160" urn="urn:adsk.eagle:footprint:9228428/1">
+<description>6-SON, 0.65 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.60 X 1.00 mm thermal pad
+&lt;p&gt;6-pin SON package with 0.65 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.60 X 1.00 mm&lt;/p&gt;</description>
+<circle x="-1.554" y="1.314" radius="0.25" width="0" layer="21"/>
+<wire x1="-1.05" y1="1.064" x2="-1.05" y2="1.114" width="0.12" layer="21"/>
+<wire x1="-1.05" y1="1.114" x2="1.05" y2="1.114" width="0.12" layer="21"/>
+<wire x1="1.05" y1="1.114" x2="1.05" y2="1.064" width="0.12" layer="21"/>
+<wire x1="-1.05" y1="-1.064" x2="-1.05" y2="-1.114" width="0.12" layer="21"/>
+<wire x1="-1.05" y1="-1.114" x2="1.05" y2="-1.114" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-1.114" x2="1.05" y2="-1.064" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-1.05" x2="-1.05" y2="-1.05" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="-1.05" x2="-1.05" y2="1.05" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="1.05" x2="1.05" y2="1.05" width="0.12" layer="51"/>
+<wire x1="1.05" y1="1.05" x2="1.05" y2="-1.05" width="0.12" layer="51"/>
+<smd name="1" x="-1.0206" y="0.65" dx="0.688" dy="0.32" layer="1"/>
+<smd name="2" x="-1.0206" y="0" dx="0.688" dy="0.32" layer="1"/>
+<smd name="3" x="-1.0206" y="-0.65" dx="0.688" dy="0.32" layer="1"/>
+<smd name="4" x="1.0206" y="-0.65" dx="0.688" dy="0.32" layer="1"/>
+<smd name="5" x="1.0206" y="0" dx="0.688" dy="0.32" layer="1"/>
+<smd name="6" x="1.0206" y="0.65" dx="0.688" dy="0.32" layer="1"/>
+<smd name="7" x="0" y="0" dx="1" dy="1.6" layer="1" thermals="no"/>
+<text x="0" y="2.199" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.749" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/3" type="model">
@@ -8368,6 +8435,27 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <package3d name="0603-RED" urn="urn:adsk.eagle:package:5829992/9" type="model">
 <packageinstances>
 <packageinstance name="0603-RED"/>
+</packageinstances>
+</package3d>
+<package3d name="SOTFL35P100X50-6" urn="urn:adsk.eagle:package:9226354/1" type="model">
+<description>6-SOTFL, 0.35 mm pitch, 1.00 mm span, 1.00 X 0.70 X 0.50 mm body
+&lt;p&gt;6-pin SOTFL package with 0.35 mm pitch, 1.00 mm span with body size 1.00 X 0.70 X 0.50 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="SOTFL35P100X50-6"/>
+</packageinstances>
+</package3d>
+<package3d name="SON50P200X200X80-7T92X145" urn="urn:adsk.eagle:package:9227372/1" type="model">
+<description>6-SON, 0.50 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.45 X 0.92 mm thermal pad
+&lt;p&gt;6-pin SON package with 0.50 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.45 X 0.92 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="SON50P200X200X80-7T92X145"/>
+</packageinstances>
+</package3d>
+<package3d name="SON65P200X200X80-7T100X160" urn="urn:adsk.eagle:package:9228423/1" type="model">
+<description>6-SON, 0.65 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.60 X 1.00 mm thermal pad
+&lt;p&gt;6-pin SON package with 0.65 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.60 X 1.00 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="SON65P200X200X80-7T100X160"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -10618,6 +10706,21 @@ with a typical dropout voltage of 300 mV.</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="LDO_3D" package="SON50P200X200X80-7T92X145">
+<connects>
+<connect gate="G$1" pin="EN" pad="1"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="IN" pad="6"/>
+<connect gate="G$1" pin="OUT" pad="4"/>
+<connect gate="G$1" pin="THERMALPAD" pad="7"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9227372/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="PS_TPS735" prefix="LDO">
@@ -10647,6 +10750,23 @@ with a typical dropout voltage of 300 mV.</description>
 <attribute name="MP" value="TPS73533DRVT" constant="no"/>
 <attribute name="PACKAGE" value="SON-6 Texas Instruments"/>
 </technology>
+</technologies>
+</device>
+<device name="3D" package="SON65P200X200X80-7T100X160">
+<connects>
+<connect gate="A" pin="EN" pad="4"/>
+<connect gate="A" pin="GND" pad="3"/>
+<connect gate="A" pin="IN" pad="6"/>
+<connect gate="A" pin="N/C" pad="5"/>
+<connect gate="A" pin="NR/FB" pad="2"/>
+<connect gate="A" pin="OUT" pad="1"/>
+<connect gate="A" pin="THERMALPAD" pad="7"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9228423/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -10985,6 +11105,22 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <technology name=""/>
 </technologies>
 </device>
+<device name="MOSFET_SOT964" package="SOTFL35P100X50-6">
+<connects>
+<connect gate="G$1" pin="DRAIN_1" pad="6"/>
+<connect gate="G$1" pin="DRAIN_2" pad="3"/>
+<connect gate="G$1" pin="GATE_1" pad="2"/>
+<connect gate="G$1" pin="GATE_2" pad="5"/>
+<connect gate="G$1" pin="SOURCE_1" pad="1"/>
+<connect gate="G$1" pin="SOURCE_2" pad="4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9226354/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="CONN_IRDX4" prefix="CONN">
@@ -11249,8 +11385,8 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <part name="GND6" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND7" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND8" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="LDO2" library="0-micromouse2019" deviceset="PS_LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9120815/3"/>
-<part name="LDO1" library="0-micromouse2019" deviceset="PS_TPS735" device="DRVT" technology="33"/>
+<part name="LDO2" library="0-micromouse2019" deviceset="PS_LDL112" device="LDO_3D" package3d_urn="urn:adsk.eagle:package:9227372/1" value="PS_LDL112LDO_3D"/>
+<part name="LDO1" library="0-micromouse2019" deviceset="PS_TPS735" device="3D" package3d_urn="urn:adsk.eagle:package:9228423/1" value="PS_TPS7353D"/>
 <part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k"/>
 <part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k"/>
 <part name="GND9" library="0-micromouse2019" deviceset="GND" device=""/>
@@ -13179,7 +13315,7 @@ to set it to “0”.</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="IR_LED_DRIVER_DUAL"/>
-<part name="MOSFET1" library="0-micromouse2019" deviceset="FET_DMN2990UDJ-7" device=""/>
+<part name="MOSFET1" library="0-micromouse2019" deviceset="FET_DMN2990UDJ-7" device="MOSFET_SOT964" package3d_urn="urn:adsk.eagle:package:9226354/1" value="FET_DMN2990UDJ-7MOSFET_SOT964"/>
 <part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
