@@ -8231,7 +8231,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
 <text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
 </package>
-<package name="SOTFL35P100X50-6" urn="urn:adsk.eagle:footprint:9227357/1">
+<package name="SOTFL35P100X50-6" urn="urn:adsk.eagle:footprint:9227357/1" locally_modified="yes">
 <description>6-SOTFL, 0.35 mm pitch, 1.00 mm span, 1.00 X 0.70 X 0.50 mm body
 &lt;p&gt;6-pin SOTFL package with 0.35 mm pitch, 1.00 mm span with body size 1.00 X 0.70 X 0.50 mm&lt;/p&gt;</description>
 <circle x="-0.854" y="0.979" radius="0.25" width="0" layer="21"/>
@@ -8241,12 +8241,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="-0.35" y1="-0.525" x2="-0.35" y2="0.525" width="0.12" layer="51"/>
 <wire x1="-0.35" y1="0.525" x2="0.35" y2="0.525" width="0.12" layer="51"/>
 <wire x1="0.35" y1="0.525" x2="0.35" y2="-0.525" width="0.12" layer="51"/>
-<smd name="1" x="-0.5451" y="0.35" dx="0.4098" dy="0.25" layer="1"/>
-<smd name="2" x="-0.5451" y="0" dx="0.4098" dy="0.25" layer="1"/>
-<smd name="3" x="-0.5451" y="-0.35" dx="0.4098" dy="0.25" layer="1"/>
-<smd name="4" x="0.5451" y="-0.35" dx="0.4098" dy="0.25" layer="1"/>
-<smd name="5" x="0.5451" y="0" dx="0.4098" dy="0.25" layer="1"/>
-<smd name="6" x="0.5451" y="0.35" dx="0.4098" dy="0.25" layer="1"/>
+<smd name="1" x="-0.5451" y="0.35" dx="0.4098" dy="0.2" layer="1"/>
+<smd name="2" x="-0.5451" y="0" dx="0.4098" dy="0.2" layer="1"/>
+<smd name="3" x="-0.5451" y="-0.35" dx="0.4098" dy="0.2" layer="1"/>
+<smd name="4" x="0.5451" y="-0.35" dx="0.4098" dy="0.2" layer="1"/>
+<smd name="5" x="0.5451" y="0" dx="0.4098" dy="0.2" layer="1"/>
+<smd name="6" x="0.5451" y="0.35" dx="0.4098" dy="0.2" layer="1"/>
 <text x="0" y="1.864" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.424" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
@@ -8437,7 +8437,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="0603-RED"/>
 </packageinstances>
 </package3d>
-<package3d name="SOTFL35P100X50-6" urn="urn:adsk.eagle:package:9226354/1" type="model">
+<package3d name="SOTFL35P100X50-6" urn="urn:adsk.eagle:package:9226354/1" locally_modified="yes" type="model">
 <description>6-SOTFL, 0.35 mm pitch, 1.00 mm span, 1.00 X 0.70 X 0.50 mm body
 &lt;p&gt;6-pin SOTFL package with 0.35 mm pitch, 1.00 mm span with body size 1.00 X 0.70 X 0.50 mm&lt;/p&gt;</description>
 <packageinstances>
