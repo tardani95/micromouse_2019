@@ -1052,7 +1052,7 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-1.85" y1="-2.5" x2="-1.85" y2="2.5" width="0.2" layer="21"/>
 <wire x1="-3.675" y1="2.525" x2="-2.2" y2="2.525" width="0.2" layer="21"/>
 </package>
-<package name="R0402" urn="urn:adsk.eagle:footprint:23043/3">
+<package name="R0402" urn="urn:adsk.eagle:footprint:23043/3" locally_modified="yes">
 <description>&lt;b&gt;Chip RESISTOR 0402 EIA (1005 Metric)&lt;/b&gt;</description>
 <wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
 <wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
@@ -1067,6 +1067,7 @@ by exp-lbrs-replace2.ulp</description>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.35" x2="0.1999" y2="0.35" layer="35"/>
+<wire x1="0" y1="0.254" x2="0" y2="-0.254" width="0.127" layer="21"/>
 </package>
 <package name="0204V">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
@@ -2599,7 +2600,7 @@ Source: VISHAY wscwsn.pdf</description>
 <text x="-8.75" y="3.9" size="1.27" layer="25">&gt;NAME</text>
 <text x="-8.75" y="-5.15" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="C0402" urn="urn:adsk.eagle:footprint:23121/1">
+<package name="C0402" urn="urn:adsk.eagle:footprint:23121/1" locally_modified="yes">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
 <wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
 <wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
@@ -2614,6 +2615,7 @@ Source: VISHAY wscwsn.pdf</description>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<wire x1="0" y1="0.381" x2="0" y2="-0.381" width="0.127" layer="21"/>
 </package>
 <package name="C025-024X044">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;&lt;p&gt;
@@ -4209,13 +4211,13 @@ Source: AVX .. aphvc.pdf</description>
 <packageinstance name="SOP65P640X120-14N"/>
 </packageinstances>
 </package3d>
-<package3d name="R0402" urn="urn:adsk.eagle:package:23547/3" type="model">
+<package3d name="R0402" urn="urn:adsk.eagle:package:23547/3" locally_modified="yes" type="model">
 <description>Chip RESISTOR 0402 EIA (1005 Metric)</description>
 <packageinstances>
 <packageinstance name="R0402"/>
 </packageinstances>
 </package3d>
-<package3d name="CAPC1005X60" urn="urn:adsk.eagle:package:23626/2" type="model">
+<package3d name="CAPC1005X60" urn="urn:adsk.eagle:package:23626/2" locally_modified="yes" type="model">
 <description>Chip, 1.00 X 0.50 X 0.60 mm body
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.60 mm&lt;/p&gt;</description>
 <packageinstances>
