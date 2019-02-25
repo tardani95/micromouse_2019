@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.127" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mm"/>
+<grid distance="50" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -36,7 +36,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -274,9 +274,13 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="10" x="0.9956" y="0.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="11" x="0.9956" y="0.75" dx="0.738" dy="0.27" layer="1"/>
 <smd name="12" x="0.9956" y="1.25" dx="0.738" dy="0.27" layer="1"/>
-<smd name="13" x="0" y="0" dx="2" dy="0.9" layer="1" rot="R270" thermals="no"/>
 <text x="0" y="2.5076" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.1266" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<wire x1="0.381" y1="1" x2="0.381" y2="-1" width="0.127" layer="1"/>
+<wire x1="-0.381" y1="1" x2="-0.381" y2="-1" width="0.127" layer="1"/>
+<wire x1="-0.381" y1="1.016" x2="0.381" y2="1.016" width="0.127" layer="1"/>
+<wire x1="-0.381" y1="-1.016" x2="0.381" y2="-1.016" width="0.127" layer="1"/>
+<rectangle x1="-0.45" y1="-1" x2="0.45" y2="1" layer="29"/>
 </package>
 <package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/2">
 <description>Mouse side of the connection of mouse and encoder</description>
@@ -5102,7 +5106,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;<
 <connect gate="G$1" pin="BIN2_/_BENBL" pad="7"/>
 <connect gate="G$1" pin="BOUT1" pad="4"/>
 <connect gate="G$1" pin="BOUT2" pad="5"/>
-<connect gate="G$1" pin="EP" pad="13 14 15 16 17"/>
+<connect gate="G$1" pin="EP" pad="14 15 16 17"/>
 <connect gate="G$1" pin="GND" pad="6"/>
 <connect gate="G$1" pin="MODE" pad="11"/>
 <connect gate="G$1" pin="NSLEEP" pad="12"/>
