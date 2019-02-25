@@ -10955,9 +10955,9 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <connects>
 <connect gate="G$1" pin="+3V3" pad="P$15"/>
 <connect gate="G$1" pin="GND" pad="P$14"/>
-<connect gate="G$1" pin="RX" pad="P$8"/>
+<connect gate="G$1" pin="RX" pad="P$9"/>
 <connect gate="G$1" pin="STATUS" pad="P$11"/>
-<connect gate="G$1" pin="TX" pad="P$9"/>
+<connect gate="G$1" pin="TX" pad="P$8"/>
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:9190657/2"/>
