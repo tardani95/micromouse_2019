@@ -2310,7 +2310,11 @@ design rules under a new name.</description>
 <element name="BT_PORT:PORT1" library="0-micromouse2019" package="BT_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9190657/2" value="PORT_BT_BASE" x="26.47" y="2.17" smashed="yes">
 <attribute name="VALUE" x="27.37" y="-1.145" size="0.8128" layer="21"/>
 </element>
-<element name="MCU:RGB1" library="0-micromouse2019" package="D_RGB_0603" package3d_urn="urn:adsk.eagle:package:9166171/2" value="LED_RGB-0603" x="4.45" y="5.05" smashed="yes"/>
+<element name="MCU:RGB1" library="0-micromouse2019" package="D_RGB_0603" package3d_urn="urn:adsk.eagle:package:9166171/2" value="LED_RGB-0603" x="4.45" y="5.05" smashed="yes">
+<attribute name="SERIES_RESISTOR_B" value="100R" x="4.45" y="5.05" size="1.778" layer="27" display="off"/>
+<attribute name="SERIES_RESISTOR_G" value="100R" x="4.45" y="5.05" size="1.778" layer="27" display="off"/>
+<attribute name="SERIES_RESISTOR_R" value="270R" x="4.45" y="5.05" size="1.778" layer="27" display="off"/>
+</element>
 <element name="MCU:R4" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R" x="8.8" y="10.2" smashed="yes" rot="MR0">
 <attribute name="NAME" x="9.435" y="10.835" size="1.27" layer="26" rot="MR0"/>
 <attribute name="SPICEPREFIX" value="R" x="8.8" y="10.2" size="1.778" layer="28" rot="MR0" display="off"/>
@@ -2583,12 +2587,6 @@ design rules under a new name.</description>
 <contactref element="MCU:S2" pad="1"/>
 <wire x1="7.6105" y1="2.4895" x2="6.745" y2="1.624" width="0.1524" layer="1"/>
 <wire x1="6.745" y1="1.624" x2="6.703" y2="1.624" width="0.1524" layer="1"/>
-</signal>
-<signal name="MCU:IMU2_SCL">
-<contactref element="MCU:IC1" pad="29"/>
-</signal>
-<signal name="MCU:IMU2_SDA">
-<contactref element="MCU:IC1" pad="30"/>
 </signal>
 <signal name="MCU:SWDIO">
 <contactref element="MCU:J1" pad="1"/>
