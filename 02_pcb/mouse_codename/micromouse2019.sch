@@ -13289,14 +13289,14 @@ to set it to “0”.</text>
 <moduleinst name="MOT" module="MOTOR_DRIVER" x="187.96" y="104.14">
 <attribute name="NAME" x="187.96" y="104.14" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="66.04" y="88.9">
-<attribute name="NAME" value="ENC_PORT_RIGHT" x="68.58" y="83.82" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="EPR" module="ENCODER_PORT" x="66.04" y="88.9">
+<attribute name="NAME" value="EPR" x="68.58" y="83.82" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="BT_PORT" module="WIRELESS_MODUL_PORT" x="124.46" y="30.48">
-<attribute name="NAME" x="124.46" y="25.4" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="BTP" module="WIRELESS_MODUL_PORT" x="124.46" y="30.48">
+<attribute name="NAME" value="BTP" x="124.46" y="25.4" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="ENC_PORT_LEFT" module="ENCODER_PORT" x="66.04" y="104.14">
-<attribute name="NAME" value="ENC_PORT_LEFT" x="68.58" y="99.06" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="EPL" module="ENCODER_PORT" x="66.04" y="104.14">
+<attribute name="NAME" value="EPL" x="68.58" y="99.06" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="86.36">
 <attribute name="NAME" x="129.54" y="86.36" size="2.032" layer="95" align="bottom-center"/>
@@ -13369,9 +13369,9 @@ to set it to “0”.</text>
 <wire x1="40.64" y1="66.04" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
 <junction x="40.64" y="66.04"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<portref moduleinst="ENC_PORT_LEFT" port="GND"/>
+<portref moduleinst="EPL" port="GND"/>
 <wire x1="43.18" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
-<portref moduleinst="ENC_PORT_RIGHT" port="GND"/>
+<portref moduleinst="EPR" port="GND"/>
 <wire x1="43.18" y1="83.82" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
 <junction x="40.64" y="83.82"/>
 </segment>
@@ -13396,7 +13396,7 @@ to set it to “0”.</text>
 <junction x="208.28" y="60.96"/>
 </segment>
 <segment>
-<portref moduleinst="BT_PORT" port="GND"/>
+<portref moduleinst="BTP" port="GND"/>
 <wire x1="106.68" y1="22.86" x2="101.6" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="101.6" y1="22.86" x2="101.6" y2="17.78" width="0.1524" layer="91"/>
@@ -13420,15 +13420,15 @@ to set it to “0”.</text>
 <wire x1="35.56" y1="76.2" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="109.22" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<portref moduleinst="ENC_PORT_LEFT" port="+3V3"/>
+<portref moduleinst="EPL" port="+3V3"/>
 <wire x1="43.18" y1="109.22" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
 <junction x="35.56" y="109.22"/>
-<portref moduleinst="ENC_PORT_RIGHT" port="+3V3"/>
+<portref moduleinst="EPR" port="+3V3"/>
 <wire x1="43.18" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
 <junction x="35.56" y="93.98"/>
 </segment>
 <segment>
-<portref moduleinst="BT_PORT" port="+3V3"/>
+<portref moduleinst="BTP" port="+3V3"/>
 <wire x1="106.68" y1="38.1" x2="101.6" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <wire x1="101.6" y1="38.1" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
@@ -13505,7 +13505,7 @@ to set it to “0”.</text>
 </net>
 <net name="UART3_TX" class="0">
 <segment>
-<portref moduleinst="BT_PORT" port="BT_RX"/>
+<portref moduleinst="BTP" port="BT_RX"/>
 <portref moduleinst="MCU" port="UART3_TX"/>
 <wire x1="121.92" y1="45.72" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
 </segment>
@@ -13513,7 +13513,7 @@ to set it to “0”.</text>
 <net name="UART3_RX" class="0">
 <segment>
 <portref moduleinst="MCU" port="UART3_RX"/>
-<portref moduleinst="BT_PORT" port="BT_TX"/>
+<portref moduleinst="BTP" port="BT_TX"/>
 <wire x1="124.46" y1="50.8" x2="124.46" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13528,7 +13528,7 @@ to set it to “0”.</text>
 </net>
 <net name="ENC_LEFT_CHA" class="0">
 <segment>
-<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHA"/>
+<portref moduleinst="EPL" port="ENC_CHA"/>
 <portref moduleinst="MCU" port="ENC_LEFT_CHA"/>
 <wire x1="88.9" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
 </segment>
@@ -13536,20 +13536,20 @@ to set it to “0”.</text>
 <net name="ENC_LEFT_CHB" class="0">
 <segment>
 <portref moduleinst="MCU" port="ENC_LEFT_CHB"/>
-<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHB"/>
+<portref moduleinst="EPL" port="ENC_CHB"/>
 <wire x1="96.52" y1="104.14" x2="88.9" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_RIGHT_CHA" class="0">
 <segment>
-<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHA"/>
+<portref moduleinst="EPR" port="ENC_CHA"/>
 <portref moduleinst="MCU" port="ENC_RIGHT_CHA"/>
 <wire x1="88.9" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_RIGHT_CHB" class="0">
 <segment>
-<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHB"/>
+<portref moduleinst="EPR" port="ENC_CHB"/>
 <portref moduleinst="MCU" port="ENC_RIGHT_CHB"/>
 <wire x1="88.9" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
 </segment>
