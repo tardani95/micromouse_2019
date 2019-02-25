@@ -479,9 +479,9 @@ by exp-lbrs-replace2.ulp</description>
 <label x="17.78" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="PORT1" gate="G$1" pin="RX"/>
-<wire x1="53.34" y1="12.7" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
-<label x="43.18" y="12.7" size="1.778" layer="95"/>
+<pinref part="PORT1" gate="G$1" pin="TX"/>
+<wire x1="53.34" y1="10.16" x2="43.18" y2="10.16" width="0.1524" layer="91"/>
+<label x="43.18" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STATUS" class="0">
@@ -503,9 +503,9 @@ by exp-lbrs-replace2.ulp</description>
 <label x="-25.4" y="7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="PORT1" gate="G$1" pin="TX"/>
-<wire x1="53.34" y1="10.16" x2="43.18" y2="10.16" width="0.1524" layer="91"/>
-<label x="43.18" y="10.16" size="1.778" layer="95"/>
+<pinref part="PORT1" gate="G$1" pin="RX"/>
+<wire x1="53.34" y1="12.7" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
+<label x="43.18" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
