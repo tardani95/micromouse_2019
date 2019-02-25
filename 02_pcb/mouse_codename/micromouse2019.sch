@@ -11000,7 +11000,11 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <package3dinstance package3d_urn="urn:adsk.eagle:package:9166171/2"/>
 </package3dinstances>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="SERIES_RESISTOR_B" value="100R"/>
+<attribute name="SERIES_RESISTOR_G" value="100R"/>
+<attribute name="SERIES_RESISTOR_R" value="270R"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -12302,7 +12306,7 @@ to set it to “0”.</text>
 <label x="256.54" y="83.82" size="1.778" layer="95" rot="R90"/>
 </segment>
 </bus>
-<bus name="MPU6050:IMU1_SCL,IMU1_SDA,IMU2_SCL,IMU2_SDA">
+<bus name="MPU6050:IMU1_SCL,IMU1_SDA">
 <segment>
 <wire x1="254" y1="78.74" x2="254" y2="63.5" width="0.762" layer="92"/>
 <label x="256.54" y="63.5" size="1.778" layer="95" rot="R90"/>
@@ -12815,30 +12819,6 @@ to set it to “0”.</text>
 <label x="144.78" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="IMU2_SCL" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="PB10"/>
-<wire x1="142.24" y1="106.68" x2="157.48" y2="106.68" width="0.1524" layer="91"/>
-<label x="144.78" y="106.68" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="254" y1="68.58" x2="251.46" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="71.12" x2="251.46" y2="71.12" width="0.1524" layer="91"/>
-<label x="231.14" y="71.12" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="IMU2_SDA" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="PB11"/>
-<wire x1="142.24" y1="104.14" x2="157.48" y2="104.14" width="0.1524" layer="91"/>
-<label x="144.78" y="104.14" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="254" y1="66.04" x2="251.46" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="68.58" x2="251.46" y2="68.58" width="0.1524" layer="91"/>
-<label x="231.14" y="68.58" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="ENC_RIGHT_CHA" class="0">
 <segment>
 <wire x1="167.64" y1="116.84" x2="170.18" y2="114.3" width="0.1524" layer="91"/>
@@ -13111,30 +13091,30 @@ to set it to “0”.</text>
 <instance part="GND2" gate="1" x="109.22" y="45.72" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="111.76" y="43.18" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="R5" gate="G$1" x="154.94" y="96.52" smashed="yes" rot="R90">
-<attribute name="NAME" x="153.4414" y="92.71" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="158.242" y="92.71" size="1.778" layer="96" rot="R90"/>
+<instance part="R5" gate="G$1" x="165.1" y="55.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="163.6014" y="52.07" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="168.402" y="52.07" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND5" gate="1" x="154.94" y="86.36" smashed="yes">
-<attribute name="VALUE" x="152.4" y="83.82" size="1.778" layer="96"/>
+<instance part="GND5" gate="1" x="165.1" y="45.72" smashed="yes">
+<attribute name="VALUE" x="162.56" y="43.18" size="1.778" layer="96"/>
 </instance>
-<instance part="R6" gate="G$1" x="175.26" y="96.52" smashed="yes" rot="R90">
-<attribute name="NAME" x="173.7614" y="92.71" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="178.562" y="92.71" size="1.778" layer="96" rot="R90"/>
+<instance part="R6" gate="G$1" x="185.42" y="55.88" smashed="yes" rot="R90">
+<attribute name="NAME" x="183.9214" y="52.07" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="188.722" y="52.07" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND6" gate="1" x="175.26" y="86.36" smashed="yes">
-<attribute name="VALUE" x="172.72" y="83.82" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="185.42" y="45.72" smashed="yes">
+<attribute name="VALUE" x="182.88" y="43.18" size="1.778" layer="96"/>
 </instance>
-<instance part="P+1" gate="VCC" x="205.74" y="111.76" smashed="yes">
-<attribute name="VALUE" x="203.2" y="109.22" size="1.778" layer="96" rot="R90"/>
+<instance part="P+1" gate="VCC" x="215.9" y="71.12" smashed="yes">
+<attribute name="VALUE" x="213.36" y="68.58" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="CONN1" gate="G$1" x="134.62" y="127" smashed="yes" rot="R90">
-<attribute name="NAME" x="129.54" y="135.382" size="1.27" layer="95"/>
-<attribute name="VALUE" x="129.54" y="133.858" size="1.27" layer="96"/>
+<instance part="CONN1" gate="G$1" x="134.62" y="96.52" smashed="yes" rot="R90">
+<attribute name="NAME" x="129.54" y="104.902" size="1.27" layer="95"/>
+<attribute name="VALUE" x="129.54" y="103.378" size="1.27" layer="96"/>
 </instance>
-<instance part="CONN2" gate="G$1" x="205.74" y="99.06" smashed="yes">
-<attribute name="NAME" x="203.2" y="84.074" size="1.27" layer="95"/>
-<attribute name="VALUE" x="203.2" y="81.28" size="1.27" layer="96"/>
+<instance part="CONN2" gate="G$1" x="215.9" y="58.42" smashed="yes">
+<attribute name="NAME" x="213.36" y="43.434" size="1.27" layer="95"/>
+<attribute name="VALUE" x="213.36" y="40.64" size="1.27" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -13151,23 +13131,21 @@ to set it to “0”.</text>
 <net name="DRAIN_1" class="0">
 <segment>
 <pinref part="MOSFET1" gate="G$1" pin="DRAIN_1"/>
-<wire x1="53.34" y1="76.2" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="76.2" x2="53.34" y2="116.84" width="0.1524" layer="91"/>
-<label x="109.22" y="116.84" size="1.778" layer="95"/>
+<wire x1="40.64" y1="76.2" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="76.2" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
+<label x="45.72" y="76.2" size="1.778" layer="95"/>
 <pinref part="CONN1" gate="G$1" pin="P1"/>
-<wire x1="132.08" y1="124.46" x2="132.08" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="121.92" x2="132.08" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="116.84" x2="53.34" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="93.98" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="88.9" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DRAIN_2" class="0">
 <segment>
 <pinref part="MOSFET1" gate="G$1" pin="DRAIN_2"/>
-<wire x1="106.68" y1="76.2" x2="99.06" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="76.2" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="76.2" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
 <label x="104.14" y="76.2" size="1.778" layer="95"/>
 <pinref part="CONN1" gate="G$1" pin="P2"/>
-<wire x1="134.62" y1="124.46" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="93.98" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -13196,12 +13174,12 @@ to set it to “0”.</text>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="88.9" x2="154.94" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="48.26" x2="165.1" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="88.9" x2="175.26" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="48.26" x2="185.42" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IRD1" class="0">
@@ -13236,16 +13214,15 @@ to set it to “0”.</text>
 </net>
 <net name="PTR1" class="0">
 <segment>
-<wire x1="154.94" y1="111.76" x2="154.94" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="76.2" x2="165.1" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="104.14" x2="154.94" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="104.14" x2="139.7" y2="104.14" width="0.1524" layer="91"/>
-<junction x="154.94" y="104.14"/>
-<label x="139.7" y="104.14" size="1.778" layer="95"/>
+<wire x1="165.1" y1="63.5" x2="165.1" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="63.5" x2="149.86" y2="63.5" width="0.1524" layer="91"/>
+<junction x="165.1" y="63.5"/>
+<label x="149.86" y="63.5" size="1.778" layer="95"/>
 <pinref part="CONN1" gate="G$1" pin="P3"/>
-<wire x1="137.16" y1="124.46" x2="137.16" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="116.84" x2="137.16" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="111.76" x2="154.94" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="93.98" x2="137.16" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="76.2" x2="165.1" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="256.54" y1="154.94" x2="251.46" y2="157.48" width="0.1524" layer="91"/>
@@ -13255,16 +13232,15 @@ to set it to “0”.</text>
 </net>
 <net name="PTR2" class="0">
 <segment>
-<wire x1="175.26" y1="111.76" x2="175.26" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="88.9" x2="185.42" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="175.26" y1="104.14" x2="175.26" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="104.14" x2="160.02" y2="104.14" width="0.1524" layer="91"/>
-<junction x="175.26" y="104.14"/>
-<label x="160.02" y="104.14" size="1.778" layer="95"/>
+<wire x1="185.42" y1="63.5" x2="185.42" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="63.5" x2="170.18" y2="63.5" width="0.1524" layer="91"/>
+<junction x="185.42" y="63.5"/>
+<label x="170.18" y="63.5" size="1.778" layer="95"/>
 <pinref part="CONN1" gate="G$1" pin="P4"/>
-<wire x1="139.7" y1="124.46" x2="139.7" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="116.84" x2="175.26" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="116.84" x2="175.26" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="93.98" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="88.9" x2="185.42" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="256.54" y1="152.4" x2="251.46" y2="154.94" width="0.1524" layer="91"/>
@@ -13274,7 +13250,7 @@ to set it to “0”.</text>
 </net>
 <net name="VCC" class="0">
 <segment>
-<wire x1="205.74" y1="109.22" x2="205.74" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="68.58" x2="215.9" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <pinref part="CONN2" gate="G$1" pin="P1"/>
 </segment>
@@ -13298,6 +13274,8 @@ to set it to “0”.</text>
 <part name="+3V4" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="+3V5" library="0-micromouse2019" deviceset="+3V3" device=""/>
+<part name="CONN1" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+<part name="CONN2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -13313,14 +13291,14 @@ to set it to “0”.</text>
 <moduleinst name="MOT" module="MOTOR_DRIVER" x="187.96" y="104.14">
 <attribute name="NAME" x="187.96" y="104.14" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="ENC_PORT_RIGHT" module="ENCODER_PORT" x="66.04" y="88.9">
-<attribute name="NAME" value="ENC_PORT_RIGHT" x="68.58" y="83.82" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="EPR" module="ENCODER_PORT" x="66.04" y="88.9">
+<attribute name="NAME" value="EPR" x="68.58" y="83.82" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="BT_PORT" module="WIRELESS_MODUL_PORT" x="124.46" y="30.48">
-<attribute name="NAME" x="124.46" y="25.4" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="BTP" module="WIRELESS_MODUL_PORT" x="124.46" y="30.48">
+<attribute name="NAME" value="BTP" x="124.46" y="25.4" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="ENC_PORT_LEFT" module="ENCODER_PORT" x="66.04" y="104.14">
-<attribute name="NAME" value="ENC_PORT_LEFT" x="68.58" y="99.06" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="EPL" module="ENCODER_PORT" x="66.04" y="104.14">
+<attribute name="NAME" value="EPL" x="68.58" y="99.06" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="86.36">
 <attribute name="NAME" x="129.54" y="86.36" size="2.032" layer="95" align="bottom-center"/>
@@ -13339,8 +13317,8 @@ to set it to “0”.</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="GND1" gate="1" x="66.04" y="127" smashed="yes">
-<attribute name="VALUE" x="63.5" y="124.46" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="66.04" y="124.46" smashed="yes">
+<attribute name="VALUE" x="63.5" y="121.92" size="1.778" layer="96"/>
 </instance>
 <instance part="+3V1" gate="G$1" x="55.88" y="167.64" smashed="yes">
 <attribute name="VALUE" x="53.34" y="162.56" size="1.778" layer="96" rot="R90"/>
@@ -13375,6 +13353,14 @@ to set it to “0”.</text>
 <instance part="+3V5" gate="G$1" x="220.98" y="124.46" smashed="yes">
 <attribute name="VALUE" x="218.44" y="119.38" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="CONN1" gate="G$1" x="81.28" y="129.54" smashed="yes">
+<attribute name="NAME" x="83.82" y="127.254" size="1.27" layer="95"/>
+<attribute name="VALUE" x="83.82" y="125.222" size="1.27" layer="96"/>
+</instance>
+<instance part="CONN2" gate="G$1" x="96.52" y="129.54" smashed="yes">
+<attribute name="NAME" x="99.06" y="127.254" size="1.27" layer="95"/>
+<attribute name="VALUE" x="99.06" y="125.222" size="1.27" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13384,6 +13370,16 @@ to set it to “0”.</text>
 <portref moduleinst="PWR" port="GND"/>
 <wire x1="66.04" y1="132.08" x2="66.04" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="66.04" y1="129.54" x2="66.04" y2="127" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="129.54" x2="66.04" y2="129.54" width="0.1524" layer="91"/>
+<junction x="66.04" y="129.54"/>
+<wire x1="68.58" y1="129.54" x2="81.28" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="CONN1" gate="G$1" pin="P1"/>
+<wire x1="81.28" y1="129.54" x2="81.28" y2="127" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="129.54" x2="96.52" y2="129.54" width="0.1524" layer="91"/>
+<junction x="81.28" y="129.54"/>
+<pinref part="CONN2" gate="G$1" pin="P1"/>
+<wire x1="96.52" y1="129.54" x2="96.52" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="40.64" y1="99.06" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
@@ -13393,9 +13389,9 @@ to set it to “0”.</text>
 <wire x1="40.64" y1="66.04" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
 <junction x="40.64" y="66.04"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<portref moduleinst="ENC_PORT_LEFT" port="GND"/>
+<portref moduleinst="EPL" port="GND"/>
 <wire x1="43.18" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
-<portref moduleinst="ENC_PORT_RIGHT" port="GND"/>
+<portref moduleinst="EPR" port="GND"/>
 <wire x1="43.18" y1="83.82" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
 <junction x="40.64" y="83.82"/>
 </segment>
@@ -13420,7 +13416,7 @@ to set it to “0”.</text>
 <junction x="208.28" y="60.96"/>
 </segment>
 <segment>
-<portref moduleinst="BT_PORT" port="GND"/>
+<portref moduleinst="BTP" port="GND"/>
 <wire x1="106.68" y1="22.86" x2="101.6" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="101.6" y1="22.86" x2="101.6" y2="17.78" width="0.1524" layer="91"/>
@@ -13444,15 +13440,15 @@ to set it to “0”.</text>
 <wire x1="35.56" y1="76.2" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="35.56" y1="109.22" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<portref moduleinst="ENC_PORT_LEFT" port="+3V3"/>
+<portref moduleinst="EPL" port="+3V3"/>
 <wire x1="43.18" y1="109.22" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
 <junction x="35.56" y="109.22"/>
-<portref moduleinst="ENC_PORT_RIGHT" port="+3V3"/>
+<portref moduleinst="EPR" port="+3V3"/>
 <wire x1="43.18" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
 <junction x="35.56" y="93.98"/>
 </segment>
 <segment>
-<portref moduleinst="BT_PORT" port="+3V3"/>
+<portref moduleinst="BTP" port="+3V3"/>
 <wire x1="106.68" y1="38.1" x2="101.6" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <wire x1="101.6" y1="38.1" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
@@ -13529,7 +13525,7 @@ to set it to “0”.</text>
 </net>
 <net name="UART3_TX" class="0">
 <segment>
-<portref moduleinst="BT_PORT" port="BT_RX"/>
+<portref moduleinst="BTP" port="BT_RX"/>
 <portref moduleinst="MCU" port="UART3_TX"/>
 <wire x1="121.92" y1="45.72" x2="121.92" y2="50.8" width="0.1524" layer="91"/>
 </segment>
@@ -13537,7 +13533,7 @@ to set it to “0”.</text>
 <net name="UART3_RX" class="0">
 <segment>
 <portref moduleinst="MCU" port="UART3_RX"/>
-<portref moduleinst="BT_PORT" port="BT_TX"/>
+<portref moduleinst="BTP" port="BT_TX"/>
 <wire x1="124.46" y1="50.8" x2="124.46" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13552,7 +13548,7 @@ to set it to “0”.</text>
 </net>
 <net name="ENC_LEFT_CHA" class="0">
 <segment>
-<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHA"/>
+<portref moduleinst="EPL" port="ENC_CHA"/>
 <portref moduleinst="MCU" port="ENC_LEFT_CHA"/>
 <wire x1="88.9" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
 </segment>
@@ -13560,20 +13556,20 @@ to set it to “0”.</text>
 <net name="ENC_LEFT_CHB" class="0">
 <segment>
 <portref moduleinst="MCU" port="ENC_LEFT_CHB"/>
-<portref moduleinst="ENC_PORT_LEFT" port="ENC_CHB"/>
+<portref moduleinst="EPL" port="ENC_CHB"/>
 <wire x1="96.52" y1="104.14" x2="88.9" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_RIGHT_CHA" class="0">
 <segment>
-<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHA"/>
+<portref moduleinst="EPR" port="ENC_CHA"/>
 <portref moduleinst="MCU" port="ENC_RIGHT_CHA"/>
 <wire x1="88.9" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_RIGHT_CHB" class="0">
 <segment>
-<portref moduleinst="ENC_PORT_RIGHT" port="ENC_CHB"/>
+<portref moduleinst="EPR" port="ENC_CHB"/>
 <portref moduleinst="MCU" port="ENC_RIGHT_CHB"/>
 <wire x1="88.9" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
 </segment>
