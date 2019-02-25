@@ -13274,6 +13274,8 @@ to set it to “0”.</text>
 <part name="+3V4" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="+3V5" library="0-micromouse2019" deviceset="+3V3" device=""/>
+<part name="CONN1" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+<part name="CONN2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -13315,8 +13317,8 @@ to set it to “0”.</text>
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="GND1" gate="1" x="66.04" y="127" smashed="yes">
-<attribute name="VALUE" x="63.5" y="124.46" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="66.04" y="124.46" smashed="yes">
+<attribute name="VALUE" x="63.5" y="121.92" size="1.778" layer="96"/>
 </instance>
 <instance part="+3V1" gate="G$1" x="55.88" y="167.64" smashed="yes">
 <attribute name="VALUE" x="53.34" y="162.56" size="1.778" layer="96" rot="R90"/>
@@ -13351,6 +13353,14 @@ to set it to “0”.</text>
 <instance part="+3V5" gate="G$1" x="220.98" y="124.46" smashed="yes">
 <attribute name="VALUE" x="218.44" y="119.38" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="CONN1" gate="G$1" x="81.28" y="129.54" smashed="yes">
+<attribute name="NAME" x="83.82" y="127.254" size="1.27" layer="95"/>
+<attribute name="VALUE" x="83.82" y="125.222" size="1.27" layer="96"/>
+</instance>
+<instance part="CONN2" gate="G$1" x="96.52" y="129.54" smashed="yes">
+<attribute name="NAME" x="99.06" y="127.254" size="1.27" layer="95"/>
+<attribute name="VALUE" x="99.06" y="125.222" size="1.27" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -13360,6 +13370,16 @@ to set it to “0”.</text>
 <portref moduleinst="PWR" port="GND"/>
 <wire x1="66.04" y1="132.08" x2="66.04" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="66.04" y1="129.54" x2="66.04" y2="127" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="129.54" x2="66.04" y2="129.54" width="0.1524" layer="91"/>
+<junction x="66.04" y="129.54"/>
+<wire x1="68.58" y1="129.54" x2="81.28" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="CONN1" gate="G$1" pin="P1"/>
+<wire x1="81.28" y1="129.54" x2="81.28" y2="127" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="129.54" x2="96.52" y2="129.54" width="0.1524" layer="91"/>
+<junction x="81.28" y="129.54"/>
+<pinref part="CONN2" gate="G$1" pin="P1"/>
+<wire x1="96.52" y1="129.54" x2="96.52" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="40.64" y1="99.06" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
