@@ -7868,9 +7868,9 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="10" x="0.9956" y="0.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="11" x="0.9956" y="0.75" dx="0.738" dy="0.27" layer="1"/>
 <smd name="12" x="0.9956" y="1.25" dx="0.738" dy="0.27" layer="1"/>
-<smd name="13" x="0" y="0" dx="2" dy="0.9" layer="1" rot="R270" thermals="no"/>
 <text x="0" y="2.5076" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-2.1266" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<rectangle x1="-0.45" y1="-1" x2="0.45" y2="1" layer="29"/>
 </package>
 <package name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9123905/1">
 <description>&lt;b&gt;BM02B-SRSS-TB(&lt;/b&gt;&lt;br&gt;
@@ -10635,7 +10635,7 @@ Source: &lt;a href="http://www.ti.com/lit/gpn/drv8836"&gt; Datasheet &lt;/a&gt;<
 <connect gate="G$1" pin="BIN2_/_BENBL" pad="7"/>
 <connect gate="G$1" pin="BOUT1" pad="4"/>
 <connect gate="G$1" pin="BOUT2" pad="5"/>
-<connect gate="G$1" pin="EP" pad="13 14 15 16 17"/>
+<connect gate="G$1" pin="EP" pad="14 15 16 17"/>
 <connect gate="G$1" pin="GND" pad="6"/>
 <connect gate="G$1" pin="MODE" pad="11"/>
 <connect gate="G$1" pin="NSLEEP" pad="12"/>
