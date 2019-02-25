@@ -4628,7 +4628,7 @@ DIN A4, landscape with extra doc field</description>
 <description>Generated from &lt;b&gt;micromouse2019.sch&lt;/b&gt;&lt;p&gt;
 by exp-lbrs-replace2.ulp</description>
 <packages>
-<package name="R0402" urn="urn:adsk.eagle:footprint:23043/3">
+<package name="R0402" urn="urn:adsk.eagle:footprint:23043/3" locally_modified="yes">
 <description>&lt;b&gt;Chip RESISTOR 0402 EIA (1005 Metric)&lt;/b&gt;</description>
 <wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
 <wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
@@ -4643,6 +4643,7 @@ by exp-lbrs-replace2.ulp</description>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.35" x2="0.1999" y2="0.35" layer="35"/>
+<wire x1="0" y1="0.254" x2="0" y2="-0.254" width="0.127" layer="21"/>
 </package>
 <package name="0204V">
 <description>&lt;b&gt;RESISTOR&lt;/b&gt;&lt;p&gt;
@@ -6175,7 +6176,7 @@ Source: VISHAY wscwsn.pdf</description>
 <text x="-8.75" y="3.9" size="1.27" layer="25">&gt;NAME</text>
 <text x="-8.75" y="-5.15" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="C0402" urn="urn:adsk.eagle:footprint:23121/1">
+<package name="C0402" urn="urn:adsk.eagle:footprint:23121/1" locally_modified="yes">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;</description>
 <wire x1="-0.245" y1="0.224" x2="0.245" y2="0.224" width="0.1524" layer="51"/>
 <wire x1="0.245" y1="-0.224" x2="-0.245" y2="-0.224" width="0.1524" layer="51"/>
@@ -6190,6 +6191,7 @@ Source: VISHAY wscwsn.pdf</description>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
+<wire x1="0" y1="0.381" x2="0" y2="-0.381" width="0.127" layer="21"/>
 </package>
 <package name="C025-024X044">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;&lt;p&gt;
@@ -8121,7 +8123,7 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="P15" x="5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <text x="-5.75" y="-1.531665625" size="0.7" layer="27">&gt;VALUE</text>
 </package>
-<package name="D_RGB_0603" urn="urn:adsk.eagle:footprint:9166170/1">
+<package name="D_RGB_0603" urn="urn:adsk.eagle:footprint:9166170/1" locally_modified="yes">
 <smd name="P$1" x="0" y="0" dx="0.8" dy="0.65" layer="1"/>
 <smd name="P$2" x="1.5" y="0" dx="0.8" dy="0.65" layer="1"/>
 <smd name="P$3" x="0" y="-0.85" dx="0.8" dy="0.65" layer="1"/>
@@ -8150,12 +8152,14 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="0.4" y1="0.45" x2="0.4" y2="-0.45" width="0.1016" layer="51"/>
 <smd name="C" x="0" y="0.75" dx="0.8" dy="0.8" layer="1"/>
 <smd name="A" x="0" y="-0.75" dx="0.8" dy="0.8" layer="1"/>
-<text x="1.27" y="-1.905" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+<text x="1.27" y="-1.905" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 <rectangle x1="-0.45" y1="0.45" x2="0.45" y2="0.85" layer="51"/>
 <rectangle x1="-0.45" y1="-0.85" x2="0.45" y2="-0.45" layer="51"/>
-<rectangle x1="-0.45" y1="0" x2="-0.3" y2="0.3" layer="21"/>
-<rectangle x1="0.3" y1="0" x2="0.45" y2="0.3" layer="21"/>
-<rectangle x1="-0.15" y1="0" x2="0.15" y2="0.3" layer="21"/>
+<polygon width="0.127" layer="21">
+<vertex x="0" y="0.254"/>
+<vertex x="-0.254" y="-0.254"/>
+<vertex x="0.254" y="-0.254"/>
+</polygon>
 </package>
 <package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1" locally_modified="yes">
 <wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
@@ -8185,14 +8189,14 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="DFN-6"/>
 </packageinstances>
 </package3d>
-<package3d name="CAPC1005X60" urn="urn:adsk.eagle:package:23626/2" type="model">
+<package3d name="CAPC1005X60" urn="urn:adsk.eagle:package:23626/2" locally_modified="yes" type="model">
 <description>Chip, 1.00 X 0.50 X 0.60 mm body
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.60 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="C0402"/>
 </packageinstances>
 </package3d>
-<package3d name="R0402" urn="urn:adsk.eagle:package:23547/3" type="model">
+<package3d name="R0402" urn="urn:adsk.eagle:package:23547/3" locally_modified="yes" type="model">
 <description>Chip RESISTOR 0402 EIA (1005 Metric)</description>
 <packageinstances>
 <packageinstance name="R0402"/>
@@ -8273,7 +8277,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="BT_PORT_MODULE"/>
 </packageinstances>
 </package3d>
-<package3d name="D_RGB_0603" urn="urn:adsk.eagle:package:9166171/2" type="model">
+<package3d name="D_RGB_0603" urn="urn:adsk.eagle:package:9166171/2" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="D_RGB_0603"/>
 </packageinstances>
