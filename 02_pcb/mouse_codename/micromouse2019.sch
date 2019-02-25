@@ -12089,10 +12089,6 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <segment>
 <pinref part="IC1" gate="G$1" pin="NSLEEP"/>
 <wire x1="106.68" y1="93.98" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="MODE"/>
-<wire x1="106.68" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="91.44" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
-<junction x="96.52" y="93.98"/>
 <pinref part="+3V1" gate="G$1" pin="+3V3"/>
 <wire x1="96.52" y1="93.98" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
 <label x="99.06" y="93.98" size="1.778" layer="95"/>
