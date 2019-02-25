@@ -12168,9 +12168,9 @@ to set it to “0”.</text>
 <attribute name="NAME" x="10.668" y="149.606" size="1.778" layer="95" rot="R90" align="center-left"/>
 <attribute name="VALUE" x="12.7" y="149.606" size="1.778" layer="96" rot="R90" align="center-left"/>
 </instance>
-<instance part="S2" gate="G$1" x="7.62" y="43.18" smashed="yes" rot="R90">
-<attribute name="NAME" x="2.54" y="44.45" size="1.778" layer="95" rot="R90" align="center-left"/>
-<attribute name="VALUE" x="4.826" y="44.45" size="1.778" layer="96" rot="R90" align="center-left"/>
+<instance part="S2" gate="G$1" x="7.62" y="55.88" smashed="yes" rot="R270">
+<attribute name="NAME" x="3.048" y="45.466" size="1.778" layer="95" rot="R90" align="center-left"/>
+<attribute name="VALUE" x="5.08" y="45.466" size="1.778" layer="96" rot="R90" align="center-left"/>
 </instance>
 <instance part="S3" gate="G$1" x="35.56" y="144.78" smashed="yes" rot="R90">
 <attribute name="NAME" x="33.02" y="146.05" size="1.778" layer="95" rot="R90" align="center-left"/>
@@ -12326,7 +12326,7 @@ to set it to “0”.</text>
 <label x="171.196" y="118.364" size="1.778" layer="95" rot="R270"/>
 </segment>
 </bus>
-<bus name="IRS_AND_PTS_LEFT:PTR1,PTR2">
+<bus name="IRS_AND_PTS_LEFT:IRD1,IRD2,PTR1,PTR2">
 <segment>
 <wire x1="223.52" y1="144.78" x2="223.52" y2="121.92" width="0.762" layer="92"/>
 <label x="226.06" y="121.92" size="1.778" layer="95" rot="R90"/>
@@ -12507,8 +12507,6 @@ to set it to “0”.</text>
 <pinref part="C12" gate="G$1" pin="2"/>
 <wire x1="12.7" y1="45.72" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="40.64" x2="7.62" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="S2" gate="G$1" pin="1"/>
-<wire x1="7.62" y1="40.64" x2="7.62" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="40.64" x2="20.32" y2="40.64" width="0.1524" layer="91"/>
 <junction x="27.94" y="40.64"/>
 <junction x="12.7" y="40.64"/>
@@ -12516,6 +12514,8 @@ to set it to “0”.</text>
 <wire x1="20.32" y1="40.64" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="40.64" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
 <junction x="20.32" y="40.64"/>
+<pinref part="S2" gate="G$1" pin="2"/>
+<wire x1="7.62" y1="40.64" x2="7.62" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="254" y1="162.56" x2="251.46" y2="165.1" width="0.1524" layer="91"/>
@@ -12688,14 +12688,14 @@ to set it to “0”.</text>
 </net>
 <net name="BTN1" class="0">
 <segment>
-<pinref part="S2" gate="G$1" pin="2"/>
-<wire x1="7.62" y1="55.88" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="58.42" x2="12.7" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="58.42" x2="12.7" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
 <junction x="12.7" y="58.42"/>
 <label x="15.24" y="58.42" size="1.778" layer="95"/>
+<pinref part="S2" gate="G$1" pin="1"/>
+<wire x1="7.62" y1="58.42" x2="7.62" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-12.7" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
@@ -13642,15 +13642,14 @@ to set it to “0”.</text>
 <approved hash="213,1,170.18,109.22,DRV_A_IN2,in,,,,"/>
 <approved hash="213,1,170.18,99.06,DRV_B_IN1,in,,,,"/>
 <approved hash="213,1,170.18,96.52,DRV_B_IN2,in,,,,"/>
-<approved hash="213,1,121.92,45.72,JDY-10_RX,in,,,,"/>
 <approved hash="213,1,96.52,106.68,ENC_LEFT_CHA,in,,,,"/>
 <approved hash="213,1,96.52,104.14,ENC_LEFT_CHB,in,,,,"/>
 <approved hash="213,1,96.52,91.44,ENC_RIGHT_CHA,in,,,,"/>
 <approved hash="213,1,96.52,88.9,ENC_RIGHT_CHB,in,,,,"/>
-<approved hash="213,1,162.56,73.66,PTR1,in,,,,"/>
-<approved hash="213,1,162.56,71.12,PTR2,in,,,,"/>
-<approved hash="213,1,162.56,68.58,PTR3,in,,,,"/>
-<approved hash="213,1,162.56,66.04,PTR4,in,,,,"/>
+<approved hash="213,1,162.56,81.28,PTR1,in,,,,"/>
+<approved hash="213,1,162.56,78.74,PTR2,in,,,,"/>
+<approved hash="213,1,162.56,63.5,PTR3,in,,,,"/>
+<approved hash="213,1,162.56,60.96,PTR4,in,,,,"/>
 <approved hash="213,1,124.46,50.8,UART3_RX,in,,,,"/>
 </errors>
 </schematic>
