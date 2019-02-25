@@ -8144,22 +8144,15 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="2.05" y1="-1.3" x2="2.05" y2="0.45" width="0.127" layer="21"/>
 <wire x1="2.05" y1="0.45" x2="-0.55" y2="0.45" width="0.127" layer="21"/>
 </package>
-<package name="CHIP-LED0603" urn="urn:adsk.eagle:footprint:15671/1" locally_modified="yes">
-<description>&lt;b&gt;Hyper CHIPLED Hyper-Bright LED&lt;/b&gt;&lt;p&gt;
-LB Q993&lt;br&gt;
-Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
-<wire x1="-0.4" y1="0.45" x2="-0.4" y2="-0.45" width="0.1016" layer="51"/>
-<wire x1="0.4" y1="0.45" x2="0.4" y2="-0.45" width="0.1016" layer="51"/>
-<smd name="C" x="0" y="0.75" dx="0.8" dy="0.8" layer="1"/>
-<smd name="A" x="0" y="-0.75" dx="0.8" dy="0.8" layer="1"/>
-<text x="1.27" y="-1.905" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-0.45" y1="0.45" x2="0.45" y2="0.85" layer="51"/>
-<rectangle x1="-0.45" y1="-0.85" x2="0.45" y2="-0.45" layer="51"/>
-<polygon width="0.127" layer="21">
-<vertex x="0" y="0.254"/>
-<vertex x="-0.254" y="-0.254"/>
-<vertex x="0.254" y="-0.254"/>
-</polygon>
+<package name="0603-GREEN" urn="urn:adsk.eagle:footprint:8075101/1">
+<wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
+<wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
+<smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 <package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1" locally_modified="yes">
 <wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
@@ -8180,6 +8173,63 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
 <pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
 <text x="-3.81" y="2.54" size="1.27" layer="21">&gt;NAME</text>
+</package>
+<package name="0603-PINK" urn="urn:adsk.eagle:footprint:9228416/1">
+<description>&lt;b&gt;Hyper CHIPLED Hyper-Bright LED&lt;/b&gt;&lt;p&gt;
+LB Q993&lt;br&gt;
+Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
+<wire x1="-0.4" y1="0.45" x2="-0.4" y2="-0.45" width="0.1016" layer="51"/>
+<wire x1="0.4" y1="0.45" x2="0.4" y2="-0.45" width="0.1016" layer="51"/>
+<smd name="C" x="0" y="0.75" dx="0.8" dy="0.8" layer="1"/>
+<smd name="A" x="0" y="-0.75" dx="0.8" dy="0.8" layer="1"/>
+<text x="1.27" y="-1.905" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-0.45" y1="0.45" x2="0.45" y2="0.85" layer="51"/>
+<rectangle x1="-0.45" y1="-0.85" x2="0.45" y2="-0.45" layer="51"/>
+<polygon width="0.127" layer="21">
+<vertex x="0" y="0.254"/>
+<vertex x="-0.254" y="-0.254"/>
+<vertex x="0.254" y="-0.254"/>
+</polygon>
+</package>
+<package name="0603-YELLOW" urn="urn:adsk.eagle:footprint:8075115/1">
+<wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
+<wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
+<smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+<package name="0603-BLUE" urn="urn:adsk.eagle:footprint:8075113/1">
+<wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
+<wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
+<smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+<package name="0603-ORANGE" urn="urn:adsk.eagle:footprint:8075111/1">
+<wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
+<wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
+<smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+<package name="0603-RED" urn="urn:adsk.eagle:footprint:8075103/1">
+<wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
+<wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
+<smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
@@ -8285,6 +8335,39 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <package3d name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:package:9120814/3" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
+</packageinstances>
+</package3d>
+<package3d name="0603-GREEN" urn="urn:adsk.eagle:package:5829989/8" type="model">
+<packageinstances>
+<packageinstance name="0603-GREEN"/>
+</packageinstances>
+</package3d>
+<package3d name="0603-PINK" urn="urn:adsk.eagle:package:9228417/2" type="model">
+<description>&lt;b&gt;Hyper CHIPLED Hyper-Bright LED&lt;/b&gt;&lt;p&gt;
+LB Q993&lt;br&gt;
+Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
+<packageinstances>
+<packageinstance name="0603-PINK"/>
+</packageinstances>
+</package3d>
+<package3d name="0603-YELLOW" urn="urn:adsk.eagle:package:5829995/9" type="model">
+<packageinstances>
+<packageinstance name="0603-YELLOW"/>
+</packageinstances>
+</package3d>
+<package3d name="0603-BLUE" urn="urn:adsk.eagle:package:5829986/9" type="model">
+<packageinstances>
+<packageinstance name="0603-BLUE"/>
+</packageinstances>
+</package3d>
+<package3d name="0603-ORANGE" urn="urn:adsk.eagle:package:5829998/10" type="model">
+<packageinstances>
+<packageinstance name="0603-ORANGE"/>
+</packageinstances>
+</package3d>
+<package3d name="0603-RED" urn="urn:adsk.eagle:package:5829992/9" type="model">
+<packageinstances>
+<packageinstance name="0603-RED"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -8622,7 +8705,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="1.524" y1="3.556" x2="1.016" y2="3.048" width="0.254" layer="94"/>
 <text x="-10.16" y="5.08" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
-<symbol name="LED">
+<symbol name="LED-1">
 <wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
@@ -11012,41 +11095,89 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <deviceset name="LED" prefix="LED">
 <description>Indicator LEDs</description>
 <gates>
-<gate name="G$1" symbol="LED" x="0" y="2.54"/>
+<gate name="G$1" symbol="LED-1" x="0" y="2.54"/>
 </gates>
 <devices>
-<device name="" package="CHIP-LED0603">
+<device name="_P" package="0603-PINK">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
 </connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9228417/2"/>
+</package3dinstances>
 <technologies>
-<technology name="_BLUE">
-<attribute name="DEPLOYMENT_PLACE" value="BT_STATUS" constant="no"/>
+<technology name="">
 <attribute name="SERIES_RESISTOR" value="100R" constant="no"/>
 </technology>
-<technology name="_GREEN">
-<attribute name="DEPLOYMENT_PLACE" value="MCU_HEARTBEAT" constant="no"/>
-<attribute name="SERIES_RESISTOR" value="100R" constant="no"/>
-</technology>
-<technology name="_ORANGE">
-<attribute name="DEPLOYMENT_PLACE" value="TPS735_Vout" constant="no"/>
+</technologies>
+</device>
+<device name="_Y" package="0603-YELLOW">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5829995/9"/>
+</package3dinstances>
+<technologies>
+<technology name="">
 <attribute name="SERIES_RESISTOR" value="270R" constant="no"/>
 </technology>
-<technology name="_PINK">
-<attribute name="DEPLOYMENT_PLACE" value="GPIO" constant="no"/>
+</technologies>
+</device>
+<device name="_B" package="0603-BLUE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5829986/9"/>
+</package3dinstances>
+<technologies>
+<technology name="">
 <attribute name="SERIES_RESISTOR" value="100R" constant="no"/>
 </technology>
-<technology name="_RED">
-<attribute name="DEPLOYMENT_PLACE" value="LDL112_Vout" constant="no"/>
+</technologies>
+</device>
+<device name="_G" package="0603-GREEN">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5829989/8"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="SERIES_RESISTOR" value="100R" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_O" package="0603-ORANGE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5829998/10"/>
+</package3dinstances>
+<technologies>
+<technology name="">
 <attribute name="SERIES_RESISTOR" value="270R" constant="no"/>
 </technology>
-<technology name="_WHITE">
-<attribute name="DEPLOYMENT_PLACE" value="NOT_USED" constant="no"/>
-<attribute name="SERIES_RESISTOR" value="100R" constant="no"/>
-</technology>
-<technology name="_YELLOW">
-<attribute name="DEPLOYMENT_PLACE" value="GPIO" constant="no"/>
+</technologies>
+</device>
+<device name="_R" package="0603-RED">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5829992/9"/>
+</package3dinstances>
+<technologies>
+<technology name="">
 <attribute name="SERIES_RESISTOR" value="270R" constant="no"/>
 </technology>
 </technologies>
@@ -11123,8 +11254,8 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k"/>
 <part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k"/>
 <part name="GND9" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="LED1" library="0-micromouse2019" deviceset="LED" device="" technology="_ORANGE"/>
-<part name="LED2" library="0-micromouse2019" deviceset="LED" device="" technology="_RED"/>
+<part name="LED1" library="0-micromouse2019" deviceset="LED" device="_O" package3d_urn="urn:adsk.eagle:package:5829998/10" value="LED_O"/>
+<part name="LED2" library="0-micromouse2019" deviceset="LED" device="_R" package3d_urn="urn:adsk.eagle:package:5829992/9" value="LED_R"/>
 <part name="R3" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
 <part name="R4" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
 <part name="GND10" library="0-micromouse2019" deviceset="GND" device=""/>
@@ -11927,7 +12058,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="+3V1" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="PORT1" library="0-micromouse2019" deviceset="PORT_BT" device="_BASE" package3d_urn="urn:adsk.eagle:package:9190657/2"/>
-<part name="LED3" library="0-micromouse2019" deviceset="LED" device="" technology="_BLUE"/>
+<part name="LED3" library="0-micromouse2019" deviceset="LED" device="_B" package3d_urn="urn:adsk.eagle:package:5829986/9" value="LED_B"/>
 <part name="GND2" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="R3" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 </parts>
@@ -12088,13 +12219,13 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="R5" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 <part name="R6" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 <part name="+3V5" library="0-micromouse2019" deviceset="+3V3" device=""/>
-<part name="LED1" library="0-micromouse2019" deviceset="LED" device="" technology="_PINK" value="LED_PINK"/>
+<part name="LED1" library="0-micromouse2019" deviceset="LED" device="_P" package3d_urn="urn:adsk.eagle:package:9228417/2" value="LED_P"/>
 <part name="R7" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 <part name="GND7" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="LED2" library="0-micromouse2019" deviceset="LED" device="" technology="_GREEN"/>
+<part name="LED2" library="0-micromouse2019" deviceset="LED" device="_G" package3d_urn="urn:adsk.eagle:package:5829989/8"/>
 <part name="R8" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100R"/>
 <part name="GND8" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="LED3" library="0-micromouse2019" deviceset="LED" device="" technology="_YELLOW" value="LED_YELLOW"/>
+<part name="LED3" library="0-micromouse2019" deviceset="LED" device="_Y" package3d_urn="urn:adsk.eagle:package:5829995/9" value="LED_Y"/>
 <part name="R9" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
 <part name="GND9" library="0-micromouse2019" deviceset="GND" device=""/>
 </parts>
@@ -12274,7 +12405,7 @@ to set it to “0”.</text>
 <attribute name="VALUE" x="187.96" y="106.68" size="1.778" layer="96"/>
 </instance>
 <instance part="LED3" gate="G$1" x="215.9" y="96.52" smashed="yes">
-<attribute name="VALUE" x="219.075" y="84.074" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="219.075" y="91.694" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R9" gate="G$1" x="215.9" y="81.28" smashed="yes" rot="R270">
 <attribute name="NAME" x="217.3986" y="82.55" size="1.778" layer="95" rot="R270"/>
