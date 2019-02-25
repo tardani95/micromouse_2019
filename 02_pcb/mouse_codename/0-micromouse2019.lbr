@@ -4317,7 +4317,7 @@ The author not responsible for any damages or errors!.&lt;p&gt;
 <packageinstance name="ESP8266-ESP12E"/>
 </packageinstances>
 </package3d>
-<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/5" type="model">
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/6" type="model">
 <description>Mouse side of the connection of mouse and encoder</description>
 <packageinstances>
 <packageinstance name="ENC_PORT_BASE"/>
@@ -5117,7 +5117,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151507P"&gt; Datashe
 <connect gate="G$1" pin="GND" pad="P4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/5"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/6"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>

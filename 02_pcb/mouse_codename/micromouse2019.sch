@@ -8338,7 +8338,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="BM02B-SRSS-TB(LFSN)"/>
 </packageinstances>
 </package3d>
-<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/5" type="model">
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/6" type="model">
 <description>Mouse side of the connection of mouse and encoder</description>
 <packageinstances>
 <packageinstance name="ENC_PORT_BASE"/>
@@ -10902,7 +10902,7 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datashe
 <connect gate="G$1" pin="GND" pad="P4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/5"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/6"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -12109,7 +12109,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="ENCODER_PORT"/>
-<part name="PORT1" library="0-micromouse2019" deviceset="PORT_ENC" device="_BASE" package3d_urn="urn:adsk.eagle:package:9139943/5"/>
+<part name="PORT1" library="0-micromouse2019" deviceset="PORT_ENC" device="_BASE" package3d_urn="urn:adsk.eagle:package:9139943/6"/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="+3V1" library="0-micromouse2019" deviceset="+3V3" device=""/>
 </parts>

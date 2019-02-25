@@ -155,7 +155,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-22T16:16:36Z" lastsyncedchangeguid="e5be579b-74f6-4b57-e2e6-6957f23fdd14"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-22T16:16:36Z" lastsyncedchangeguid="5ae7f4d2-216c-2fda-ff99-fe8407476332"/>
 <plain>
 <rectangle x1="6.858" y1="11.303" x2="13.589" y2="27.813" layer="39"/>
 <rectangle x1="6.858" y1="6.858" x2="13.589" y2="11.176" layer="35"/>
@@ -1857,7 +1857,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="BM02B-SRSS-TB(LFSN)"/>
 </packageinstances>
 </package3d>
-<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/5" type="model">
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/6" type="model">
 <description>Mouse side of the connection of mouse and encoder</description>
 <packageinstances>
 <packageinstance name="ENC_PORT_BASE"/>
@@ -2391,10 +2391,10 @@ design rules under a new name.</description>
 <attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/5151507P" x="39.751" y="33.274" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="39.751" y="33.274" size="1.27" layer="27" rot="R90" align="center"/>
 </element>
-<element name="EPR:PORT1" library="0-micromouse2019" package="ENC_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9139943/5" value="PORT_ENC_BASE" x="26.06" y="9.89" locked="yes" smashed="yes" rot="R180">
+<element name="EPR:PORT1" library="0-micromouse2019" package="ENC_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9139943/6" value="PORT_ENC_BASE" x="26.06" y="9.89" locked="yes" smashed="yes" rot="R180">
 <attribute name="VALUE" x="27.26" y="12.371665625" size="0.7" layer="27" rot="R270"/>
 </element>
-<element name="EPL:PORT1" library="0-micromouse2019" package="ENC_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9139943/5" value="PORT_ENC_BASE" x="18.94" y="9.89" locked="yes" smashed="yes">
+<element name="EPL:PORT1" library="0-micromouse2019" package="ENC_PORT_BASE" package3d_urn="urn:adsk.eagle:package:9139943/6" value="PORT_ENC_BASE" x="18.94" y="9.89" locked="yes" smashed="yes">
 <attribute name="VALUE" x="17.74" y="7.408334375" size="0.7" layer="27" rot="R90"/>
 </element>
 <element name="PWR:R1" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k" x="9.59" y="4.46" smashed="yes" rot="MR270">
