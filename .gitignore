@@ -46,3 +46,5 @@
 *.epf
 
 02_pcb/\.DS_Store
+
+02_pcb/mouse_codename/JDY-10_STANDING\.obj
