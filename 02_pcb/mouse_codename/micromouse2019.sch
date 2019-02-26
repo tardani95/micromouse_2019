@@ -7503,7 +7503,6 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="IC1" library="0-micromouse2019" deviceset="MOT_DRV8836" device="1" package3d_urn="urn:adsk.eagle:package:8872076/5"/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="P+1" library="0-micromouse2019" deviceset="VCC" device=""/>
-<part name="+3V1" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND2" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="C1" library="0-micromouse2019" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10u"/>
 </parts>
@@ -7535,11 +7534,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <instance part="GND1" gate="1" x="182.88" y="76.2" smashed="yes">
 <attribute name="VALUE" x="180.34" y="73.66" size="1.778" layer="96"/>
 </instance>
-<instance part="P+1" gate="VCC" x="182.88" y="101.6" smashed="yes">
-<attribute name="VALUE" x="180.34" y="99.06" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="+3V1" gate="G$1" x="96.52" y="104.14" smashed="yes">
-<attribute name="VALUE" x="93.98" y="99.06" size="1.778" layer="96" rot="R90"/>
+<instance part="P+1" gate="VCC" x="182.88" y="106.68" smashed="yes">
+<attribute name="VALUE" x="180.34" y="104.14" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND2" gate="1" x="127" y="60.96" smashed="yes">
 <attribute name="VALUE" x="124.46" y="58.42" size="1.778" layer="96"/>
@@ -7642,20 +7638,18 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VCC"/>
 <wire x1="147.32" y1="93.98" x2="182.88" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="93.98" x2="182.88" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="93.98" x2="182.88" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <junction x="182.88" y="93.98"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="93.98" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="+3V3" class="0">
-<segment>
 <pinref part="IC1" gate="G$1" pin="NSLEEP"/>
 <wire x1="106.68" y1="93.98" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
 <wire x1="96.52" y1="93.98" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
 <label x="99.06" y="93.98" size="1.778" layer="95"/>
+<wire x1="96.52" y1="101.6" x2="182.88" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="101.6" x2="182.88" y2="104.14" width="0.1524" layer="91"/>
+<junction x="182.88" y="104.14"/>
 </segment>
 </net>
 </nets>
