@@ -173,8 +173,8 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-7.4" y1="-6.05" x2="-7.4" y2="6.4" width="0.05" layer="39"/>
 <wire x1="6.75" y1="5.8" x2="5.25" y2="5.8" width="0.2" layer="21"/>
 <circle x="-7.9" y="4.5" radius="0.22360625" width="0" layer="21"/>
-<text x="-7.50185" y="-3.500859375" size="1.270309375" layer="25" rot="R90">&gt;NAME</text>
-<text x="8.8011" y="-3.300409375" size="1.270159375" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-7.50185" y="-3.500859375" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="8.8011" y="-3.300409375" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 <smd name="1" x="-6.37" y="4.5" dx="1.5" dy="1.2" layer="1"/>
 <smd name="2" x="-6.37" y="3" dx="1.5" dy="1.2" layer="1"/>
 <smd name="3" x="-6.37" y="1.5" dx="1.5" dy="1.2" layer="1"/>
@@ -198,6 +198,19 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="21" x="3.49" y="5.2" dx="1.2" dy="0.8" layer="1" rot="R270"/>
 <smd name="22" x="4.455" y="5.2" dx="1.2" dy="0.8" layer="1" rot="R270"/>
 </package>
+<package name="BT_PORT_MODULE" urn="urn:adsk.eagle:footprint:9190655/1" locally_modified="yes">
+<description>Module side of the BT_PORT</description>
+<smd name="P8" x="-5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P9" x="-3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P10" x="-2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P11" x="-0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P12" x="0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P13" x="2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P14" x="3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P15" x="5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<text x="-5.75" y="-1.531665625" size="0.8128" layer="27">&gt;VALUE</text>
+<text x="-4.445" y="-0.381" size="0.8128" layer="21" rot="MR0">TX</text>
+</package>
 <package name="BT_PORT_BASE" urn="urn:adsk.eagle:footprint:9190653/1" locally_modified="yes">
 <description>Mouse side of the bluetooth module port</description>
 <smd name="P$8" x="1.25" y="-0.5" dx="2.5" dy="1" layer="1" rot="R90"/>
@@ -212,33 +225,21 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="0" y1="-0.5" x2="13" y2="-0.5" width="0.127" layer="21"/>
 <wire x1="13" y1="-0.5" x2="13" y2="0.5" width="0.127" layer="21"/>
 <wire x1="13" y1="0.5" x2="0" y2="0.5" width="0.127" layer="21"/>
-<text x="0" y="-2.865" size="0.762" layer="21">&gt;VALUE</text>
-<text x="-0.889" y="-1.524" size="0.762" layer="21">TX</text>
-</package>
-<package name="BT_PORT_MODULE" urn="urn:adsk.eagle:footprint:9190655/1">
-<description>Module side of the BT_PORT</description>
-<smd name="P8" x="-5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P9" x="-3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P10" x="-2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P11" x="-0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P12" x="0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P13" x="2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P14" x="3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P15" x="5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<text x="-5.75" y="-1.531665625" size="0.7" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.865" size="0.8128" layer="21">&gt;VALUE</text>
+<text x="-0.889" y="-1.524" size="0.8128" layer="21">TX</text>
 </package>
 </packages>
 <packages3d>
+<package3d name="BT_PORT_MODULE" urn="urn:adsk.eagle:package:9190656/1" locally_modified="yes" type="box">
+<description>Module side of the BT_PORT</description>
+<packageinstances>
+<packageinstance name="BT_PORT_MODULE"/>
+</packageinstances>
+</package3d>
 <package3d name="BT_PORT_BASE" urn="urn:adsk.eagle:package:9190657/2" locally_modified="yes" type="model">
 <description>Mouse side of the bluetooth module port</description>
 <packageinstances>
 <packageinstance name="BT_PORT_BASE"/>
-</packageinstances>
-</package3d>
-<package3d name="BT_PORT_MODULE" urn="urn:adsk.eagle:package:9190656/1" type="box">
-<description>Module side of the BT_PORT</description>
-<packageinstances>
-<packageinstance name="BT_PORT_MODULE"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -250,15 +251,15 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-10.16" y1="-20.32" x2="-10.16" y2="17.78" width="0.254" layer="94"/>
 <text x="-10.177" y="18.573" size="1.27211875" layer="95">&gt;NAME</text>
 <text x="-10.1635" y="-22.3598" size="1.270440625" layer="96">&gt;VALUE</text>
-<pin name="TXD" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
-<pin name="RTS" x="15.24" y="0" length="middle" direction="out" rot="R180"/>
-<pin name="CTS" x="-15.24" y="5.08" length="middle" direction="in"/>
-<pin name="BOOT0" x="-15.24" y="10.16" length="middle" direction="in"/>
+<pin name="TXD" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="RTS" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="CTS" x="-15.24" y="5.08" length="middle"/>
+<pin name="BOOT0" x="-15.24" y="10.16" length="middle"/>
 <pin name="VIN" x="15.24" y="15.24" length="middle" direction="pwr" rot="R180"/>
 <pin name="GND" x="15.24" y="-17.78" length="middle" direction="pwr" rot="R180"/>
-<pin name="!RESET" x="-15.24" y="15.24" length="middle" direction="in"/>
-<pin name="RXD" x="-15.24" y="7.62" length="middle" direction="in"/>
-<pin name="LPO" x="-15.24" y="2.54" length="middle" direction="in"/>
+<pin name="!RESET" x="-15.24" y="15.24" length="middle"/>
+<pin name="RXD" x="-15.24" y="7.62" length="middle"/>
+<pin name="LPO" x="-15.24" y="2.54" length="middle"/>
 <pin name="GPIO1" x="-15.24" y="-2.54" length="middle"/>
 <pin name="GPIO2" x="-15.24" y="-5.08" length="middle"/>
 <pin name="GPIO3" x="-15.24" y="-7.62" length="middle"/>
