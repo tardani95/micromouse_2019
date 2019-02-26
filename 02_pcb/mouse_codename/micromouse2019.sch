@@ -3451,7 +3451,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-1.5" y1="-1.25" x2="-1.5" y2="1.25" width="0.2" layer="51"/>
 <wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.2" layer="21"/>
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
-<circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 </package>
 <package name="B3U-3000P" urn="urn:adsk.eagle:footprint:8879467/2" locally_modified="yes">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;
@@ -3466,7 +3465,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-1.5" y1="-1.25" x2="-1.5" y2="1.25" width="0.2" layer="51"/>
 <wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.2" layer="21"/>
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.2" layer="21"/>
-<circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 <hole x="0" y="0" drill="0.75"/>
 </package>
 <package name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9141310/1" locally_modified="yes">
@@ -6261,7 +6259,7 @@ with a typical dropout voltage of 300 mV.</description>
 <gate name="G$1" symbol="LDL112XXXXR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="PU" package="DFN-6">
+<device name="PU_OBSOLETE" package="DFN-6">
 <connects>
 <connect gate="G$1" pin="EN" pad="1"/>
 <connect gate="G$1" pin="GND" pad="2"/>
@@ -6276,7 +6274,7 @@ with a typical dropout voltage of 300 mV.</description>
 <technology name=""/>
 </technologies>
 </device>
-<device name="LDO_3D" package="SON50P200X200X80-7T92X145">
+<device name="PU" package="SON50P200X200X80-7T92X145">
 <connects>
 <connect gate="G$1" pin="EN" pad="1"/>
 <connect gate="G$1" pin="GND" pad="2"/>
@@ -6299,7 +6297,7 @@ with a typical dropout voltage of 300 mV.</description>
 <gate name="A" symbol="TPS735XXDRV" x="0" y="0"/>
 </gates>
 <devices>
-<device name="DRVT" package="SON65P210X210X80-7N">
+<device name="DRVT_OBSOLETE" package="SON65P210X210X80-7N">
 <connects>
 <connect gate="A" pin="EN" pad="4"/>
 <connect gate="A" pin="GND" pad="3"/>
@@ -6322,7 +6320,7 @@ with a typical dropout voltage of 300 mV.</description>
 </technology>
 </technologies>
 </device>
-<device name="3D" package="SON65P200X200X80-7T100X160">
+<device name="DRVT" package="SON65P200X200X80-7T100X160">
 <connects>
 <connect gate="A" pin="EN" pad="4"/>
 <connect gate="A" pin="GND" pad="3"/>
@@ -6662,7 +6660,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <gate name="G$1" symbol="DMN2990UDJ-7" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="DMN2990UDJ-7">
+<device name="OBSOLETE" package="DMN2990UDJ-7">
 <connects>
 <connect gate="G$1" pin="DRAIN_1" pad="P6"/>
 <connect gate="G$1" pin="DRAIN_2" pad="P3"/>
@@ -6675,7 +6673,7 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <technology name=""/>
 </technologies>
 </device>
-<device name="MOSFET_SOT964" package="SOTFL35P100X50-6">
+<device name="" package="SOTFL35P100X50-6">
 <connects>
 <connect gate="G$1" pin="DRAIN_1" pad="6"/>
 <connect gate="G$1" pin="DRAIN_2" pad="3"/>
@@ -6955,8 +6953,8 @@ Source: &lt;a href="http://www.mouser.com/datasheet/2/389/stm32f405rg-956214.pdf
 <part name="GND6" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND7" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="GND8" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="LDO2" library="0-micromouse2019" deviceset="PS_LDL112" device="LDO_3D" package3d_urn="urn:adsk.eagle:package:9227372/1" value="PS_LDL112LDO_3D"/>
-<part name="LDO1" library="0-micromouse2019" deviceset="PS_TPS735" device="3D" package3d_urn="urn:adsk.eagle:package:9228423/1" value="PS_TPS7353D"/>
+<part name="LDO2" library="0-micromouse2019" deviceset="PS_LDL112" device="PU" package3d_urn="urn:adsk.eagle:package:9227372/1" value="PS_LDL112PU"/>
+<part name="LDO1" library="0-micromouse2019" deviceset="PS_TPS735" device="DRVT" package3d_urn="urn:adsk.eagle:package:9228423/1" value="PS_TPS735DRVT"/>
 <part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k"/>
 <part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k"/>
 <part name="GND9" library="0-micromouse2019" deviceset="GND" device=""/>
@@ -8892,7 +8890,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="IR_LED_DRIVER_DUAL"/>
-<part name="FET1" library="0-micromouse2019" deviceset="FET_DMN2990UDJ-7" device="MOSFET_SOT964" package3d_urn="urn:adsk.eagle:package:9226354/1" value="FET_DMN2990UDJ-7MOSFET_SOT964"/>
+<part name="FET1" library="0-micromouse2019" deviceset="FET_DMN2990UDJ-7" device="" package3d_urn="urn:adsk.eagle:package:9226354/1" value="FET_DMN2990UDJ-7"/>
 <part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
