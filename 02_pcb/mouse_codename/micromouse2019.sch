@@ -12360,6 +12360,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="LED3" library="0-micromouse2019" deviceset="LED" device="_Y" package3d_urn="urn:adsk.eagle:package:5829995/9" value="LED_Y"/>
 <part name="R9" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R"/>
 <part name="GND9" library="0-micromouse2019" deviceset="GND" device=""/>
+<part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100k"/>
+<part name="+3V6" library="0-micromouse2019" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12372,6 +12374,8 @@ I/Os should be set to “0” or “1”(pull-up or pull-down to the unused I/O 
 features should be “frozen” or disabled.
 Note: To reduce leakage it is advisable to configure the I/O as an analog input or to push-pull and
 to set it to “0”.</text>
+<text x="2.54" y="27.94" size="1.778" layer="98">Note:
+For SWDIO bidirectional management, the line must be pulled-up on the board (100 KΩ recommended by Arm ® ).</text>
 </plain>
 <instances>
 <instance part="C1" gate="G$1" x="53.34" y="93.98" smashed="yes">
@@ -12491,12 +12495,12 @@ to set it to “0”.</text>
 <instance part="GND5" gate="1" x="223.52" y="157.48" smashed="yes">
 <attribute name="VALUE" x="220.98" y="154.94" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="G$1" x="81.28" y="167.64" smashed="yes">
-<attribute name="NAME" x="85.09" y="170.18" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="85.09" y="160.02" size="1.778" layer="96" align="center-left"/>
+<instance part="J1" gate="G$1" x="81.28" y="157.48" smashed="yes">
+<attribute name="NAME" x="85.09" y="160.02" size="1.778" layer="95" align="center-left"/>
+<attribute name="VALUE" x="85.09" y="149.86" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="GND6" gate="1" x="78.74" y="157.48" smashed="yes">
-<attribute name="VALUE" x="76.2" y="154.94" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="78.74" y="147.32" smashed="yes">
+<attribute name="VALUE" x="76.2" y="144.78" size="1.778" layer="96"/>
 </instance>
 <instance part="RGB1" gate="RGB$" x="127" y="165.1" smashed="yes">
 <attribute name="NAME" x="116.84" y="170.18" size="1.27" layer="95"/>
@@ -12545,6 +12549,13 @@ to set it to “0”.</text>
 </instance>
 <instance part="GND9" gate="1" x="215.9" y="71.12" smashed="yes">
 <attribute name="VALUE" x="213.36" y="68.58" size="1.778" layer="96"/>
+</instance>
+<instance part="R10" gate="G$1" x="78.74" y="167.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="77.2414" y="163.83" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="82.042" y="163.83" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="+3V6" gate="G$1" x="78.74" y="177.8" smashed="yes">
+<attribute name="VALUE" x="76.2" y="172.72" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -12695,6 +12706,11 @@ to set it to “0”.</text>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <wire x1="109.22" y1="165.1" x2="109.22" y2="172.72" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="78.74" y1="172.72" x2="78.74" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -12794,8 +12810,8 @@ to set it to “0”.</text>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="3"/>
-<wire x1="83.82" y1="162.56" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="162.56" x2="78.74" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="152.4" x2="78.74" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="152.4" x2="78.74" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -12944,10 +12960,6 @@ to set it to “0”.</text>
 <label x="35.56" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-12.7" y1="0" x2="2.54" y2="0" width="0.1524" layer="91"/>
-<label x="-10.16" y="0" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="142.24" y1="101.6" x2="157.48" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PB12"/>
 <label x="144.78" y="101.6" size="1.778" layer="95"/>
@@ -12963,10 +12975,6 @@ to set it to “0”.</text>
 <label x="15.24" y="58.42" size="1.778" layer="95"/>
 <pinref part="S2" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="58.42" x2="7.62" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="-12.7" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="91"/>
-<label x="-10.16" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="142.24" y1="99.06" x2="157.48" y2="99.06" width="0.1524" layer="91"/>
@@ -13144,9 +13152,13 @@ to set it to “0”.</text>
 <label x="73.66" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="68.58" y1="167.64" x2="83.82" y2="167.64" width="0.1524" layer="91"/>
-<label x="68.58" y="167.64" size="1.778" layer="95"/>
+<wire x1="68.58" y1="157.48" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
+<label x="68.58" y="157.48" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="157.48" x2="83.82" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="157.48" x2="78.74" y2="162.56" width="0.1524" layer="91"/>
+<junction x="78.74" y="157.48"/>
+<pinref part="R10" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SWCLK" class="0">
@@ -13156,8 +13168,8 @@ to set it to “0”.</text>
 <label x="73.66" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="68.58" y1="165.1" x2="83.82" y2="165.1" width="0.1524" layer="91"/>
-<label x="68.58" y="165.1" size="1.778" layer="95"/>
+<wire x1="68.58" y1="154.94" x2="83.82" y2="154.94" width="0.1524" layer="91"/>
+<label x="68.58" y="154.94" size="1.778" layer="95"/>
 <pinref part="J1" gate="G$1" pin="2"/>
 </segment>
 </net>
