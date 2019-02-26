@@ -155,7 +155,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-22T16:16:36Z" lastsyncedchangeguid="9baeba4e-d521-f71b-b12c-e54dc2902a2e"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-22T16:16:36Z" lastsyncedchangeguid="30431e2b-f896-7043-02af-8004d8a7d227"/>
 <plain>
 <rectangle x1="6.858" y1="11.303" x2="13.589" y2="27.813" layer="39"/>
 <rectangle x1="6.858" y1="6.858" x2="13.589" y2="11.176" layer="35"/>
@@ -298,7 +298,6 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="22" x="-0.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="23" x="-0.75" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="24" x="-1.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
-<smd name="25" x="0" y="0" dx="2.7" dy="2.6" layer="1"/>
 <text x="0" y="5.08" size="0.8128" layer="25" align="center">&gt;NAME</text>
 <text x="0" y="-5.08" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-2" y1="2" x2="2" y2="2" width="0.2" layer="51"/>
@@ -1160,10 +1159,10 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="SPICEPREFIX" value="R" x="44.61" y="-23.75" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="35.085" y="30.733" size="0.8128" layer="28" rot="MR0"/>
 </element>
-<element name="MCU:C11" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="15.382" y="47.153" smashed="yes" rot="MR0">
-<attribute name="NAME" x="13.731" y="46.899" size="0.8128" layer="26" rot="MR0"/>
-<attribute name="SPICEPREFIX" value="C" x="28.082" y="-34.127" size="1.778" layer="28" rot="MR0" display="off"/>
-<attribute name="VALUE" x="17.16" y="45.629" size="0.8128" layer="28" rot="MR0"/>
+<element name="MCU:C11" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="17.49" y="44.465" smashed="yes" rot="MR270">
+<attribute name="NAME" x="16.165" y="41.387" size="0.8128" layer="26" rot="MR90"/>
+<attribute name="SPICEPREFIX" value="C" x="98.77" y="57.165" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="VALUE" x="19.014" y="46.243" size="0.8128" layer="28" rot="MR270"/>
 </element>
 <element name="MCU:C12" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="9.6" y="1.87" smashed="yes" rot="MR270">
 <attribute name="NAME" x="8.779" y="0.403" size="0.8128" layer="26" rot="MR0"/>
@@ -1273,7 +1272,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="VALUE" x="22.9826" y="21.54" size="1.27" layer="27" rot="R90" align="top-center"/>
 </element>
 <element name="MOT:C1" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10u" x="17.973" y="20.84" smashed="yes" rot="R90">
-<attribute name="NAME" x="15.736" y="20.005" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="21.451" y="19.751" size="0.8128" layer="25" rot="R180"/>
 <attribute name="SPICEPREFIX" value="C" x="17.973" y="20.84" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="19.878" y="20.205" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1347,7 +1346,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="VALUE" x="24.795" y="23.485" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="PWR:R4" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R" x="16.5" y="22.85" smashed="yes" rot="R270">
-<attribute name="NAME" x="15.611" y="23.378" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="14.849" y="24.394" size="0.8128" layer="25" rot="R270"/>
 <attribute name="SPICEPREFIX" value="R" x="16.5" y="22.85" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="14.595" y="23.485" size="1.27" layer="27" rot="R270"/>
 </element>
@@ -1531,13 +1530,13 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="23.11" y1="42.69" x2="21.05" y2="44.75" width="0.1524" layer="1"/>
 <wire x1="21.05" y1="44.75" x2="19.8" y2="44.75" width="0.1524" layer="1"/>
 <wire x1="19.8" y1="44.75" x2="19.45" y2="44.75" width="0.1524" layer="1"/>
-<wire x1="16.985" y1="47.215" x2="17.4315" y2="46.7685" width="0.1524" layer="1"/>
-<wire x1="17.4315" y1="46.7685" x2="19.45" y2="44.75" width="0.1524" layer="1"/>
+<wire x1="16.985" y1="47.215" x2="17.9395" y2="46.2605" width="0.1524" layer="1"/>
+<wire x1="17.9395" y1="46.2605" x2="19.45" y2="44.75" width="0.1524" layer="1"/>
 <wire x1="16.985" y1="48.379" x2="16.985" y2="47.215" width="0.1524" layer="1"/>
 <wire x1="23.11" y1="41.3" x2="23.11" y2="39.81" width="0.1524" layer="1"/>
-<wire x1="16.032" y1="47.153" x2="16.4165" y2="46.7685" width="0.1524" layer="16"/>
-<wire x1="16.4165" y1="46.7685" x2="17.4315" y2="46.7685" width="0.1524" layer="16"/>
-<via x="17.4315" y="46.7685" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="17.49" y1="45.115" x2="17.49" y2="45.811" width="0.1524" layer="16"/>
+<wire x1="17.9395" y1="46.2605" x2="17.49" y2="45.811" width="0.1524" layer="16"/>
+<via x="17.9395" y="46.2605" extent="1-16" drill="0.3" diameter="0.6"/>
 </signal>
 <signal name="MCU:BOOT1">
 <contactref element="MCU:R2" pad="2"/>
@@ -1563,14 +1562,14 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="14.4532" y1="11.3032" x2="14.4532" y2="12.9888" width="0.1524" layer="1"/>
 <contactref element="MCU:IC1" pad="33"/>
 <via x="13.3" y="21.05" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="13.3" y1="21.05" x2="13.3" y2="22.377" width="0.1524" layer="16"/>
-<via x="16.723" y="25.8" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="16.723" y1="25.8" x2="17.7" y2="25.8" width="0.1524" layer="1"/>
-<wire x1="17.7" y1="25.8" x2="18.6" y2="26.7" width="0.1524" layer="1"/>
-<wire x1="18.6" y1="26.7" x2="18.6" y2="28.3" width="0.1524" layer="1"/>
+<wire x1="13.3" y1="21.05" x2="13.3" y2="21.615" width="0.1524" layer="16"/>
+<via x="17.866" y="26.181" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="18.6" y1="26.954" x2="17.866" y2="26.22" width="0.1524" layer="1"/>
+<wire x1="17.866" y1="26.181" x2="17.866" y2="26.22" width="0.1524" layer="1"/>
+<wire x1="18.6" y1="26.954" x2="18.6" y2="28.3" width="0.1524" layer="1"/>
 <wire x1="18.6" y1="28.3" x2="18.61" y2="28.31" width="0.1524" layer="1"/>
 <wire x1="13.3" y1="14.142" x2="13.3" y2="21.05" width="0.1524" layer="1"/>
-<wire x1="13.3" y1="22.377" x2="16.723" y2="25.8" width="0.1524" layer="16"/>
+<wire x1="13.3" y1="21.615" x2="17.866" y2="26.181" width="0.1524" layer="16"/>
 <wire x1="3.66" y1="6.27" x2="3.45" y2="6.06" width="0.1524" layer="16"/>
 <wire x1="3.45" y1="6.06" x2="2.51" y2="6.06" width="0.1524" layer="16"/>
 </signal>
@@ -1584,12 +1583,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="14.8" y1="13.45" x2="13.8167" y2="14.4333" width="0.1524" layer="1"/>
 <contactref element="MCU:IC1" pad="34"/>
 <via x="13.8167" y="20.35" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="13.8167" y1="20.35" x2="13.8167" y2="21.7667" width="0.1524" layer="16"/>
-<via x="16.95" y="24.9" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="19.11" y1="26.6148625" x2="17.3951375" y2="24.9" width="0.1524" layer="1"/>
-<wire x1="16.95" y1="24.9" x2="17.3951375" y2="24.9" width="0.1524" layer="1"/>
+<wire x1="13.8167" y1="20.35" x2="13.8167" y2="21.2587" width="0.1524" layer="16"/>
+<via x="18.728" y="26.17" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="19.11" y1="26.6148625" x2="18.728" y2="26.2328625" width="0.1524" layer="1"/>
+<wire x1="18.728" y1="26.17" x2="18.728" y2="26.2328625" width="0.1524" layer="1"/>
 <wire x1="19.11" y1="26.6148625" x2="19.11" y2="28.31" width="0.1524" layer="1"/>
-<wire x1="13.8167" y1="21.7667" x2="16.95" y2="24.9" width="0.1524" layer="16"/>
+<wire x1="13.8167" y1="21.2587" x2="18.728" y2="26.17" width="0.1524" layer="16"/>
 <wire x1="9.6" y1="2.52" x2="7.641" y2="2.52" width="0.1524" layer="16"/>
 <wire x1="7.641" y1="2.52" x2="7.6105" y2="2.4895" width="0.1524" layer="16"/>
 <via x="7.6105" y="2.4895" extent="1-16" drill="0.3" diameter="0.6"/>
@@ -1944,13 +1943,13 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <vertex x="27.05" y="29.35"/>
 <vertex x="27.05" y="38.75"/>
 </polygon>
-<via x="8.1" y="28.8" extent="1-16" drill="0.3" diameter="0.6"/>
-<via x="9" y="28.8" extent="1-16" drill="0.3" diameter="0.6"/>
-<via x="9.95" y="28.8" extent="1-16" drill="0.3" diameter="0.6"/>
-<via x="10.9" y="28.8" extent="1-16" drill="0.3" diameter="0.6"/>
-<via x="11.9" y="28.8" extent="1-16" drill="0.3" diameter="0.6"/>
-<via x="8.1" y="29.6" extent="1-16" drill="0.3" diameter="0.6"/>
-<via x="9.02" y="29.6" extent="1-16" drill="0.3" diameter="0.6"/>
+<via x="4.163" y="33.499" extent="1-16" drill="0.3" diameter="0.6"/>
+<via x="4.809" y="32.864" extent="1-16" drill="0.3" diameter="0.6"/>
+<via x="36.112" y="44.929" extent="1-16" drill="0.3" diameter="0.6"/>
+<via x="36.935" y="44.167" extent="1-16" drill="0.3" diameter="0.6"/>
+<via x="37.808" y="43.278" extent="1-16" drill="0.3" diameter="0.6"/>
+<via x="2.766" y="35.061" extent="1-16" drill="0.3" diameter="0.6"/>
+<via x="3.432" y="34.299" extent="1-16" drill="0.3" diameter="0.6"/>
 <polygon width="0.127" layer="1" spacing="2.54" pour="cutout">
 <vertex x="17.65" y="38.75"/>
 <vertex x="27.558" y="38.75"/>
@@ -2058,6 +2057,10 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <vertex x="45" y="50"/>
 <vertex x="0" y="50"/>
 </polygon>
+<wire x1="37.808" y1="43.278" x2="37.436" y2="43.278" width="0.1524" layer="1"/>
+<wire x1="37.436" y1="43.278" x2="37.211" y2="43.053" width="0.1524" layer="1"/>
+<wire x1="37.808" y1="43.278" x2="37.719" y2="43.189" width="0.1524" layer="1"/>
+<wire x1="37.719" y1="43.189" x2="37.719" y2="42.672" width="0.1524" layer="1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="MCU:C9" pad="1"/>
@@ -2354,25 +2357,19 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <via x="11" y="31.2" extent="1-16" drill="0.3" diameter="0.6"/>
 <via x="11.05" y="30.4" extent="1-16" drill="0.3" diameter="0.6"/>
 <via x="10.25" y="30.4" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="7.645" y1="34.25" x2="7.645" y2="32.027" width="1" layer="1"/>
 <wire x1="0.827" y1="37.67274375" x2="0.827" y2="34.65" width="0.7" layer="16"/>
 <wire x1="0.827" y1="34.65" x2="4.7" y2="30.777" width="0.7" layer="16"/>
 <wire x1="4.7" y1="30.777" x2="10.577" y2="30.777" width="0.7" layer="16"/>
-<wire x1="7.645" y1="32.027" x2="8.872" y2="30.8" width="1" layer="1"/>
-<wire x1="8.872" y1="30.8" x2="13.55" y2="30.8" width="1" layer="1"/>
-<wire x1="8.872" y1="30.8" x2="9.272" y2="30.4" width="0.1524" layer="1"/>
-<wire x1="9.272" y1="30.4" x2="10.25" y2="30.4" width="0.1524" layer="1"/>
+<wire x1="10.523" y1="30.8" x2="7.645" y2="33.678" width="1" layer="1"/>
+<wire x1="7.645" y1="34.25" x2="7.645" y2="33.678" width="1" layer="1"/>
+<wire x1="10.65" y1="30.8" x2="13.55" y2="30.8" width="1" layer="1"/>
 <wire x1="16.5" y1="19.423" x2="14.958" y2="19.423" width="0.1524" layer="1"/>
 <wire x1="14.958" y1="19.423" x2="14.95" y2="19.431" width="0.1524" layer="1"/>
 <contactref element="MOT:IC1" pad="12"/>
-<via x="16.256" y="26.924" extent="1-16" drill="0.3" diameter="0.6"/>
-<via x="19.558" y="24.003" extent="1-16" drill="0.3" diameter="0.6"/>
 <wire x1="19.606" y1="22.5356" x2="19.606" y2="23.955" width="0.1524" layer="1"/>
-<wire x1="19.606" y1="23.955" x2="19.558" y2="24.003" width="0.1524" layer="1"/>
-<wire x1="19.558" y1="24.003" x2="19.558" y2="25.273" width="0.1524" layer="16"/>
-<wire x1="19.558" y1="25.273" x2="17.907" y2="26.924" width="0.1524" layer="16"/>
-<wire x1="17.907" y1="26.924" x2="16.256" y2="26.924" width="0.1524" layer="16"/>
-<wire x1="16.256" y1="26.924" x2="15.6" y2="26.924" width="0.1524" layer="1"/>
+<wire x1="19.606" y1="23.955" x2="18.411" y2="25.15" width="0.1524" layer="1"/>
+<wire x1="18.411" y1="25.15" x2="15.6" y2="25.15" width="0.1524" layer="1"/>
+<wire x1="11.05" y1="30.4" x2="10.65" y2="30.8" width="0.1524" layer="1"/>
 </signal>
 <signal name="SCL">
 <wire x1="28.11" y1="36.31" x2="30.21" y2="36.31" width="0.1524" layer="1"/>
@@ -2485,15 +2482,16 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="13.55" y1="25.1" x2="13.55" y2="25.308" width="0.1524" layer="1"/>
 <wire x1="13.55" y1="25.308" x2="14.4032" y2="26.1612" width="0.1524" layer="1"/>
 <wire x1="14.4032" y1="26.1612" x2="14.4032" y2="27.3388" width="0.1524" layer="1"/>
-<wire x1="14.4032" y1="27.3388" x2="13.6" y2="28.142" width="0.1524" layer="1"/>
-<wire x1="13.6" y1="28.142" x2="13.6" y2="28.6" width="0.1524" layer="1"/>
-<via x="13.6" y="28.6" extent="1-16" drill="0.3" diameter="0.6"/>
-<via x="13.6" y="32.2" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="13.6" y1="28.6" x2="13.6" y2="32.2" width="0.1524" layer="16"/>
+<wire x1="14.4032" y1="27.3388" x2="13.142" y2="28.6" width="0.1524" layer="1"/>
+<wire x1="13.142" y1="28.6" x2="13.092" y2="28.6" width="0.1524" layer="1"/>
+<via x="13.092" y="28.6" extent="1-16" drill="0.3" diameter="0.6"/>
+<via x="12.457" y="31.819" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="12.457" y1="31.819" x2="12.457" y2="29.235" width="0.1524" layer="16"/>
+<wire x1="13.092" y1="28.6" x2="12.457" y2="29.235" width="0.1524" layer="16"/>
 <contactref element="MCU:IC1" pad="22"/>
 <wire x1="16.61" y1="35.31" x2="14.76" y2="35.31" width="0.1524" layer="1"/>
-<wire x1="14.76" y1="35.31" x2="13.6" y2="34.15" width="0.1524" layer="1"/>
-<wire x1="13.6" y1="34.15" x2="13.6" y2="32.2" width="0.1524" layer="1"/>
+<wire x1="14.76" y1="35.31" x2="12.457" y2="33.007" width="0.1524" layer="1"/>
+<wire x1="12.457" y1="33.007" x2="12.457" y2="31.819" width="0.1524" layer="1"/>
 </signal>
 <signal name="PWR:V_BAT_IN">
 <contactref element="PWR:LDO2" pad="1"/>
@@ -2605,14 +2603,16 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="14.4032" y1="26.1612" x2="14.4032" y2="27.3388" width="0.1524" layer="16"/>
 <wire x1="11.95" y1="23.708" x2="13.496" y2="25.254" width="0.1524" layer="16"/>
 <wire x1="13.496" y1="25.254" x2="14.4032" y2="26.1612" width="0.1524" layer="16"/>
-<wire x1="14.4032" y1="27.3388" x2="14.1032" y2="27.6388" width="0.1524" layer="16"/>
+<wire x1="14.4032" y1="27.3388" x2="13.5952" y2="28.1468" width="0.1524" layer="16"/>
 <wire x1="11.95" y1="15.3" x2="11.95" y2="23.708" width="0.1524" layer="16"/>
 <contactref element="MCU:IC1" pad="23"/>
 <wire x1="16.61" y1="34.81" x2="14.86" y2="34.81" width="0.1524" layer="1"/>
-<wire x1="14.1032" y1="34.0532" x2="14.1032" y2="32.95" width="0.1524" layer="1"/>
-<via x="14.1032" y="32.95" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="14.1032" y1="32.95" x2="14.1032" y2="27.6388" width="0.1524" layer="16"/>
-<wire x1="14.86" y1="34.81" x2="14.1032" y2="34.0532" width="0.1524" layer="1"/>
+<wire x1="12.9602" y1="32.9102" x2="12.9602" y2="32.442" width="0.1524" layer="1"/>
+<via x="12.9602" y="32.442" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="13.5952" y1="29.013" x2="12.9602" y2="29.648" width="0.1524" layer="16"/>
+<wire x1="12.9602" y1="32.442" x2="12.9602" y2="29.648" width="0.1524" layer="16"/>
+<wire x1="13.5952" y1="29.013" x2="13.5952" y2="28.1468" width="0.1524" layer="16"/>
+<wire x1="14.86" y1="34.81" x2="12.9602" y2="32.9102" width="0.1524" layer="1"/>
 </signal>
 <signal name="MCU:RGB_B">
 <contactref element="MCU:R6" pad="1"/>
@@ -2622,17 +2622,18 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="14.962" y1="11.429725" x2="14.962" y2="13.078275" width="0.1524" layer="16"/>
 <wire x1="14.962" y1="13.078275" x2="12.5088" y2="15.531475" width="0.1524" layer="16"/>
 <wire x1="12.5088" y1="23.476525" x2="14.962" y2="25.929725" width="0.1524" layer="16"/>
-<wire x1="14.962" y1="25.929725" x2="14.962" y2="27.570275" width="0.1524" layer="16"/>
 <wire x1="12.5088" y1="15.531475" x2="12.5088" y2="23.476525" width="0.1524" layer="16"/>
 <contactref element="MCU:IC1" pad="27"/>
 <wire x1="16.61" y1="32.81" x2="16.6" y2="32.8" width="0.1524" layer="1"/>
-<wire x1="16.6" y1="32.8" x2="15.3" y2="32.8" width="0.1524" layer="1"/>
-<wire x1="15.3" y1="32.8" x2="15.13" y2="32.63" width="0.1524" layer="1"/>
-<via x="15.13" y="31.53" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="15.13" y1="31.53" x2="15.13" y2="27.73" width="0.1524" layer="16"/>
-<wire x1="15.13" y1="27.73" x2="14.970275" y2="27.570275" width="0.1524" layer="16"/>
-<wire x1="14.962" y1="27.570275" x2="14.970275" y2="27.570275" width="0.1524" layer="16"/>
-<wire x1="15.13" y1="32.63" x2="15.13" y2="31.53" width="0.1524" layer="1"/>
+<wire x1="16.6" y1="32.8" x2="14.538" y2="32.8" width="0.1524" layer="1"/>
+<wire x1="14.538" y1="32.8" x2="14.114" y2="32.376" width="0.1524" layer="1"/>
+<wire x1="14.114" y1="32.165" x2="14.114" y2="32.376" width="0.1524" layer="1"/>
+<via x="14.114" y="32.165" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="14.962" y1="25.929725" x2="14.962" y2="27.964" width="0.1524" layer="16"/>
+<wire x1="14.962" y1="27.964" x2="14.478" y2="28.448" width="0.1524" layer="16"/>
+<wire x1="14.478" y1="28.448" x2="14.478" y2="29.642" width="0.1524" layer="16"/>
+<wire x1="14.478" y1="29.642" x2="14.114" y2="30.006" width="0.1524" layer="16"/>
+<wire x1="14.114" y1="30.006" x2="14.114" y2="32.165" width="0.1524" layer="16"/>
 </signal>
 <signal name="MCU:N$1">
 <contactref element="MCU:R4" pad="2"/>
@@ -2678,16 +2679,16 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="14.6826" y1="12.9625375" x2="12.2294" y2="15.4157375" width="0.1524" layer="16"/>
 <wire x1="12.2294" y1="23.5922625" x2="14.6826" y2="26.0454625" width="0.1524" layer="16"/>
 <wire x1="14.6826" y1="26.0454625" x2="14.6826" y2="27.5045375" width="0.1524" layer="16"/>
-<wire x1="14.59356875" y1="27.59356875" x2="14.6826" y2="27.5045375" width="0.1524" layer="16"/>
+<wire x1="14.08556875" y1="28.10156875" x2="14.6826" y2="27.5045375" width="0.1524" layer="16"/>
 <wire x1="12.2294" y1="15.4157375" x2="12.2294" y2="23.5922625" width="0.1524" layer="16"/>
 <contactref element="MCU:IC1" pad="26"/>
-<wire x1="16.61" y1="33.31" x2="15.11" y2="33.31" width="0.1524" layer="1"/>
-<wire x1="14.6064" y1="32.8064" x2="14.6064" y2="32.25" width="0.1524" layer="1"/>
-<via x="14.6064" y="32.25" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="14.6064" y1="32.25" x2="14.6064" y2="30.3064" width="0.1524" layer="16"/>
-<wire x1="14.59356875" y1="30.29356875" x2="14.59356875" y2="27.59356875" width="0.1524" layer="16"/>
-<wire x1="15.11" y1="33.31" x2="14.6064" y2="32.8064" width="0.1524" layer="1"/>
-<wire x1="14.6064" y1="30.3064" x2="14.59356875" y2="30.29356875" width="0.1524" layer="16"/>
+<wire x1="16.61" y1="33.31" x2="14.475" y2="33.31" width="0.1524" layer="1"/>
+<wire x1="13.4634" y1="32.2984" x2="13.4634" y2="31.742" width="0.1524" layer="1"/>
+<via x="13.4634" y="31.742" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="14.08556875" y1="29.34183125" x2="13.4634" y2="29.964" width="0.1524" layer="16"/>
+<wire x1="13.4634" y1="31.742" x2="13.4634" y2="29.964" width="0.1524" layer="16"/>
+<wire x1="14.08556875" y1="29.34183125" x2="14.08556875" y2="28.10156875" width="0.1524" layer="16"/>
+<wire x1="14.475" y1="33.31" x2="13.4634" y2="32.2984" width="0.1524" layer="1"/>
 </signal>
 <signal name="MCU:HEARTBEAT">
 <contactref element="MCU:IC1" pad="55"/>

@@ -3354,7 +3354,6 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="22" x="-0.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="23" x="-0.75" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="24" x="-1.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
-<smd name="25" x="0" y="0" dx="2.7" dy="2.6" layer="1"/>
 <text x="0" y="5.08" size="0.8128" layer="25" align="center">&gt;NAME</text>
 <text x="0" y="-5.08" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-2" y1="2" x2="2" y2="2" width="0.2" layer="51"/>
@@ -4110,7 +4109,6 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <pin name="AUX_DA" x="0" y="-12.7" length="middle"/>
 <pin name="CLKIN" x="0" y="0" length="middle"/>
 <pin name="CPOUT" x="33.02" y="-15.24" length="middle" rot="R180"/>
-<pin name="EP" x="33.02" y="-27.94" length="middle" rot="R180"/>
 <pin name="FSYNC" x="0" y="-25.4" length="middle"/>
 <pin name="GND" x="33.02" y="-10.16" length="middle" rot="R180"/>
 <pin name="INT" x="0" y="-27.94" length="middle"/>
@@ -6353,7 +6351,6 @@ Source: &lt;a href="https://www.mouser.mx/datasheet/2/400/MPU-6000-Datasheet1-11
 <connect gate="G$1" pin="AUX_DA" pad="6"/>
 <connect gate="G$1" pin="CLKIN" pad="1"/>
 <connect gate="G$1" pin="CPOUT" pad="20"/>
-<connect gate="G$1" pin="EP" pad="25"/>
 <connect gate="G$1" pin="FSYNC" pad="11"/>
 <connect gate="G$1" pin="GND" pad="18"/>
 <connect gate="G$1" pin="INT" pad="12"/>
@@ -7505,6 +7502,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="P+1" library="0-micromouse2019" deviceset="VCC" device=""/>
 <part name="GND2" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="C1" library="0-micromouse2019" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10u"/>
+<part name="P+2" library="0-micromouse2019" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7534,8 +7532,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <instance part="GND1" gate="1" x="182.88" y="76.2" smashed="yes">
 <attribute name="VALUE" x="180.34" y="73.66" size="1.778" layer="96"/>
 </instance>
-<instance part="P+1" gate="VCC" x="182.88" y="106.68" smashed="yes">
-<attribute name="VALUE" x="180.34" y="104.14" size="1.778" layer="96" rot="R90"/>
+<instance part="P+1" gate="VCC" x="182.88" y="109.22" smashed="yes">
+<attribute name="VALUE" x="180.34" y="106.68" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="GND2" gate="1" x="127" y="60.96" smashed="yes">
 <attribute name="VALUE" x="124.46" y="58.42" size="1.778" layer="96"/>
@@ -7543,6 +7541,9 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <instance part="C1" gate="G$1" x="182.88" y="88.9" smashed="yes">
 <attribute name="NAME" x="183.896" y="89.535" size="1.778" layer="95"/>
 <attribute name="VALUE" x="183.896" y="84.709" size="1.778" layer="96"/>
+</instance>
+<instance part="P+2" gate="VCC" x="96.52" y="109.22" smashed="yes">
+<attribute name="VALUE" x="93.98" y="106.68" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -7636,20 +7637,23 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 </net>
 <net name="VCC" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="VCC"/>
-<wire x1="147.32" y1="93.98" x2="182.88" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="93.98" x2="182.88" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<junction x="182.88" y="93.98"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="93.98" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="P+2" gate="VCC" pin="VCC"/>
+<wire x1="96.52" y1="101.6" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="NSLEEP"/>
 <wire x1="106.68" y1="93.98" x2="96.52" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="93.98" x2="96.52" y2="101.6" width="0.1524" layer="91"/>
 <label x="99.06" y="93.98" size="1.778" layer="95"/>
-<wire x1="96.52" y1="101.6" x2="182.88" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="101.6" x2="182.88" y2="104.14" width="0.1524" layer="91"/>
-<junction x="182.88" y="104.14"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VCC"/>
+<wire x1="147.32" y1="93.98" x2="182.88" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="93.98" x2="182.88" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<junction x="182.88" y="93.98"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="93.98" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="101.6" x2="182.88" y2="106.68" width="0.1524" layer="91"/>
+<junction x="182.88" y="106.68"/>
 </segment>
 </net>
 </nets>
