@@ -9114,6 +9114,10 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <part name="+3V5" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="CONN1" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 <part name="CONN2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+<part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="4k7"/>
+<part name="+3V6" library="0-micromouse2019" deviceset="+3V3" device=""/>
+<part name="+3V7" library="0-micromouse2019" deviceset="+3V3" device=""/>
+<part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="4k7"/>
 </parts>
 <sheets>
 <sheet>
@@ -9123,20 +9127,20 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <moduleinst name="PWR" module="POWER_REGULATOR" x="66.04" y="147.32">
 <attribute name="NAME" x="66.04" y="147.32" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="IMU" module="INERTIAL_MEASUREMENT_UNIT" x="66.04" y="71.12">
-<attribute name="NAME" x="66.04" y="71.12" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="IMU" module="INERTIAL_MEASUREMENT_UNIT" x="50.8" y="71.12">
+<attribute name="NAME" x="50.8" y="71.12" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="MOT" module="MOTOR_DRIVER" x="187.96" y="104.14">
 <attribute name="NAME" x="187.96" y="104.14" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="EPR" module="ENCODER_PORT" x="66.04" y="88.9">
-<attribute name="NAME" value="EPR" x="68.58" y="83.82" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="EPR" module="ENCODER_PORT" x="50.8" y="88.9">
+<attribute name="NAME" value="EPR" x="53.34" y="83.82" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="BTP" module="WIRELESS_MODUL_PORT" x="124.46" y="30.48">
 <attribute name="NAME" value="BTP" x="124.46" y="25.4" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
-<moduleinst name="EPL" module="ENCODER_PORT" x="66.04" y="104.14">
-<attribute name="NAME" value="EPL" x="68.58" y="99.06" size="2.032" layer="95" align="bottom-center"/>
+<moduleinst name="EPL" module="ENCODER_PORT" x="50.8" y="104.14">
+<attribute name="NAME" value="EPL" x="53.34" y="99.06" size="2.032" layer="95" align="bottom-center"/>
 </moduleinst>
 <moduleinst name="MCU" module="MICROCONTROLLER" x="129.54" y="86.36">
 <attribute name="NAME" x="129.54" y="86.36" size="2.032" layer="95" align="bottom-center"/>
@@ -9167,11 +9171,11 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <instance part="+3V2" gate="G$1" x="121.92" y="129.54" smashed="yes">
 <attribute name="VALUE" x="119.38" y="124.46" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="+3V3" gate="G$1" x="35.56" y="116.84" smashed="yes">
-<attribute name="VALUE" x="33.02" y="111.76" size="1.778" layer="96" rot="R90"/>
+<instance part="+3V3" gate="G$1" x="20.32" y="116.84" smashed="yes">
+<attribute name="VALUE" x="17.78" y="111.76" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND2" gate="1" x="40.64" y="55.88" smashed="yes">
-<attribute name="VALUE" x="38.1" y="53.34" size="1.778" layer="96"/>
+<instance part="GND2" gate="1" x="25.4" y="55.88" smashed="yes">
+<attribute name="VALUE" x="22.86" y="53.34" size="1.778" layer="96"/>
 </instance>
 <instance part="GND3" gate="1" x="142.24" y="45.72" smashed="yes">
 <attribute name="VALUE" x="139.7" y="43.18" size="1.778" layer="96"/>
@@ -9199,6 +9203,20 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <attribute name="NAME" x="99.06" y="127.254" size="1.27" layer="95"/>
 <attribute name="VALUE" x="99.06" y="125.222" size="1.27" layer="96"/>
 </instance>
+<instance part="R1" gate="G$1" x="80.264" y="78.74" smashed="yes" rot="R90">
+<attribute name="NAME" x="78.5114" y="75.946" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="83.566" y="74.93" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="+3V6" gate="G$1" x="91.44" y="86.36" smashed="yes">
+<attribute name="VALUE" x="89.662" y="81.534" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="+3V7" gate="G$1" x="80.264" y="86.36" smashed="yes">
+<attribute name="VALUE" x="78.74" y="81.534" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R2" gate="G$1" x="91.44" y="77.724" smashed="yes" rot="R90">
+<attribute name="NAME" x="89.6874" y="75.438" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="94.742" y="75.184" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9220,18 +9238,18 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="96.52" y1="129.54" x2="96.52" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="40.64" y1="99.06" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="99.06" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
 <portref moduleinst="IMU" port="GND"/>
-<wire x1="40.64" y1="83.82" x2="40.64" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="66.04" x2="43.18" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="66.04" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
-<junction x="40.64" y="66.04"/>
+<wire x1="25.4" y1="83.82" x2="25.4" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="66.04" x2="27.94" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="66.04" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
+<junction x="25.4" y="66.04"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <portref moduleinst="EPL" port="GND"/>
-<wire x1="43.18" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="99.06" x2="25.4" y2="99.06" width="0.1524" layer="91"/>
 <portref moduleinst="EPR" port="GND"/>
-<wire x1="43.18" y1="83.82" x2="40.64" y2="83.82" width="0.1524" layer="91"/>
-<junction x="40.64" y="83.82"/>
+<wire x1="27.94" y1="83.82" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
+<junction x="25.4" y="83.82"/>
 </segment>
 <segment>
 <portref moduleinst="MCU" port="GND"/>
@@ -9272,18 +9290,18 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<wire x1="35.56" y1="93.98" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="93.98" x2="20.32" y2="109.22" width="0.1524" layer="91"/>
 <portref moduleinst="IMU" port="+3V3"/>
-<wire x1="43.18" y1="76.2" x2="35.56" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="76.2" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="109.22" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="76.2" x2="20.32" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="76.2" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="109.22" x2="20.32" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <portref moduleinst="EPL" port="+3V3"/>
-<wire x1="43.18" y1="109.22" x2="35.56" y2="109.22" width="0.1524" layer="91"/>
-<junction x="35.56" y="109.22"/>
+<wire x1="27.94" y1="109.22" x2="20.32" y2="109.22" width="0.1524" layer="91"/>
+<junction x="20.32" y="109.22"/>
 <portref moduleinst="EPR" port="+3V3"/>
-<wire x1="43.18" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
-<junction x="35.56" y="93.98"/>
+<wire x1="27.94" y1="93.98" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
+<junction x="20.32" y="93.98"/>
 </segment>
 <segment>
 <portref moduleinst="BTP" port="+3V3"/>
@@ -9296,6 +9314,15 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="205.74" y1="106.68" x2="220.98" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="106.68" x2="220.98" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="+3V7" gate="G$1" pin="+3V3"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
+<wire x1="91.44" y1="82.804" x2="91.44" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -9323,14 +9350,21 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <segment>
 <portref moduleinst="IMU" port="SCL"/>
 <portref moduleinst="MCU" port="IMU1_SCL"/>
-<wire x1="88.9" y1="73.66" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="73.66" x2="80.264" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="80.264" y1="73.66" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
+<junction x="80.264" y="73.66"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
 <portref moduleinst="IMU" port="SDA"/>
 <portref moduleinst="MCU" port="IMU1_SDA"/>
-<wire x1="88.9" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="68.58" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="68.58" x2="96.52" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="72.644" x2="91.44" y2="68.58" width="0.1524" layer="91"/>
+<junction x="91.44" y="68.58"/>
 </segment>
 </net>
 <net name="DRV_A_IN1" class="0">
@@ -9444,28 +9478,28 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <segment>
 <portref moduleinst="EPL" port="ENC_CHA"/>
 <portref moduleinst="MCU" port="ENC_LEFT_CHA"/>
-<wire x1="88.9" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_LEFT_CHB" class="0">
 <segment>
 <portref moduleinst="EPL" port="ENC_CHB"/>
 <portref moduleinst="MCU" port="ENC_LEFT_CHB"/>
-<wire x1="88.9" y1="104.14" x2="96.52" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="104.14" x2="96.52" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_RIGHT_CHA" class="0">
 <segment>
 <portref moduleinst="EPR" port="ENC_CHA"/>
 <portref moduleinst="MCU" port="ENC_RIGHT_CHA"/>
-<wire x1="88.9" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_RIGHT_CHB" class="0">
 <segment>
 <portref moduleinst="EPR" port="ENC_CHB"/>
 <portref moduleinst="MCU" port="ENC_RIGHT_CHB"/>
-<wire x1="88.9" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
