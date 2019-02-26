@@ -2049,7 +2049,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="18.55" y1="3.85" x2="18.63" y2="3.93" width="0.5" layer="1"/>
 <wire x1="3.303" y1="1.624" x2="2.626" y2="1.624" width="0.1524" layer="1"/>
 <wire x1="2.626" y1="1.624" x2="2.35" y2="1.9" width="0.1524" layer="1"/>
-<polygon width="0.1524" layer="1" rank="2">
+<polygon width="0.1524" layer="1" isolate="0.254" rank="2">
 <vertex x="0" y="0"/>
 <vertex x="45" y="0"/>
 <vertex x="45" y="50"/>
@@ -2503,10 +2503,10 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <polygon width="0.1524" layer="1">
 <vertex x="14" y="2.05"/>
 <vertex x="15.95" y="2.05"/>
-<vertex x="15.95" y="1.4"/>
-<vertex x="17.4" y="1.4"/>
-<vertex x="17.95" y="1.95"/>
-<vertex x="17.95" y="5.3"/>
+<vertex x="15.95" y="1.527"/>
+<vertex x="17.4" y="1.527"/>
+<vertex x="17.823" y="1.95"/>
+<vertex x="17.823" y="5.3"/>
 <vertex x="14.75" y="5.3"/>
 <vertex x="14.7" y="5.35"/>
 <vertex x="14.7" y="6"/>
