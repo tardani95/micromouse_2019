@@ -1928,13 +1928,6 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="9.1549" y1="38.038" x2="8.4" y2="38.038" width="0.1778" layer="1"/>
 <wire x1="8.4" y1="38.038" x2="8.05" y2="38.388" width="0.1778" layer="1"/>
 <via x="8.05" y="38.388" extent="1-16" drill="0.3" diameter="0.6"/>
-<polygon width="0.1524" layer="1" spacing="2.54" isolate="0.254" rank="3">
-<vertex x="45" y="-0.05"/>
-<vertex x="45" y="44.15"/>
-<vertex x="45" y="50"/>
-<vertex x="4.9" y="50"/>
-<vertex x="0" y="50"/>
-</polygon>
 <polygon width="0.127" layer="1" spacing="2.54" pour="cutout">
 <vertex x="15.25" y="38.75"/>
 <vertex x="15.25" y="29.35"/>
