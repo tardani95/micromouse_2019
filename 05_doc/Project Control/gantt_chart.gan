@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Micromouse" company="" webLink="http://" view-date="2019-02-18" view-index="0" gantt-divider-location="612" resource-divider-location="300" version="2.8.9" locale="en_GB">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Name" width="344" order="0"/>
+        <field id="tpd4" name="Begin date" width="104" order="1"/>
+        <field id="tpd5" name="End date" width="145" order="2"/>
+        <option id="taskLabelUp" value=""/>
+        <option id="taskLabelDown" value=""/>
+        <option id="taskLabelLeft" value="name"/>
+        <option id="taskLabelRight" value="resources"/>
+        <option id="color.recent"><![CDATA[#ff3333 #66ff66 #e2e200 #999900 #00bcbc #006666 #000066 #003bb2 #00a9ff #006699]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="241" name="Ende Vorlesungszeit" color="#8cb6ce" meeting="true" start="2019-05-19" duration="0" complete="0" thirdDate="2019-02-25" thirdDate-constraint="0" expand="true"/>
+        <task id="0" name="Hardware" color="#999900" meeting="false" start="2019-02-11" duration="34" complete="30" thirdDate="2019-02-11" thirdDate-constraint="0" expand="true">
+            <task id="2" name="Bauteile Auswählen" color="#e2e200" meeting="false" start="2019-02-11" duration="8" complete="76" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <depend id="5" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="4" name="Schaltkreis planen" color="#999900" meeting="false" start="2019-02-19" duration="4" complete="37" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <depend id="7" type="2" difference="0" hardness="Strong"/>
+                <task id="5" name="Schaltplan" color="#e2e200" meeting="false" start="2019-02-19" duration="2" complete="75" thirdDate="2019-02-19" thirdDate-constraint="0" expand="true">
+                    <depend id="6" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="6" name="PCB" color="#e2e200" meeting="false" start="2019-02-21" duration="2" complete="0" thirdDate="2019-02-19" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="7" name="PCB-Layout Fertig" color="#999900" meeting="true" start="2019-02-23" duration="0" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <depend id="9" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="9" name="PCB und Bauteile beschaffen" color="#e2e200" meeting="false" start="2019-02-23" duration="17" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+                <depend id="214" type="3" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="10" name="Bauteile einlöten" color="#e2e200" meeting="false" start="2019-03-12" duration="4" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <depend id="79" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="79" name="Fahrzeug zusammenbauen" color="#e2e200" meeting="false" start="2019-03-16" duration="1" complete="0" thirdDate="2019-03-13" thirdDate-constraint="0" expand="true">
+                <depend id="40" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="40" name="Hardware fertig" color="#999900" meeting="true" start="2019-03-17" duration="0" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <depend id="217" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="14" name="Konstruktionen" color="#999900" meeting="false" start="2019-02-13" duration="13" complete="55" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <depend id="79" type="2" difference="0" hardness="Strong"/>
+                <task id="11" name="LED Halter planen" color="#e2e200" meeting="false" start="2019-02-13" duration="10" complete="100" thirdDate="2019-02-22" thirdDate-constraint="0" expand="true">
+                    <depend id="7" type="2" difference="0" hardness="Strong"/>
+                    <depend id="12" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="13" name="Akkuhalter planen" color="#e2e200" meeting="false" start="2019-02-18" duration="5" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                    <depend id="7" type="2" difference="0" hardness="Strong"/>
+                    <depend id="12" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="12" name="LED- und Akkuhalter anfertigen" color="#e2e200" meeting="false" start="2019-02-23" duration="3" complete="0" thirdDate="2019-02-23" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="1" name="Software" color="#660000" meeting="false" start="2019-02-23" duration="65" complete="0" thirdDate="2019-02-23" thirdDate-constraint="0" expand="true">
+            <task id="152" name="Program Backbone festlegen" color="#cc0000" meeting="false" start="2019-02-23" duration="8" complete="0" thirdDate="2019-02-23" thirdDate-constraint="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="15" name="Peripherien" color="#006600" meeting="false" start="2019-03-03" duration="25" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true">
+                <task id="214" name="Peripherien konfigurieren" color="#006600" meeting="false" start="2019-03-03" duration="9" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true">
+                    <task id="16" name="Motor Driver" color="#00cc00" meeting="false" start="2019-03-03" duration="9" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="17" name="IMU Einheit" color="#00cc00" meeting="false" start="2019-03-03" duration="9" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="18" name="IR LEDs und Transistors" color="#00cc00" meeting="false" start="2019-03-03" duration="9" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="19" name="Enkoders" color="#00cc00" meeting="false" start="2019-03-03" duration="9" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true"/>
+                    <task id="21" name="Bluetooth Modul" color="#00cc00" meeting="false" start="2019-03-03" duration="9" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="22" name="Akku Wache" color="#00cc00" meeting="false" start="2019-03-03" duration="9" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="23" name="General Purpose LEDs" color="#00cc00" meeting="false" start="2019-03-03" duration="9" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="217" name="Peripherien testen" color="#006600" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true">
+                    <depend id="48" type="2" difference="0" hardness="Strong"/>
+                    <depend id="251" type="2" difference="0" hardness="Strong"/>
+                    <task id="219" name="Motor Driver" color="#00cc00" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="221" name="IMU Einheit" color="#00cc00" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="223" name="IR LEDs und Transistors" color="#00cc00" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="225" name="Enkoders" color="#00cc00" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true"/>
+                    <task id="227" name="Bluetooth Modul" color="#00cc00" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="229" name="Akku Wache" color="#00cc00" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                    <task id="231" name="General Purpose LEDs" color="#00cc00" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-03-03" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="48" name="Peripherien fertig" color="#006600" meeting="true" start="2019-03-28" duration="0" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="25" name="Positionierung und Kartierung" color="#660066" meeting="false" start="2019-03-25" duration="7" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <task id="26" name="Labyrinth Modell entwerfen" color="#cc00cc" meeting="false" start="2019-03-25" duration="4" complete="0" thirdDate="2019-03-25" thirdDate-constraint="0" expand="true">
+                    <depend id="28" type="2" difference="0" hardness="Strong"/>
+                    <depend id="129" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="28" name="Labyrinth kartieren" color="#cc00cc" meeting="false" start="2019-03-29" duration="3" complete="0" thirdDate="2019-03-04" thirdDate-constraint="0" expand="true">
+                    <depend id="143" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="24" name="Navigation" color="#000066" meeting="false" start="2019-03-25" duration="35" complete="0" thirdDate="2019-03-25" thirdDate-constraint="0" expand="true">
+                <task id="29" name="Navigationsebene" color="#006699" meeting="false" start="2019-03-25" duration="23" complete="0" thirdDate="2019-03-25" thirdDate-constraint="0" expand="true">
+                    <task id="27" name="Fahrzeugzustand bestimmen" color="#006699" meeting="false" start="2019-03-25" duration="23" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                        <task id="250" name="Kalman Filter entfernen" color="#00a9ff" meeting="false" start="2019-03-25" duration="3" complete="0" thirdDate="2019-03-25" thirdDate-constraint="0" expand="true">
+                            <depend id="251" type="2" difference="0" hardness="Strong"/>
+                        </task>
+                        <task id="251" name="Kalman Filter testen" color="#00a9ff" meeting="false" start="2019-03-28" duration="4" complete="0" thirdDate="2019-03-28" thirdDate-constraint="0" expand="true">
+                            <depend id="149" type="2" difference="0" hardness="Strong"/>
+                            <depend id="266" type="2" difference="0" hardness="Rubber"/>
+                        </task>
+                        <task id="266" name="Verfälschte Sensordaten erkennen und korrigieren" color="#00a9ff" meeting="false" start="2019-04-12" duration="5" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" expand="true"/>
+                    </task>
+                    <task id="143" name="Entdeckungsalgorithm entwickeln" color="#00a9ff" meeting="false" start="2019-04-01" duration="3" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" expand="true">
+                        <depend id="144" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="144" name="Schnellste Route Algorithm entwickeln" color="#00a9ff" meeting="false" start="2019-04-04" duration="4" complete="0" thirdDate="2019-04-04" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="30" name="Führungsebene" color="#006666" meeting="false" start="2019-04-08" duration="21" complete="0" thirdDate="2019-04-02" thirdDate-constraint="0" expand="true">
+                    <task id="145" name="Einfaches Drehen Methode" color="#00bcbc" meeting="false" start="2019-04-08" duration="7" complete="0" thirdDate="2019-02-02" thirdDate-constraint="0" expand="true">
+                        <depend id="146" type="2" difference="0" hardness="Rubber"/>
+                    </task>
+                    <task id="146" name="Schnelles Abbiegen Methode" color="#00bcbc" meeting="false" start="2019-04-15" duration="7" complete="0" thirdDate="2019-04-07" thirdDate-constraint="0" expand="true">
+                        <depend id="148" type="2" difference="0" hardness="Rubber"/>
+                    </task>
+                    <task id="148" name="Querfahrt Methode" color="#00bcbc" meeting="false" start="2019-04-22" duration="7" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="31" name="Stabilisierungsebene" color="#003bb2" meeting="false" start="2019-04-01" duration="7" complete="0" thirdDate="2019-04-01" thirdDate-constraint="0" expand="true">
+                    <task id="149" name="PID" color="#0054ff" meeting="false" start="2019-04-01" duration="7" complete="0" thirdDate="2019-02-02" thirdDate-constraint="0" expand="true">
+                        <depend id="42" type="2" difference="0" hardness="Strong"/>
+                        <depend id="145" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                </task>
+            </task>
+        </task>
+        <task id="32" name="Messungen" meeting="false" start="2019-02-18" duration="53" complete="8" expand="true">
+            <task id="33" name="LED Karakteristiken" color="#006600" meeting="false" start="2019-02-23" duration="9" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <task id="39" name="Zeichnungen anfertigen" color="#00cc00" meeting="false" start="2019-02-23" duration="2" complete="0" thirdDate="2019-02-23" thirdDate-constraint="0" expand="true">
+                    <depend id="38" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="36" name="MATLAB Code" color="#00cc00" meeting="false" start="2019-02-23" duration="7" complete="0" thirdDate="2019-02-23" thirdDate-constraint="0" expand="true">
+                    <depend id="38" type="2" difference="0" hardness="Strong"/>
+                    <depend id="122" type="2" difference="0" hardness="Rubber"/>
+                </task>
+                <task id="37" name="Arduino Schaltung und Code" color="#00cc00" meeting="false" start="2019-02-23" duration="7" complete="0" thirdDate="2019-02-23" thirdDate-constraint="0" expand="true">
+                    <depend id="38" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="38" name="Messung durchführen" color="#00cc00" meeting="false" start="2019-03-02" duration="2" complete="0" thirdDate="2019-03-02" thirdDate-constraint="0" expand="true">
+                    <depend id="28" type="2" difference="0" hardness="Rubber"/>
+                </task>
+            </task>
+            <task id="265" name="IMU Karakteristiken" color="#00cc00" meeting="false" start="2019-03-18" duration="10" complete="0" thirdDate="2019-03-18" thirdDate-constraint="0" expand="true">
+                <depend id="221" type="3" difference="0" hardness="Strong"/>
+            </task>
+            <task id="34" name="Magnetfelde" color="#e2e200" meeting="false" start="2019-02-18" duration="3" complete="76" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true"/>
+            <task id="42" name="Fahrzeugkarakteristiken" color="#003bb2" meeting="false" start="2019-04-08" duration="4" complete="0" thirdDate="2019-02-18" thirdDate-constraint="0" expand="true">
+                <task id="43" name="Geradeaus fahren" color="#0054ff" meeting="false" start="2019-04-08" duration="4" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
+                <task id="44" name="In Stelle drehen" color="#0054ff" meeting="false" start="2019-04-08" duration="4" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
+            </task>
+        </task>
+        <task id="121" name="MATLAB Debug Interface" meeting="false" start="2019-03-06" duration="38" complete="0" expand="true">
+            <task id="122" name="Sensordaten" color="#006600" meeting="false" start="2019-03-06" duration="11" complete="0" thirdDate="2019-02-23" thirdDate-constraint="0" expand="true">
+                <depend id="217" type="2" difference="0" hardness="Strong"/>
+                <task id="123" name="IMU Einheit" color="#00cc00" meeting="false" start="2019-03-06" duration="11" complete="0" thirdDate="2019-03-06" thirdDate-constraint="0" expand="true"/>
+                <task id="124" name="Enkoders" color="#00cc00" meeting="false" start="2019-03-06" duration="11" complete="0" thirdDate="2019-02-09" thirdDate-constraint="0" expand="true"/>
+                <task id="126" name="IR LEDs" color="#00cc00" meeting="false" start="2019-03-06" duration="11" complete="0" thirdDate="2019-03-06" thirdDate-constraint="0" expand="true"/>
+                <task id="127" name="Akku Wache" color="#00cc00" meeting="false" start="2019-03-06" duration="11" complete="0" thirdDate="2019-03-06" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="128" name="Positionierung und Kartierung" color="#660066" meeting="false" start="2019-03-25" duration="7" complete="0" thirdDate="2019-03-25" thirdDate-constraint="0" expand="true">
+                <task id="129" name="Aktuelle Karte zeichnen" color="#cc00cc" meeting="false" start="2019-03-29" duration="3" complete="0" thirdDate="2019-02-02" thirdDate-constraint="0" expand="true"/>
+                <task id="130" name="Fahrzeugzustand zeichnen" color="#cc00cc" meeting="false" start="2019-03-25" duration="3" complete="0" thirdDate="2019-03-25" thirdDate-constraint="0" expand="true">
+                    <depend id="251" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="132" name="Navigation" color="#000066" meeting="false" start="2019-03-30" duration="14" complete="0" thirdDate="2019-03-30" thirdDate-constraint="0" expand="true">
+                <task id="136" name="Navigationsebene" color="#006699" meeting="false" start="2019-04-02" duration="6" complete="0" thirdDate="2019-04-02" thirdDate-constraint="0" expand="true">
+                    <task id="133" name="Route zeichnen" color="#00a9ff" meeting="false" start="2019-04-02" duration="6" complete="0" thirdDate="2019-02-02" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="137" name="Führungsebene" color="#006666" meeting="false" start="2019-04-08" duration="5" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true">
+                    <task id="135" name="Manöver zeichnen" color="#00bcbc" meeting="false" start="2019-04-08" duration="5" complete="0" thirdDate="2019-04-08" thirdDate-constraint="0" expand="true"/>
+                </task>
+                <task id="138" name="Stabilisierungsebene" color="#003bb2" meeting="false" start="2019-03-30" duration="2" complete="0" thirdDate="2019-03-30" thirdDate-constraint="0" expand="true">
+                    <task id="139" name="Soll-, Ist- und Regelgrößen plotten" color="#0054ff" meeting="false" start="2019-03-30" duration="2" complete="0" thirdDate="2019-02-02" thirdDate-constraint="0" expand="true">
+                        <depend id="149" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                </task>
+            </task>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous>
+        <previous-tasks name="Initial plan 14/02/2019">
+            <previous-task id="241" start="2019-05-19" duration="0" meeting="true" super="false"/>
+            <previous-task id="0" start="2019-02-11" duration="34" meeting="false" super="true"/>
+            <previous-task id="2" start="2019-02-11" duration="8" meeting="false" super="false"/>
+            <previous-task id="4" start="2019-02-19" duration="4" meeting="false" super="true"/>
+            <previous-task id="5" start="2019-02-19" duration="2" meeting="false" super="false"/>
+            <previous-task id="6" start="2019-02-21" duration="2" meeting="false" super="false"/>
+            <previous-task id="7" start="2019-02-23" duration="0" meeting="true" super="false"/>
+            <previous-task id="9" start="2019-02-23" duration="17" meeting="false" super="false"/>
+            <previous-task id="10" start="2019-03-12" duration="4" meeting="false" super="false"/>
+            <previous-task id="79" start="2019-03-16" duration="1" meeting="false" super="false"/>
+            <previous-task id="40" start="2019-03-17" duration="0" meeting="true" super="false"/>
+            <previous-task id="14" start="2019-02-13" duration="13" meeting="false" super="true"/>
+            <previous-task id="11" start="2019-02-13" duration="10" meeting="false" super="false"/>
+            <previous-task id="13" start="2019-02-18" duration="5" meeting="false" super="false"/>
+            <previous-task id="12" start="2019-02-23" duration="3" meeting="false" super="false"/>
+            <previous-task id="1" start="2019-02-23" duration="65" meeting="false" super="true"/>
+            <previous-task id="152" start="2019-02-23" duration="8" meeting="false" super="false"/>
+            <previous-task id="15" start="2019-03-03" duration="25" meeting="false" super="true"/>
+            <previous-task id="214" start="2019-03-03" duration="9" meeting="false" super="true"/>
+            <previous-task id="16" start="2019-03-03" duration="9" meeting="false" super="false"/>
+            <previous-task id="17" start="2019-03-03" duration="9" meeting="false" super="false"/>
+            <previous-task id="18" start="2019-03-03" duration="9" meeting="false" super="false"/>
+            <previous-task id="19" start="2019-03-03" duration="9" meeting="false" super="false"/>
+            <previous-task id="21" start="2019-03-03" duration="9" meeting="false" super="false"/>
+            <previous-task id="22" start="2019-03-03" duration="9" meeting="false" super="false"/>
+            <previous-task id="23" start="2019-03-03" duration="9" meeting="false" super="false"/>
+            <previous-task id="217" start="2019-03-18" duration="10" meeting="false" super="true"/>
+            <previous-task id="219" start="2019-03-18" duration="10" meeting="false" super="false"/>
+            <previous-task id="221" start="2019-03-18" duration="10" meeting="false" super="false"/>
+            <previous-task id="223" start="2019-03-18" duration="10" meeting="false" super="false"/>
+            <previous-task id="225" start="2019-03-18" duration="10" meeting="false" super="false"/>
+            <previous-task id="227" start="2019-03-18" duration="10" meeting="false" super="false"/>
+            <previous-task id="229" start="2019-03-18" duration="10" meeting="false" super="false"/>
+            <previous-task id="231" start="2019-03-18" duration="10" meeting="false" super="false"/>
+            <previous-task id="48" start="2019-03-28" duration="0" meeting="true" super="false"/>
+            <previous-task id="25" start="2019-03-25" duration="7" meeting="false" super="true"/>
+            <previous-task id="26" start="2019-03-25" duration="4" meeting="false" super="false"/>
+            <previous-task id="28" start="2019-03-29" duration="3" meeting="false" super="false"/>
+            <previous-task id="24" start="2019-03-25" duration="35" meeting="false" super="true"/>
+            <previous-task id="29" start="2019-03-25" duration="23" meeting="false" super="true"/>
+            <previous-task id="27" start="2019-03-25" duration="23" meeting="false" super="true"/>
+            <previous-task id="250" start="2019-03-25" duration="3" meeting="false" super="false"/>
+            <previous-task id="251" start="2019-03-28" duration="4" meeting="false" super="false"/>
+            <previous-task id="266" start="2019-04-12" duration="5" meeting="false" super="false"/>
+            <previous-task id="143" start="2019-04-01" duration="3" meeting="false" super="false"/>
+            <previous-task id="144" start="2019-04-04" duration="4" meeting="false" super="false"/>
+            <previous-task id="30" start="2019-04-08" duration="21" meeting="false" super="true"/>
+            <previous-task id="145" start="2019-04-08" duration="7" meeting="false" super="false"/>
+            <previous-task id="146" start="2019-04-15" duration="7" meeting="false" super="false"/>
+            <previous-task id="148" start="2019-04-22" duration="7" meeting="false" super="false"/>
+            <previous-task id="31" start="2019-04-01" duration="7" meeting="false" super="true"/>
+            <previous-task id="149" start="2019-04-01" duration="7" meeting="false" super="false"/>
+            <previous-task id="32" start="2019-02-18" duration="53" meeting="false" super="true"/>
+            <previous-task id="33" start="2019-02-23" duration="9" meeting="false" super="true"/>
+            <previous-task id="39" start="2019-02-23" duration="2" meeting="false" super="false"/>
+            <previous-task id="36" start="2019-02-23" duration="7" meeting="false" super="false"/>
+            <previous-task id="37" start="2019-02-23" duration="7" meeting="false" super="false"/>
+            <previous-task id="38" start="2019-03-02" duration="2" meeting="false" super="false"/>
+            <previous-task id="265" start="2019-03-18" duration="10" meeting="false" super="false"/>
+            <previous-task id="34" start="2019-02-18" duration="3" meeting="false" super="false"/>
+            <previous-task id="42" start="2019-04-08" duration="4" meeting="false" super="true"/>
+            <previous-task id="43" start="2019-04-08" duration="4" meeting="false" super="false"/>
+            <previous-task id="44" start="2019-04-08" duration="4" meeting="false" super="false"/>
+            <previous-task id="121" start="2019-03-06" duration="38" meeting="false" super="true"/>
+            <previous-task id="122" start="2019-03-06" duration="11" meeting="false" super="true"/>
+            <previous-task id="123" start="2019-03-06" duration="11" meeting="false" super="false"/>
+            <previous-task id="124" start="2019-03-06" duration="11" meeting="false" super="false"/>
+            <previous-task id="126" start="2019-03-06" duration="11" meeting="false" super="false"/>
+            <previous-task id="127" start="2019-03-06" duration="11" meeting="false" super="false"/>
+            <previous-task id="128" start="2019-03-25" duration="7" meeting="false" super="true"/>
+            <previous-task id="129" start="2019-03-29" duration="3" meeting="false" super="false"/>
+            <previous-task id="130" start="2019-03-25" duration="3" meeting="false" super="false"/>
+            <previous-task id="132" start="2019-03-30" duration="14" meeting="false" super="true"/>
+            <previous-task id="136" start="2019-04-02" duration="6" meeting="false" super="true"/>
+            <previous-task id="133" start="2019-04-02" duration="6" meeting="false" super="false"/>
+            <previous-task id="137" start="2019-04-08" duration="5" meeting="false" super="true"/>
+            <previous-task id="135" start="2019-04-08" duration="5" meeting="false" super="false"/>
+            <previous-task id="138" start="2019-03-30" duration="2" meeting="false" super="true"/>
+            <previous-task id="139" start="2019-03-30" duration="2" meeting="false" super="false"/>
+        </previous-tasks>
+    </previous>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
