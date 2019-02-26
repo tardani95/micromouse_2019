@@ -3336,18 +3336,18 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="4" x="-1.975" y="-0.25" dx="0.85" dy="0.35" layer="1"/>
 <smd name="5" x="-1.975" y="-0.75" dx="0.85" dy="0.35" layer="1"/>
 <smd name="6" x="-1.975" y="-1.25" dx="0.85" dy="0.35" layer="1"/>
-<smd name="7" x="1.975" y="-1.25" dx="0.85" dy="0.35" layer="1"/>
-<smd name="8" x="1.975" y="-0.75" dx="0.85" dy="0.35" layer="1"/>
-<smd name="9" x="1.975" y="-0.25" dx="0.85" dy="0.35" layer="1"/>
-<smd name="10" x="1.975" y="0.25" dx="0.85" dy="0.35" layer="1"/>
-<smd name="11" x="1.975" y="0.75" dx="0.85" dy="0.35" layer="1"/>
-<smd name="12" x="1.975" y="1.25" dx="0.85" dy="0.35" layer="1"/>
-<smd name="13" x="-0.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
-<smd name="14" x="-0.75" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
-<smd name="15" x="-1.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
-<smd name="16" x="0.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
-<smd name="17" x="0.75" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
-<smd name="18" x="1.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="13" x="1.975" y="-1.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="14" x="1.975" y="-0.75" dx="0.85" dy="0.35" layer="1"/>
+<smd name="15" x="1.975" y="-0.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="16" x="1.975" y="0.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="17" x="1.975" y="0.75" dx="0.85" dy="0.35" layer="1"/>
+<smd name="18" x="1.975" y="1.25" dx="0.85" dy="0.35" layer="1"/>
+<smd name="9" x="-0.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="8" x="-0.75" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="7" x="-1.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="10" x="0.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="11" x="0.75" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
+<smd name="12" x="1.25" y="-1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="19" x="1.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="20" x="0.75" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="21" x="0.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
