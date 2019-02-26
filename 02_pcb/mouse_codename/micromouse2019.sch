@@ -7100,9 +7100,9 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <instance part="GND11" gate="1" x="139.7" y="119.38" smashed="yes">
 <attribute name="VALUE" x="137.16" y="116.84" size="1.778" layer="96"/>
 </instance>
-<instance part="CONN1" gate="G$1" x="15.24" y="147.32" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.784359375" y="144.01233125" size="1.78105" layer="95" rot="R180"/>
-<attribute name="VALUE" x="17.784590625" y="154.953759375" size="1.781209375" layer="96" rot="R180"/>
+<instance part="CONN1" gate="G$1" x="20.32" y="149.86" smashed="yes" rot="MR0">
+<attribute name="NAME" x="22.864359375" y="153.16766875" size="1.78105" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="22.864590625" y="142.226240625" size="1.781209375" layer="96" rot="MR0"/>
 </instance>
 </instances>
 <busses>
@@ -7185,10 +7185,10 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <wire x1="147.32" y1="81.28" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="20.32" y1="147.32" x2="30.48" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="147.32" x2="30.48" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<pinref part="CONN1" gate="G$1" pin="1"/>
+<pinref part="CONN1" gate="G$1" pin="2"/>
+<wire x1="30.48" y1="147.32" x2="25.4" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -7240,7 +7240,6 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <wire x1="96.52" y1="144.78" x2="96.52" y2="149.86" width="0.1524" layer="91"/>
 <junction x="96.52" y="149.86"/>
 <junction x="76.2" y="149.86"/>
-<wire x1="20.32" y1="149.86" x2="40.64" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="149.86" x2="66.04" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="149.86" x2="76.2" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="96.52" x2="66.04" y2="96.52" width="0.1524" layer="91"/>
@@ -7252,11 +7251,12 @@ Most ceramic capacitors are appropriate in this configuration</text>
 <pinref part="LDO1" gate="A" pin="EN"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="40.64" y1="147.32" x2="40.64" y2="149.86" width="0.1524" layer="91"/>
-<junction x="40.64" y="149.86"/>
 <wire x1="96.52" y1="93.98" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
 <junction x="96.52" y="96.52"/>
 <label x="48.26" y="149.86" size="1.778" layer="95"/>
-<pinref part="CONN1" gate="G$1" pin="2"/>
+<pinref part="CONN1" gate="G$1" pin="1"/>
+<wire x1="25.4" y1="149.86" x2="40.64" y2="149.86" width="0.1524" layer="91"/>
+<junction x="40.64" y="149.86"/>
 </segment>
 </net>
 <net name="N$2" class="0">
