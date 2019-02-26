@@ -4638,8 +4638,8 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-1" y1="-0.483" x2="-1" y2="0.483" width="0.0508" layer="39"/>
 <smd name="1" x="-0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
 <smd name="2" x="0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-0.635" y="0.635" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.397" size="0.8128" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.35" x2="0.1999" y2="0.35" layer="35"/>
@@ -6186,8 +6186,8 @@ Source: VISHAY wscwsn.pdf</description>
 <wire x1="-1.473" y1="-0.483" x2="-1.473" y2="0.483" width="0.0508" layer="39"/>
 <smd name="1" x="-0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
 <smd name="2" x="0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-1.651" y="0.762" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-1.778" y="-1.524" size="0.8128" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
@@ -7739,54 +7739,7 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-1.905" y="3.81" size="1.27" layer="25">&gt;NAME</text>
 <text x="-1.905" y="-5.08" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="DFN-6" urn="urn:adsk.eagle:footprint:9141307/1">
-<description>2x2 mm DFN-6 package footprint</description>
-<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.127" layer="21"/>
-<wire x1="0.8" y1="1" x2="0.8" y2="-1" width="0.127" layer="21"/>
-<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.127" layer="21"/>
-<wire x1="-0.8" y1="-1" x2="-0.8" y2="1" width="0.127" layer="21"/>
-<circle x="-1.1" y="-0.8" radius="0.1" width="0.127" layer="21"/>
-<rectangle x1="-0.55" y1="0.1" x2="-0.3" y2="0.35" layer="31"/>
-<rectangle x1="0.3" y1="0.1" x2="0.55" y2="0.35" layer="31" rot="R270"/>
-<rectangle x1="0.3" y1="-0.35" x2="0.55" y2="-0.1" layer="31" rot="R180"/>
-<rectangle x1="-0.55" y1="-0.35" x2="-0.3" y2="-0.1" layer="31" rot="R90"/>
-<rectangle x1="-0.15" y1="-0.35" x2="0.15" y2="-0.1" layer="31" rot="R180"/>
-<rectangle x1="-0.15" y1="0.1" x2="0.15" y2="0.35" layer="31"/>
-<smd name="1" x="-0.5" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="2" x="0" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="3" x="0.5" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="4" x="0.5" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="5" x="0" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="6" x="-0.5" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
-<smd name="7" x="0" y="0" dx="1.1" dy="0.7" layer="1" cream="no"/>
-<text x="-0.9525" y="-0.4445" size="0.254" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.143" y="-0.508" size="0.254" layer="25" rot="R90">&gt;VALUE</text>
-</package>
-<package name="SON65P210X210X80-7N">
-<description>SON-6 package from TI.</description>
-<circle x="-0.9906" y="1.27" radius="0.1016" width="0.127" layer="21"/>
-<wire x1="-1.0414" y1="-1.0414" x2="1.0414" y2="-1.0414" width="0" layer="51"/>
-<wire x1="1.0414" y1="-1.0414" x2="1.0414" y2="1.0414" width="0" layer="51"/>
-<wire x1="1.0414" y1="1.0414" x2="0.3048" y2="1.0414" width="0" layer="51"/>
-<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51"/>
-<wire x1="-0.3048" y1="1.0414" x2="-1.0414" y2="1.0414" width="0" layer="51"/>
-<wire x1="-1.0414" y1="1.0414" x2="-1.0414" y2="-1.0414" width="0" layer="51"/>
-<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51" curve="-180"/>
-<wire x1="-1.016" y1="1.016" x2="1.016" y2="1.016" width="0.127" layer="21"/>
-<wire x1="1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="1.016" y1="-1.016" x2="-1.016" y2="-1.016" width="0.127" layer="21"/>
-<wire x1="-1.016" y1="-1.016" x2="-1.016" y2="1.016" width="0.127" layer="21"/>
-<smd name="1" x="-1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="2" x="-1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="3" x="-1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="4" x="1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="5" x="1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="6" x="1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
-<smd name="7" x="0" y="0" dx="0.9906" dy="1.6002" layer="1"/>
-<text x="-0.73688125" y="1.143159375" size="0.254" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-1.171159375" y="-1.37465" size="0.254" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
-</package>
-<package name="MPU6050" urn="urn:adsk.eagle:footprint:9141315/1">
+<package name="MPU6050" urn="urn:adsk.eagle:footprint:9141315/1" locally_modified="yes">
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-1.975" y="1.25" dx="0.85" dy="0.35" layer="1"/>
@@ -7814,8 +7767,8 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="23" x="-0.75" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="24" x="-1.25" y="1.975" dx="0.85" dy="0.35" layer="1" rot="R90"/>
 <smd name="25" x="0" y="0" dx="2.7" dy="2.6" layer="1"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="0" y="5.08" size="0.8128" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="-5.08" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-2" y1="2" x2="2" y2="2" width="0.2" layer="51"/>
 <wire x1="2" y1="2" x2="2" y2="-2" width="0.2" layer="51"/>
 <wire x1="2" y1="-2" x2="-2" y2="-2" width="0.2" layer="51"/>
@@ -7827,7 +7780,6 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-2" y1="-1.6" x2="-2" y2="-1.975" width="0.1" layer="21"/>
 <wire x1="-2" y1="-1.975" x2="-1.6" y2="-1.975" width="0.1" layer="21"/>
 <wire x1="1.6" y1="-2" x2="1.975" y2="-2" width="0.1" layer="21"/>
-<wire x1="1.975" y1="-2" x2="1.975" y2="-2" width="0.1" layer="21"/>
 <wire x1="1.975" y1="-2" x2="2" y2="-1.975" width="0.1" layer="21"/>
 <wire x1="2" y1="-1.975" x2="2" y2="-1.6" width="0.1" layer="21"/>
 <wire x1="1.6" y1="2" x2="1.975" y2="2" width="0.1" layer="21"/>
@@ -7835,15 +7787,13 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="2" y1="2" x2="2" y2="1.6" width="0.1" layer="21"/>
 <wire x1="-1.6" y1="2" x2="-2" y2="2" width="0.1" layer="21"/>
 <wire x1="-2" y1="2" x2="-2" y2="1.6" width="0.1" layer="21"/>
-<wire x1="-2.8" y1="1.3" x2="-2.8" y2="1.3" width="0.1" layer="21"/>
-<wire x1="-2.8" y1="1.3" x2="-2.8" y2="1.2" width="0.1" layer="21" curve="180"/>
-<wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.2" width="0.1" layer="21"/>
-<wire x1="-2.8" y1="1.2" x2="-2.8" y2="1.3" width="0.1" layer="21" curve="180"/>
+<wire x1="-2.292" y1="2.443" x2="-2.292" y2="2.343" width="0.1" layer="21" curve="180"/>
+<wire x1="-2.292" y1="2.343" x2="-2.292" y2="2.443" width="0.1" layer="21" curve="180"/>
 </package>
 <package name="DRV8836" urn="urn:adsk.eagle:footprint:8872087/3" locally_modified="yes">
 <description>16-QFN, 0.50 mm pitch, 2.00 X 3.00 X 0.80 mm body, 0.70 X 1.60 mm thermal pad
 &lt;p&gt;16-pin QFN package with 0.50 mm pitch with body size 2.00 X 3.00 X 0.80 mm and thermal pad size 0.70 X 1.60 mm&lt;/p&gt;</description>
-<circle x="-1.524" y="1.927" radius="0.25" width="0" layer="21"/>
+<circle x="-1.397" y="1.927" radius="0.25" width="0" layer="21"/>
 <wire x1="1.05" y1="1.639" x2="0.639" y2="1.639" width="0.12" layer="21"/>
 <wire x1="1.05" y1="-1.639" x2="0.639" y2="-1.639" width="0.12" layer="21"/>
 <wire x1="-1.05" y1="-1.639" x2="-0.639" y2="-1.639" width="0.12" layer="21"/>
@@ -7868,19 +7818,19 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="10" x="0.9956" y="0.25" dx="0.738" dy="0.27" layer="1"/>
 <smd name="11" x="0.9956" y="0.75" dx="0.738" dy="0.27" layer="1"/>
 <smd name="12" x="0.9956" y="1.25" dx="0.738" dy="0.27" layer="1"/>
-<text x="0" y="2.5076" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-2.1266" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<text x="0" y="2.5076" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.1266" size="0.8128" layer="27" align="top-center">&gt;VALUE</text>
 <rectangle x1="-0.45" y1="-1" x2="0.45" y2="1" layer="29"/>
 </package>
-<package name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9123905/1">
+<package name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9123905/1" locally_modified="yes">
 <description>&lt;b&gt;BM02B-SRSS-TB(&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-0.5" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
 <smd name="2" x="0.5" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
 <smd name="3" x="-1.8" y="2.525" dx="1.8" dy="1.2" layer="1" rot="R90"/>
 <smd name="4" x="1.8" y="2.525" dx="1.8" dy="1.2" layer="1" rot="R90"/>
-<text x="-0.309" y="1.9" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="-0.309" y="1.9" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="-3.17" y="0.961" size="0.8128" layer="25" rot="R90" align="center">&gt;NAME</text>
+<text x="3.17" y="1.579" size="0.8128" layer="27" rot="R270" align="center">&gt;VALUE</text>
 <wire x1="-2" y1="3.3" x2="2" y2="3.3" width="0.2" layer="51"/>
 <wire x1="2" y1="3.3" x2="2" y2="0.4" width="0.2" layer="51"/>
 <wire x1="2" y1="0.4" x2="-2" y2="0.4" width="0.2" layer="51"/>
@@ -7891,30 +7841,22 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-2" y1="0.4" x2="-1.062" y2="0.4" width="0.2" layer="21"/>
 <wire x1="2" y1="0.4" x2="1.062" y2="0.4" width="0.2" layer="21"/>
 </package>
-<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/2">
+<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/2" locally_modified="yes">
 <description>Mouse side of the connection of mouse and encoder</description>
 <smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
 <smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
-<text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-1.2" y="-2.481665625" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 <wire x1="1.016" y1="-2.54" x2="1.016" y2="2.54" width="0.127" layer="51"/>
 </package>
-<package name="ENC_PORT_MODULE">
-<description>Encoder side of the connection of mouse and encoder</description>
-<smd name="P1" x="-1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
-</package>
-<package name="B3U-1000P" urn="urn:adsk.eagle:footprint:9141313/1">
+<package name="B3U-1000P" urn="urn:adsk.eagle:footprint:9141313/1" locally_modified="yes">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
 <smd name="2" x="-1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
-<text x="-0.461" y="-0.206" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="-0.461" y="-0.206" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="-0.715" y="2.207" size="0.8128" layer="25" align="center">&gt;NAME</text>
+<text x="-0.461" y="-2.238" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.2" layer="51"/>
 <wire x1="1.5" y1="1.25" x2="1.5" y2="-1.25" width="0.2" layer="51"/>
 <wire x1="1.5" y1="-1.25" x2="-1.5" y2="-1.25" width="0.2" layer="51"/>
@@ -7928,8 +7870,8 @@ Source: AVX .. aphvc.pdf</description>
 </description>
 <smd name="1" x="1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
 <smd name="2" x="-1.7" y="0" dx="1.7" dy="0.8" layer="1" rot="R90"/>
-<text x="-0.461" y="2.207" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="-0.588" y="-2.111" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="-0.461" y="2.207" size="0.8128" layer="25" align="center">&gt;NAME</text>
+<text x="-0.588" y="-2.111" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-1.5" y1="1.25" x2="1.5" y2="1.25" width="0.2" layer="51"/>
 <wire x1="1.5" y1="1.25" x2="1.5" y2="-1.25" width="0.2" layer="51"/>
 <wire x1="1.5" y1="-1.25" x2="-1.5" y2="-1.25" width="0.2" layer="51"/>
@@ -7939,7 +7881,7 @@ Source: AVX .. aphvc.pdf</description>
 <circle x="2.395" y="0.971" radius="0.1" width="0.2" layer="25"/>
 <hole x="0" y="0" drill="0.75"/>
 </package>
-<package name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9141310/1">
+<package name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:footprint:9141310/1" locally_modified="yes">
 <description>&lt;b&gt;SM03B-SRSS-TB-ren1&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-1" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
@@ -7947,8 +7889,8 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="3" x="1" y="0" dx="1.55" dy="0.6" layer="1" rot="R90"/>
 <smd name="4" x="-2.3" y="-3.875" dx="1.8" dy="1.2" layer="1" rot="R90"/>
 <smd name="5" x="2.3" y="-3.875" dx="1.8" dy="1.2" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="0" y="1.397" size="0.8128" layer="25" align="center">&gt;NAME</text>
+<text x="0.127" y="-5.588" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-2.5" y1="-0.325" x2="2.5" y2="-0.325" width="0.2" layer="51"/>
 <wire x1="2.5" y1="-0.325" x2="2.5" y2="-4.575" width="0.2" layer="51"/>
 <wire x1="2.5" y1="-4.575" x2="-2.5" y2="-4.575" width="0.2" layer="51"/>
@@ -7960,7 +7902,7 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-2.5" y1="-0.325" x2="-2.5" y2="-2.673" width="0.2" layer="21"/>
 <wire x1="-2.5" y1="-0.325" x2="-1.61566875" y2="-0.325" width="0.2" layer="21"/>
 </package>
-<package name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:footprint:9141306/1">
+<package name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:footprint:9141306/1" locally_modified="yes">
 <description>&lt;b&gt;LQFP64&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-5.75" y="3.75" dx="1.45" dy="0.3" layer="1"/>
@@ -8027,8 +7969,8 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="62" x="-2.75" y="5.75" dx="1.45" dy="0.3" layer="1" rot="R90"/>
 <smd name="63" x="-3.25" y="5.75" dx="1.45" dy="0.3" layer="1" rot="R90"/>
 <smd name="64" x="-3.75" y="5.75" dx="1.45" dy="0.3" layer="1" rot="R90"/>
-<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="0" y="3.81" size="0.8128" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="-3.81" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-6.725" y1="6.725" x2="6.725" y2="6.725" width="0.05" layer="51"/>
 <wire x1="6.725" y1="6.725" x2="6.725" y2="-6.725" width="0.05" layer="51"/>
 <wire x1="6.725" y1="-6.725" x2="-6.725" y2="-6.725" width="0.05" layer="51"/>
@@ -8042,56 +7984,29 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="4.675" y1="4.675" x2="4.675" y2="-4.675" width="0.2" layer="21"/>
 <wire x1="4.675" y1="-4.675" x2="-4.675" y2="-4.675" width="0.2" layer="21"/>
 <wire x1="-4.675" y1="-4.675" x2="-4.675" y2="4.675" width="0.2" layer="21"/>
-<circle x="-6.225" y="4.5" radius="0.125" width="0.25" layer="25"/>
-</package>
-<package name="DMN2990UDJ-7">
-<description>SOT-963</description>
-<wire x1="-0.65" y1="0.55" x2="0.65" y2="0.55" width="0.127" layer="21"/>
-<wire x1="0.65" y1="0.55" x2="0.65" y2="-0.55" width="0.127" layer="21"/>
-<wire x1="0.65" y1="-0.55" x2="-0.65" y2="-0.55" width="0.127" layer="21"/>
-<wire x1="-0.65" y1="-0.55" x2="-0.65" y2="0.55" width="0.127" layer="21"/>
-<smd name="P1" x="-0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P2" x="-0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P3" x="-0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P4" x="0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P5" x="0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<smd name="P6" x="0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
-<text x="-0.65" y="0.661665625" size="0.254" layer="25">&gt;NAME</text>
-<text x="-0.65" y="-0.881665625" size="0.254" layer="27">&gt;VALUE</text>
+<circle x="-6.225" y="5.77" radius="0.125" width="0.25" layer="25"/>
 </package>
 <package name="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B" urn="urn:adsk.eagle:footprint:9158261/2" locally_modified="yes">
 <description>Single-row, 4-pin Pin Header (Male) Straight, 1.27 mm (0.05 in) col pitch, 1.00 mm mating length, 5.00 X 2.00 X 6.00 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Straight package with 1.27 mm (0.05 in) col pitch, 0.25 mm lead width, 2.00 mm tail length and 1.00 mm mating length with overall size 5.00 X 2.00 X 6.00 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
-<circle x="0" y="1.504" radius="0.25" width="0" layer="21"/>
-<wire x1="4.6416" y1="-1" x2="-0.8316" y2="-1" width="0.12" layer="21"/>
 <wire x1="-0.8316" y1="-1" x2="-0.8316" y2="1" width="0.12" layer="21"/>
-<wire x1="-0.8316" y1="1" x2="4.6416" y2="1" width="0.12" layer="21"/>
-<wire x1="4.6416" y1="1" x2="4.6416" y2="-1" width="0.12" layer="21"/>
-<wire x1="4.405" y1="-1" x2="-0.595" y2="-1" width="0.12" layer="51"/>
 <wire x1="-0.595" y1="-1" x2="-0.595" y2="1" width="0.12" layer="51"/>
-<wire x1="-0.595" y1="1" x2="4.405" y2="1" width="0.12" layer="51"/>
-<wire x1="4.405" y1="1" x2="4.405" y2="-1" width="0.12" layer="51"/>
 <pad name="1" x="0" y="0" drill="0.5536" diameter="1.1"/>
 <pad name="2" x="1.27" y="0" drill="0.5536" diameter="1.1"/>
 <pad name="3" x="2.54" y="0" drill="0.5536" diameter="1.1"/>
 <pad name="4" x="3.81" y="0" drill="0.5536" diameter="1.1"/>
-<text x="0" y="2.389" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.635" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<text x="0" y="1.119" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.635" size="0.8128" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B" urn="urn:adsk.eagle:footprint:9165700/2">
+<package name="CONN_IRD_VCC_HDRV1W64P0_1X1_254X254X838B" urn="urn:adsk.eagle:footprint:9165700/2" locally_modified="yes">
 <description>Single-row, 1-pin Pin Header (Male) Straight, 5.84 mm mating length, 2.54 X 2.54 X 8.38 mm body
 &lt;p&gt;Single-row (1X1), 1-pin Pin Header (Male) Straight package with 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 2.54 X 2.54 X 8.38 mm&lt;/p&gt;</description>
-<circle x="0" y="1.774" radius="0.25" width="0" layer="21"/>
-<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.12" layer="21"/>
-<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.12" layer="21"/>
-<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.12" layer="21"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.12" layer="21"/>
 <wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.12" layer="51"/>
 <wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.12" layer="51"/>
 <wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.12" layer="51"/>
 <wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.12" layer="51"/>
 <pad name="1" x="0" y="0" drill="1.1051" diameter="1.7051"/>
-<text x="0" y="2.659" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="1.389" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.905" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
 <package name="BT_PORT_BASE" urn="urn:adsk.eagle:footprint:9190653/1" locally_modified="yes">
@@ -8108,20 +8023,8 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="0" y1="-0.5" x2="13" y2="-0.5" width="0.127" layer="21"/>
 <wire x1="13" y1="-0.5" x2="13" y2="0.5" width="0.127" layer="21"/>
 <wire x1="13" y1="0.5" x2="0" y2="0.5" width="0.127" layer="21"/>
-<text x="0" y="-2.865" size="0.762" layer="21">&gt;VALUE</text>
-<text x="-0.889" y="-1.524" size="0.762" layer="21">TX</text>
-</package>
-<package name="BT_PORT_MODULE" urn="urn:adsk.eagle:footprint:9190655/1">
-<description>Module side of the BT_PORT</description>
-<smd name="P8" x="-5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P9" x="-3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P10" x="-2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P11" x="-0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P12" x="0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P13" x="2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P14" x="3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<smd name="P15" x="5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<text x="-5.75" y="-1.531665625" size="0.7" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.865" size="0.8128" layer="21">&gt;VALUE</text>
+<text x="-0.889" y="-1.524" size="0.8128" layer="21">TX</text>
 </package>
 <package name="D_RGB_0603" urn="urn:adsk.eagle:footprint:9166170/1" locally_modified="yes">
 <smd name="P$1" x="0" y="0" dx="0.8" dy="0.65" layer="1"/>
@@ -8144,15 +8047,15 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="2.05" y1="-1.3" x2="2.05" y2="0.45" width="0.127" layer="21"/>
 <wire x1="2.05" y1="0.45" x2="-0.55" y2="0.45" width="0.127" layer="21"/>
 </package>
-<package name="0603-GREEN" urn="urn:adsk.eagle:footprint:8075101/1">
+<package name="0603-GREEN" urn="urn:adsk.eagle:footprint:8075101/1" locally_modified="yes">
 <wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
 <wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
 <smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
 <smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
-<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-0.6985" y="-1.27" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.4605" y="-1.27" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 <package name="JST_B2B-PH-K-S(LF)(SN)" urn="urn:adsk.eagle:footprint:9141305/1" locally_modified="yes">
 <wire x1="-2.95" y1="-2.25" x2="-2.95" y2="2.25" width="0.127" layer="51"/>
@@ -8167,69 +8070,65 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-3.2" y1="2.5" x2="3.2" y2="2.5" width="0.05" layer="39"/>
 <wire x1="3.2" y1="2.5" x2="3.2" y2="-2.5" width="0.05" layer="39"/>
 <wire x1="3.2" y1="-2.5" x2="-3.2" y2="-2.5" width="0.05" layer="39"/>
-<text x="-3.30138125" y="-3.601509375" size="1.01643125" layer="27">&gt;VALUE</text>
+<text x="-3.30138125" y="-3.601509375" size="0.8128" layer="27">&gt;VALUE</text>
 <circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="21"/>
 <circle x="3.6" y="-0.5" radius="0.1" width="0.2" layer="51"/>
 <pad name="1" x="1" y="-0.55" drill="0.7" shape="square" rot="R180"/>
 <pad name="2" x="-1" y="-0.55" drill="0.7" rot="R180"/>
-<text x="-3.81" y="2.54" size="1.27" layer="21">&gt;NAME</text>
+<text x="-3.81" y="2.54" size="0.8128" layer="21">&gt;NAME</text>
 </package>
-<package name="0603-PINK" urn="urn:adsk.eagle:footprint:9228416/1">
+<package name="0603-PINK" urn="urn:adsk.eagle:footprint:9228416/1" locally_modified="yes">
 <description>&lt;b&gt;Hyper CHIPLED Hyper-Bright LED&lt;/b&gt;&lt;p&gt;
 LB Q993&lt;br&gt;
 Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
-<wire x1="-0.4" y1="0.45" x2="-0.4" y2="-0.45" width="0.1016" layer="51"/>
-<wire x1="0.4" y1="0.45" x2="0.4" y2="-0.45" width="0.1016" layer="51"/>
-<smd name="C" x="0" y="0.75" dx="0.8" dy="0.8" layer="1"/>
-<smd name="A" x="0" y="-0.75" dx="0.8" dy="0.8" layer="1"/>
-<text x="1.27" y="-1.905" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
-<rectangle x1="-0.45" y1="0.45" x2="0.45" y2="0.85" layer="51"/>
-<rectangle x1="-0.45" y1="-0.85" x2="0.45" y2="-0.45" layer="51"/>
-<polygon width="0.127" layer="21">
-<vertex x="0" y="0.254"/>
-<vertex x="-0.254" y="-0.254"/>
-<vertex x="0.254" y="-0.254"/>
-</polygon>
-</package>
-<package name="0603-YELLOW" urn="urn:adsk.eagle:footprint:8075115/1">
 <wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
 <wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
 <smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
 <smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
-<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-0.9525" y="-1.524" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.5875" y="-1.524" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 </package>
-<package name="0603-BLUE" urn="urn:adsk.eagle:footprint:8075113/1">
+<package name="0603-YELLOW" urn="urn:adsk.eagle:footprint:8075115/1" locally_modified="yes">
 <wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
 <wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
 <smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
 <smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
-<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-0.9525" y="-1.524" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.5875" y="-1.524" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 </package>
-<package name="0603-ORANGE" urn="urn:adsk.eagle:footprint:8075111/1">
+<package name="0603-BLUE" urn="urn:adsk.eagle:footprint:8075113/1" locally_modified="yes">
 <wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
 <wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
 <smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
 <smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
-<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-0.6985" y="-1.27" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.4605" y="-1.27" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 </package>
-<package name="0603-RED" urn="urn:adsk.eagle:footprint:8075103/1">
+<package name="0603-ORANGE" urn="urn:adsk.eagle:footprint:8075111/1" locally_modified="yes">
 <wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
 <wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
 <wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
 <smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
 <smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
-<text x="-0.6985" y="-0.889" size="0.4064" layer="25" rot="R90">&gt;NAME</text>
-<text x="1.0795" y="-1.016" size="0.4064" layer="27" rot="R90">&gt;VALUE</text>
+<text x="-0.6985" y="-1.27" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.4605" y="-1.27" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+<package name="0603-RED" urn="urn:adsk.eagle:footprint:8075103/1" locally_modified="yes">
+<wire x1="-0.46" y1="0.17" x2="0" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.46" y2="0.17" width="0.2032" layer="21"/>
+<wire x1="0" y1="0.17" x2="0.2338" y2="-0.14" width="0.2032" layer="21"/>
+<wire x1="-0.0254" y1="0.1546" x2="-0.2184" y2="-0.14" width="0.2032" layer="21"/>
+<smd name="A" x="0" y="-0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<smd name="C" x="0" y="0.877" dx="1" dy="1" layer="1" roundness="30"/>
+<text x="-0.9525" y="-1.524" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.5875" y="-1.524" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
 </package>
 <package name="SOTFL35P100X50-6" urn="urn:adsk.eagle:footprint:9227357/1" locally_modified="yes">
 <description>6-SOTFL, 0.35 mm pitch, 1.00 mm span, 1.00 X 0.70 X 0.50 mm body
@@ -8247,10 +8146,10 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <smd name="4" x="0.5451" y="-0.35" dx="0.4098" dy="0.2" layer="1"/>
 <smd name="5" x="0.5451" y="0" dx="0.4098" dy="0.2" layer="1"/>
 <smd name="6" x="0.5451" y="0.35" dx="0.4098" dy="0.2" layer="1"/>
-<text x="0" y="1.864" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.424" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<text x="0" y="1.864" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.424" size="0.8128" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="SON50P200X200X80-7T92X145" urn="urn:adsk.eagle:footprint:9228394/1">
+<package name="SON50P200X200X80-7T92X145" urn="urn:adsk.eagle:footprint:9228394/1" locally_modified="yes">
 <description>6-SON, 0.50 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.45 X 0.92 mm thermal pad
 &lt;p&gt;6-pin SON package with 0.50 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.45 X 0.92 mm&lt;/p&gt;</description>
 <circle x="-1.504" y="1.164" radius="0.25" width="0" layer="21"/>
@@ -8271,10 +8170,10 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <smd name="5" x="0.9873" y="0" dx="0.7373" dy="0.32" layer="1"/>
 <smd name="6" x="0.9873" y="0.5" dx="0.7373" dy="0.32" layer="1"/>
 <smd name="7" x="0" y="0" dx="0.92" dy="1.45" layer="1" thermals="no"/>
-<text x="0" y="2.049" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.674" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<text x="0" y="2.049" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.674" size="0.8128" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="SON65P200X200X80-7T100X160" urn="urn:adsk.eagle:footprint:9228428/1">
+<package name="SON65P200X200X80-7T100X160" urn="urn:adsk.eagle:footprint:9228428/1" locally_modified="yes">
 <description>6-SON, 0.65 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.60 X 1.00 mm thermal pad
 &lt;p&gt;6-pin SON package with 0.65 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.60 X 1.00 mm&lt;/p&gt;</description>
 <circle x="-1.554" y="1.314" radius="0.25" width="0" layer="21"/>
@@ -8295,17 +8194,94 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <smd name="5" x="1.0206" y="0" dx="0.688" dy="0.32" layer="1"/>
 <smd name="6" x="1.0206" y="0.65" dx="0.688" dy="0.32" layer="1"/>
 <smd name="7" x="0" y="0" dx="1" dy="1.6" layer="1" thermals="no"/>
-<text x="0" y="2.199" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.749" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<text x="0" y="2.199" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.749" size="0.8128" layer="27" align="top-center">&gt;VALUE</text>
+</package>
+<package name="DFN-6" urn="urn:adsk.eagle:footprint:9141307/1" locally_modified="yes">
+<description>2x2 mm DFN-6 package footprint</description>
+<wire x1="-0.8" y1="1" x2="0.8" y2="1" width="0.127" layer="21"/>
+<wire x1="0.8" y1="1" x2="0.8" y2="-1" width="0.127" layer="21"/>
+<wire x1="0.8" y1="-1" x2="-0.8" y2="-1" width="0.127" layer="21"/>
+<wire x1="-0.8" y1="-1" x2="-0.8" y2="1" width="0.127" layer="21"/>
+<circle x="-1.1" y="-0.8" radius="0.1" width="0.127" layer="21"/>
+<rectangle x1="-0.55" y1="0.1" x2="-0.3" y2="0.35" layer="31"/>
+<rectangle x1="0.3" y1="0.1" x2="0.55" y2="0.35" layer="31" rot="R270"/>
+<rectangle x1="0.3" y1="-0.35" x2="0.55" y2="-0.1" layer="31" rot="R180"/>
+<rectangle x1="-0.55" y1="-0.35" x2="-0.3" y2="-0.1" layer="31" rot="R90"/>
+<rectangle x1="-0.15" y1="-0.35" x2="0.15" y2="-0.1" layer="31" rot="R180"/>
+<rectangle x1="-0.15" y1="0.1" x2="0.15" y2="0.35" layer="31"/>
+<smd name="1" x="-0.5" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="2" x="0" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="3" x="0.5" y="-0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="4" x="0.5" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="5" x="0" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="6" x="-0.5" y="0.9875" dx="0.28" dy="0.7" layer="1"/>
+<smd name="7" x="0" y="0" dx="1.1" dy="0.7" layer="1" cream="no"/>
+<text x="-0.9525" y="-0.4445" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+<text x="1.905" y="-0.508" size="0.8128" layer="25" rot="R90">&gt;VALUE</text>
+</package>
+<package name="SON65P210X210X80-7N">
+<description>SON-6 package from TI.</description>
+<circle x="-0.9906" y="1.27" radius="0.1016" width="0.127" layer="21"/>
+<wire x1="-1.0414" y1="-1.0414" x2="1.0414" y2="-1.0414" width="0" layer="51"/>
+<wire x1="1.0414" y1="-1.0414" x2="1.0414" y2="1.0414" width="0" layer="51"/>
+<wire x1="1.0414" y1="1.0414" x2="0.3048" y2="1.0414" width="0" layer="51"/>
+<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51"/>
+<wire x1="-0.3048" y1="1.0414" x2="-1.0414" y2="1.0414" width="0" layer="51"/>
+<wire x1="-1.0414" y1="1.0414" x2="-1.0414" y2="-1.0414" width="0" layer="51"/>
+<wire x1="0.3048" y1="1.0414" x2="-0.3048" y2="1.0414" width="0" layer="51" curve="-180"/>
+<wire x1="-1.016" y1="1.016" x2="1.016" y2="1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="1.016" x2="1.016" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="1.016" y1="-1.016" x2="-1.016" y2="-1.016" width="0.127" layer="21"/>
+<wire x1="-1.016" y1="-1.016" x2="-1.016" y2="1.016" width="0.127" layer="21"/>
+<smd name="1" x="-1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="2" x="-1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="3" x="-1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="4" x="1.0414" y="-0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="5" x="1.0414" y="0" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="6" x="1.0414" y="0.6604" dx="0.6096" dy="0.3556" layer="1"/>
+<smd name="7" x="0" y="0" dx="0.9906" dy="1.6002" layer="1"/>
+<text x="-0.73688125" y="1.143159375" size="0.8128" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
+<text x="-1.171159375" y="-2.64465" size="0.8128" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
+</package>
+<package name="ENC_PORT_MODULE">
+<description>Encoder side of the connection of mouse and encoder</description>
+<smd name="P1" x="-1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<text x="-2.5" y="-1.431665625" size="0.8128" layer="27">&gt;VALUE</text>
+</package>
+<package name="DMN2990UDJ-7">
+<description>SOT-963</description>
+<wire x1="-0.65" y1="0.55" x2="0.65" y2="0.55" width="0.127" layer="21"/>
+<wire x1="0.65" y1="0.55" x2="0.65" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="0.65" y1="-0.55" x2="-0.65" y2="-0.55" width="0.127" layer="21"/>
+<wire x1="-0.65" y1="-0.55" x2="-0.65" y2="0.55" width="0.127" layer="21"/>
+<smd name="P1" x="-0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P2" x="-0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P3" x="-0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P4" x="0.45" y="-0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P5" x="0.45" y="0" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<smd name="P6" x="0.45" y="0.35" dx="0.2" dy="0.2" layer="1" roundness="5"/>
+<text x="-0.65" y="0.661665625" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-0.65" y="-2.151665625" size="0.8128" layer="27">&gt;VALUE</text>
+</package>
+<package name="BT_PORT_MODULE" urn="urn:adsk.eagle:footprint:9190655/1" locally_modified="yes">
+<description>Module side of the BT_PORT</description>
+<smd name="P8" x="-5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P9" x="-3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P10" x="-2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P11" x="-0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P12" x="0.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P13" x="2.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P14" x="3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<smd name="P15" x="5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
+<text x="-5.75" y="-1.531665625" size="0.8128" layer="27">&gt;VALUE</text>
+<text x="-5.715" y="1.016" size="0.8128" layer="21">TX</text>
 </package>
 </packages>
 <packages3d>
-<package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/3" type="model">
-<description>2x2 mm DFN-6 package footprint</description>
-<packageinstances>
-<packageinstance name="DFN-6"/>
-</packageinstances>
-</package3d>
 <package3d name="CAPC1005X60" urn="urn:adsk.eagle:package:23626/2" locally_modified="yes" type="model">
 <description>Chip, 1.00 X 0.50 X 0.60 mm body
 &lt;p&gt;Chip package with body size 1.00 X 0.50 X 0.60 mm&lt;/p&gt;</description>
@@ -8319,7 +8295,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="R0402"/>
 </packageinstances>
 </package3d>
-<package3d name="MPU6050" urn="urn:adsk.eagle:package:8879287/5" type="model">
+<package3d name="MPU6050" urn="urn:adsk.eagle:package:8879287/5" locally_modified="yes" type="model">
 <description>&lt;b&gt;MPU-6050-5&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="MPU6050"/>
@@ -8332,19 +8308,19 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="DRV8836"/>
 </packageinstances>
 </package3d>
-<package3d name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9123914/2" type="model">
+<package3d name="BM02B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9123914/2" locally_modified="yes" type="model">
 <description>&lt;b&gt;BM02B-SRSS-TB(&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="BM02B-SRSS-TB(LFSN)"/>
 </packageinstances>
 </package3d>
-<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/6" type="model">
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/6" locally_modified="yes" type="model">
 <description>Mouse side of the connection of mouse and encoder</description>
 <packageinstances>
 <packageinstance name="ENC_PORT_BASE"/>
 </packageinstances>
 </package3d>
-<package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/5" type="model">
+<package3d name="B3U-1000P" urn="urn:adsk.eagle:package:8879289/5" locally_modified="yes" type="model">
 <description>&lt;b&gt;B3U-1000P(M)&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="B3U-1000P"/>
@@ -8356,13 +8332,13 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="B3U-3000P"/>
 </packageinstances>
 </package3d>
-<package3d name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9126100/3" type="model">
+<package3d name="SM03B-SRSS-TB(LFSN)" urn="urn:adsk.eagle:package:9126100/3" locally_modified="yes" type="model">
 <description>&lt;b&gt;SM03B-SRSS-TB-ren1&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="SM03B-SRSS-TB(LFSN)"/>
 </packageinstances>
 </package3d>
-<package3d name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:package:8879286/5" type="model">
+<package3d name="QFP50P1200X1200X160-64N" urn="urn:adsk.eagle:package:8879286/5" locally_modified="yes" type="model">
 <description>&lt;b&gt;LQFP64&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="QFP50P1200X1200X160-64N"/>
@@ -8375,7 +8351,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="CONN_IRDX4_HDRV4W25P127_1X4_500X200X600B"/>
 </packageinstances>
 </package3d>
-<package3d name="HDRV1W64P0_1X1_254X254X838B" urn="urn:adsk.eagle:package:9165697/2" type="model">
+<package3d name="HDRV1W64P0_1X1_254X254X838B" urn="urn:adsk.eagle:package:9165697/2" locally_modified="yes" type="model">
 <description>Single-row, 1-pin Pin Header (Male) Straight, 5.84 mm mating length, 2.54 X 2.54 X 8.38 mm body
 &lt;p&gt;Single-row (1X1), 1-pin Pin Header (Male) Straight package with 0.64 mm lead width, 3.00 mm tail length and 5.84 mm mating length with overall size 2.54 X 2.54 X 8.38 mm&lt;/p&gt;</description>
 <packageinstances>
@@ -8388,12 +8364,6 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="BT_PORT_BASE"/>
 </packageinstances>
 </package3d>
-<package3d name="BT_PORT_MODULE" urn="urn:adsk.eagle:package:9190656/1" type="box">
-<description>Module side of the BT_PORT</description>
-<packageinstances>
-<packageinstance name="BT_PORT_MODULE"/>
-</packageinstances>
-</package3d>
 <package3d name="D_RGB_0603" urn="urn:adsk.eagle:package:9166171/2" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="D_RGB_0603"/>
@@ -8404,12 +8374,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="JST_B2B-PH-K-S(LF)(SN)"/>
 </packageinstances>
 </package3d>
-<package3d name="0603-GREEN" urn="urn:adsk.eagle:package:5829989/8" type="model">
+<package3d name="0603-GREEN" urn="urn:adsk.eagle:package:5829989/8" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="0603-GREEN"/>
 </packageinstances>
 </package3d>
-<package3d name="0603-PINK" urn="urn:adsk.eagle:package:9228417/2" type="model">
+<package3d name="0603-PINK" urn="urn:adsk.eagle:package:9228417/2" locally_modified="yes" type="model">
 <description>&lt;b&gt;Hyper CHIPLED Hyper-Bright LED&lt;/b&gt;&lt;p&gt;
 LB Q993&lt;br&gt;
 Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
@@ -8417,22 +8387,22 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="0603-PINK"/>
 </packageinstances>
 </package3d>
-<package3d name="0603-YELLOW" urn="urn:adsk.eagle:package:5829995/9" type="model">
+<package3d name="0603-YELLOW" urn="urn:adsk.eagle:package:5829995/9" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="0603-YELLOW"/>
 </packageinstances>
 </package3d>
-<package3d name="0603-BLUE" urn="urn:adsk.eagle:package:5829986/9" type="model">
+<package3d name="0603-BLUE" urn="urn:adsk.eagle:package:5829986/9" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="0603-BLUE"/>
 </packageinstances>
 </package3d>
-<package3d name="0603-ORANGE" urn="urn:adsk.eagle:package:5829998/10" type="model">
+<package3d name="0603-ORANGE" urn="urn:adsk.eagle:package:5829998/10" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="0603-ORANGE"/>
 </packageinstances>
 </package3d>
-<package3d name="0603-RED" urn="urn:adsk.eagle:package:5829992/9" type="model">
+<package3d name="0603-RED" urn="urn:adsk.eagle:package:5829992/9" locally_modified="yes" type="model">
 <packageinstances>
 <packageinstance name="0603-RED"/>
 </packageinstances>
@@ -8444,18 +8414,30 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="SOTFL35P100X50-6"/>
 </packageinstances>
 </package3d>
-<package3d name="SON50P200X200X80-7T92X145" urn="urn:adsk.eagle:package:9227372/1" type="model">
+<package3d name="SON50P200X200X80-7T92X145" urn="urn:adsk.eagle:package:9227372/1" locally_modified="yes" type="model">
 <description>6-SON, 0.50 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.45 X 0.92 mm thermal pad
 &lt;p&gt;6-pin SON package with 0.50 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.45 X 0.92 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="SON50P200X200X80-7T92X145"/>
 </packageinstances>
 </package3d>
-<package3d name="SON65P200X200X80-7T100X160" urn="urn:adsk.eagle:package:9228423/1" type="model">
+<package3d name="SON65P200X200X80-7T100X160" urn="urn:adsk.eagle:package:9228423/1" locally_modified="yes" type="model">
 <description>6-SON, 0.65 mm pitch, 2.00 X 2.00 X 0.80 mm body, 1.60 X 1.00 mm thermal pad
 &lt;p&gt;6-pin SON package with 0.65 mm pitch with body size 2.00 X 2.00 X 0.80 mm and thermal pad size 1.60 X 1.00 mm&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="SON65P200X200X80-7T100X160"/>
+</packageinstances>
+</package3d>
+<package3d name="DFN-6" urn="urn:adsk.eagle:package:9120815/3" locally_modified="yes" type="model">
+<description>2x2 mm DFN-6 package footprint</description>
+<packageinstances>
+<packageinstance name="DFN-6"/>
+</packageinstances>
+</package3d>
+<package3d name="BT_PORT_MODULE" urn="urn:adsk.eagle:package:9190656/1" locally_modified="yes" type="box">
+<description>Module side of the BT_PORT</description>
+<packageinstances>
+<packageinstance name="BT_PORT_MODULE"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -10897,8 +10879,8 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datashe
 <device name="_BASE" package="ENC_PORT_BASE">
 <connects>
 <connect gate="G$1" pin="+3V3" pad="P3"/>
-<connect gate="G$1" pin="A" pad="P2"/>
-<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="A" pad="P1"/>
+<connect gate="G$1" pin="B" pad="P2"/>
 <connect gate="G$1" pin="GND" pad="P4"/>
 </connects>
 <package3dinstances>
@@ -10911,8 +10893,8 @@ Source: &lt;a href="http://uk.rs-online.com/web/p/products/5151529P"&gt; Datashe
 <device name="_MODULE" package="ENC_PORT_MODULE">
 <connects>
 <connect gate="G$1" pin="+3V3" pad="P3"/>
-<connect gate="G$1" pin="A" pad="P2"/>
-<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="A" pad="P1"/>
+<connect gate="G$1" pin="B" pad="P2"/>
 <connect gate="G$1" pin="GND" pad="P4"/>
 </connects>
 <technologies>
@@ -12569,9 +12551,9 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </bus>
 <bus name="ENCODER_LEFT:ENC_LEFT_CHA,ENC_LEFT_CHB">
 <segment>
-<wire x1="66.04" y1="53.34" x2="66.04" y2="43.18" width="0.762" layer="92"/>
-<label x="63.5" y="35.56" size="1.778" layer="95" rot="MR90"/>
-<wire x1="66.04" y1="43.18" x2="66.04" y2="40.64" width="0.762" layer="92"/>
+<wire x1="63.5" y1="53.34" x2="63.5" y2="43.18" width="0.762" layer="92"/>
+<label x="60.96" y="35.56" size="1.778" layer="95" rot="MR90"/>
+<wire x1="63.5" y1="43.18" x2="63.5" y2="40.64" width="0.762" layer="92"/>
 </segment>
 </bus>
 <bus name="MOTOR_DRIVER:DRV_A_IN1,DRV_A_IN2,DRV_B_IN1,DRV_B_IN2">
@@ -12934,18 +12916,18 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </net>
 <net name="ENC_LEFT_CHA" class="0">
 <segment>
-<wire x1="66.04" y1="48.26" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="PA8"/>
-<wire x1="93.98" y1="50.8" x2="68.58" y2="50.8" width="0.1524" layer="91"/>
-<label x="73.66" y="50.8" size="1.778" layer="95"/>
+<wire x1="63.5" y1="45.72" x2="66.04" y2="48.26" width="0.1524" layer="91"/>
+<label x="73.66" y="48.26" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PA9"/>
+<wire x1="66.04" y1="48.26" x2="93.98" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_LEFT_CHB" class="0">
 <segment>
-<wire x1="66.04" y1="45.72" x2="68.58" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="PA9"/>
-<wire x1="93.98" y1="48.26" x2="68.58" y2="48.26" width="0.1524" layer="91"/>
-<label x="73.66" y="48.26" size="1.778" layer="95"/>
+<wire x1="63.5" y1="48.26" x2="66.04" y2="50.8" width="0.1524" layer="91"/>
+<label x="73.66" y="50.8" size="1.778" layer="95"/>
+<pinref part="IC1" gate="G$1" pin="PA8"/>
+<wire x1="66.04" y1="50.8" x2="93.98" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BTN2" class="0">
@@ -13092,21 +13074,20 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </net>
 <net name="ENC_RIGHT_CHA" class="0">
 <segment>
-<wire x1="167.64" y1="116.84" x2="170.18" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="116.84" x2="162.56" y2="116.84" width="0.1524" layer="91"/>
-<label x="144.78" y="116.84" size="1.778" layer="95"/>
-<pinref part="IC1" gate="G$1" pin="PB6"/>
-<wire x1="142.24" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="114.3" x2="170.18" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB7"/>
+<wire x1="142.24" y1="114.3" x2="157.48" y2="114.3" width="0.1524" layer="91"/>
+<label x="144.78" y="114.3" size="1.778" layer="95"/>
+<wire x1="157.48" y1="114.3" x2="167.64" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ENC_RIGHT_CHB" class="0">
 <segment>
-<wire x1="167.64" y1="114.3" x2="170.18" y2="111.76" width="0.1524" layer="91"/>
-<label x="144.78" y="114.3" size="1.778" layer="95"/>
-<pinref part="IC1" gate="G$1" pin="PB7"/>
-<wire x1="142.24" y1="114.3" x2="157.48" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="114.3" x2="157.48" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="116.84" x2="170.18" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB6"/>
+<wire x1="142.24" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
+<label x="144.78" y="116.84" size="1.778" layer="95"/>
+<wire x1="157.48" y1="116.84" x2="167.64" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IMU1_SCL" class="0">
@@ -13323,7 +13304,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </variantdefs>
 <parts>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA4_L" device="" value="IR_LED_DRIVER_DUAL"/>
-<part name="MOSFET1" library="0-micromouse2019" deviceset="FET_DMN2990UDJ-7" device="MOSFET_SOT964" package3d_urn="urn:adsk.eagle:package:9226354/1" value="FET_DMN2990UDJ-7MOSFET_SOT964"/>
+<part name="FET1" library="0-micromouse2019" deviceset="FET_DMN2990UDJ-7" device="MOSFET_SOT964" package3d_urn="urn:adsk.eagle:package:9226354/1" value="FET_DMN2990UDJ-7MOSFET_SOT964"/>
 <part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="R2" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="10k"/>
@@ -13333,8 +13314,8 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <part name="R6" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="2R"/>
 <part name="GND6" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="P+1" library="0-micromouse2019" deviceset="VCC" device=""/>
-<part name="CONN1" library="0-micromouse2019" deviceset="CONN_IRDX4" device="-P127" package3d_urn="urn:adsk.eagle:package:9158256/2"/>
-<part name="CONN2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
+<part name="J1" library="0-micromouse2019" deviceset="CONN_IRDX4" device="-P127" package3d_urn="urn:adsk.eagle:package:9158256/2"/>
+<part name="J2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -13348,7 +13329,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <attribute name="SHEET" x="248.92" y="1.27" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="180.34" y="19.05" size="2.54" layer="94"/>
 </instance>
-<instance part="MOSFET1" gate="G$1" x="78.74" y="71.12" smashed="yes">
+<instance part="FET1" gate="G$1" x="78.74" y="71.12" smashed="yes">
 <attribute name="NAME" x="63.5" y="79.502" size="1.27" layer="95"/>
 <attribute name="VALUE" x="63.5" y="61.468" size="1.27" layer="95"/>
 </instance>
@@ -13383,11 +13364,11 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <instance part="P+1" gate="VCC" x="215.9" y="71.12" smashed="yes">
 <attribute name="VALUE" x="213.36" y="68.58" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="CONN1" gate="G$1" x="134.62" y="96.52" smashed="yes" rot="R90">
+<instance part="J1" gate="G$1" x="134.62" y="96.52" smashed="yes" rot="R90">
 <attribute name="NAME" x="129.54" y="104.902" size="1.27" layer="95"/>
 <attribute name="VALUE" x="129.54" y="103.378" size="1.27" layer="96"/>
 </instance>
-<instance part="CONN2" gate="G$1" x="215.9" y="58.42" smashed="yes">
+<instance part="J2" gate="G$1" x="215.9" y="58.42" smashed="yes">
 <attribute name="NAME" x="213.36" y="43.434" size="1.27" layer="95"/>
 <attribute name="VALUE" x="213.36" y="40.64" size="1.27" layer="96"/>
 </instance>
@@ -13405,21 +13386,21 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <nets>
 <net name="DRAIN_1" class="0">
 <segment>
-<pinref part="MOSFET1" gate="G$1" pin="DRAIN_1"/>
+<pinref part="FET1" gate="G$1" pin="DRAIN_1"/>
 <wire x1="40.64" y1="76.2" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="76.2" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
 <label x="45.72" y="76.2" size="1.778" layer="95"/>
-<pinref part="CONN1" gate="G$1" pin="P1"/>
+<pinref part="J1" gate="G$1" pin="P1"/>
 <wire x1="132.08" y1="93.98" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="88.9" x2="40.64" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DRAIN_2" class="0">
 <segment>
-<pinref part="MOSFET1" gate="G$1" pin="DRAIN_2"/>
+<pinref part="FET1" gate="G$1" pin="DRAIN_2"/>
 <wire x1="99.06" y1="76.2" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
 <label x="104.14" y="76.2" size="1.778" layer="95"/>
-<pinref part="CONN1" gate="G$1" pin="P2"/>
+<pinref part="J1" gate="G$1" pin="P2"/>
 <wire x1="134.62" y1="93.98" x2="134.62" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13430,7 +13411,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="38.1" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="48.26" y1="55.88" x2="48.26" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="MOSFET1" gate="G$1" pin="SOURCE_1"/>
+<pinref part="FET1" gate="G$1" pin="SOURCE_1"/>
 <wire x1="58.42" y1="66.04" x2="48.26" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="66.04" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
 <junction x="48.26" y="55.88"/>
@@ -13444,7 +13425,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="99.06" y1="66.04" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="66.04" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
 <junction x="109.22" y="55.88"/>
-<pinref part="MOSFET1" gate="G$1" pin="SOURCE_2"/>
+<pinref part="FET1" gate="G$1" pin="SOURCE_2"/>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
@@ -13459,7 +13440,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </net>
 <net name="IRD1" class="0">
 <segment>
-<pinref part="MOSFET1" gate="G$1" pin="GATE_1"/>
+<pinref part="FET1" gate="G$1" pin="GATE_1"/>
 <wire x1="58.42" y1="71.12" x2="38.1" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="38.1" y1="71.12" x2="27.94" y2="71.12" width="0.1524" layer="91"/>
@@ -13479,7 +13460,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="119.38" y1="71.12" x2="129.54" y2="71.12" width="0.1524" layer="91"/>
 <junction x="119.38" y="71.12"/>
 <label x="129.54" y="71.12" size="1.778" layer="95" rot="MR0"/>
-<pinref part="MOSFET1" gate="G$1" pin="GATE_2"/>
+<pinref part="FET1" gate="G$1" pin="GATE_2"/>
 </segment>
 <segment>
 <wire x1="256.54" y1="157.48" x2="251.46" y2="160.02" width="0.1524" layer="91"/>
@@ -13495,7 +13476,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="165.1" y1="63.5" x2="149.86" y2="63.5" width="0.1524" layer="91"/>
 <junction x="165.1" y="63.5"/>
 <label x="149.86" y="63.5" size="1.778" layer="95"/>
-<pinref part="CONN1" gate="G$1" pin="P3"/>
+<pinref part="J1" gate="G$1" pin="P3"/>
 <wire x1="137.16" y1="93.98" x2="137.16" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="76.2" x2="165.1" y2="76.2" width="0.1524" layer="91"/>
 </segment>
@@ -13513,7 +13494,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="185.42" y1="63.5" x2="170.18" y2="63.5" width="0.1524" layer="91"/>
 <junction x="185.42" y="63.5"/>
 <label x="170.18" y="63.5" size="1.778" layer="95"/>
-<pinref part="CONN1" gate="G$1" pin="P4"/>
+<pinref part="J1" gate="G$1" pin="P4"/>
 <wire x1="139.7" y1="93.98" x2="139.7" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="139.7" y1="88.9" x2="185.42" y2="88.9" width="0.1524" layer="91"/>
 </segment>
@@ -13527,7 +13508,7 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <segment>
 <wire x1="215.9" y1="68.58" x2="215.9" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
-<pinref part="CONN2" gate="G$1" pin="P1"/>
+<pinref part="J2" gate="G$1" pin="P1"/>
 </segment>
 </net>
 </nets>
@@ -13821,34 +13802,6 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <label x="106.68" y="144.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="ENC_LEFT_CHA" class="0">
-<segment>
-<portref moduleinst="EPL" port="ENC_CHA"/>
-<portref moduleinst="MCU" port="ENC_LEFT_CHA"/>
-<wire x1="88.9" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="ENC_LEFT_CHB" class="0">
-<segment>
-<portref moduleinst="MCU" port="ENC_LEFT_CHB"/>
-<portref moduleinst="EPL" port="ENC_CHB"/>
-<wire x1="96.52" y1="104.14" x2="88.9" y2="104.14" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="ENC_RIGHT_CHA" class="0">
-<segment>
-<portref moduleinst="EPR" port="ENC_CHA"/>
-<portref moduleinst="MCU" port="ENC_RIGHT_CHA"/>
-<wire x1="88.9" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="ENC_RIGHT_CHB" class="0">
-<segment>
-<portref moduleinst="EPR" port="ENC_CHB"/>
-<portref moduleinst="MCU" port="ENC_RIGHT_CHB"/>
-<wire x1="88.9" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <portref moduleinst="MCU" port="IRD1"/>
@@ -13903,6 +13856,34 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <portref moduleinst="MCU" port="PTR4"/>
 <portref moduleinst="IRD2" port="PTR2"/>
 <wire x1="162.56" y1="60.96" x2="170.18" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ENC_LEFT_CHA" class="0">
+<segment>
+<portref moduleinst="EPL" port="ENC_CHA"/>
+<portref moduleinst="MCU" port="ENC_LEFT_CHA"/>
+<wire x1="88.9" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ENC_LEFT_CHB" class="0">
+<segment>
+<portref moduleinst="EPL" port="ENC_CHB"/>
+<portref moduleinst="MCU" port="ENC_LEFT_CHB"/>
+<wire x1="88.9" y1="104.14" x2="96.52" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ENC_RIGHT_CHA" class="0">
+<segment>
+<portref moduleinst="EPR" port="ENC_CHA"/>
+<portref moduleinst="MCU" port="ENC_RIGHT_CHA"/>
+<wire x1="88.9" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="ENC_RIGHT_CHB" class="0">
+<segment>
+<portref moduleinst="EPR" port="ENC_CHB"/>
+<portref moduleinst="MCU" port="ENC_RIGHT_CHB"/>
+<wire x1="88.9" y1="88.9" x2="96.52" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
