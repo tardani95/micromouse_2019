@@ -209,7 +209,7 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="P14" x="3.75" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <smd name="P15" x="5.25" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <text x="-5.75" y="-1.531665625" size="0.8128" layer="27">&gt;VALUE</text>
-<text x="-4.445" y="-0.381" size="0.8128" layer="21" rot="MR0">TX</text>
+<text x="-4.445" y="-0.381" size="0.8128" layer="22" rot="MR0">TX</text>
 </package>
 <package name="BT_PORT_BASE" urn="urn:adsk.eagle:footprint:9190653/1" locally_modified="yes">
 <description>Mouse side of the bluetooth module port</description>
@@ -251,15 +251,15 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-10.16" y1="-20.32" x2="-10.16" y2="17.78" width="0.254" layer="94"/>
 <text x="-10.177" y="18.573" size="1.27211875" layer="95">&gt;NAME</text>
 <text x="-10.1635" y="-22.3598" size="1.270440625" layer="96">&gt;VALUE</text>
-<pin name="TXD" x="15.24" y="2.54" length="middle" rot="R180"/>
-<pin name="RTS" x="15.24" y="0" length="middle" rot="R180"/>
-<pin name="CTS" x="-15.24" y="5.08" length="middle"/>
-<pin name="BOOT0" x="-15.24" y="10.16" length="middle"/>
+<pin name="TXD" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="RTS" x="15.24" y="0" length="middle" direction="out" rot="R180"/>
+<pin name="CTS" x="-15.24" y="5.08" length="middle" direction="in"/>
+<pin name="BOOT0" x="-15.24" y="10.16" length="middle" direction="in"/>
 <pin name="VIN" x="15.24" y="15.24" length="middle" direction="pwr" rot="R180"/>
 <pin name="GND" x="15.24" y="-17.78" length="middle" direction="pwr" rot="R180"/>
-<pin name="!RESET" x="-15.24" y="15.24" length="middle"/>
-<pin name="RXD" x="-15.24" y="7.62" length="middle"/>
-<pin name="LPO" x="-15.24" y="2.54" length="middle"/>
+<pin name="!RESET" x="-15.24" y="15.24" length="middle" direction="in"/>
+<pin name="RXD" x="-15.24" y="7.62" length="middle" direction="in"/>
+<pin name="LPO" x="-15.24" y="2.54" length="middle" direction="in"/>
 <pin name="GPIO1" x="-15.24" y="-2.54" length="middle"/>
 <pin name="GPIO2" x="-15.24" y="-5.08" length="middle"/>
 <pin name="GPIO3" x="-15.24" y="-7.62" length="middle"/>
