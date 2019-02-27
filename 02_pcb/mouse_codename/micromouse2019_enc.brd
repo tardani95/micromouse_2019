@@ -8,7 +8,7 @@
 </settings>
 <grid distance="2.5" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
@@ -23,10 +23,10 @@
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
@@ -166,11 +166,11 @@
 <dimension x1="5.9" y1="11.11" x2="0" y2="11.11" x3="2.95" y3="19.9" textsize="1.778" layer="47" dtype="horizontal" width="0.05" extwidth="0.01" extlength="2" precision="3"/>
 <dimension x1="2.95" y1="5.51" x2="0" y2="5.51" x3="1.475" y3="23.41" textsize="1.778" layer="47" dtype="horizontal" width="0.05" extwidth="0.01" extlength="2" precision="3"/>
 <dimension x1="5.9" y1="0" x2="5.9" y2="11.11" x3="11.58" y3="5.555" textsize="1.778" layer="47" dtype="horizontal" width="0.05" extwidth="0.01" extlength="2" precision="3"/>
-<text x="2.5019" y="6.8326" size="0.8128" layer="26" rot="R90">MISO</text>
-<text x="1.4224" y="6.8453" size="0.8128" layer="26" rot="R90">MOSI</text>
+<text x="1.7399" y="6.7056" size="0.8128" layer="25" rot="MR90">MISO</text>
+<text x="0.5969" y="6.7183" size="0.8128" layer="25" rot="MR90">MOSI</text>
 <text x="3.8989" y="7.6962" size="0.7112" layer="28" rot="R90">CLK</text>
-<text x="5.2324" y="7.2644" size="0.8128" layer="26" rot="R90">CSN</text>
-<text x="3.1115" y="7.3025" size="0.8128" layer="26" rot="MR90">CLK</text>
+<text x="4.4704" y="7.2644" size="0.8128" layer="25" rot="MR90">CSN</text>
+<text x="4.0005" y="7.366" size="0.8128" layer="25" rot="R90">CLK</text>
 </plain>
 <libraries>
 <library name="0-micromouse2019">
