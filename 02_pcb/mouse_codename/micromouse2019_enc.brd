@@ -8,7 +8,7 @@
 </settings>
 <grid distance="2.5" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
 <layer number="3" name="Route3" color="17" fill="1" visible="no" active="no"/>
 <layer number="4" name="Route4" color="18" fill="1" visible="no" active="no"/>
@@ -23,33 +23,33 @@
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
-<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
-<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -59,7 +59,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -177,7 +177,7 @@
 <description>Generated from &lt;b&gt;micromouse2019.sch&lt;/b&gt;&lt;p&gt;
 by exp-lbrs-replace2.ulp</description>
 <packages>
-<package name="SOP65P640X120-14N" urn="urn:adsk.eagle:footprint:9141304/1">
+<package name="SOP65P640X120-14N" urn="urn:adsk.eagle:footprint:9141304/1" locally_modified="yes">
 <description>&lt;b&gt;AS5047D&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-2.938" y="1.95" dx="1.475" dy="0.45" layer="1"/>
@@ -194,8 +194,8 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="12" x="2.938" y="0.65" dx="1.475" dy="0.45" layer="1"/>
 <smd name="13" x="2.938" y="1.3" dx="1.475" dy="0.45" layer="1"/>
 <smd name="14" x="2.938" y="1.95" dx="1.475" dy="0.45" layer="1"/>
-<text x="-1.27" y="3.81" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="-1.27" y="-3.81" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="-1.27" y="3.81" size="0.8128" layer="25" align="center">&gt;NAME</text>
+<text x="-1.27" y="-3.81" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-3.925" y1="2.8" x2="3.925" y2="2.8" width="0.05" layer="51"/>
 <wire x1="3.925" y1="2.8" x2="3.925" y2="-2.8" width="0.05" layer="51"/>
 <wire x1="3.925" y1="-2.8" x2="-3.925" y2="-2.8" width="0.05" layer="51"/>
@@ -221,8 +221,8 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-1" y1="-0.483" x2="-1" y2="0.483" width="0.0508" layer="39"/>
 <smd name="1" x="-0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
 <smd name="2" x="0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-0.635" y="0.635" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.397" size="0.8128" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.35" x2="0.1999" y2="0.35" layer="35"/>
@@ -238,8 +238,8 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-1.473" y1="-0.483" x2="-1.473" y2="0.483" width="0.0508" layer="39"/>
 <smd name="1" x="-0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
 <smd name="2" x="0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-1.651" y="0.762" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-1.778" y="-1.524" size="0.8128" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
@@ -251,34 +251,22 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
+<text x="-2.5" y="-1.431665625" size="0.8128" layer="27">&gt;VALUE</text>
 </package>
 <package name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:footprint:9165681/2" locally_modified="yes">
 <description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <circle x="-1.1868" y="0" radius="0.25" width="0" layer="21"/>
-<wire x1="4.65" y1="-3.4" x2="-0.84" y2="-3.4" width="0.12" layer="21"/>
-<wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="21"/>
-<wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="21"/>
-<wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="21"/>
-<wire x1="0" y1="-3.46" x2="0" y2="-6.46" width="0.12" layer="21"/>
-<wire x1="1.27" y1="-3.46" x2="1.27" y2="-6.46" width="0.12" layer="21"/>
-<wire x1="2.54" y1="-3.46" x2="2.54" y2="-6.46" width="0.12" layer="21"/>
-<wire x1="3.81" y1="-3.46" x2="3.81" y2="-6.46" width="0.12" layer="21"/>
-<wire x1="4.65" y1="-3.4" x2="-0.84" y2="-3.4" width="0.12" layer="51"/>
-<wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="51"/>
-<wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="51"/>
-<wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="51"/>
 <pad name="1" x="0" y="0" drill="0.7" diameter="1.1176"/>
 <pad name="2" x="1.27" y="0" drill="0.7" diameter="1.1176"/>
 <pad name="3" x="2.54" y="0" drill="0.7" diameter="1.1176"/>
 <pad name="4" x="3.81" y="0" drill="0.7" diameter="1.1176"/>
-<text x="0" y="1.3178" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-7.095" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<text x="0" y="1.3178" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.015" size="0.8128" layer="27" align="top-center">&gt;VALUE</text>
 </package>
 </packages>
 <packages3d>
-<package3d name="SOP65P640X120-14" urn="urn:adsk.eagle:package:9139945/3" type="model">
+<package3d name="SOP65P640X120-14" urn="urn:adsk.eagle:package:9139945/3" locally_modified="yes" type="model">
 <description>&lt;b&gt;AS5047D&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="SOP65P640X120-14N"/>

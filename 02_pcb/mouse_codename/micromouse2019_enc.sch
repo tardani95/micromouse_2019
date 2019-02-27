@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1018,7 +1018,7 @@ with a typical dropout voltage of 300 mV.</description>
 <description>Generated from &lt;b&gt;micromouse2019.sch&lt;/b&gt;&lt;p&gt;
 by exp-lbrs-replace2.ulp</description>
 <packages>
-<package name="SOP65P640X120-14N" urn="urn:adsk.eagle:footprint:9141304/1">
+<package name="SOP65P640X120-14N" urn="urn:adsk.eagle:footprint:9141304/1" locally_modified="yes">
 <description>&lt;b&gt;AS5047D&lt;/b&gt;&lt;br&gt;
 </description>
 <smd name="1" x="-2.938" y="1.95" dx="1.475" dy="0.45" layer="1"/>
@@ -1035,8 +1035,8 @@ by exp-lbrs-replace2.ulp</description>
 <smd name="12" x="2.938" y="0.65" dx="1.475" dy="0.45" layer="1"/>
 <smd name="13" x="2.938" y="1.3" dx="1.475" dy="0.45" layer="1"/>
 <smd name="14" x="2.938" y="1.95" dx="1.475" dy="0.45" layer="1"/>
-<text x="-1.27" y="3.81" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="-1.27" y="-3.81" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<text x="-1.27" y="3.81" size="0.8128" layer="25" align="center">&gt;NAME</text>
+<text x="-1.27" y="-3.81" size="0.8128" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-3.925" y1="2.8" x2="3.925" y2="2.8" width="0.05" layer="51"/>
 <wire x1="3.925" y1="2.8" x2="3.925" y2="-2.8" width="0.05" layer="51"/>
 <wire x1="3.925" y1="-2.8" x2="-3.925" y2="-2.8" width="0.05" layer="51"/>
@@ -1062,8 +1062,8 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-1" y1="-0.483" x2="-1" y2="0.483" width="0.0508" layer="39"/>
 <smd name="1" x="-0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
 <smd name="2" x="0.5" y="0" dx="0.6" dy="0.7" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-0.635" y="0.635" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.397" size="0.8128" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.35" x2="0.1999" y2="0.35" layer="35"/>
@@ -2610,8 +2610,8 @@ Source: VISHAY wscwsn.pdf</description>
 <wire x1="-1.473" y1="-0.483" x2="-1.473" y2="0.483" width="0.0508" layer="39"/>
 <smd name="1" x="-0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
 <smd name="2" x="0.65" y="0" dx="0.7" dy="0.9" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-1.651" y="0.762" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-1.778" y="-1.524" size="0.8128" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.554" y1="-0.3048" x2="-0.254" y2="0.2951" layer="51"/>
 <rectangle x1="0.2588" y1="-0.3048" x2="0.5588" y2="0.2951" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
@@ -4169,43 +4169,31 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="P2" x="-0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <smd name="P3" x="0.65" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
 <smd name="P4" x="1.95" y="0" dx="1" dy="0.8" layer="1" rot="R90"/>
-<text x="-2.5" y="-1.431665625" size="0.7" layer="27">&gt;VALUE</text>
-</package>
-<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/2">
-<description>Mouse side of the connection of mouse and encoder</description>
-<smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
-<smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
-<text x="-1.2" y="-2.481665625" size="0.7" layer="27" rot="R90">&gt;VALUE</text>
-<wire x1="1.016" y1="-2.54" x2="1.016" y2="2.54" width="0.127" layer="51"/>
+<text x="-2.5" y="-1.431665625" size="0.8128" layer="27">&gt;VALUE</text>
 </package>
 <package name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:footprint:9165681/2" locally_modified="yes">
 <description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <circle x="-1.1868" y="0" radius="0.25" width="0" layer="21"/>
-<wire x1="4.65" y1="-3.4" x2="-0.84" y2="-3.4" width="0.12" layer="21"/>
-<wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="21"/>
-<wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="21"/>
-<wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="21"/>
-<wire x1="0" y1="-3.46" x2="0" y2="-6.46" width="0.12" layer="21"/>
-<wire x1="1.27" y1="-3.46" x2="1.27" y2="-6.46" width="0.12" layer="21"/>
-<wire x1="2.54" y1="-3.46" x2="2.54" y2="-6.46" width="0.12" layer="21"/>
-<wire x1="3.81" y1="-3.46" x2="3.81" y2="-6.46" width="0.12" layer="21"/>
-<wire x1="4.65" y1="-3.4" x2="-0.84" y2="-3.4" width="0.12" layer="51"/>
-<wire x1="-0.84" y1="-3.4" x2="-0.84" y2="-1.2" width="0.12" layer="51"/>
-<wire x1="-0.84" y1="-1.2" x2="4.65" y2="-1.2" width="0.12" layer="51"/>
-<wire x1="4.65" y1="-1.2" x2="4.65" y2="-3.4" width="0.12" layer="51"/>
 <pad name="1" x="0" y="0" drill="0.7" diameter="1.1176"/>
 <pad name="2" x="1.27" y="0" drill="0.7" diameter="1.1176"/>
 <pad name="3" x="2.54" y="0" drill="0.7" diameter="1.1176"/>
 <pad name="4" x="3.81" y="0" drill="0.7" diameter="1.1176"/>
-<text x="0" y="1.3178" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-7.095" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<text x="0" y="1.3178" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-2.015" size="0.8128" layer="27" align="top-center">&gt;VALUE</text>
+</package>
+<package name="ENC_PORT_BASE" urn="urn:adsk.eagle:footprint:9141308/2" locally_modified="yes">
+<description>Mouse side of the connection of mouse and encoder</description>
+<smd name="P1" x="-0.05" y="1.95" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P2" x="-0.05" y="0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P3" x="-0.05" y="-0.65" dx="1.5" dy="0.8" layer="1"/>
+<smd name="P4" x="-0.05" y="-1.95" dx="1.5" dy="0.8" layer="1"/>
+<text x="-1.2" y="-2.481665625" size="0.8128" layer="27" rot="R90">&gt;VALUE</text>
+<wire x1="1.016" y1="-2.54" x2="1.016" y2="2.54" width="0.127" layer="51"/>
 </package>
 </packages>
 <packages3d>
-<package3d name="SOP65P640X120-14" urn="urn:adsk.eagle:package:9139945/3" type="model">
+<package3d name="SOP65P640X120-14" urn="urn:adsk.eagle:package:9139945/3" locally_modified="yes" type="model">
 <description>&lt;b&gt;AS5047D&lt;/b&gt;&lt;br&gt;</description>
 <packageinstances>
 <packageinstance name="SOP65P640X120-14N"/>
@@ -4224,17 +4212,17 @@ Source: AVX .. aphvc.pdf</description>
 <packageinstance name="C0402"/>
 </packageinstances>
 </package3d>
-<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/5" type="model">
-<description>Mouse side of the connection of mouse and encoder</description>
-<packageinstances>
-<packageinstance name="ENC_PORT_BASE"/>
-</packageinstances>
-</package3d>
 <package3d name="HDRRA4W40P127_1X4_549X220X220B" urn="urn:adsk.eagle:package:9165666/2" locally_modified="yes" type="model">
 <description>Single-row, 4-pin Pin Header (Male) Right Angle, 1.27 mm (0.05 in) col pitch, 3.00 mm mating length, 5.49 X 2.20 X 2.20 mm body
 &lt;p&gt;Single-row (1X4), 4-pin Pin Header (Male) Right Angle package with 1.27 mm (0.05 in) col pitch, 0.40 mm lead width, 3.00 mm tail length and 3.00 mm mating length with body size 5.49 X 2.20 X 2.20 mm, pin pattern - clockwise from top left&lt;/p&gt;</description>
 <packageinstances>
 <packageinstance name="CONN_SPI_HDRRA4W40P127_1X4_549X220X220B"/>
+</packageinstances>
+</package3d>
+<package3d name="ENC_PORT_BASE" urn="urn:adsk.eagle:package:9139943/6" locally_modified="yes" type="model">
+<description>Mouse side of the connection of mouse and encoder</description>
+<packageinstances>
+<packageinstance name="ENC_PORT_BASE"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -6191,12 +6179,12 @@ Source: &lt;a href="http://ams.com/eng/content/download/595083/1609657/320155"&g
 <device name="_BASE" package="ENC_PORT_BASE">
 <connects>
 <connect gate="G$1" pin="+3V3" pad="P3"/>
-<connect gate="G$1" pin="A" pad="P2"/>
-<connect gate="G$1" pin="B" pad="P1"/>
+<connect gate="G$1" pin="A" pad="P1"/>
+<connect gate="G$1" pin="B" pad="P2"/>
 <connect gate="G$1" pin="GND" pad="P4"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/5"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:9139943/6"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
