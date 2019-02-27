@@ -106,7 +106,7 @@
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
-<layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
@@ -1141,7 +1141,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="MANUFACTURER_NAME" value="Omron Electronics" x="42.164" y="2.921" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MANUFACTURER_PART_NUMBER" value="B3U-1000P" x="42.164" y="2.921" size="1.778" layer="27" rot="R45" display="off"/>
 <attribute name="MOUSER_PART_NUMBER" value="653-B3U-1000P" x="42.164" y="2.921" size="1.778" layer="27" rot="R45" display="off"/>
-<attribute name="NAME" x="40.9124125" y="4.15563125" size="0.8128" layer="25" rot="R45" align="center"/>
+<attribute name="NAME" x="42.406009375" y="5.80396875" size="0.8128" layer="25" align="center"/>
 <attribute name="VALUE" x="43.240896875" y="1.01255" size="1.27" layer="27" rot="R45" align="center"/>
 </element>
 <element name="MCU:R1" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k" x="38.69" y="4.73" smashed="yes" rot="MR0">
@@ -1160,7 +1160,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="VALUE" x="35.085" y="30.733" size="0.8128" layer="28" rot="MR0"/>
 </element>
 <element name="MCU:C11" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="17.49" y="44.465" smashed="yes" rot="MR270">
-<attribute name="NAME" x="16.165" y="41.387" size="0.8128" layer="26" rot="MR90"/>
+<attribute name="NAME" x="15.911" y="40.752" size="0.8128" layer="26" rot="MR90"/>
 <attribute name="SPICEPREFIX" value="C" x="98.77" y="57.165" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="19.014" y="46.243" size="0.8128" layer="28" rot="MR270"/>
 </element>
@@ -1188,10 +1188,10 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="SPICEPREFIX" value="C" x="32.3" y="43.12" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="33.824" y="44.898" size="0.8128" layer="28" rot="MR270"/>
 </element>
-<element name="IMU:R1" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k" x="20.454" y="45.785" smashed="yes" rot="MR180">
-<attribute name="NAME" x="26.022" y="45.384" size="0.8128" layer="26" rot="MR0"/>
-<attribute name="SPICEPREFIX" value="R" x="20.454" y="45.785" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="VALUE" x="19.819" y="47.182" size="0.8128" layer="28" rot="MR180"/>
+<element name="IMU:R1" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="47k" x="20.454" y="46.166" smashed="yes" rot="MR180">
+<attribute name="NAME" x="26.022" y="45.765" size="0.8128" layer="26" rot="MR0"/>
+<attribute name="SPICEPREFIX" value="R" x="20.454" y="46.166" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="VALUE" x="19.819" y="47.563" size="0.8128" layer="28" rot="MR180"/>
 </element>
 <element name="IMU:C4" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10n" x="21.553" y="41.372" smashed="yes" rot="MR180">
 <attribute name="NAME" x="19.013" y="40.737" size="0.8128" layer="26" rot="MR180"/>
@@ -1204,7 +1204,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="VALUE" x="22.181" y="43.188" size="0.8128" layer="28" rot="MR0"/>
 </element>
 <element name="IMU:C2" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="21.93" y="48.458" smashed="yes" rot="R90">
-<attribute name="NAME" x="17.47" y="46.65" size="0.8128" layer="25"/>
+<attribute name="NAME" x="21.422" y="43.505" size="0.8128" layer="25" rot="R90"/>
 <attribute name="SPICEPREFIX" value="C" x="21.93" y="48.458" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="23.835" y="47.823" size="1.27" layer="27" rot="R90"/>
 </element>
@@ -1234,7 +1234,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="VALUE" x="14.885" y="6.155" size="1.27" layer="27"/>
 </element>
 <element name="PWR:LDO2" library="0-micromouse2019" package="SON50P200X200X80-7T92X145" package3d_urn="urn:adsk.eagle:package:9227372/1" value="PS_LDL112PU" x="15.445" y="6.367" smashed="yes" rot="R180">
-<attribute name="NAME" x="16.3365" y="5.0655" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="14.0505" y="5.8275" size="0.8128" layer="25" rot="R180"/>
 </element>
 <element name="PWR:LDO1" library="0-micromouse2019" package="SON65P200X200X80-7T100X160" package3d_urn="urn:adsk.eagle:package:9228423/1" value="PS_TPS735DRVT" x="21.144" y="5.203" smashed="yes" rot="R180">
 <attribute name="NAME" x="19.14011875" y="2.798159375" size="0.8128" layer="25" ratio="10" rot="SR0"/>
@@ -1309,7 +1309,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="SERIES_RESISTOR_R" value="270R" x="4.45" y="5.05" size="1.778" layer="27" display="off"/>
 </element>
 <element name="MCU:R4" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="270R" x="8.8" y="10.2" smashed="yes" rot="MR0">
-<attribute name="NAME" x="14.515" y="9.819" size="0.8128" layer="26" rot="MR0"/>
+<attribute name="NAME" x="14.261" y="9.819" size="0.8128" layer="26" rot="MR0"/>
 <attribute name="SPICEPREFIX" value="R" x="8.8" y="10.2" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="9.435" y="8.803" size="0.8128" layer="28" rot="MR0"/>
 </element>
@@ -1391,12 +1391,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="VALUE" x="5.915" y="38.885" size="0.8128" layer="28" rot="MR180"/>
 </element>
 <element name="IRD1:R5" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="2R" x="11.75" y="34.15" smashed="yes" rot="MR90">
-<attribute name="NAME" x="11.623" y="28.943" size="0.8128" layer="26" rot="MR90"/>
+<attribute name="NAME" x="11.824" y="32.324" size="0.8128" layer="26" rot="MR0"/>
 <attribute name="SPICEPREFIX" value="R" x="11.75" y="34.15" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="10.353" y="33.515" size="0.8128" layer="28" rot="MR90"/>
 </element>
 <element name="IRD1:R6" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="2R" x="13" y="34.15" smashed="yes" rot="MR90">
-<attribute name="NAME" x="12.492" y="28.943" size="0.8128" layer="26" rot="MR90"/>
+<attribute name="NAME" x="13.703" y="34.244" size="0.8128" layer="26" rot="MR180"/>
 <attribute name="SPICEPREFIX" value="R" x="13" y="34.15" size="1.778" layer="28" rot="MR90" display="off"/>
 <attribute name="VALUE" x="11.603" y="33.515" size="0.8128" layer="28" rot="MR90"/>
 </element>
@@ -1627,8 +1627,8 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <contactref element="IMU:IC1" pad="9"/>
 <wire x1="22.162" y1="46.422" x2="21.93" y2="46.19" width="0.1524" layer="1"/>
 <via x="21.93" y="46.19" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="21.93" y1="46.19" x2="21.525" y2="45.785" width="0.1524" layer="16"/>
-<wire x1="21.525" y1="45.785" x2="20.954" y2="45.785" width="0.1524" layer="16"/>
+<wire x1="21.93" y1="46.19" x2="21.906" y2="46.166" width="0.1524" layer="16"/>
+<wire x1="21.906" y1="46.166" x2="20.954" y2="46.166" width="0.1524" layer="16"/>
 <wire x1="24.415" y1="46.422" x2="22.162" y2="46.422" width="0.1524" layer="1"/>
 </signal>
 <signal name="IMU:CPOUT">
@@ -2038,8 +2038,8 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <via x="28.769" y="42.023" extent="1-16" drill="0.3" diameter="0.6"/>
 <wire x1="25.64" y1="49.22" x2="25.64" y2="48.147" width="0.1524" layer="1"/>
 <wire x1="27.64" y1="49.28" x2="27.64" y2="48.147" width="0.1524" layer="1"/>
-<wire x1="19.753" y1="44.712" x2="19.753" y2="45.584" width="0.1524" layer="16"/>
-<wire x1="19.753" y1="45.584" x2="19.954" y2="45.785" width="0.1524" layer="16"/>
+<wire x1="19.753" y1="44.712" x2="19.753" y2="45.965" width="0.1524" layer="16"/>
+<wire x1="19.753" y1="45.965" x2="19.954" y2="46.166" width="0.1524" layer="16"/>
 <wire x1="19.753" y1="44.712" x2="19.753" y2="44.347" width="0.1524" layer="16"/>
 <wire x1="19.753" y1="44.347" x2="20.35" y2="43.75" width="0.3" layer="16"/>
 <wire x1="20.35" y1="43.75" x2="21.55" y2="43.75" width="0.3" layer="16"/>
