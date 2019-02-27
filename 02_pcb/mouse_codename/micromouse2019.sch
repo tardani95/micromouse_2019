@@ -7501,7 +7501,7 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="GND1" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="P+1" library="0-micromouse2019" deviceset="VCC" device=""/>
 <part name="GND2" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="C1" library="0-micromouse2019" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10u"/>
+<part name="C1" library="0-micromouse2019" deviceset="C-US" device="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="4u7"/>
 <part name="P+2" library="0-micromouse2019" deviceset="VCC" device=""/>
 </parts>
 <sheets>
