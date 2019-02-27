@@ -36,7 +36,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -1214,7 +1214,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="VALUE" x="16.725" y="5.215" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="PWR:C2" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="10n" x="22.45" y="7.33" smashed="yes" rot="R180">
-<attribute name="NAME" x="23.847" y="9.235" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="24.736" y="9.743" size="0.8128" layer="25" rot="R180"/>
 <attribute name="SPICEPREFIX" value="C" x="22.45" y="7.33" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="23.085" y="9.235" size="1.27" layer="27" rot="R180"/>
 </element>
@@ -2742,13 +2742,13 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <signal name="IRD1:DRAIN_2">
 <contactref element="IRD1:FET1" pad="3"/>
 <contactref element="IRD1:J1" pad="2"/>
-<wire x1="11.23630625" y1="38.4769" x2="11.66369375" y2="38.4769" width="0.1778" layer="1"/>
-<wire x1="11.66369375" y1="38.4769" x2="11.9659" y2="38.17469375" width="0.1778" layer="1"/>
-<wire x1="10.2451" y1="38.038" x2="10.79740625" y2="38.038" width="0.1778" layer="1"/>
-<wire x1="10.79740625" y1="38.038" x2="11.23630625" y2="38.4769" width="0.1778" layer="1"/>
-<wire x1="11.9659" y1="36.72430625" x2="11.17959375" y2="35.938" width="0.1778" layer="1"/>
+<wire x1="11.23630625" y1="38.6039" x2="11.66369375" y2="38.6039" width="0.1778" layer="1"/>
+<wire x1="11.66369375" y1="38.6039" x2="12.0929" y2="38.17469375" width="0.1778" layer="1"/>
+<wire x1="10.2451" y1="38.038" x2="10.67040625" y2="38.038" width="0.1778" layer="1"/>
+<wire x1="10.67040625" y1="38.038" x2="11.23630625" y2="38.6039" width="0.1778" layer="1"/>
+<wire x1="12.0929" y1="36.85130625" x2="11.17959375" y2="35.938" width="0.1778" layer="1"/>
 <wire x1="11.17" y1="35.938" x2="11.17959375" y2="35.938" width="0.1778" layer="1"/>
-<wire x1="11.9659" y1="38.17469375" x2="11.9659" y2="36.72430625" width="0.1778" layer="1"/>
+<wire x1="12.0929" y1="38.17469375" x2="12.0929" y2="36.85130625" width="0.1778" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="IRD1:FET1" pad="2"/>
@@ -2829,12 +2829,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <signal name="IRD2:DRAIN_2">
 <contactref element="IRD2:FET1" pad="3"/>
 <contactref element="IRD2:J1" pad="2"/>
-<wire x1="11.186825" y1="42.4055" x2="11.603175" y2="42.4055" width="0.1778" layer="1"/>
-<wire x1="11.603175" y1="42.4055" x2="11.95" y2="42.058675" width="0.1778" layer="1"/>
-<wire x1="10.769325" y1="41.988" x2="11.186825" y2="42.4055" width="0.1778" layer="1"/>
-<wire x1="10.1951" y1="41.988" x2="10.769325" y2="41.988" width="0.1778" layer="1"/>
-<wire x1="11.95" y1="42.058675" x2="11.95" y2="40.694325" width="0.1778" layer="1"/>
-<wire x1="11.95" y1="40.694325" x2="11.143675" y2="39.888" width="0.1778" layer="1"/>
+<wire x1="11.186825" y1="42.5325" x2="11.730175" y2="42.5325" width="0.1778" layer="1"/>
+<wire x1="11.730175" y1="42.5325" x2="12.077" y2="42.185675" width="0.1778" layer="1"/>
+<wire x1="10.642325" y1="41.988" x2="11.186825" y2="42.5325" width="0.1778" layer="1"/>
+<wire x1="10.1951" y1="41.988" x2="10.642325" y2="41.988" width="0.1778" layer="1"/>
+<wire x1="12.077" y1="42.185675" x2="12.077" y2="40.821325" width="0.1778" layer="1"/>
+<wire x1="12.077" y1="40.821325" x2="11.143675" y2="39.888" width="0.1778" layer="1"/>
 <wire x1="11.12" y1="39.888" x2="11.143675" y2="39.888" width="0.127" layer="1"/>
 </signal>
 <signal name="N$5">
