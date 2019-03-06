@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    Project/STM32F4xx_StdPeriph_Template/stm32f4xx_it.c 
+  * @file    stm32f4xx_it.c
   * @author  MCD Application Team
   * @version V1.1.0
   * @date    18-January-2013
