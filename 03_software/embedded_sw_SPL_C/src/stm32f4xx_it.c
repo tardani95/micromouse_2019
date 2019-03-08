@@ -30,7 +30,12 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
 
-/** @addtogroup Template_Project
+/** @addtogroup micromouse2019_main
+  * @{
+  */
+
+/** @defgroup Main_ISR_driver Main Interrupt Service Routines
+  * @brief    main ISR driver modules
   * @{
   */
 
@@ -162,6 +167,10 @@ void SysTick_Handler(void)
 /**
   * @}
   */ 
+
+/**
+  * @}
+  */
 
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

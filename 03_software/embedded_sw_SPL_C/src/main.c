@@ -1,4 +1,32 @@
 /**
+ * @mainpage 	Micromouse 2019 - Waldläufer
+ * @author 	Daniel Tar, Zoltan Resi, Andras Lauko
+ * @date		8-03-2019  //TODO update date
+ *
+ * here comes the code style,
+ * naming conventions,
+ * general information,
+ *
+ *
+ *
+ Documentation Rules:
+
+ For variables:
+ int var; Detailed description after the member
+
+ For functions one can use the @ param command to document the parameters and then use [in], [out], [in,out] to document the direction. For inline documentation this is also possible by starting with the direction attribute, e.g.
+
+ * @ brief description
+ * @ param v
+ * @ return None
+
+ void foo(int v << [in] docs for input parameter v. );
+ */
+
+
+
+
+/**
  ******************************************************************************
  * @file    main.c
  * @author  Daniel Tar, Zoltar Resi, Andras Lauko
@@ -32,19 +60,24 @@
 /* Includes */
 #include "stm32f4xx.h"
 
+/**
+ * @defgroup micromouse2019_main main_software
+ * @brief 	main()
+ * @{
+ */
+
 /* Private macro */
 /* Private variables */
 /* Private function prototypes */
 /* Private functions */
 
 /**
- * @brief
- * @param a interger 1
- * @param b interger 2
- * @return the sum of intergers
+ * @brief Initialize peripherals
+ * @param None
+ * @return None
  */
-int sum_ab(int a, int b) {
-	return a + b;
+void Init_Periph(void) {
+
 }
 
 /**
@@ -76,4 +109,8 @@ int main(void) {
 		i++;
 	}
 }
+
+/**
+ * @}
+ */
 

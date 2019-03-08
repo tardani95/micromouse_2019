@@ -1,11 +1,22 @@
 /**
- * @file   periph.h
+ * @file   status_led.h
  * @author tard
  * @date   Mar 8, 2019
  */
 
-#ifndef PERIPH_H_
-#define PERIPH_H_
+#ifndef STATUS_LED_H_
+#define STATUS_LED_H_
+
+
+/** @addtogroup micromouse2019_main
+  * @{
+  */
+
+/** @addtogroup Status_LEDs
+  * @{
+  */
+
+
 
 /* Includes */
 #include "stm32f4xx.h"
@@ -20,7 +31,6 @@
 #include "misc.h"
 
 /* Function Prototypes */
-
 /**
  * @brief  dummy
  * @param  None
@@ -38,8 +48,17 @@ void initGeneralPurposeTIM(void);
 
 void initDebug(void);
 
+
 /* Defines */
 #define HEARTBEAT_PORT GPIO_
 #define HEARTBEAT_SPEED GPIO_Speed_25MHz
 
-#endif /* PERIPH_H_ */
+#endif /* STATUS_LED_H_ */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
