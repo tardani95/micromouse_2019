@@ -2,21 +2,18 @@
  * @file   status_led.h
  * @author tard
  * @date   Mar 8, 2019
-************************/
+ ************************/
 
 #ifndef HW_STATUS_LED_H_
 #define HW_STATUS_LED_H_
 
-
 /** @addtogroup hardware_modules
-  * @{
-  */
+ * @{
+ */
 
-/** @addtogroup Status_LEDs
-  * @{
-  */
-
-
+/** @addtogroup Status_LED
+ * @{
+ */
 
 /* Includes */
 #include "stm32f4xx.h"
@@ -48,17 +45,17 @@ void initGeneralPurposeTIM(void);
 
 void initDebug(void);
 
-
 /* Defines */
 #define HEARTBEAT_PORT GPIO_
 #define HEARTBEAT_SPEED GPIO_Speed_25MHz
 
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */
+
 #endif /* HW_STATUS_LED_H_ */
 
-/**
-  * @}
-  */
-
-/**
-  * @}
-  */

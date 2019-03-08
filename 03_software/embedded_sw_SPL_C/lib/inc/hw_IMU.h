@@ -12,19 +12,19 @@
  * @{
  */
 
-/** @addtogroup Internal Measurement Unit
- *  @brief MPU6050
+/** @addtogroup IMU
+ *  @brief 		MPU6050
  * @{
  */
 
 //TODO user code here
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */
 
 #endif /* HW_IMU_H_ */
 
-/**
- * @}
- */
-
-/**
- * @}
- */
