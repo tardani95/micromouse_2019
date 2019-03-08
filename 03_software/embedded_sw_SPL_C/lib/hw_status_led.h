@@ -1,11 +1,11 @@
-/**
+/***********************
  * @file   status_led.h
  * @author tard
  * @date   Mar 8, 2019
- */
+************************/
 
-#ifndef STATUS_LED_H_
-#define STATUS_LED_H_
+#ifndef HW_STATUS_LED_H_
+#define HW_STATUS_LED_H_
 
 
 /** @addtogroup micromouse2019_main
@@ -53,7 +53,7 @@ void initDebug(void);
 #define HEARTBEAT_PORT GPIO_
 #define HEARTBEAT_SPEED GPIO_Speed_25MHz
 
-#endif /* STATUS_LED_H_ */
+#endif /* HW_STATUS_LED_H_ */
 
 /**
   * @}

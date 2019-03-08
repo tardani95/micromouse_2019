@@ -55,6 +55,9 @@
  */
 
 /* Includes */
+#include <hw_button.h>
+#include <hw_imu.h>
+#include <hw_status_led.h>
 #include "stm32f4xx.h"
 
 /**
