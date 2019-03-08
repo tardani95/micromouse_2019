@@ -34,8 +34,8 @@
 								<option id="com.atollic.truestudio.as.general.incpath.1948503999" name="Include path" superClass="com.atollic.truestudio.as.general.incpath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../src"/>
 									<listOptionValue builtIn="false" value="../lib"/>
-									<listOptionValue builtIn="false" value="../lib/hardware_modules"/>
-									<listOptionValue builtIn="false" value="../lib/software_modules"/>
+									<listOptionValue builtIn="false" value="../lib/inc"/>
+									<listOptionValue builtIn="false" value="../lib/src"/>
 									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../Libraries/Device/STM32F4xx/Include"/>
 									<listOptionValue builtIn="false" value="../Libraries/STM32F4xx_StdPeriph_Driver/inc"/>
@@ -51,8 +51,8 @@
 								<option id="com.atollic.truestudio.gcc.directories.select.1538859967" name="Include path" superClass="com.atollic.truestudio.gcc.directories.select" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../src"/>
 									<listOptionValue builtIn="false" value="../lib"/>
-									<listOptionValue builtIn="false" value="../lib/hardware_modules"/>
-									<listOptionValue builtIn="false" value="../lib/software_modules"/>
+									<listOptionValue builtIn="false" value="../lib/inc"/>
+									<listOptionValue builtIn="false" value="../lib/src"/>
 									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../Libraries/Device/STM32F4xx/Include"/>
 									<listOptionValue builtIn="false" value="../Libraries/STM32F4xx_StdPeriph_Driver/inc"/>

@@ -5,7 +5,7 @@
  * @version	vx_x
 ************************/
 
-#include "sw_menu.c"
+#include "sw_menu.h"
 
 /** @addtogroup software_modules
   * @{

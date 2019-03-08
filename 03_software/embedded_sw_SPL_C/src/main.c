@@ -67,7 +67,10 @@
  * @{
  */
 #include "hw_button.h"
-#include "hw_imu.h"
+#include "hw_encoder.h"
+#include "hw_IMU.h"
+#include "hw_IR_module.h"
+#include "hw_motor_control.h"
 #include "hw_status_led.h"
 /**
  * @}
@@ -77,6 +80,8 @@
  * @defgroup software_modules Software Modules
  * @{
  */
+#include "sw_debug.h"
+#include "sw_GPTIM.h"
 #include "sw_menu.h"
 /**
  * @}
