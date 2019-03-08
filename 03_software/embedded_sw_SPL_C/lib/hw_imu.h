@@ -8,7 +8,7 @@
 #ifndef HW_IMU_H_
 #define HW_IMU_H_
 
-/** @addtogroup micromouse2019_main
+/** @addtogroup hardware_modules
  * @{
  */
 
@@ -16,6 +16,8 @@
  *  @brief MPU6050
  * @{
  */
+
+//TODO user code here
 
 #endif /* HW_IMU_H_ */
 

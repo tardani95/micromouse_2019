@@ -1,25 +1,23 @@
 /***********************
- * @file 	button.h
+ * @file 	sw_menu.c
  * @author	tard
  * @date	Mar 8, 2019
  * @version	vx_x
 ************************/
 
-#ifndef HW_BUTTON_H_
-#define HW_BUTTON_H_
+#include "sw_menu.c"
 
-/** @addtogroup hardware_modules
+/** @addtogroup software_modules
   * @{
   */
 
-/** @addtogroup Button
+/** @defgroup Menu
   * @{
   */
+
 
 //TODO user code here
 
-
-#endif /* HW_BUTTON_H_ */
 
 /**
   * @}

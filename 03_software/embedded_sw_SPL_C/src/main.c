@@ -54,18 +54,33 @@
  ******************************************************************************
  */
 
-/* Includes */
-#include <hw_button.h>
-#include <hw_imu.h>
-#include <hw_status_led.h>
-#include "stm32f4xx.h"
-
 /**
  * @defgroup micromouse2019_main main_software
  * @brief 	main()
  * @{
  */
+/* Includes */
+#include "stm32f4xx.h"
 
+/**
+ * @defgroup hardware_modules Hardware Modules
+ * @{
+ */
+#include "hw_button.h"
+#include "hw_imu.h"
+#include "hw_status_led.h"
+/**
+ * @}
+ */
+
+/**
+ * @defgroup software_modules Software Modules
+ * @{
+ */
+#include "sw_menu.h"
+/**
+ * @}
+ */
 /* Private macro */
 /* Private variables */
 /* Private function prototypes */

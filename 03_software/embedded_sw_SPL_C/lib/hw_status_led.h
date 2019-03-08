@@ -8,7 +8,7 @@
 #define HW_STATUS_LED_H_
 
 
-/** @addtogroup micromouse2019_main
+/** @addtogroup hardware_modules
   * @{
   */
 
