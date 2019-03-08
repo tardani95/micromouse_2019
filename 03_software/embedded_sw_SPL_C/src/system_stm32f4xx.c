@@ -206,11 +206,10 @@ static void SystemInit_ExtMemCtl(void);
  */
 
 /**
- * @brief  Setup the microcontroller system
- *         Initialize the Embedded Flash Interface, the PLL and update the
- *         SystemFrequency variable.
- * @param  None
- * @retval None
+ * @brief Setup the microcontroller system
+ * Initialize the Embedded Flash Interface, the PLL and update the
+ * SystemFrequency variable.
+ * @return None
  */
 void SystemInit(void) {
 	/* FPU settings ------------------------------------------------------------*/
@@ -347,7 +346,6 @@ static void SetSysClock(void) {
 	/******************************************************************************/
 
 //  __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
-
 	/* DO NOT Enable HSE -- tard */
 //  RCC->CR |= ((uint32_t)RCC_CR_HSEON);
 	/* DO NOT Wait till HSE is ready and if Time out is reached exit -- tard */

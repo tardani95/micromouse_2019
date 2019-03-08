@@ -39,11 +39,11 @@
 
 /**
  * @brief
- * @param a - interger 1
- * @param b - interger 2
+ * @param a interger 1
+ * @param b interger 2
  * @return the sum of intergers
  */
-int function(int a, int b) {
+int sum_ab(int a, int b) {
 	return a + b;
 }
 
@@ -56,6 +56,8 @@ int function(int a, int b) {
  */
 int main(void) {
 	int i = 0;
+
+	//SystemInit(); /*startup script calls this function before main*/
 
 	/**
 	 *  IMPORTANT NOTE!
