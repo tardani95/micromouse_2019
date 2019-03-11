@@ -1,14 +1,13 @@
 /**
  * @mainpage 	Micromouse 2019 - Waldläufer
- * @author 	Daniel Tar, Zoltan Resi, Andras Lauko
- * @date		8-03-2019  //TODO update date
+ * @author 		Daniel Tar, Zoltan Resi, Andras Lauko
+ * @date		11-03-2019
  *
  * here comes the code style,
  * naming conventions,
  * general information,
  *
- *
- *
+ @verbatim
  Documentation Rules:
 
  For variables:
@@ -20,6 +19,14 @@
  * @ param v
  * @ return None
 
+ @endverbatim
+
+ @code
+ int sum(int a, int b){
+ return a+b;
+ }
+ @endcode
+
  void foo(int v << [in] docs for input parameter v. );
  */
 
@@ -28,7 +35,7 @@
  * @file    main.c
  * @author  Daniel Tar, Zoltar Resi, Andras Lauko
  * @version V0.1
- * @date    04-03-2019
+ * @date    11-03-2019
  * @brief   main program
  ******************************************************************************
  * @attention
@@ -61,6 +68,7 @@
  */
 /* Includes */
 #include "stm32f4xx.h"
+#include "misc.h"
 
 /**
  * @defgroup hardware_modules Hardware Modules
@@ -92,12 +100,17 @@
 /* Private functions */
 
 /**
- * @brief Initialize peripherals
+ * @brief Initialize all peripherals\n
+ * but with all interrupts disabled
  * @param None
  * @return None
  */
 void Init_Periph(void) {
+	RCC_ClocksTypeDef clock_info;
+	RCC_GetClocksFreq(&clock_info);
 
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
+	Init_Buttons();
 }
 
 /**
@@ -111,7 +124,7 @@ int main(void) {
 	int i = 0;
 
 	//SystemInit(); /*startup script calls this function before main*/
-
+	Init_Periph();
 	/**
 	 *  IMPORTANT NOTE!
 	 *  The symbol VECT_TAB_SRAM needs to be defined when building the project
@@ -127,6 +140,26 @@ int main(void) {
 	/* Infinite loop */
 	while (1) {
 		i++;
+	}
+}
+
+void EXTI15_10_IRQHandler() {
+	/* button1 pressed*/
+	if (SET == EXTI_GetITStatus(BTN1_EXTI_Line)) {
+
+		//TODO handle button1 pressed action
+
+		EXTI->PR = BTN1_EXTI_Line; /*clear pendig bit for button1*/
+		return;
+	}
+
+	/* button2 pressed*/
+	if (SET == EXTI_GetITStatus(BTN2_EXTI_Line)) {
+
+		//TODO handle button2 pressed action
+
+		EXTI->PR = BTN2_EXTI_Line; /*clear pendig bit for button2*/
+		return;
 	}
 }
 
