@@ -33,7 +33,7 @@ struct item {
 	onSelectCallback_t onSelectCallback_; /**<Callback function to be called when item is selected. */
 	item_parr_t *items_; /**<Pointer to the pointer array which contains the child items of this item. */
 	item_it_t first_; /**<Iterator which points to the first child item (parent). */
-	item_it_t item_iterator_; /**<Iterator which points to the currently selectable child item. */
+	item_it_t item_iterator_; /**<Iterator which points to the currently highlighted child item. */
 	item_it_t last_item_; /**<Iterator which points to the last child item. */
 };
 

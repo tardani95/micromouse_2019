@@ -84,7 +84,7 @@ void resetItemIterator(item_p_t item_p) {
 
 
 /**
- * @brief Select the currently selectable item of the currently active item of the menu.
+ * @brief Select the currently highlighted item of the currently active item of the menu.
  * @param menu_p Pointer to the menu.
  */
 void selectItem(menu_p_t menu_p) {
@@ -95,7 +95,7 @@ void selectItem(menu_p_t menu_p) {
 
 
 /**
- * @brief Makes the next subitem to be the selectable item.
+ * @brief Makes the next subitem to be the highlighted item.
  * @param menu_p Pointer to the menu.
  */
 void nextItem(menu_p_t menu_p) {
@@ -106,7 +106,7 @@ void nextItem(menu_p_t menu_p) {
 	return;
 }
 
-/** @defgroup menu_callbacks Menu_callbacks
+/** @defgroup menu_callbacks Menu Callbacks
  * @brief Callback function definitions for the items in the menu system.
  * @{
  */
@@ -147,8 +147,7 @@ SUBMENU(map_extension_method);
 SUBMENU(map_control);
 SUBMENU(explore_config, &direct_route_algorithm, &map_extension_method, &map_control);
 SUBMENU(configure, &explore_config, &speedrun_config);
-SUBMENU(root, &configure, &run);
-
+SUBMENU(main_root, &configure, &run);
 /**
  * @brief Main menu for the micromouse project.
  *
@@ -157,7 +156,22 @@ SUBMENU(root, &configure, &run);
  * [Open .io](https://www.draw.io/#G16V72VMnYVvCvvIUJUxI6ZndSpA8F2fbj)
  * @param root Address of the root item of the main menu.
  */
-MENU(main_menu, &root);
+MENU(main_menu, &main_root);
+
+
+SUBMENU(exit_to_main_menu);
+SUBMENU(reset_map);
+SUBMENU(after_run_root, &reset_map, &exit_to_main_menu);
+/**
+ * @brief After run menu for the micromouse project.
+ *
+ *Diagram:\n
+ * ![Diagram (.png)](/waldlaeufer_after_run_menu.png )\n
+ * [Open .io](https://www.draw.io/#G1xwH4rXKdAM4zQYDQKu97RqXQWLk7L4p0)
+ * @param root Address of the root item of the after run menu.
+ */
+MENU(after_run_menu, &after_run_root);
+
 
 /**
  * @}
