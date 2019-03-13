@@ -17,12 +17,17 @@
 /*
  * array for holding status led port and pin definitions
  */
-const uint32_t LED_defs[3][2] = {
-		{ ST_LED_HEARTBEAT_PORT	, ST_LED_HEARTBEAT_PIN },
-		{ ST_LED_PINK_PORT		, ST_LED_PINK_PIN	   },
-		{ ST_LED_YELLOW_PORT	, ST_LED_YELLOW_PIN	   },
+GPIO_TypeDef *LED_ports[3] = {
+		ST_LED_HEARTBEAT_PORT,
+		ST_LED_PINK_PORT,
+		ST_LED_YELLOW_PORT,
 };
 
+uint16_t LED_pins[3] = {
+		ST_LED_HEARTBEAT_PIN,
+		ST_LED_PINK_PIN,
+		ST_LED_YELLOW_PIN
+};
 
 /*
  * array for holding RGB color definitions
@@ -76,17 +81,17 @@ void initStatusLeds(void){
 	st_led_GPIO_InitStructure.GPIO_Pin = ST_LED_RGBB_PIN;
 	GPIO_Init(ST_LED_RGBB_PORT, &st_led_GPIO_InitStructure);
 
-	GPIO_PinAFConfig(ST_LED_RGBR_PORT, ST_LED_RGBR_PIN, ST_LED_RGB_TIM);
-	GPIO_PinAFConfig(ST_LED_RGBG_PORT, ST_LED_RGBG_PIN, ST_LED_RGB_TIM);
-	GPIO_PinAFConfig(ST_LED_RGBB_PORT, ST_LED_RGBB_PIN, ST_LED_RGB_TIM);
+	GPIO_PinAFConfig(ST_LED_RGBR_PORT, ST_LED_RGBR_PIN, GPIO_AF_TIM8);
+	GPIO_PinAFConfig(ST_LED_RGBG_PORT, ST_LED_RGBG_PIN, GPIO_AF_TIM8);
+	GPIO_PinAFConfig(ST_LED_RGBB_PORT, ST_LED_RGBB_PIN, GPIO_AF_TIM8);
 
 	/*Configure timer for RGB led*/
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM8, ENABLE);
 
 	TIM_TimeBaseInitTypeDef RGB_TimerInitStructure;
-	TIM_TimeBaseStructInit(&TIM_TimeBaseInitStruct);
-	RGB_TimerInitStructure.TIM_Prescaler 		 = 40000;
-	RGB_TimerInitStructure.TIM_Period 			 = ST_LED_RGB_TIM_PERIOD;
+	TIM_TimeBaseStructInit(&RGB_TimerInitStructure);
+	RGB_TimerInitStructure.TIM_Prescaler 		 = 168 - 1; 				/* Clock freqeuency: 168MHz/168 = 1 MHz */
+	RGB_TimerInitStructure.TIM_Period 			 = ST_LED_RGB_TIM_PERIOD - 1; 	/* PWM frequency: 1MHz/1000 = 1KHz */
 	RGB_TimerInitStructure.TIM_CounterMode 		 = TIM_CounterMode_Up;
 	RGB_TimerInitStructure.TIM_ClockDivision 	 = TIM_CKD_DIV1;
 	RGB_TimerInitStructure.TIM_RepetitionCounter = 0;
@@ -109,28 +114,22 @@ void initStatusLeds(void){
 	TIM_OC2Init(ST_LED_RGB_TIM, &RGB_OCInitStructure);
 	TIM_OC3Init(ST_LED_RGB_TIM, &RGB_OCInitStructure);
 
-	TIM_OC1PreloadConfig(ST_LED_RGB_TIM, TIM_OCPreload_ENABLE);
-	TIM_OC2PreloadConfig(ST_LED_RGB_TIM, TIM_OCPreload_ENABLE);
-	TIM_OC3PreloadConfig(ST_LED_RGB_TIM, TIM_OCPreload_ENABLE);
+	TIM_OC1PreloadConfig(ST_LED_RGB_TIM, ENABLE);
+	TIM_OC2PreloadConfig(ST_LED_RGB_TIM, ENABLE);
+	TIM_OC3PreloadConfig(ST_LED_RGB_TIM, ENABLE);
 
 }
 
 void setLED(ST_LED st_led){
-	uint32_t led_port = LED_defs[st_led][LED_PORT];
-	uint32_t led_pin  = LED_defs[st_led][LED_PIN];
-	GPIO_SetBits(led_port, led_pin);
+	GPIO_SetBits(m_getPort(st_led),  m_getPin(st_led));
 }
 
 void resetLED(ST_LED st_led){
-	uint32_t led_port = LED_defs[st_led][LED_PORT];
-	uint32_t led_pin  = LED_defs[st_led][LED_PIN];
-	GPIO_ResetBits(led_port, led_pin);
+	GPIO_ResetBits(m_getPort(st_led),  m_getPin(st_led));
 }
 
 void toggleLED(ST_LED st_led){
-	uint32_t led_port = LED_defs[st_led][LED_PORT];
-	uint32_t led_pin  = LED_defs[st_led][LED_PIN];
-	GPIO_ToggleBits(led_port, led_pin);
+	GPIO_ToggleBits(m_getPort(st_led),  m_getPin(st_led));
 }
 
 void setRGB(RGB_COLOR color){
@@ -138,8 +137,8 @@ void setRGB(RGB_COLOR color){
 	uint16_t pulse_green = RGB_codes[color][RGBG];
 	uint16_t pulse_blue  = RGB_codes[color][RGBB];
 	m_setRedPulse(pulse_red);
-	m_setBluePulse(pulse_red);
-	m_setGreenPulse(pulse_red);
+	m_setBluePulse(pulse_green);
+	m_setGreenPulse(pulse_blue);
 }
 
 void resetRGB(void){
