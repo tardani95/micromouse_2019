@@ -1,7 +1,7 @@
 /***********************
  * @file 	hw_encoder.h
  * @author	resiz
- * @date	Mar 8, 2019
+ * @date	Mar 12, 2019
  * @version	vx_x
  ************************/
 

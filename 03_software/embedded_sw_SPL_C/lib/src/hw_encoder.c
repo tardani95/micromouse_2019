@@ -1,8 +1,7 @@
 /***********************
  * @file 	hw_encoder.c
- * @author	tard
- * @date	Mar 8, 2019
- * @version	vx_x
+ * @author	resiz
+ * @date	Mar 12, 2019
  ************************/
 
 #include "hw_encoder.h"
