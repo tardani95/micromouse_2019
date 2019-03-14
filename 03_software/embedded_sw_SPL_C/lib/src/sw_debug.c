@@ -1,11 +1,12 @@
 /***********************
  * @file 	sw_debug.c
- * @author	tard
- * @date	Mar 8, 2019
- * @version	vx_x
+ * @author	resiz
+ * @date	Mar 14, 2019
  ************************/
 
 #include "sw_debug.h"
+#include "hw_BT_module.h"
+#include <string.h>
 
 /** @addtogroup software_modules
  * @{
@@ -14,6 +15,26 @@
 /** @defgroup DBG	Debug
  * @{
  */
+
+
+/* string size max 100 char! */
+void consoleWrite(char *dbg_src, char *dbg_cat, char *msg){
+	/*Send name of message source*/
+	strcpy(uart_buffer, dbg_src);
+	strcat(uart_buffer, ": ");
+	BTSendString(uart_buffer);
+
+	/*Send category of message source*/
+	strcpy(uart_buffer, dbg_cat);
+	strcat(uart_buffer, ": ");
+	BTSendString(uart_buffer);
+
+	/*Send message*/
+	strcpy(uart_buffer, msg);
+	strcat(uart_buffer, "\n");
+	BTSendString(uart_buffer);
+
+}
 
 //TODO user code here
 /**

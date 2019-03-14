@@ -22,9 +22,9 @@
 
 #define IR12_PORT 	GPIOA
 #define IRD1_PIN 	GPIO_Pin_0
-#define IRD2_PIN 	GPIO_PIN_1
-#define PTR1_PIN	GPIO_PIN_2
-#define PTR2_PIN	GPIO_PIN_3
+#define IRD2_PIN 	GPIO_Pin_1
+#define PTR1_PIN	GPIO_Pin_2
+#define PTR2_PIN	GPIO_Pin_3
 
 #define IR34_PORT	GPIOC
 #define IRD3_PIN 	GPIO_Pin_0
@@ -52,7 +52,7 @@ void initIR(void);
 
 void setIRD(IR_SENSOR);
 void resetIRD(IR_SENSOR);
-uint16_t getPTRValue(IR_SENSOR);
+uint16_t getPTRValue(void);
 
 uint16_t measureIRSingle(IR_SENSOR);
 uint16_t *measureIRAll(void);

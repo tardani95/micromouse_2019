@@ -5,6 +5,7 @@
  ************************/
 
 #include "hw_IR_module.h"
+#include "hw_params.h"
 
 /** @addtogroup hardware_modules
  * @{
@@ -15,7 +16,7 @@
  * @{
  */
 
-GPIO_Typedef *IR_port_mapping[4] = {
+GPIO_TypeDef *IR_port_mapping[4] = {
 		IR12_PORT,
 		IR12_PORT,
 		IR34_PORT,
@@ -80,15 +81,14 @@ void initIR(void){
 	GPIO_Init(IR34_PORT, &IR_GPIOInitStructure);
 
 	/*Init ADC for phototransistors*/
-	ADC_DeInit(PTR_ADC);
 	/*Init clock for ADC*/
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
 
-	ADC_CommonInitTypeDef PTR_ADCCommonInitStructure;
-	ADC_CommonStructInit(&PTR_ADCCommonInitStructure);
-	PTR_ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-	PTR_ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 21MHz */
-	ADC_CommonInit(&PTR_ADCCommonInitStructure);
+	ADC_CommonInitTypeDef ADCCommonInitStructure;
+	ADC_CommonStructInit(&ADCCommonInitStructure);
+	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 21MHz */
+	ADC_CommonInit(&ADCCommonInitStructure);
 
 	ADC_InitTypeDef PTR_ADCInitStructure;
 	PTR_ADCInitStructure.ADC_ScanConvMode			= DISABLE;
@@ -121,7 +121,7 @@ void resetIRD(IR_SENSOR IR_sensor){
 	GPIO_ResetBits(IR_port_mapping[IR_sensor], IRD_pin_mapping[IR_sensor]);
 }
 
-uint16_t getPTRValue(){
+uint16_t getPTRValue(void){
 	ADC_SoftwareStartConv(PTR_ADC);
 
 	while(ADC_GetFlagStatus(PTR_ADC, ADC_FLAG_EOC) == RESET)
@@ -143,7 +143,7 @@ uint16_t *measureIRAll(void){
 	for(int i = 0; i <= 3; i++){
 		IR_dist_buff[i] = measureIRSingle(i);
 	}
-	return ptr_adc_buff;
+	return IR_dist_buff;
 }
 
 /**
