@@ -96,7 +96,15 @@
  */
 /* Private macro */
 /* Private variables */
+uint8_t i2cRxBuffer[14] = { };
+uint8_t i2cTxBuffer[] = { 0x3B };
+int16_t accel_gyro_temp[7];
+float gForceX, gForceY, gForceZ;
+float rotX, rotY, rotZ;
+float temp_C;
+
 /* Private function prototypes */
+void MPU6050_CalcAccelRot(void);
 /* Private functions */
 
 /**
@@ -109,8 +117,8 @@ void Init_Periph(void) {
 	RCC_ClocksTypeDef clock_info;
 	RCC_GetClocksFreq(&clock_info);
 
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
-	Init_Buttons();
+//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
+//	Init_Buttons();
 }
 
 /**
@@ -123,7 +131,7 @@ void Init_Periph(void) {
 int main(void) {
 	int i = 0;
 
-	//SystemInit(); /*startup script calls this function before main*/
+	SystemInit(); /*startup script calls this function before main*/
 	Init_Periph();
 	/**
 	 *  IMPORTANT NOTE!
@@ -136,13 +144,28 @@ int main(void) {
 	 */
 
 	/* TODO - Add your application code here */
+	uint8_t success = Init_IMU();
+
+	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+
+	for (uint32_t i = 0; i < 32000; i += 2) {
+		i--;
+	}
+
+	MPU6050_DMAGetRawAccelGyro();
+
+
 
 	/* Infinite loop */
 	while (1) {
 		i++;
+
 	}
 }
 
+/**
+ * external interrupt handler for the buttons
+ */
 void EXTI15_10_IRQHandler() {
 	/* button1 pressed*/
 	if (SET == EXTI_GetITStatus(BTN1_EXTI_Line)) {
@@ -161,6 +184,69 @@ void EXTI15_10_IRQHandler() {
 		EXTI->PR = BTN2_EXTI_Line; /*clear pendig bit for button2*/
 		return;
 	}
+}
+
+void I2C2_EV_IRQHandler(void) {
+	if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_SB) == SET) {
+		if (i2cDirectionWrite) {
+			// STM32 Transmitter
+			I2C_Send7bitAddress(MPU6050_I2C, MPU6050_DEFAULT_ADDRESS,
+			I2C_Direction_Transmitter);
+		} else {
+			// STM32 Receiver
+			I2C_Send7bitAddress(MPU6050_I2C, MPU6050_DEFAULT_ADDRESS,
+			I2C_Direction_Receiver);
+		}
+	} else if (I2C_CheckEvent(MPU6050_I2C,
+	I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) == SUCCESS) {
+		if (i2cDirectionWrite) {
+			// STM32 Transmitter
+			DMA_Cmd(MPU6050_I2C_TX_Stream, ENABLE);
+		}
+	} else if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_BTF)) {
+		if (i2cDirectionWrite) {
+			// STM32 Transmitter
+			/*enable i2c rx stream*/
+			DMA_Cmd(MPU6050_I2C_RX_Stream, ENABLE);
+			I2C_DMALastTransferCmd(MPU6050_I2C, ENABLE);
+			I2C_GenerateSTART(MPU6050_I2C, ENABLE);
+			i2cDirectionWrite = 0;
+			I2C_ClearFlag(MPU6050_I2C, I2C_FLAG_BTF);
+		}
+	}
+}
+
+// mpu6050 readings are ready
+void DMA1_Stream0_IRQHandler(void) {
+	DMA_ClearFlag(MPU6050_I2C_RX_Stream, DMA_FLAG_TCIF0);
+	I2C_GenerateSTOP(MPU6050_I2C, ENABLE);
+	DMA_Cmd(MPU6050_I2C_TX_Stream, DISABLE);
+	DMA_Cmd(MPU6050_I2C_RX_Stream, DISABLE);
+
+	MPU6050_CalcAccelRot();
+}
+
+void MPU6050_CalcAccelRot() {
+	accel_gyro_temp[0] = (int16_t) (i2cRxBuffer[0] << 8 | i2cRxBuffer[1]);
+	accel_gyro_temp[1] = (int16_t) (i2cRxBuffer[2] << 8 | i2cRxBuffer[3]);
+	accel_gyro_temp[2] = (int16_t) (i2cRxBuffer[4] << 8 | i2cRxBuffer[5]);
+	accel_gyro_temp[6] = (int16_t) (i2cRxBuffer[6] << 8 | i2cRxBuffer[7]); //temp
+	accel_gyro_temp[3] = (int16_t) (i2cRxBuffer[8] << 8 | i2cRxBuffer[9]);
+	accel_gyro_temp[4] = (int16_t) (i2cRxBuffer[10] << 8 | i2cRxBuffer[11]);
+	accel_gyro_temp[5] = (int16_t) (i2cRxBuffer[12] << 8 | i2cRxBuffer[13]);
+
+//	gForceX = (float) accel_gyro_temp[0] / 16384.0 * 9810;
+//	gForceY = (float) accel_gyro_temp[1] / 16384.0 * 9810;
+//	gForceZ = (float) accel_gyro_temp[2] / 16384.0 * 9810;
+	gForceX = (float) accel_gyro_temp[0] / 1.67;
+	gForceY = (float) accel_gyro_temp[1] / 1.67;
+	gForceZ = (float) accel_gyro_temp[2] / 1.67;
+
+	rotX = (float) accel_gyro_temp[3] / 65.5; //131.0; gyro @250 [LSB / deg/s]
+	rotY = (float) accel_gyro_temp[4] / 65.5; //65.5   gyro @500 [LSB / deg/s]
+	rotZ = (float) accel_gyro_temp[5] / 65.5; //131.0;
+
+	temp_C = (float) accel_gyro_temp[6] / 340 + 36.53;
 }
 
 /**
