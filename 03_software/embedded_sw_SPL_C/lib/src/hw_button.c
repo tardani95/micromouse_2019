@@ -19,14 +19,14 @@ void Init_Button1() {
 	/* button1 -- PB12*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 
-	GPIO_InitTypeDef button1_GPIO_InitTypeDef; /**< gpio init typedef for button1_GPIO_InitTypeDef */
-	GPIO_StructInit(&button1_GPIO_InitTypeDef); /* set defaults value for the initstruct */
+	GPIO_InitTypeDef button1_GPIO_InitStructure; /**< gpio init typedef for button1_GPIO_InitTypeDef */
+	GPIO_StructInit(&button1_GPIO_InitStructure); /* set defaults value for the initstruct */
 
 	/* by input the ouput type (push-pull or open-drain) and output speed does not matter */
-	button1_GPIO_InitTypeDef.GPIO_Mode = GPIO_Mode_IN; /* set mode in*/
-	button1_GPIO_InitTypeDef.GPIO_Pin = BTN1_PIN; /* set pin */
-	button1_GPIO_InitTypeDef.GPIO_PuPd = GPIO_PuPd_UP; /* set input pull up */
-	GPIO_Init(BTN1_PORT, &button1_GPIO_InitTypeDef);
+	button1_GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN; /* set mode in*/
+	button1_GPIO_InitStructure.GPIO_Pin = BTN1_PIN; /* set pin */
+	button1_GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP; /* set input pull up */
+	GPIO_Init(BTN1_PORT, &button1_GPIO_InitStructure);
 
 	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOB, EXTI_PinSource12); /* use PB12 for EXTI_Line12 */
 
