@@ -18,9 +18,10 @@
 
 
 /* string size max 100 char! */
-void consoleWrite(char *dbg_src, char *dbg_cat, char *msg){
-	/*Send name of message source*/
-	strcpy(uart_buffer, dbg_src);
+void consoleWrite(char *filename, char *dbg_cat, char *msg){
+
+	/*Send name of message source file*/
+	strcpy(uart_buffer, filename);
 	strcat(uart_buffer, ": ");
 	BTSendString(uart_buffer);
 
