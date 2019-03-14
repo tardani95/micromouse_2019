@@ -71,9 +71,6 @@ void initDebug(void);*/
 #define m_setBluePulse(pulse) 	ST_LED_RGB_TIM->CCR2 = pulse
 #define m_setGreenPulse(pulse)	ST_LED_RGB_TIM->CCR3 = pulse
 
-#define m_getPort(st_led) LED_ports[st_led]
-#define m_getPin(st_led) LED_pins[st_led]
-
 
 typedef enum {
 	HEARTBEAT,

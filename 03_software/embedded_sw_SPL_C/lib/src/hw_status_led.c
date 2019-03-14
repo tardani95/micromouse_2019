@@ -121,15 +121,15 @@ void initStatusLeds(void){
 }
 
 void setLED(ST_LED st_led){
-	GPIO_SetBits(m_getPort(st_led),  m_getPin(st_led));
+	GPIO_SetBits(LED_ports[st_led], LED_pins[st_led]);
 }
 
 void resetLED(ST_LED st_led){
-	GPIO_ResetBits(m_getPort(st_led),  m_getPin(st_led));
+	GPIO_ResetBits(LED_ports[st_led], LED_pins[st_led]);
 }
 
 void toggleLED(ST_LED st_led){
-	GPIO_ToggleBits(m_getPort(st_led),  m_getPin(st_led));
+	GPIO_ToggleBits(LED_ports[st_led], LED_pins[st_led]);
 }
 
 void setRGB(RGB_COLOR color){

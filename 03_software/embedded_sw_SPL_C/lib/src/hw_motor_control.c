@@ -11,7 +11,7 @@
  */
 
 /** @defgroup motor_control Motor Control
- * @brief initialization and control functions of the motors
+ * @brief Motor controller defines and handling functions.
  * @{
  */
 
@@ -22,12 +22,12 @@ MOT_CHANNEL mot_channel_mapping[4] = {
 		BIN2
 };
 
-uint16_t mot_pin_mapping[4] = {
+/*uint16_t mot_pin_mapping[4] = {
 		MOT_AIN1_PIN,
 		MOT_AIN2_PIN,
 		MOT_BIN1_PIN,
 		MOT_BIN2_PIN
-};
+};*/
 
 __IO uint32_t *mot_ccr_mapping[4] = {
 		&(MOT_TIM->CCR1),
@@ -105,8 +105,8 @@ void initMotorControl(void){
  * motors enter coasting, but won't brake
  */
 void actuateMotors(uint16_t v_mmPs, uint16_t w_radPs){
-	uint16_t v_left_mmPs  = v_mmPs - w_radPs*AXLE_LENGTH_mm/2;
-	uint16_t v_right_mmPs = v_mmPs + w_radPs*AXLE_LENGTH_mm/2;
+	uint16_t v_left_mmPs  = v_mmPs - w_radPs * AXLE_LENGTH_mm / 2;
+	uint16_t v_right_mmPs = v_mmPs + w_radPs * AXLE_LENGTH_mm / 2;
 
 	uint16_t u_left_volt  = m_calcMotVoltage(v_left_mmPs);
 	uint16_t u_right_volt = m_calcMotVoltage(v_right_mmPs);

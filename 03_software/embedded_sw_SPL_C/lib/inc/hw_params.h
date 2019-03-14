@@ -23,6 +23,9 @@
 #define MOT_MAX_VOLT 3.3f
 #define VCC 3.3f
 
+
+uint16_t distByADCValue(uint16_t adc_value);//TODO: define fcn
+
 /**
  * @}
  */
