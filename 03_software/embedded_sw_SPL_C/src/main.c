@@ -123,6 +123,7 @@ void Init_Periph(void) {
 	initSysTick();
 	initBTModule();
 	initStatusLEDs();
+	initMotorControl();
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
 	Init_Buttons();
@@ -176,6 +177,7 @@ int main(void) {
 	setRGB(RGB_PINK);
 	//setLED(PINK);
 	setLED(YELLOW);
+	actuateMotors(7000, 0);
 	while (1) {
 		i++;
 

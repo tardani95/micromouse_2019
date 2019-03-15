@@ -22,6 +22,7 @@
 #define MOTOR_SPEED_CONSTANT_rpmPvolt 4000
 #define MOT_MAX_VOLT 3.3f
 #define VCC 3.3f
+#define MOT_MAX_SPEED_mmPs
 
 
 uint16_t distByADCValue(uint16_t adc_value);//TODO: define fcn

@@ -40,6 +40,11 @@ void initMotorControl(void){
 	/*Enable clock for GPIOC*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
 
+	GPIO_PinAFConfig(MOT_PORT, GPIO_PinSource6, GPIO_AF_TIM3);
+	GPIO_PinAFConfig(MOT_PORT, GPIO_PinSource7, GPIO_AF_TIM3);
+	GPIO_PinAFConfig(MOT_PORT, GPIO_PinSource8, GPIO_AF_TIM3);
+	GPIO_PinAFConfig(MOT_PORT, GPIO_PinSource9, GPIO_AF_TIM3);
+
 	/*Configure GPIO for PWM*/
 	GPIO_InitTypeDef mot_ctrl_InitStructure;
 	mot_ctrl_InitStructure.GPIO_Mode = GPIO_Mode_AF;
@@ -59,13 +64,10 @@ void initMotorControl(void){
 	mot_ctrl_InitStructure.GPIO_Pin = MOT_BIN2_PIN;
 	GPIO_Init(MOT_PORT, &mot_ctrl_InitStructure);
 
-	GPIO_PinAFConfig(MOT_PORT, GPIO_PinSource6, GPIO_AF_TIM3);
-	GPIO_PinAFConfig(MOT_PORT, GPIO_PinSource7, GPIO_AF_TIM3);
-	GPIO_PinAFConfig(MOT_PORT, GPIO_PinSource8, GPIO_AF_TIM3);
-	GPIO_PinAFConfig(MOT_PORT, GPIO_PinSource9, GPIO_AF_TIM3);
+
 
 	/*Configure timer*/
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM8, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
 	TIM_TimeBaseInitTypeDef mot_ctrl_TimerInitStructure;
 	TIM_TimeBaseStructInit(&mot_ctrl_TimerInitStructure);
@@ -76,7 +78,6 @@ void initMotorControl(void){
 	mot_ctrl_TimerInitStructure.TIM_RepetitionCounter 	= 0;
 	TIM_TimeBaseInit(MOT_TIM, &mot_ctrl_TimerInitStructure);
 
-	TIM_Cmd(MOT_TIM, ENABLE);
 
 	/*Configure PWM*/
 	TIM_OCInitTypeDef mot_ctrl_OCInitStructure;
@@ -94,10 +95,14 @@ void initMotorControl(void){
 	TIM_OC3Init(MOT_TIM, &mot_ctrl_OCInitStructure);
 	TIM_OC4Init(MOT_TIM, &mot_ctrl_OCInitStructure);
 
-	TIM_OC1PreloadConfig(MOT_TIM, ENABLE);
-	TIM_OC2PreloadConfig(MOT_TIM, ENABLE);
-	TIM_OC3PreloadConfig(MOT_TIM, ENABLE);
-	TIM_OC4PreloadConfig(MOT_TIM, ENABLE);
+	TIM_OC1PreloadConfig(MOT_TIM, TIM_OCPreload_Enable);
+	TIM_OC2PreloadConfig(MOT_TIM, TIM_OCPreload_Enable);
+	TIM_OC3PreloadConfig(MOT_TIM, TIM_OCPreload_Enable);
+	TIM_OC4PreloadConfig(MOT_TIM, TIM_OCPreload_Enable);
+
+	TIM_ARRPreloadConfig(MOT_TIM, ENABLE);
+	TIM_Cmd(MOT_TIM, ENABLE);
+
 }
 
 /* assuming that motors have zero time constant!
