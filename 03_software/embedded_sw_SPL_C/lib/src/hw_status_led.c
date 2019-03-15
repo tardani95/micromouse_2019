@@ -36,22 +36,27 @@ uint16_t LED_pins[3] = {
 const uint8_t RGB_codes[10][3] = {
 		{255, 255, 255}, //white
 		{255,   0,   0}, //red
-		{255,  87,  51}, //orange
+		{255,  20,  51}, //orange
 		{255, 255,   0}, //yellow
 		{  0, 255,   0}, //light green
 		{  0, 128,   0}, //dark green
 		{  0, 255, 255}, //light blue
 		{  0,   0, 255}, //dark blue
 		{255,   0, 255}, //pink
-		{128,   0, 128}  //white
+		{128,   0, 128}  //purple
 };
 
 
-void initStatusLeds(void){
+void initStatusLEDs(void){
 	/*Enable clock for PINK, YELLOW, HEARTBEAT, RGBG, RGBB GPIO*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 	/*Enable clock for RGBR GPIO*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+
+
+	GPIO_PinAFConfig(ST_LED_RGBR_PORT, ST_LED_RGBR_PINSOURCE, GPIO_AF_TIM8);
+	GPIO_PinAFConfig(ST_LED_RGBG_PORT, ST_LED_RGBG_PINSOURCE, GPIO_AF_TIM8);
+	GPIO_PinAFConfig(ST_LED_RGBB_PORT, ST_LED_RGBB_PINSOURCE, GPIO_AF_TIM8);
 
 	/*Configure GPIO for normal status leds*/
 	GPIO_InitTypeDef st_led_GPIO_InitStructure;
@@ -69,8 +74,11 @@ void initStatusLeds(void){
 	st_led_GPIO_InitStructure.GPIO_Pin = ST_LED_YELLOW_PIN;
 	GPIO_Init(ST_LED_YELLOW_PORT, &st_led_GPIO_InitStructure);
 
+
+
 	/*Configure GPIO for RGB led (PWM)*/
 	st_led_GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+
 
 	st_led_GPIO_InitStructure.GPIO_Pin = ST_LED_RGBR_PIN;
 	GPIO_Init(ST_LED_RGBR_PORT, &st_led_GPIO_InitStructure);
@@ -81,23 +89,22 @@ void initStatusLeds(void){
 	st_led_GPIO_InitStructure.GPIO_Pin = ST_LED_RGBB_PIN;
 	GPIO_Init(ST_LED_RGBB_PORT, &st_led_GPIO_InitStructure);
 
-	GPIO_PinAFConfig(ST_LED_RGBR_PORT, ST_LED_RGBR_PIN, GPIO_AF_TIM8);
-	GPIO_PinAFConfig(ST_LED_RGBG_PORT, ST_LED_RGBG_PIN, GPIO_AF_TIM8);
-	GPIO_PinAFConfig(ST_LED_RGBB_PORT, ST_LED_RGBB_PIN, GPIO_AF_TIM8);
+
 
 	/*Configure timer for RGB led*/
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM8, ENABLE);
 
+
+
 	TIM_TimeBaseInitTypeDef RGB_TimerInitStructure;
 	TIM_TimeBaseStructInit(&RGB_TimerInitStructure);
-	RGB_TimerInitStructure.TIM_Prescaler 		 = 168 - 1; 				/* Clock freqeuency: 168MHz/168 = 1 MHz */
-	RGB_TimerInitStructure.TIM_Period 			 = ST_LED_RGB_TIM_PERIOD - 1; 	/* PWM frequency: 1MHz/1000 = 1KHz */
+	RGB_TimerInitStructure.TIM_Prescaler 		 = 84 - 1; 				// Clock freqeuency: 168MHz/168 = 1 MHz
+	RGB_TimerInitStructure.TIM_Period 			 = ST_LED_RGB_TIM_PERIOD - 1; 	// PWM frequency: 1MHz/1000 = 1KHz
 	RGB_TimerInitStructure.TIM_CounterMode 		 = TIM_CounterMode_Up;
 	RGB_TimerInitStructure.TIM_ClockDivision 	 = TIM_CKD_DIV1;
 	RGB_TimerInitStructure.TIM_RepetitionCounter = 0;
 	TIM_TimeBaseInit(ST_LED_RGB_TIM, &RGB_TimerInitStructure);
 
-	TIM_Cmd(ST_LED_RGB_TIM, ENABLE);
 
 	/*Configure PWM*/
 	TIM_OCInitTypeDef RGB_OCInitStructure;
@@ -105,18 +112,28 @@ void initStatusLeds(void){
 	RGB_OCInitStructure.TIM_OutputState = 	TIM_OutputState_Disable;
 	RGB_OCInitStructure.TIM_OutputNState = 	TIM_OutputState_Enable;
 	RGB_OCInitStructure.TIM_OCPolarity = 	TIM_OCPolarity_Low;
-	RGB_OCInitStructure.TIM_OCNPolarity = 	TIM_OCPolarity_High;
+	RGB_OCInitStructure.TIM_OCNPolarity = 	TIM_OCPolarity_Low;
 	RGB_OCInitStructure.TIM_OCIdleState = 	TIM_OCIdleState_Reset;
 	RGB_OCInitStructure.TIM_OCNIdleState = 	TIM_OCNIdleState_Reset;
-	RGB_OCInitStructure.TIM_Pulse = 		0.5*ST_LED_RGB_TIM_PERIOD;
+	RGB_OCInitStructure.TIM_Pulse = 		100;
 
 	TIM_OC1Init(ST_LED_RGB_TIM, &RGB_OCInitStructure);
 	TIM_OC2Init(ST_LED_RGB_TIM, &RGB_OCInitStructure);
 	TIM_OC3Init(ST_LED_RGB_TIM, &RGB_OCInitStructure);
 
-	TIM_OC1PreloadConfig(ST_LED_RGB_TIM, ENABLE);
-	TIM_OC2PreloadConfig(ST_LED_RGB_TIM, ENABLE);
-	TIM_OC3PreloadConfig(ST_LED_RGB_TIM, ENABLE);
+	TIM_CCxNCmd(ST_LED_RGB_TIM, TIM_Channel_1, TIM_CCxN_Enable);
+	TIM_CCxNCmd(ST_LED_RGB_TIM, TIM_Channel_2, TIM_CCxN_Enable);
+	TIM_CCxNCmd(ST_LED_RGB_TIM, TIM_Channel_3, TIM_CCxN_Enable);
+
+
+
+	TIM_OC1PreloadConfig(ST_LED_RGB_TIM, TIM_OCPreload_Enable);
+	TIM_OC2PreloadConfig(ST_LED_RGB_TIM, TIM_OCPreload_Enable);
+	TIM_OC3PreloadConfig(ST_LED_RGB_TIM, TIM_OCPreload_Enable);
+
+	TIM_ARRPreloadConfig(ST_LED_RGB_TIM, ENABLE);
+	TIM_CtrlPWMOutputs(ST_LED_RGB_TIM, ENABLE);
+	TIM_Cmd(ST_LED_RGB_TIM, ENABLE);
 
 }
 

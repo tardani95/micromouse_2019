@@ -57,12 +57,15 @@ void initDebug(void);*/
 
 #define ST_LED_RGBR_PORT 		GPIOA
 #define ST_LED_RGBR_PIN 		GPIO_Pin_7
+#define ST_LED_RGBR_PINSOURCE 	GPIO_PinSource7
 
 #define ST_LED_RGBG_PORT 		GPIOB
 #define ST_LED_RGBG_PIN 		GPIO_Pin_0
+#define ST_LED_RGBG_PINSOURCE 	GPIO_PinSource0
 
 #define ST_LED_RGBB_PORT 		GPIOB
 #define ST_LED_RGBB_PIN 		GPIO_Pin_1
+#define ST_LED_RGBB_PINSOURCE	GPIO_PinSource1
 
 #define ST_LED_RGB_TIM 			TIM8
 #define ST_LED_RGB_TIM_PERIOD 	1000
