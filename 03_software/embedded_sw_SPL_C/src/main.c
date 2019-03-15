@@ -118,8 +118,10 @@ void Init_Periph(void) {
 	RCC_ClocksTypeDef clock_info;
 	RCC_GetClocksFreq(&clock_info);
 
-//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
-//	Init_Buttons();
+	initBTModule();
+
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
+	Init_Buttons();
 }
 
 /**
@@ -170,13 +172,15 @@ int main(void) {
 	while (1) {
 		i++;
 
-		while(SET == USART_GetFlagStatus(BT_Port, USART_FLAG_RXNE));
 
-		data = USART_ReceiveData(BT_Port);
+		while(!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE));
 
-		while(RESET == USART_GetFlagStatus(BT_Port, USART_FLAG_TXE));
+		DEBUG("Data received");
+		data = USART_ReceiveData(BT_UART);
 
-		USART_SendData(BT_Port,data);
+		while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE));
+
+		USART_SendData(BT_UART, data);
 
 	}
 }
@@ -186,21 +190,26 @@ int main(void) {
  * external interrupt handler for the buttons
  */
 void EXTI15_10_IRQHandler() {
+	//TODO - sometimes button 1 interrupt also gets called when button 2 is pressed
 	/* button1 pressed*/
 	if (SET == EXTI_GetITStatus(BTN1_EXTI_Line)) {
 
+		INFO("Button1 pressed");
 		//TODO handle button1 pressed action
 
-		EXTI->PR = BTN1_EXTI_Line; /*clear pendig bit for button1*/
+		EXTI_ClearITPendingBit(BTN1_EXTI_Line);
+		//EXTI->PR = BTN1_EXTI_Line; /*clear pendig bit for button1*/
 		return;
 	}
 
 	/* button2 pressed*/
 	if (SET == EXTI_GetITStatus(BTN2_EXTI_Line)) {
 
+		INFO("Button2 pressed");
 		//TODO handle button2 pressed action
 
-		EXTI->PR = BTN2_EXTI_Line; /*clear pendig bit for button2*/
+		EXTI_ClearITPendingBit(BTN2_EXTI_Line);
+		//EXTI->PR = BTN2_EXTI_Line; /*clear pendig bit for button2*/
 		return;
 	}
 }

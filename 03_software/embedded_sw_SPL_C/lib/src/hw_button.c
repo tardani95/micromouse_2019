@@ -19,6 +19,9 @@ void Init_Button1() {
 	/* button1 -- PB12*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+
+
 	GPIO_InitTypeDef button1_GPIO_InitStructure; /**< gpio init typedef for button1_GPIO_InitTypeDef */
 	GPIO_StructInit(&button1_GPIO_InitStructure); /* set defaults value for the initstruct */
 
@@ -43,6 +46,8 @@ void Init_Button1() {
 void Init_Button2() {
 	/* button2 -- PB13*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
 
 	GPIO_InitTypeDef button2_GPIO_InitTypeDef; /**< gpio init typedef for button2_GPIO_InitTypeDef */
 	GPIO_StructInit(&button2_GPIO_InitTypeDef);
