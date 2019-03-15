@@ -80,6 +80,7 @@
 #include "hw_IR_module.h"
 #include "hw_motor_control.h"
 #include "hw_status_led.h"
+#include "hw_BT_module.h"
 /**
  * @}
  */
@@ -144,24 +145,42 @@ int main(void) {
 	 */
 
 	/* TODO - Add your application code here */
-	uint8_t success = Init_IMU();
 
-	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+//	uint8_t success = Init_IMU();
+//
+//	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+//
+//	for (uint32_t i = 0; i < 32000; i += 2) {
+//		i--;
+//	}
+//
+//	MPU6050_DMAGetRawAccelGyro();
 
-	for (uint32_t i = 0; i < 32000; i += 2) {
-		i--;
-	}
+	/* uart test*/
+//	USART_FLAG_TXE : to indicate the status of the transmit buffer register
+//	USART_FLAG_RXNE : to indicate the status of the receive buffer register
 
-	MPU6050_DMAGetRawAccelGyro();
-
-
+//	In this Mode it is advised to use the following functions:
+//	      (+) FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, uint16_t USART_FLAG);
+//	      (+) void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);
 
 	/* Infinite loop */
+
+	uint16_t data;
 	while (1) {
 		i++;
 
+		while(SET == USART_GetFlagStatus(BT_Port, USART_FLAG_RXNE));
+
+		data = USART_ReceiveData(BT_Port);
+
+		while(RESET == USART_GetFlagStatus(BT_Port, USART_FLAG_TXE));
+
+		USART_SendData(BT_Port,data);
+
 	}
 }
+
 
 /**
  * external interrupt handler for the buttons
