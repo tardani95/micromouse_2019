@@ -27,16 +27,16 @@
 #define BAT_LVL_WATCHER_PIN  			GPIO_Pin_6
 #define BAT_LVL_WATCHER_ADC	 			ADC2
 #define BAT_LVL_WATCHER_ADC_CHANNEL		ADC_Channel_6
-#define BAT_LVL_WATCHER_ADC_SAMPLE_TIME	ADC_SampleTime_56Cycles
+#define BAT_LVL_WATCHER_ADC_SAMPLE_TIME	ADC_SampleTime_15Cycles
 
 /**
  * @brief Calculate the voltage of the battery by the adc value
  */
-#define m_adcValueToVolt(adc_value) (adc_value/0xFFFF * VCC * 2)
+#define m_adcValueToVolt(adc_value) ((float)adc_value/4096 * VCC * 2)
 
 void initBatLvlWatcher(void);
 
-uint16_t getBatLvl(void);
+float getBatLvl(void);
 
 /**
  * @}

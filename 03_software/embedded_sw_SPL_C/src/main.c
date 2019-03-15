@@ -82,6 +82,7 @@
 #include "hw_motor_control.h"
 #include "hw_status_led.h"
 #include "hw_BT_module.h"
+#include "hw_bat_lvl_watcher.h"
 /**
  * @}
  */
@@ -124,6 +125,8 @@ void Init_Periph(void) {
 	initBTModule();
 	initStatusLEDs();
 	initMotorControl();
+	ADC_DeInit();
+	initBatLvlWatcher();
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
 	Init_Buttons();
@@ -177,10 +180,10 @@ int main(void) {
 	setRGB(RGB_PINK);
 	//setLED(PINK);
 	setLED(YELLOW);
-	actuateMotors(7000, 0);
+	//actuateMotors(7000, 0);
 	while (1) {
 		i++;
-
+		float bat_lvl_volt = getBatLvl();
 		/*while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 			;
 
