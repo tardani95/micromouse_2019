@@ -127,6 +127,7 @@ void Init_Periph(void) {
 	initMotorControl();
 	ADC_DeInit();
 	initBatLvlWatcher();
+	initEncoders();
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
 	Init_Buttons();
@@ -176,14 +177,18 @@ int main(void) {
 //	      (+) void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);
 	/* Infinite loop */
 	//resetRGB();
-	uint16_t data;
+	uint32_t enc_left;
+	uint32_t enc_right;
+
 	setRGB(RGB_PINK);
 	//setLED(PINK);
 	setLED(YELLOW);
 	//actuateMotors(7000, 0);
 	while (1) {
 		i++;
-		float bat_lvl_volt = getBatLvl();
+		enc_left = m_getEncCnt(ENC_LEFT);
+		enc_right = m_getEncCnt(ENC_RIGHT);
+
 		/*while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 			;
 
