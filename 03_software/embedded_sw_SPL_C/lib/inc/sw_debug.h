@@ -17,9 +17,9 @@
  * @{
  */
 
-#define MAX_STRING_SIZE 100
+#define MAX_STRING_SIZE 30
 
-char uart_buffer[MAX_STRING_SIZE] = { 0 };
+extern char uart_buffer[MAX_STRING_SIZE];
 
 #define __FILENAME__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
 

@@ -16,6 +16,7 @@
  * @{
  */
 
+char uart_buffer[MAX_STRING_SIZE] = { "\0" };
 
 /* string size max 100 char! */
 void consoleWrite(char *filename, char *dbg_cat, char *msg){

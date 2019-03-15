@@ -6,6 +6,7 @@
  ************************/
 
 #include "hw_BT_module.h"
+#include "sw_debug.h"
 
 /** @addtogroup hardware_modules
  * @{
@@ -33,7 +34,7 @@ void initBTModule(void) {
 
 	GPIO_InitTypeDef bt_gpio;
 	bt_gpio.GPIO_Mode = GPIO_Mode_AF;
-	bt_gpio.GPIO_OType = GPIO_OType_PP;
+	bt_gpio.GPIO_OType = GPIO_OType_OD;
 	bt_gpio.GPIO_Pin = BT_RX_Pin | BT_TX_Pin;
 	bt_gpio.GPIO_PuPd = GPIO_PuPd_UP;	//TODO - check pullup - theoretically ok
 	bt_gpio.GPIO_Speed = GPIO_Speed_50MHz;
@@ -100,6 +101,26 @@ void initBTModule(void) {
 
 
 	USART_Cmd(BT_UART, ENABLE);
+}
+
+
+void BTSendString(char *string){
+	for(uint8_t i = 0; i < MAX_STRING_SIZE; i++){
+		//this doesnt work cause jdy buffer gets full
+		/*while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
+			;
+		USART_SendData(BT_UART, string[i]);*/
+
+		//this works
+		if(string[i] == '\0'){
+			break;
+		}
+		else{
+			while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE));
+			USART_SendData(BT_UART, string[i]);
+		}
+
+	}
 }
 
 /**
