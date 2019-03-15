@@ -100,3 +100,5 @@
 03_software/embedded_sw_SPL_C/micromouse2019_embedded_software_SPL_C\.elf\.launch
 
 03_software/embedded_sw_SPL_C/Debug_STM32F415RG_FLASH\.ld
+
+03_software/embedded_sw_SPL_C/\.cproject
