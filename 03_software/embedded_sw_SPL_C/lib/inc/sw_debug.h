@@ -17,20 +17,25 @@
  * @{
  */
 
-#define MAX_STRING_SIZE 30
+#define MAX_STRING_SIZE 50
 
 extern char uart_buffer[MAX_STRING_SIZE];
 
-#define __FILENAME__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
+#define __FILE_PATH__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
 
 
-#define DEBUG(msg) 	 (consoleWrite(__FILENAME__, "DEBUG",   msg))
-#define ERROR(msg) 	 (consoleWrite(__FILENAME__, "ERROR",   msg))
-#define WARNING(msg) (consoleWrite(__FILENAME__, "WARNING", msg))
-#define INFO(msg)	 (consoleWrite(__FILENAME__, "INFO",    msg))
+#define DEBUG(msg) 	 (consoleWrite(__FILE_PATH__, "DEBUG",   msg))
+#define ERROR(msg) 	 (consoleWrite(__FILE_PATH__, "ERROR",   msg))
+#define WARNING(msg) (consoleWrite(__FILE_PATH__, "WARNING", msg))
+#define INFO(msg)	 (consoleWrite(__FILE_PATH__, "INFO",    msg))
+#define SEND(msg)	 (consoleSend(msg))
 
-void consoleWrite(char *filename, char *dbg_cat, char *msg);
+/*#define DEBUG(msg) 	 (consoleWrite("", "",   msg))
+#define INFO(msg) 	 (consoleWrite("", "",   msg))*/
 
+
+void consoleWrite(char *filename, char *verbosity, char *msg);
+void consoleSend(char *msg);
 
 //TODO user code here
 /**

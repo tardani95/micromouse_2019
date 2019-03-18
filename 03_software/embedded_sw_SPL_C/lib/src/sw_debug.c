@@ -18,24 +18,28 @@
 
 char uart_buffer[MAX_STRING_SIZE] = { "\0" };
 
-/* string size max 100 char! */
-void consoleWrite(char *filename, char *dbg_cat, char *msg){
+/* string size max 50 char! */
+void consoleWrite(char *filename, char *verbosity, char *msg){
+
+	/*Send verbosity of message*/
+	strcpy(uart_buffer, verbosity);
+	strcat(uart_buffer, ":  ");
+	BTSendString(uart_buffer);
 
 	/*Send name of message source file*/
 	strcpy(uart_buffer, filename);
-	strcat(uart_buffer, ": ");
-	BTSendString(uart_buffer);
-
-	/*Send category of message source*/
-	strcpy(uart_buffer, dbg_cat);
-	strcat(uart_buffer, ": ");
+	strcat(uart_buffer, ":  ");
 	BTSendString(uart_buffer);
 
 	/*Send message*/
 	strcpy(uart_buffer, msg);
-	strcat(uart_buffer, "\n");
+	strcat(uart_buffer, "\n ");
 	BTSendString(uart_buffer);
 
+}
+
+void consoleSend(char *msg){
+	BTSendString(msg);
 }
 
 //TODO user code here

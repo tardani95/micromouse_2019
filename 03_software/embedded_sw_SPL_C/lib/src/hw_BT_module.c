@@ -7,6 +7,7 @@
 
 #include "hw_BT_module.h"
 #include "sw_debug.h"
+#include "hw_status_led.h"
 
 /** @addtogroup hardware_modules
  * @{
@@ -113,13 +114,18 @@ void BTSendString(char *string){
 
 		//this works
 		if(string[i] == '\0'){
+			USART_SendData(BT_UART, string[i]);
 			break;
 		}
 		else{
 			while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE));
 			USART_SendData(BT_UART, string[i]);
 		}
-
+	}
+	while(!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE));
+	uint16_t data = USART_ReceiveData(BT_UART);
+	if(data != 100){// 100 is acknowledgement byte
+		setLED(PINK);
 	}
 }
 
