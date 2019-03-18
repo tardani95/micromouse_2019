@@ -75,7 +75,7 @@ void initSysTick(void){
 	RCC_ClocksTypeDef clockStruct;
 	RCC_GetClocksFreq(&clockStruct);
 	//TODO timer period is not accurate
-	SysTick_Config(	clockStruct.SYSCLK_Frequency/SYS_TICK_CLKSOURCE_DIV_VALUE/SYS_TICK_FREQ_HZ - 12); /*21000/21MHz = 1ms*/
+	SysTick_Config(	clockStruct.SYSCLK_Frequency/SYS_TICK_CLKSOURCE_DIV_VALUE*SYS_TICK_PERIOD_ms/1000000 - 12); /*21000/21MHz = 1ms*/
 
 }
 

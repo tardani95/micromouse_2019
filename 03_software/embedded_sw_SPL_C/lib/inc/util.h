@@ -10,7 +10,7 @@
 #include "stm32f4xx_rcc.h"
 #include "misc.h"
 
-#define SYS_TICK_FREQ_HZ	1000
+#define SYS_TICK_PERIOD_ms	500
 #define SYS_TICK_CLKSOURCE_DIV SysTick_CLKSource_HCLK
 #define SYS_TICK_CLKSOURCE_DIV_VALUE 1
 
