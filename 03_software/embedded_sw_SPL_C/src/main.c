@@ -109,6 +109,9 @@ float gForceX, gForceY, gForceZ;
 float rotX, rotY, rotZ;
 float temp_C;
 
+menu_p_t main_menu_p;
+menu_p_t after_run_menu_p;
+
 /* Private function prototypes */
 void MPU6050_CalcAccelRot(void);
 /* Private functions */
@@ -128,6 +131,9 @@ void Init_Periph(void) {
 	ADC_DeInit();
 	initBatLvlWatcher();
 	initEncoders();
+	Init_IMU();
+	initMenus(&main_menu_p, &after_run_menu_p);
+	//Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
 	Init_Buttons();
@@ -159,66 +165,50 @@ int main(void) {
 
 	/* TODO - Add your application code here */
 
-	//uint8_t success = Init_IMU();
-
-	//Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
 
 	for (uint32_t i = 0; i < 32000; i += 2) {
 		i--;
 	}
 
-	//MPU6050_DMAGetRawAccelGyro();
 
-	/* uart test*/
-//	USART_FLAG_TXE : to indicate the status of the transmit buffer register
-//	USART_FLAG_RXNE : to indicate the status of the receive buffer register
-//	In this Mode it is advised to use the following functions:
-//	      (+) FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, uint16_t USART_FLAG);
-//	      (+) void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);
-	/* Infinite loop */
 	//resetRGB();
-	uint32_t enc_left;
-	uint32_t enc_right;
+	//uint32_t enc_left;
+	//uint32_t enc_right;
 
 	setRGB(RGB_PINK);
 	//setLED(PINK);
 	setLED(YELLOW);
 	//actuateMotors(7000, 0);
+
+	/* Infinite loop */
 	while (1) {
 		i++;
-		enc_left = m_getEncCnt(ENC_LEFT);
-		enc_right = m_getEncCnt(ENC_RIGHT);
+		//enc_left = m_getEncCnt(ENC_LEFT);
+		//enc_right = m_getEncCnt(ENC_RIGHT);
 
-		/*while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
+		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 			;
 
-		DEBUG("Data received");
-		data = USART_ReceiveData(BT_UART);
+		uint16_t data = USART_ReceiveData(BT_UART);
 
 		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
-			;
-*/
+					;
+
+		if(data == 'n'){
+			nextItem(main_menu_p);
+		}
+		else if (data == 's'){
+			selectItem(main_menu_p);
+		}
+		else if(data == 'f'){
+			DEBUG("012345678901234567890123456789012345678901234567890123456");
+		}
+
+
+
+
 		//MPU6050_GetRawAccelGyro(accel_gyro_temp);
 		//MPU6050_CalcAccelRot();
-
-		/*INFO("gForceX");
-		ftoa(gForceX, res, 3);
-		INFO(res);
-		INFO("gForceY");
-		ftoa(gForceY, res, 3);
-		INFO(res);
-		INFO("gForceZ");
-		ftoa(gForceZ, res, 3);
-		INFO(res);
-		INFO("rotX");
-		ftoa(rotX, res, 3);
-		INFO(res);
-		INFO("rotY");
-		ftoa(rotY, res, 3);
-		INFO(res);
-		INFO("rotZ");
-		ftoa(rotZ, res, 3);
-		INFO(res);*/
 
 	}
 }
