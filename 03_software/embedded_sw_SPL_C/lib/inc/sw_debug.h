@@ -21,21 +21,33 @@
 
 extern char uart_buffer[MAX_STRING_SIZE];
 
+/*PC application targets*/
+typedef enum{
+	Console,
+	MATLAB,
+	Unknown
+}Target;
+
 #define __FILE_PATH__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
 
-
-#define DEBUG(msg) 	 (consoleWrite(__FILE_PATH__, "DEBUG",   msg))
-#define ERROR(msg) 	 (consoleWrite(__FILE_PATH__, "ERROR",   msg))
-#define WARNING(msg) (consoleWrite(__FILE_PATH__, "WARNING", msg))
-#define INFO(msg)	 (consoleWrite(__FILE_PATH__, "INFO",    msg))
+/*macros for sending to Console*/
+#define DEBUG(msg) 	 (sendToPC(Console, "DEBUG",   __FILE_PATH__, msg))
+#define ERROR(msg) 	 (sendToPC(Console, "ERROR",   __FILE_PATH__, msg))
+#define WARNING(msg) (sendToPC(Console, "WARNING", __FILE_PATH__, msg))
+#define INFO(msg)	 (sendToPC(Console, "INFO",    __FILE_PATH__, msg))
 #define SEND(msg)	 (consoleSend(msg))
+
+/*macro for sending to matlab*/
+#define MATSEND(msg) (sendToPC(MATLAB, "THIS IS MATLAB!!!", __FILE_PATH__,   msg))
+
 
 /*#define DEBUG(msg) 	 (consoleWrite("", "",   msg))
 #define INFO(msg) 	 (consoleWrite("", "",   msg))*/
 
 
-void consoleWrite(char *filename, char *verbosity, char *msg);
+void sendToPC(Target target, char *verbosity, char *src, char *msg);
 void consoleSend(char *msg);
+void waitForAck(void);
 
 //TODO user code here
 /**

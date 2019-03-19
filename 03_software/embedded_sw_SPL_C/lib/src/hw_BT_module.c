@@ -111,17 +111,24 @@ void BTSendString(char *string){
 		/*while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
 			;
 		USART_SendData(BT_UART, string[i]);*/
-
+		while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE));
+		USART_SendData(BT_UART, string[i]);
 		//this works
 		if(string[i] == '\0'){
-			USART_SendData(BT_UART, string[i]);
 			break;
 		}
-		else{
-			while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE));
-			USART_SendData(BT_UART, string[i]);
-		}
+
 	}
+	waitForAck();
+
+}
+
+void BTSendChar(char c){
+	USART_SendData(BT_UART, c);
+	waitForAck();
+}
+
+void waitForAck(void){
 	while(!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE));
 	uint16_t data = USART_ReceiveData(BT_UART);
 	if(data != 100){// 100 is acknowledgement byte

@@ -200,8 +200,11 @@ int main(void) {
 		else if (data == 's'){
 			selectItem(main_menu_p);
 		}
-		else if(data == 'f'){
-			DEBUG("012345678901234567890123456789012345678901234567890123456");
+		else if(data == 'f'){//check how big the bluetooth module buffer is. apparently works fine up to 50 bytes
+			SEND("0123456789012345678901234567890123456789012345678901234567890123456789");
+		}
+		else if(data == 'm'){
+			MATSEND("insert sensor data and stuff");
 		}
 
 
@@ -221,9 +224,10 @@ void EXTI15_10_IRQHandler() {
 	/* button1 pressed*/
 	if (SET == EXTI_GetITStatus(BTN1_EXTI_Line)) {
 
-		INFO("Button1 pressed");
+		//INFO("Button1 pressed");
 		//TODO handle button1 pressed action
 
+		resetLED(PINK);
 		EXTI_ClearITPendingBit(BTN1_EXTI_Line);
 		//EXTI->PR = BTN1_EXTI_Line; /*clear pendig bit for button1*/
 		return;

@@ -19,22 +19,27 @@
 char uart_buffer[MAX_STRING_SIZE] = { "\0" };
 
 /* string size max 50 char! */
-void consoleWrite(char *filename, char *verbosity, char *msg){
+void sendToPC(Target target, char *verbosity, char *src, char *msg){
+	/*Tell PC the target of the message*/
+	BTSendChar(target);
 
 	/*Send verbosity of message*/
 	strcpy(uart_buffer, verbosity);
-	strcat(uart_buffer, ":  ");
+	strcat(uart_buffer, ": ");
 	BTSendString(uart_buffer);
 
 	/*Send name of message source file*/
-	strcpy(uart_buffer, filename);
-	strcat(uart_buffer, ":  ");
+	strcpy(uart_buffer, src);
+	strcat(uart_buffer, ": ");
 	BTSendString(uart_buffer);
 
 	/*Send message*/
 	strcpy(uart_buffer, msg);
-	strcat(uart_buffer, "\n ");
+	strcat(uart_buffer, "\n");
 	BTSendString(uart_buffer);
+
+	/*send end of transition character*/
+	BTSendChar(23);
 
 }
 

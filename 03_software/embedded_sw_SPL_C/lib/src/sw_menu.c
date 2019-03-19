@@ -104,7 +104,7 @@ void selectItem(menu_p_t menu_p) {
 void nextItem(menu_p_t menu_p) {
 	incrementItemIterator(menu_p->curr_item_);
 
-	INFO("Looking at: ");
+	INFO("Looking at: looooooooooooooooong string");
 	INFO((*menu_p->curr_item_->item_iterator_)->name_);
 	return;
 }

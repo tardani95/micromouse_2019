@@ -37,6 +37,7 @@
 void initBTModule(void);
 
 void BTSendString(char *string);
+void BTSendChar(char string);
 
 /**
  * @}

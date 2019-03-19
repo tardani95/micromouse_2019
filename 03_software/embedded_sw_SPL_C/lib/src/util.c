@@ -67,6 +67,14 @@ void ftoa(float n, char *res, int afterpoint) {
 	}
 }
 
+/* it is the caller's responsibility to provide a sufficient buffer!*/
+void ToBytes(void *dataIn, uint8_t size, uint8_t dataOut[]){
+	for(uint8_t i = 0; i < size; i++){
+		dataOut[i] = (uint8_t)(((*((uint32_t*)dataIn)) >> (size - 1 - i)) && 0xFF);
+	}
+}
+
+
 void initSysTick(void){
 	//TODO clksourceconfig has no effect
 	SysTick_CLKSourceConfig(SYS_TICK_CLKSOURCE_DIV); /*168MHz/8 = 21MHz*/
