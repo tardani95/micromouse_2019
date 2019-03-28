@@ -29,8 +29,8 @@
  */
 void initMenu(menu_p_t menu_p) {
 	initNextItem(menu_p->curr_item_, menu_p->curr_item_);
-	DEBUG("Menu initialized: ");
-	DEBUG(menu_p->name_);
+//	DEBUG("Menu initialized: ");
+//	DEBUG(menu_p->name_);
 	return;
 }
 

@@ -127,12 +127,12 @@ void Init_Periph(void) {
 	initSysTick();
 	initBTModule();
 	initStatusLEDs();
-	initMotorControl();
-	ADC_DeInit();
-	initBatLvlWatcher();
-	initEncoders();
-	Init_IMU();
-	initMenus(&main_menu_p, &after_run_menu_p);
+//	initMotorControl();
+//	ADC_DeInit();
+//	initBatLvlWatcher();
+//	initEncoders();
+//	Init_IMU();
+//	initMenus(&main_menu_p, &after_run_menu_p);
 	//Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
