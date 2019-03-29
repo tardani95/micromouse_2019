@@ -125,21 +125,19 @@ void MPU6050_CalcAccelRot(void);
 void Init_Periph(void) {
 
 	initSysTick();
-	initBTModule();
+//	initBTModule();
 	initStatusLEDs();
 //	initMotorControl();
 //	ADC_DeInit();
 //	initBatLvlWatcher();
 //	initEncoders();
-//	Init_IMU();
+	Init_IMU();
 //	initMenus(&main_menu_p, &after_run_menu_p);
 	//Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
-	Init_Buttons();
+//	Init_Buttons();
 }
-
-
 
 /**
  **===========================================================================
@@ -151,8 +149,12 @@ void Init_Periph(void) {
 int main(void) {
 	int i = 0;
 
-	SystemInit(); /*startup script calls this function before main*/
+//	SystemInit(); /*startup script calls this function before main*/
+
 	Init_Periph();
+
+//	SystemCoreClockUpdate();
+
 	/**
 	 *  IMPORTANT NOTE!
 	 *  The symbol VECT_TAB_SRAM needs to be defined when building the project
@@ -165,11 +167,9 @@ int main(void) {
 
 	/* TODO - Add your application code here */
 
-
 	for (uint32_t i = 0; i < 32000; i += 2) {
 		i--;
 	}
-
 
 	//resetRGB();
 	//uint32_t enc_left;
@@ -186,31 +186,32 @@ int main(void) {
 		//enc_left = m_getEncCnt(ENC_LEFT);
 		//enc_right = m_getEncCnt(ENC_RIGHT);
 
-		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
-			;
+//		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
+//			;
+//
+//		uint16_t data = USART_ReceiveData(BT_UART);
+//
+//		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
+//					;
+//
+//		if(data == 'n'){
+//			nextItem(main_menu_p);
+//		}
+//		else if (data == 's'){
+//			selectItem(main_menu_p);
+//		}
+//		else if(data == 'f'){//check how big the bluetooth module buffer is. apparently works fine up to 50 bytes
+//			SEND("0123456789012345678901234567890123456789012345678901234567890123456789");
+//		}
+//		else if(data == 'm'){
+//			MATSEND("insert sensor data and stuff");
+//		}
 
-		uint16_t data = USART_ReceiveData(BT_UART);
-
-		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
-					;
-
-		if(data == 'n'){
-			nextItem(main_menu_p);
+		MPU6050_GetRawAccelGyro(accel_gyro_temp);
+		for (uint32_t i = 0; i < 32000; i += 2) {
+			i--;
 		}
-		else if (data == 's'){
-			selectItem(main_menu_p);
-		}
-		else if(data == 'f'){//check how big the bluetooth module buffer is. apparently works fine up to 50 bytes
-			SEND("0123456789012345678901234567890123456789012345678901234567890123456789");
-		}
-		else if(data == 'm'){
-			MATSEND("insert sensor data and stuff");
-		}
 
-
-
-
-		//MPU6050_GetRawAccelGyro(accel_gyro_temp);
 		//MPU6050_CalcAccelRot();
 
 	}

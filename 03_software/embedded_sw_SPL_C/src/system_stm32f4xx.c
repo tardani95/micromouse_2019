@@ -159,7 +159,7 @@
 #define PLL_P      2
 
 /* USB OTG FS, SDIO and RNG Clock =  PLL_VCO / PLLQ */
-#define PLL_Q      7
+#define PLL_Q      4
 
 /******************************************************************************/
 
@@ -345,24 +345,23 @@ static void SetSysClock(void) {
 	/*            PLL (clocked by HSE) used as System clock source                */
 	/******************************************************************************/
 
-//  __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
-	/* DO NOT Enable HSE -- tard */
-//  RCC->CR |= ((uint32_t)RCC_CR_HSEON);
-	/* DO NOT Wait till HSE is ready and if Time out is reached exit -- tard */
-//  do
-//  {
-//    HSEStatus = RCC->CR & RCC_CR_HSERDY;
-//    StartUpCounter++;
-//  } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+//	__IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+//	/* DO NOT Enable HSE -- tard */
 //
-//  if ((RCC->CR & RCC_CR_HSERDY) != RESET)
-//  {
-//    HSEStatus = (uint32_t)0x01;
-//  }
-//  else
-//  {
-//    HSEStatus = (uint32_t)0x00;
-//  }
+//
+//	RCC->CR |= ((uint32_t) RCC_CR_HSEON);
+//	/* DO NOT Wait till HSE is ready and if Time out is reached exit -- tard */
+//	do {
+//		HSEStatus = RCC->CR & RCC_CR_HSERDY;
+//		StartUpCounter++;
+//	} while ((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+//
+//	if ((RCC->CR & RCC_CR_HSERDY) != RESET) {
+//		HSEStatus = (uint32_t) 0x01;
+//	} else {
+//		HSEStatus = (uint32_t) 0x00;
+//	}
+
 	/* HSI is enabled by default - see SystemInit() function -- tard*/
 	/* wait for it is ready*/
 	__IO uint32_t HSIStatus = 0;
@@ -371,7 +370,7 @@ static void SetSysClock(void) {
 		HSIStatus = RCC->CR & RCC_CR_HSIRDY;
 	} while (HSIStatus == 0);
 
-	if (HSIStatus == (uint32_t) 0x01) {
+	if (HSIStatus == RCC_CR_HSIRDY) {
 		/* Select regulator voltage output Scale 1 mode, System frequency up to 168 MHz */
 		RCC->APB1ENR |= RCC_APB1ENR_PWREN;
 		PWR->CR |= PWR_CR_VOS;

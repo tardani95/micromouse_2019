@@ -77,13 +77,15 @@ void ToBytes(void *dataIn, uint8_t size, uint8_t dataOut[]){
 
 void initSysTick(void){
 	//TODO clksourceconfig has no effect
-	SysTick_CLKSourceConfig(SYS_TICK_CLKSOURCE_DIV); /*168MHz/8 = 21MHz*/
-	SystemCoreClockUpdate();
+
 
 	RCC_ClocksTypeDef clockStruct;
 	RCC_GetClocksFreq(&clockStruct);
 	//TODO timer period is not accurate
-	SysTick_Config(	clockStruct.SYSCLK_Frequency/SYS_TICK_CLKSOURCE_DIV_VALUE*SYS_TICK_PERIOD_ms/1000000 - 12); /*21000/21MHz = 1ms*/
+	SysTick_Config(	clockStruct.HCLK_Frequency/SYS_TICK_CLKSOURCE_DIV_VALUE/1000*SYS_TICK_PERIOD_ms); /*21MHz/1000 = 1ms */
+
+	/*168MHz/8 = 21MHz*/
+	SysTick_CLKSourceConfig(SYS_TICK_CLKSOURCE_DIV);
 
 }
 
@@ -91,7 +93,7 @@ volatile uint32_t systick_cnt = 0;
 
 void SysTick_Handler(void){
 	systick_cnt++;
-	if(systick_cnt%1000 == 0){
+	if(systick_cnt%HEARTBEAT_TOGGLE_PERIOD_ms == 0){
 		toggleLED(HEARTBEAT);
 	}
 }

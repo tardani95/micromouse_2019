@@ -33,7 +33,7 @@
 #define MPU6050_I2C_TX_Stream		DMA1_Stream6
 #define MPU6050_I2C_RX_Stream		DMA1_Stream0
 
-#define MPU6050_I2C_Speed		10000 // maximum bus speed 400kHz defined in datasheet
+#define MPU6050_I2C_Speed		400000 // maximum bus speed 400kHz defined in datasheet
 #define MPU6050_I2C				I2C1
 /* end of mpu6050 peripheral settings*/
 
