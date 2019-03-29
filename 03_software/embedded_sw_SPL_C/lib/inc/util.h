@@ -10,10 +10,10 @@
 #include "stm32f4xx_rcc.h"
 #include "misc.h"
 
-#define SYS_TICK_PERIOD_ms	500
-#define SYS_TICK_CLKSOURCE_DIV SysTick_CLKSource_HCLK
-#define SYS_TICK_CLKSOURCE_DIV_VALUE 1
-
+#define HEARTBEAT_TOGGLE_PERIOD_ms		1000
+#define SYS_TICK_PERIOD_ms				1
+#define SYS_TICK_CLKSOURCE_DIV 			SysTick_CLKSource_HCLK_Div8
+#define SYS_TICK_CLKSOURCE_DIV_VALUE 	8
 
 void reverse(char *str, int len);
 int intToStr(int x, char str[], int d);
