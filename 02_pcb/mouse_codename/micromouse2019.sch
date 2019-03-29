@@ -7489,7 +7489,6 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <port name="DRV_A_IN2" side="left" coord="5.08" direction="in"/>
 <port name="DRV_B_IN1" side="left" coord="-5.08" direction="in"/>
 <port name="DRV_B_IN2" side="left" coord="-7.62" direction="in"/>
-<port name="+3V3" side="right" coord="2.54" direction="pwr"/>
 </ports>
 <variantdefs>
 </variantdefs>
@@ -7652,7 +7651,6 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <junction x="182.88" y="93.98"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="93.98" x2="182.88" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="101.6" x2="182.88" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -7983,8 +7981,8 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <attribute name="NAME" x="73.406" y="122.809" size="1.778" layer="95"/>
 <attribute name="VALUE" x="81.534" y="119.507" size="1.778" layer="96"/>
 </instance>
-<instance part="+3V1" gate="G$1" x="15.24" y="124.46" smashed="yes">
-<attribute name="VALUE" x="12.7" y="119.38" size="1.778" layer="96" rot="R90"/>
+<instance part="+3V1" gate="G$1" x="60.96" y="127" smashed="yes">
+<attribute name="VALUE" x="58.42" y="121.92" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="+3V2" gate="G$1" x="78.74" y="102.87" smashed="yes">
 <attribute name="VALUE" x="85.344" y="103.886" size="1.778" layer="96" rot="R180"/>
@@ -8183,58 +8181,6 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </net>
 <net name="+3V3" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="VCAP_2"/>
-<pinref part="C9" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="116.84" x2="60.96" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="116.84" x2="15.24" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="116.84" x2="15.24" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="121.92" x2="60.96" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="121.92" x2="60.96" y2="116.84" width="0.1524" layer="91"/>
-<junction x="60.96" y="116.84"/>
-<pinref part="+3V1" gate="G$1" pin="+3V3"/>
-<wire x1="15.24" y1="121.92" x2="15.24" y2="116.84" width="0.1524" layer="91"/>
-<junction x="15.24" y="116.84"/>
-<pinref part="IC1" gate="G$1" pin="VCAP_1"/>
-<pinref part="C8" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="114.3" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="114.3" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="114.3" x2="22.86" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="116.84" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
-<junction x="60.96" y="114.3"/>
-<pinref part="IC1" gate="G$1" pin="VDD_4"/>
-<pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="111.76" x2="60.96" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="111.76" x2="30.48" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="111.76" x2="30.48" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="114.3" x2="60.96" y2="111.76" width="0.1524" layer="91"/>
-<junction x="60.96" y="111.76"/>
-<pinref part="IC1" gate="G$1" pin="VDD_3"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="109.22" x2="60.96" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="109.22" x2="38.1" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="109.22" x2="38.1" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="111.76" x2="60.96" y2="109.22" width="0.1524" layer="91"/>
-<junction x="60.96" y="109.22"/>
-<pinref part="IC1" gate="G$1" pin="VDD_2"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="106.68" x2="60.96" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="106.68" x2="45.72" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="106.68" x2="45.72" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="60.96" y1="109.22" x2="60.96" y2="106.68" width="0.1524" layer="91"/>
-<junction x="60.96" y="106.68"/>
-<pinref part="IC1" gate="G$1" pin="VDD_1"/>
-<wire x1="93.98" y1="104.14" x2="60.96" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="104.14" x2="53.34" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="104.14" x2="53.34" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="96.52" x2="60.96" y2="104.14" width="0.1524" layer="91"/>
-<junction x="60.96" y="104.14"/>
-<wire x1="60.96" y1="106.68" x2="60.96" y2="104.14" width="0.1524" layer="91"/>
-<junction x="60.96" y="104.14"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="VDDA"/>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="93.98" y1="99.06" x2="86.36" y2="99.06" width="0.1524" layer="91"/>
@@ -8271,6 +8217,44 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="78.74" y1="172.72" x2="78.74" y2="175.26" width="0.1524" layer="91"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="C10" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="121.92" x2="60.96" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="+3V1" gate="G$1" pin="+3V3"/>
+<wire x1="60.96" y1="124.46" x2="60.96" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="VDD_4"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="111.76" x2="60.96" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="111.76" x2="30.48" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="111.76" x2="30.48" y2="96.52" width="0.1524" layer="91"/>
+<junction x="60.96" y="111.76"/>
+<pinref part="IC1" gate="G$1" pin="VDD_3"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="109.22" x2="60.96" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="109.22" x2="38.1" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="109.22" x2="38.1" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="111.76" x2="60.96" y2="109.22" width="0.1524" layer="91"/>
+<junction x="60.96" y="109.22"/>
+<pinref part="IC1" gate="G$1" pin="VDD_2"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="93.98" y1="106.68" x2="60.96" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="106.68" x2="45.72" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="106.68" x2="45.72" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="109.22" x2="60.96" y2="106.68" width="0.1524" layer="91"/>
+<junction x="60.96" y="106.68"/>
+<pinref part="IC1" gate="G$1" pin="VDD_1"/>
+<wire x1="93.98" y1="104.14" x2="60.96" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="104.14" x2="53.34" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="104.14" x2="53.34" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="96.52" x2="60.96" y2="104.14" width="0.1524" layer="91"/>
+<junction x="60.96" y="104.14"/>
+<wire x1="60.96" y1="106.68" x2="60.96" y2="104.14" width="0.1524" layer="91"/>
+<junction x="60.96" y="104.14"/>
+<wire x1="60.96" y1="121.92" x2="60.96" y2="111.76" width="0.1524" layer="91"/>
+<junction x="60.96" y="121.92"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -8866,6 +8850,24 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <pinref part="R9" gate="G$1" pin="1"/>
 </segment>
 </net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="C8" gate="G$1" pin="1"/>
+<pinref part="IC1" gate="G$1" pin="VCAP_1"/>
+<wire x1="93.98" y1="114.3" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="114.3" x2="22.86" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="114.3" x2="22.86" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="C9" gate="G$1" pin="1"/>
+<pinref part="IC1" gate="G$1" pin="VCAP_2"/>
+<wire x1="93.98" y1="116.84" x2="60.96" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="116.84" x2="15.24" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="116.84" x2="15.24" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -9108,7 +9110,6 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <part name="P+2" library="0-micromouse2019" deviceset="VCC" device=""/>
 <part name="+3V4" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="GND5" library="0-micromouse2019" deviceset="GND" device=""/>
-<part name="+3V5" library="0-micromouse2019" deviceset="+3V3" device=""/>
 <part name="CONN1" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 <part name="CONN2" library="0-micromouse2019" deviceset="CONN_IRD_VCC" device="" package3d_urn="urn:adsk.eagle:package:9165697/2"/>
 <part name="R1" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="4k7"/>
@@ -9188,9 +9189,6 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </instance>
 <instance part="GND5" gate="1" x="101.6" y="15.24" smashed="yes">
 <attribute name="VALUE" x="99.06" y="12.7" size="1.778" layer="96"/>
-</instance>
-<instance part="+3V5" gate="G$1" x="220.98" y="124.46" smashed="yes">
-<attribute name="VALUE" x="218.44" y="119.38" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="CONN1" gate="G$1" x="81.28" y="129.54" smashed="yes">
 <attribute name="NAME" x="83.82" y="127.254" size="1.27" layer="95"/>
@@ -9305,12 +9303,6 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="106.68" y1="38.1" x2="101.6" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <wire x1="101.6" y1="38.1" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<portref moduleinst="MOT" port="+3V3"/>
-<wire x1="205.74" y1="106.68" x2="220.98" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="106.68" x2="220.98" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="+3V5" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
@@ -9503,6 +9495,19 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </sheet>
 </sheets>
 <errors>
+<approved hash="104,1@POWER_REGULATOR,101.6,96.52,LDO2,IN,V_BAT_IN,,,"/>
+<approved hash="104,1@POWER_REGULATOR,129.54,96.52,LDO2,OUT,VCC,,,"/>
+<approved hash="104,1@POWER_REGULATOR,101.6,149.86,LDO1,IN,V_BAT_IN,,,"/>
+<approved hash="104,1@POWER_REGULATOR,137.16,149.86,LDO1,OUT,+3V3,,,"/>
+<approved hash="104,1@MICROCONTROLLER,93.98,99.06,IC1,VDDA,+3V3,,,"/>
+<approved hash="104,1@MICROCONTROLLER,93.98,104.14,IC1,VDD_1,+3V3,,,"/>
+<approved hash="104,1@MICROCONTROLLER,93.98,106.68,IC1,VDD_2,+3V3,,,"/>
+<approved hash="104,1@MICROCONTROLLER,93.98,109.22,IC1,VDD_3,+3V3,,,"/>
+<approved hash="104,1@MICROCONTROLLER,93.98,111.76,IC1,VDD_4,+3V3,,,"/>
+<approved hash="104,1@MICROCONTROLLER,93.98,86.36,IC1,VSSA,GND,,,"/>
+<approved hash="104,1@MICROCONTROLLER,93.98,81.28,IC1,VSS_1,GND,,,"/>
+<approved hash="104,1@MICROCONTROLLER,93.98,78.74,IC1,VSS_2,GND,,,"/>
+<approved hash="104,1@MICROCONTROLLER,114.3,165.1,RGB1,VIN,+3V3,,,"/>
 <approved hash="213,1,170.18,111.76,DRV_A_IN1,in,,,,"/>
 <approved hash="213,1,170.18,109.22,DRV_A_IN2,in,,,,"/>
 <approved hash="213,1,170.18,99.06,DRV_B_IN1,in,,,,"/>
@@ -9516,6 +9521,23 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <approved hash="213,1,162.56,63.5,PTR3,in,,,,"/>
 <approved hash="213,1,162.56,60.96,PTR4,in,,,,"/>
 <approved hash="213,1,124.46,50.8,UART3_RX,in,,,,"/>
+<approved hash="110,1@MICROCONTROLLER,60.96,114.3,+3V3,N$8,,,,"/>
+<approved hash="110,1@MICROCONTROLLER,60.96,114.3,+3V3,N$8,,,,"/>
+<approved hash="110,1@MICROCONTROLLER,60.96,116.84,+3V3,N$10,,,,"/>
+<approved hash="110,1@MICROCONTROLLER,60.96,116.84,+3V3,N$10,,,,"/>
+<approved hash="111,1,91.44,73.66,SCL,,,,,"/>
+<approved hash="118,1@POWER_REGULATOR,138.43,149.86,Netz,+3V3,,,,"/>
+<approved hash="118,1@POWER_REGULATOR,133.35,96.52,Netz,VCC,,,,"/>
+<approved hash="118,1@POWER_REGULATOR,99.06,129.54,Netz,GND,,,,"/>
+<approved hash="118,1@INERTIAL_MEASUREMENT_UNIT,68.58,105.41,Netz,+3V3,,,,"/>
+<approved hash="118,1@INERTIAL_MEASUREMENT_UNIT,172.72,106.68,Netz,GND,,,,"/>
+<approved hash="118,1@MOTOR_DRIVER,165.1,81.28,Netz,GND,,,,"/>
+<approved hash="118,1@ENCODER_PORT,117.856,107.95,Netz,+3V3,,,,"/>
+<approved hash="118,1@ENCODER_PORT,117.856,100.33,Netz,GND,,,,"/>
+<approved hash="118,1@WIRELESS_MODUL_PORT,110.49,124.46,Netz,+3V3,,,,"/>
+<approved hash="118,1@WIRELESS_MODUL_PORT,110.49,114.3,Netz,GND,,,,"/>
+<approved hash="118,1@IR_LEDS_AND_PTS,38.1,58.42,Netz,GND,,,,"/>
+<approved hash="118,1@IR_LEDS_AND_PTS,215.9,62.23,Netz,VCC,,,,"/>
 </errors>
 </schematic>
 </drawing>
