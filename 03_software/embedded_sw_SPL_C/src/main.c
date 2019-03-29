@@ -108,6 +108,7 @@ int16_t accel_gyro_temp[7];
 float gForceX, gForceY, gForceZ;
 float rotX, rotY, rotZ;
 float temp_C;
+volatile uint8_t rgb_led_status = 0;
 
 menu_p_t main_menu_p;
 menu_p_t after_run_menu_p;
@@ -125,18 +126,19 @@ void MPU6050_CalcAccelRot(void);
 void Init_Periph(void) {
 
 	initSysTick();
-//	initBTModule();
+	initBTModule();
 	initStatusLEDs();
-//	initMotorControl();
-//	ADC_DeInit();
-//	initBatLvlWatcher();
-//	initEncoders();
+	initMotorControl();
+	ADC_DeInit();
+	initBatLvlWatcher();
+	initEncoders();
 	Init_IMU();
-//	initMenus(&main_menu_p, &after_run_menu_p);
-	//Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+	initMenus(&main_menu_p, &after_run_menu_p);
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
-//	Init_Buttons();
+	Init_Buttons();
+	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+
 }
 
 /**
@@ -152,8 +154,6 @@ int main(void) {
 //	SystemInit(); /*startup script calls this function before main*/
 
 	Init_Periph();
-
-//	SystemCoreClockUpdate();
 
 	/**
 	 *  IMPORTANT NOTE!
@@ -176,9 +176,10 @@ int main(void) {
 	//uint32_t enc_right;
 
 	setRGB(RGB_PINK);
-	//setLED(PINK);
+	setLED(PINK);
 	setLED(YELLOW);
 	//actuateMotors(7000, 0);
+
 
 	/* Infinite loop */
 	while (1) {
@@ -208,6 +209,7 @@ int main(void) {
 //		}
 
 		MPU6050_GetRawAccelGyro(accel_gyro_temp);
+//		MPU6050_DMAGetRawAccelGyro();
 		for (uint32_t i = 0; i < 32000; i += 2) {
 			i--;
 		}
@@ -228,22 +230,27 @@ void EXTI15_10_IRQHandler() {
 		//INFO("Button1 pressed");
 		//TODO handle button1 pressed action
 
-		resetLED(PINK);
+		toggleLED(PINK);
+		rgb_led_status++;
 		EXTI_ClearITPendingBit(BTN1_EXTI_Line);
 		//EXTI->PR = BTN1_EXTI_Line; /*clear pendig bit for button1*/
-		return;
+//		return;
 	}
 
 	/* button2 pressed*/
 	if (SET == EXTI_GetITStatus(BTN2_EXTI_Line)) {
 
-		INFO("Button2 pressed");
+		//INFO("Button2 pressed");
 		//TODO handle button2 pressed action
+
+		rgb_led_status++;
 
 		EXTI_ClearITPendingBit(BTN2_EXTI_Line);
 		//EXTI->PR = BTN2_EXTI_Line; /*clear pendig bit for button2*/
-		return;
+//		return;
 	}
+
+	setRGB(rgb_led_status%10);
 }
 
 void I2C2_EV_IRQHandler(void) {
@@ -278,6 +285,11 @@ void I2C2_EV_IRQHandler(void) {
 
 // mpu6050 readings are ready
 void DMA1_Stream0_IRQHandler(void) {
+	if(SET == DMA_GetFlagStatus(MPU6050_I2C_RX_Stream,DMA_FLAG_TEIF0)){
+		while(1){
+			int i = 0;
+		}
+	}
 	DMA_ClearFlag(MPU6050_I2C_RX_Stream, DMA_FLAG_TCIF0);
 	I2C_GenerateSTOP(MPU6050_I2C, ENABLE);
 	DMA_Cmd(MPU6050_I2C_TX_Stream, DISABLE);
