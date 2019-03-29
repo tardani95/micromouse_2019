@@ -7,6 +7,7 @@
 
 #include "sw_menu.h"
 #include "stddef.h"
+#include "sw_debug.h"
 /** @addtogroup software_modules
  * @{
  */
@@ -28,6 +29,8 @@
  */
 void initMenu(menu_p_t menu_p) {
 	initNextItem(menu_p->curr_item_, menu_p->curr_item_);
+//	DEBUG("Menu initialized: ");
+//	DEBUG(menu_p->name_);
 	return;
 }
 
@@ -100,12 +103,11 @@ void selectItem(menu_p_t menu_p) {
  */
 void nextItem(menu_p_t menu_p) {
 	incrementItemIterator(menu_p->curr_item_);
-	//printf("Looking at: ");
-	//printf((*menu_p->curr_item_->item_iterator_)->name_);
-	//printf("\n");
+
+	INFO("Looking at: looooooooooooooooong string");
+	INFO((*menu_p->curr_item_->item_iterator_)->name_);
 	return;
 }
-
 /** @defgroup menu_callbacks Menu Callbacks
  * @brief Callback function definitions for the items in the menu system.
  * @{
@@ -123,11 +125,12 @@ void enterSubmenu(menu_p_t menu_p) {
 	item_p_t new_item_p = *(old_item_p->item_iterator_);
 	resetItemIterator(new_item_p);
 	menu_p->curr_item_ = new_item_p;
-	//printf("Entered ");
-	//printf(menu_p->curr_item_->name_);
-	//printf("\nLooking at: ");
-	//printf((*menu_p->curr_item_->item_iterator_)->name_);
-	//printf("\n");
+
+	INFO("Entered: ");
+	INFO(menu_p->curr_item_->name_);
+	INFO("Looking at: ");
+	INFO((*menu_p->curr_item_->item_iterator_)->name_);
+
 	return;
 }
 
@@ -172,6 +175,13 @@ SUBMENU(after_run_root, &reset_map, &exit_to_main_menu);
  */
 MENU(after_run_menu, &after_run_root);
 
+
+void initMenus(menu_p_t *main_menu_p, menu_p_t *after_run_menu_p){
+	initMenu(&main_menu);
+	initMenu(&after_run_menu);
+	*main_menu_p = &main_menu;
+	*after_run_menu_p = &after_run_menu;
+}
 
 /**
  * @}

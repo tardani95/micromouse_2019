@@ -8,6 +8,8 @@
 #ifndef SW_MENU_H_
 #define SW_MENU_H_
 
+#include "stm32f4xx.h"
+
 /** @addtogroup software_modules
  * @{
  */
@@ -41,6 +43,7 @@ struct item {
  * Struct for the menu.
  */
 struct menu {
+	char *name_;
 	item_p_t curr_item_; /**<Pointer to the currently active item of the menu*/
 };
 
@@ -68,8 +71,9 @@ struct menu {
 */
 #define SUBMENU(name, ...)									\
 	item_p_t name##_subitems[] = {NULL , __VA_ARGS__};		\
+	char name##_name[MAX_STRING_SIZE] = #name;				\
 	item_t name = {											\
-		.name_ = #name,										\
+		.name_ = name##_name,								\
 		.onSelectCallback_ = enterSubmenu,					\
 		.items_ = &name##_subitems,							\
 		.first_ = &name##_subitems[0],						\
@@ -89,8 +93,9 @@ struct menu {
  * @param onSelectCallback Callback function to be executed upon selection of this item.
  */
 #define ACTION(name, onSelectCallback)						\
+	char name##_name[MAX_STRING_SIZE] = #name;				\
 	item_t name = {											\
-		.name_ = #name,										\
+		.name_ = name##_name,								\
 		.onSelectCallback_ = onSelectCallback,				\
 		.items_ = NULL,										\
 		.first_ = NULL,										\
@@ -109,12 +114,19 @@ struct menu {
  * @param root The root submenu for this menu.
  */
 #define MENU(name, root)									\
+	char name##_name[MAX_STRING_SIZE] = #name;				\
 	menu_t name = {											\
+		.name_ = name##_name,								\
 		.curr_item_ = root									\
 	}
 
+
+
 void initMenu(menu_p_t menu_p);
 void initNextItem(item_p_t parent_p, item_p_t current_p);
+
+
+void initMenus(menu_p_t *main_menu_p, menu_p_t *after_run_menu_p);
 
 void incrementItemIterator(item_p_t item_p);
 void resetItemIterator(item_p_t item_p);

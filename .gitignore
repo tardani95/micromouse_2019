@@ -92,3 +92,13 @@
 03_software/embedded_sw_SPL_C/\.settings/org\.eclipse\.cdt\.codan\.core\.prefs
 
 03_software/embedded_sw_SPL_C/\.settings/language\.settings\.xml
+
+03_software/embedded_sw_SPL_C/Debug_STM32F407VG_FLASH\.ld
+
+03_software/embedded_sw_SPL_C/\.settings/com\.atollic\.truestudio\.debug\.hardware_device\.prefs
+
+03_software/embedded_sw_SPL_C/micromouse2019_embedded_software_SPL_C\.elf\.launch
+
+03_software/embedded_sw_SPL_C/Debug_STM32F415RG_FLASH\.ld
+
+#03_software/embedded_sw_SPL_C/\.cproject
