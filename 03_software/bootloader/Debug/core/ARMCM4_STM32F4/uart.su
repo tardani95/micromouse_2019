@@ -1,0 +1,4 @@
+uart.c:248:13:UartTransmitByte	16	static
+uart.c:83:6:UartInit	40	static
+uart.c:122:6:UartTransmitPacket	16	static
+uart.c:152:10:UartReceivePacket	24	static

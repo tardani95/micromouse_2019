@@ -1,0 +1,12 @@
+mmc.c:248:6:xchg_spi	16	static
+mmc.c:321:6:deselect_card	0	static
+mmc.c:298:5:wait_ready	16	static
+mmc.c:334:5:select_card	8	static
+mmc.c:427:6:send_cmd	16	static
+mmc.c:390:5:xmit_datablock	16	static
+mmc.c:351:5:rcvr_datablock	24	static
+mmc.c:481:9:disk_initialize	136	static
+mmc.c:542:9:disk_status	0	static
+mmc.c:556:9:disk_read	16	static
+mmc.c:595:9:disk_write	16	static
+mmc.c:637:9:disk_ioctl	32	static

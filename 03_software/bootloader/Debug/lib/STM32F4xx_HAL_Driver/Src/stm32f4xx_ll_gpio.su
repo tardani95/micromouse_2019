@@ -1,0 +1,5 @@
+stm32f4xx_ll_bus.h:600:22:LL_AHB1_GRP1_ForceReset	0	static
+stm32f4xx_ll_bus.h:649:22:LL_AHB1_GRP1_ReleaseReset	0	static
+stm32f4xx_ll_gpio.c:120:13:LL_GPIO_DeInit	8	static
+stm32f4xx_ll_gpio.c:216:13:LL_GPIO_Init	28	static
+stm32f4xx_ll_gpio.c:292:6:LL_GPIO_StructInit	0	static
