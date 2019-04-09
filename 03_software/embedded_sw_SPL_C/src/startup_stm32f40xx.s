@@ -234,6 +234,7 @@ g_pfnVectors:
   .word     CRYP_IRQHandler                   /* CRYP crypto                  */                   
   .word     HASH_RNG_IRQHandler               /* Hash and Rng                 */
   .word     FPU_IRQHandler                    /* FPU                          */
+  .word	    0x55AA11EE                        /* OpenBLT checksum placeholder */
                         
 /*******************************************************************************
 *
