@@ -154,16 +154,13 @@ void UART_DMASend(char *data) {
 //	}
 
 	/* Waiting the end of Data transfer */
-	while (USART_GetFlagStatus(BT_UART, USART_FLAG_TC) == RESET)
-		;
-	while (DMA_GetFlagStatus(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3)
-			== RESET)
-		;
+//	while (USART_GetFlagStatus(BT_UART, USART_FLAG_TC) == RESET)
+//		;
+//	while (DMA_GetFlagStatus(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3)
+//			== RESET)
+//		;
 
-	/* Clear DMA Transfer Complete Flags */
-	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
-	/* Clear USART Transfer Complete Flags */
-//	USART_ClearFlag(BT_UART, USART_FLAG_TC); /* do not need to clear */
+
 
 }
 
@@ -387,6 +384,13 @@ void DMA1_Stream1_IRQHandler(void) {
  */
 void DMA1_Stream3_IRQHandler(void) {
 	int hali = 0;
+
+
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
+	/* Clear USART Transfer Complete Flags */
+//	USART_ClearFlag(BT_UART, USART_FLAG_TC); /* do not need to clear */
+	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 }
 
 /**

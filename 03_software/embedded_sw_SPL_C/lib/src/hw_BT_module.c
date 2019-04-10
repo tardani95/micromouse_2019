@@ -87,24 +87,24 @@ void initBTModule(char *txBuffer, char *rxBuffer) {
 	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
 	DMA_Init(BT_UART_RX_DMA_Stream, &bt_dma);
 
-//	NVIC_InitTypeDef bt_nvic;
-//
-//	/* USART3 TX*/
-//	bt_nvic.NVIC_IRQChannel = DMA1_Stream3_IRQn;
-//	bt_nvic.NVIC_IRQChannelPreemptionPriority = 5;
-//	bt_nvic.NVIC_IRQChannelSubPriority = 0;
-//	bt_nvic.NVIC_IRQChannelCmd = ENABLE;
-//	NVIC_Init(&bt_nvic);
-//
-//	/* USART3 RX*/
-//	bt_nvic.NVIC_IRQChannel = DMA1_Stream1_IRQn;
-//	bt_nvic.NVIC_IRQChannelPreemptionPriority = 6;
-//	bt_nvic.NVIC_IRQChannelSubPriority = 0;
-//	bt_nvic.NVIC_IRQChannelCmd = ENABLE;
-//	NVIC_Init(&bt_nvic);
-//
-//	DMA_ITConfig(BT_UART_TX_DMA_Stream, DMA_IT_TC, ENABLE);
-//	DMA_ITConfig(BT_UART_RX_DMA_Stream, DMA_IT_TC, ENABLE);
+	NVIC_InitTypeDef bt_nvic;
+
+	/* USART3 TX*/
+	bt_nvic.NVIC_IRQChannel = DMA1_Stream3_IRQn;
+	bt_nvic.NVIC_IRQChannelPreemptionPriority = 5;
+	bt_nvic.NVIC_IRQChannelSubPriority = 0;
+	bt_nvic.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&bt_nvic);
+
+	/* USART3 RX*/
+	bt_nvic.NVIC_IRQChannel = DMA1_Stream1_IRQn;
+	bt_nvic.NVIC_IRQChannelPreemptionPriority = 6;
+	bt_nvic.NVIC_IRQChannelSubPriority = 0;
+	bt_nvic.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&bt_nvic);
+
+	DMA_ITConfig(BT_UART_TX_DMA_Stream, DMA_IT_TC, ENABLE);
+	DMA_ITConfig(BT_UART_RX_DMA_Stream, DMA_IT_TC, ENABLE);
 
 //	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
 //	DMA_Cmd(BT_UART_RX_DMA_Stream, ENABLE);
