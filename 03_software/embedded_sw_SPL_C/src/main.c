@@ -163,7 +163,7 @@ void UART_DMASend(char *data) {
 	/* Clear DMA Transfer Complete Flags */
 	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
 	/* Clear USART Transfer Complete Flags */
-	USART_ClearFlag(BT_UART, USART_FLAG_TC);
+//	USART_ClearFlag(BT_UART, USART_FLAG_TC); /* do not need to clear */
 
 }
 
