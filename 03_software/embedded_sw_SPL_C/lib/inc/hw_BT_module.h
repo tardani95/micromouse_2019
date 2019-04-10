@@ -11,7 +11,8 @@
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_gpio.h"
 #include "stm32f4xx_usart.h"
-
+#include "stm32f4xx_dma.h"
+#include "misc.h"
 
 /** @addtogroup hardware_modules
  * @{
@@ -32,9 +33,10 @@
 #define BT_UART_Baud		115200
 #define BT_UART_Parity 		USART_Parity_No
 #define BT_UART				USART3
+#define BT_UART_TX_DMA_Stream	DMA1_Stream3
+#define BT_UART_RX_DMA_Stream	DMA1_Stream1
 
-
-void initBTModule(void);
+void initBTModule(char *txBuffer, char *rxBuffer);
 
 void BTSendString(char *string);
 void BTSendChar(char string);

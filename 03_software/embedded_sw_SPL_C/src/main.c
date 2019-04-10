@@ -70,6 +70,7 @@
 #include "stm32f4xx.h"
 #include "misc.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * @defgroup hardware_modules Hardware Modules
@@ -102,6 +103,9 @@
  */
 /* Private macro */
 /* Private variables */
+char uartRxBuffer[100] = { };
+char uartTxBuffer[100] = { };
+
 uint8_t i2cRxBuffer[14] = { };
 uint8_t i2cTxBuffer[] = { 0x3B };
 int16_t accel_gyro_temp[7];
@@ -117,6 +121,60 @@ menu_p_t after_run_menu_p;
 void MPU6050_CalcAccelRot(void);
 /* Private functions */
 
+void UART_Send(char *data) {
+	uint8_t i = 0;
+	while (data[i] != '\0') {
+		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
+			;
+		USART_SendData(BT_UART, data[i]);
+		i++;
+	}
+}
+
+void UART_DMASend(char *data) {
+	uint8_t length = 0;
+	while (data[length] != '\0') {
+		length++;
+	}
+
+	strcpy(uartTxBuffer, data);
+
+
+	/* start transmission */
+	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
+	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
+
+//	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
+	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
+
+	USART_DMACmd(BT_UART, USART_DMAReq_Tx, ENABLE);
+
+//	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE) {
+//
+//	}
+
+	/* Waiting the end of Data transfer */
+	while (USART_GetFlagStatus(BT_UART, USART_FLAG_TC) == RESET)
+		;
+	while (DMA_GetFlagStatus(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3)
+			== RESET)
+		;
+
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
+	/* Clear USART Transfer Complete Flags */
+	USART_ClearFlag(BT_UART, USART_FLAG_TC);
+
+}
+
+void UART_DMAReceive(char *data, uint8_t length) {
+	DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
+	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
+
+	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
+	DMA_Cmd(BT_UART_RX_DMA_Stream, ENABLE);
+}
+
 /**
  * @brief Initialize all peripherals\n
  * but with all interrupts disabled
@@ -126,18 +184,20 @@ void MPU6050_CalcAccelRot(void);
 void Init_Periph(void) {
 
 	initSysTick();
-	initBTModule();
-	initStatusLEDs();
-	initMotorControl();
-	ADC_DeInit();
-	initBatLvlWatcher();
-	initEncoders();
-	Init_IMU();
-	initMenus(&main_menu_p, &after_run_menu_p);
 
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
-	Init_Buttons();
-	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+
+	initBTModule(uartTxBuffer, uartRxBuffer);
+//	initStatusLEDs();
+//	initMotorControl();
+//	ADC_DeInit();
+//	initBatLvlWatcher();
+//	initEncoders();
+//	Init_IMU();
+//	initMenus(&main_menu_p, &after_run_menu_p);
+
+//	Init_Buttons();
+//	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
 
 }
 
@@ -150,36 +210,33 @@ void Init_Periph(void) {
  */
 int main(void) {
 	int i = 0;
-
 //	SystemInit(); /*startup script calls this function before main*/
-
 	Init_Periph();
 
-	/**
-	 *  IMPORTANT NOTE!
-	 *  The symbol VECT_TAB_SRAM needs to be defined when building the project
-	 *  if code has been located to RAM and interrupts are used.
-	 *  Otherwise the interrupt table located in flash will be used.
-	 *  See also the <system_*.c> file and how the SystemInit() function updates
-	 *  SCB->VTOR register.
-	 *  E.g.  SCB->VTOR = 0x20000000;
-	 */
-
 	/* TODO - Add your application code here */
-
+//	resetRGB();
+//	uint32_t enc_left;
+//	uint32_t enc_right;
+//	setRGB(RGB_PINK);
+//	setLED(PINK);
+//	setLED(YELLOW);
+//	actuateMotors(7000, 0);
+//	MPU6050_DMAGetRawAccelGyro();
+//	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE) {
+//
+//	}
+	UART_DMASend("heyho0\n");
 	for (uint32_t i = 0; i < 32000; i += 2) {
 		i--;
 	}
-
-	//resetRGB();
-	//uint32_t enc_left;
-	//uint32_t enc_right;
-
-	setRGB(RGB_PINK);
-	setLED(PINK);
-	setLED(YELLOW);
-	//actuateMotors(7000, 0);
-
+	UART_DMASend("heyho1\n");
+	for (uint32_t i = 0; i < 32000; i += 2) {
+		i--;
+	}
+	UART_DMASend("heyho2\n");
+	for (uint32_t i = 0; i < 32000; i += 2) {
+		i--;
+	}
 
 	/* Infinite loop */
 	while (1) {
@@ -208,14 +265,11 @@ int main(void) {
 //			MATSEND("insert sensor data and stuff");
 //		}
 
-		MPU6050_GetRawAccelGyro(accel_gyro_temp);
+//		MPU6050_GetRawAccelGyro(accel_gyro_temp);
 //		MPU6050_DMAGetRawAccelGyro();
 		for (uint32_t i = 0; i < 32000; i += 2) {
 			i--;
 		}
-
-		//MPU6050_CalcAccelRot();
-
 	}
 }
 
@@ -250,10 +304,10 @@ void EXTI15_10_IRQHandler() {
 //		return;
 	}
 
-	setRGB(rgb_led_status%10);
+	setRGB(rgb_led_status % 10);
 }
 
-void I2C2_EV_IRQHandler(void) {
+void I2C2_EV_IRQHandler() {
 	if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_SB) == SET) {
 		if (i2cDirectionWrite) {
 			// STM32 Transmitter
@@ -284,9 +338,9 @@ void I2C2_EV_IRQHandler(void) {
 }
 
 // mpu6050 readings are ready
-void DMA1_Stream0_IRQHandler(void) {
-	if(SET == DMA_GetFlagStatus(MPU6050_I2C_RX_Stream,DMA_FLAG_TEIF0)){
-		while(1){
+void DMA1_Stream0_IRQHandler() {
+	if (SET == DMA_GetFlagStatus(MPU6050_I2C_RX_Stream, DMA_FLAG_TEIF0)) {
+		while (1) {
 			int i = 0;
 		}
 	}
@@ -319,6 +373,20 @@ void MPU6050_CalcAccelRot() {
 	rotZ = (float) accel_gyro_temp[5] / 65.5; //131.0;
 
 	temp_C = (float) accel_gyro_temp[6] / 340 + 36.53;
+}
+
+/**
+ * @brief uart data received
+ */
+void DMA1_Stream1_IRQHandler(void) {
+	int hali = 0;
+}
+
+/**
+ * @brief all uart data sent out
+ */
+void DMA1_Stream3_IRQHandler(void) {
+	int hali = 0;
 }
 
 /**

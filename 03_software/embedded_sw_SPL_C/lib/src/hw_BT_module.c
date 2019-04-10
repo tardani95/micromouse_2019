@@ -17,28 +17,37 @@
  * @{
  */
 
-void initBTModule(void) {
+void initBTModule(char *txBuffer, char *rxBuffer) {
 
 	/* deinitialize before use */
 	USART_Cmd(BT_UART, DISABLE);
 	USART_DeInit(BT_UART);
 
-	/* enable clock*/
+	/* Enable USART clock */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
 
 	//TODO call USART_OverSampling8Cmd(); if need higher baud rates (1MHz or more)
 
+	/* Enable GPIO clock*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
 
+	/* Enable the DMA clock */
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA1, ENABLE);
+
+	/* Connect USART pins to AF */
 	GPIO_PinAFConfig(BT_Port, BT_TX_PinSource, GPIO_AF_USART3);
 	GPIO_PinAFConfig(BT_Port, BT_RX_PinSource, GPIO_AF_USART3);
 
 	GPIO_InitTypeDef bt_gpio;
 	bt_gpio.GPIO_Mode = GPIO_Mode_AF;
-	bt_gpio.GPIO_OType = GPIO_OType_OD;
-	bt_gpio.GPIO_Pin = BT_RX_Pin | BT_TX_Pin;
+	bt_gpio.GPIO_OType = GPIO_OType_PP;
 	bt_gpio.GPIO_PuPd = GPIO_PuPd_UP;	//TODO - check pullup - theoretically ok
-	bt_gpio.GPIO_Speed = GPIO_Speed_50MHz;
+	bt_gpio.GPIO_Speed = GPIO_Speed_100MHz;
+
+	bt_gpio.GPIO_Pin = BT_RX_Pin;
+	GPIO_Init(BT_Port, &bt_gpio);
+
+	bt_gpio.GPIO_Pin = BT_TX_Pin;
 	GPIO_Init(BT_Port, &bt_gpio);
 
 	USART_InitTypeDef bt_uart;
@@ -50,71 +59,73 @@ void initBTModule(void) {
 	bt_uart.USART_WordLength = USART_WordLength_8b;
 	USART_Init(BT_UART, &bt_uart);
 
+	DMA_InitTypeDef bt_dma;
 
+	/* DMA 1, Stream3, CH4 for USART3 TX */
+	DMA_StructInit(&bt_dma);
+	bt_dma.DMA_Channel = DMA_Channel_4;
+	bt_dma.DMA_DIR = DMA_DIR_MemoryToPeripheral;
+	bt_dma.DMA_Memory0BaseAddr = (uint32_t) txBuffer;
+	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
+	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
+	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) (&(BT_UART->DR));
+	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Disable;
+	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_1QuarterFull;
+	DMA_Init(BT_UART_TX_DMA_Stream, &bt_dma);
 
+	/* DMA 1, Stream1, CH4 for USART3 RX */
+	DMA_StructInit(&bt_dma);
+	bt_dma.DMA_Channel = DMA_Channel_4;
+	bt_dma.DMA_DIR = DMA_DIR_PeripheralToMemory;
+	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) (&(BT_UART->DR));
+	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+	bt_dma.DMA_Memory0BaseAddr = (uint32_t) rxBuffer;
+	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
+	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
+	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Disable;
+	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
+	DMA_Init(BT_UART_RX_DMA_Stream, &bt_dma);
 
+//	NVIC_InitTypeDef bt_nvic;
+//
 //	/* USART3 TX*/
-//	NVIC_InitStructure->NVIC_IRQChannel = DMA1_Channel4_IRQn;
-//	NVIC_InitStructure->NVIC_IRQChannelPreemptionPriority = 1;
-//	NVIC_InitStructure->NVIC_IRQChannelSubPriority = 0;
-//	NVIC_InitStructure->NVIC_IRQChannelCmd = ENABLE;
-//	NVIC_Init(NVIC_InitStructure);
+//	bt_nvic.NVIC_IRQChannel = DMA1_Stream3_IRQn;
+//	bt_nvic.NVIC_IRQChannelPreemptionPriority = 5;
+//	bt_nvic.NVIC_IRQChannelSubPriority = 0;
+//	bt_nvic.NVIC_IRQChannelCmd = ENABLE;
+//	NVIC_Init(&bt_nvic);
 //
 //	/* USART3 RX*/
-//	NVIC_InitStructure->NVIC_IRQChannel = DMA1_Channel5_IRQn;
-//	NVIC_InitStructure->NVIC_IRQChannelPreemptionPriority = 2;
-//	NVIC_InitStructure->NVIC_IRQChannelSubPriority = 0;
-//	NVIC_InitStructure->NVIC_IRQChannelCmd = ENABLE;
-//	NVIC_Init(NVIC_InitStructure);
-
-//	/* DMA 1, Channel 4 for USART1 TX */
-//	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
-//	DMA_DeInit(DMA1_Channel4);
-//	DMA_InitStructure->DMA_PeripheralBaseAddr = (uint32_t) &(USART1->DR);
-//	DMA_InitStructure->DMA_MemoryBaseAddr = (uint32_t) usart_transmit_array;
-//	DMA_InitStructure->DMA_DIR = DMA_DIR_PeripheralDST;
-//	DMA_InitStructure->DMA_BufferSize = 0;
-//	DMA_InitStructure->DMA_PeripheralInc = DMA_PeripheralInc_Disable;
-//	DMA_InitStructure->DMA_MemoryInc = DMA_MemoryInc_Enable;
-//	DMA_InitStructure->DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
-//	DMA_InitStructure->DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
-//	DMA_InitStructure->DMA_Mode = DMA_Mode_Normal;
-//	DMA_InitStructure->DMA_Priority = DMA_Priority_Medium;
-//	DMA_InitStructure->DMA_M2M = DMA_M2M_Disable;
-//	DMA_Init(DMA1_Channel4, DMA_InitStructure);
+//	bt_nvic.NVIC_IRQChannel = DMA1_Stream1_IRQn;
+//	bt_nvic.NVIC_IRQChannelPreemptionPriority = 6;
+//	bt_nvic.NVIC_IRQChannelSubPriority = 0;
+//	bt_nvic.NVIC_IRQChannelCmd = ENABLE;
+//	NVIC_Init(&bt_nvic);
 //
-//	/* DMA 1, Channel 5 for USART1 RX */
-//	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
-//	DMA_DeInit(DMA1_Channel5);
-//	DMA_StructInit(DMA_InitStructure);
-//	DMA_InitStructure->DMA_PeripheralBaseAddr = (uint32_t) &(USART1->DR);
-//	DMA_InitStructure->DMA_MemoryBaseAddr = (uint32_t) usart_receive_array;
-//	DMA_InitStructure->DMA_DIR = DMA_DIR_PeripheralSRC;
-//	DMA_InitStructure->DMA_BufferSize = 0;
-//	DMA_InitStructure->DMA_PeripheralInc = DMA_PeripheralInc_Disable;
-//	DMA_InitStructure->DMA_MemoryInc = DMA_MemoryInc_Enable;
-//	DMA_InitStructure->DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
-//	DMA_InitStructure->DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
-//	DMA_InitStructure->DMA_Mode = DMA_Mode_Circular;
-//	DMA_InitStructure->DMA_Priority = DMA_Priority_Medium;
-//	DMA_InitStructure->DMA_M2M = DMA_M2M_Disable;
-//	DMA_Init(DMA1_Channel5, DMA_InitStructure);
+//	DMA_ITConfig(BT_UART_TX_DMA_Stream, DMA_IT_TC, ENABLE);
+//	DMA_ITConfig(BT_UART_RX_DMA_Stream, DMA_IT_TC, ENABLE);
 
+//	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
+//	DMA_Cmd(BT_UART_RX_DMA_Stream, ENABLE);
+
+//	USART_DMACmd(BT_UART, USART_DMAReq_Tx, ENABLE);
+//	USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
 
 	USART_Cmd(BT_UART, ENABLE);
 }
 
-
-void BTSendString(char *string){
-	for(uint8_t i = 0; i < MAX_STRING_SIZE; i++){
+void BTSendString(char *string) {
+	for (uint8_t i = 0; i < MAX_STRING_SIZE; i++) {
 		//this doesnt work cause jdy buffer gets full
 		/*while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
+		 ;
+		 USART_SendData(BT_UART, string[i]);*/
+		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
 			;
-		USART_SendData(BT_UART, string[i]);*/
-		while(!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE));
 		USART_SendData(BT_UART, string[i]);
 		//this works
-		if(string[i] == '\0'){
+		if (string[i] == '\0') {
 			break;
 		}
 
@@ -123,15 +134,16 @@ void BTSendString(char *string){
 
 }
 
-void BTSendChar(char c){
+void BTSendChar(char c) {
 	USART_SendData(BT_UART, c);
 	waitForAck();
 }
 
-void waitForAck(void){
-	while(!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE));
+void waitForAck(void) {
+	while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
+		;
 	uint16_t data = USART_ReceiveData(BT_UART);
-	if(data != 100){// 100 is acknowledgement byte
+	if (data != 100) {	// 100 is acknowledgement byte
 		setLED(PINK);
 	}
 }
