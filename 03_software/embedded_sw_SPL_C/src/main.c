@@ -144,24 +144,7 @@ void UART_DMASend(char *data) {
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
 
-//	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
 	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
-
-	USART_DMACmd(BT_UART, USART_DMAReq_Tx, ENABLE);
-
-//	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE) {
-//
-//	}
-
-	/* Waiting the end of Data transfer */
-//	while (USART_GetFlagStatus(BT_UART, USART_FLAG_TC) == RESET)
-//		;
-//	while (DMA_GetFlagStatus(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3)
-//			== RESET)
-//		;
-
-
-
 }
 
 void UART_DMAReceive(char *data, uint8_t length) {
@@ -222,15 +205,15 @@ int main(void) {
 //	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE) {
 //
 //	}
-	UART_DMASend("heyho0\n");
+	UART_DMASend("rayla 0\n");
 	for (uint32_t i = 0; i < 32000; i += 2) {
 		i--;
 	}
-	UART_DMASend("heyho1\n");
+	UART_DMASend("calum 1\n");
 	for (uint32_t i = 0; i < 32000; i += 2) {
 		i--;
 	}
-	UART_DMASend("heyho2\n");
+	UART_DMASend("bait 2\n");
 	for (uint32_t i = 0; i < 32000; i += 2) {
 		i--;
 	}
@@ -385,11 +368,9 @@ void DMA1_Stream1_IRQHandler(void) {
 void DMA1_Stream3_IRQHandler(void) {
 	int hali = 0;
 
-
 	/* Clear DMA Transfer Complete Flags */
 	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
-	/* Clear USART Transfer Complete Flags */
-//	USART_ClearFlag(BT_UART, USART_FLAG_TC); /* do not need to clear */
+	/* disable dma after send */
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 }
 
