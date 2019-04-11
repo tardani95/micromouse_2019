@@ -41,13 +41,9 @@ void initBTModule(char *txBuffer, char *rxBuffer) {
 	GPIO_InitTypeDef bt_gpio;
 	bt_gpio.GPIO_Mode = GPIO_Mode_AF;
 	bt_gpio.GPIO_OType = GPIO_OType_PP;
-	bt_gpio.GPIO_PuPd = GPIO_PuPd_UP;	//TODO - check pullup - theoretically ok
-	bt_gpio.GPIO_Speed = GPIO_Speed_100MHz;
-
-	bt_gpio.GPIO_Pin = BT_RX_Pin;
-	GPIO_Init(BT_Port, &bt_gpio);
-
-	bt_gpio.GPIO_Pin = BT_TX_Pin;
+	bt_gpio.GPIO_PuPd = GPIO_PuPd_UP;
+	bt_gpio.GPIO_Speed = GPIO_Speed_50MHz;
+	bt_gpio.GPIO_Pin = BT_RX_Pin | BT_TX_Pin;
 	GPIO_Init(BT_Port, &bt_gpio);
 
 	USART_InitTypeDef bt_uart;
@@ -68,7 +64,7 @@ void initBTModule(char *txBuffer, char *rxBuffer) {
 	bt_dma.DMA_Memory0BaseAddr = (uint32_t) txBuffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
 	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
-	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) (&(BT_UART->DR));
+	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) &(BT_UART->DR);
 	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
 	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Disable;
 	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_1QuarterFull;
@@ -76,9 +72,11 @@ void initBTModule(char *txBuffer, char *rxBuffer) {
 
 	/* DMA 1, Stream1, CH4 for USART3 RX */
 	DMA_StructInit(&bt_dma);
+	bt_dma.DMA_BufferSize = 10;
+	bt_dma.DMA_Mode = DMA_Mode_Normal;
 	bt_dma.DMA_Channel = DMA_Channel_4;
 	bt_dma.DMA_DIR = DMA_DIR_PeripheralToMemory;
-	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) (&(BT_UART->DR));
+	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) &(BT_UART->DR);
 	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
 	bt_dma.DMA_Memory0BaseAddr = (uint32_t) rxBuffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;

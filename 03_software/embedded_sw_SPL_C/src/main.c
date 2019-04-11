@@ -136,20 +136,17 @@ void UART_DMASend(char *data) {
 	while (data[length] != '\0') {
 		length++;
 	}
-
 	strcpy(uartTxBuffer, data);
-
 
 	/* start transmission */
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
-
 	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
 }
 
-void UART_DMAReceive(char *data, uint8_t length) {
+void UART_DMAReceive(uint8_t length) {
 	DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
-	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
+	DMA_SetCurrDataCounter(BT_UART_RX_DMA_Stream, length);
 
 	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
 	DMA_Cmd(BT_UART_RX_DMA_Stream, ENABLE);
@@ -173,10 +170,11 @@ void Init_Periph(void) {
 //	ADC_DeInit();
 //	initBatLvlWatcher();
 //	initEncoders();
-//	Init_IMU();
+
 //	initMenus(&main_menu_p, &after_run_menu_p);
 
 //	Init_Buttons();
+//	Init_IMU();
 //	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
 
 }
@@ -202,9 +200,9 @@ int main(void) {
 //	setLED(YELLOW);
 //	actuateMotors(7000, 0);
 //	MPU6050_DMAGetRawAccelGyro();
-//	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE) {
-//
-//	}
+//	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE)
+//		;
+
 	UART_DMASend("rayla 0\n");
 	for (uint32_t i = 0; i < 32000; i += 2) {
 		i--;
@@ -217,6 +215,9 @@ int main(void) {
 	for (uint32_t i = 0; i < 32000; i += 2) {
 		i--;
 	}
+
+	UART_DMAReceive(5);
+	MPU6050_DMAGetRawAccelGyro();
 
 	/* Infinite loop */
 	while (1) {
@@ -246,7 +247,7 @@ int main(void) {
 //		}
 
 //		MPU6050_GetRawAccelGyro(accel_gyro_temp);
-//		MPU6050_DMAGetRawAccelGyro();
+		MPU6050_DMAGetRawAccelGyro();
 		for (uint32_t i = 0; i < 32000; i += 2) {
 			i--;
 		}
@@ -287,7 +288,7 @@ void EXTI15_10_IRQHandler() {
 	setRGB(rgb_led_status % 10);
 }
 
-void I2C2_EV_IRQHandler() {
+void I2C1_EV_IRQHandler() {
 	if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_SB) == SET) {
 		if (i2cDirectionWrite) {
 			// STM32 Transmitter
@@ -359,15 +360,16 @@ void MPU6050_CalcAccelRot() {
  * @brief uart data received
  */
 void DMA1_Stream1_IRQHandler(void) {
-	int hali = 0;
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
+	/* disable dma after send */
+	//DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
 }
 
 /**
  * @brief all uart data sent out
  */
 void DMA1_Stream3_IRQHandler(void) {
-	int hali = 0;
-
 	/* Clear DMA Transfer Complete Flags */
 	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
 	/* disable dma after send */

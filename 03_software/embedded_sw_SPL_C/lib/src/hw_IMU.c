@@ -306,6 +306,15 @@ void MPU6050_I2C_Init() {
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 
+	/* Reset I2Cx IP */
+	RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C1, ENABLE);
+
+	/* Release reset signal of I2Cx IP */
+	RCC_APB1PeriphResetCmd(RCC_APB1Periph_I2C1, DISABLE);
+
+	/* Enable the DMA clock */
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA1, ENABLE);
+
 	/* Configure the GPIO's alternate function */
 	GPIO_PinAFConfig(MPU6050_I2C_Port, MPU6050_I2C_SCL_PinSource, GPIO_AF_I2C1);
 	GPIO_PinAFConfig(MPU6050_I2C_Port, MPU6050_I2C_SDA_PinSource, GPIO_AF_I2C1);
@@ -322,19 +331,17 @@ void MPU6050_I2C_Init() {
 	/* I2C configuration */
 
 	I2C_InitTypeDef mpu6050_I2C_InitStructure;
-	mpu6050_I2C_InitStructure.I2C_Ack = I2C_Ack_Disable;
+	mpu6050_I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;
 	mpu6050_I2C_InitStructure.I2C_AcknowledgedAddress =
 	I2C_AcknowledgedAddress_7bit;
 	mpu6050_I2C_InitStructure.I2C_ClockSpeed = MPU6050_I2C_Speed;
-	mpu6050_I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;
+	mpu6050_I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_16_9;
 	mpu6050_I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
-	mpu6050_I2C_InitStructure.I2C_OwnAddress1 = 0x00; //MPU6050_DEFAULT_ADDRESS; // MPU6050 7-bit adress = 0x68, 8-bit adress = 0xD0;
+	mpu6050_I2C_InitStructure.I2C_OwnAddress1 = 0xA0; //MPU6050_DEFAULT_ADDRESS; // MPU6050 7-bit adress = 0x68, 8-bit adress = 0xD0;
 	I2C_Init(MPU6050_I2C, &mpu6050_I2C_InitStructure);
 
 	/* I2C Peripheral Enable */
 	I2C_Cmd(MPU6050_I2C, ENABLE);
-
-//	I2C_AcknowledgeConfig(MPU6050_I2C, ENABLE);
 }
 
 /**
@@ -344,16 +351,22 @@ void MPU6050_I2C_Init() {
  */
 void Init_MPU6050_I2C_DMA(uint8_t* i2cTxBuffer, uint8_t* i2cRxBuffer) {
 
+	/* I2C Peripheral Disable */
+	I2C_Cmd(MPU6050_I2C, DISABLE);
+	for (uint32_t i = 0; i < 32000; i += 2) {
+		i--;
+	}
+
 	NVIC_InitTypeDef mpu6050_NVIC_InitStructure;
 	DMA_InitTypeDef mpu6050_DMA_InitStructure;
 
-	mpu6050_NVIC_InitStructure.NVIC_IRQChannel = I2C2_EV_IRQn;
-	mpu6050_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+	mpu6050_NVIC_InitStructure.NVIC_IRQChannel = I2C1_EV_IRQn;
+	mpu6050_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 7;
 	mpu6050_NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	mpu6050_NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&mpu6050_NVIC_InitStructure);
 
-	I2C_ITConfig(MPU6050_I2C, I2C_IT_EVT, ENABLE);
+	I2C_ITConfig(MPU6050_I2C, I2C_IT_EVT | I2C_IT_SB, ENABLE);
 
 	/*
 	 mpu6050_NVIC_InitStructure.NVIC_IRQChannel = I2C2_ER_IRQn;
@@ -367,6 +380,26 @@ void Init_MPU6050_I2C_DMA(uint8_t* i2cTxBuffer, uint8_t* i2cRxBuffer) {
 	/* enable DMA1 to the AHB1 */
 	RCC_AHB1PeriphResetCmd(RCC_AHB1Periph_DMA1, ENABLE);
 
+	/* Clear any pending flag on Tx Stream  */
+	DMA_ClearFlag(MPU6050_I2C_TX_Stream,
+			DMA_FLAG_TCIF6 | DMA_FLAG_DMEIF6 | DMA_FLAG_FEIF6 | DMA_FLAG_TEIF6
+					| DMA_FLAG_HTIF6);
+
+	/* Clear any pending flag on Rx Stream  */
+	DMA_ClearFlag(MPU6050_I2C_RX_Stream,
+			DMA_FLAG_TCIF0 | DMA_FLAG_DMEIF0 | DMA_FLAG_FEIF0 | DMA_FLAG_TEIF0
+					| DMA_FLAG_HTIF0);
+
+	/* Disable the I2C Tx DMA stream */
+	DMA_Cmd(MPU6050_I2C_TX_Stream, DISABLE);
+	/* Configure the DMA stream for the I2C peripheral TX direction */
+	DMA_DeInit(MPU6050_I2C_TX_Stream);
+
+	/* Disable the I2C Rx DMA stream */
+	DMA_Cmd(MPU6050_I2C_RX_Stream, DISABLE);
+	/* Configure the DMA stream for the I2C peripheral RX direction */
+	DMA_DeInit(MPU6050_I2C_RX_Stream);
+
 	// DMA1 Stream 6, CH1 - I2C2 TX
 	DMA_StructInit(&mpu6050_DMA_InitStructure);
 
@@ -377,7 +410,7 @@ void Init_MPU6050_I2C_DMA(uint8_t* i2cTxBuffer, uint8_t* i2cRxBuffer) {
 	mpu6050_DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
 	mpu6050_DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;
 	mpu6050_DMA_InitStructure.DMA_PeripheralBaseAddr =
-			(uint32_t) & MPU6050_I2C->DR;
+			(uint32_t) &(MPU6050_I2C->DR);
 	mpu6050_DMA_InitStructure.DMA_PeripheralDataSize =
 	DMA_PeripheralDataSize_Byte;
 	mpu6050_DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
@@ -393,27 +426,33 @@ void Init_MPU6050_I2C_DMA(uint8_t* i2cTxBuffer, uint8_t* i2cRxBuffer) {
 	mpu6050_DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
 	mpu6050_DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;
 	mpu6050_DMA_InitStructure.DMA_PeripheralBaseAddr =
-			(uint32_t) & MPU6050_I2C->DR;
+			(uint32_t) &(MPU6050_I2C->DR);
 	mpu6050_DMA_InitStructure.DMA_PeripheralDataSize =
 	DMA_PeripheralDataSize_Byte;
 	mpu6050_DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
 	mpu6050_DMA_InitStructure.DMA_Priority = DMA_Priority_Medium;
 	DMA_Init(MPU6050_I2C_RX_Stream, &mpu6050_DMA_InitStructure);
 
+	/* Configure I2C Filters */
+//	I2C_AnalogFilterCmd(MPU6050_I2C, ENABLE);
+//	I2C_DigitalFilterConfig(I2Cx, 0x0F);
 	mpu6050_NVIC_InitStructure.NVIC_IRQChannel = DMA1_Stream0_IRQn;
-	mpu6050_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+	mpu6050_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 6;
 	mpu6050_NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	mpu6050_NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&mpu6050_NVIC_InitStructure);
 
-	DMA_ITConfig(MPU6050_I2C_TX_Stream, DMA_IT_TC, ENABLE);
+//	DMA_ITConfig(MPU6050_I2C_TX_Stream, DMA_IT_TC, ENABLE);
 	DMA_ITConfig(MPU6050_I2C_RX_Stream, DMA_IT_TC, ENABLE);
 
-	DMA_Cmd(MPU6050_I2C_TX_Stream, ENABLE);
-	DMA_Cmd(MPU6050_I2C_RX_Stream, ENABLE);
+//	DMA_Cmd(MPU6050_I2C_TX_Stream, ENABLE);
+//	DMA_Cmd(MPU6050_I2C_RX_Stream, ENABLE);
 
 	/* enable DMA mode for I2C */
 	I2C_DMACmd(MPU6050_I2C, ENABLE);
+
+	/* I2C Peripheral Enable */
+	I2C_Cmd(MPU6050_I2C, ENABLE);
 }
 
 /**
@@ -550,7 +589,7 @@ void MPU6050_DMAGetRawAccelGyro() {
 //	LEDs_Port->BSRR |= LED0_Pin;
 	i2cDirectionWrite = 1;
 	DMA_SetCurrDataCounter(MPU6050_I2C_TX_Stream, 1);
-	DMA_SetCurrDataCounter(MPU6050_I2C_RX_Stream, 5); /* read from registers: 0x3B to 0x48 (accel, temp , gyro) */ /*14*/
+	DMA_SetCurrDataCounter(MPU6050_I2C_RX_Stream, 5); /* read from registers: 0x3B to 0x48 (accel, temp , gyro) *//*14*/
 	I2C_GenerateSTART(MPU6050_I2C, ENABLE);
 }
 
@@ -563,9 +602,9 @@ uint8_t Init_IMU() {
 //	for(uint32_t i = 0; i< 32000; i+=2){
 //		i--;
 //	}
-	MPU6050_Initialize();
+//	MPU6050_Initialize();
 
-	return MPU6050_TestConnection(); /* returns 0 if it is working */
+	return 0; //MPU6050_TestConnection(); /* returns 0 if it is working */
 }
 
 /**
