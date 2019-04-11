@@ -1,0 +1,9 @@
+usbd_bulk.c:362:18:USBD_Bulk_GetFSCfgDesc	0	static
+usbd_bulk.c:374:11:USBD_Bulk_GetDeviceQualifierDescriptor	0	static
+usbd_bulk.c:344:16:USBD_Bulk_SOF	8	static
+usbd_bulk.c:317:17:USBD_Bulk_DataIn	8	static
+usbd_bulk.c:331:17:USBD_Bulk_DataOut	8	static
+usbd_bulk.c:243:17:USBD_Bulk_DeInit	8	static
+usbd_bulk.c:210:17:USBD_Bulk_Init	8	static
+usbd_bulk.c:264:17:USBD_Bulk_Setup	8	static
+usbd_bulk.c:384:11:USBD_Bulk_GetRxBufferPtr	0	static

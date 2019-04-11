@@ -1,0 +1,8 @@
+hooks.c:82:10:CpuUserProgramStartHook	8	static
+hooks.c:116:6:CopInitHook	0	static
+hooks.c:133:6:CopServiceHook	0	static
+hooks.c:156:6:NvmInitHook	0	static
+hooks.c:167:6:NvmReinitHook	0	static
+hooks.c:186:11:NvmWriteHook	0	static
+hooks.c:205:11:NvmEraseHook	0	static
+hooks.c:216:10:NvmDoneHook	0	static

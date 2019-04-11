@@ -189,6 +189,9 @@ void Init_Periph(void) {
 int main(void) {
 	int i = 0;
 //	SystemInit(); /*startup script calls this function before main*/
+	/*Remap vector table to enable debugging*/
+	SCB->VTOR = 0x08008000 & (int32_t)0x1FFFFF80;
+
 	Init_Periph();
 
 	/* TODO - Add your application code here */
