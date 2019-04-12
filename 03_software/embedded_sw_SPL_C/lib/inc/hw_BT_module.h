@@ -36,7 +36,11 @@
 #define BT_UART_TX_DMA_Stream	DMA1_Stream3
 #define BT_UART_RX_DMA_Stream	DMA1_Stream1
 
-void initBTModule(char *txBuffer, char *rxBuffer);
+void initBTModule();
+
+void UART_Send(char *data);
+void UART_DMASend(char *data);
+void UART_DMA_StartListening(void);
 
 void BTSendString(char *string);
 void BTSendChar(char string);

@@ -1,6 +1,6 @@
 /***********************
  * @file 	hw_BT_module.c
- * @author	tard
+ * @author	tard, resiz
  * @date	Mar 15, 2019
  * @version	vx_x
  ************************/
@@ -17,7 +17,10 @@
  * @{
  */
 
-void initBTModule(char *txBuffer, char *rxBuffer) {
+char uartRxBuffer[100] = { };
+char uartTxBuffer[100] = { };
+
+void initBTModule() {
 
 	/* deinitialize before use */
 	USART_Cmd(BT_UART, DISABLE);
@@ -61,7 +64,7 @@ void initBTModule(char *txBuffer, char *rxBuffer) {
 	DMA_StructInit(&bt_dma);
 	bt_dma.DMA_Channel = DMA_Channel_4;
 	bt_dma.DMA_DIR = DMA_DIR_MemoryToPeripheral;
-	bt_dma.DMA_Memory0BaseAddr = (uint32_t) txBuffer;
+	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uartTxBuffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
 	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
 	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) &(BT_UART->DR);
@@ -78,7 +81,7 @@ void initBTModule(char *txBuffer, char *rxBuffer) {
 	bt_dma.DMA_DIR = DMA_DIR_PeripheralToMemory;
 	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) &(BT_UART->DR);
 	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
-	bt_dma.DMA_Memory0BaseAddr = (uint32_t) rxBuffer;
+	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uartRxBuffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
 	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
 	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Disable;
@@ -117,6 +120,78 @@ void initBTModule(char *txBuffer, char *rxBuffer) {
 
 	USART_Cmd(BT_UART, ENABLE);
 }
+
+void UART_Send(char *data) {
+	uint8_t i = 0;
+	while (data[i] != '\0') {
+		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
+			;
+		USART_SendData(BT_UART, data[i]);
+		i++;
+	}
+}
+
+void UART_DMASend(char *data) {
+	uint8_t length = 0;
+	while (data[length] != '\0') {
+		length++;
+	}
+	strcpy(uartTxBuffer, data);
+
+	/* start transmission */
+	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
+	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
+	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
+}
+
+void UART_DMA_StartListening() {
+	DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
+	USART_DMACmd(BT_UART, USART_DMAReq_Rx, DISABLE);
+	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
+	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
+}
+
+void USART3_IRQHandler() {
+	if (SET == USART_GetITStatus(BT_UART, USART_IT_RXNE)) {
+		uint8_t length = (uint8_t) USART3->DR;
+
+		if (100 <= length) {
+			UART_DMASend(
+					"could not receive that much data, my buffer is only 100 bytes long\n");
+		} else {
+			DMA_SetCurrDataCounter(BT_UART_RX_DMA_Stream, length);
+			USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
+			DMA_Cmd(BT_UART_RX_DMA_Stream, ENABLE);
+		}
+		USART_ClearITPendingBit(BT_UART, USART_IT_RXNE);
+	}
+}
+
+/**
+ * @brief uart data received
+ */
+void DMA1_Stream1_IRQHandler(void) {
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
+	/* disable dma after send */
+	DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
+	USART_DMACmd(BT_UART, USART_DMAReq_Rx, DISABLE);
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
+	/* Enable uart irq to first length byte reception */
+	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
+}
+
+/**
+ * @brief all uart data sent out
+ */
+void DMA1_Stream3_IRQHandler(void) {
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
+	/* disable dma after send */
+	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
+}
+
 
 void BTSendString(char *string) {
 	for (uint8_t i = 0; i < MAX_STRING_SIZE; i++) {
