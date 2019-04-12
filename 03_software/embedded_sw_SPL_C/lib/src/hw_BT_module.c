@@ -104,8 +104,16 @@ void initBTModule(char *txBuffer, char *rxBuffer) {
 	DMA_ITConfig(BT_UART_TX_DMA_Stream, DMA_IT_TC, ENABLE);
 	DMA_ITConfig(BT_UART_RX_DMA_Stream, DMA_IT_TC, ENABLE);
 
+	/* USART3 RX*/
+	bt_nvic.NVIC_IRQChannel = USART3_IRQn;
+	bt_nvic.NVIC_IRQChannelPreemptionPriority = 4;
+	bt_nvic.NVIC_IRQChannelSubPriority = 0;
+	bt_nvic.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&bt_nvic);
+
+//	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
 	USART_DMACmd(BT_UART, USART_DMAReq_Tx, ENABLE);
-	USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
+//	USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
 
 	USART_Cmd(BT_UART, ENABLE);
 }

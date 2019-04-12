@@ -144,12 +144,15 @@ void UART_DMASend(char *data) {
 	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
 }
 
-void UART_DMAReceive(uint8_t length) {
+void UART_DMA_StartListening(uint8_t length) {
 	DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
-	DMA_SetCurrDataCounter(BT_UART_RX_DMA_Stream, length);
-
+	USART_DMACmd(BT_UART, USART_DMAReq_Rx, DISABLE);
 	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
-	DMA_Cmd(BT_UART_RX_DMA_Stream, ENABLE);
+	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
+
+//	DMA_SetCurrDataCounter(BT_UART_RX_DMA_Stream, length);
+//	USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
+//	DMA_Cmd(BT_UART_RX_DMA_Stream, ENABLE);
 }
 
 /**
@@ -179,6 +182,12 @@ void Init_Periph(void) {
 
 }
 
+void delaySome_ms(void) {
+	for (uint32_t i = 0; i < 32000; i += 2) {
+		i--;
+	}
+}
+
 /**
  **===========================================================================
  **
@@ -190,7 +199,7 @@ int main(void) {
 	int i = 0;
 //	SystemInit(); /*startup script calls this function before main*/
 	/*Remap vector table to enable debugging*/
-	SCB->VTOR = 0x08008000 & (int32_t)0x1FFFFF80;
+	SCB->VTOR = 0x08008000 & (int32_t) 0x1FFFFF80;
 
 	Init_Periph();
 
@@ -205,21 +214,15 @@ int main(void) {
 //	MPU6050_DMAGetRawAccelGyro();
 //	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE)
 //		;
-
 	UART_DMASend("rayla 0\n");
-	for (uint32_t i = 0; i < 32000; i += 2) {
-		i--;
-	}
+	delaySome_ms();
 	UART_DMASend("calum 1\n");
-	for (uint32_t i = 0; i < 32000; i += 2) {
-		i--;
-	}
+	delaySome_ms();
 	UART_DMASend("bait 2\n");
-	for (uint32_t i = 0; i < 32000; i += 2) {
-		i--;
-	}
+	delaySome_ms();
 
-	UART_DMAReceive(5);
+	UART_DMA_StartListening(5);
+
 	MPU6050_DMAGetRawAccelGyro();
 
 	/* Infinite loop */
@@ -255,6 +258,47 @@ int main(void) {
 			i--;
 		}
 	}
+}
+
+void USART3_IRQHandler() {
+	if (SET == USART_GetITStatus(BT_UART, USART_IT_RXNE)) {
+		uint8_t length = (uint8_t) USART3->DR;
+
+		if (100 <= length) {
+			UART_DMASend(
+					"could not receive that much data, my buffer is only 100 bytes long\n");
+		} else {
+			DMA_SetCurrDataCounter(BT_UART_RX_DMA_Stream, length);
+			USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
+			DMA_Cmd(BT_UART_RX_DMA_Stream, ENABLE);
+		}
+		USART_ClearITPendingBit(BT_UART, USART_IT_RXNE);
+	}
+}
+
+/**
+ * @brief uart data received
+ */
+void DMA1_Stream1_IRQHandler(void) {
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
+	/* disable dma after send */
+	DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
+	USART_DMACmd(BT_UART, USART_DMAReq_Rx, DISABLE);
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
+	/* Enable uart irq to first length byte reception */
+	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
+}
+
+/**
+ * @brief all uart data sent out
+ */
+void DMA1_Stream3_IRQHandler(void) {
+	/* Clear DMA Transfer Complete Flags */
+	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
+	/* disable dma after send */
+	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 }
 
 /**
@@ -357,26 +401,6 @@ void MPU6050_CalcAccelRot() {
 	rotZ = (float) accel_gyro_temp[5] / 65.5; //131.0;
 
 	temp_C = (float) accel_gyro_temp[6] / 340 + 36.53;
-}
-
-/**
- * @brief uart data received
- */
-void DMA1_Stream1_IRQHandler(void) {
-	/* Clear DMA Transfer Complete Flags */
-	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
-	/* disable dma after send */
-	//DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
-}
-
-/**
- * @brief all uart data sent out
- */
-void DMA1_Stream3_IRQHandler(void) {
-	/* Clear DMA Transfer Complete Flags */
-	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
-	/* disable dma after send */
-	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 }
 
 /**
