@@ -42,6 +42,8 @@ void UART_Send(char *data);
 void UART_DMASend(char *data);
 void UART_DMA_StartListening(void);
 
+void clearBuffer(void);
+
 void BTSendString(char *string);
 void BTSendChar(char string);
 

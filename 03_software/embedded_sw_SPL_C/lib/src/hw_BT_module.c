@@ -17,6 +17,7 @@
  * @{
  */
 
+uint8_t length = 0;
 char uartRxBuffer[100] = { };
 char uartTxBuffer[100] = { };
 
@@ -69,8 +70,8 @@ void initBTModule() {
 	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
 	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) &(BT_UART->DR);
 	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
-	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Disable;
-	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_1QuarterFull;
+	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Enable;
+	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
 	DMA_Init(BT_UART_TX_DMA_Stream, &bt_dma);
 
 	/* DMA 1, Stream1, CH4 for USART3 RX */
@@ -84,7 +85,7 @@ void initBTModule() {
 	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uartRxBuffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
 	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
-	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Disable;
+	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Enable;
 	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
 	DMA_Init(BT_UART_RX_DMA_Stream, &bt_dma);
 
@@ -114,10 +115,7 @@ void initBTModule() {
 	bt_nvic.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&bt_nvic);
 
-//	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
 	USART_DMACmd(BT_UART, USART_DMAReq_Tx, ENABLE);
-//	USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
-
 	USART_Cmd(BT_UART, ENABLE);
 }
 
@@ -153,7 +151,7 @@ void UART_DMA_StartListening() {
 
 void USART3_IRQHandler() {
 	if (SET == USART_GetITStatus(BT_UART, USART_IT_RXNE)) {
-		uint8_t length = (uint8_t) USART3->DR;
+		length = (uint8_t) USART3->DR;
 
 		if (100 <= length) {
 			UART_DMASend(
@@ -180,6 +178,8 @@ void DMA1_Stream1_IRQHandler(void) {
 	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
 	/* Enable uart irq to first length byte reception */
 	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
+	/* Clear the rest of the buffer */
+	clearBuffer();
 }
 
 /**
@@ -192,6 +192,13 @@ void DMA1_Stream3_IRQHandler(void) {
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 }
 
+void clearBuffer(){
+	uint16_t i = length;
+	while(uartRxBuffer[i] != '\0'){
+		uartRxBuffer[i] = '\0';
+		i++;
+	}
+}
 
 void BTSendString(char *string) {
 	for (uint8_t i = 0; i < MAX_STRING_SIZE; i++) {
