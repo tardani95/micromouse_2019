@@ -66,8 +66,12 @@
  * @brief 	main()
  * @{
  */
+
+#define STM_EVAL /* comment it out if the stm evaluation board is not used */
+
 /* Includes */
 #include "stm32f4xx.h"
+
 #include "misc.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -101,12 +105,16 @@
 /**
  * @}
  */
+
+#ifdef STM_EVAL
+#include "stm32f4_discovery.h"
+#endif
+
 /* Private macro */
 /* Private variables */
 
-
 uint8_t i2cRxBuffer[14] = { };
-uint8_t i2cTxBuffer[] = { 0x3B };
+uint8_t i2cTxBuffer[] = { 0x3B,0x3B,0x3B,0x3B };
 int16_t accel_gyro_temp[7];
 float gForceX, gForceY, gForceZ;
 float rotX, rotY, rotZ;
@@ -168,6 +176,19 @@ int main(void) {
 
 	Init_Periph();
 
+#ifdef STM_EVAL
+	/* Initialize LEDs */
+	STM_EVAL_LEDInit(LED3);
+	STM_EVAL_LEDInit(LED4);
+	STM_EVAL_LEDInit(LED5);
+	STM_EVAL_LEDInit(LED6);
+
+	/* Turn on LEDs */
+//	STM_EVAL_LEDOn(LED3);
+//	STM_EVAL_LEDOn(LED4);
+//	STM_EVAL_LEDOn(LED5);
+//	STM_EVAL_LEDOn(LED6);
+#endif
 	/* TODO - Add your application code here */
 //	resetRGB();
 //	uint32_t enc_left;
@@ -179,11 +200,14 @@ int main(void) {
 //	MPU6050_DMAGetRawAccelGyro();
 //	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE)
 //		;
-	UART_DMASend("rayla 0\n");
+	Init_IMU();
 	delaySome_ms();
-	UART_DMASend("calum 1\n");
+	UART_DMASend("checkpoint1\n");
+
+	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+
 	delaySome_ms();
-	UART_DMASend("bait 2\n");
+	UART_DMASend("checkpoint2\n");
 	delaySome_ms();
 
 	UART_DMA_StartListening();
@@ -193,9 +217,9 @@ int main(void) {
 	/* Infinite loop */
 	while (1) {
 		i++;
-		//enc_left = m_getEncCnt(ENC_LEFT);
-		//enc_right = m_getEncCnt(ENC_RIGHT);
 
+//		enc_left = m_getEncCnt(ENC_LEFT);
+//		enc_right = m_getEncCnt(ENC_RIGHT);
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
 //
@@ -219,9 +243,10 @@ int main(void) {
 
 //		MPU6050_GetRawAccelGyro(accel_gyro_temp);
 		MPU6050_DMAGetRawAccelGyro();
-		for (uint32_t i = 0; i < 32000; i += 2) {
-			i--;
-		}
+		delaySome_ms();
+		delaySome_ms();
+		delaySome_ms();
+		delaySome_ms();
 	}
 }
 
@@ -276,7 +301,7 @@ void I2C1_EV_IRQHandler() {
 			// STM32 Transmitter
 			DMA_Cmd(MPU6050_I2C_TX_Stream, ENABLE);
 		}
-	} else if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_BTF)) {
+	} else if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_BTF) == SET) {
 		if (i2cDirectionWrite) {
 			// STM32 Transmitter
 			/*enable i2c rx stream*/

@@ -153,7 +153,7 @@
 /************************* PLL Parameters *************************************/
 /* PLL_VCO = (HSE_VALUE or HSI_VALUE / PLL_M) * PLL_N */
 #define PLL_M      16    /* 25 */
-#define PLL_N      336
+#define PLL_N      320	 /* changed to 320 -> 160 Mhz ; original 336 -> 168Mhz */
 
 /* SYSCLK = PLL_VCO / PLL_P */
 #define PLL_P      2
@@ -179,7 +179,7 @@
  * @{
  */
 
-uint32_t SystemCoreClock = 168000000;
+uint32_t SystemCoreClock = 160000000; /* PLL_N changed to 320 -> coreclock 160 Mhz */
 
 __I uint8_t AHBPrescTable[16] =
 		{ 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9 };
