@@ -116,10 +116,10 @@
 
 //uint8_t i2cRxBuffer[14] = { };
 //uint8_t i2cTxBuffer[] = { 0x3B, 0x3B, 0x3B, 0x3B };
-int16_t accel_gyro_temp[7];
-float gForceX, gForceY, gForceZ;
-float rotX, rotY, rotZ;
-float temp_C;
+//int16_t accel_gyro_temp[7];
+//float gForceX, gForceY, gForceZ;
+//float rotX, rotY, rotZ;
+//float temp_C;
 volatile uint8_t rgb_led_status = 0;
 
 menu_p_t main_menu_p;
@@ -150,18 +150,22 @@ void Init_Periph(void) {
 	initStatusLEDs();
 #endif
 
-//	initBTModule();
-//	initStatusLEDs();
-//	initMotorControl();
-//	ADC_DeInit();
-//	initBatLvlWatcher();
-//	initEncoders();
+	//	initMotorControl();
+	//	ADC_DeInit();
+	//	initBatLvlWatcher();
+	//	initEncoders();
+	//	initMenus(&main_menu_p, &after_run_menu_p);
+	//	Init_Buttons();
 
-//	initMenus(&main_menu_p, &after_run_menu_p);
-
-//	Init_Buttons();
-//	Init_IMU();
-//	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+	initBTModule();
+	initIMU();
+	if (setupIMU()) { /* if the communication not working then it stops here */
+#ifdef STM_EVAL
+		STM_EVAL_LEDOn(LED3);
+#else
+		setLED(PINK);
+#endif
+	}
 
 }
 
@@ -195,49 +199,24 @@ int main(void) {
 //	setLED(PINK);
 //	setLED(YELLOW);
 //	actuateMotors(7000, 0);
-//	MPU6050_DMAGetRawAccelGyro();
-//	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE)
-//		;
-	initBTModule();
-	initIMU();
-	if (setupIMU()) { /* if the communication not working then it stops here */
-#ifdef STM_EVAL
-		STM_EVAL_LEDOn(LED3);
-#else
-		setLED(PINK);
-#endif
-	}
-
 	UART_DMASend("checkpoint1\n");
 #ifdef STM_EVAL
 	STM_EVAL_LEDOn(LED4);
 #endif
 
+	IMU_DMA_GetRaw();
+	delaySome_ms();
 
 	IMU_DMA_GetRaw();
-
-//	DMA_SetCurrDataCounter(I2Cx_DMA_STREAM_TX, 4);
-//	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
-//	while (DISABLE != DMA_GetCmdStatus(I2Cx_DMA_STREAM_TX))
-//		;
-
-//	DMA_Cmd(I2Cx_DMA_STREAM_RX, ENABLE);
-//	delaySome_ms();
-//	I2C_GenerateSTART(I2Cx, ENABLE);
-
-//	Init_IMU();
-//	UART_DMASend("checkpoint1\n");
-//	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
-
 	delaySome_ms();
+
 	UART_DMASend("checkpoint2\n");
 #ifdef STM_EVAL
 	STM_EVAL_LEDOn(LED5);
-	STM_EVAL_LEDOn(LED6);
 #endif
-	UART_DMA_StartListening();
 
-//	MPU6050_DMAGetRawAccelGyro();
+	UART_DMA_StartListening();
+	STM_EVAL_LEDOn(LED6);
 
 	/* Infinite loop */
 	while (1) {
@@ -266,11 +245,7 @@ int main(void) {
 //			MATSEND("insert sensor data and stuff");
 //		}
 
-//		MPU6050_GetRawAccelGyro(accel_gyro_temp);
-//		MPU6050_DMAGetRawAccelGyro();
-		delaySome_ms();
-		delaySome_ms();
-		delaySome_ms();
+		IMU_DMA_GetRaw();
 		delaySome_ms();
 	}
 }
@@ -319,28 +294,7 @@ void EXTI15_10_IRQHandler() {
 //	MPU6050_CalcAccelRot();
 //}
 
-//void MPU6050_CalcAccelRot() {
-//	accel_gyro_temp[0] = (int16_t) (i2cRxBuffer[0] << 8 | i2cRxBuffer[1]);
-//	accel_gyro_temp[1] = (int16_t) (i2cRxBuffer[2] << 8 | i2cRxBuffer[3]);
-//	accel_gyro_temp[2] = (int16_t) (i2cRxBuffer[4] << 8 | i2cRxBuffer[5]);
-//	accel_gyro_temp[6] = (int16_t) (i2cRxBuffer[6] << 8 | i2cRxBuffer[7]); //temp
-//	accel_gyro_temp[3] = (int16_t) (i2cRxBuffer[8] << 8 | i2cRxBuffer[9]);
-//	accel_gyro_temp[4] = (int16_t) (i2cRxBuffer[10] << 8 | i2cRxBuffer[11]);
-//	accel_gyro_temp[5] = (int16_t) (i2cRxBuffer[12] << 8 | i2cRxBuffer[13]);
-//
-////	gForceX = (float) accel_gyro_temp[0] / 16384.0 * 9810;
-////	gForceY = (float) accel_gyro_temp[1] / 16384.0 * 9810;
-////	gForceZ = (float) accel_gyro_temp[2] / 16384.0 * 9810;
-//	gForceX = (float) accel_gyro_temp[0] / 1.67;
-//	gForceY = (float) accel_gyro_temp[1] / 1.67;
-//	gForceZ = (float) accel_gyro_temp[2] / 1.67;
-//
-//	rotX = (float) accel_gyro_temp[3] / 65.5; //131.0; gyro @250 [LSB / deg/s]
-//	rotY = (float) accel_gyro_temp[4] / 65.5; //65.5   gyro @500 [LSB / deg/s]
-//	rotZ = (float) accel_gyro_temp[5] / 65.5; //131.0;
-//
-//	temp_C = (float) accel_gyro_temp[6] / 340 + 36.53;
-//}
+
 
 /**
  * @}
