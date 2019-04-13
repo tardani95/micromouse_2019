@@ -110,8 +110,8 @@ void initIMU() {
 	DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
 	DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;
 	DMA_InitStructure.DMA_Priority = DMA_Priority_High;
-//	DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;		// disabled by default
-//	DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_Full; // 1 quarter by default
+	DMA_InitStructure.DMA_FIFOMode = DMA_FIFOMode_Enable;		// disabled by default
+	DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_Full; // 1 quarter by default
 	DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
 	DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single;
 
