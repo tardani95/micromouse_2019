@@ -107,22 +107,29 @@
 #define MPU6050_CLOCK_PLL_YGYRO         0x02
 #define MPU6050_CLOCK_PLL_ZGYRO         0x03
 
-#define MPU6050_GYRO_FS_250         0x00
-#define MPU6050_GYRO_FS_500         0x01
-#define MPU6050_GYRO_FS_1000        0x02
-#define MPU6050_GYRO_FS_2000        0x03
+#define MPU6050_GYRO_FS_250_deg_per_s   0x00
+#define MPU6050_GYRO_FS_500_deg_per_s   0x01
+#define MPU6050_GYRO_FS_1000_deg_per_s  0x02
+#define MPU6050_GYRO_FS_2000_deg_per_s  0x03
 
-#define MPU6050_ACCEL_FS_2          0x00
-#define MPU6050_ACCEL_FS_4          0x01
-#define MPU6050_ACCEL_FS_8          0x02
-#define MPU6050_ACCEL_FS_16         0x03
+#define MPU6050_ACCEL_FS_2_g            0x00
+#define MPU6050_ACCEL_FS_4_g            0x01
+#define MPU6050_ACCEL_FS_8_g            0x02
+#define MPU6050_ACCEL_FS_16_g           0x03
 
 void initIMU(void);
-void IMU_DMASend(uint8_t *data, uint8_t length);
-void IMU_readREG(uint8_t *regAddres);
-void setupIMU(void);
+uint8_t setupIMU(void);
+void setupByte(uint8_t *bytoToSetup, uint8_t bitStart, uint8_t length, uint8_t data);
+uint8_t IMU_GetDeviceID(void);
+uint8_t IMU_readREG(uint8_t regAddr);
 
-void IMU_DMAGetRaw(void);
+void IMU_DisableSleep_and_SetClockSource(uint8_t source);
+void IMU_SetGyroFSRange(uint8_t fsRange);
+void IMU_SetAccelFSRange(uint8_t fsRange);
+
+void IMU_DMA_BufferWrite(uint8_t regAddr, uint16_t numByteToWrite);
+void IMU_DMA_BufferRead(uint8_t regAddr, uint16_t numByteToRead);
+void IMU_DMA_GetRaw();
 
 void I2C1_EV_IRQHandler(void);
 void DMA1_Stream0_IRQHandler(void);

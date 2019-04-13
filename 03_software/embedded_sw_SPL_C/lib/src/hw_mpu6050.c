@@ -17,8 +17,17 @@
  */
 
 uint8_t i2cRxBuffer[14] = { };
-uint8_t i2cTxBuffer[] = { 0x3B, 0x3B, 0x3B, 0x3B };
+uint8_t i2cTxBuffer[] = { REG_ACCEL_X_OUT_H };
 
+volatile uint8_t WRITE_READY_FLAG = 0;
+volatile uint8_t READ_READY_FLAG = 0;
+
+volatile uint8_t i2cDirectionWrite = 0;
+
+/**
+ * @brief Initialize the peripheral settings
+ * @note Call setupIMU() function after this to set some registers initial value
+ */
 void initIMU() {
 
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -57,7 +66,7 @@ void initIMU() {
 	I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
 	I2C_InitStructure.I2C_OwnAddress1 = 0xA0;
 
-	I2C_ITConfig(I2Cx, I2C_IT_EVT, ENABLE);
+//	I2C_ITConfig(I2Cx, I2C_IT_EVT, ENABLE);
 	I2C_DMACmd(I2Cx, ENABLE);
 
 	/* all I2C register values set - initialize and enable I2C Peripheral */
@@ -120,9 +129,8 @@ void initIMU() {
 	DMA_InitStructure.DMA_BufferSize = 0;
 	DMA_Init(I2Cx_DMA_STREAM_RX, &DMA_InitStructure);
 
-
 	/* enable DMA ITs*/
-	DMA_ITConfig(I2Cx_DMA_STREAM_TX, DMA_IT_TC, ENABLE);
+//	DMA_ITConfig(I2Cx_DMA_STREAM_TX, DMA_IT_TC, ENABLE);
 	DMA_ITConfig(I2Cx_DMA_STREAM_RX, DMA_IT_TC, ENABLE);
 
 	NVIC_InitStructure.NVIC_IRQChannel = DMA1_Stream6_IRQn;
@@ -139,20 +147,249 @@ void initIMU() {
 
 }
 
-void IMU_DMASend(uint8_t *data, uint8_t length);
-void IMU_readREG(uint8_t *regAddres);
-void setupIMU();
+/**
+ * @brief Sets up the configuration registers in the MPU6050
+ * @param   None
+ * @return  1 if the connection is successful
+ */
+uint8_t setupIMU() {
 
-void IMU_DMAGetRaw();
+	IMU_DisableSleep_and_SetClockSource(MPU6050_CLOCK_PLL_XGYRO);
 
-void I2C1_EV_IRQHandler(void){
+	/* do not need to call these because these are the initial settings */
+	IMU_SetGyroFSRange(MPU6050_GYRO_FS_250_deg_per_s);
+	IMU_SetAccelFSRange(MPU6050_ACCEL_FS_2_g);
+
+	uint8_t retVal = (IMU_GetDeviceID() == MPU6050_ADDRESS_AD0_LOW);
+
+	I2C_ITConfig(I2Cx, I2C_IT_EVT, ENABLE);
+
+	return retVal;
+}
+
+void setupByte(uint8_t *bytoToSetup, uint8_t bitStart, uint8_t length,
+		uint8_t data) {
+	//      010 value to write
+	// 76543210 bit numbers
+	//    yyy   args: bitStart=4, length=3
+	// 00011100 mask byte
+	// 10101111 original value (sample)
+	// 10100011 original & ~mask
+	// 10101011 masked | value
+	uint8_t mask = (((0x01 << length) - 1) << bitStart);
+	data <<= bitStart; 	// shift data into correct position
+	data &= mask; 						// zero all non-important bits in data
+	(*bytoToSetup) &= ~(mask); 		// zero all important bits in existing byte
+	(*bytoToSetup) |= data; 			// combine data with existing byte
+}
+
+/**
+ * @brief Returns the MPU6050 default low AD0 address
+ * @return MPU6050_ADDRESS_AD0_LOW
+ */
+uint8_t IMU_GetDeviceID() {
+	return IMU_readREG(WHO_AM_I);
+}
+
+/**
+ * @brief Read a single byte from the MPU6050 register
+ * @param  regAddr 	Register address to read from
+ * @return data 	The value that the register holds
+ */
+uint8_t IMU_readREG(uint8_t regAddr) {
+
+	/* While the bus is busy */
+	while (I2C_GetFlagStatus(I2Cx, I2C_FLAG_BUSY))
+		;
+
+	/* Send START condition */
+	I2C_GenerateSTART(I2Cx, ENABLE);
+
+	/* Test on EV5 and clear it */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+		;
+
+	/* Send MPU6050 address for write */
+	I2C_Send7bitAddress(I2Cx, SLAVE_ADDRESS, I2C_Direction_Transmitter);
+
+	/* Test on EV6 and clear it */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+		;
+
+	/* Clear EV6 by setting again the PE bit */
+	I2C_Cmd(I2Cx, ENABLE);
+
+	/* Send the MPU6050's internal address to write to */
+	I2C_SendData(I2Cx, regAddr);
+
+	/* Test on EV8 and clear it */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+		;
+
+	/* Send STRAT condition a second time */
+	I2C_GenerateSTART(I2Cx, ENABLE);
+
+	/* Test on EV5 and clear it */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+		;
+
+	/* Send MPU6050 address for read */
+	I2C_Send7bitAddress(I2Cx, SLAVE_ADDRESS, I2C_Direction_Receiver);
+
+	/* Test on EV6 and clear it */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED))
+		;
+
+	/* Disable Acknowledgement */
+	I2C_AcknowledgeConfig(I2Cx, DISABLE);
+
+	/* Send STOP Condition */
+	I2C_GenerateSTOP(I2Cx, ENABLE);
+
+	/* Test on EV7 and clear it with a read from I2Cx->DR */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_RECEIVED))
+		;
+
+	/* Read a byte from the MPU6050 */
+	uint8_t temp = I2C_ReceiveData(I2Cx);
+
+	/* Enable Acknowledgement to be ready for another reception */
+	I2C_AcknowledgeConfig(I2Cx, ENABLE);
+
+	return temp;
+}
+
+/**
+ * @brief Writes one byte to the MPU6050 register
+ * @param regAddr	The address of the register in which the data will be written
+ * @param data		The data to be written
+ * @return None
+ */
+void IMU_writeREG(uint8_t regAddr, uint8_t data) {
+	/* Send START condition */
+	I2C_GenerateSTART(I2Cx, ENABLE);
+
+	/* Test on EV5 and clear it */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_MODE_SELECT))
+		;
+
+	/* Send MPU6050 address for write */
+	I2C_Send7bitAddress(I2Cx, SLAVE_ADDRESS, I2C_Direction_Transmitter);
+
+	/* Test on EV6 and clear it */
+	while (!I2C_CheckEvent(I2Cx,
+	I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED))
+		;
+
+	/* Send the MPU6050's internal register address to write to */
+	I2C_SendData(I2Cx, regAddr);
+
+	/* Test on EV8 and clear it */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+		;
+
+	/* Send the byte to be written */
+	I2C_SendData(I2Cx, data);
+
+	/* Test on EV8 and clear it */
+	while (!I2C_CheckEvent(I2Cx, I2C_EVENT_MASTER_BYTE_TRANSMITTED))
+		;
+
+	/* Send STOP condition */
+	I2C_GenerateSTOP(I2Cx, ENABLE);
+}
+
+void IMU_DisableSleep_and_SetClockSource(uint8_t source) {
+
+	/* read the current value of the register */
+	uint8_t temp = IMU_readREG(REG_PWR_MGMT_1);
+
+	/* disable sleep mode - set sleep bit to 0 */
+	temp &= ((uint8_t) ~(0x01 << MPU6050_PWR1_SLEEP_BIT));
+
+	/* set the clock source */
+	setupByte(&temp, 0, 3, source);
+
+	/* write in the register with polling */
+	IMU_writeREG(REG_PWR_MGMT_1, temp);
+}
+
+void IMU_SetGyroFSRange(uint8_t fsRange) {
+	uint8_t temp = IMU_readREG(REG_GYRO_CONFIG);
+	setupByte(&temp, 3, 2, fsRange);
+	IMU_writeREG(REG_GYRO_CONFIG, temp);
+}
+
+void IMU_SetAccelFSRange(uint8_t fsRange) {
+	uint8_t temp = IMU_readREG(REG_ACCEL_CONFIG);
+	setupByte(&temp, 3, 2, fsRange);
+	IMU_writeREG(REG_ACCEL_CONFIG, temp);
+}
+
+void IMU_DMA_BufferWrite(uint8_t regAddr, uint16_t numByteToWrite) {
 
 }
-void DMA1_Stream0_IRQHandler(void){
+void IMU_DMA_BufferRead(uint8_t regAddr, uint16_t numByteToRead) {
 
 }
-void DMA1_Stream6_IRQHandler(void){
 
+void IMU_DMA_GetRaw() {
+	i2cDirectionWrite = 1;
+	DMA_SetCurrDataCounter(I2Cx_DMA_STREAM_TX, 1);
+	DMA_SetCurrDataCounter(I2Cx_DMA_STREAM_RX, 14); /* read from registers: 0x3B to 0x48 (accel, temp , gyro) *//*14*/
+	I2C_GenerateSTART(I2Cx, ENABLE);
+}
+
+void I2C1_EV_IRQHandler(void) {
+
+	if (I2C_GetFlagStatus(I2Cx, I2C_FLAG_SB) == SET) {
+		if (i2cDirectionWrite) {
+			// STM32 Transmitter
+			I2C_Send7bitAddress(I2Cx, SLAVE_ADDRESS,
+			I2C_Direction_Transmitter);
+		} else {
+			// STM32 Receiver
+			I2C_Send7bitAddress(I2Cx, SLAVE_ADDRESS,
+			I2C_Direction_Receiver);
+		}
+	} else if (I2C_CheckEvent(I2Cx,
+	I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) == SUCCESS) {
+		if (i2cDirectionWrite) {
+			// STM32 Transmitter
+			DMA_Cmd(I2Cx_DMA_STREAM_TX, ENABLE);
+		}
+	} else if (I2C_GetFlagStatus(I2Cx, I2C_FLAG_BTF) == SET) {
+		if (i2cDirectionWrite) {
+			// STM32 Transmitter
+			/*enable i2c rx stream*/
+			DMA_Cmd(I2Cx_DMA_STREAM_RX, ENABLE);
+			I2C_DMALastTransferCmd(I2Cx, ENABLE);
+			i2cDirectionWrite = 0;
+			I2C_ClearFlag(I2Cx, I2C_FLAG_BTF);
+
+			I2C_GenerateSTART(I2Cx, ENABLE); /* generates a restart condition*/
+		}
+	}
+}
+
+/**
+ * rx
+ */
+void DMA1_Stream0_IRQHandler(void) {
+	DMA_ClearFlag(I2Cx_DMA_STREAM_TX, DMA_FLAG_TCIF6);
+	DMA_ClearFlag(I2Cx_DMA_STREAM_RX, DMA_FLAG_TCIF0);
+	I2C_GenerateSTOP(I2Cx, ENABLE);
+	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
+	DMA_Cmd(I2Cx_DMA_STREAM_RX, DISABLE);
+
+//	MPU6050_CalcAccelRot();
+}
+
+/**
+ * tx
+ */
+void DMA1_Stream6_IRQHandler(void) {
+//	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
 }
 
 /**

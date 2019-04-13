@@ -137,10 +137,19 @@ void MPU6050_CalcAccelRot(void);
  */
 void Init_Periph(void) {
 
-//	initSysTick();
-//
-//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
-//
+	initSysTick();
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
+
+#ifdef STM_EVAL
+	/* Initialize LEDs */
+	STM_EVAL_LEDInit(LED3);
+	STM_EVAL_LEDInit(LED4);
+	STM_EVAL_LEDInit(LED5);
+	STM_EVAL_LEDInit(LED6);
+#else
+	initStatusLEDs();
+#endif
+
 //	initBTModule();
 //	initStatusLEDs();
 //	initMotorControl();
@@ -176,25 +185,8 @@ int main(void) {
 	/*Remap vector table to enable debugging*/
 	SCB->VTOR = 0x08008000 & (int32_t) 0x1FFFFF80;
 
-//	Init_Periph();
+	Init_Periph();
 
-	initSysTick();
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
-
-
-#ifdef STM_EVAL
-	/* Initialize LEDs */
-	STM_EVAL_LEDInit(LED3);
-	STM_EVAL_LEDInit(LED4);
-	STM_EVAL_LEDInit(LED5);
-	STM_EVAL_LEDInit(LED6);
-
-	/* Turn on LEDs */
-//	STM_EVAL_LEDOn(LED3);
-//	STM_EVAL_LEDOn(LED4);
-//	STM_EVAL_LEDOn(LED5);
-//	STM_EVAL_LEDOn(LED6);
-#endif
 	/* TODO - Add your application code here */
 //	resetRGB();
 //	uint32_t enc_left;
@@ -206,34 +198,43 @@ int main(void) {
 //	MPU6050_DMAGetRawAccelGyro();
 //	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE)
 //		;
-
 	initBTModule();
 	initIMU();
+	if (setupIMU()) { /* if the communication not working then it stops here */
+#ifdef STM_EVAL
+		STM_EVAL_LEDOn(LED3);
+#else
+		setLED(PINK);
+#endif
+	}
 
 	UART_DMASend("checkpoint1\n");
-	STM_EVAL_LEDOn(LED3);
+#ifdef STM_EVAL
 	STM_EVAL_LEDOn(LED4);
-	STM_EVAL_LEDOn(LED5);
-	STM_EVAL_LEDOn(LED6);
+#endif
 
-	DMA_SetCurrDataCounter(I2Cx_DMA_STREAM_TX, 4);
-	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
-	while (DISABLE != DMA_GetCmdStatus(I2Cx_DMA_STREAM_TX))
-		;
+
+	IMU_DMA_GetRaw();
+
+//	DMA_SetCurrDataCounter(I2Cx_DMA_STREAM_TX, 4);
+//	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
+//	while (DISABLE != DMA_GetCmdStatus(I2Cx_DMA_STREAM_TX))
+//		;
+
 //	DMA_Cmd(I2Cx_DMA_STREAM_RX, ENABLE);
-
-	delaySome_ms();
+//	delaySome_ms();
 //	I2C_GenerateSTART(I2Cx, ENABLE);
 
 //	Init_IMU();
 //	UART_DMASend("checkpoint1\n");
-
 //	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
 
 	delaySome_ms();
 	UART_DMASend("checkpoint2\n");
-	delaySome_ms();
-
+#ifdef STM_EVAL
+	STM_EVAL_LEDOn(LED5);
+	STM_EVAL_LEDOn(LED6);
+#endif
 	UART_DMA_StartListening();
 
 //	MPU6050_DMAGetRawAccelGyro();
@@ -308,43 +309,8 @@ void EXTI15_10_IRQHandler() {
 	setRGB(rgb_led_status % 10);
 }
 
-//void I2C1_EV_IRQHandler() {
-//	if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_SB) == SET) {
-//		if (i2cDirectionWrite) {
-//			// STM32 Transmitter
-//			I2C_Send7bitAddress(MPU6050_I2C, MPU6050_DEFAULT_ADDRESS,
-//			I2C_Direction_Transmitter);
-//		} else {
-//			// STM32 Receiver
-//			I2C_Send7bitAddress(MPU6050_I2C, MPU6050_DEFAULT_ADDRESS,
-//			I2C_Direction_Receiver);
-//		}
-//	} else if (I2C_CheckEvent(MPU6050_I2C,
-//	I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) == SUCCESS) {
-//		if (i2cDirectionWrite) {
-//			// STM32 Transmitter
-//			DMA_Cmd(MPU6050_I2C_TX_Stream, ENABLE);
-//		}
-//	} else if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_BTF) == SET) {
-//		if (i2cDirectionWrite) {
-//			// STM32 Transmitter
-//			/*enable i2c rx stream*/
-//			DMA_Cmd(MPU6050_I2C_RX_Stream, ENABLE);
-//			I2C_DMALastTransferCmd(MPU6050_I2C, ENABLE);
-//			I2C_GenerateSTART(MPU6050_I2C, ENABLE);
-//			i2cDirectionWrite = 0;
-//			I2C_ClearFlag(MPU6050_I2C, I2C_FLAG_BTF);
-//		}
-//	}
-//}
-
 // mpu6050 readings are ready
 //void DMA1_Stream0_IRQHandler() {
-//	if (SET == DMA_GetFlagStatus(MPU6050_I2C_RX_Stream, DMA_FLAG_TEIF0)) {
-//		while (1) {
-//			int i = 0;
-//		}
-//	}
 //	DMA_ClearFlag(MPU6050_I2C_RX_Stream, DMA_FLAG_TCIF0);
 //	I2C_GenerateSTOP(MPU6050_I2C, ENABLE);
 //	DMA_Cmd(MPU6050_I2C_TX_Stream, DISABLE);
