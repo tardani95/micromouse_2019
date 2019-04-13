@@ -19,27 +19,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS
   7 .bss          00000534  2000000c  2000000c  0002000c  2**2
                   ALLOC
-  8 ._user_heap_stack 00000a00  20000540  20000540  0002000c  2**0
+  8 ._user_heap_stack 00000400  20000540  20000540  0002000c  2**0
                   ALLOC
   9 .ARM.attributes 00000030  00000000  00000000  0002000c  2**0
                   CONTENTS, READONLY
- 10 .debug_info   00011b5d  00000000  00000000  0002003c  2**0
+ 10 .debug_info   00011b43  00000000  00000000  0002003c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_abbrev 0000367e  00000000  00000000  00031b99  2**0
+ 11 .debug_abbrev 0000367e  00000000  00000000  00031b7f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_aranges 00000790  00000000  00000000  00035218  2**3
+ 12 .debug_aranges 00000790  00000000  00000000  00035200  2**3
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 00000bc8  00000000  00000000  000359a8  2**3
+ 13 .debug_ranges 00000bc8  00000000  00000000  00035990  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   00004763  00000000  00000000  00036570  2**0
+ 14 .debug_line   000044fc  00000000  00000000  00036558  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00002f21  00000000  00000000  0003acd3  2**0
+ 15 .debug_str    00002f07  00000000  00000000  0003aa54  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      0000007c  00000000  00000000  0003dbf4  2**0
+ 16 .comment      0000007c  00000000  00000000  0003d95b  2**0
                   CONTENTS, READONLY
- 17 .debug_frame  00000fcc  00000000  00000000  0003dc70  2**2
+ 17 .debug_frame  00000fcc  00000000  00000000  0003d9d8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_loc    00003496  00000000  00000000  0003ec3c  2**0
+ 18 .debug_loc    00003496  00000000  00000000  0003e9a4  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -437,7 +437,7 @@ static blt_int8u FlashGetSector(blt_addr address)
 0800038c <FlashReinit>:
   blockInfo.base_addr = FLASH_INVALID_ADDRESS;
  800038c:	4a03      	ldr	r2, [pc, #12]	; (800039c <FlashReinit+0x10>)
- 800038e:	f04f 33ff 	mov.w	r3, #4294967295
+ 800038e:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
  8000392:	6013      	str	r3, [r2, #0]
   bootBlockInfo.base_addr = FLASH_INVALID_ADDRESS;
  8000394:	4a02      	ldr	r2, [pc, #8]	; (80003a0 <FlashReinit+0x14>)
@@ -2252,7 +2252,7 @@ HAL_StatusTypeDef HAL_DeInit(void)
   /* Reset of all peripherals */
   __HAL_RCC_APB1_FORCE_RESET();
  8000be6:	4b09      	ldr	r3, [pc, #36]	; (8000c0c <HAL_DeInit+0x28>)
- 8000be8:	f04f 32ff 	mov.w	r2, #4294967295
+ 8000be8:	f04f 32ff 	mov.w	r2, #4294967295	; 0xffffffff
   __HAL_RCC_APB1_RELEASE_RESET();
  8000bec:	2400      	movs	r4, #0
   __HAL_RCC_APB1_FORCE_RESET();
@@ -2327,7 +2327,7 @@ __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
     HAL_NVIC_SetPriority(SysTick_IRQn, TickPriority, 0U);
  8000c34:	4602      	mov	r2, r0
  8000c36:	4629      	mov	r1, r5
- 8000c38:	f04f 30ff 	mov.w	r0, #4294967295
+ 8000c38:	f04f 30ff 	mov.w	r0, #4294967295	; 0xffffffff
  8000c3c:	f000 f838 	bl	8000cb0 <HAL_NVIC_SetPriority>
     uwTickPrio = TickPriority;
  8000c40:	4b04      	ldr	r3, [pc, #16]	; (8000c54 <HAL_InitTick+0x44>)
@@ -2440,7 +2440,7 @@ void HAL_NVIC_SetPriority(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t Sub
            ((PreemptPriority & (uint32_t)((1UL << (PreemptPriorityBits)) - 1UL)) << SubPriorityBits) |
  8000cc8:	f04f 0501 	mov.w	r5, #1
  8000ccc:	fa05 f303 	lsl.w	r3, r5, r3
- 8000cd0:	f103 33ff 	add.w	r3, r3, #4294967295
+ 8000cd0:	f103 33ff 	add.w	r3, r3, #4294967295	; 0xffffffff
   SubPriorityBits     = ((PriorityGroupTmp + (uint32_t)(__NVIC_PRIO_BITS)) < (uint32_t)7UL) ? (uint32_t)0UL : (uint32_t)((PriorityGroupTmp - 7UL) + (uint32_t)(__NVIC_PRIO_BITS));
  8000cd4:	bf8c      	ite	hi
  8000cd6:	3c03      	subhi	r4, #3
@@ -3051,7 +3051,7 @@ void FLASH_FlushCaches(void)
  8001028:	4605      	mov	r5, r0
  800102a:	b9a8      	cbnz	r0, 8001058 <HAL_FLASHEx_Erase+0x4c>
     *SectorError = 0xFFFFFFFFU;
- 800102c:	f04f 33ff 	mov.w	r3, #4294967295
+ 800102c:	f04f 33ff 	mov.w	r3, #4294967295	; 0xffffffff
  8001030:	f8c8 3000 	str.w	r3, [r8]
     if(pEraseInit->TypeErase == FLASH_TYPEERASE_MASSERASE)
  8001034:	6823      	ldr	r3, [r4, #0]
@@ -3365,7 +3365,7 @@ __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
  80011f6:	ea4c 0606 	orr.w	r6, ip, r6
  80011fa:	6006      	str	r6, [r0, #0]
       if ((GPIO_InitStruct->Mode == LL_GPIO_MODE_OUTPUT) || (GPIO_InitStruct->Mode == LL_GPIO_MODE_ALTERNATE))
- 80011fc:	f108 36ff 	add.w	r6, r8, #4294967295
+ 80011fc:	f108 36ff 	add.w	r6, r8, #4294967295	; 0xffffffff
  8001200:	2e01      	cmp	r6, #1
  8001202:	d816      	bhi.n	8001232 <LL_GPIO_Init+0xa6>
   MODIFY_REG(GPIOx->OSPEEDR, (GPIO_OSPEEDER_OSPEEDR0 << (POSITION_VAL(Pin) * 2U)),
