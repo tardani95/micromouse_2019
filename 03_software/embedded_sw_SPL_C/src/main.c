@@ -244,7 +244,14 @@ int main(void) {
 //		}
 
 		IMU_DMA_GetRaw();
-		delaySome_ms();
+		STM_EVAL_LEDToggle(LED3);
+		delay_ms(500);
+		STM_EVAL_LEDToggle(LED4);
+		delay_ms(500);
+		STM_EVAL_LEDToggle(LED5);
+		delay_ms(500);
+		STM_EVAL_LEDToggle(LED6);
+		delay_ms(500);
 	}
 }
 
