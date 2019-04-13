@@ -67,7 +67,7 @@
  * @{
  */
 
-#define STM_EVAL /* comment it out if the stm evaluation board is not used */
+#define STM_EVAL /* TODO comment it out if the stm evaluation board is not used */
 
 /* Includes */
 #include "stm32f4xx.h"
@@ -82,13 +82,12 @@
  */
 #include "hw_button.h"
 #include "hw_encoder.h"
-//#include "hw_IMU.h"
+#include "hw_IMU.h"
 #include "hw_IR_module.h"
 #include "hw_motor_control.h"
 #include "hw_status_led.h"
 #include "hw_BT_module.h"
 #include "hw_bat_lvl_watcher.h"
-#include "hw_mpu6050.h"
 /**
  * @}
  */
@@ -126,7 +125,6 @@ menu_p_t main_menu_p;
 menu_p_t after_run_menu_p;
 
 /* Private function prototypes */
-void MPU6050_CalcAccelRot(void);
 /* Private functions */
 
 /**
@@ -283,17 +281,6 @@ void EXTI15_10_IRQHandler() {
 
 	setRGB(rgb_led_status % 10);
 }
-
-// mpu6050 readings are ready
-//void DMA1_Stream0_IRQHandler() {
-//	DMA_ClearFlag(MPU6050_I2C_RX_Stream, DMA_FLAG_TCIF0);
-//	I2C_GenerateSTOP(MPU6050_I2C, ENABLE);
-//	DMA_Cmd(MPU6050_I2C_TX_Stream, DISABLE);
-//	DMA_Cmd(MPU6050_I2C_RX_Stream, DISABLE);
-//
-//	MPU6050_CalcAccelRot();
-//}
-
 
 
 /**
