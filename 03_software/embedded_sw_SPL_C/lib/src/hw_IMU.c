@@ -364,7 +364,7 @@ void Init_MPU6050_I2C_DMA(uint8_t* i2cTxBuffer, uint8_t* i2cRxBuffer) {
 
 	I2C_ITConfig(MPU6050_I2C, I2C_IT_EVT, ENABLE);
 //	I2C_Cmd(MPU6050_I2C, ENABLE); //TODO comment out 1st try if not working
-	I2C_DMACmd(I2C2, ENABLE);
+	I2C_DMACmd(MPU6050_I2C, ENABLE);
 
 	mpu6050_NVIC_InitStructure.NVIC_IRQChannel = I2C1_EV_IRQn;
 	mpu6050_NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 7;

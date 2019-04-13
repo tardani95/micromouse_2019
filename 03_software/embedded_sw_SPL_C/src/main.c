@@ -82,12 +82,13 @@
  */
 #include "hw_button.h"
 #include "hw_encoder.h"
-#include "hw_IMU.h"
+//#include "hw_IMU.h"
 #include "hw_IR_module.h"
 #include "hw_motor_control.h"
 #include "hw_status_led.h"
 #include "hw_BT_module.h"
 #include "hw_bat_lvl_watcher.h"
+#include "hw_mpu6050.h"
 /**
  * @}
  */
@@ -113,8 +114,8 @@
 /* Private macro */
 /* Private variables */
 
-uint8_t i2cRxBuffer[14] = { };
-uint8_t i2cTxBuffer[] = { 0x3B,0x3B,0x3B,0x3B };
+//uint8_t i2cRxBuffer[14] = { };
+//uint8_t i2cTxBuffer[] = { 0x3B, 0x3B, 0x3B, 0x3B };
 int16_t accel_gyro_temp[7];
 float gForceX, gForceY, gForceZ;
 float rotX, rotY, rotZ;
@@ -136,11 +137,11 @@ void MPU6050_CalcAccelRot(void);
  */
 void Init_Periph(void) {
 
-	initSysTick();
-
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
-
-	initBTModule();
+//	initSysTick();
+//
+//	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
+//
+//	initBTModule();
 //	initStatusLEDs();
 //	initMotorControl();
 //	ADC_DeInit();
@@ -170,11 +171,16 @@ void delaySome_ms(void) {
  */
 int main(void) {
 	int i = 0;
+
 //	SystemInit(); /*startup script calls this function before main*/
 	/*Remap vector table to enable debugging*/
 	SCB->VTOR = 0x08008000 & (int32_t) 0x1FFFFF80;
 
-	Init_Periph();
+//	Init_Periph();
+
+	initSysTick();
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
+
 
 #ifdef STM_EVAL
 	/* Initialize LEDs */
@@ -200,11 +206,29 @@ int main(void) {
 //	MPU6050_DMAGetRawAccelGyro();
 //	while (DMA_GetCmdStatus(BT_UART_TX_DMA_Stream) != ENABLE)
 //		;
-	Init_IMU();
-	delaySome_ms();
-	UART_DMASend("checkpoint1\n");
 
-	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
+	initBTModule();
+	initIMU();
+
+	UART_DMASend("checkpoint1\n");
+	STM_EVAL_LEDOn(LED3);
+	STM_EVAL_LEDOn(LED4);
+	STM_EVAL_LEDOn(LED5);
+	STM_EVAL_LEDOn(LED6);
+
+	DMA_SetCurrDataCounter(I2Cx_DMA_STREAM_TX, 4);
+	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
+	while (DISABLE != DMA_GetCmdStatus(I2Cx_DMA_STREAM_TX))
+		;
+//	DMA_Cmd(I2Cx_DMA_STREAM_RX, ENABLE);
+
+	delaySome_ms();
+//	I2C_GenerateSTART(I2Cx, ENABLE);
+
+//	Init_IMU();
+//	UART_DMASend("checkpoint1\n");
+
+//	Init_MPU6050_I2C_DMA(i2cTxBuffer, i2cRxBuffer);
 
 	delaySome_ms();
 	UART_DMASend("checkpoint2\n");
@@ -212,7 +236,7 @@ int main(void) {
 
 	UART_DMA_StartListening();
 
-	MPU6050_DMAGetRawAccelGyro();
+//	MPU6050_DMAGetRawAccelGyro();
 
 	/* Infinite loop */
 	while (1) {
@@ -242,7 +266,7 @@ int main(void) {
 //		}
 
 //		MPU6050_GetRawAccelGyro(accel_gyro_temp);
-		MPU6050_DMAGetRawAccelGyro();
+//		MPU6050_DMAGetRawAccelGyro();
 		delaySome_ms();
 		delaySome_ms();
 		delaySome_ms();
@@ -284,73 +308,73 @@ void EXTI15_10_IRQHandler() {
 	setRGB(rgb_led_status % 10);
 }
 
-void I2C1_EV_IRQHandler() {
-	if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_SB) == SET) {
-		if (i2cDirectionWrite) {
-			// STM32 Transmitter
-			I2C_Send7bitAddress(MPU6050_I2C, MPU6050_DEFAULT_ADDRESS,
-			I2C_Direction_Transmitter);
-		} else {
-			// STM32 Receiver
-			I2C_Send7bitAddress(MPU6050_I2C, MPU6050_DEFAULT_ADDRESS,
-			I2C_Direction_Receiver);
-		}
-	} else if (I2C_CheckEvent(MPU6050_I2C,
-	I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) == SUCCESS) {
-		if (i2cDirectionWrite) {
-			// STM32 Transmitter
-			DMA_Cmd(MPU6050_I2C_TX_Stream, ENABLE);
-		}
-	} else if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_BTF) == SET) {
-		if (i2cDirectionWrite) {
-			// STM32 Transmitter
-			/*enable i2c rx stream*/
-			DMA_Cmd(MPU6050_I2C_RX_Stream, ENABLE);
-			I2C_DMALastTransferCmd(MPU6050_I2C, ENABLE);
-			I2C_GenerateSTART(MPU6050_I2C, ENABLE);
-			i2cDirectionWrite = 0;
-			I2C_ClearFlag(MPU6050_I2C, I2C_FLAG_BTF);
-		}
-	}
-}
+//void I2C1_EV_IRQHandler() {
+//	if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_SB) == SET) {
+//		if (i2cDirectionWrite) {
+//			// STM32 Transmitter
+//			I2C_Send7bitAddress(MPU6050_I2C, MPU6050_DEFAULT_ADDRESS,
+//			I2C_Direction_Transmitter);
+//		} else {
+//			// STM32 Receiver
+//			I2C_Send7bitAddress(MPU6050_I2C, MPU6050_DEFAULT_ADDRESS,
+//			I2C_Direction_Receiver);
+//		}
+//	} else if (I2C_CheckEvent(MPU6050_I2C,
+//	I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) == SUCCESS) {
+//		if (i2cDirectionWrite) {
+//			// STM32 Transmitter
+//			DMA_Cmd(MPU6050_I2C_TX_Stream, ENABLE);
+//		}
+//	} else if (I2C_GetFlagStatus(MPU6050_I2C, I2C_FLAG_BTF) == SET) {
+//		if (i2cDirectionWrite) {
+//			// STM32 Transmitter
+//			/*enable i2c rx stream*/
+//			DMA_Cmd(MPU6050_I2C_RX_Stream, ENABLE);
+//			I2C_DMALastTransferCmd(MPU6050_I2C, ENABLE);
+//			I2C_GenerateSTART(MPU6050_I2C, ENABLE);
+//			i2cDirectionWrite = 0;
+//			I2C_ClearFlag(MPU6050_I2C, I2C_FLAG_BTF);
+//		}
+//	}
+//}
 
 // mpu6050 readings are ready
-void DMA1_Stream0_IRQHandler() {
-	if (SET == DMA_GetFlagStatus(MPU6050_I2C_RX_Stream, DMA_FLAG_TEIF0)) {
-		while (1) {
-			int i = 0;
-		}
-	}
-	DMA_ClearFlag(MPU6050_I2C_RX_Stream, DMA_FLAG_TCIF0);
-	I2C_GenerateSTOP(MPU6050_I2C, ENABLE);
-	DMA_Cmd(MPU6050_I2C_TX_Stream, DISABLE);
-	DMA_Cmd(MPU6050_I2C_RX_Stream, DISABLE);
+//void DMA1_Stream0_IRQHandler() {
+//	if (SET == DMA_GetFlagStatus(MPU6050_I2C_RX_Stream, DMA_FLAG_TEIF0)) {
+//		while (1) {
+//			int i = 0;
+//		}
+//	}
+//	DMA_ClearFlag(MPU6050_I2C_RX_Stream, DMA_FLAG_TCIF0);
+//	I2C_GenerateSTOP(MPU6050_I2C, ENABLE);
+//	DMA_Cmd(MPU6050_I2C_TX_Stream, DISABLE);
+//	DMA_Cmd(MPU6050_I2C_RX_Stream, DISABLE);
+//
+//	MPU6050_CalcAccelRot();
+//}
 
-	MPU6050_CalcAccelRot();
-}
-
-void MPU6050_CalcAccelRot() {
-	accel_gyro_temp[0] = (int16_t) (i2cRxBuffer[0] << 8 | i2cRxBuffer[1]);
-	accel_gyro_temp[1] = (int16_t) (i2cRxBuffer[2] << 8 | i2cRxBuffer[3]);
-	accel_gyro_temp[2] = (int16_t) (i2cRxBuffer[4] << 8 | i2cRxBuffer[5]);
-	accel_gyro_temp[6] = (int16_t) (i2cRxBuffer[6] << 8 | i2cRxBuffer[7]); //temp
-	accel_gyro_temp[3] = (int16_t) (i2cRxBuffer[8] << 8 | i2cRxBuffer[9]);
-	accel_gyro_temp[4] = (int16_t) (i2cRxBuffer[10] << 8 | i2cRxBuffer[11]);
-	accel_gyro_temp[5] = (int16_t) (i2cRxBuffer[12] << 8 | i2cRxBuffer[13]);
-
-//	gForceX = (float) accel_gyro_temp[0] / 16384.0 * 9810;
-//	gForceY = (float) accel_gyro_temp[1] / 16384.0 * 9810;
-//	gForceZ = (float) accel_gyro_temp[2] / 16384.0 * 9810;
-	gForceX = (float) accel_gyro_temp[0] / 1.67;
-	gForceY = (float) accel_gyro_temp[1] / 1.67;
-	gForceZ = (float) accel_gyro_temp[2] / 1.67;
-
-	rotX = (float) accel_gyro_temp[3] / 65.5; //131.0; gyro @250 [LSB / deg/s]
-	rotY = (float) accel_gyro_temp[4] / 65.5; //65.5   gyro @500 [LSB / deg/s]
-	rotZ = (float) accel_gyro_temp[5] / 65.5; //131.0;
-
-	temp_C = (float) accel_gyro_temp[6] / 340 + 36.53;
-}
+//void MPU6050_CalcAccelRot() {
+//	accel_gyro_temp[0] = (int16_t) (i2cRxBuffer[0] << 8 | i2cRxBuffer[1]);
+//	accel_gyro_temp[1] = (int16_t) (i2cRxBuffer[2] << 8 | i2cRxBuffer[3]);
+//	accel_gyro_temp[2] = (int16_t) (i2cRxBuffer[4] << 8 | i2cRxBuffer[5]);
+//	accel_gyro_temp[6] = (int16_t) (i2cRxBuffer[6] << 8 | i2cRxBuffer[7]); //temp
+//	accel_gyro_temp[3] = (int16_t) (i2cRxBuffer[8] << 8 | i2cRxBuffer[9]);
+//	accel_gyro_temp[4] = (int16_t) (i2cRxBuffer[10] << 8 | i2cRxBuffer[11]);
+//	accel_gyro_temp[5] = (int16_t) (i2cRxBuffer[12] << 8 | i2cRxBuffer[13]);
+//
+////	gForceX = (float) accel_gyro_temp[0] / 16384.0 * 9810;
+////	gForceY = (float) accel_gyro_temp[1] / 16384.0 * 9810;
+////	gForceZ = (float) accel_gyro_temp[2] / 16384.0 * 9810;
+//	gForceX = (float) accel_gyro_temp[0] / 1.67;
+//	gForceY = (float) accel_gyro_temp[1] / 1.67;
+//	gForceZ = (float) accel_gyro_temp[2] / 1.67;
+//
+//	rotX = (float) accel_gyro_temp[3] / 65.5; //131.0; gyro @250 [LSB / deg/s]
+//	rotY = (float) accel_gyro_temp[4] / 65.5; //65.5   gyro @500 [LSB / deg/s]
+//	rotZ = (float) accel_gyro_temp[5] / 65.5; //131.0;
+//
+//	temp_C = (float) accel_gyro_temp[6] / 340 + 36.53;
+//}
 
 /**
  * @}
