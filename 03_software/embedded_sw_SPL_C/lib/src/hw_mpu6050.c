@@ -19,7 +19,6 @@
 
 uint8_t i2cTxBuffer[] = { REG_ACCEL_X_OUT_H };
 
-//#define HALFWORD_FIFO
 
 uint8_t i2cRxBuffer[14] = { };
 int16_t accel_temp_gyro[7] = { };
@@ -76,7 +75,6 @@ void initIMU() {
 	I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;
 	I2C_InitStructure.I2C_OwnAddress1 = 0xA0;
 
-//	I2C_ITConfig(I2Cx, I2C_IT_EVT, ENABLE);
 	I2C_DMACmd(I2Cx, ENABLE);
 
 	/* all I2C register values set - initialize and enable I2C Peripheral */
@@ -102,8 +100,6 @@ void initIMU() {
 	/* DMA configuration*/
 
 	/* reset, release and enable DMA clock*/
-//	RCC_AHB1PeriphResetCmd(DMAx_CLK, ENABLE);
-//	RCC_AHB1PeriphResetCmd(DMAx_CLK, DISABLE);
 	RCC_AHB1PeriphClockCmd(DMAx_CLK, ENABLE);
 
 	/* deinitialize DMA Streams */
@@ -134,13 +130,8 @@ void initIMU() {
 
 	/* DMA RX settings - DMA1 Stream 0, CH1 - I2C2 RX */
 	DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralToMemory;
-#ifdef HALFWORD_FIFO
-	DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_HalfWord;
-	DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t) accel_temp_gyro;
-#else
 	DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
 	DMA_InitStructure.DMA_Memory0BaseAddr = (uint32_t) i2cRxBuffer;
-#endif
 	DMA_InitStructure.DMA_BufferSize = 0;
 	DMA_Init(I2Cx_DMA_STREAM_RX, &DMA_InitStructure);
 
@@ -148,11 +139,11 @@ void initIMU() {
 //	DMA_ITConfig(I2Cx_DMA_STREAM_TX, DMA_IT_TC, ENABLE);
 	DMA_ITConfig(I2Cx_DMA_STREAM_RX, DMA_IT_TC, ENABLE);
 
-	NVIC_InitStructure.NVIC_IRQChannel = DMA1_Stream6_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 6;
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-	NVIC_Init(&NVIC_InitStructure);
+//	NVIC_InitStructure.NVIC_IRQChannel = DMA1_Stream6_IRQn;
+//	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 6;
+//	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+//	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+//	NVIC_Init(&NVIC_InitStructure);
 
 	NVIC_InitStructure.NVIC_IRQChannel = DMA1_Stream0_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 6;
@@ -178,6 +169,7 @@ uint8_t setupIMU() {
 	uint8_t retVal = (IMU_GetDeviceID() == MPU6050_ADDRESS_AD0_LOW);
 
 	I2C_ITConfig(I2Cx, I2C_IT_EVT, ENABLE);
+//	I2C_ITConfig(I2Cx, I2C_IT_EVT, ENABLE);
 
 	return retVal;
 }
@@ -389,17 +381,6 @@ void I2C1_EV_IRQHandler(void) {
 
 void MPU6050_CalcAccelRot() {
 
-#ifdef HALFWORD_FIFO
-	gForceX = (float) accel_temp_gyro[0] / 1.67;
-	gForceY = (float) accel_temp_gyro[1] / 1.67;
-	gForceZ = (float) accel_temp_gyro[2] / 1.67;
-
-	rotX = (float) accel_temp_gyro[4] / 65.5; 	//131.0; gyro @250 [LSB / deg/s]
-	rotY = (float) accel_temp_gyro[5] / 65.5;//65.5   gyro @500 [LSB / deg/s]
-	rotZ = (float) accel_temp_gyro[6] / 65.5;//131.0;
-
-	temp_C = (float) accel_temp_gyro[3] / 340 + 36.53;
-#else
 	accel_temp_gyro[0] = (int16_t) (i2cRxBuffer[0] << 8 | i2cRxBuffer[1]);
 	accel_temp_gyro[1] = (int16_t) (i2cRxBuffer[2] << 8 | i2cRxBuffer[3]);
 	accel_temp_gyro[2] = (int16_t) (i2cRxBuffer[4] << 8 | i2cRxBuffer[5]);
@@ -412,12 +393,11 @@ void MPU6050_CalcAccelRot() {
 	gForceY = (float) accel_temp_gyro[1] / 1.67;
 	gForceZ = (float) accel_temp_gyro[2] / 1.67;
 
+	temp_C = (float) accel_temp_gyro[3] / 340 + 36.53;
+
 	rotX = (float) accel_temp_gyro[4] / 65.5; //131.0; gyro @250 [LSB / deg/s]
 	rotY = (float) accel_temp_gyro[5] / 65.5; //65.5   gyro @500 [LSB / deg/s]
 	rotZ = (float) accel_temp_gyro[6] / 65.5; //131.0;
-
-	temp_C = (float) accel_temp_gyro[3] / 340 + 36.53;
-#endif
 
 //	gForceX = (float) accel_gyro_temp[0] / 16384.0 * 9810;
 //	gForceY = (float) accel_gyro_temp[1] / 16384.0 * 9810;
@@ -438,12 +418,12 @@ void DMA1_Stream0_IRQHandler(void) {
 	MPU6050_CalcAccelRot();
 }
 
-/**
- * tx
- */
-void DMA1_Stream6_IRQHandler(void) {
+///**
+// * tx
+// */
+//void DMA1_Stream6_IRQHandler(void) {
 //	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
-}
+//}
 
 /**
  * @}
