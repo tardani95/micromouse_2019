@@ -61,6 +61,8 @@ void initBTModule() {
 
 	DMA_InitTypeDef bt_dma;
 
+	/* common DMA settings */
+
 	/* DMA 1, Stream3, CH4 for USART3 TX */
 	DMA_StructInit(&bt_dma);
 	bt_dma.DMA_Channel = DMA_Channel_4;
@@ -140,6 +142,8 @@ void UART_DMASend(char *data) {
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
 	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
+	while (ENABLE != DMA_GetCmdStatus(BT_UART_TX_DMA_Stream))
+		;
 }
 
 void UART_DMA_StartListening() {
@@ -192,9 +196,9 @@ void DMA1_Stream3_IRQHandler(void) {
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 }
 
-void clearBuffer(){
+void clearBuffer() {
 	uint16_t i = length;
-	while(uartRxBuffer[i] != '\0'){
+	while (uartRxBuffer[i] != '\0') {
 		uartRxBuffer[i] = '\0';
 		i++;
 	}

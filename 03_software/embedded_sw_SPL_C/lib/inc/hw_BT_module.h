@@ -13,6 +13,7 @@
 #include "stm32f4xx_usart.h"
 #include "stm32f4xx_dma.h"
 #include "misc.h"
+#include <string.h>
 
 /** @addtogroup hardware_modules
  * @{
