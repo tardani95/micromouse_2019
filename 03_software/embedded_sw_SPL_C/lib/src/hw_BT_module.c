@@ -21,6 +21,9 @@ uint8_t length = 0;
 char uartRxBuffer[100] = { };
 char uartTxBuffer[100] = { };
 
+/**
+ * @brief Initialize the Bluetooth module
+ */
 void initBTModule() {
 
 	/* deinitialize before use */
@@ -119,6 +122,10 @@ void initBTModule() {
 	USART_Cmd(BT_UART, ENABLE);
 }
 
+/**
+ * @brief Sends a string with polling
+ * @param data String to send
+ */
 void UART_Send(char *data) {
 	uint8_t i = 0;
 	while (data[i] != '\0') {
@@ -129,6 +136,10 @@ void UART_Send(char *data) {
 	}
 }
 
+/**
+ * @brief Sends a string with DMA
+ * @param data String to send
+ */
 void UART_DMASend(char *data) {
 	uint8_t length = 0;
 	while (data[length] != '\0') {
@@ -144,6 +155,10 @@ void UART_DMASend(char *data) {
 		;
 }
 
+/**
+ * @brief Starts listening for UART messages
+ * protocol: [data_length, data]
+ */
 void UART_DMA_StartListening() {
 	DMA_Cmd(BT_UART_RX_DMA_Stream, DISABLE);
 	USART_DMACmd(BT_UART, USART_DMAReq_Rx, DISABLE);
@@ -151,6 +166,10 @@ void UART_DMA_StartListening() {
 	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
 }
 
+/**
+ * @brief UART IRQ handler
+ * reads the first byte of the transfer which determines the packet length to be received with dma
+ */
 void USART3_IRQHandler() {
 	if (SET == USART_GetITStatus(BT_UART, USART_IT_RXNE)) {
 		length = (uint8_t) USART3->DR;
@@ -194,6 +213,9 @@ void DMA1_Stream3_IRQHandler(void) {
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 }
 
+/**
+ * @brief Clears the rest of the uart rx buffer
+ */
 void clearBuffer() {
 	uint16_t i = length;
 	while (uartRxBuffer[i] != '\0') {
@@ -202,6 +224,9 @@ void clearBuffer() {
 	}
 }
 
+/**
+ * @deprecated use the dma versions
+ */
 void BTSendString(char *string) {
 	for (uint8_t i = 0; i < MAX_STRING_SIZE; i++) {
 		//this doesnt work cause jdy buffer gets full
@@ -221,11 +246,17 @@ void BTSendString(char *string) {
 
 }
 
+/**
+ * @deprecated use the dma versions
+ */
 void BTSendChar(char c) {
 	USART_SendData(BT_UART, c);
 	waitForAck();
 }
 
+/**
+ * @deprecated
+ */
 void waitForAck(void) {
 	while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 		;
