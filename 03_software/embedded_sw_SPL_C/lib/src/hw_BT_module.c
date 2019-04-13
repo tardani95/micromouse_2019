@@ -62,33 +62,31 @@ void initBTModule() {
 	DMA_InitTypeDef bt_dma;
 
 	/* common DMA settings */
+	DMA_StructInit(&bt_dma);
+
+	bt_dma.DMA_Channel = DMA_Channel_4;
+	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) &(BT_UART->DR);
+	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
+	bt_dma.DMA_Mode = DMA_Mode_Normal;
+	bt_dma.DMA_Priority = DMA_Priority_Medium;
+	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Enable;
+	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
+	bt_dma.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
+	bt_dma.DMA_MemoryBurst = DMA_MemoryBurst_Single;
 
 	/* DMA 1, Stream3, CH4 for USART3 TX */
-	DMA_StructInit(&bt_dma);
-	bt_dma.DMA_Channel = DMA_Channel_4;
 	bt_dma.DMA_DIR = DMA_DIR_MemoryToPeripheral;
 	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uartTxBuffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
-	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
-	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) &(BT_UART->DR);
-	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
-	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Enable;
-	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
+	bt_dma.DMA_BufferSize = 0;
 	DMA_Init(BT_UART_TX_DMA_Stream, &bt_dma);
 
 	/* DMA 1, Stream1, CH4 for USART3 RX */
-	DMA_StructInit(&bt_dma);
-	bt_dma.DMA_BufferSize = 10;
-	bt_dma.DMA_Mode = DMA_Mode_Normal;
-	bt_dma.DMA_Channel = DMA_Channel_4;
 	bt_dma.DMA_DIR = DMA_DIR_PeripheralToMemory;
-	bt_dma.DMA_PeripheralBaseAddr = (uint32_t) &(BT_UART->DR);
-	bt_dma.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
 	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uartRxBuffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
-	bt_dma.DMA_MemoryInc = DMA_MemoryInc_Enable;
-	bt_dma.DMA_FIFOMode = DMA_FIFOMode_Enable;
-	bt_dma.DMA_FIFOThreshold = DMA_FIFOThreshold_Full;
+	bt_dma.DMA_BufferSize = 10;
 	DMA_Init(BT_UART_RX_DMA_Stream, &bt_dma);
 
 	NVIC_InitTypeDef bt_nvic;
@@ -159,7 +157,7 @@ void USART3_IRQHandler() {
 
 		if (100 <= length) {
 			UART_DMASend(
-					"could not receive that much data, my buffer is only 100 bytes long\n");
+					"420 - too many bytes\n");
 		} else {
 			DMA_SetCurrDataCounter(BT_UART_RX_DMA_Stream, length);
 			USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
