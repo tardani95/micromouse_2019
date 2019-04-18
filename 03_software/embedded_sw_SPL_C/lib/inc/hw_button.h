@@ -25,6 +25,8 @@
 /*for set and reset the gpio state use GPIOx_BSRR */
 
 /* button1 -- PB12*/
+#define BTN_PORT		GPIOB
+
 #define BTN1_PIN		GPIO_Pin_12
 #define BTN1_PORT		GPIOB
 #define BTN1_EXTI_Line  EXTI_Line12

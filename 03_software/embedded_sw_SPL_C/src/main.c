@@ -68,7 +68,6 @@
  */
 
 #define STM_EVAL /* TODO comment it out if the stm evaluation board is not used */
-
 /* Includes */
 #include "stm32f4xx.h"
 
@@ -153,7 +152,7 @@ void Init_Periph(void) {
 	//	initBatLvlWatcher();
 	//	initEncoders();
 	//	initMenus(&main_menu_p, &after_run_menu_p);
-	//	Init_Buttons();
+
 
 	initBTModule();
 	initIMU();
@@ -164,6 +163,8 @@ void Init_Periph(void) {
 		setLED(PINK);
 #endif
 	}
+
+	Init_Buttons();
 
 }
 
@@ -214,7 +215,7 @@ int main(void) {
 #endif
 
 	UART_DMA_StartListening();
-	STM_EVAL_LEDOn(LED6);
+//	STM_EVAL_LEDOn(LED6);
 
 	/* Infinite loop */
 	while (1) {
@@ -244,13 +245,13 @@ int main(void) {
 //		}
 
 		IMU_DMA_GetRaw();
-		STM_EVAL_LEDToggle(LED3);
+//		STM_EVAL_LEDToggle(LED3);
 		delay_ms(500);
-		STM_EVAL_LEDToggle(LED4);
+//		STM_EVAL_LEDToggle(LED4);
 		delay_ms(500);
-		STM_EVAL_LEDToggle(LED5);
+//		STM_EVAL_LEDToggle(LED5);
 		delay_ms(500);
-		STM_EVAL_LEDToggle(LED6);
+//		STM_EVAL_LEDToggle(LED6);
 		delay_ms(500);
 	}
 }
@@ -266,7 +267,7 @@ void EXTI15_10_IRQHandler() {
 		//INFO("Button1 pressed");
 		//TODO handle button1 pressed action
 
-		toggleLED(PINK);
+		STM_EVAL_LEDToggle(LED3);
 		rgb_led_status++;
 		EXTI_ClearITPendingBit(BTN1_EXTI_Line);
 		//EXTI->PR = BTN1_EXTI_Line; /*clear pendig bit for button1*/
@@ -280,15 +281,15 @@ void EXTI15_10_IRQHandler() {
 		//TODO handle button2 pressed action
 
 		rgb_led_status++;
+		STM_EVAL_LEDToggle(LED4);
 
 		EXTI_ClearITPendingBit(BTN2_EXTI_Line);
 		//EXTI->PR = BTN2_EXTI_Line; /*clear pendig bit for button2*/
 //		return;
 	}
 
-	setRGB(rgb_led_status % 10);
+//	setRGB(rgb_led_status % 10);
 }
-
 
 /**
  * @}
