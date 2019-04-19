@@ -3,7 +3,7 @@
 <eagle version="9.3.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="5" unitdist="mil" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="mm" altunit="mm"/>
@@ -23,17 +23,17 @@
 <layer number="13" name="Route13" color="21" fill="1" visible="no" active="no"/>
 <layer number="14" name="Route14" color="22" fill="1" visible="no" active="no"/>
 <layer number="15" name="Route15" color="23" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -47,9 +47,9 @@
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -59,7 +59,7 @@
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -155,7 +155,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-22T16:16:36Z" lastsyncedchangeguid="30431e2b-f896-7043-02af-8004d8a7d227"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyOWUzYzUy" projecturn="a.cGVyc29uYWw6dWUyOWUzYzUyIzIwMTkwMjExMTc1NjcyODUx" f3durn="urn:adsk.wipprod:dm.lineage:jzhWZ2RJTSK-yRQwBFZECw" pcbguid="c2b5e295-5b88-443b-b552-b85fb43e7534" lastpulledtime="2019-02-22T16:16:36Z" lastsyncedchangeguid="f25e63fb-4b4f-6a65-2c05-3166bfd6d6ca"/>
 <plain>
 <rectangle x1="6.858" y1="11.303" x2="13.589" y2="27.813" layer="39"/>
 <rectangle x1="6.858" y1="6.858" x2="13.589" y2="11.176" layer="35"/>
@@ -1169,10 +1169,10 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="SPICEPREFIX" value="C" x="98.77" y="57.165" size="1.778" layer="28" rot="MR270" display="off"/>
 <attribute name="VALUE" x="19.014" y="46.243" size="0.8128" layer="28" rot="MR270"/>
 </element>
-<element name="MCU:C12" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="9.6" y="1.87" smashed="yes" rot="MR270">
-<attribute name="NAME" x="8.779" y="0.403" size="0.8128" layer="26" rot="MR0"/>
-<attribute name="SPICEPREFIX" value="C" x="102.31" y="24.73" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="VALUE" x="11.124" y="3.648" size="0.8128" layer="28" rot="MR270"/>
+<element name="MCU:C12" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="10.235" y="1.87" smashed="yes" rot="MR270">
+<attribute name="NAME" x="9.668" y="0.276" size="0.8128" layer="26" rot="MR0"/>
+<attribute name="SPICEPREFIX" value="C" x="102.945" y="24.73" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="VALUE" x="11.759" y="3.648" size="0.8128" layer="28" rot="MR270"/>
 </element>
 <element name="MCU:C13" library="0-micromouse2019" package="C0402" package3d_urn="urn:adsk.eagle:package:23626/2" value="100n" x="1.86" y="6.06" smashed="yes" rot="MR0">
 <attribute name="NAME" x="4.236" y="6.386" size="0.8128" layer="26" rot="MR180"/>
@@ -1476,13 +1476,13 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <attribute name="SPICEPREFIX" value="R" x="30.607" y="40.386" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="VALUE" x="31.242" y="38.989" size="0.8128" layer="28" rot="MR0"/>
 </element>
-<element name="MCU:R11" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k" x="4.445" y="1.905" smashed="yes" rot="MR270">
-<attribute name="NAME" x="3.81" y="2.54" size="0.8128" layer="26" rot="MR270"/>
-<attribute name="SPICEPREFIX" value="R" x="4.445" y="1.905" size="1.778" layer="28" rot="MR270" display="off"/>
-<attribute name="VALUE" x="5.842" y="2.54" size="0.8128" layer="28" rot="MR270"/>
+<element name="MCU:R11" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k" x="3.429" y="2.286" smashed="yes" rot="MR270">
+<attribute name="NAME" x="4.064" y="2.54" size="0.8128" layer="26" rot="MR180"/>
+<attribute name="SPICEPREFIX" value="R" x="3.429" y="2.286" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="VALUE" x="4.826" y="2.921" size="0.8128" layer="28" rot="MR270"/>
 </element>
 <element name="MCU:R12" library="0-micromouse2019" package="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k" x="2.794" y="1.905" smashed="yes" rot="R180">
-<attribute name="NAME" x="3.429" y="1.27" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="8.001" y="3.302" size="0.8128" layer="25" rot="R180"/>
 <attribute name="SPICEPREFIX" value="R" x="2.794" y="1.905" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="3.429" y="3.302" size="0.8128" layer="27" rot="R180"/>
 </element>
@@ -1590,8 +1590,8 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 </signal>
 <signal name="MCU:BTN1">
 <contactref element="MCU:C12" pad="1"/>
-<wire x1="8.802" y1="4.912" x2="8.802" y2="2.665" width="0.1524" layer="1"/>
-<wire x1="8.6265" y1="2.4895" x2="8.802" y2="2.665" width="0.1524" layer="1"/>
+<wire x1="8.802" y1="4.912" x2="8.802" y2="2.815" width="0.1524" layer="1"/>
+<wire x1="8.6435" y1="2.6565" x2="8.802" y2="2.815" width="0.1524" layer="1"/>
 <wire x1="8.802" y1="4.912" x2="14.8" y2="10.91" width="0.1524" layer="1"/>
 <wire x1="14.8" y1="10.91" x2="14.8" y2="13.45" width="0.1524" layer="1"/>
 <wire x1="13.8167" y1="14.4333" x2="13.8167" y2="20.35" width="0.1524" layer="1"/>
@@ -1604,12 +1604,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="18.728" y1="26.17" x2="18.728" y2="26.2328625" width="0.1524" layer="1"/>
 <wire x1="19.11" y1="26.6148625" x2="19.11" y2="28.31" width="0.1524" layer="1"/>
 <wire x1="13.8167" y1="21.2587" x2="18.728" y2="26.17" width="0.1524" layer="16"/>
-<wire x1="9.6" y1="2.52" x2="8.657" y2="2.52" width="0.1524" layer="16"/>
-<wire x1="8.657" y1="2.52" x2="8.6265" y2="2.4895" width="0.1524" layer="16"/>
-<via x="8.6265" y="2.4895" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="10.235" y1="2.52" x2="8.78" y2="2.52" width="0.1524" layer="16"/>
+<wire x1="8.78" y1="2.52" x2="8.6435" y2="2.6565" width="0.1524" layer="16"/>
+<via x="8.6435" y="2.6565" extent="1-16" drill="0.3" diameter="0.6"/>
 <contactref element="MCU:S2" pad="1"/>
-<wire x1="8.6265" y1="2.4895" x2="7.903" y2="1.766" width="0.1524" layer="1"/>
-<wire x1="7.903" y1="1.766" x2="7.903" y2="1.344" width="0.1524" layer="1"/>
+<wire x1="8.6435" y1="2.6565" x2="7.903" y2="1.916" width="0.1524" layer="1"/>
+<wire x1="7.903" y1="1.344" x2="7.903" y2="1.916" width="0.1524" layer="1"/>
 </signal>
 <signal name="MCU:SWDIO">
 <contactref element="MCU:J1" pad="1"/>
@@ -2069,11 +2069,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="23.351" y1="31.34" x2="22.589" y2="31.34" width="0.254" layer="1"/>
 <contactref element="MCU:R11" pad="1"/>
 <contactref element="MCU:R12" pad="1"/>
-<wire x1="3.294" y1="1.905" x2="3.294" y2="2.659" width="0.1524" layer="1"/>
-<wire x1="3.294" y1="2.659" x2="3.683" y2="3.048" width="0.1524" layer="1"/>
-<via x="3.683" y="3.048" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="3.683" y1="3.048" x2="4.445" y2="3.048" width="0.1524" layer="16"/>
-<wire x1="4.445" y1="3.048" x2="4.445" y2="2.405" width="0.1524" layer="16"/>
+<wire x1="4.353" y1="2.898" x2="3.36" y2="1.905" width="0.1524" layer="1"/>
+<wire x1="3.294" y1="1.905" x2="3.36" y2="1.905" width="0.1524" layer="1"/>
+<via x="4.353" y="2.898" extent="1-16" drill="0.3" diameter="0.6"/>
+<wire x1="4.338" y1="2.913" x2="3.556" y2="2.913" width="0.1524" layer="16"/>
+<wire x1="3.556" y1="2.913" x2="3.429" y2="2.786" width="0.1524" layer="16"/>
+<wire x1="4.353" y1="2.898" x2="4.338" y2="2.913" width="0.1524" layer="16"/>
 </signal>
 <signal name="+3V3">
 <contactref element="MCU:C6" pad="1"/>
@@ -2112,10 +2113,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="9.7" y1="5.85" x2="4.1" y2="5.85" width="0.1524" layer="16"/>
 <via x="3.3" y="5.05" extent="1-16" drill="0.3" diameter="0.6"/>
 <wire x1="4.45" y1="5.05" x2="3.3" y2="5.05" width="0.1524" layer="1"/>
-<wire x1="4.1" y1="5.85" x2="3.8" y2="5.55" width="0.1524" layer="16"/>
-<wire x1="3.8" y1="5.55" x2="3.65" y2="5.55" width="0.1524" layer="16"/>
-<wire x1="3.65" y1="5.55" x2="3.3" y2="5.2" width="0.1524" layer="16"/>
-<wire x1="3.3" y1="5.2" x2="3.3" y2="5.05" width="0.1524" layer="16"/>
+<wire x1="4.1" y1="5.85" x2="3.3" y2="5.05" width="0.1524" layer="16"/>
 <contactref element="PWR:C3" pad="1"/>
 <contactref element="IMU:IC1" pad="8"/>
 <contactref element="IMU:IC1" pad="13"/>
@@ -2199,8 +2197,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="24.3" y1="36.75" x2="25.46" y2="37.91" width="0.2032" layer="16"/>
 <wire x1="24.3" y1="36.75" x2="24.3" y2="32.2" width="0.2032" layer="16"/>
 <wire x1="21.93" y1="46.99" x2="21.93" y2="47.808" width="0.1524" layer="1"/>
-<wire x1="18.775" y1="46.225" x2="19.3585" y2="46.8085" width="0.3" layer="16"/>
-<wire x1="19.3585" y1="46.8085" x2="19.65" y2="47.1" width="0.3" layer="16"/>
+<wire x1="18.775" y1="46.225" x2="19.65" y2="47.1" width="0.3" layer="16"/>
 <wire x1="19.5" y1="37.55" x2="19.5" y2="37.9" width="0.5" layer="16"/>
 <wire x1="19.5" y1="37.9" x2="19.85" y2="38.25" width="0.5" layer="16"/>
 <wire x1="19.85" y1="38.25" x2="19.85" y2="40.513" width="0.5" layer="16"/>
@@ -2257,8 +2254,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <via x="27.288" y="26.25" extent="1-16" drill="0.3" diameter="0.6"/>
 <wire x1="26.11" y1="28.31" x2="26.11" y2="27.428" width="0.2032" layer="1"/>
 <wire x1="26.11" y1="27.428" x2="27.288" y2="26.25" width="0.2032" layer="1"/>
-<wire x1="25.46" y1="37.91" x2="26.162" y2="37.91" width="0.2032" layer="16"/>
-<wire x1="26.162" y1="37.91" x2="26.25" y2="37.91" width="0.2032" layer="16"/>
+<wire x1="25.46" y1="37.91" x2="26.25" y2="37.91" width="0.2032" layer="16"/>
 <wire x1="27.67" y1="39.05" x2="26.53" y2="37.91" width="0.2032" layer="16"/>
 <wire x1="26.53" y1="37.91" x2="26.25" y2="37.91" width="0.2032" layer="16"/>
 <wire x1="27.67" y1="39.05" x2="29.37" y2="39.05" width="0.2032" layer="16"/>
@@ -3032,8 +3028,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="4.503" y1="1.344" x2="4.048" y2="0.889" width="0.1524" layer="1"/>
 <wire x1="4.048" y1="0.889" x2="3.429" y2="0.889" width="0.1524" layer="1"/>
 <via x="3.429" y="0.889" extent="1-16" drill="0.3" diameter="0.6"/>
-<wire x1="3.429" y1="0.889" x2="3.929" y2="0.889" width="0.1524" layer="16"/>
-<wire x1="3.929" y1="0.889" x2="4.445" y2="1.405" width="0.1524" layer="16"/>
+<wire x1="3.429" y1="0.889" x2="3.429" y2="1.786" width="0.1524" layer="16"/>
 </signal>
 <signal name="MCU:N$9">
 <contactref element="MCU:R12" pad="2"/>
