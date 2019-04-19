@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.3.1">
+<eagle version="9.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7921,6 +7921,8 @@ VLOGIC Bypass Capacitor (Pin 8) C4* Ceramic, X7R, 10nF ±10%, 4V 1</text>
 <part name="GND9" library="0-micromouse2019" deviceset="GND" device=""/>
 <part name="R10" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="100k"/>
 <part name="+3V6" library="0-micromouse2019" deviceset="+3V3" device=""/>
+<part name="R11" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k"/>
+<part name="R12" library="0-micromouse2019" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:23547/3" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -7990,17 +7992,17 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <instance part="GND1" gate="1" x="15.24" y="73.66" smashed="yes">
 <attribute name="VALUE" x="12.7" y="71.12" size="1.778" layer="96"/>
 </instance>
-<instance part="S4" gate="G$1" x="27.94" y="43.18" smashed="yes" rot="R90">
-<attribute name="NAME" x="23.368" y="45.466" size="1.778" layer="95" rot="R90" align="center-left"/>
-<attribute name="VALUE" x="25.4" y="45.466" size="1.778" layer="96" rot="R90" align="center-left"/>
+<instance part="S4" gate="G$1" x="27.94" y="53.34" smashed="yes" rot="R90">
+<attribute name="NAME" x="23.368" y="55.626" size="1.778" layer="95" rot="R90" align="center-left"/>
+<attribute name="VALUE" x="25.4" y="55.626" size="1.778" layer="96" rot="R90" align="center-left"/>
 </instance>
 <instance part="S1" gate="G$1" x="15.24" y="147.32" smashed="yes" rot="R90">
 <attribute name="NAME" x="10.668" y="149.606" size="1.778" layer="95" rot="R90" align="center-left"/>
 <attribute name="VALUE" x="12.7" y="149.606" size="1.778" layer="96" rot="R90" align="center-left"/>
 </instance>
-<instance part="S2" gate="G$1" x="7.62" y="55.88" smashed="yes" rot="R270">
-<attribute name="NAME" x="3.048" y="45.466" size="1.778" layer="95" rot="R90" align="center-left"/>
-<attribute name="VALUE" x="5.08" y="45.466" size="1.778" layer="96" rot="R90" align="center-left"/>
+<instance part="S2" gate="G$1" x="7.62" y="66.04" smashed="yes" rot="R270">
+<attribute name="NAME" x="3.048" y="55.626" size="1.778" layer="95" rot="R90" align="center-left"/>
+<attribute name="VALUE" x="5.08" y="55.626" size="1.778" layer="96" rot="R90" align="center-left"/>
 </instance>
 <instance part="S3" gate="G$1" x="35.56" y="144.78" smashed="yes" rot="R90">
 <attribute name="NAME" x="33.02" y="146.05" size="1.778" layer="95" rot="R90" align="center-left"/>
@@ -8034,13 +8036,13 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <instance part="GND4" gate="1" x="20.32" y="33.02" smashed="yes">
 <attribute name="VALUE" x="17.78" y="30.48" size="1.778" layer="96"/>
 </instance>
-<instance part="C12" gate="G$1" x="12.7" y="50.8" smashed="yes">
-<attribute name="NAME" x="13.716" y="51.435" size="1.778" layer="95"/>
-<attribute name="VALUE" x="13.716" y="46.609" size="1.778" layer="96"/>
+<instance part="C12" gate="G$1" x="12.7" y="55.88" smashed="yes">
+<attribute name="NAME" x="13.716" y="56.515" size="1.778" layer="95"/>
+<attribute name="VALUE" x="13.716" y="51.689" size="1.778" layer="96"/>
 </instance>
-<instance part="C13" gate="G$1" x="33.02" y="50.8" smashed="yes">
-<attribute name="NAME" x="34.036" y="51.435" size="1.778" layer="95"/>
-<attribute name="VALUE" x="34.036" y="46.609" size="1.778" layer="96"/>
+<instance part="C13" gate="G$1" x="33.02" y="55.88" smashed="yes">
+<attribute name="NAME" x="34.036" y="56.515" size="1.778" layer="95"/>
+<attribute name="VALUE" x="34.036" y="51.689" size="1.778" layer="96"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
 <instance part="FRAME1" gate="G$2" x="162.56" y="0" smashed="yes">
@@ -8115,6 +8117,14 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 </instance>
 <instance part="+3V6" gate="G$1" x="78.74" y="177.8" smashed="yes">
 <attribute name="VALUE" x="76.2" y="172.72" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R11" gate="G$1" x="7.62" y="45.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="6.1214" y="41.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="10.922" y="41.91" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R12" gate="G$1" x="27.94" y="45.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="26.4414" y="41.91" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="31.242" y="41.91" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -8327,23 +8337,23 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <junction x="45.72" y="127"/>
 </segment>
 <segment>
-<pinref part="S4" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="43.18" x2="27.94" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="40.64" x2="33.02" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="40.64" x2="33.02" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="38.1" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="12.7" y1="45.72" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="40.64" x2="7.62" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="40.64" x2="20.32" y2="40.64" width="0.1524" layer="91"/>
-<junction x="27.94" y="40.64"/>
-<junction x="12.7" y="40.64"/>
+<wire x1="12.7" y1="50.8" x2="12.7" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="38.1" x2="7.62" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="38.1" x2="27.94" y2="38.1" width="0.1524" layer="91"/>
+<junction x="12.7" y="38.1"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="20.32" y1="40.64" x2="12.7" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="40.64" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
-<junction x="20.32" y="40.64"/>
-<pinref part="S2" gate="G$1" pin="2"/>
-<wire x1="7.62" y1="40.64" x2="7.62" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="38.1" x2="20.32" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="38.1" x2="12.7" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="38.1" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
+<junction x="20.32" y="38.1"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="7.62" y1="40.64" x2="7.62" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="27.94" y1="40.64" x2="27.94" y2="38.1" width="0.1524" layer="91"/>
+<junction x="27.94" y="38.1"/>
 </segment>
 <segment>
 <wire x1="254" y1="162.56" x2="251.46" y2="165.1" width="0.1524" layer="91"/>
@@ -8496,13 +8506,13 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <net name="BTN2" class="0">
 <segment>
 <pinref part="S4" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="58.42" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="68.58" x2="27.94" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="58.42" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="58.42" x2="33.02" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="58.42" x2="43.18" y2="58.42" width="0.1524" layer="91"/>
-<junction x="33.02" y="58.42"/>
-<label x="35.56" y="58.42" size="1.778" layer="95"/>
+<wire x1="27.94" y1="68.58" x2="33.02" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="68.58" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="68.58" x2="43.18" y2="68.58" width="0.1524" layer="91"/>
+<junction x="33.02" y="68.58"/>
+<label x="38.1" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="142.24" y1="101.6" x2="157.48" y2="101.6" width="0.1524" layer="91"/>
@@ -8513,13 +8523,13 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <net name="BTN1" class="0">
 <segment>
 <pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="7.62" y1="58.42" x2="12.7" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="58.42" x2="12.7" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="58.42" x2="22.86" y2="58.42" width="0.1524" layer="91"/>
-<junction x="12.7" y="58.42"/>
-<label x="15.24" y="58.42" size="1.778" layer="95"/>
+<wire x1="7.62" y1="68.58" x2="12.7" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="68.58" x2="12.7" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="68.58" x2="22.86" y2="68.58" width="0.1524" layer="91"/>
+<junction x="12.7" y="68.58"/>
+<label x="17.78" y="68.58" size="1.778" layer="95"/>
 <pinref part="S2" gate="G$1" pin="1"/>
-<wire x1="7.62" y1="58.42" x2="7.62" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="68.58" x2="7.62" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="142.24" y1="99.06" x2="157.48" y2="99.06" width="0.1524" layer="91"/>
@@ -8866,6 +8876,20 @@ For SWDIO bidirectional management, the line must be pulled-up on the board (100
 <wire x1="93.98" y1="116.84" x2="60.96" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="116.84" x2="15.24" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="116.84" x2="15.24" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="S2" gate="G$1" pin="2"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="7.62" y1="53.34" x2="7.62" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="R12" gate="G$1" pin="2"/>
+<pinref part="S4" gate="G$1" pin="1"/>
+<wire x1="27.94" y1="50.8" x2="27.94" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
