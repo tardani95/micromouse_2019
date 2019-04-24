@@ -6,6 +6,8 @@
 
 #include "hw_IR_module.h"
 #include "hw_params.h"
+#include "sw_com.h"
+#include "util.h"
 
 /** @addtogroup hardware_modules
  * @{
@@ -111,6 +113,8 @@ void initIR(void){
 	ADC_Cmd(PTR_ADC, ENABLE);
 
 	//TODO: ADC calibration?
+
+	addComReceivedPacketHandler(IR_CALIB_MEASURE, measureIRCalibSingle);
 }
 
 void setIRD(IR_SENSOR IR_sensor){
@@ -197,11 +201,13 @@ void initIRCalib(void){
 	ADC_Cmd(PTRCALIB_ADC, ENABLE);
 }
 
-uint16_t measureIRCalibSingle(){
+void measureIRCalibSingle(){
 	setIRD(IR_CALIB);
 	uint16_t ptr_adc_value = getPTRValue();
 	resetIRD(IR_CALIB);
-	return ptr_adc_value;
+	uint8_t bytes[2];
+	ToBytes(ptr_adc_value, 2, bytes);
+	comSendPacket(IR_CALIB_MEASURE, 2, bytes);
 }
 
 /**

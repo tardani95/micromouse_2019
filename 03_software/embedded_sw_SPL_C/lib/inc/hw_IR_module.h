@@ -69,7 +69,7 @@ uint16_t *measureIRAll(void);
 #define IR_CALIB		IR_LEFT_FORWARD
 
 void initIRCalib(void);
-uint16_t measureIRCalibSingle(void);
+void measureIRCalibSingle(void);
 /**
  * @}
  */
