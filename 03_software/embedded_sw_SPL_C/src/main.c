@@ -221,38 +221,35 @@ int main(void) {
 	while (1) {
 		i++;
 
-//		enc_left = m_getEncCnt(ENC_LEFT);
-//		enc_right = m_getEncCnt(ENC_RIGHT);
-//		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
-//			;
-//
-//		uint16_t data = USART_ReceiveData(BT_UART);
-//
-//		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
-//					;
-//
-//		if(data == 'n'){
-//			nextItem(main_menu_p);
-//		}
-//		else if (data == 's'){
-//			selectItem(main_menu_p);
-//		}
-//		else if(data == 'f'){//check how big the bluetooth module buffer is. apparently works fine up to 50 bytes
-//			SEND("0123456789012345678901234567890123456789012345678901234567890123456789");
-//		}
-//		else if(data == 'm'){
-//			MATSEND("insert sensor data and stuff");
-//		}
+		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
+			;
 
-		IMU_DMA_GetRaw();
-//		STM_EVAL_LEDToggle(LED3);
-		delay_ms(500);
-//		STM_EVAL_LEDToggle(LED4);
-		delay_ms(500);
-//		STM_EVAL_LEDToggle(LED5);
-		delay_ms(500);
-//		STM_EVAL_LEDToggle(LED6);
-		delay_ms(500);
+		uint16_t data = USART_ReceiveData(BT_UART);
+
+		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
+					;
+
+		if(data == 'n'){
+			nextItem(main_menu_p);
+		}
+		else if (data == 's'){
+			selectItem(main_menu_p);
+		}
+		else if(data == 'f'){//check how big the bluetooth module buffer is. apparently works fine up to 50 bytes
+			SEND("0123456789012345678901234567890123456789012345678901234567890123456789");
+		}
+		else if(data == 'm'){
+			MATSEND("insert sensor data and stuff");
+		}
+
+		MPU6050_GetRawAccelGyro(accel_gyro_temp);
+//		MPU6050_DMAGetRawAccelGyro();
+		for (uint32_t i = 0; i < 32000; i += 2) {
+			i--;
+		}
+
+		//MPU6050_CalcAccelRot();
+
 	}
 }
 
