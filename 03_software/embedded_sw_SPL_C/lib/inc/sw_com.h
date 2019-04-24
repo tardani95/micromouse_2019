@@ -24,9 +24,10 @@ typedef enum{
 typedef void (*PacketReceivedHandler)(uint16_t length, uint8_t *data);
 
 void handleReceivedPacket(uint16_t length, uint8_t *data);
-void sendPacket(COMMAND command, uint16_t length, uint8_t *data);
+void comSendPacket(COMMAND command, uint16_t length, uint8_t *data);
 
-void addHandler(COMMAND command, PacketReceivedHandler handler);
+
+void addComReceivedPacketHandler(COMMAND command, PacketReceivedHandler handler);
 
 /**
  * @}

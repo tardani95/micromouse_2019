@@ -28,7 +28,7 @@ void handleReceivedPacket(uint16_t length, uint8_t *data){
 	}
 }
 
-void sendPacket(COMMAND command, uint16_t length, uint8_t *data){
+void comSendPacket(COMMAND command, uint16_t length, uint8_t *data){
 	if(length > 0){
 		uint8_t packet_length = length > COM_TX_PACKET_MAX_LENGTH ?
 								COM_TX_PACKET_MAX_LENGTH : length;
@@ -40,7 +40,7 @@ void sendPacket(COMMAND command, uint16_t length, uint8_t *data){
 	}
 }
 
-void addHandler(COMMAND command, PacketReceivedHandler handler){
+void addComReceivedPacketHandler(COMMAND command, PacketReceivedHandler handler){
 	if((int)command < COMMAND_COUNT){
 		handler_mapping[command] = handler;
 	}
