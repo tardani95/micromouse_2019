@@ -155,7 +155,7 @@ void Init_Periph(void) {
 
 
 	initBTModule();
-	initIMU();
+	//initIMU();
 	if (setupIMU()) { /* if the communication not working then it stops here */
 #ifdef STM_EVAL
 		STM_EVAL_LEDOn(LED3);
@@ -164,7 +164,7 @@ void Init_Periph(void) {
 #endif
 	}
 
-	Init_Buttons();
+	//Init_Buttons();
 
 }
 
@@ -189,7 +189,6 @@ int main(void) {
 	SCB->VTOR = 0x08008000 & (int32_t) 0x1FFFFF80;
 
 	Init_Periph();
-
 	/* TODO - Add your application code here */
 //	resetRGB();
 //	uint32_t enc_left;
@@ -198,18 +197,18 @@ int main(void) {
 //	setLED(PINK);
 //	setLED(YELLOW);
 //	actuateMotors(7000, 0);
-	UART_DMASend("checkpoint1\n");
+	//UART_DMASend("checkpoint1\n");
 #ifdef STM_EVAL
 	STM_EVAL_LEDOn(LED4);
 #endif
 
-	IMU_DMA_GetRaw();
+	/*IMU_DMA_GetRaw();
 	delaySome_ms();
 
 	IMU_DMA_GetRaw();
 	delaySome_ms();
 
-	UART_DMASend("checkpoint2\n");
+	UART_DMASend("checkpoint2\n");*/
 #ifdef STM_EVAL
 	STM_EVAL_LEDOn(LED5);
 #endif
@@ -219,36 +218,7 @@ int main(void) {
 
 	/* Infinite loop */
 	while (1) {
-		i++;
 
-		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
-			;
-
-		uint16_t data = USART_ReceiveData(BT_UART);
-
-		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
-					;
-
-		if(data == 'n'){
-			nextItem(main_menu_p);
-		}
-		else if (data == 's'){
-			selectItem(main_menu_p);
-		}
-		else if(data == 'f'){//check how big the bluetooth module buffer is. apparently works fine up to 50 bytes
-			SEND("0123456789012345678901234567890123456789012345678901234567890123456789");
-		}
-		else if(data == 'm'){
-			MATSEND("insert sensor data and stuff");
-		}
-
-		MPU6050_GetRawAccelGyro(accel_gyro_temp);
-//		MPU6050_DMAGetRawAccelGyro();
-		for (uint32_t i = 0; i < 32000; i += 2) {
-			i--;
-		}
-
-		//MPU6050_CalcAccelRot();
 
 	}
 }
