@@ -146,6 +146,64 @@ uint16_t *measureIRAll(void){
 	return IR_dist_buff;
 }
 
+
+void initIRCalib(void){
+	/*Enable clock for GPIOA (IRD12, PTR12)*/
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+
+	GPIO_InitTypeDef IR_GPIOInitStructure;
+	GPIO_StructInit(&IR_GPIOInitStructure);
+
+	/*Init IR LED pin*/
+	IR_GPIOInitStructure.GPIO_Mode = GPIO_Mode_OUT;
+	IR_GPIOInitStructure.GPIO_OType = GPIO_OType_PP;
+	IR_GPIOInitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	IR_GPIOInitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+
+	IR_GPIOInitStructure.GPIO_Pin = IRDCALIB_PIN;
+	GPIO_Init(IRDCALIB_PORT, &IR_GPIOInitStructure);
+
+	/*Init phototransistor pin*/
+	IR_GPIOInitStructure.GPIO_Mode = GPIO_Mode_AN;
+
+	IR_GPIOInitStructure.GPIO_Pin = PTRCALIB_PIN;
+	GPIO_Init(IRDCALIB_PORT, &IR_GPIOInitStructure);
+
+	/*Init ADC for phototransistor*/
+	/*Init clock for ADC*/
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
+
+	ADC_CommonInitTypeDef ADCCommonInitStructure;
+	ADC_CommonStructInit(&ADCCommonInitStructure);
+	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 21MHz */
+	ADC_CommonInit(&ADCCommonInitStructure);
+
+	ADC_InitTypeDef PTR_ADCInitStructure;
+	PTR_ADCInitStructure.ADC_ScanConvMode			= DISABLE;
+	PTR_ADCInitStructure.ADC_ContinuousConvMode 	= DISABLE;
+	PTR_ADCInitStructure.ADC_DataAlign 				= ADC_DataAlign_Right;
+	PTR_ADCInitStructure.ADC_ExternalTrigConvEdge 	= ADC_ExternalTrigConvEdge_None;
+	PTR_ADCInitStructure.ADC_NbrOfConversion 		= 1;
+	PTR_ADCInitStructure.ADC_Resolution 			= ADC_Resolution_12b; /*t_conv = 15*t_ADCCLK < 1 us*/
+	ADC_Init(PTR_ADC, &PTR_ADCInitStructure);
+
+	//TODO: sample time?
+	ADC_RegularChannelConfig(PTRCALIB_ADC, PTRCALIB_CH, 1, PTR_ADC_SAMPLE_TIME);
+
+	ADC_DiscModeChannelCountConfig(PTRCALIB_ADC, 1);
+	ADC_DiscModeCmd(PTRCALIB_ADC, ENABLE);
+
+	ADC_Cmd(PTRCALIB_ADC, ENABLE);
+}
+
+uint16_t measureIRCalibSingle(){
+	setIRD(IR_CALIB);
+	uint16_t ptr_adc_value = getPTRValue();
+	resetIRD(IR_CALIB);
+	return ptr_adc_value;
+}
+
 /**
  * @}
  */

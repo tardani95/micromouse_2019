@@ -57,7 +57,19 @@ uint16_t getPTRValue(void);
 uint16_t measureIRSingle(IR_SENSOR);
 uint16_t *measureIRAll(void);
 
+#define IRDCALIB_PORT 	GPIOA
+#define IRDCALIB_PIN	GPIO_Pin_0
 
+#define PTRCALIB_PORT	GPIOA
+#define PTRCALIB_PIN	GPIO_Pin_2
+
+#define PTRCALIB_ADC	ADC1
+#define PTRCALIB_CH		ADC_Channel_2
+
+#define IR_CALIB		IR_LEFT_FORWARD
+
+void initIRCalib(void);
+uint16_t measureIRCalibSingle(void);
 /**
  * @}
  */
