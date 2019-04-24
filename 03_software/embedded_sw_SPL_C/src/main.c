@@ -182,7 +182,7 @@ void delaySome_ms(void) {
  **===========================================================================
  */
 int main(void) {
-	int i = 0;
+	//int i = 0;
 
 //	SystemInit(); /*startup script calls this function before main*/
 	/*Remap vector table to enable debugging*/

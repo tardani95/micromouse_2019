@@ -8,6 +8,7 @@
 #include "hw_BT_module.h"
 #include "sw_debug.h"
 #include "hw_status_led.h"
+#include "sw_com.h"
 
 /** @addtogroup hardware_modules
  * @{
@@ -201,6 +202,8 @@ void DMA1_Stream1_IRQHandler(void) {
 	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
 	/* Clear the rest of the buffer */
 	clearBuffer();
+	/* Handler received data */
+	handleReceivedPacket((uint16_t)length, (uint8_t*)uartTxBuffer);
 }
 
 /**

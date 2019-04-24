@@ -201,12 +201,14 @@ void initIRCalib(void){
 	ADC_Cmd(PTRCALIB_ADC, ENABLE);
 }
 
-void measureIRCalibSingle(){
+void measureIRCalibSingle(uint16_t length, uint8_t *data){
+
+
 	setIRD(IR_CALIB);
 	uint16_t ptr_adc_value = getPTRValue();
 	resetIRD(IR_CALIB);
 	uint8_t bytes[2];
-	ToBytes(ptr_adc_value, 2, bytes);
+	ToBytes(&ptr_adc_value, 2, bytes);
 	comSendPacket(IR_CALIB_MEASURE, 2, bytes);
 }
 
