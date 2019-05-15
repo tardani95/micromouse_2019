@@ -32,19 +32,13 @@ void initEncoders(void){
 	enc_left_GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	GPIO_Init(ENC_LEFT_PORT, &enc_left_GPIO_InitStructure);
 
+
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
 
-//	TIM_TimeBaseInitTypeDef enc_left_TimeBaseStructure;
-//	enc_left_TimeBaseStructure.TIM_Period = 0xFFFF;
-//	enc_left_TimeBaseStructure.TIM_Prescaler = 0;
-//	enc_left_TimeBaseStructure.TIM_ClockDivision = 0;
-//	enc_left_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
-//	enc_left_TimeBaseStructure.TIM_RepetitionCounter = 0;
-//	TIM_TimeBaseInit(ENC_LEFT_TIM, &enc_left_TimeBaseStructure);
-
-	TIM_EncoderInterfaceConfig(ENC_LEFT_TIM, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);
+	TIM_EncoderInterfaceConfig(ENC_LEFT_TIM, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Falling);
 	TIM_Cmd(ENC_LEFT_TIM, ENABLE);
 	m_resetEncCnt(ENC_LEFT_TIM);
+
 
 	/*right encoder: PB6, PB7, TIM4, CH1, CH2*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
@@ -65,20 +59,9 @@ void initEncoders(void){
 
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
 
-//	TIM_TimeBaseInitTypeDef enc_right_TimeBaseStructure;
-//	enc_right_TimeBaseStructure.TIM_Period = 0xFFFF;
-//	enc_right_TimeBaseStructure.TIM_Prescaler = 0;
-//	enc_right_TimeBaseStructure.TIM_ClockDivision = 0;
-//	enc_right_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
-//	enc_right_TimeBaseStructure.TIM_RepetitionCounter = 0;
-//	TIM_TimeBaseInit(ENC_RIGHT_TIM, &enc_right_TimeBaseStructure);
-
-
 	TIM_EncoderInterfaceConfig(ENC_RIGHT_TIM, TIM_EncoderMode_TI12, TIM_ICPolarity_Rising, TIM_ICPolarity_Rising);
 	TIM_Cmd(ENC_RIGHT_TIM, ENABLE);
 	m_resetEncCnt(ENC_RIGHT_TIM);
-	uint32_t data = m_getEncCnt(ENC_RIGHT);
-
 }
 
 
