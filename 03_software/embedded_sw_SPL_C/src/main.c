@@ -140,19 +140,19 @@ void Init_Periph(void) {
 
 	initStatusLEDs();
 
-	initMotorControl();
-	//	ADC_DeInit();
-	//	initBatLvlWatcher();
+//	initMotorControl();
+//	ADC_DeInit();
+//	initBatLvlWatcher();
 	initEncoders();
-	//	initMenus(&main_menu_p, &after_run_menu_p);
+//	initMenus(&main_menu_p, &after_run_menu_p);
 
 	initBTModule();
-	initIMU();
-	if (setupIMU()) { /* if the communication not working then it stops here */
-		setLED(PINK);
-		delay_ms(1500);
-		resetLED(PINK);
-	}
+//	initIMU();
+//	if (setupIMU()) { /* if the communication not working then it stops here */
+//		setLED(PINK);
+//		delay_ms(1500);
+//		resetLED(PINK);
+//	}
 
 	Init_Buttons();
 
@@ -185,20 +185,15 @@ int main(void) {
 	uint32_t enc_right;
 //	actuateMotors(7000, 0);
 	UART_DMASend("checkpoint1\n");
-#ifdef STM_EVAL
-	STM_EVAL_LEDOn(LED4);
-#endif
 
-	IMU_DMA_GetRaw();
-	delaySome_ms();
 
-	IMU_DMA_GetRaw();
-	delaySome_ms();
+//	IMU_DMA_GetRaw();
+//	delaySome_ms();
+
+//	IMU_DMA_GetRaw();
+//	delaySome_ms();
 
 	UART_DMASend("checkpoint2\n");
-#ifdef STM_EVAL
-	STM_EVAL_LEDOn(LED5);
-#endif
 
 	UART_DMA_StartListening();
 //	STM_EVAL_LEDOn(LED6);
@@ -209,6 +204,7 @@ int main(void) {
 
 		enc_left = m_getEncCnt(ENC_LEFT);
 		enc_right = m_getEncCnt(ENC_RIGHT);
+		delay_ms(2000);
 
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
@@ -259,8 +255,8 @@ void EXTI15_10_IRQHandler() {
 
 		if (!toggle) {
 
-//			TIM1->CNT = 0;
-//			TIM4->CNT = 0;
+			TIM1->CNT = 0;
+			TIM4->CNT = 0;
 			TIM3->CCR1 = 250;
 			TIM3->CCR3 = 250;
 
