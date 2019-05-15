@@ -67,7 +67,7 @@
  * @{
  */
 
-#define STM_EVAL /* TODO comment it out if the stm evaluation board is not used */
+//#define STM_EVAL /* TODO comment it out if the stm evaluation board is not used */
 /* Includes */
 #include "stm32f4xx.h"
 
@@ -118,6 +118,7 @@
 //float gForceX, gForceY, gForceZ;
 //float rotX, rotY, rotZ;
 //float temp_C;
+volatile uint8_t toggle = 0;
 volatile uint8_t rgb_led_status = 0;
 
 menu_p_t main_menu_p;
@@ -137,31 +138,20 @@ void Init_Periph(void) {
 	initSysTick();
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
 
-#ifdef STM_EVAL
-	/* Initialize LEDs */
-	STM_EVAL_LEDInit(LED3);
-	STM_EVAL_LEDInit(LED4);
-	STM_EVAL_LEDInit(LED5);
-	STM_EVAL_LEDInit(LED6);
-#else
 	initStatusLEDs();
-#endif
 
-	//	initMotorControl();
+	initMotorControl();
 	//	ADC_DeInit();
 	//	initBatLvlWatcher();
-	//	initEncoders();
+	initEncoders();
 	//	initMenus(&main_menu_p, &after_run_menu_p);
-
 
 	initBTModule();
 	initIMU();
 	if (setupIMU()) { /* if the communication not working then it stops here */
-#ifdef STM_EVAL
-		STM_EVAL_LEDOn(LED3);
-#else
 		setLED(PINK);
-#endif
+		delay_ms(1500);
+		resetLED(PINK);
 	}
 
 	Init_Buttons();
@@ -191,12 +181,8 @@ int main(void) {
 	Init_Periph();
 
 	/* TODO - Add your application code here */
-//	resetRGB();
-//	uint32_t enc_left;
-//	uint32_t enc_right;
-//	setRGB(RGB_PINK);
-//	setLED(PINK);
-//	setLED(YELLOW);
+	uint32_t enc_left;
+	uint32_t enc_right;
 //	actuateMotors(7000, 0);
 	UART_DMASend("checkpoint1\n");
 #ifdef STM_EVAL
@@ -221,34 +207,35 @@ int main(void) {
 	while (1) {
 		i++;
 
-		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
-			;
+		enc_left = m_getEncCnt(ENC_LEFT);
+		enc_right = m_getEncCnt(ENC_RIGHT);
 
-		uint16_t data = USART_ReceiveData(BT_UART);
-
-		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
-					;
-
-		if(data == 'n'){
-			nextItem(main_menu_p);
-		}
-		else if (data == 's'){
-			selectItem(main_menu_p);
-		}
-		else if(data == 'f'){//check how big the bluetooth module buffer is. apparently works fine up to 50 bytes
-			SEND("0123456789012345678901234567890123456789012345678901234567890123456789");
-		}
-		else if(data == 'm'){
-			MATSEND("insert sensor data and stuff");
-		}
-
-		MPU6050_GetRawAccelGyro(accel_gyro_temp);
-//		MPU6050_DMAGetRawAccelGyro();
-		for (uint32_t i = 0; i < 32000; i += 2) {
-			i--;
-		}
-
-		//MPU6050_CalcAccelRot();
+//		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
+//			;
+//
+//		uint16_t data = USART_ReceiveData(BT_UART);
+//
+//		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_TXE))
+//					;
+//
+//		if(data == 'n'){
+//			nextItem(main_menu_p);
+//		}
+//		else if (data == 's'){
+//			selectItem(main_menu_p);
+//		}
+//		else if(data == 'f'){//check how big the bluetooth module buffer is. apparently works fine up to 50 bytes
+//			SEND("0123456789012345678901234567890123456789012345678901234567890123456789");
+//		}
+//		else if(data == 'm'){
+//			MATSEND("insert sensor data and stuff");
+//		}
+//
+//		MPU6050_GetRawAccelGyro(accel_gyro_temp);
+////		MPU6050_DMAGetRawAccelGyro();
+//		for (uint32_t i = 0; i < 32000; i += 2) {
+//			i--;
+//		}
 
 	}
 }
@@ -257,18 +244,41 @@ int main(void) {
  * external interrupt handler for the buttons
  */
 void EXTI15_10_IRQHandler() {
-	//TODO - sometimes button 1 interrupt also gets called when button 2 is pressed
+	/**
+	 * @note sometimes button 1 interrupt also gets called when button 2 is pressed
+	 *  it is because we forgot to put an 1k resistor between the button and the ground
+	 */
+
 	/* button1 pressed*/
 	if (SET == EXTI_GetITStatus(BTN1_EXTI_Line)) {
 
 		//INFO("Button1 pressed");
 		//TODO handle button1 pressed action
 
-		STM_EVAL_LEDToggle(LED3);
+		toggle = !toggle;
+
+		if (!toggle) {
+
+//			TIM1->CNT = 0;
+//			TIM4->CNT = 0;
+			TIM3->CCR1 = 250;
+			TIM3->CCR3 = 250;
+
+		} else {
+			TIM3->CCR1 = 0;
+			TIM3->CCR3 = 0;
+//			volatile uint32_t testLEFT = TIM1->CNT;
+//			volatile uint32_t testRIGHT = TIM4->CNT;
+//			int j;
+//			if (testRIGHT > ENC_CNT_BASEVALUE) {
+//				j = 0;
+//			} else {
+//				j = 1;
+//			}
+		}
+
 		rgb_led_status++;
 		EXTI_ClearITPendingBit(BTN1_EXTI_Line);
-		//EXTI->PR = BTN1_EXTI_Line; /*clear pendig bit for button1*/
-//		return;
 	}
 
 	/* button2 pressed*/
@@ -278,14 +288,10 @@ void EXTI15_10_IRQHandler() {
 		//TODO handle button2 pressed action
 
 		rgb_led_status++;
-		STM_EVAL_LEDToggle(LED4);
-
 		EXTI_ClearITPendingBit(BTN2_EXTI_Line);
-		//EXTI->PR = BTN2_EXTI_Line; /*clear pendig bit for button2*/
-//		return;
 	}
 
-//	setRGB(rgb_led_status % 10);
+	setRGB(rgb_led_status % 10);
 }
 
 /**
