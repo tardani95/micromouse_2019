@@ -118,6 +118,7 @@
 //float gForceX, gForceY, gForceZ;
 //float rotX, rotY, rotZ;
 //float temp_C;
+volatile uint16_t *adc_readings;
 volatile uint8_t toggle = 0;
 volatile uint8_t rgb_led_status = 0;
 
@@ -140,19 +141,20 @@ void Init_Periph(void) {
 
 	initStatusLEDs();
 
-//	initMotorControl();
-//	ADC_DeInit();
+	initMotorControl();
+	ADC_DeInit();
 //	initBatLvlWatcher();
+	initIR();
 	initEncoders();
 //	initMenus(&main_menu_p, &after_run_menu_p);
 
 	initBTModule();
-//	initIMU();
-//	if (setupIMU()) { /* if the communication not working then it stops here */
-//		setLED(PINK);
-//		delay_ms(1500);
-//		resetLED(PINK);
-//	}
+	initIMU();
+	if (setupIMU()) { /* if the communication not working then it stops here */
+		setLED(PINK);
+		delay_ms(1500);
+		resetLED(PINK);
+	}
 
 	Init_Buttons();
 
@@ -193,6 +195,8 @@ int main(void) {
 //	IMU_DMA_GetRaw();
 //	delaySome_ms();
 
+//	setLED(PINK);
+
 	UART_DMASend("checkpoint2\n");
 
 	UART_DMA_StartListening();
@@ -204,7 +208,9 @@ int main(void) {
 
 		enc_left = m_getEncCnt(ENC_LEFT);
 		enc_right = m_getEncCnt(ENC_RIGHT);
-		delay_ms(2000);
+//		float battery_voltage = getBatLvl();
+		uint16_t adc_val = measureIRSingle(IR_LEFT_FORWARD);
+		delay_ms(1);
 
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
@@ -257,8 +263,8 @@ void EXTI15_10_IRQHandler() {
 
 			TIM1->CNT = 0;
 			TIM4->CNT = 0;
-			TIM3->CCR1 = 250;
-			TIM3->CCR3 = 250;
+			TIM3->CCR1 = 300;
+			TIM3->CCR3 = 550;
 
 		} else {
 			TIM3->CCR1 = 0;

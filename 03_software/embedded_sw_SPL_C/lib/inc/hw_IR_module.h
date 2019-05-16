@@ -38,7 +38,7 @@
 #define PTR3_CH		ADC_Channel_12
 #define PTR4_CH		ADC_Channel_13
 
-#define PTR_ADC_SAMPLE_TIME ADC_SampleTime_56Cycles
+#define PTR_ADC_SAMPLE_TIME 	ADC_SampleTime_56Cycles
 
 typedef enum{
 	IR_LEFT_FORWARD,

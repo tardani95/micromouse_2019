@@ -1,6 +1,6 @@
 /***********************
  * @file 	util.c
- * @author	resiz
+ * @author	resiz, tard
  * @date	15 Mar 2019
  ************************/
 
