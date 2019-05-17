@@ -105,8 +105,7 @@ void initIR(void) {
 	ADC_CommonInit(&ADCCommonInitStructure);
 
 	//TODO: sample time?
-	ADC_RegularChannelConfig(PTR_ADC, PTR1_CH, IR_LEFT_FORWARD + 1,
-	PTR_ADC_SAMPLE_TIME);
+	ADC_RegularChannelConfig(PTR_ADC, PTR1_CH, IR_LEFT_FORWARD + 1,	PTR_ADC_SAMPLE_TIME);
 //	ADC_RegularChannelConfig(PTR_ADC, PTR2_CH, IR_LEFT_SIDEWAYS + 1, PTR_ADC_SAMPLE_TIME);
 //	ADC_RegularChannelConfig(PTR_ADC, PTR3_CH, IR_RIGHT_FORWARD + 1, PTR_ADC_SAMPLE_TIME);
 //	ADC_RegularChannelConfig(PTR_ADC, PTR4_CH, IR_RIGHT_SIDEWAYS + 1, PTR_ADC_SAMPLE_TIME);

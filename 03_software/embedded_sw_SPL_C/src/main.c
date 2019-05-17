@@ -188,7 +188,6 @@ int main(void) {
 //	actuateMotors(7000, 0);
 	UART_DMASend("checkpoint1\n");
 
-
 //	IMU_DMA_GetRaw();
 //	delaySome_ms();
 
@@ -209,9 +208,26 @@ int main(void) {
 		enc_left = m_getEncCnt(ENC_LEFT);
 		enc_right = m_getEncCnt(ENC_RIGHT);
 //		float battery_voltage = getBatLvl();
-		uint16_t adc_val = measureIRSingle(IR_LEFT_FORWARD);
-		delay_ms(1);
+//		uint16_t adc_val = measureIRSingle(IR_LEFT_FORWARD);
+		setIRD(IR_LEFT_FORWARD);
+		delay_ms(10);
+		resetIRD(IR_LEFT_FORWARD);
+		delay_ms(10);
 
+		setIRD(IR_LEFT_SIDEWAYS);
+		delay_ms(10);
+		resetIRD(IR_LEFT_SIDEWAYS);
+		delay_ms(10);
+
+		setIRD(IR_RIGHT_FORWARD);
+		delay_ms(10);
+		resetIRD(IR_RIGHT_FORWARD);
+		delay_ms(10);
+
+		setIRD(IR_RIGHT_SIDEWAYS);
+		delay_ms(10);
+		resetIRD(IR_RIGHT_SIDEWAYS);
+		delay_ms(10);
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
 //
