@@ -199,7 +199,6 @@ int main(void) {
 	UART_DMASend("checkpoint2\n");
 
 	UART_DMA_StartListening();
-//	STM_EVAL_LEDOn(LED6);
 
 	/* Infinite loop */
 	while (1) {
@@ -208,26 +207,9 @@ int main(void) {
 		enc_left = m_getEncCnt(ENC_LEFT);
 		enc_right = m_getEncCnt(ENC_RIGHT);
 //		float battery_voltage = getBatLvl();
-//		uint16_t adc_val = measureIRSingle(IR_LEFT_FORWARD);
-		setIRD(IR_LEFT_FORWARD);
-		delay_ms(10);
-		resetIRD(IR_LEFT_FORWARD);
-		delay_ms(10);
+		adc_readings = measureIRAll();
+		delay_ms(1);
 
-		setIRD(IR_LEFT_SIDEWAYS);
-		delay_ms(10);
-		resetIRD(IR_LEFT_SIDEWAYS);
-		delay_ms(10);
-
-		setIRD(IR_RIGHT_FORWARD);
-		delay_ms(10);
-		resetIRD(IR_RIGHT_FORWARD);
-		delay_ms(10);
-
-		setIRD(IR_RIGHT_SIDEWAYS);
-		delay_ms(10);
-		resetIRD(IR_RIGHT_SIDEWAYS);
-		delay_ms(10);
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
 //
@@ -250,7 +232,7 @@ int main(void) {
 //		}
 //
 //		MPU6050_GetRawAccelGyro(accel_gyro_temp);
-////		MPU6050_DMAGetRawAccelGyro();
+//		MPU6050_DMAGetRawAccelGyro();
 //		for (uint32_t i = 0; i < 32000; i += 2) {
 //			i--;
 //		}

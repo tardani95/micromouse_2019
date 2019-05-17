@@ -38,6 +38,19 @@
 #define PTR3_CH		ADC_Channel_12
 #define PTR4_CH		ADC_Channel_13
 
+#define PTR_RS_CH	PTR1_CH
+#define PTR_RF_CH 	PTR2_CH
+#define PTR_LS_CH 	PTR3_CH
+#define PTR_LF_CH 	PTR4_CH
+
+#define IRD_RS_PIN	IRD1_PIN
+#define IRD_RF_PIN	IRD2_PIN
+#define IRD_LS_PIN	IRD3_PIN
+#define IRD_LF_PIN	IRD4_PIN
+
+#define IRD_R_PORT	IR12_PORT
+#define IRD_L_PORT	IR34_PORT
+
 #define PTR_ADC_SAMPLE_TIME 	ADC_SampleTime_56Cycles
 
 typedef enum{
@@ -46,6 +59,13 @@ typedef enum{
 	IR_LEFT_SIDEWAYS,
 	IR_LEFT_FORWARD
 }IR_SENSOR;
+
+typedef enum{
+	PTR_LEFT_FORWARD,
+	PTR_RIGHT_SIDEWAYS,
+	PTR_LEFT_SIDEWAYS,
+	PTR_RIGHT_FORWARD
+}PTR_SENSOR;
 
 
 void initIR(void);
