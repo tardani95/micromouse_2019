@@ -98,6 +98,7 @@
 #include "sw_debug.h"
 #include "sw_GPTIM.h"
 #include "sw_menu.h"
+#include "sw_control.h"
 
 #include "util.h"
 
@@ -158,6 +159,7 @@ void Init_Periph(void) {
 
 	Init_Buttons();
 
+	Init_Control();
 }
 
 void delaySome_ms(void) {

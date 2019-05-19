@@ -91,7 +91,7 @@ void initSysTick() {
 
 	SysTick_Config(
 			clockStruct.HCLK_Frequency / SYS_TICK_CLKSOURCE_DIV_VALUE
-					/ 1000*SYS_TICK_PERIOD_ms); /*160MHz/8/1000 -> 1ms */
+					/ 1000* SYS_TICK_PERIOD_ms); /*160MHz/8/1000 -> 1ms */
 
 	/*160MHz/8 = 20MHz*/
 	SysTick_CLKSourceConfig(SYS_TICK_CLKSOURCE_DIV);
