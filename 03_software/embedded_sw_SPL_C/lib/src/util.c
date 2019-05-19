@@ -85,16 +85,15 @@ void ToBytes(void *dataIn, uint8_t size, uint8_t dataOut[]) {
  * how often the IRQ called
  */
 void initSysTick() {
-	//TODO clksourceconfig has no effect
 
 	RCC_ClocksTypeDef clockStruct;
 	RCC_GetClocksFreq(&clockStruct);
-	//TODO timer period is not accurate
+
 	SysTick_Config(
 			clockStruct.HCLK_Frequency / SYS_TICK_CLKSOURCE_DIV_VALUE
-					/ 1000*SYS_TICK_PERIOD_ms); /*21MHz/1000 = 1ms */
+					/ 1000*SYS_TICK_PERIOD_ms); /*160MHz/8/1000 -> 1ms */
 
-	/*168MHz/8 = 21MHz*/
+	/*160MHz/8 = 20MHz*/
 	SysTick_CLKSourceConfig(SYS_TICK_CLKSOURCE_DIV);
 	/* Configure the SysTick handler priority */
 //	NVIC_SetPriority(SysTick_IRQn, 0x0);

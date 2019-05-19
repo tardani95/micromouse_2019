@@ -94,11 +94,9 @@ void initStatusLEDs(void){
 	/*Configure timer for RGB led*/
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM8, ENABLE);
 
-
-
 	TIM_TimeBaseInitTypeDef RGB_TimerInitStructure;
 	TIM_TimeBaseStructInit(&RGB_TimerInitStructure);
-	RGB_TimerInitStructure.TIM_Prescaler 		 = 84 - 1; 				// Clock freqeuency: 168MHz/168 = 1 MHz
+	RGB_TimerInitStructure.TIM_Prescaler 		 = 160 - 1; 				// Clock freqeuency: 160MHz/160 = 1 MHz
 	RGB_TimerInitStructure.TIM_Period 			 = ST_LED_RGB_TIM_PERIOD - 1; 	// PWM frequency: 1MHz/1000 = 1KHz
 	RGB_TimerInitStructure.TIM_CounterMode 		 = TIM_CounterMode_Up;
 	RGB_TimerInitStructure.TIM_ClockDivision 	 = TIM_CKD_DIV1;
@@ -124,7 +122,6 @@ void initStatusLEDs(void){
 	TIM_CCxNCmd(ST_LED_RGB_TIM, TIM_Channel_1, TIM_CCxN_Enable);
 	TIM_CCxNCmd(ST_LED_RGB_TIM, TIM_Channel_2, TIM_CCxN_Enable);
 	TIM_CCxNCmd(ST_LED_RGB_TIM, TIM_Channel_3, TIM_CCxN_Enable);
-
 
 
 	TIM_OC1PreloadConfig(ST_LED_RGB_TIM, TIM_OCPreload_Enable);
