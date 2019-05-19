@@ -71,8 +71,8 @@ void initMotorControl(void){
 
 	TIM_TimeBaseInitTypeDef mot_ctrl_TimerInitStructure;
 	TIM_TimeBaseStructInit(&mot_ctrl_TimerInitStructure);
-	mot_ctrl_TimerInitStructure.TIM_Prescaler 			= 10 - 1; 				/* Clock freqeuency: 160MHz/10 = 16MHz = 16000kHz */
-	mot_ctrl_TimerInitStructure.TIM_Period 				= MOT_TIM_PERIOD - 1;	/* PWM frequency: 16000kHz/1600 = 10KHz */
+	mot_ctrl_TimerInitStructure.TIM_Prescaler 			= 80 - 1; 				/* Clock freqeuency: 80MHz/80 = 1MHz = 1000kHz */
+	mot_ctrl_TimerInitStructure.TIM_Period 				= MOT_TIM_PERIOD;	/* PWM frequency: 1000kHz/1000 = 1KHz */
 	mot_ctrl_TimerInitStructure.TIM_CounterMode 		= TIM_CounterMode_Up;
 	mot_ctrl_TimerInitStructure.TIM_ClockDivision 		= TIM_CKD_DIV1;
 	mot_ctrl_TimerInitStructure.TIM_RepetitionCounter 	= 0;

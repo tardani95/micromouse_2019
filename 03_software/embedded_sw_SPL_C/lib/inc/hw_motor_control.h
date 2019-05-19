@@ -28,7 +28,7 @@
 #define MOT_BIN2_PIN 	GPIO_Pin_9
 
 #define MOT_TIM 		TIM3
-#define MOT_TIM_PERIOD 	1600
+#define MOT_TIM_PERIOD 	1000
 
 #define m_speedToAngularSpeed(speed_mmPs, wheel_diameter_mm) 	\
 	(speed_mmPs/(wheel_diameter_mm/2))
