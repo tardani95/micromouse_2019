@@ -7,7 +7,7 @@
 #include "hw_IR_module.h"
 #include "hw_params.h"
 #include "util.h"
-#include "stm32f4xx_gpio.h"
+#include "hw_status_led.h"
 
 /** @addtogroup hardware_modules
  * @{
@@ -19,16 +19,16 @@
  */
 
 GPIO_TypeDef *IR_port_mapping[4] = {
-IR12_PORT,
-IR12_PORT,
-IR34_PORT,
-IR34_PORT };
+IRD_L_PORT,
+IRD_R_PORT,
+IRD_L_PORT,
+IRD_R_PORT };
 
 uint16_t IRD_pin_mapping[4] = {
-IRD1_PIN,
-IRD2_PIN,
-IRD3_PIN,
-IRD4_PIN };
+IRD_LF_PIN,
+IRD_RS_PIN,
+IRD_LS_PIN,
+IRD_RF_PIN };
 
 /*uint8_t PTR_channel_mapping[4] = {
  PTR1_CH,
@@ -55,13 +55,12 @@ void initIR(void) {
 	IR_GPIOInitStructure.GPIO_Mode = GPIO_Mode_OUT;
 	IR_GPIOInitStructure.GPIO_OType = GPIO_OType_PP;
 	IR_GPIOInitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	IR_GPIOInitStructure.GPIO_Speed = GPIO_Speed_2MHz;
+	IR_GPIOInitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 
 	IR_GPIOInitStructure.GPIO_Pin = IRD1_PIN | IRD2_PIN;
 	GPIO_Init(IR12_PORT, &IR_GPIOInitStructure);
 	IR_GPIOInitStructure.GPIO_Pin = IRD3_PIN | IRD4_PIN;
 	GPIO_Init(IR34_PORT, &IR_GPIOInitStructure);
-
 
 	/*Init phototransistor pins*/
 	GPIO_StructInit(&IR_GPIOInitStructure);
@@ -74,31 +73,28 @@ void initIR(void) {
 	IR_GPIOInitStructure.GPIO_Pin = PTR3_PIN | PTR4_PIN;
 	GPIO_Init(IR34_PORT, &IR_GPIOInitStructure);
 
-
 	/*Init ADC for phototransistors*/
 
-	ADC_CommonInitTypeDef ADCCommonInitStructure;
-	ADC_CommonStructInit(&ADCCommonInitStructure);
-
-	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
-	ADC_CommonInit(&ADCCommonInitStructure);
-
-
+//	ADC_CommonInitTypeDef ADCCommonInitStructure;
+//	ADC_CommonStructInit(&ADCCommonInitStructure);
+//	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+//	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
+////	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_15Cycles;
+//	ADC_CommonInit(&ADCCommonInitStructure);
 	ADC_InitTypeDef PTR_ADCInitStructure;
 	PTR_ADCInitStructure.ADC_ScanConvMode = ENABLE;
 	PTR_ADCInitStructure.ADC_ContinuousConvMode = DISABLE;
 	PTR_ADCInitStructure.ADC_DataAlign = ADC_DataAlign_Right;
-	PTR_ADCInitStructure.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None;
+	PTR_ADCInitStructure.ADC_ExternalTrigConvEdge =
+	ADC_ExternalTrigConvEdge_None;
 	PTR_ADCInitStructure.ADC_NbrOfConversion = 4;
 	PTR_ADCInitStructure.ADC_Resolution = ADC_Resolution_12b; /*t_conv = 15*t_ADCCLK < 1 us*/
 	ADC_Init(PTR_ADC, &PTR_ADCInitStructure);
 
-
 //	ADC_Cmd(PTR_ADC, ENABLE);
 
-	//TODO: sample time?
-	ADC_EOCOnEachRegularChannelCmd(PTR_ADC,ENABLE);
+//TODO: sample time?
+	ADC_EOCOnEachRegularChannelCmd(PTR_ADC, ENABLE);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_LF_CH, 1, PTR_ADC_SAMPLE_TIME);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_RS_CH, 2, PTR_ADC_SAMPLE_TIME);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_LS_CH, 3, PTR_ADC_SAMPLE_TIME);
@@ -132,33 +128,34 @@ uint16_t getPTRValue(void) {
 
 uint16_t IR_dist_buff[4] = { 0, 0, 0, 0 };
 
-uint16_t ledPins[4]={
-		IRD_LF_PIN,
-		IRD_RS_PIN,
-		IRD_LS_PIN,
-		IRD_RF_PIN};
+uint16_t ledPins[4] = {
+IRD_LF_PIN,
+IRD_RS_PIN,
+IRD_LS_PIN,
+IRD_RF_PIN };
 
-GPIO_TypeDef* ledPorts[4]={
-		IRD_L_PORT,
-		IRD_R_PORT,
-		IRD_L_PORT,
-		IRD_R_PORT};
+GPIO_TypeDef* ledPorts[4] = {
+IRD_L_PORT,
+IRD_R_PORT,
+IRD_L_PORT,
+IRD_R_PORT };
 
-uint16_t adcBuf[4]={0};
+uint16_t adcBuf[4] = { 0 };
 
-uint16_t measureIRSingle(IR_SENSOR i) {
-//	setIRD(IR_sensor);
-//	ledPorts[i]->BSRR = ledPins[i];
-	GPIO_SetBits(ledPorts[i], ledPins[i]);
+uint16_t measureIRSingle(IR_SENSOR IR_sensor) {
+	setIRD(IR_sensor);
+	setLED(PINK);
+	uint8_t k = 0;
+	for(uint16_t i = 0; i< 60;i++){
+		k += k-2;
+	}
+	resetLED(PINK);
+//	delay_ms(1);
 	uint16_t ptr_adc_value = getPTRValue();
-//	resetIRD(IR_sensor);
-//	ledPorts[i]->BRR = ledPins[i];
-	GPIO_ResetBits(ledPorts[i], ledPins[i]);
+	resetIRD(IR_sensor);
 //	return distByADCValue(ptr_adc_value);
 	return ptr_adc_value;
 }
-
-
 
 uint16_t * measureIRAll(void) {
 	for (int i = 0; i < 4; i++) {

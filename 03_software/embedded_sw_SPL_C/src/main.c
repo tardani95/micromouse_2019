@@ -141,9 +141,20 @@ void Init_Periph(void) {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
 
 	initStatusLEDs();
-
 	initMotorControl();
+
 	ADC_DeInit();
+
+	delay_ms(10);
+
+//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
+	ADC_CommonInitTypeDef ADCCommonInitStructure;
+	ADC_CommonStructInit(&ADCCommonInitStructure);
+	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
+//	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_20Cycles;
+	ADC_CommonInit(&ADCCommonInitStructure);
+
 //	initBatLvlWatcher();
 	initIR();
 	initEncoders();
@@ -207,8 +218,8 @@ int main(void) {
 		i++;
 
 //		float battery_voltage = getBatLvl();
-//		adc_readings = measureIRAll();
-//		delay_ms(1);
+		adc_readings = measureIRAll();
+		delay_ms(1);
 
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
