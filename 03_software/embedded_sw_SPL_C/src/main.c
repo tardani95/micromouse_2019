@@ -120,7 +120,7 @@
 //float rotX, rotY, rotZ;
 //float temp_C;
 volatile uint16_t *adc_readings;
-volatile uint8_t toggle = 0;
+volatile uint8_t toggle = 1;
 volatile uint8_t rgb_led_status = 0;
 
 menu_p_t main_menu_p;
@@ -206,11 +206,9 @@ int main(void) {
 	while (1) {
 		i++;
 
-		enc_left = m_getEncCnt(ENC_LEFT);
-		enc_right = m_getEncCnt(ENC_RIGHT);
 //		float battery_voltage = getBatLvl();
-		adc_readings = measureIRAll();
-		delay_ms(1);
+//		adc_readings = measureIRAll();
+//		delay_ms(1);
 
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
@@ -261,14 +259,20 @@ void EXTI15_10_IRQHandler() {
 
 		if (!toggle) {
 
-			TIM1->CNT = 0;
-			TIM4->CNT = 0;
-			TIM3->CCR1 = 300;
-			TIM3->CCR3 = 550;
+			/*reset encoder values*/
+			m_resetEncCnt(ENC_LEFT_TIM);
+			m_resetEncCnt(ENC_RIGHT_TIM);
+//			ControlLoop_Cmd(ENABLE);
+
 
 		} else {
-			TIM3->CCR1 = 0;
-			TIM3->CCR3 = 0;
+//			ControlLoop_Cmd(DISABLE);
+			actuateMotor(LEFT,COAST,0);
+			actuateMotor(RIGHT,COAST,0);
+//			TIM3->CCR1 = 0;
+//			TIM3->CCR2 = 0;
+//			TIM3->CCR3 = 0;
+//			TIM3->CCR4 = 0;
 //			volatile uint32_t testLEFT = TIM1->CNT;
 //			volatile uint32_t testRIGHT = TIM4->CNT;
 //			int j;

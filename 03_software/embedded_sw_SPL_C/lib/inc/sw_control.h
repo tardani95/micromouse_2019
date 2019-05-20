@@ -8,6 +8,8 @@
 #ifndef SW_CONTROL_H_
 #define SW_CONTROL_H_
 
+#include "stm32f4xx.h"
+
 /** @addtogroup software_modules
  * @{
  */
@@ -22,6 +24,7 @@
 #define CONTROL_LOOP_IRQHandler		TIM2_IRQHandler
 
 void Init_Control();
+void ControlLoop_Cmd(FunctionalState NewState);
 void CONTROL_LOOP_IRQHandler();
 /**
  * @}
