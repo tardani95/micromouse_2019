@@ -1,10 +1,10 @@
 /***********************
  * @file 	util.h
- * @author	resiz
+ * @author	resiz,tard
  * @date	15 Mar 2019
  ************************/
-#ifndef INC_UTIL_H_
-#define INC_UTIL_H_
+#ifndef UTIL_H_
+#define UTIL_H_
 
 #include "stm32f4xx.h"
 #include "stm32f4xx_rcc.h"

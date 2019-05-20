@@ -29,12 +29,13 @@
 
 #define MOT_TIM 		TIM3
 #define MOT_TIM_PERIOD 	1000
+#define MAX_PULSE		MOT_TIM_PERIOD - 1
 
 #define m_speedToAngularSpeed(speed_mmPs, wheel_diameter_mm) 	\
-	(speed_mmPs/(wheel_diameter_mm/2))
+	(speed_mmPs/(wheel_diameter_mm/2) * 4) // factor 4 from the gear ratio
 
 #define m_radPsToRPM(radPs) 								 	\
-	(radPs/(2*3.1415)*60)
+	(radPs / 0.104) //(2*PI)/60 = 0.104
 
 #define m_RPMtoVolt(RPM) 									 	\
 	(RPM/MOTOR_SPEED_CONSTANT_rpmPvolt)
@@ -52,28 +53,34 @@
 	(voltage_abs > MOT_MAX_VOLT ? MOT_MAX_VOLT : voltage_abs)
 
 #define m_voltToPulseWidth(voltage) 							\
-	( m_capVoltageAtMax(m_abs(voltage))/VCC * MOT_TIM_PERIOD)
+	( m_capVoltageAtMax(m_abs(voltage))/VCC * MAX_PULSE)
 
 
 #define m_setPulse(mot_ccrx_p, pulse) (*mot_ccrx_p = pulse)
 
 typedef enum{
-	MOT_LEFT_FORWARD,
-	MOT_LEFT_BACKWARD,
-	MOT_RIGHT_FORWARD,
-	MOT_RIGHT_BACKWARD
+	LEFT,
+	RIGHT
+}MOT_SIDE;
+
+typedef enum{
+	FORWARD,
+	BACKWARD,
+	COAST,
+	BREAK
 }MOT_DIR;
 
 typedef enum{
-	AIN1,
-	AIN2,
-	BIN1,
-	BIN2
+	AOUT1,
+	AOUT2,
+	BOUT1,
+	BOUT2
 }MOT_CHANNEL;
 
 void initMotorControl(void);
 
-void actuateMotors(uint16_t v, uint16_t w);
+void actuateMotor(MOT_SIDE motor, MOT_DIR dir, uint16_t pulse);
+void actuateMotors(float v, float w);
 
 /**
  * @}
