@@ -145,12 +145,12 @@ uint16_t adcBuf[4] = { 0 };
 
 uint16_t measureIRSingle(IR_SENSOR IR_sensor) {
 	setIRD(IR_sensor);
-	setLED(PINK);
+	setLED(LED_PINK);
 //	uint8_t k = 0;
 //	for(uint16_t i = 0; i< 60;i++){
 //		k += k-2;
 //	}
-	resetLED(PINK);
+	resetLED(LED_PINK);
 	delay_ms(1);
 	uint16_t ptr_adc_value = getPTRValue();
 	resetIRD(IR_sensor);

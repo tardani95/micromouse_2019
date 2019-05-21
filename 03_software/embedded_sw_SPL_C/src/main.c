@@ -153,20 +153,14 @@ void Init_Periph(void) {
 	initBTModule();
 	initIMU();
 	if (setupIMU()) { /* if the communication not working then it stops here */
-		setLED(PINK);
+		setLED(LED_PINK);
 		delay_ms(1500);
-		resetLED(PINK);
+		resetLED(LED_PINK);
 	}
 
 	Init_Buttons();
 
 	Init_Control();
-}
-
-void delaySome_ms(void) {
-	for (uint32_t i = 0; i < 32000; i += 2) {
-		i--;
-	}
 }
 
 /**

@@ -134,16 +134,16 @@ void initStatusLEDs(void){
 
 }
 
-void setLED(ST_LED st_led){
-	GPIO_SetBits(LED_ports[st_led], LED_pins[st_led]);
+void setLED(ST_LED led_x){
+	GPIO_SetBits(LED_ports[led_x], LED_pins[led_x]);
 }
 
-void resetLED(ST_LED st_led){
-	GPIO_ResetBits(LED_ports[st_led], LED_pins[st_led]);
+void resetLED(ST_LED led_x){
+	GPIO_ResetBits(LED_ports[led_x], LED_pins[led_x]);
 }
 
-void toggleLED(ST_LED st_led){
-	GPIO_ToggleBits(LED_ports[st_led], LED_pins[st_led]);
+void toggleLED(ST_LED led_x){
+	GPIO_ToggleBits(LED_ports[led_x], LED_pins[led_x]);
 }
 
 void setRGB(RGB_COLOR color){

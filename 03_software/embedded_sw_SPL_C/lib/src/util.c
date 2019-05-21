@@ -123,7 +123,7 @@ void SysTick_Handler() {
 
 	systick_cnt++;
 	if (systick_cnt % HEARTBEAT_TOGGLE_PERIOD_ms == 0) {
-		toggleLED(HEARTBEAT);
+		toggleLED(LED_HEARTBEAT);
 	}
 }
 

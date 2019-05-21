@@ -88,7 +88,7 @@ float v_base_mmPs = 650;
  */
 void CONTROL_LOOP_IRQHandler() {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-	setLED(PINK);
+	setLED(LED_PINK);
 
 	//TODO user code here
 
@@ -112,10 +112,10 @@ void CONTROL_LOOP_IRQHandler() {
 	w = Kp * e + I + D;
 
 	if (m_abs(w) > 100) {
-		setLED(YELLOW);
+		setLED(LED_YELLOW);
 		w = 100;
 	} else {
-		resetLED(YELLOW);
+		resetLED(LED_YELLOW);
 	}
 
 	actuateMotors(v_base_mmPs, w);
@@ -123,7 +123,7 @@ void CONTROL_LOOP_IRQHandler() {
 	m_resetEncCnt(ENC_RIGHT);
 	m_resetEncCnt(ENC_LEFT);
 
-	resetLED(PINK);
+	resetLED(LED_PINK);
 }
 
 //TODO user code here

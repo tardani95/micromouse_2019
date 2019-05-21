@@ -262,7 +262,7 @@ void waitForAck(void) {
 		;
 	uint16_t data = USART_ReceiveData(BT_UART);
 	if (data != 100) {	// 100 is acknowledgement byte
-		setLED(PINK);
+		setLED(LED_PINK);
 	}
 }
 
