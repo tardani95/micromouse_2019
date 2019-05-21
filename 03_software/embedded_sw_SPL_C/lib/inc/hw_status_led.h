@@ -76,9 +76,9 @@ void initDebug(void);*/
 
 
 typedef enum {
-	HEARTBEAT,
-	PINK,
-	YELLOW
+	LED_HEARTBEAT,
+	LED_PINK,
+	LED_YELLOW
 }ST_LED;
 
 typedef enum {

@@ -82,11 +82,12 @@
 #include "hw_button.h"
 #include "hw_encoder.h"
 #include "hw_IMU.h"
-#include "hw_IR_module.h"
 #include "hw_motor_control.h"
 #include "hw_status_led.h"
 #include "hw_BT_module.h"
-#include "hw_bat_lvl_watcher.h"
+
+#include "hw_adc_module.h"
+
 /**
  * @}
  */
@@ -119,7 +120,7 @@
 //float gForceX, gForceY, gForceZ;
 //float rotX, rotY, rotZ;
 //float temp_C;
-volatile uint16_t *adc_readings;
+//volatile uint16_t *adc_readings;
 volatile uint8_t toggle = 1;
 volatile uint8_t rgb_led_status = 0;
 
@@ -143,40 +144,22 @@ void Init_Periph(void) {
 	initStatusLEDs();
 	initMotorControl();
 
-	ADC_DeInit();
+	initADC();
 
-	delay_ms(10);
-
-//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
-	ADC_CommonInitTypeDef ADCCommonInitStructure;
-	ADC_CommonStructInit(&ADCCommonInitStructure);
-	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
-//	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_20Cycles;
-	ADC_CommonInit(&ADCCommonInitStructure);
-
-//	initBatLvlWatcher();
-	initIR();
 	initEncoders();
 //	initMenus(&main_menu_p, &after_run_menu_p);
 
 	initBTModule();
 	initIMU();
-	if (setupIMU()) { /* if the communication not working then it stops here */
-		setLED(PINK);
+	if (setupIMU()) { /* if the communication working with the IMU, than sets the pink led for 1.5 seconds */
+		setLED(LED_PINK);
 		delay_ms(1500);
-		resetLED(PINK);
+		resetLED(LED_PINK);
 	}
 
 	Init_Buttons();
 
 	Init_Control();
-}
-
-void delaySome_ms(void) {
-	for (uint32_t i = 0; i < 32000; i += 2) {
-		i--;
-	}
 }
 
 /**
@@ -195,9 +178,8 @@ int main(void) {
 
 	Init_Periph();
 
-	/* TODO - Add your application code here */
-	uint32_t enc_left;
-	uint32_t enc_right;
+//	uint32_t enc_left;
+//	uint32_t enc_right;
 //	actuateMotors(7000, 0);
 	UART_DMASend("checkpoint1\n");
 
@@ -217,10 +199,12 @@ int main(void) {
 	while (1) {
 		i++;
 
-//		float battery_voltage = getBatLvl();
-		adc_readings = measureIRAll();
+		float battery_voltage = ADC_getBatLvl();
+//		uint16_t *adc_readings = ADC_measureIRAll();
+		ADC_startIRMeasurement(MS_IRD_OFF);
 		delay_ms(1);
-
+		uint16_t *adc_readings = ADC_getMeasuredValues();
+		delay_ms(1);
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
 //
@@ -275,11 +259,10 @@ void EXTI15_10_IRQHandler() {
 			m_resetEncCnt(ENC_RIGHT_TIM);
 //			ControlLoop_Cmd(ENABLE);
 
-
 		} else {
 //			ControlLoop_Cmd(DISABLE);
-			actuateMotor(LEFT,COAST,0);
-			actuateMotor(RIGHT,COAST,0);
+			actuateMotor(LEFT, COAST, 0);
+			actuateMotor(RIGHT, COAST, 0);
 //			TIM3->CCR1 = 0;
 //			TIM3->CCR2 = 0;
 //			TIM3->CCR3 = 0;

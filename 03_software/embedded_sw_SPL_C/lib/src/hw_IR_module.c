@@ -39,19 +39,19 @@ IRD_RF_PIN };
 
 void initIR(void) {
 
-	/*Init clock for ADC*/
+	/* Enable clock for ADC*/
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
 
-	/*Enable clock for GPIOA (IRD12, PTR12)*/
+	/* Enable clock for GPIOA (IRD12, PTR12)*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 
-	/*Enable clock for GPIOC (IRD34, PTR34*/
+	/* Enable clock for GPIOC (IRD34, PTR34*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
 
 	GPIO_InitTypeDef IR_GPIOInitStructure;
 	GPIO_StructInit(&IR_GPIOInitStructure);
 
-	/*Init IR LED pins*/
+	/* Init IR LED pins*/
 	IR_GPIOInitStructure.GPIO_Mode = GPIO_Mode_OUT;
 	IR_GPIOInitStructure.GPIO_OType = GPIO_OType_PP;
 	IR_GPIOInitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
@@ -62,7 +62,7 @@ void initIR(void) {
 	IR_GPIOInitStructure.GPIO_Pin = IRD3_PIN | IRD4_PIN;
 	GPIO_Init(IR34_PORT, &IR_GPIOInitStructure);
 
-	/*Init phototransistor pins*/
+	/* Init phototransistor pins*/
 	GPIO_StructInit(&IR_GPIOInitStructure);
 	IR_GPIOInitStructure.GPIO_Mode = GPIO_Mode_AN;
 	IR_GPIOInitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
@@ -73,14 +73,7 @@ void initIR(void) {
 	IR_GPIOInitStructure.GPIO_Pin = PTR3_PIN | PTR4_PIN;
 	GPIO_Init(IR34_PORT, &IR_GPIOInitStructure);
 
-	/*Init ADC for phototransistors*/
-
-//	ADC_CommonInitTypeDef ADCCommonInitStructure;
-//	ADC_CommonStructInit(&ADCCommonInitStructure);
-//	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-//	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
-////	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_15Cycles;
-//	ADC_CommonInit(&ADCCommonInitStructure);
+	/* Init ADC for phototransistors*/
 	ADC_InitTypeDef PTR_ADCInitStructure;
 	PTR_ADCInitStructure.ADC_ScanConvMode = ENABLE;
 	PTR_ADCInitStructure.ADC_ContinuousConvMode = DISABLE;
@@ -93,7 +86,7 @@ void initIR(void) {
 
 //	ADC_Cmd(PTR_ADC, ENABLE);
 
-//TODO: sample time?
+	//TODO: sample time?
 	ADC_EOCOnEachRegularChannelCmd(PTR_ADC, ENABLE);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_LF_CH, 1, PTR_ADC_SAMPLE_TIME);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_RS_CH, 2, PTR_ADC_SAMPLE_TIME);
@@ -104,6 +97,8 @@ void initIR(void) {
 
 	ADC_DiscModeChannelCountConfig(PTR_ADC, 1);
 	ADC_DiscModeCmd(PTR_ADC, ENABLE);
+
+	ADC_ITConfig(PTR_ADC, ADC_IT_EOC, ENABLE);
 
 	ADC_Cmd(PTR_ADC, ENABLE);
 	//TODO: ADC calibration?
@@ -144,13 +139,13 @@ uint16_t adcBuf[4] = { 0 };
 
 uint16_t measureIRSingle(IR_SENSOR IR_sensor) {
 	setIRD(IR_sensor);
-	setLED(PINK);
-	uint8_t k = 0;
-	for(uint16_t i = 0; i< 60;i++){
-		k += k-2;
-	}
-	resetLED(PINK);
-//	delay_ms(1);
+	setLED(LED_PINK);
+//	uint8_t k = 0;
+//	for(uint16_t i = 0; i< 60;i++){
+//		k += k-2;
+//	}
+	resetLED(LED_PINK);
+	delay_ms(1);
 	uint16_t ptr_adc_value = getPTRValue();
 	resetIRD(IR_sensor);
 //	return distByADCValue(ptr_adc_value);
