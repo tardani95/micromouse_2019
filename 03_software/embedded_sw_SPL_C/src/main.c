@@ -82,10 +82,12 @@
 #include "hw_button.h"
 #include "hw_encoder.h"
 #include "hw_IMU.h"
-#include "hw_IR_module.h"
 #include "hw_motor_control.h"
 #include "hw_status_led.h"
 #include "hw_BT_module.h"
+
+#include "hw_adc_common.h"
+#include "hw_IR_module.h"
 #include "hw_bat_lvl_watcher.h"
 /**
  * @}
@@ -143,20 +145,10 @@ void Init_Periph(void) {
 	initStatusLEDs();
 	initMotorControl();
 
-	ADC_DeInit();
-
-	delay_ms(10);
-
-//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
-	ADC_CommonInitTypeDef ADCCommonInitStructure;
-	ADC_CommonStructInit(&ADCCommonInitStructure);
-	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
-//	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_20Cycles;
-	ADC_CommonInit(&ADCCommonInitStructure);
-
-//	initBatLvlWatcher();
+	initADC();
 	initIR();
+	initBatLvlWatcher();
+
 	initEncoders();
 //	initMenus(&main_menu_p, &after_run_menu_p);
 
@@ -196,8 +188,8 @@ int main(void) {
 	Init_Periph();
 
 	/* TODO - Add your application code here */
-	uint32_t enc_left;
-	uint32_t enc_right;
+//	uint32_t enc_left;
+//	uint32_t enc_right;
 //	actuateMotors(7000, 0);
 	UART_DMASend("checkpoint1\n");
 
