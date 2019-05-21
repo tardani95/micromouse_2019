@@ -22,7 +22,7 @@
  * @{
  */
 
-volatile uint8_t IR_measurement_stage = 0;
+volatile MEASUREMENT_STAGE IR_measurement_stage = MS_IRD_OFF;
 volatile uint8_t ADC_conversion_cnt = 0;
 
 /**
@@ -61,27 +61,40 @@ uint16_t * ADC_measureIRAll() {
 	return measureIRAll();
 }
 
-void ADC_startIRMeasurement(){
-	ADC_measureCycle(0,0);
+void ADC_delay_us(uint16_t micro_second){
+	if(micro_second > TIM_max_delay_us){
+		micro_second = TIM_max_delay_us;
+	}
+
+	TIM_delay_us->CNT = micro_second;
+	TIM_Cmd(TIM_delay_us, ENABLE);
 }
 
-void ADC_measureCycle(uint8_t measurement_stage, uint8_t conversion_cnt){
-	switch(measurement_stage){
-	case 0: /*read photo transistor values without IR LEDs*/
+void ADC_startIRMeasurement(MEASUREMENT_STAGE measurement_stage) {
+	IR_measurement_stage = measurement_stage;
+	ADC_conversion_cnt = 0;
+	ADC_measureCycle(IR_measurement_stage, ADC_conversion_cnt);
+}
 
+void ADC_measureCycle(uint8_t measurement_stage, uint8_t conversion_cnt) {
+	switch (measurement_stage) {
+	case 0: /*read photo transistor values without IR LEDs*/
+		ADC_SoftwareStartConv(PTR_ADC);
 		break;
 	case 1: /*read photo transistor values with IR LEDs*/
+		setIRD(conversion_cnt);
+		ADC_delay_us(25);
 		break;
-	case 2:
+	default:
 		break;
-	case 3:
-		break;
-
 	}
 }
 
-void ADC_delayTIM_IRQHandler(){
-	//TODO clear IT pendig bits
+void ADC_delayTIM_IRQHandler() {
+	TIM_ClearITPendingBit(TIM_delay_us, TIM_IT_Update);
+	TIM_Cmd(TIM_delay_us, DISABLE);
+
+	ADC_measureCycle(IR_measurement_stage, ADC_conversion_cnt);
 }
 
 void ADC_IRQHandler() {
@@ -90,16 +103,31 @@ void ADC_IRQHandler() {
 		ADC_ClearITPendingBit(BAT_LVL_WATCHER_ADC, ADC_IT_AWD);
 		setLED(LED_YELLOW);
 
-		if(ADC_GetConversionValue(BAT_LVL_WATCHER_ADC) < voltToAdcValue(SHUTDOWN_VOLTAGE)){
+		if (ADC_GetConversionValue(
+		BAT_LVL_WATCHER_ADC) < voltToAdcValue(SHUTDOWN_VOLTAGE)) {
 			/*shutdown voltage reached - shutting down peripherals*/
 			setLED(LED_PINK);
-			//TODO shut down motors and ir diodes
+			//TODO shut down motors and ir diodes - write their functions
+//			disableMotors();
+//			disableIRModules();
 		}
 	}
 
 	if (ADC_GetITStatus(PTR_ADC, ADC_IT_EOC) == SET) { /*one conversion completed*/
 		ADC_ClearITPendingBit(PTR_ADC, ADC_IT_EOC);
+
+		if (IR_measurement_stage == 1) {/* switch off the IR led set in stage 1 measurement cycle */
+			resetIRD(ADC_conversion_cnt);
+		}
+
 		ADC_conversion_cnt++;
+
+		if (ADC_conversion_cnt >= 4) { /*jump to the next state)*/
+			IR_measurement_stage++;
+			ADC_conversion_cnt = 0;
+		}
+
+		ADC_measureCycle(IR_measurement_stage, ADC_conversion_cnt);
 	}
 }
 

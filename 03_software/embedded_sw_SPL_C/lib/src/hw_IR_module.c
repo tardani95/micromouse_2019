@@ -74,14 +74,6 @@ void initIR(void) {
 	GPIO_Init(IR34_PORT, &IR_GPIOInitStructure);
 
 	/* Init ADC for phototransistors*/
-
-//	ADC_CommonInitTypeDef ADCCommonInitStructure;
-//	ADC_CommonStructInit(&ADCCommonInitStructure);
-//	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-//	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
-////	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_15Cycles;
-//	ADC_CommonInit(&ADCCommonInitStructure);
-
 	ADC_InitTypeDef PTR_ADCInitStructure;
 	PTR_ADCInitStructure.ADC_ScanConvMode = ENABLE;
 	PTR_ADCInitStructure.ADC_ContinuousConvMode = DISABLE;
@@ -94,7 +86,7 @@ void initIR(void) {
 
 //	ADC_Cmd(PTR_ADC, ENABLE);
 
-//TODO: sample time?
+	//TODO: sample time?
 	ADC_EOCOnEachRegularChannelCmd(PTR_ADC, ENABLE);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_LF_CH, 1, PTR_ADC_SAMPLE_TIME);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_RS_CH, 2, PTR_ADC_SAMPLE_TIME);
@@ -105,6 +97,8 @@ void initIR(void) {
 
 	ADC_DiscModeChannelCountConfig(PTR_ADC, 1);
 	ADC_DiscModeCmd(PTR_ADC, ENABLE);
+
+	ADC_ITConfig(PTR_ADC, ADC_IT_EOC, ENABLE);
 
 	ADC_Cmd(PTR_ADC, ENABLE);
 	//TODO: ADC calibration?
