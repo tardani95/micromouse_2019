@@ -86,9 +86,8 @@
 #include "hw_status_led.h"
 #include "hw_BT_module.h"
 
-#include "hw_adc_common.h"
-#include "hw_IR_module.h"
-#include "hw_bat_lvl_watcher.h"
+#include "hw_adc_module.h"
+
 /**
  * @}
  */
@@ -146,16 +145,7 @@ void Init_Periph(void) {
 	initMotorControl();
 
 	initADC();
-	initIR();
-	initBatLvlWatcher();
 
-	ADC_CommonInitTypeDef ADCCommonInitStructure;
-	ADC_CommonStructInit(&ADCCommonInitStructure);
-	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
-//	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_15Cycles;
-	ADC_CommonInit(&ADCCommonInitStructure);
-	delay_ms(1);
 
 	initEncoders();
 //	initMenus(&main_menu_p, &after_run_menu_p);
@@ -217,8 +207,8 @@ int main(void) {
 	while (1) {
 		i++;
 
-		float battery_voltage = getBatLvl();
-		uint16_t *adc_readings = measureIRAll();
+		float battery_voltage = ADC_getBatLvl();
+		uint16_t *adc_readings = ADC_measureIRAll();
 		delay_ms(1);
 
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
