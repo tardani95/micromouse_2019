@@ -18,7 +18,11 @@
  */
 
 void initBatLvlWatcher(void){
-	/*Enable clock for GPIOA*/
+
+	/* Enable clock for ADC*/
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC2, ENABLE);
+
+	/* Enable clock for GPIOA*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 
 	GPIO_InitTypeDef bat_lvl_watcher_GPIOInitStructure;
@@ -42,18 +46,18 @@ void initBatLvlWatcher(void){
 	bat_lvl_watcher_ADCInitStructure.ADC_Resolution = ADC_Resolution_12b;
 	ADC_Init(BAT_LVL_WATCHER_ADC, &bat_lvl_watcher_ADCInitStructure);
 
-	ADC_CommonInitTypeDef ADCCommonInitStructure;
-	ADC_CommonStructInit(&ADCCommonInitStructure);
-	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 21MHz */
-	ADC_CommonInit(&ADCCommonInitStructure);
+//	ADC_CommonInitTypeDef ADCCommonInitStructure;
+//	ADC_CommonStructInit(&ADCCommonInitStructure);
+//	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+//	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 21MHz */
+//	ADC_CommonInit(&ADCCommonInitStructure);
 
 	ADC_RegularChannelConfig(BAT_LVL_WATCHER_ADC, BAT_LVL_WATCHER_ADC_CHANNEL, 1, BAT_LVL_WATCHER_ADC_SAMPLE_TIME);
+//	ADC_Init(BAT_LVL_WATCHER_ADC, &bat_lvl_watcher_ADCInitStructure);
 
 	ADC_Cmd(BAT_LVL_WATCHER_ADC, ENABLE);
 
 	//TODO: ADC calibration?
-
 }
 
 float getBatLvl(void){

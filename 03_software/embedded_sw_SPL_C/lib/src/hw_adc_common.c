@@ -29,12 +29,14 @@ void initADC() {
 	delay_ms(1);
 
 //	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
-	ADC_CommonInitTypeDef ADCCommonInitStructure;
-	ADC_CommonStructInit(&ADCCommonInitStructure);
-	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
-	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
-	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_15Cycles;
-	ADC_CommonInit(&ADCCommonInitStructure);
+//	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC2, ENABLE);
+//	ADC_CommonInitTypeDef ADCCommonInitStructure;
+//	ADC_CommonStructInit(&ADCCommonInitStructure);
+//	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+//	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
+////	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_15Cycles;
+//	ADC_CommonInit(&ADCCommonInitStructure);
+//	delay_ms(1);
 }
 
 /**

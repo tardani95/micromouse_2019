@@ -121,7 +121,7 @@
 //float gForceX, gForceY, gForceZ;
 //float rotX, rotY, rotZ;
 //float temp_C;
-volatile uint16_t *adc_readings;
+//volatile uint16_t *adc_readings;
 volatile uint8_t toggle = 1;
 volatile uint8_t rgb_led_status = 0;
 
@@ -148,6 +148,14 @@ void Init_Periph(void) {
 	initADC();
 	initIR();
 	initBatLvlWatcher();
+
+	ADC_CommonInitTypeDef ADCCommonInitStructure;
+	ADC_CommonStructInit(&ADCCommonInitStructure);
+	ADCCommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+	ADCCommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div4; /*f_ADCCLK = PCLK2/4 = 20MHz */
+//	ADCCommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_15Cycles;
+	ADC_CommonInit(&ADCCommonInitStructure);
+	delay_ms(1);
 
 	initEncoders();
 //	initMenus(&main_menu_p, &after_run_menu_p);
@@ -209,8 +217,8 @@ int main(void) {
 	while (1) {
 		i++;
 
-//		float battery_voltage = getBatLvl();
-		adc_readings = measureIRAll();
+		float battery_voltage = getBatLvl();
+		uint16_t *adc_readings = measureIRAll();
 		delay_ms(1);
 
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
@@ -267,11 +275,10 @@ void EXTI15_10_IRQHandler() {
 			m_resetEncCnt(ENC_RIGHT_TIM);
 //			ControlLoop_Cmd(ENABLE);
 
-
 		} else {
 //			ControlLoop_Cmd(DISABLE);
-			actuateMotor(LEFT,COAST,0);
-			actuateMotor(RIGHT,COAST,0);
+			actuateMotor(LEFT, COAST, 0);
+			actuateMotor(RIGHT, COAST, 0);
 //			TIM3->CCR1 = 0;
 //			TIM3->CCR2 = 0;
 //			TIM3->CCR3 = 0;
