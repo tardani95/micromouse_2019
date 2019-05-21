@@ -20,20 +20,23 @@
  * @{
  */
 
-#define TIM_delay_us 				TIM5
-#define ADC_delayTIM_IRQHandler 	TIM5_IRQHandler
-#define TIM_delay_us_PERIOD			0xFFFF
-#define TIM_max_delay_us 			TIM_delay_us_PERIOD-1
+#define TIM_delay_us 					TIM5
+#define NVIC_IRQChannel_TIM_delay_us 	TIM5_IRQn
+#define ADC_delayTIM_IRQHandler 		TIM5_IRQHandler
+#define TIM_delay_us_PERIOD				0xFFFF
+#define TIM_max_delay_us 				TIM_delay_us_PERIOD-1
 
 typedef enum{
 	MS_IRD_OFF,
-	MS_IRD_ON
+	MS_IRD_ON,
+	END
 }MEASUREMENT_STAGE;
 
 void initADC(void);
 float ADC_getBatLvl(void);
 uint16_t* ADC_measureIRAll(void);
 
+void ADC_startIRMeasurement(MEASUREMENT_STAGE with_measurement_stage);
 void ADC_measureCycle(uint8_t measurement_stage, uint8_t conversion_cnt);
 
 void ADC_IRQHandler(void);

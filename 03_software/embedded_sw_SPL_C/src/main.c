@@ -146,13 +146,12 @@ void Init_Periph(void) {
 
 	initADC();
 
-
 	initEncoders();
 //	initMenus(&main_menu_p, &after_run_menu_p);
 
 	initBTModule();
 	initIMU();
-	if (setupIMU()) { /* if the communication not working then it stops here */
+	if (setupIMU()) { /* if the communication working with the IMU, than sets the pink led for 1.5 seconds */
 		setLED(LED_PINK);
 		delay_ms(1500);
 		resetLED(LED_PINK);
@@ -179,7 +178,6 @@ int main(void) {
 
 	Init_Periph();
 
-	/* TODO - Add your application code here */
 //	uint32_t enc_left;
 //	uint32_t enc_right;
 //	actuateMotors(7000, 0);
@@ -202,9 +200,11 @@ int main(void) {
 		i++;
 
 		float battery_voltage = ADC_getBatLvl();
-		uint16_t *adc_readings = ADC_measureIRAll();
+//		uint16_t *adc_readings = ADC_measureIRAll();
+		ADC_startIRMeasurement(MS_IRD_OFF);
 		delay_ms(1);
-
+		uint16_t *adc_readings = ADC_getMeasuredValues();
+		delay_ms(1);
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
 //
