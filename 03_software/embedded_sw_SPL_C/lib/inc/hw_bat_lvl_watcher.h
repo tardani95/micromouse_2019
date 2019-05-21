@@ -29,9 +29,9 @@
 #define BAT_LVL_WATCHER_ADC_CHANNEL		ADC_Channel_6
 #define BAT_LVL_WATCHER_ADC_SAMPLE_TIME	ADC_SampleTime_15Cycles
 
-#define HIGH_LVL_VOLTAGE				5.3f //TODO set the high level voltage
-#define LOW_LVL_VOLTAGE					3.6f //TODO set the low level voltage
-#define SHUTDOWN_VOLTAGE				3.5f
+#define HIGH_LVL_VOLTAGE				5.3f
+#define LOW_LVL_VOLTAGE					3.8f //TODO set the low level voltage
+#define SHUTDOWN_VOLTAGE				3.6f
 
 
 
