@@ -53,6 +53,8 @@
 
 #define PTR_ADC_SAMPLE_TIME 	ADC_SampleTime_56Cycles
 
+#define IR_RISE_TIME_us			10
+
 typedef enum{
 	IR_RIGHT_SIDEWAYS,
 	IR_RIGHT_FORWARD,

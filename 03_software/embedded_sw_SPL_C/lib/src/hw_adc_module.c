@@ -61,7 +61,7 @@ void initADC() {
 	TIM_TimeBaseInitTypeDef TimeBaseInitStructure;
 	TIM_TimeBaseStructInit(&TimeBaseInitStructure);
 	TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
-	TimeBaseInitStructure.TIM_Prescaler = 80 - 1; /* Clock freqeuency: 80MHz/80 = 1MHz */
+	TimeBaseInitStructure.TIM_Prescaler = 8 - 1; /* Clock freqeuency: 80MHz/80 = 1MHz */
 	TimeBaseInitStructure.TIM_Period = TIM_delay_us_PERIOD - 1; /* set the max value */
 	TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Down;
 	TimeBaseInitStructure.TIM_RepetitionCounter = 0;
@@ -96,38 +96,47 @@ uint16_t * ADC_getMeasuredValues() {
 	return measurements;
 }
 
+/**
+ * @brief delay us with maximal value 6500 us and the minimum delay @1us is 1.4 us
+ * @param micro_second
+ */
 void ADC_delay_us(uint16_t micro_second) {
-	if (micro_second > TIM_max_delay_us) {
-		micro_second = TIM_max_delay_us;
+	if (micro_second > TIM_max_delay_us/10) {
+		micro_second = TIM_max_delay_us/10;
 	}
 
-	TIM_delay_us->CNT = micro_second;
-	TIM_Cmd(TIM_delay_us, ENABLE);
+	TIM_delay_us->CNT = (micro_second < 2) ? (1):((micro_second-1)*10-2); /* correction according to measurements */
+	TIM_delay_us->CR1 |= TIM_CR1_CEN;	/* enable timer*/
 }
 
+/**
+ * @brief the complete measurement takes 156 us so in 1ms we can measure 5 times
+ * @param with_measurement_stage
+ */
 void ADC_startIRMeasurement(MEASUREMENT_STAGE with_measurement_stage) {
 	IR_measurement_stage = with_measurement_stage;
 	ADC_conversion_cnt = 0;
 	ADC_measureCycle(IR_measurement_stage, ADC_conversion_cnt);
 }
 
-void ADC_measureCycle(uint8_t measurement_stage, uint8_t conversion_cnt) {
+void ADC_measureCycle(MEASUREMENT_STAGE measurement_stage, uint8_t conversion_cnt) {
 	switch (measurement_stage) {
-	case 0: /*read photo transistor values without IR LEDs*/
+	case MS_IRD_OFF: /*read photo transistor values without IR LEDs*/
 		ADC_SoftwareStartConv(PTR_ADC);
 		break;
-	case 1: /*read photo transistor values with IR LEDs*/
-		setIRD(conversion_cnt); //TODO uncomment this line
-		ADC_delay_us(25);
+	case MS_IRD_ON: /*read photo transistor values with IR LEDs*/
+		setIRD(conversion_cnt);
+		ADC_delay_us(IR_RISE_TIME_us);
 		break;
 	default:
+		resetLED(LED_PINK);
 		break;
 	}
 }
 
 void ADC_delayTIM_IRQHandler() {
-	TIM_ClearITPendingBit(TIM_delay_us, TIM_IT_Update);
-	TIM_Cmd(TIM_delay_us, DISABLE);
+	TIM_delay_us->SR = (uint16_t)~TIM_IT_Update; /* Clear the IT pending Bit */
+	TIM_delay_us->CR1 &= (uint16_t)~TIM_CR1_CEN; /* Disable TIMer */
 
 	ADC_SoftwareStartConv(PTR_ADC);
 //	ADC_measureCycle(IR_measurement_stage, ADC_conversion_cnt);
