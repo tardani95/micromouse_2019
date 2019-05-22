@@ -408,7 +408,6 @@ void MPU6050_CalcAccelRot() {
 //	gForceX = (float) accel_gyro_temp[0] / 16384.0 * 9810;
 //	gForceY = (float) accel_gyro_temp[1] / 16384.0 * 9810;
 //	gForceZ = (float) accel_gyro_temp[2] / 16384.0 * 9810;
-	resetLED(LED_YELLOW);
 }
 
 /**

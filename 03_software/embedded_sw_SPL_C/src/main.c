@@ -123,6 +123,7 @@
 //volatile uint16_t *adc_readings;
 volatile uint8_t toggle = 1;
 volatile uint8_t rgb_led_status = 0;
+volatile uint8_t adsf = 1;
 
 menu_p_t main_menu_p;
 menu_p_t after_run_menu_p;
@@ -139,6 +140,7 @@ menu_p_t after_run_menu_p;
 void Init_Periph(void) {
 
 	initSysTick();
+	init_usTimer();
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
 
 	initStatusLEDs();
@@ -198,13 +200,17 @@ int main(void) {
 	/* Infinite loop */
 	while (1) {
 		i++;
+		adsf++;
+		setLED(LED_YELLOW);
+		delay_us(1);
+		resetLED(LED_YELLOW);
 
 		float battery_voltage = ADC_getBatLvl();
 		setLED(LED_PINK);
 		ADC_startIRMeasurement(MS_IRD_OFF);
 		delay_ms(1);
 		uint16_t *adc_readings = ADC_getMeasuredValues();
-		setLED(LED_YELLOW);
+//		setLED(LED_YELLOW);
 		IMU_DMA_GetRaw();
 
 

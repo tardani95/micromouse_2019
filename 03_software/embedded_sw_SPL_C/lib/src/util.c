@@ -7,6 +7,7 @@
 #include "util.h"
 #include <math.h>
 #include "hw_status_led.h"
+#include "stm32f4xx_tim.h"
 
 /**
  * reverses a string 'str' of length 'len'
@@ -145,3 +146,67 @@ void delay_ms(uint32_t wait_ms) {
 	while (next_ms != systick_cnt)
 		;
 }
+
+void init_usTimer() {
+	/* init delay_us timer */
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM6, ENABLE);
+
+	/* Fill the TIM_TimeBaseInitStruct with the desired parameters */
+	TIM_TimeBaseInitTypeDef TimeBaseInitStructure;
+	TIM_TimeBaseStructInit(&TimeBaseInitStructure);
+	TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+	TimeBaseInitStructure.TIM_Prescaler = 8 - 1; /* Clock freqeuency: 80MHz/8 = 10MHz */
+	TimeBaseInitStructure.TIM_Period = 9; /* TIM update event occurs @1Mhz */
+	TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+	TimeBaseInitStructure.TIM_RepetitionCounter = 0;
+
+	/* Call TIM_TimeBaseInit(TIMx, &TIM_TimeBaseInitStruct) to configure the Time Base unit
+	 with the corresponding configuration */
+	TIM_TimeBaseInit(TIM6, &TimeBaseInitStructure);
+
+	/* Enable the NVIC to generate the update interrupt */
+	NVIC_InitTypeDef NVIC_InitStructure;
+
+	NVIC_InitStructure.NVIC_IRQChannel = TIM6_DAC_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 10;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_InitStructure);
+
+	/* Enable the corresponding interrupt using the function TIM_ITConfig(TIMx, TIM_IT_Update) */
+	TIM_ClearITPendingBit(TIM6, TIM_IT_Update);
+	TIM_ITConfig(TIM6, TIM_IT_Update, ENABLE);
+
+	TIM_Cmd(TIM6, DISABLE);
+}
+
+volatile uint32_t us_tick_cnt = 0;
+
+void TIM6_DAC_IRQHandler() {
+	TIM6->SR = (uint16_t) ~TIM_IT_Update; /* Clear the IT pending Bit */
+	us_tick_cnt++;
+}
+
+/**
+ * @breif delay with polling
+ * @param wait_us microseconds to wait
+ */
+void delay_us(uint32_t wait_us) {
+	wait_us = wait_us>1?wait_us-1:1; /*because timer counts from 0*/
+	TIM6->CNT = 0;
+	TIM6->CR1 |= (uint16_t) TIM_CR1_CEN; /* Enable TIMer */
+	uint32_t current_us = us_tick_cnt;
+	uint32_t next_us;
+
+	/* check if it will overflow*/
+	if ((UINT32_MAX - wait_us) < current_us) {
+		next_us = wait_us - (UINT32_MAX - current_us);
+	} else {
+		next_us = current_us + wait_us;
+	}
+
+	while (next_us != us_tick_cnt)
+		;
+	TIM6->CR1 &= (uint16_t) ~TIM_CR1_CEN; /* Disable TIMer */
+}
+
