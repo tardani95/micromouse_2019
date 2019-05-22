@@ -19,7 +19,7 @@
  */
 
 /**
- * @defgroup adc_common ADC common setup
+ * @defgroup adc_module ADC module
  * @{
  */
 

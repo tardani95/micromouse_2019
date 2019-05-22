@@ -14,7 +14,7 @@
 #include "hw_params.h"
 
 /**
- * @addtogroup hardware_modules
+ * @addtogroup adc_module
  * @{
  */
 

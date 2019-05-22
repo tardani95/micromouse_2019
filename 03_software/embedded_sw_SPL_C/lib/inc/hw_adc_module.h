@@ -16,7 +16,7 @@
  */
 
 /**
- * @addtogroup adc_common
+ * @addtogroup adc_module
  * @{
  */
 
@@ -34,12 +34,14 @@ typedef enum{
 
 void initADC(void);
 float ADC_getBatLvl(void);
-uint16_t* ADC_measureIRAll(void);
+//uint16_t* ADC_measureIRAll(void); /* deprecated use */
 
 void ADC_startIRMeasurement(MEASUREMENT_STAGE with_measurement_stage);
-void ADC_measureCycle(uint8_t measurement_stage, uint8_t conversion_cnt);
+uint16_t * ADC_getMeasuredValues(void);
 
+void ADC_measureCycle(uint8_t measurement_stage, uint8_t conversion_cnt);
 void ADC_IRQHandler(void);
+void TIM5_IRQHandler(void);
 /**
  * @}
  */

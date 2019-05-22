@@ -9,7 +9,7 @@
 #include "util.h"
 #include "hw_status_led.h"
 
-/** @addtogroup hardware_modules
+/** @addtogroup adc_module
  * @{
  */
 

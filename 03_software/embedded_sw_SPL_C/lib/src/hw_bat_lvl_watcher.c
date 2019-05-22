@@ -7,7 +7,7 @@
 #include "hw_bat_lvl_watcher.h"
 
 /**
- * @addtogroup hardware_modules
+ * @addtogroup adc_module
  * @{
  */
 
