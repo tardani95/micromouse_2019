@@ -123,6 +123,7 @@
 //volatile uint16_t *adc_readings;
 volatile uint8_t toggle = 1;
 volatile uint8_t rgb_led_status = 0;
+volatile uint8_t adsf = 1;
 
 menu_p_t main_menu_p;
 menu_p_t after_run_menu_p;
@@ -139,6 +140,7 @@ menu_p_t after_run_menu_p;
 void Init_Periph(void) {
 
 	initSysTick();
+	init_usTimer();
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4); /* 4 bit (0-15 -- the lower the higher) for preemption, and 0 bit for sub-priority */
 
 	initStatusLEDs();

@@ -26,6 +26,8 @@ void initSysTick(void);
 void setTimeOut_ms(uint32_t millisecond);
 uint32_t getTimeOut_ms(void);
 void SysTick_Handler(void);
-void delay_ms(uint32_t milliseconds);
+void delay_ms(uint32_t ms);
+void init_usTimer(void);
+void delay_us(uint32_t us);
 
 #endif /* INC_UTIL_H_ */

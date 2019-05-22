@@ -12,7 +12,7 @@
 #include "stm32f4xx_rcc.h"
 #include "stm32f4xx_adc.h"
 
-/** @addtogroup hardware_modules
+/** @addtogroup adc_module
  * @{
  */
 

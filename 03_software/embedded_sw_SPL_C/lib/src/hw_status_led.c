@@ -135,15 +135,18 @@ void initStatusLEDs(void){
 }
 
 void setLED(ST_LED led_x){
-	GPIO_SetBits(LED_ports[led_x], LED_pins[led_x]);
+	LED_ports[led_x]->BSRRL = LED_pins[led_x]; /* GPIO set bit */
+//	GPIO_SetBits(LED_ports[led_x], LED_pins[led_x]);
 }
 
 void resetLED(ST_LED led_x){
-	GPIO_ResetBits(LED_ports[led_x], LED_pins[led_x]);
+	LED_ports[led_x]->BSRRH = LED_pins[led_x]; /* GPIO reset bit */
+//	GPIO_ResetBits(LED_ports[led_x], LED_pins[led_x]);
 }
 
 void toggleLED(ST_LED led_x){
-	GPIO_ToggleBits(LED_ports[led_x], LED_pins[led_x]);
+	LED_ports[led_x]->ODR ^= LED_pins[led_x]; /* GPIO toggle bit */
+//	GPIO_ToggleBits(LED_ports[led_x], LED_pins[led_x]);
 }
 
 void setRGB(RGB_COLOR color){
