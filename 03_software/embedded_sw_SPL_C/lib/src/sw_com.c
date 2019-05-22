@@ -22,8 +22,21 @@ volatile PacketReceivedHandler handler_mapping[COMMAND_COUNT];
 
 void handleReceivedPacket(uint16_t length, uint8_t *data){
 	COMMAND command = (COMMAND)data[0];
-	PacketReceivedHandler handler = handler_mapping[command];
-	handler(length - 1, data + 1);
+	PacketReceivedHandler handler = NULL;
+	if((int)command == IR_CALIB_MEASURE){
+		handler = handler_mapping[0];
+	}
+	if((int)command == IR_AMBIENT_MEASURE){
+		handler = handler_mapping[1];
+	}
+	if(handler != NULL){
+		if(length > 1){
+			handler(length - 1, &data[1]);
+		}
+		else{
+			handler(0, NULL);
+		}
+	}
 
 }
 
@@ -31,15 +44,18 @@ void comSendPacket(COMMAND command, uint16_t length, uint8_t *data){
 	uint8_t packet_length = length > COM_TX_PACKET_MAX_LENGTH ?
 							COM_TX_PACKET_MAX_LENGTH : length;
 
-	com_tx_buffer[0] = (uint8_t)command;
-	memcpy(data, &com_tx_buffer[1], packet_length);
-	com_tx_buffer[packet_length + 1] = '\n';
-	UART_DMASend((char*)com_tx_buffer);
+	com_tx_buffer[0] = (uint8_t)(length + 1);
+	com_tx_buffer[1] = (uint8_t)command;
+	memcpy(&com_tx_buffer[2], data, packet_length);
+	UART_DMASendBytes(packet_length + 2, (char*)com_tx_buffer);
 }
 
 void addComReceivedPacketHandler(COMMAND command, PacketReceivedHandler handler){
-	if((int)command < COMMAND_COUNT){
-		handler_mapping[command] = handler;
+	if((int)command == IR_CALIB_MEASURE){
+		handler_mapping[0] = handler;
+	}
+	if((int)command == IR_AMBIENT_MEASURE){
+		handler_mapping[1] = handler;
 	}
 }
 

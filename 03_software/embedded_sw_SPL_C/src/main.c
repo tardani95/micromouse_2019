@@ -153,16 +153,16 @@ void Init_Periph(void) {
 	//	initEncoders();
 	//	initMenus(&main_menu_p, &after_run_menu_p);
 
-
+	initIRCalib();
 	initBTModule();
 	//initIMU();
-	if (setupIMU()) { /* if the communication not working then it stops here */
+	/*if (setupIMU()) { /* if the communication not working then it stops here
 #ifdef STM_EVAL
 		STM_EVAL_LEDOn(LED3);
 #else
 		setLED(PINK);
 #endif
-	}
+	}*/
 
 	//Init_Buttons();
 

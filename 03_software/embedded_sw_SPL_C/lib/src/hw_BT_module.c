@@ -157,6 +157,22 @@ void UART_DMASend(char *data) {
 }
 
 /**
+ * @brief Sends a byte array with DMA
+ * @param data Bytes to send
+ */
+void UART_DMASendBytes(uint8_t length, char *data) {
+
+	memcpy(uartTxBuffer, data, length);
+
+	/* start transmission */
+	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
+	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
+	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
+	while (ENABLE != DMA_GetCmdStatus(BT_UART_TX_DMA_Stream))
+		;
+}
+
+/**
  * @brief Starts listening for UART messages
  * protocol: [data_length, data]
  */
@@ -200,10 +216,10 @@ void DMA1_Stream1_IRQHandler(void) {
 	DMA_ClearFlag(BT_UART_RX_DMA_Stream, DMA_FLAG_TCIF1);
 	/* Enable uart irq to first length byte reception */
 	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
+	/* Handler received data */
+	handleReceivedPacket((uint16_t)length, (uint8_t*)uartRxBuffer);
 	/* Clear the rest of the buffer */
 	clearBuffer();
-	/* Handler received data */
-	handleReceivedPacket((uint16_t)length, (uint8_t*)uartTxBuffer);
 }
 
 /**

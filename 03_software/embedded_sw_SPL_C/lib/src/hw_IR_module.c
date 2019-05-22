@@ -114,7 +114,6 @@ void initIR(void){
 
 	//TODO: ADC calibration?
 
-	addComReceivedPacketHandler(IR_CALIB_MEASURE, measureIRCalibSingle);
 }
 
 void setIRD(IR_SENSOR IR_sensor){
@@ -199,6 +198,10 @@ void initIRCalib(void){
 	ADC_DiscModeCmd(PTRCALIB_ADC, ENABLE);
 
 	ADC_Cmd(PTRCALIB_ADC, ENABLE);
+
+	addComReceivedPacketHandler(IR_CALIB_MEASURE, measureIRCalibSingle);
+	addComReceivedPacketHandler(IR_AMBIENT_MEASURE, measureAmbientSingle);
+
 }
 
 void measureIRCalibSingle(uint16_t length, uint8_t *data){
@@ -209,7 +212,15 @@ void measureIRCalibSingle(uint16_t length, uint8_t *data){
 	resetIRD(IR_CALIB);
 	uint8_t bytes[2];
 	ToBytes(&ptr_adc_value, 2, bytes);
-	comSendPacket(IR_CALIB_MEASURE, 2, bytes);
+	comSendPacket(IR_SENSOR_DATA, 2, bytes);
+}
+
+
+void measureAmbientSingle(uint16_t length, uint8_t *data){
+	uint16_t ptr_adc_value = getPTRValue();
+	uint8_t bytes[2];
+	ToBytes(&ptr_adc_value, 2, bytes);
+	comSendPacket(IR_SENSOR_DATA, 2, bytes);
 }
 
 /**

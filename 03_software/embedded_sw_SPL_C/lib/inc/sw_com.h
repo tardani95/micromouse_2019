@@ -17,8 +17,10 @@
 #define COM_TX_PACKET_MAX_LENGTH	100
 
 typedef enum{
-	IR_CALIB_MEASURE,
-	COMMAND_COUNT
+	IR_SENSOR_DATA = 0x01,
+	IR_AMBIENT_MEASURE = 0x03,
+	IR_CALIB_MEASURE = 0x02,
+	COMMAND_COUNT = 2
 }COMMAND;
 
 typedef void (*PacketReceivedHandler)(uint16_t length, uint8_t *data);

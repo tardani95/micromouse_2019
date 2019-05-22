@@ -41,6 +41,7 @@ void initBTModule();
 
 void UART_Send(char *data);
 void UART_DMASend(char *data);
+void UART_DMASendBytes(uint8_t length, char *data);
 void UART_DMA_StartListening(void);
 
 void clearBuffer(void);

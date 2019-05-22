@@ -70,6 +70,7 @@ uint16_t *measureIRAll(void);
 
 void initIRCalib(void);
 void measureIRCalibSingle(uint16_t length, uint8_t *data);
+void measureAmbientSingle(uint16_t length, uint8_t *data);
 /**
  * @}
  */
