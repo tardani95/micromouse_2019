@@ -47,6 +47,12 @@
 		)														\
 	)
 
+#define MotorVoltageLeft(v_mmPs, w_radPs)									\
+	v_mmPs*0.001/STEADY_STATE_GAIN_V_LEFT+w_radPs/STEADY_STATE_GAIN_W_LEFT
+
+#define MotorVoltageRight(v_mmPs, w_radPs)									\
+	v_mmPs*0.001/STEADY_STATE_GAIN_V_RIGHT+w_radPs/STEADY_STATE_GAIN_W_RIGHT
+
 #define m_abs(var) (var >= 0 ? var : -var)
 
 #define m_capVoltageAtMax(voltage_abs) 							\

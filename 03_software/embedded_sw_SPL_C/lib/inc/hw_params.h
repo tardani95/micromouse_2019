@@ -25,6 +25,12 @@
 #define MOT_MAX_SPEED_mmPs	2000.0f
 
 
+#define STEADY_STATE_GAIN_W_LEFT  14.375
+#define STEADY_STATE_GAIN_W_RIGHT -9.157
+#define STEADY_STATE_GAIN_V_LEFT  0.288
+#define STEADY_STATE_GAIN_V_RIGHT 0.183
+
+
 uint16_t distByADCValue(uint16_t adc_value);//TODO: define fcn
 
 /**

@@ -139,11 +139,11 @@ void actuateMotor(MOT_SIDE motor, MOT_DIR dir, uint16_t pulse) {
  * motors enter coasting, but won't brake
  */
 void actuateMotors(float v_mmPs, float w_radPs) {
-	float v_left_mmPs = v_mmPs - w_radPs * AXLE_LENGTH_mm / 2;
-	float v_right_mmPs = v_mmPs + w_radPs * AXLE_LENGTH_mm / 2;
+	//float v_left_mmPs = v_mmPs - w_radPs * AXLE_LENGTH_mm / 2;
+	//float v_right_mmPs = v_mmPs + w_radPs * AXLE_LENGTH_mm / 2;
 
-	float u_left_volt = m_calcMotVoltage(v_left_mmPs);
-	float u_right_volt = m_calcMotVoltage(v_right_mmPs);
+	float u_left_volt = MotorVoltageLeft(v_mmPs,w_radPs);
+	float u_right_volt = MotorVoltageRight(v_mmPs,w_radPs);
 
 	MOT_DIR mot_dir_left = u_left_volt >= 0 ? FORWARD : BACKWARD;
 	MOT_DIR mot_dir_right = u_right_volt >= 0 ? FORWARD : BACKWARD;

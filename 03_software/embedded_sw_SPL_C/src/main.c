@@ -197,15 +197,15 @@ int main(void) {
 
 	/* Infinite loop */
 	while (1) {
-		i++;
+		//i++;
 
-		float battery_voltage = ADC_getBatLvl();
+		//float battery_voltage = ADC_getBatLvl();
 //		uint16_t *adc_readings = ADC_measureIRAll();
-		setLED(LED_PINK);
-		ADC_startIRMeasurement(MS_IRD_OFF);
-		delay_ms(2);
-		uint16_t *adc_readings = ADC_getMeasuredValues();
-		delay_ms(2);
+		//setLED(LED_PINK);
+		//ADC_startIRMeasurement(MS_IRD_OFF);
+		//delay_ms(2);
+		//uint16_t *adc_readings = ADC_getMeasuredValues();
+		//delay_ms(2);
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
 //
@@ -255,13 +255,14 @@ void EXTI15_10_IRQHandler() {
 
 		if (!toggle) {
 
+			//delay_ms(30);
 			/*reset encoder values*/
 			m_resetEncCnt(ENC_LEFT_TIM);
 			m_resetEncCnt(ENC_RIGHT_TIM);
-//			ControlLoop_Cmd(ENABLE);
+			ControlLoop_Cmd(ENABLE);
 
 		} else {
-//			ControlLoop_Cmd(DISABLE);
+			ControlLoop_Cmd(DISABLE);
 			actuateMotor(LEFT, COAST, 0);
 			actuateMotor(RIGHT, COAST, 0);
 //			TIM3->CCR1 = 0;

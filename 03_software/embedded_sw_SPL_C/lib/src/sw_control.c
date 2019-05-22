@@ -69,47 +69,49 @@ void ControlLoop_Cmd(FunctionalState NewState) {
 
 float T = 0.001; // @1 kHz
 
-float Kp = 6.0; /* P */ //1.5
-float Ki = 0.01; /* I */ // 0.05
+//float Kp_w = 1/((STEADY_STATE_GAIN_V_RIGHT+STEADY_STATE_GAIN_W_LEFT)/2); /* P */ //1.5
+float Kp_w = 1; /* P */ //1.5
+float Ki_W = 0.1; /* I */ // 0.05
 float Kd = 0.0; /* D */ //0.1
 
 float I = 0;
 float D = 0;
-float Imax = 50.0; /* anti wind-up */
+float Imax = 1.5; /* anti wind-up */
 
-float e = 0.0;
-float e_d = 0.0;
-float e_max = 1000.0;
+float e_w = 0.0;
+float e_w_prev = 0.0;
+float e_w_max = 1000.0;
 
 float w = 0.0;
-float v_base_mmPs = 650;
+float v_base_mmPs = 200;
 /**
  * control loop function called @1kHz, @see Init_Control() function.
  */
 void CONTROL_LOOP_IRQHandler() {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-	setLED(LED_PINK);
+	//setLED(LED_PINK);
 
 	//TODO user code here
 
-	e_d = e;
+	e_w_prev = e_w;
 
 	volatile uint32_t enc_right = m_getEncCnt(ENC_RIGHT);
 	volatile uint32_t enc_left = m_getEncCnt(ENC_LEFT);
 
-	e = ((float) enc_left - (float) enc_right)/ 8096 * (2 * 3.14) *
+	e_w = -((float) enc_left - (float) enc_right)/ 8096 * (2 * 3.14) *
 			WHEEL_DIAMETER_mm/2 / T / AXLE_LENGTH_mm;
 
-	D = Kd * (e - e_d) / T;
+	//D = Kd * (e_w - e_w_prev) / T;
 
-	I += Ki * e;
+	I += Ki_W * e_w;
 	if (I > Imax)
 		I = Imax;
 	if (I < -Imax)
 		I = -Imax;
 //	I = 0;
 
-	w = Kp * e + I + D;
+	w = Kp_w * e_w + I + D;
+
 
 	if (m_abs(w) > 100) {
 		setLED(LED_YELLOW);
