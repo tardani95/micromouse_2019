@@ -200,12 +200,14 @@ int main(void) {
 		i++;
 
 		float battery_voltage = ADC_getBatLvl();
-//		uint16_t *adc_readings = ADC_measureIRAll();
 		setLED(LED_PINK);
 		ADC_startIRMeasurement(MS_IRD_OFF);
-		delay_ms(2);
+		delay_ms(1);
 		uint16_t *adc_readings = ADC_getMeasuredValues();
-		delay_ms(2);
+		setLED(LED_YELLOW);
+		IMU_DMA_GetRaw();
+
+
 //		while (!USART_GetFlagStatus(BT_UART, USART_FLAG_RXNE))
 //			;
 //

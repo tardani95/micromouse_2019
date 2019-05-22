@@ -1,11 +1,12 @@
 /***********************
- * @file 	hw_mpu6050.c
+ * @file 	hw_IMU.c
  * @author	tard
  * @date	Apr 12, 2019
  * @version	vx_x
  ************************/
 
-#include <hw_IMU.h>
+#include "hw_IMU.h"
+#include "hw_status_led.h"
 
 /** @addtogroup hardware_modules
  * @{
@@ -338,6 +339,9 @@ void IMU_DMA_BufferRead(uint8_t regAddr, uint16_t numByteToRead) {
 
 }
 
+/**
+ * takes 420 us to read mpu6050 values with non polling dma
+ */
 void IMU_DMA_GetRaw() {
 	i2cDirectionWrite = 1;
 	DMA_SetCurrDataCounter(I2Cx_DMA_STREAM_TX, 1);
@@ -377,6 +381,9 @@ void I2C1_EV_IRQHandler(void) {
 	}
 }
 
+/**
+ * takes 20us to calculate the values
+ */
 void MPU6050_CalcAccelRot() {
 
 	accel_temp_gyro[0] = (int16_t) (i2cRxBuffer[0] << 8 | i2cRxBuffer[1]);
@@ -393,6 +400,7 @@ void MPU6050_CalcAccelRot() {
 
 	temp_C = (float) accel_temp_gyro[3] / 340 + 36.53;
 
+	//TODO correct values
 	rotX = (float) accel_temp_gyro[4] / 65.5; //131.0; gyro @250 [LSB / deg/s]
 	rotY = (float) accel_temp_gyro[5] / 65.5; //65.5   gyro @500 [LSB / deg/s]
 	rotZ = (float) accel_temp_gyro[6] / 65.5; //131.0;
@@ -400,7 +408,7 @@ void MPU6050_CalcAccelRot() {
 //	gForceX = (float) accel_gyro_temp[0] / 16384.0 * 9810;
 //	gForceY = (float) accel_gyro_temp[1] / 16384.0 * 9810;
 //	gForceZ = (float) accel_gyro_temp[2] / 16384.0 * 9810;
-
+	resetLED(LED_YELLOW);
 }
 
 /**
@@ -412,16 +420,13 @@ void DMA1_Stream0_IRQHandler(void) {
 	I2C_GenerateSTOP(I2Cx, ENABLE);
 	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
 	DMA_Cmd(I2Cx_DMA_STREAM_RX, DISABLE);
-
 	MPU6050_CalcAccelRot();
 }
 
-///**
-// * tx
-// */
-//void DMA1_Stream6_IRQHandler(void) {
-//	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
-//}
+/* tx
+void DMA1_Stream6_IRQHandler(void) {
+	DMA_Cmd(I2Cx_DMA_STREAM_TX, DISABLE);
+}*/
 
 /**
  * @}
