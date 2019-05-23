@@ -180,28 +180,21 @@ int main(void) {
 
 	Init_Periph();
 
-//	uint32_t enc_left;
-//	uint32_t enc_right;
-//	actuateMotors(7000, 0);
-	UART_DMASend("checkpoint1\n");
+	UART_DMASendString("checkpoint1\n");
+	delay_ms(10);
 
-//	IMU_DMA_GetRaw();
-//	delaySome_ms();
-
-//	IMU_DMA_GetRaw();
-//	delaySome_ms();
-
-//	setLED(PINK);
-
-	UART_DMASend("checkpoint2\n");
-
+	UART_DMASendString("checkpoint2\n");
 	UART_DMA_StartListening();
 
 	/* Infinite loop */
 	while (1) {
-		//i++;
+		i++;
 
-		//float battery_voltage = ADC_getBatLvl();
+		float battery_voltage = ADC_getBatLvl();
+		uint32_t enc_left = m_getEncCnt(ENC_LEFT_TIM);
+		delay_ms(1);
+		uint32_t enc_right = m_getEncCnt(ENC_RIGHT_TIM);
+		delay_ms(1);
 //		uint16_t *adc_readings = ADC_measureIRAll();
 		//setLED(LED_PINK);
 		//ADC_startIRMeasurement(MS_IRD_OFF);
@@ -261,7 +254,9 @@ void EXTI15_10_IRQHandler() {
 			/*reset encoder values*/
 			m_resetEncCnt(ENC_LEFT_TIM);
 			m_resetEncCnt(ENC_RIGHT_TIM);
-			ControlLoop_Cmd(ENABLE);
+//			actuateMotor(LEFT, FORWARD, 150);
+			actuateMotor(RIGHT, FORWARD, 100);
+//			ControlLoop_Cmd(ENABLE);
 
 		} else {
 			ControlLoop_Cmd(DISABLE);

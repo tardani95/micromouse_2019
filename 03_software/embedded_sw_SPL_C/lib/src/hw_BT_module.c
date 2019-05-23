@@ -137,19 +137,41 @@ void UART_Send(char *data) {
 }
 
 /**
- * @brief Sends a string with DMA
+ * @brief Sends a string with DMA with XCP protocol
+ * @note  First send length then data
  * @param data String to send
  */
-void UART_DMASend(char *data) {
+void UART_DMASendString(char *data) {
 	uint8_t length = 0;
 	while (data[length] != '\0') {
 		length++;
 	}
-	strcpy(uartTxBuffer, data);
+	uartTxBuffer[0] = length;
+	strcpy(uartTxBuffer + 1, data);
 
 	/* start transmission */
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
-	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length);
+	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length + 1);
+	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
+	while (ENABLE != DMA_GetCmdStatus(BT_UART_TX_DMA_Stream))
+		;
+}
+
+/**
+ * @brief Sends a given sized byte array with XCP protocol
+ * @note  First send size then data
+ * @param data
+ * @param size
+ */
+void UART_DMASendByteArray(uint8_t *data, uint8_t size) {
+	//TODO test function
+	uartTxBuffer[0] = length;
+	for(uint8_t i = 0; i<size;i++){
+		uartTxBuffer[i+1] = data[i];
+	}
+	/* start transmission */
+	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
+	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, length + 1);
 	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
 	while (ENABLE != DMA_GetCmdStatus(BT_UART_TX_DMA_Stream))
 		;
@@ -175,8 +197,7 @@ void USART3_IRQHandler() {
 		length = (uint8_t) USART3->DR;
 
 		if (100 <= length) {
-			UART_DMASend(
-					"420 - too many bytes\n");
+			UART_DMASendString("420 - too many bytes\n");
 		} else {
 			DMA_SetCurrDataCounter(BT_UART_RX_DMA_Stream, length);
 			USART_DMACmd(BT_UART, USART_DMAReq_Rx, ENABLE);
