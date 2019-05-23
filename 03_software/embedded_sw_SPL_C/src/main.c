@@ -67,10 +67,8 @@
  * @{
  */
 
-//#define STM_EVAL /* TODO comment it out if the stm evaluation board is not used */
 /* Includes */
 #include "stm32f4xx.h"
-
 #include "misc.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -107,9 +105,13 @@
  * @}
  */
 
+//#define STM_EVAL /* comment this line if the stm evaluation board is not used */
+
 #ifdef STM_EVAL
 #include "stm32f4_discovery.h"
 #endif
+
+#define OnButtonPressed  EXTI15_10_IRQHandler
 
 /* Private macro */
 /* Private variables */
@@ -124,7 +126,6 @@
 volatile uint8_t toggle = 1;
 volatile uint8_t rgb_led_status = 0;
 volatile uint8_t adsf = 1;
-
 
 uint32_t enc_left;
 uint32_t enc_right;
@@ -196,10 +197,12 @@ int main(void) {
 		i++;
 
 		battery_voltage = ADC_getBatLvl();
+		m_resetEncCnt(ENC_LEFT_TIM);
+		m_resetEncCnt(ENC_RIGHT_TIM);
+		delay_ms(1);
 		enc_left = m_getEncCnt(ENC_LEFT_TIM);
-		delay_ms(1);
 		enc_right = m_getEncCnt(ENC_RIGHT_TIM);
-		delay_ms(1);
+		delay_us(100);
 //		uint16_t *adc_readings = ADC_measureIRAll();
 		//setLED(LED_PINK);
 		//ADC_startIRMeasurement(MS_IRD_OFF);
@@ -237,9 +240,9 @@ int main(void) {
 }
 
 /**
- * external interrupt handler for the buttons
+ * @brief external interrupt handler for the buttons
  */
-void EXTI15_10_IRQHandler() {
+void OnButtonPressed() {
 	/**
 	 * @note sometimes button 1 interrupt also gets called when button 2 is pressed
 	 *  it is because we forgot to put an 1k resistor between the button and the ground
@@ -249,36 +252,18 @@ void EXTI15_10_IRQHandler() {
 	if (SET == EXTI_GetITStatus(BTN1_EXTI_Line)) {
 
 		//INFO("Button1 pressed");
-		//TODO handle button1 pressed action
-
 		toggle = !toggle;
-
 		if (!toggle) {
-
-			//delay_ms(30);
 			/*reset encoder values*/
-			m_resetEncCnt(ENC_LEFT_TIM);
-			m_resetEncCnt(ENC_RIGHT_TIM);
-//			actuateMotor(LEFT, FORWARD, 150);
-			actuateMotor(RIGHT, FORWARD, 100);
+//			m_resetEncCnt(ENC_LEFT_TIM);
+//			m_resetEncCnt(ENC_RIGHT_TIM);
+			actuateMotor(LEFT, FORWARD, 300);
+			actuateMotor(RIGHT, FORWARD, 400);
 //			ControlLoop_Cmd(ENABLE);
-
 		} else {
 			ControlLoop_Cmd(DISABLE);
 			actuateMotor(LEFT, COAST, 0);
 			actuateMotor(RIGHT, COAST, 0);
-//			TIM3->CCR1 = 0;
-//			TIM3->CCR2 = 0;
-//			TIM3->CCR3 = 0;
-//			TIM3->CCR4 = 0;
-//			volatile uint32_t testLEFT = TIM1->CNT;
-//			volatile uint32_t testRIGHT = TIM4->CNT;
-//			int j;
-//			if (testRIGHT > ENC_CNT_BASEVALUE) {
-//				j = 0;
-//			} else {
-//				j = 1;
-//			}
 		}
 
 		rgb_led_status++;
@@ -289,8 +274,6 @@ void EXTI15_10_IRQHandler() {
 	if (SET == EXTI_GetITStatus(BTN2_EXTI_Line)) {
 
 		//INFO("Button2 pressed");
-		//TODO handle button2 pressed action
-
 		rgb_led_status++;
 		EXTI_ClearITPendingBit(BTN2_EXTI_Line);
 	}

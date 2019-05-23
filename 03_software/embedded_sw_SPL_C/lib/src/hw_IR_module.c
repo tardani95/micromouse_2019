@@ -86,7 +86,6 @@ void initIR(void) {
 
 //	ADC_Cmd(PTR_ADC, ENABLE);
 
-	//TODO: sample time?
 	ADC_EOCOnEachRegularChannelCmd(PTR_ADC, ENABLE);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_LF_CH, 1, PTR_ADC_SAMPLE_TIME);
 	ADC_RegularChannelConfig(PTR_ADC, PTR_RS_CH, 2, PTR_ADC_SAMPLE_TIME);
@@ -101,7 +100,6 @@ void initIR(void) {
 	ADC_ITConfig(PTR_ADC, ADC_IT_EOC, ENABLE);
 
 	ADC_Cmd(PTR_ADC, ENABLE);
-	//TODO: ADC calibration?
 }
 
 void setIRD(IR_SENSOR IR_sensor) {

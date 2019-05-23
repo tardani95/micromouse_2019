@@ -77,7 +77,6 @@ void initButtons() {
 
 }
 
-//TODO user code here
 /**
  * @}
  */

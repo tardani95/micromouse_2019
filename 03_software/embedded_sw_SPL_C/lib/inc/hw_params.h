@@ -18,7 +18,7 @@
 
  //TODO: measure params
 #define WHEEL_DIAMETER_mm 	20
-#define AXLE_LENGTH_mm 		40
+#define AXLE_LENGTH_mm 		45
 #define MOTOR_SPEED_CONSTANT_rpmPvolt 	4000
 #define MOT_MAX_VOLT 		3.3f
 #define VCC 				3.3f

@@ -49,7 +49,6 @@ void sendToPC(Target target, char *verbosity, char *src, char *msg);
 void consoleSend(char *msg);
 void waitForAck(void);
 
-//TODO user code here
 /**
  * @}
  */

@@ -16,7 +16,6 @@
  * @{
  */
 
-//TODO user code here
 /**
  * @}
  */

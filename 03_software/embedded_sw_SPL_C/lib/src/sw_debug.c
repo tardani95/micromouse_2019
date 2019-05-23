@@ -47,7 +47,6 @@ void consoleSend(char *msg){
 	BTSendString(msg);
 }
 
-//TODO user code here
 /**
  * @}
  */

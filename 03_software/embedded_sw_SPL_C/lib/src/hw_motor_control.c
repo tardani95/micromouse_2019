@@ -69,7 +69,7 @@ void initMotorControl(void) {
 
 	/*Configure PWM*/
 	TIM_OCInitTypeDef mot_ctrl_OCInitStructure;
-	mot_ctrl_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1; //TODO: difference between pwm1 and pwm2
+	mot_ctrl_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
 	mot_ctrl_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
 	mot_ctrl_OCInitStructure.TIM_OutputNState = TIM_OutputState_Disable;
 	mot_ctrl_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;

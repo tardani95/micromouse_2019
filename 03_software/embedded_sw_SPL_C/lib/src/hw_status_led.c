@@ -106,7 +106,7 @@ void initStatusLEDs(void){
 
 	/*Configure PWM*/
 	TIM_OCInitTypeDef RGB_OCInitStructure;
-	RGB_OCInitStructure.TIM_OCMode = 		TIM_OCMode_PWM1; //TODO: difference between pwm1 and pwm2
+	RGB_OCInitStructure.TIM_OCMode = 		TIM_OCMode_PWM1;
 	RGB_OCInitStructure.TIM_OutputState = 	TIM_OutputState_Disable;
 	RGB_OCInitStructure.TIM_OutputNState = 	TIM_OutputState_Enable;
 	RGB_OCInitStructure.TIM_OCPolarity = 	TIM_OCPolarity_Low;

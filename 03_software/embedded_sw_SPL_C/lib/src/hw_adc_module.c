@@ -143,7 +143,6 @@ void ADC_delayTIM_IRQHandler() {
 }
 
 void ADC_IRQHandler() {
-	//TODO clear IT pending bits
 	if (ADC_GetITStatus(BAT_LVL_WATCHER_ADC, ADC_IT_AWD) == SET) {
 		ADC_ClearITPendingBit(BAT_LVL_WATCHER_ADC, ADC_IT_AWD);
 		setLED(LED_YELLOW);

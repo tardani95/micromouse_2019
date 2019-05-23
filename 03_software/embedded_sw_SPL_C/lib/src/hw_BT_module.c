@@ -32,8 +32,7 @@ void initBTModule() {
 
 	/* Enable USART clock */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
-
-	//TODO call USART_OverSampling8Cmd(); if need higher baud rates (1MHz or more)
+	/*call USART_OverSampling8Cmd(); if need higher baud rates (1MHz or more)*/
 
 	/* Enable GPIO clock*/
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);

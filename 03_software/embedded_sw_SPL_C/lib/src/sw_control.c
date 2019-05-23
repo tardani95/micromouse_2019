@@ -91,8 +91,6 @@ void CONTROL_LOOP_IRQHandler() {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	//setLED(LED_PINK);
 
-	//TODO user code here
-
 	e_w_prev = e_w;
 
 	volatile uint32_t enc_right = m_getEncCnt(ENC_RIGHT);
@@ -127,8 +125,6 @@ void CONTROL_LOOP_IRQHandler() {
 
 	resetLED(LED_PINK);
 }
-
-//TODO user code here
 
 /**
  * @}

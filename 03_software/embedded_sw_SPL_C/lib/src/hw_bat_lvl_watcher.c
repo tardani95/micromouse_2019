@@ -60,8 +60,6 @@ void initBatLvlWatcher(void) {
 	ADC_ITConfig(BAT_LVL_WATCHER_ADC, ADC_IT_AWD, ENABLE);
 
 	ADC_Cmd(BAT_LVL_WATCHER_ADC, ENABLE);
-
-	//TODO: ADC calibration?
 }
 
 float getBatLvl(void) {

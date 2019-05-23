@@ -35,7 +35,7 @@
 #define ENC_RIGHT ENC_RIGHT_TIM
 #define ENC_LEFT ENC_LEFT_TIM
 
-#define ENC_CNT_BASEVALUE 32768
+#define ENC_CNT_BASEVALUE 30000//32768
 
 #define m_getEncCnt(enc_timer) 			(enc_timer->CNT)
 #define m_setEncCnt(enc_timer, value) 	(enc_timer->CNT = value)

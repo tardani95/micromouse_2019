@@ -18,7 +18,6 @@
  * @{
  */
 
-//TODO user code here
 #define CONTROL_LOOP_PERIOD_us		1000
 
 #define CONTROL_LOOP_IRQHandler		TIM2_IRQHandler
@@ -26,6 +25,10 @@
 void initControl();
 void ControlLoop_Cmd(FunctionalState NewState);
 void CONTROL_LOOP_IRQHandler();
+
+
+
+
 /**
  * @}
  * end of control pane
@@ -34,6 +37,5 @@ void CONTROL_LOOP_IRQHandler();
  * @}
  * end of software_modules
  */
-
 
 #endif /* SW_CONTROL_H_ */
