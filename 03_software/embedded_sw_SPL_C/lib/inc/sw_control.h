@@ -23,7 +23,7 @@
 
 #define CONTROL_LOOP_IRQHandler		TIM2_IRQHandler
 
-void Init_Control();
+void initControl();
 void ControlLoop_Cmd(FunctionalState NewState);
 void CONTROL_LOOP_IRQHandler();
 /**

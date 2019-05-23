@@ -24,7 +24,7 @@
 /**
  * Initialize control loop @1kHz
  */
-void Init_Control() {
+void initControl() {
 
 	/* Enable TIM clock using RCC_APBxPeriphClockCmd(RCC_APBxPeriph_TIMx, ENABLE) function */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);

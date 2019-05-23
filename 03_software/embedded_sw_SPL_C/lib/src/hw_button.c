@@ -60,7 +60,7 @@ void Init_Button2() {
  * @param 	None
  * @return	None
  */
-void Init_Buttons() {
+void initButtons() {
 
 
 	Init_Button();

@@ -36,7 +36,7 @@
 #define BTN2_PORT		GPIOB
 #define BTN2_EXTI_Line  EXTI_Line13
 
-void Init_Buttons(void);
+void initButtons(void);
 /**
  * @}
  */
