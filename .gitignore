@@ -102,3 +102,8 @@
 03_software/embedded_sw_SPL_C/Debug_STM32F415RG_FLASH\.ld
 
 #03_software/embedded_sw_SPL_C/\.cproject
+
+03_software/bootloader/Debug/
+
+*.o
+*.obj
