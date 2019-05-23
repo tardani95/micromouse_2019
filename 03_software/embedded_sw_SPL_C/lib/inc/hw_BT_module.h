@@ -39,15 +39,25 @@
 
 void initBTModule();
 
-void UART_Send(char *data);
 void UART_DMASendString(char *data);
 void UART_DMASendByteArray(uint8_t *data, uint8_t size);
 void UART_DMA_StartListening(void);
 
 void clearBuffer(void);
 
+/**
+ * @deprecated
+ */
+void UART_Send(char *data);
+/**
+ * @deprecated
+ */
 void BTSendString(char *string);
-void BTSendChar(char string);
+/**
+ * @deprecated
+ */
+void BTSendChar(char c);
+
 
 /**
  * @}
