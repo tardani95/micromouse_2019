@@ -1,3 +1,6 @@
 [submodule "08_utility_software/java_maze_visualizer"]
 	path = 08_utility_software/java_maze_visualizer
 	url = https://github.com/tardani95/java_maze_solver_visualizer.git
+[submodule "08_utility_software/PortMediator"]
+	path = 08_utility_software/PortMediator
+	url = https://github.com/resizoltan/PortMediator.git
