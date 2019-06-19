@@ -74,20 +74,35 @@ void debug(char* varname, DEBUG_TYPE type, void* varpointer){
 	if(debug_index + 1 < DEBUG_DATA_COUNT){
 		debug_index++;
 		debug_data[index].debug_type = type;
-		strcpy(debug_data[index].name, varname);
+		strcpy(&debug_data[index].name, varname);
 		debug_data[index].pointer = &varpointer;
 	}
 };
 
+void announceDebugData(){
+	for(uint8_t index = 0; i < DEBUG_DATA_COUNT; i++){
+		if(debug_data[index].debug_type != DEBUG_TYPE_NONE){
+			uint8_t uart_index = 0;
+			uart_buffer[uart_index++] = index;
+			uart_buffer[uart_index++] = (uint8_t)debug_data[index].debug_type;
+			strcpy(&uart_buffer[uart_index], debug_data[index].name);
+			uart_index += DEBUG_NAME_MAX_LENGTH;
+			UART_DMASendByteArray(uart_buffer, uart_index);
+		}
+	}
+}
 
-void sendDebug(DEBUG_DEFINITION debug_definition){
+
+void sendDebugData(){
 	uint8_t uart_index = 0;
 	for(uint8_t index = 0; i < DEBUG_DATA_COUNT; i++){
 		if(debug_data[index].debug_type != DEBUG_TYPE_NONE){
 			uint8_t data_size = data_sizes[(int)debug_data[index].debug_type];
-			uart_buffer[uart_index] = (char)debug_data[index].debug_type;
+			ToBytes(debug_data[index].pointer, data_size, &uart_buffer[uart_index]);
+			uart_index += data_size;
 		}
 	}
+	UART_DMASendByteArray(uart_buffer, uart_index);
 }
 
 /**
