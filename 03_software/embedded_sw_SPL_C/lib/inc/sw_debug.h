@@ -8,6 +8,8 @@
 #define SW_DEBUG_H_
 
 #include <string.h>
+#include "stm32f4xx.h"
+
 
 /** @addtogroup software_modules
  * @{
@@ -43,6 +45,55 @@ typedef enum{
 
 /*#define DEBUG(msg) 	 (consoleWrite("", "",   msg))
 #define INFO(msg) 	 (consoleWrite("", "",   msg))*/
+
+typedef enum{
+	DEBUG_TYPE_UINT8,
+	DEBUG_TYPE_INT8,
+	DEBUG_TYPE_UINT16,
+	DEBUG_TYPE_INT16,
+	DEBUG_TYPE_UINT32,
+	DEBUG_TYPE_INT32,
+	DEBUG_TYPE_FLOAT,
+	DEBUG_TYPE_DOUBLE,
+	DEBUG_TYPE_NONE
+}DEBUG_TYPE;
+
+#define DEBUG_NAME_MAX_LENGTH 15
+#define DEBUG_DATA_COUNT 6
+
+typedef struct{
+	DEBUG_TYPE debug_type;
+	char name[DEBUG_NAME_MAX_LENGTH];
+	void* pointer;
+}DEBUG_DEFINITION;
+
+#define DEBUG_INIT_VALUE {				\
+		.debug_type = DEBUG_TYPE_NONE,	\
+		.name = "undefined",			\
+		.pointer = NULL					\
+	}
+
+/*#define allow_debug()						\
+	DEBUG_DEFINITION debug_data_##__FILE_PATH__[DEBUG_DATA_PER_FILE]= { \
+		DEBUG_INIT_VALUE, \
+		DEBUG_INIT_VALUE, \
+		DEBUG_INIT_VALUE, \
+		DEBUG_INIT_VALUE, \
+		DEBUG_INIT_VALUE, \
+		DEBUG_INIT_VALUE, \
+}*/
+
+
+/*#define debug(index, varname, type, variable)					\
+	debug_data_##__FILE_PATH__[index].debug_type = type;		\
+	strcpy(debug_data_##__FILE_PATH__[index].name, #varname);	\
+	debug_data_##__FILE_PATH__[index].pointer = &variable
+*/
+
+
+
+void debug(char* varname, DEBUG_TYPE type, void* varpointer);
+void sendDebug(DEBUG_DEFINITION debug_definition);
 
 
 void sendToPC(Target target, char *verbosity, char *src, char *msg);

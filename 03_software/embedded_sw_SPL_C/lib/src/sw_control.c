@@ -11,6 +11,7 @@
 #include "hw_encoder.h"
 #include "hw_params.h"
 #include "hw_status_led.h"
+#include "sw_debug.h"
 #include "misc.h"
 
 /** @addtogroup software_modules
@@ -61,6 +62,8 @@ void initControl() {
 //	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 }
 
+
+
 void ControlLoop_Cmd(FunctionalState NewState) {
 	TIM_Cmd(TIM2, NewState);
 	TIM2->CNT = 0;
@@ -84,6 +87,7 @@ float e_w_max = 1000.0;
 
 float w = 0.0;
 float v_base_mmPs = 200;
+
 /**
  * control loop function called @1kHz, @see Init_Control() function.
  */
@@ -124,6 +128,12 @@ void CONTROL_LOOP_IRQHandler() {
 	m_resetEncCnt(ENC_LEFT);
 
 	resetLED(LED_PINK);
+}
+
+
+void initControlDebug(){
+	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
+	debug("I" , DEBUG_TYPE_FLOAT, &I);
 }
 
 /**

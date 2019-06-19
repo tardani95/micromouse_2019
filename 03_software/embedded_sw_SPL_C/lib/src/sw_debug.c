@@ -47,6 +47,49 @@ void consoleSend(char *msg){
 	BTSendString(msg);
 }
 
+DEBUG_DEFINITION debug_data[DEBUG_DATA_COUNT]= {
+		DEBUG_INIT_VALUE,
+		DEBUG_INIT_VALUE,
+		DEBUG_INIT_VALUE,
+		DEBUG_INIT_VALUE,
+		DEBUG_INIT_VALUE,
+		DEBUG_INIT_VALUE,
+};
+
+uint8_t debug_index = 0;
+uint8_t data_sizes[DEBUG_TYPE_NONE] = {
+		1,
+		1,
+		2,
+		2,
+		4,
+		4,
+		4,
+		8,
+		0
+};
+
+
+void debug(char* varname, DEBUG_TYPE type, void* varpointer){
+	if(debug_index + 1 < DEBUG_DATA_COUNT){
+		debug_index++;
+		debug_data[index].debug_type = type;
+		strcpy(debug_data[index].name, varname);
+		debug_data[index].pointer = &varpointer;
+	}
+};
+
+
+void sendDebug(DEBUG_DEFINITION debug_definition){
+	uint8_t uart_index = 0;
+	for(uint8_t index = 0; i < DEBUG_DATA_COUNT; i++){
+		if(debug_data[index].debug_type != DEBUG_TYPE_NONE){
+			uint8_t data_size = data_sizes[(int)debug_data[index].debug_type];
+			uart_buffer[uart_index] = (char)debug_data[index].debug_type;
+		}
+	}
+}
+
 /**
  * @}
  */
