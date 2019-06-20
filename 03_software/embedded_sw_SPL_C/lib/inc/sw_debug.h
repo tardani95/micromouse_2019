@@ -93,7 +93,8 @@ typedef struct{
 
 
 void debug(char* varname, DEBUG_TYPE type, void* varpointer);
-void sendDebug(DEBUG_DEFINITION debug_definition);
+void announceDebugData();
+void sendDebugData();
 
 
 void sendToPC(Target target, char *verbosity, char *src, char *msg);

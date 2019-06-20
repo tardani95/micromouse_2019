@@ -6,6 +6,7 @@
 
 #include "sw_debug.h"
 #include "hw_BT_module.h"
+#include "util.h"
 #include <string.h>
 
 /** @addtogroup software_modules
@@ -65,29 +66,28 @@ uint8_t data_sizes[DEBUG_TYPE_NONE] = {
 		4,
 		4,
 		4,
-		8,
-		0
+		8
 };
 
 
 void debug(char* varname, DEBUG_TYPE type, void* varpointer){
 	if(debug_index + 1 < DEBUG_DATA_COUNT){
 		debug_index++;
-		debug_data[index].debug_type = type;
-		strcpy(&debug_data[index].name, varname);
-		debug_data[index].pointer = &varpointer;
+		debug_data[debug_index].debug_type = type;
+		strcpy(debug_data[debug_index].name, varname);
+		debug_data[debug_index].pointer = &varpointer;
 	}
 };
 
 void announceDebugData(){
-	for(uint8_t index = 0; i < DEBUG_DATA_COUNT; i++){
-		if(debug_data[index].debug_type != DEBUG_TYPE_NONE){
+	for(uint8_t i = 0; i < DEBUG_DATA_COUNT; i++){
+		if(debug_data[i].debug_type != DEBUG_TYPE_NONE){
 			uint8_t uart_index = 0;
-			uart_buffer[uart_index++] = index;
-			uart_buffer[uart_index++] = (uint8_t)debug_data[index].debug_type;
-			strcpy(&uart_buffer[uart_index], debug_data[index].name);
+			uart_buffer[uart_index++] = i;
+			uart_buffer[uart_index++] = (uint8_t)debug_data[i].debug_type;
+			strcpy(&uart_buffer[uart_index], debug_data[i].name);
 			uart_index += DEBUG_NAME_MAX_LENGTH;
-			UART_DMASendByteArray(uart_buffer, uart_index);
+			UART_DMASendByteArray((uint8_t*)uart_buffer, uart_index);
 		}
 	}
 }
@@ -95,14 +95,14 @@ void announceDebugData(){
 
 void sendDebugData(){
 	uint8_t uart_index = 0;
-	for(uint8_t index = 0; i < DEBUG_DATA_COUNT; i++){
+	for(uint8_t index = 0; index < DEBUG_DATA_COUNT; index++){
 		if(debug_data[index].debug_type != DEBUG_TYPE_NONE){
 			uint8_t data_size = data_sizes[(int)debug_data[index].debug_type];
-			ToBytes(debug_data[index].pointer, data_size, &uart_buffer[uart_index]);
+			ToBytes(debug_data[index].pointer, data_size, (uint8_t*)&uart_buffer[uart_index]);
 			uart_index += data_size;
 		}
 	}
-	UART_DMASendByteArray(uart_buffer, uart_index);
+	UART_DMASendByteArray((uint8_t*)uart_buffer, uart_index);
 }
 
 /**
