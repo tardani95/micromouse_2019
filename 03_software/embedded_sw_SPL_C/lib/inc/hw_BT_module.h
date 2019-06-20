@@ -37,6 +37,9 @@
 #define BT_UART_TX_DMA_Stream	DMA1_Stream3
 #define BT_UART_RX_DMA_Stream	DMA1_Stream1
 
+#define BLE_MESSAGE_SIZE	20
+#define DATA_BUFFER_SIZE	255
+
 void initBTModule();
 
 void UART_DMASendString(char *data);

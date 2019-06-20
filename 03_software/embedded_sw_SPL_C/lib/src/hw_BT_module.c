@@ -18,8 +18,31 @@
  */
 
 uint8_t length = 0;
-char uartRxBuffer[100] = { };
-char uartTxBuffer[100] = { };
+char uart_rx_buffer[100] = { };
+char uart_tx_buffer[BLE_MESSAGE_SIZE] = { };
+char data_tx_buffer[DATA_BUFFER_SIZE] = { };
+uint16_t end_index = 0;
+uint16_t start_index = 0;
+uint8_t sending_in_progress = 0;
+
+uint16_t incrementStartIndex(){
+	start_index = start_index == DATA_BUFFER_SIZE ? 0 : start_index + 1;
+	return start_index;
+}
+
+uint16_t incrementEndIndex(){
+	end_index = end_index == DATA_BUFFER_SIZE ? 0 : end_index + 1;
+	return end_index;
+}
+
+uint16_t remainingDataSize(){
+	uint16_t remaining_data_size = 0;
+	if(end_index >= start_index)
+		remaining_data_size = end_index - start_index;
+	else
+		remaining_data_size = DATA_BUFFER_SIZE - start_index + end_index;
+	return remaining_data_size;
+}
 
 /**
  * @brief Initialize the Bluetooth module
@@ -79,14 +102,14 @@ void initBTModule() {
 
 	/* DMA 1, Stream3, CH4 for USART3 TX */
 	bt_dma.DMA_DIR = DMA_DIR_MemoryToPeripheral;
-	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uartTxBuffer;
+	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uart_tx_buffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
 	bt_dma.DMA_BufferSize = 0;
 	DMA_Init(BT_UART_TX_DMA_Stream, &bt_dma);
 
 	/* DMA 1, Stream1, CH4 for USART3 RX */
 	bt_dma.DMA_DIR = DMA_DIR_PeripheralToMemory;
-	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uartRxBuffer;
+	bt_dma.DMA_Memory0BaseAddr = (uint32_t) uart_rx_buffer;
 	bt_dma.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
 	bt_dma.DMA_BufferSize = 10;
 	DMA_Init(BT_UART_RX_DMA_Stream, &bt_dma);
@@ -135,6 +158,40 @@ void UART_Send(char *data) {
 	}
 }
 
+void UART_DMASendNextBlock(){
+	uint16_t remaining_data_size = remainingDataSize();
+	uint8_t size = remaining_data_size > BLE_MESSAGE_SIZE ? BLE_MESSAGE_SIZE : (uint8_t)remaining_data_size;
+	for(uint8_t i = 0; i < size; i++){
+		uart_tx_buffer[i] = data_tx_buffer[start_index];
+		incrementStartIndex();
+	}
+
+	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
+	DMA_SetCurrDataCounter(BT_UART_TX_DMA_Stream, size);
+	DMA_Cmd(BT_UART_TX_DMA_Stream, ENABLE);
+	while (ENABLE != DMA_GetCmdStatus(BT_UART_TX_DMA_Stream))
+		;
+}
+
+void UART_DMASendXCPMessage(uint8_t *data, uint8_t size) {
+	//TODO test function
+	data_tx_buffer[incrementEndIndex()] = size;
+	for(uint8_t i = 0; i < size; i++){
+		data_tx_buffer[incrementEndIndex()] = data[i];
+	}
+	if(!sending_in_progress)
+		UART_DMASendNextBlock();
+}
+
+void UART_DMASendString2(char *data) {
+	uint8_t size = 0;
+	while (data[size] != '\0') {
+		size++;
+	}
+
+	UART_DMASendXCPMessage((uint8_t*)data, size);
+}
+
 /**
  * @brief Sends a string with DMA with XCP protocol
  * @note  First send length then data
@@ -145,8 +202,8 @@ void UART_DMASendString(char *data) {
 	while (data[length] != '\0') {
 		length++;
 	}
-	uartTxBuffer[0] = length;
-	strcpy(uartTxBuffer + 1, data);
+	uart_tx_buffer[0] = length;
+	strcpy(uart_tx_buffer + 1, data);
 
 	/* start transmission */
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
@@ -164,9 +221,9 @@ void UART_DMASendString(char *data) {
  */
 void UART_DMASendByteArray(uint8_t *data, uint8_t size) {
 	//TODO test function
-	uartTxBuffer[0] = length;
+	uart_tx_buffer[0] = length;
 	for(uint8_t i = 0; i<size;i++){
-		uartTxBuffer[i+1] = data[i];
+		uart_tx_buffer[i+1] = data[i];
 	}
 	/* start transmission */
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
@@ -231,6 +288,12 @@ void DMA1_Stream3_IRQHandler(void) {
 	DMA_ClearFlag(BT_UART_TX_DMA_Stream, DMA_FLAG_TCIF3);
 	/* disable dma after send */
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
+
+	if(remainingDataSize() > 0)
+		UART_DMASendNextBlock();
+	else
+		sending_in_progress = 0;
+
 }
 
 /**
@@ -238,8 +301,8 @@ void DMA1_Stream3_IRQHandler(void) {
  */
 void clearBuffer() {
 	uint16_t i = length;
-	while (uartRxBuffer[i] != '\0') {
-		uartRxBuffer[i] = '\0';
+	while (uart_rx_buffer[i] != '\0') {
+		uart_rx_buffer[i] = '\0';
 		i++;
 	}
 }
