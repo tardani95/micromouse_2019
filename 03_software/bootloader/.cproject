@@ -12,17 +12,17 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="elf" artifactName="openblt_olimex_stm32p405" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GCCErrorParser" id="com.atollic.truestudio.exe.debug.642280785" name="Debug" parent="com.atollic.truestudio.exe.debug" postannouncebuildStep="" postbuildStep="" preannouncebuildStep="" prebuildStep="">
+				<configuration artifactExtension="elf" artifactName="openblt_micromouse2019" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GCCErrorParser" id="com.atollic.truestudio.exe.debug.642280785" name="Debug" parent="com.atollic.truestudio.exe.debug" postannouncebuildStep="" postbuildStep="" preannouncebuildStep="" prebuildStep="">
 					<folderInfo id="com.atollic.truestudio.exe.debug.642280785." name="/" resourcePath="">
 						<toolChain errorParsers="" id="com.atollic.truestudio.exe.debug.toolchain.736192883" name="Atollic ARM Tools" superClass="com.atollic.truestudio.exe.debug.toolchain">
 							<option id="com.atollic.truestudio.general.runtimelib.357995367" name="Runtime Library" superClass="com.atollic.truestudio.general.runtimelib" useByScannerDiscovery="false" value="com.atollic.truestudio.ld.general.clib.small" valueType="enumerated"/>
-							<option id="com.atollic.truestudio.toolchain_options.mcu.1447360115" name="Microcontroller" superClass="com.atollic.truestudio.toolchain_options.mcu" useByScannerDiscovery="false" value="STM32F405RG" valueType="string"/>
+							<option id="com.atollic.truestudio.toolchain_options.mcu.1447360115" name="Microcontroller" superClass="com.atollic.truestudio.toolchain_options.mcu" useByScannerDiscovery="false" value="STM32F415RG" valueType="string"/>
 							<option id="com.atollic.truestudio.toolchain_options.vendor.128402691" name="Vendor name" superClass="com.atollic.truestudio.toolchain_options.vendor" useByScannerDiscovery="false" value="STMicroelectronics" valueType="string"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.atollic.truestudio.exe.debug.toolchain.platform.1018927466" isAbstract="false" name="Debug platform" osList="all" superClass="com.atollic.truestudio.exe.debug.toolchain.platform"/>
-							<builder buildPath="${workspace_loc:/Boot}/Debug" customBuilderProperties="toolChainpathString=C:\\Program Files (x86)\\Atollic\\TrueSTUDIO for STM32 9.0.1\\ARMTools\\bin|toolChainpathType=1|com.atollic.truestudio.common_options.target.vendor=STMicroelectronics|com.atollic.truestudio.common_options.target.mcu=STM32F405RG|" errorParsers="" id="com.atollic.truestudio.mbs.builder1.206415209" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="com.atollic.truestudio.mbs.builder1"/>
+							<builder buildPath="${workspace_loc:/Boot}/Debug" customBuilderProperties="toolChainpathString=C:\\Program Files (x86)\\Atollic\\TrueSTUDIO for STM32 9.0.1\\ARMTools\\bin|toolChainpathType=1|com.atollic.truestudio.common_options.target.vendor=STMicroelectronics|com.atollic.truestudio.common_options.target.mcu=STM32F415RG|" errorParsers="" id="com.atollic.truestudio.mbs.builder1.206415209" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="CDT Internal Builder" superClass="com.atollic.truestudio.mbs.builder1"/>
 							<tool command="arm-atollic-eabi-gcc -c" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GASErrorParser" id="com.atollic.truestudio.exe.debug.toolchain.as.1560538855" name="Assembler" superClass="com.atollic.truestudio.exe.debug.toolchain.as">
 								<option id="com.atollic.truestudio.common_options.target.endianess.1783865158" name="Endianess" superClass="com.atollic.truestudio.common_options.target.endianess" useByScannerDiscovery="false"/>
-								<option id="com.atollic.truestudio.common_options.target.mcpu.365990493" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" useByScannerDiscovery="false" value="STM32F405RG" valueType="enumerated"/>
+								<option id="com.atollic.truestudio.common_options.target.mcpu.365990493" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" useByScannerDiscovery="false" value="STM32F415RG" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.instr_set.1681303820" name="Instruction set" superClass="com.atollic.truestudio.common_options.target.instr_set" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.instr_set.thumb2" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpucore.1847271111" name="FPU" superClass="com.atollic.truestudio.common_options.target.fpucore" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.fpucore.fpv4-sp-d16" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpu.1857066295" name="Floating point" superClass="com.atollic.truestudio.common_options.target.fpu" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.fpu.hard" valueType="enumerated"/>
@@ -32,18 +32,18 @@
 									<listOptionValue builtIn="false" value="USE_STDPERIPH_DRIVER"/>
 								</option>
 								<option id="com.atollic.truestudio.as.general.incpath.832041568" name="Include path" superClass="com.atollic.truestudio.as.general.incpath" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/CMSIS/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/fatfs&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32_USB_Device_Library/Core/Inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32F4xx_HAL_Driver/Inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32F4xx_HAL_Driver/Inc/Legacy&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/ARMCM4_STM32F4&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/ARMCM4_STM32F4/GCC&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/third_party/fatfs/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;..&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/CMSIS/Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/fatfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/STM32_USB_Device_Library/Core/Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/STM32F4xx_HAL_Driver/Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/STM32F4xx_HAL_Driver/Inc/Legacy&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../Source&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../Source/ARMCM4_STM32F4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../Source/ARMCM4_STM32F4/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../Source/third_party/fatfs/src&quot;"/>
 								</option>
 								<option id="com.atollic.truestudio.common_options.target.interwork.1484558177" name="Mix ARM/Thumb" superClass="com.atollic.truestudio.common_options.target.interwork" useByScannerDiscovery="false"/>
 								<inputType id="com.atollic.truestudio.as.input.1795613951" name="Input" superClass="com.atollic.truestudio.as.input"/>
@@ -57,21 +57,21 @@
 									<listOptionValue builtIn="false" value="STM32F405xx"/>
 								</option>
 								<option id="com.atollic.truestudio.gcc.directories.select.2000587473" name="Include path" superClass="com.atollic.truestudio.gcc.directories.select" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/CMSIS/Include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/fatfs&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32_USB_Device_Library/Core/Inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32F4xx_HAL_Driver/Inc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32F4xx_HAL_Driver/Inc/Legacy&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/ARMCM4_STM32F4&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/ARMCM4_STM32F4/GCC&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/third_party/fatfs/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;..&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/CMSIS/Include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/fatfs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/STM32_USB_Device_Library/Core/Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/STM32F4xx_HAL_Driver/Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../lib/STM32F4xx_HAL_Driver/Inc/Legacy&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../Source&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../Source/ARMCM4_STM32F4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../Source/ARMCM4_STM32F4/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;../Source/third_party/fatfs/src&quot;"/>
 								</option>
 								<option id="com.atollic.truestudio.common_options.target.endianess.48907362" name="Endianess" superClass="com.atollic.truestudio.common_options.target.endianess" useByScannerDiscovery="false"/>
-								<option id="com.atollic.truestudio.common_options.target.mcpu.1691234993" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" useByScannerDiscovery="false" value="STM32F405RG" valueType="enumerated"/>
+								<option id="com.atollic.truestudio.common_options.target.mcpu.1691234993" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" useByScannerDiscovery="false" value="STM32F415RG" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.instr_set.797145846" name="Instruction set" superClass="com.atollic.truestudio.common_options.target.instr_set" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.instr_set.thumb2" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpucore.2107615856" name="FPU" superClass="com.atollic.truestudio.common_options.target.fpucore" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.fpucore.fpv4-sp-d16" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpu.906342406" name="Floating point" superClass="com.atollic.truestudio.common_options.target.fpu" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.fpu.hard" valueType="enumerated"/>
@@ -84,11 +84,11 @@
 							</tool>
 							<tool command="arm-atollic-eabi-gcc" commandLinePattern="${COMMAND} ${OUTPUT_FLAG} ${OUTPUT} ${INPUTS} ${FLAGS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="com.atollic.truestudio.exe.debug.toolchain.ld.1043781014" name="C Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ld">
 								<option id="com.atollic.truestudio.common_options.target.endianess.483791600" name="Endianess" superClass="com.atollic.truestudio.common_options.target.endianess" useByScannerDiscovery="false"/>
-								<option id="com.atollic.truestudio.common_options.target.mcpu.1928607000" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" useByScannerDiscovery="false" value="STM32F405RG" valueType="enumerated"/>
+								<option id="com.atollic.truestudio.common_options.target.mcpu.1928607000" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" useByScannerDiscovery="false" value="STM32F415RG" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.instr_set.251475784" name="Instruction set" superClass="com.atollic.truestudio.common_options.target.instr_set" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.instr_set.thumb2" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpucore.323827397" name="FPU" superClass="com.atollic.truestudio.common_options.target.fpucore" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.fpucore.fpv4-sp-d16" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpu.873256679" name="Floating point" superClass="com.atollic.truestudio.common_options.target.fpu" useByScannerDiscovery="false" value="com.atollic.truestudio.common_options.target.fpu.hard" valueType="enumerated"/>
-								<option id="com.atollic.truestudio.ld.general.scriptfile.1377595546" name="Linker script" superClass="com.atollic.truestudio.ld.general.scriptfile" useByScannerDiscovery="false" value="${ProjDirPath}/STM32F405RG_FLASH.ld" valueType="string"/>
+								<option id="com.atollic.truestudio.ld.general.scriptfile.1377595546" name="Linker script" superClass="com.atollic.truestudio.ld.general.scriptfile" useByScannerDiscovery="false" value="../Debug_STM32F415RG_FLASH.ld" valueType="string"/>
 								<option id="com.atollic.truestudio.ld.optimization.do_garbage.458522124" name="Dead code removal " superClass="com.atollic.truestudio.ld.optimization.do_garbage" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="com.atollic.truestudio.ld.misc.genmapfile.692613466" name="Create map file" superClass="com.atollic.truestudio.ld.misc.genmapfile" useByScannerDiscovery="false"/>
 								<option id="com.atollic.truestudio.common_options.target.interwork.729231576" name="Mix ARM/Thumb" superClass="com.atollic.truestudio.common_options.target.interwork" useByScannerDiscovery="false"/>
@@ -110,7 +110,7 @@
 									<listOptionValue builtIn="false" value="../Libraries/STM32F4xx_StdPeriph_Driver/inc"/>
 								</option>
 								<option id="com.atollic.truestudio.common_options.target.endianess.397825916" name="Endianess" superClass="com.atollic.truestudio.common_options.target.endianess"/>
-								<option id="com.atollic.truestudio.common_options.target.mcpu.1376285316" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" value="STM32F405RG" valueType="enumerated"/>
+								<option id="com.atollic.truestudio.common_options.target.mcpu.1376285316" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" value="STM32F415RG" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.instr_set.685061720" name="Instruction set" superClass="com.atollic.truestudio.common_options.target.instr_set" value="com.atollic.truestudio.common_options.target.instr_set.thumb2" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpucore.1765840523" name="FPU" superClass="com.atollic.truestudio.common_options.target.fpucore" value="com.atollic.truestudio.common_options.target.fpucore.fpv4-sp-d16" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpu.280063975" name="Floating point" superClass="com.atollic.truestudio.common_options.target.fpu" value="com.atollic.truestudio.common_options.target.fpu.hard" valueType="enumerated"/>
@@ -122,12 +122,12 @@
 							</tool>
 							<tool id="com.atollic.truestudio.exe.debug.toolchain.ldcc.696220895" name="C++ Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ldcc">
 								<option id="com.atollic.truestudio.common_options.target.endianess.2094096904" name="Endianess" superClass="com.atollic.truestudio.common_options.target.endianess"/>
-								<option id="com.atollic.truestudio.common_options.target.mcpu.1438022341" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" value="STM32F405RG" valueType="enumerated"/>
+								<option id="com.atollic.truestudio.common_options.target.mcpu.1438022341" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" value="STM32F415RG" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.instr_set.1594222283" name="Instruction set" superClass="com.atollic.truestudio.common_options.target.instr_set" value="com.atollic.truestudio.common_options.target.instr_set.thumb2" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpucore.980859495" name="FPU" superClass="com.atollic.truestudio.common_options.target.fpucore" value="com.atollic.truestudio.common_options.target.fpucore.fpv4-sp-d16" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.common_options.target.fpu.1728262345" name="Floating point" superClass="com.atollic.truestudio.common_options.target.fpu" value="com.atollic.truestudio.common_options.target.fpu.hard" valueType="enumerated"/>
 								<option id="com.atollic.truestudio.ldcc.optimization.do_garbage.209160551" name="Dead code removal" superClass="com.atollic.truestudio.ldcc.optimization.do_garbage" value="true" valueType="boolean"/>
-								<option id="com.atollic.truestudio.ldcc.general.scriptfile.1315852266" name="Linker script" superClass="com.atollic.truestudio.ldcc.general.scriptfile" value="../stm32f4_flash.ld" valueType="string"/>
+								<option id="com.atollic.truestudio.ldcc.general.scriptfile.1315852266" name="Linker script" superClass="com.atollic.truestudio.ldcc.general.scriptfile" value="../Debug_STM32F415RG_FLASH.ld" valueType="string"/>
 								<option id="com.atollic.truestudio.ldcc.misc.genmapfile.1275458316" name="Create map file" superClass="com.atollic.truestudio.ldcc.misc.genmapfile"/>
 								<option id="com.atollic.truestudio.common_options.target.interwork.271324668" name="Mix ARM/Thumb" superClass="com.atollic.truestudio.common_options.target.interwork"/>
 							</tool>
@@ -138,33 +138,8 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="com.atollic.truestudio.exe.debug.642280785.1767276303" name="ccsbcs.c" rcbsApplicability="disable" resourcePath="core/third_party/fatfs/src/option/ccsbcs.c" toolsToInvoke="com.atollic.truestudio.exe.debug.toolchain.gcc.603090944.1925870270">
-						<tool id="com.atollic.truestudio.exe.debug.toolchain.gcc.603090944.1925870270" name="C Compiler" superClass="com.atollic.truestudio.exe.debug.toolchain.gcc.603090944">
-							<option id="com.atollic.truestudio.gcc.directories.select.426659453" name="Include path" superClass="com.atollic.truestudio.gcc.directories.select" useByScannerDiscovery="false" valueType="includePath">
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/CMSIS/Include&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/fatfs&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32_USB_Device_Library/Core/Inc&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32F4xx_HAL_Driver/Inc&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/lib/STM32F4xx_HAL_Driver/Inc/Legacy&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/ARMCM4_STM32F4&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/ARMCM4_STM32F4/GCC&quot;"/>
-								<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../../Source/third_party/fatfs/src&quot;"/>
-							</option>
-							<inputType id="com.atollic.truestudio.gcc.input.1662869459" superClass="com.atollic.truestudio.gcc.input"/>
-						</tool>
-						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1052496677" name="Resource Custom Build Step">
-							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.1315192059" name="Resource Custom Build Step Input Type">
-								<additionalInput kind="additionalinputdependency" paths=""/>
-							</inputType>
-							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.2023381859" name="Resource Custom Build Step Output Type"/>
-						</tool>
-					</fileInfo>
 					<sourceEntries>
-						<entry excluding="core/ARMCM4_STM32F4/GCC/vectors.c|core/ARMCM4_STM32F4/GCC/cstart.c|core/third_party/fatfs/src/option/syscall.c|core/third_party/fatfs/src/option/ccsbcs.c|core/third_party/fatfs/src/option/cc950.c|core/third_party/fatfs/src/option/cc949.c|core/third_party/fatfs/src/option/cc936.c|core/third_party/fatfs/src/option/cc932.c|flash_layout.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Source/third_party/fatfs/src/option/ccsbcs.c|core/ARMCM4_STM32F4/GCC/vectors.c|core/ARMCM4_STM32F4/GCC/cstart.c|core/third_party/fatfs/src/option/syscall.c|core/third_party/fatfs/src/option/ccsbcs.c|core/third_party/fatfs/src/option/cc950.c|core/third_party/fatfs/src/option/cc949.c|core/third_party/fatfs/src/option/cc936.c|core/third_party/fatfs/src/option/cc932.c|flash_layout.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -174,6 +149,9 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="Boot.com.atollic.truestudio.exe.491195404" name="Executable" projectType="com.atollic.truestudio.exe"/>
 	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Debug">
@@ -181,10 +159,4 @@
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="com.atollic.truestudio.exe.debug.642280785;com.atollic.truestudio.exe.debug.642280785.;com.atollic.truestudio.exe.debug.toolchain.gcc.603090944;com.atollic.truestudio.gcc.input.951558260">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="com.atollic.truestudio.mbs.ARMToolsPerProjectProfileC"/>
-		</scannerConfigBuildInfo>
-	</storageModule>
 </cproject>
