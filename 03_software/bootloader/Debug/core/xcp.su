@@ -1,5 +1,0 @@
-xcp.c:454:13:XcpSetCtoError	0	static
-xcp.c:154:6:XcpInit	0	static
-xcp.c:171:10:XcpIsConnected	0	static
-xcp.c:187:6:XcpPacketTransmitted	0	static
-xcp.c:201:6:XcpPacketReceived	24	static
