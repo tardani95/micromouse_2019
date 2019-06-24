@@ -25,6 +25,9 @@ uint16_t end_index = 0;
 uint16_t start_index = 0;
 uint8_t sending_in_progress = 0;
 
+uint8_t sent = 0;
+uint8_t acked = 0;
+
 uint16_t incrementStartIndex(){
 	start_index = start_index == DATA_BUFFER_SIZE ? 0 : start_index + 1;
 	return start_index;
@@ -175,12 +178,16 @@ void UART_DMASendNextBlock(){
 
 void UART_DMASendXCPMessage(uint8_t *data, uint8_t size) {
 	//TODO test function
-	data_tx_buffer[incrementEndIndex()] = size;
+	data_tx_buffer[end_index] = size;
+	incrementEndIndex();
 	for(uint8_t i = 0; i < size; i++){
-		data_tx_buffer[incrementEndIndex()] = data[i];
+		data_tx_buffer[end_index] = data[i];
+		incrementEndIndex();
 	}
-	if(!sending_in_progress)
+	if(!sending_in_progress){
+		sending_in_progress = 1;
 		UART_DMASendNextBlock();
+	}
 }
 
 void UART_DMASendString2(char *data) {
@@ -190,6 +197,18 @@ void UART_DMASendString2(char *data) {
 	}
 
 	UART_DMASendXCPMessage((uint8_t*)data, size);
+}
+
+void continueTransmission(void){
+	if(sent && acked){
+		toggleLED(LED_PINK);
+		sent = 0;
+		acked = 0;
+		if(remainingDataSize() > 0)
+			UART_DMASendNextBlock();
+		else
+			sending_in_progress = 0;
+	}
 }
 
 /**
@@ -278,6 +297,11 @@ void DMA1_Stream1_IRQHandler(void) {
 	USART_ITConfig(BT_UART, USART_IT_RXNE, ENABLE);
 	/* Clear the rest of the buffer */
 	clearBuffer();
+	/* Check if received data is transmission complete ack byte */
+	if(sent && length == 1 && uart_rx_buffer[0] == ACK_BYTE){
+		acked = 1;
+		continueTransmission();
+	}
 }
 
 /**
@@ -289,10 +313,11 @@ void DMA1_Stream3_IRQHandler(void) {
 	/* disable dma after send */
 	DMA_Cmd(BT_UART_TX_DMA_Stream, DISABLE);
 
-	if(remainingDataSize() > 0)
-		UART_DMASendNextBlock();
-	else
-		sending_in_progress = 0;
+	sent = 1;
+
+	continueTransmission();
+
+
 
 }
 

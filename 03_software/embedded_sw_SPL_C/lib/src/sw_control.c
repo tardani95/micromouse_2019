@@ -60,6 +60,7 @@ void initControl() {
 	/* Call the TIM_Cmd(ENABLE) function to enable the TIM counter. */
 //	TIM_Cmd(TIM2, DISABLE);
 //	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+	//initControlDebug();
 }
 
 
@@ -133,7 +134,12 @@ void CONTROL_LOOP_IRQHandler() {
 
 void initControlDebug(){
 	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
-	debug("I" , DEBUG_TYPE_FLOAT, &I);
+	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
+	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
+	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
+	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
+	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
+
 }
 
 /**

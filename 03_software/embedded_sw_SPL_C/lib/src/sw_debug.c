@@ -71,11 +71,11 @@ uint8_t data_sizes[DEBUG_TYPE_NONE] = {
 
 
 void debug(char* varname, DEBUG_TYPE type, void* varpointer){
-	if(debug_index + 1 < DEBUG_DATA_COUNT){
-		debug_index++;
+	if(debug_index  < DEBUG_DATA_COUNT){
 		debug_data[debug_index].debug_type = type;
 		strcpy(debug_data[debug_index].name, varname);
 		debug_data[debug_index].pointer = &varpointer;
+		debug_index++;
 	}
 };
 
@@ -87,7 +87,7 @@ void announceDebugData(){
 			uart_buffer[uart_index++] = (uint8_t)debug_data[i].debug_type;
 			strcpy(&uart_buffer[uart_index], debug_data[i].name);
 			uart_index += DEBUG_NAME_MAX_LENGTH;
-			UART_DMASendByteArray((uint8_t*)uart_buffer, uart_index);
+			UART_DMASendXCPMessage((uint8_t*)uart_buffer, uart_index);
 		}
 	}
 }
@@ -102,7 +102,7 @@ void sendDebugData(){
 			uart_index += data_size;
 		}
 	}
-	UART_DMASendByteArray((uint8_t*)uart_buffer, uart_index);
+	UART_DMASendXCPMessage((uint8_t*)uart_buffer, uart_index);
 }
 
 /**

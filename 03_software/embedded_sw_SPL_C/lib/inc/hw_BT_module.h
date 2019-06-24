@@ -39,8 +39,14 @@
 
 #define BLE_MESSAGE_SIZE	20
 #define DATA_BUFFER_SIZE	255
+#define ACK_BYTE			0xFF
 
 void initBTModule();
+
+void UART_DMASendXCPMessage(uint8_t *data, uint8_t size);
+void UART_DMASendString2(char *data);
+void UART_DMASendNextBlock(void);
+void continueTransmission(void);
 
 void UART_DMASendString(char *data);
 void UART_DMASendByteArray(uint8_t *data, uint8_t size);
