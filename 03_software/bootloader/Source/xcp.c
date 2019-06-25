@@ -31,6 +31,7 @@
 ****************************************************************************************/
 #include "boot.h"                                /* bootloader generic header          */
 #include "uart.h"
+#include "stm32f4xx_ll_gpio.h"                   /* STM32 LL GPIO header               */
 
 
 #if (BOOT_COM_ENABLE > 0)
@@ -223,6 +224,13 @@ void XcpPacketReceived(blt_int8u *data, blt_int8u len)
   {
     /* process the connect command */
     XcpCmdConnect(data);
+  }
+  /* was this a transmission acknowledge? */
+  else if (data[0] == XCP_CMD_ACK)
+  {
+    /* do nothing */
+    //LL_GPIO_SetOutputPin(GPIOB, LL_GPIO_PIN_5);
+    xcpInfo.ctoLen = 0;
   }
   /* only continue if connected */
   else if (xcpInfo.connected == 1)
