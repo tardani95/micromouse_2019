@@ -29,12 +29,12 @@ uint8_t sent = 0;
 uint8_t acked = 0;
 
 uint16_t incrementStartIndex(){
-	start_index = start_index == DATA_BUFFER_SIZE ? 0 : start_index + 1;
+	start_index = start_index == DATA_BUFFER_SIZE - 1 ? 0 : start_index + 1;
 	return start_index;
 }
 
 uint16_t incrementEndIndex(){
-	end_index = end_index == DATA_BUFFER_SIZE ? 0 : end_index + 1;
+	end_index = end_index == DATA_BUFFER_SIZE - 1 ? 0 : end_index + 1;
 	return end_index;
 }
 
@@ -178,6 +178,7 @@ void UART_DMASendNextBlock(){
 
 void UART_DMASendXCPMessage(uint8_t *data, uint8_t size) {
 	//TODO test function
+
 	data_tx_buffer[end_index] = size;
 	incrementEndIndex();
 	for(uint8_t i = 0; i < size; i++){
@@ -201,7 +202,7 @@ void UART_DMASendString2(char *data) {
 
 void continueTransmission(void){
 	if(sent && acked){
-		toggleLED(LED_PINK);
+		//toggleLED(LED_PINK);
 		sent = 0;
 		acked = 0;
 		if(remainingDataSize() > 0)

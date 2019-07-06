@@ -39,7 +39,7 @@
 
 #define BLE_MESSAGE_SIZE	20
 #define DATA_BUFFER_SIZE	255
-#define ACK_BYTE			0xFF
+#define ACK_BYTE			0xFB
 
 void initBTModule();
 

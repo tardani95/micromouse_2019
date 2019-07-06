@@ -7,6 +7,7 @@
 #include "sw_debug.h"
 #include "hw_BT_module.h"
 #include "util.h"
+#include "hw_status_led.h"
 #include <string.h>
 
 /** @addtogroup software_modules
@@ -74,7 +75,7 @@ void debug(char* varname, DEBUG_TYPE type, void* varpointer){
 	if(debug_index  < DEBUG_DATA_COUNT){
 		debug_data[debug_index].debug_type = type;
 		strcpy(debug_data[debug_index].name, varname);
-		debug_data[debug_index].pointer = &varpointer;
+		debug_data[debug_index].pointer = varpointer;
 		debug_index++;
 	}
 };
@@ -101,6 +102,9 @@ void sendDebugData(){
 			ToBytes(debug_data[index].pointer, data_size, (uint8_t*)&uart_buffer[uart_index]);
 			uart_index += data_size;
 		}
+	}
+	if(uart_index == 8){
+		setLED(LED_YELLOW);
 	}
 	UART_DMASendXCPMessage((uint8_t*)uart_buffer, uart_index);
 }

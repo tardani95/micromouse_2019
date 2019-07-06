@@ -145,7 +145,7 @@ void ADC_delayTIM_IRQHandler() {
 void ADC_IRQHandler() {
 	if (ADC_GetITStatus(BAT_LVL_WATCHER_ADC, ADC_IT_AWD) == SET) {
 		ADC_ClearITPendingBit(BAT_LVL_WATCHER_ADC, ADC_IT_AWD);
-		setLED(LED_YELLOW);
+		//setLED(LED_YELLOW);
 
 		if (ADC_GetConversionValue(
 		BAT_LVL_WATCHER_ADC) < voltToAdcValue(SHUTDOWN_VOLTAGE)) {
