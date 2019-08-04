@@ -41,3 +41,4 @@ float distanceTo(Cell c1, Cell c2, Heuristic h) {
 /**
  * @}
  */
+

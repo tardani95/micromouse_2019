@@ -58,3 +58,4 @@ typedef struct Maze {
  */
 
 #endif /* INC_SW_MAZE_H_ */
+
