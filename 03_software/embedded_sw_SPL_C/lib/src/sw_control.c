@@ -11,6 +11,7 @@
 #include "hw_encoder.h"
 #include "hw_params.h"
 #include "hw_status_led.h"
+#include "sw_debug.h"
 #include "misc.h"
 
 /** @addtogroup software_modules
@@ -20,6 +21,26 @@
 /** @defgroup control_plane Control Plane
  * @{
  */
+
+float T = 0.001; // @1 kHz
+
+//float Kp_w = 1/((STEADY_STATE_GAIN_V_RIGHT+STEADY_STATE_GAIN_W_LEFT)/2); /* P */ //1.5
+float Kp_w = 0.5; /* P */ //1.5
+float Ki_W = 0.1; /* I */ // 0.05
+float Kd = 0.0; /* D */ //0.1
+
+float I = 0;
+float D = 0;
+float Imax = 1.5; /* anti wind-up */
+
+float e_w = 10.0;
+float e_w_prev = 0.0;
+float e_w_max = 1000.0;
+
+float w = 0.0;
+float v_base_mmPs = 200;
+
+uint32_t debug_counter = 0;
 
 /**
  * Initialize control loop @1kHz
@@ -59,7 +80,10 @@ void initControl() {
 	/* Call the TIM_Cmd(ENABLE) function to enable the TIM counter. */
 //	TIM_Cmd(TIM2, DISABLE);
 //	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+	initControlDebug();
 }
+
+
 
 void ControlLoop_Cmd(FunctionalState NewState) {
 	TIM_Cmd(TIM2, NewState);
@@ -67,23 +91,8 @@ void ControlLoop_Cmd(FunctionalState NewState) {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 }
 
-float T = 0.001; // @1 kHz
 
-//float Kp_w = 1/((STEADY_STATE_GAIN_V_RIGHT+STEADY_STATE_GAIN_W_LEFT)/2); /* P */ //1.5
-float Kp_w = 1; /* P */ //1.5
-float Ki_W = 0.1; /* I */ // 0.05
-float Kd = 0.0; /* D */ //0.1
 
-float I = 0;
-float D = 0;
-float Imax = 1.5; /* anti wind-up */
-
-float e_w = 0.0;
-float e_w_prev = 0.0;
-float e_w_max = 1000.0;
-
-float w = 0.0;
-float v_base_mmPs = 200;
 /**
  * control loop function called @1kHz, @see Init_Control() function.
  */
@@ -112,10 +121,10 @@ void CONTROL_LOOP_IRQHandler() {
 
 
 	if (m_abs(w) > 100) {
-		setLED(LED_YELLOW);
+		//setLED(LED_YELLOW);
 		w = 100;
 	} else {
-		resetLED(LED_YELLOW);
+		//resetLED(LED_YELLOW);
 	}
 
 	actuateMotors(v_base_mmPs, w);
@@ -123,7 +132,20 @@ void CONTROL_LOOP_IRQHandler() {
 	m_resetEncCnt(ENC_RIGHT);
 	m_resetEncCnt(ENC_LEFT);
 
-	resetLED(LED_PINK);
+	debug_counter++;
+	if(debug_counter%1000 == 0){
+		sendDebugData();
+	}
+
+}
+
+
+void initControlDebug(){
+	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
+	//debug("e_w_prev" , DEBUG_TYPE_FLOAT, &e_w_prev);
+	//debug("I" , DEBUG_TYPE_FLOAT, &I);
+	//debug("w" , DEBUG_TYPE_FLOAT, &w);
+
 }
 
 /**

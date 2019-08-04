@@ -103,13 +103,15 @@
 
 #03_software/embedded_sw_SPL_C/\.cproject
 
-03_software/bootloader/Debug/
+03_software/bootloader/Debug/*
 
 *.o
 *.obj
 
 03_software/bootloader/\.settings/language\.settings\.xml
 
-03_software/bootloader/\.cproject
+#03_software/bootloader/\.cproject
 
 03_software/embedded_sw_SPL_C/Debug_STM32F415RG_FLASH_2\.ld
+
+03_software/bootloader/Debug/

@@ -207,6 +207,8 @@
 #define XCP_CMD_PROGRAM_PREPARE     (0xcc)
 /** \brief PROGRAM_MAX command code. */
 #define XCP_CMD_PROGRAM_MAX         (0xc9)
+/** \brief Transmission acknowledged command code. */
+#define XCP_CMD_ACK                 (0xfb)
 
 /* xcp supported resources */
 /** \brief ProGraMming resource. */

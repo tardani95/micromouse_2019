@@ -76,8 +76,9 @@ void ftoa(float n, char *res, int afterpoint) {
  */
 void ToBytes(void *dataIn, uint8_t size, uint8_t dataOut[]) {
 	for (uint8_t i = 0; i < size; i++) {
-		dataOut[i] = (uint8_t) (((*((uint32_t*) dataIn)) >> (size - 1 - i))
-				&& 0xFF);
+		uint32_t data = *((uint32_t*) dataIn);
+		uint32_t nextByte = (data >> (size - 1 - i) * 8) & 0xFF;
+		dataOut[i] = (uint8_t) nextByte;
 	}
 }
 
