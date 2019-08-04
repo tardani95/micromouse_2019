@@ -15,15 +15,15 @@
  */
 
 typedef struct State{
-	x;
-	y;
-	fi;
-	v_tan;
-	omega;
+	float x;
+	float y;
+	float fi;
+	float v_tan;
+	float omega;
 }State;
 
 void updateState(void);
-
+float encToCm(uint32_t encCnt);
 
 /**
  * @}
