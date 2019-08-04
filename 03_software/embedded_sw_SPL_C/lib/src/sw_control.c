@@ -14,6 +14,7 @@
 #include "sw_debug.h"
 #include "misc.h"
 #include "sw_localization.h"
+#include "sw_trajectory_planner.h"
 
 /** @addtogroup software_modules
  * @{
@@ -94,12 +95,10 @@ void ControlLoop_Cmd(FunctionalState NewState) {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 }
 
-float norm_prev, norm_I;
-float v_prev, v_I;
-float fi_prev, fi_I;
-float w_prev, w_I;
-
-norm_prev = norm_I = fi_prev = fi_I = v_prev = v_I = w_prev = w_I = 0;
+float norm_prev = 0, norm_I = 0;
+float v_prev = 0, v_I = 0;
+float fi_prev = 0, fi_I = 0;
+float w_prev = 0, w_I = 0;
 
 /**
  * control loop function called @1kHz, @see Init_Control() function.
@@ -111,13 +110,13 @@ void CONTROL_LOOP_IRQHandler() {
 	State global_state = updateState();
 	TrajectoryType trajectory_type;
 	Frame local_frame;
-	updateTrajectory(current_state, &trajectory_type, &local_frame);
-	State local_state = transformStateToLocal(global_State, local_frame);
+	updateTrajectory(global_state, &trajectory_type, &local_frame);
+	State local_state = transformStateToLocal(global_state, local_frame);
 
 	switch(trajectory_type){
-	case TrajectoryType.STRAIGHT:
-		float norm_ref = getNormRef(current_state);
-		float v_ref = getVRef(current_state);
+	case TrajectoryType_STRAIGHT:
+		float norm_ref = getNormRef(local_state);
+		float v_ref = getVRef(local_state);
 
 		float norm_dev = norm_ref - local_state.x;
 		float v_dev = v_ref - local_state.v_tan;
@@ -140,8 +139,8 @@ void CONTROL_LOOP_IRQHandler() {
 		actuateMotors(v_reg, w_reg);
 
 		break;
-	case TrajectoryType.TURN:
-		float w_ref = getWRef(current_state);
+	case TrajectoryType_TURN:
+		//float w_ref = getWRef(current_state);
 
 		break;
 	}

@@ -17,7 +17,7 @@
  * @{
  */
 
-State state;
+State state = start_state;
 
 State updateState(void){
 	float enc_right_cm = encToCm(m_getEncCnt(ENC_RIGHT));
@@ -46,6 +46,8 @@ State updateState(void){
 float encToCm(uint32_t encCnt){
 	encCnt / 8096 * 2 * 3.1415 * WHEEL_DIAMETER_cm;
 }
+
+
 
 
 /**
