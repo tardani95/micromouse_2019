@@ -22,7 +22,7 @@ typedef struct State{
 	float omega;
 }State;
 
-void updateState(void);
+State updateState(void);
 float encToCm(uint32_t encCnt);
 
 /**

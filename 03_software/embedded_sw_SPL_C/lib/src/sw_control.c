@@ -94,7 +94,11 @@ void ControlLoop_Cmd(FunctionalState NewState) {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 }
 
+float norm_prev, norm_I;
+float v_prev, v_I;
+float w_prev, w_I;
 
+norm_prev = norm_I = v_prev = v_I = w_prev = w_I = 0;
 
 /**
  * control loop function called @1kHz, @see Init_Control() function.
@@ -103,13 +107,34 @@ void CONTROL_LOOP_IRQHandler() {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	//setLED(LED_PINK);
 
-	e_w_prev = e_w;
+	State global_state = updateState();
+	TrajectoryType trajectory_type;
+	Frame local_frame;
+	updateTrajectory(current_state, &trajectory_type, &local_frame);
+	State local_state = transformStateToLocal(global_State, local_frame);
+	Controller controller = getController(trajectory_type);
 
-	volatile uint32_t enc_right = m_getEncCnt(ENC_RIGHT);
-	volatile uint32_t enc_left = m_getEncCnt(ENC_LEFT);
+	switch(trajectory_type){
+	case TrajectoryType.STRAIGHT:
+		float norm_ref = getNormRef(current_state);
+		float v_ref = getVRef(current_state);
 
-	e_w = -((float) enc_left - (float) enc_right)/ 8096 * (2 * 3.14) *
-			WHEEL_DIAMETER_mm/2 / T / AXLE_LENGTH_mm;
+		float norm_dev = norm_ref - local_state.x;
+		float v_dev = v_ref - local_state.v_tan;
+
+		v_I = v_I + v_dev;
+		float v_D = (v_prev - v_dev)/2;
+		float v_ctrl = v_dev*controller.P + v_I*controller.I + v_D*controller.D;
+		float v_reg = v_ref + v_ctrl;
+
+		break;
+	case TrajectoryType.TURN:
+		float w_ref = getWRef(current_state);
+
+		break;
+	}
+
+
 
 	//D = Kd * (e_w - e_w_prev) / T;
 

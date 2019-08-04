@@ -19,7 +19,7 @@
 
 State state;
 
-void updateState(void){
+State updateState(void){
 	float enc_right_cm = encToCm(m_getEncCnt(ENC_RIGHT));
 	float enc_left_cm = encToCm(m_getEncCnt(ENC_LEFT));
 
@@ -39,6 +39,8 @@ void updateState(void){
 	state.fi += dfi;
 	state.v_tan = v_tan;
 	state.omega = omega;
+
+	return state;
 }
 
 float encToCm(uint32_t encCnt){
