@@ -40,10 +40,11 @@ const State start_state = {
 
 const Frame start_frame = {
 	.x = 4.5,
-	.y = 0,
+	.y = 4.5,
 	.fi = 0
 };
 
+void initLocalization(void);
 State updateState(void);
 float encToCm(uint32_t encCnt);
 

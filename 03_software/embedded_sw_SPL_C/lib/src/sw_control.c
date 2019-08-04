@@ -44,6 +44,10 @@ float v_base_mmPs = 200;
 
 uint32_t debug_counter = 0;
 
+PIDController controller_v = { 0.1, 0.05, 0.01};
+PIDController controller_norm = { 0.1, 0.05, 0.01};
+PIDController controller_fi = { 0.1, 0.05, 0.01};
+PIDController controller_w = { 0.1, 0.05, 0.01};
 
 
 /**
@@ -113,8 +117,7 @@ void CONTROL_LOOP_IRQHandler() {
 	updateTrajectory(global_state, &trajectory_type, &local_frame);
 	State local_state = transformStateToLocal(global_state, local_frame);
 
-	switch(trajectory_type){
-	case TrajectoryType_STRAIGHT:
+	if(trajectory_type == TrajectoryType_STRAIGHT){
 		float norm_ref = getNormRef(local_state);
 		float v_ref = getVRef(local_state);
 
@@ -124,10 +127,10 @@ void CONTROL_LOOP_IRQHandler() {
 		v_I = v_I + v_dev;
 		float v_D = (v_prev - v_dev)/T;
 		float v_ctrl = v_dev*controller_v.P + v_I*controller_v.I + v_D*controller_v.D;
-		float v_reg = v_ref + v_ctrl;
+		float v_reg = v_ref /*+ v_ctrl*/;
 
-		norm_I = norm_I + norm_Dev;
-		float norm_D = (nomr_prev - norm_dev)/T;
+		norm_I = norm_I + norm_dev;
+		float norm_D = (norm_prev - norm_dev)/T;
 		float norm_ctrl = norm_dev*controller_norm.P + norm_I*controller_norm.I + norm_D*controller_norm.D;
 		float fi_dev = norm_ctrl - local_state.fi;
 
@@ -136,17 +139,15 @@ void CONTROL_LOOP_IRQHandler() {
 		float fi_ctrl = fi_dev*controller_fi.P + fi_I*controller_fi.I + fi_D*controller_fi.D;
 		float w_reg = fi_ctrl/T;
 
-		actuateMotors(v_reg, w_reg);
+		w_reg = 0;
+		//actuateMotors(v_reg, w_reg);
+		actuateMotors(0, 0);
 
-		break;
-	case TrajectoryType_TURN:
+	}
+	else{
 		//float w_ref = getWRef(current_state);
 
-		break;
 	}
-
-
-	actuateMotors(v_base_mmPs, w);
 
 	m_resetEncCnt(ENC_RIGHT);
 	m_resetEncCnt(ENC_LEFT);

@@ -138,9 +138,11 @@ void actuateMotor(MOT_SIDE motor, MOT_DIR dir, uint16_t pulse) {
  * this assumption will most likely be wrong, because if v = 0,
  * motors enter coasting, but won't brake
  */
-void actuateMotors(float v_mmPs, float w_radPs) {
+void actuateMotors(float v_cmPs, float w_radPs) {
 	//float v_left_mmPs = v_mmPs - w_radPs * AXLE_LENGTH_mm / 2;
 	//float v_right_mmPs = v_mmPs + w_radPs * AXLE_LENGTH_mm / 2;
+
+	float v_mmPs = v_cmPs*10;
 
 	float u_left_volt = MotorVoltageLeft(v_mmPs,w_radPs);
 	float u_right_volt = MotorVoltageRight(v_mmPs,w_radPs);

@@ -17,18 +17,25 @@
  * @{
  */
 
-Frame local_frame = start_frame;
-TrajectoryType current_trajectory_type;
+Frame local_frame;
+TrajectoryType current_trajectory_type = TrajectoryType_STRAIGHT;
+
+void initTrajectoryPlanner(void){
+	local_frame = start_frame;
+}
 
 static float speedByDistance(float s){
 	if(s < ACC_DIST_cm){
-
+		return TOP_SPEED_cmPs;
 	}
 	else if(s < CELL_DIST_cm - DEACC_DIST_cm){
-
+		return TOP_SPEED_cmPs;
+	}
+	else if(s < CELL_DIST_cm){
+		return TOP_SPEED_cmPs*(CELL_DIST_cm - s);
 	}
 	else{
-
+		return 0.0f;
 	}
 }
 
@@ -50,15 +57,15 @@ void updateTrajectory(State global_state, TrajectoryType* trajectory_type_p, Fra
 }
 
 float getNormRef(State local_state){
-	return local_frame.y;
+	return local_frame.x;
 }
 
 float getVRef(State local_state){
-	float v = speedByDistance(local_state.y);
+	return speedByDistance(local_state.y);
 }
 
 float getWRef(State local_state){
-
+	return 0.0f;
 }
 
 /**

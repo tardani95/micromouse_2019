@@ -17,7 +17,12 @@
  * @{
  */
 
-State state = start_state;
+State state;
+float T = 0.001; // @1 kHz
+
+void initLocalization(void){
+	state = start_state;
+}
 
 State updateState(void){
 	float enc_right_cm = encToCm(m_getEncCnt(ENC_RIGHT));
@@ -44,10 +49,16 @@ State updateState(void){
 }
 
 float encToCm(uint32_t encCnt){
-	encCnt / 8096 * 2 * 3.1415 * WHEEL_DIAMETER_cm;
+	return encCnt / 8096 * 2 * 3.1415 * WHEEL_DIAMETER_cm;
 }
 
-
+State transformStateToLocal(State global_state, Frame local_frame){
+	State local_state;
+	local_state.x = global_state.x - local_frame.x;
+	local_state.y = global_state.y - local_frame.y;
+	local_state.fi = global_state.fi - local_frame.fi;
+	return local_state;
+}
 
 
 /**

@@ -98,6 +98,7 @@
 #include "sw_GPTIM.h"
 #include "sw_menu.h"
 #include "sw_control.h"
+#include "sw_localization.h"
 
 #include "util.h"
 
@@ -167,6 +168,7 @@ void Init_Periph(void) {
 	}
 
 	initButtons();
+	initLocalization();
 	initControl();
 }
 
