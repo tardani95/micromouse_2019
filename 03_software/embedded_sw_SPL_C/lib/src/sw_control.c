@@ -127,13 +127,13 @@ void CONTROL_LOOP_IRQHandler() {
 		//resetLED(LED_YELLOW);
 	}
 
-	//actuateMotors(v_base_mmPs, w);
+	actuateMotors(v_base_mmPs, w);
 
 	m_resetEncCnt(ENC_RIGHT);
 	m_resetEncCnt(ENC_LEFT);
 
 	debug_counter++;
-	if(debug_counter%50 == 0){
+	if(debug_counter%1000 == 0){
 		sendDebugData();
 	}
 
@@ -142,9 +142,9 @@ void CONTROL_LOOP_IRQHandler() {
 
 void initControlDebug(){
 	debug("e_w" , DEBUG_TYPE_FLOAT, &e_w);
-	debug("e_w_prev" , DEBUG_TYPE_FLOAT, &e_w_prev);
-	debug("I" , DEBUG_TYPE_FLOAT, &I);
-	debug("w" , DEBUG_TYPE_FLOAT, &w);
+	//debug("e_w_prev" , DEBUG_TYPE_FLOAT, &e_w_prev);
+	//debug("I" , DEBUG_TYPE_FLOAT, &I);
+	//debug("w" , DEBUG_TYPE_FLOAT, &w);
 
 }
 

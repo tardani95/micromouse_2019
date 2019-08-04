@@ -84,7 +84,6 @@ void announceDebugData(){
 	for(uint8_t i = 0; i < DEBUG_DATA_COUNT; i++){
 		if(debug_data[i].debug_type != DEBUG_TYPE_NONE){
 			uint8_t uart_index = 0;
-			uart_buffer[uart_index++] = i;
 			uart_buffer[uart_index++] = (uint8_t)debug_data[i].debug_type;
 			strcpy(&uart_buffer[uart_index], debug_data[i].name);
 			uart_index += DEBUG_NAME_MAX_LENGTH;

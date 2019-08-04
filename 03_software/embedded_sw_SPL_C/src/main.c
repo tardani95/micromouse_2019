@@ -186,10 +186,10 @@ int main(void) {
 
 	Init_Periph();
 
-	UART_DMASendString("checkpoint1\n");
+	UART_DMASendString2("checkpoint1\n");
 	delay_ms(10);
 
-	UART_DMASendString("checkpoint2\n");
+	UART_DMASendString2("checkpoint2\n");
 	UART_DMA_StartListening();
 
 	/* Infinite loop */
@@ -257,15 +257,16 @@ void OnButtonPressed() {
 			/*reset encoder values*/
 //			m_resetEncCnt(ENC_LEFT_TIM);
 //			m_resetEncCnt(ENC_RIGHT_TIM);
-			actuateMotor(LEFT, FORWARD, 300);
-			actuateMotor(RIGHT, FORWARD, 400);
-//			ControlLoop_Cmd(ENABLE);
+			//actuateMotor(LEFT, FORWARD, 300);
+			//actuateMotor(RIGHT, FORWARD, 400);
+			ControlLoop_Cmd(ENABLE);
 		} else {
 			ControlLoop_Cmd(DISABLE);
 			actuateMotor(LEFT, COAST, 0);
 			actuateMotor(RIGHT, COAST, 0);
 		}
 
+		sendDebugData();
 		rgb_led_status++;
 		EXTI_ClearITPendingBit(BTN1_EXTI_Line);
 	}
