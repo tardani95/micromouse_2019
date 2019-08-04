@@ -17,12 +17,12 @@
  */
 
  //TODO: measure params
-#define WHEEL_DIAMETER_mm 	20
-#define AXLE_LENGTH_mm 		45
+#define WHEEL_DIAMETER_cm 	2.0f
+#define AXLE_LENGTH_cm 		4.5f
 #define MOTOR_SPEED_CONSTANT_rpmPvolt 	4000
 #define MOT_MAX_VOLT 		3.3f
 #define VCC 				3.3f
-#define MOT_MAX_SPEED_mmPs	2000.0f
+#define MOT_MAX_SPEED_cmPs	200.0f
 
 
 #define STEADY_STATE_GAIN_W_LEFT  14.375

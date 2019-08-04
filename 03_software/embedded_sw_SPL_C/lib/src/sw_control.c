@@ -94,7 +94,12 @@ void ControlLoop_Cmd(FunctionalState NewState) {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 }
 
+float norm_prev, norm_I;
+float v_prev, v_I;
+float fi_prev, fi_I;
+float w_prev, w_I;
 
+norm_prev = norm_I = fi_prev = fi_I = v_prev = v_I = w_prev = w_I = 0;
 
 /**
  * control loop function called @1kHz, @see Init_Control() function.
@@ -103,32 +108,44 @@ void CONTROL_LOOP_IRQHandler() {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	//setLED(LED_PINK);
 
-	e_w_prev = e_w;
+	State global_state = updateState();
+	TrajectoryType trajectory_type;
+	Frame local_frame;
+	updateTrajectory(current_state, &trajectory_type, &local_frame);
+	State local_state = transformStateToLocal(global_State, local_frame);
 
-	volatile uint32_t enc_right = m_getEncCnt(ENC_RIGHT);
-	volatile uint32_t enc_left = m_getEncCnt(ENC_LEFT);
+	switch(trajectory_type){
+	case TrajectoryType.STRAIGHT:
+		float norm_ref = getNormRef(current_state);
+		float v_ref = getVRef(current_state);
 
-	e_w = -((float) enc_left - (float) enc_right)/ 8096 * (2 * 3.14) *
-			WHEEL_DIAMETER_mm/2 / T / AXLE_LENGTH_mm;
+		float norm_dev = norm_ref - local_state.x;
+		float v_dev = v_ref - local_state.v_tan;
 
-	//D = Kd * (e_w - e_w_prev) / T;
+		v_I = v_I + v_dev;
+		float v_D = (v_prev - v_dev)/T;
+		float v_ctrl = v_dev*controller_v.P + v_I*controller_v.I + v_D*controller_v.D;
+		float v_reg = v_ref + v_ctrl;
 
-	I += Ki_W * e_w;
-	if (I > Imax)
-		I = Imax;
-	if (I < -Imax)
-		I = -Imax;
-//	I = 0;
+		norm_I = norm_I + norm_Dev;
+		float norm_D = (nomr_prev - norm_dev)/T;
+		float norm_ctrl = norm_dev*controller_norm.P + norm_I*controller_norm.I + norm_D*controller_norm.D;
+		float fi_dev = norm_ctrl - local_state.fi;
 
-	w = Kp_w * e_w + I + D;
+		fi_I = fi_I + fi_dev;
+		float fi_D = (fi_prev - fi_dev)/T;
+		float fi_ctrl = fi_dev*controller_fi.P + fi_I*controller_fi.I + fi_D*controller_fi.D;
+		float w_reg = fi_ctrl/T;
 
+		actuateMotors(v_reg, w_reg);
 
-	if (m_abs(w) > 100) {
-		//setLED(LED_YELLOW);
-		w = 100;
-	} else {
-		//resetLED(LED_YELLOW);
+		break;
+	case TrajectoryType.TURN:
+		float w_ref = getWRef(current_state);
+
+		break;
 	}
+
 
 	actuateMotors(v_base_mmPs, w);
 
