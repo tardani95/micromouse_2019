@@ -8,6 +8,8 @@
 #ifndef INC_SW_MAZE_H_
 #define INC_SW_MAZE_H_
 
+#include <stdint.h>
+
 /** @addtogroup software_modules
  * @{
  */
@@ -23,7 +25,9 @@ typedef enum Heuristic{
 	EUCLIDEAN
 }Heuristic;
 
-typedef struct Cell {
+typedef struct Cell Cell;
+
+struct Cell {
 	uint8_t x;
 	uint8_t y;
 
@@ -35,10 +39,11 @@ typedef struct Cell {
 	//CellType type;
 
 	Cell *parent_p;
-} Cell;
+};
 
 uint8_t isCellEquals(Cell c1, Cell c2);
-float distanceTo(Cell c1, Cell c2, Heuristic h);
+float distanceToH(Cell c1, Cell c2, Heuristic h);
+float distanceTo(Cell c1, Cell c2);
 
 typedef struct Maze {
 	Cell *current_p;

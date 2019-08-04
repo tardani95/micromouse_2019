@@ -23,15 +23,19 @@ uint8_t isCellEquals(Cell c1, Cell c2) {
 	return 0;
 }
 
-float distanceTo(Cell c1, Cell c2, Heuristic h) {
+float distanceToH(Cell c1, Cell c2, Heuristic h) {
 	switch (h) {
 	case MANHATTAN:
-		return fabs(this.x - x) + fabs(this.y - y);
+		return fabs(c1.x - c2.x) + fabs(c1.y - c2.y);
 	case EUCLIDEAN:
-		return sqrt(pow(this.x - x, 2) + pow(this.y - y, 2));
+		return sqrt(pow(c1.x - c2.x, 2) + pow(c1.y - c2.y, 2));
 	default:
 		return -1.0f;
 	}
+}
+
+float distanceTo(Cell c1, Cell c2){
+	return distanceToH(c1, c2, EUCLIDEAN);
 }
 
 /**
