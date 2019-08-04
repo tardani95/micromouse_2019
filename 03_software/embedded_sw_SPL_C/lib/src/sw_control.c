@@ -13,6 +13,7 @@
 #include "hw_status_led.h"
 #include "sw_debug.h"
 #include "misc.h"
+#include "sw_localization.h"
 
 /** @addtogroup software_modules
  * @{
@@ -41,6 +42,8 @@ float w = 0.0;
 float v_base_mmPs = 200;
 
 uint32_t debug_counter = 0;
+
+
 
 /**
  * Initialize control loop @1kHz
