@@ -7,6 +7,7 @@
 
 #include "sw_route_planner.h"
 
+
 /** @addtogroup software_modules
  * @{
  */
@@ -14,6 +15,8 @@
 /** @defgroup Route_Planner Route Planner
  * @{
  */
+
+
 
 /**
  * @}

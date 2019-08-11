@@ -20,10 +20,21 @@
 
 #define MAX_MAZE_SIZE 32
 
-typedef enum Heuristic{
-	MANHATTAN,
-	EUCLIDEAN
-}Heuristic;
+typedef enum Heuristic {
+	MANHATTAN, EUCLIDEAN
+} Heuristic;
+
+typedef enum CellType {
+	DEFAULT, CURRENT, NEXT, START, DESTINATION
+} CellType;
+
+typedef enum WallType {
+	RIGHT_WALL, TOP_WALL, LEFT_WALL, BOTTOM_WALL
+} WallType;
+
+typedef enum Direction {
+	RIGHT, TOP, LEFT, BOTTOM, UNKNOWN
+} Direction;
 
 typedef struct Cell Cell;
 
@@ -36,7 +47,7 @@ struct Cell {
 	float cost;
 	float destination_distance;
 
-	//CellType type;
+//CellType type;
 
 	Cell *parent_p;
 };
@@ -50,9 +61,18 @@ typedef struct Maze {
 	Cell start;
 	Cell goal;
 
-	int walls[2][MAX_MAZE_SIZE + 1];
+	uint32_t walls[2][MAX_MAZE_SIZE + 1];
+
 	Cell cells[MAX_MAZE_SIZE][MAX_MAZE_SIZE];
 } Maze;
+
+extern Maze maze;
+
+uint8_t getWall(Maze maze, Cell c, WallType wall_type);
+uint8_t getWallXY(uint32_t **walls, uint8_t x, uint8_t y, WallType wall_type);
+uint8_t setWall(Maze maze, Cell c, WallType wall_type);
+uint8_t setWallXY(uint32_t **walls, uint8_t x, uint8_t y, WallType wall_type);
+
 
 /**
  * @}
