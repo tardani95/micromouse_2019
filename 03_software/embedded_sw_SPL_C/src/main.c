@@ -98,6 +98,8 @@
 #include "sw_GPTIM.h"
 #include "sw_menu.h"
 #include "sw_control.h"
+#include "sw_localization.h"
+#include "sw_trajectory_planner.h"
 
 #include "util.h"
 
@@ -167,6 +169,8 @@ void Init_Periph(void) {
 	}
 
 	initButtons();
+	initLocalization();
+	initTrajectoryPlanner();
 	initControl();
 }
 
@@ -259,6 +263,7 @@ void OnButtonPressed() {
 //			m_resetEncCnt(ENC_RIGHT_TIM);
 			//actuateMotor(LEFT, FORWARD, 300);
 			//actuateMotor(RIGHT, FORWARD, 400);
+			stamp();
 			ControlLoop_Cmd(ENABLE);
 		} else {
 			ControlLoop_Cmd(DISABLE);

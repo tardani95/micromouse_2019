@@ -22,6 +22,12 @@
 
 #define CONTROL_LOOP_IRQHandler		TIM2_IRQHandler
 
+typedef struct{
+	float P;
+	float I;
+	float D;
+}PIDController;
+
 void initControl(void);
 void initControlDebug(void);
 void ControlLoop_Cmd(FunctionalState NewState);
