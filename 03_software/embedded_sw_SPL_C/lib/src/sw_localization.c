@@ -17,16 +17,36 @@
  * @{
  */
 
+const State start_state = {
+	.x = 4.5,
+	.y = 4.5,
+	.fi = 3.1415/2,
+	.v_tan = 0,
+	.omega = 0
+};
+
+const Frame start_frame  = {
+	.x = 4.5,
+	.y = 4.5,
+	.fi = 0
+};
+
 State state;
-float T = 0.001; // @1 kHz
 
 void initLocalization(void){
 	state = start_state;
 }
 
+float enc_right_cm;
+float enc_left_cm;
 State updateState(void){
-	float enc_right_cm = encToCm(m_getEncCnt(ENC_RIGHT));
-	float enc_left_cm = encToCm(m_getEncCnt(ENC_LEFT));
+	float T = 0.001; // @1 kHz
+
+	enc_right_cm = encToCm(m_getEncCnt(ENC_RIGHT) - ENC_CNT_BASEVALUE);
+	enc_left_cm = encToCm(m_getEncCnt(ENC_LEFT) - ENC_CNT_BASEVALUE);
+
+	m_resetEncCnt(ENC_RIGHT);
+	m_resetEncCnt(ENC_LEFT);
 
 	float ds = (enc_right_cm + enc_left_cm)/2;
 	float dfi = (enc_left_cm - enc_right_cm)/AXLE_LENGTH_cm;
@@ -48,8 +68,8 @@ State updateState(void){
 	return state;
 }
 
-float encToCm(uint32_t encCnt){
-	return encCnt / 8096 * 2 * 3.1415 * WHEEL_DIAMETER_cm;
+float encToCm(int32_t encCnt){
+	return (float)encCnt / 8192.0f * 2.0f * 3.1415f * WHEEL_DIAMETER_cm;
 }
 
 State transformStateToLocal(State global_state, Frame local_frame){

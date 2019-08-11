@@ -30,23 +30,13 @@ typedef struct Frame{
 	float fi;
 }Frame;
 
-const State start_state = {
-	.x = 4.5,
-	.y = 4.5,
-	.fi = 3.1415/2,
-	.v_tan = 0,
-	.omega = 0
-};
+const extern State start_state;
 
-const Frame start_frame = {
-	.x = 4.5,
-	.y = 4.5,
-	.fi = 0
-};
+const extern Frame start_frame;
 
 void initLocalization(void);
 State updateState(void);
-float encToCm(uint32_t encCnt);
+float encToCm(int32_t encCnt);
 
 State transformStateToLocal(State global_state, Frame local_frame);
 
