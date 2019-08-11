@@ -15,6 +15,7 @@
 #include "misc.h"
 #include "sw_localization.h"
 #include "sw_trajectory_planner.h"
+#include "util.h"
 
 /** @addtogroup software_modules
  * @{
@@ -107,10 +108,14 @@ float w_prev = 0, w_I = 0;
 /**
  * control loop function called @1kHz, @see Init_Control() function.
  */
+int i = 0;
 void CONTROL_LOOP_IRQHandler() {
 	TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+	if(sinceStamp() < 3000){
+		return;
+	}
 	//setLED(LED_PINK);
-
+	i++;
 	State global_state = updateState();
 	TrajectoryType trajectory_type;
 	Frame local_frame;
@@ -140,8 +145,7 @@ void CONTROL_LOOP_IRQHandler() {
 		float w_reg = fi_ctrl/T;
 
 		w_reg = 0;
-		//actuateMotors(v_reg, w_reg);
-		actuateMotors(0, 0);
+		actuateMotors(v_reg, w_reg);
 
 	}
 	else{
@@ -149,8 +153,6 @@ void CONTROL_LOOP_IRQHandler() {
 
 	}
 
-	m_resetEncCnt(ENC_RIGHT);
-	m_resetEncCnt(ENC_LEFT);
 
 	debug_counter++;
 	if(debug_counter%1000 == 0){

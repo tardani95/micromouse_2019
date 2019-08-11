@@ -16,11 +16,11 @@
  * @{
  */
 
-#define CELL_DIST_cm 18.0f
+#define CELL_DIST_cm 20.0f
 #define ACC_DIST_cm 0.0f
 #define DEACC_DIST_cm 3.0f
 #define ACC_MAX 10.0f
-#define TOP_SPEED_cmPs 0.0f
+#define TOP_SPEED_cmPs 10.0f
 
 #define FINISH_TRESHOLD 0.2f
 
