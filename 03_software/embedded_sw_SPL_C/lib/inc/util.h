@@ -29,5 +29,7 @@ void SysTick_Handler(void);
 void delay_ms(uint32_t ms);
 void init_usTimer(void);
 void delay_us(uint32_t us);
+void stamp(void);
+uint32_t sinceStamp(void);
 
 #endif /* INC_UTIL_H_ */

@@ -103,6 +103,7 @@ void initSysTick() {
 
 __IO uint32_t systick_cnt = 0;
 __IO uint32_t time_out = 0x0;
+__IO uint32_t timestamp = 0;
 
 /**
  * @brief Set the timeout value
@@ -114,6 +115,14 @@ void setTimeOut_ms(uint32_t ms) {
 
 uint32_t getTimeOut_ms() {
 	return time_out;
+}
+
+void stamp(){
+	timestamp = systick_cnt;
+}
+
+uint32_t sinceStamp(){
+	return systick_cnt - timestamp;
 }
 
 void SysTick_Handler() {
